@@ -1,0 +1,1083 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO server ‒ Installation and operation | Maintenance and monitoring
+
+
+ELO server ‒ Installation
+
+and operation
+
+Maintenance and monitoring
+
+
+
+3
+
+3
+
+4
+
+8
+
+13
+
+15
+
+17
+
+18
+
+18
+
+19
+
+22
+
+25
+
+25
+
+26
+
+27
+
+28
+
+30
+
+30
+
+31
+
+33
+
+35
+
+35
+
+36
+
+37
+
+Table of contents
+
+ELO Health Check Service
+
+Requirements 
+
+Initial logon 
+
+Configure dashboard 
+
+Set up monitors 
+
+Information for partners 
+
+Data protection 
+
+Monitoring
+
+Introduction 
+
+Monitoring via the ELO Administration Console 
+
+ELO Flows monitoring 
+
+Report and logs
+
+Introduction 
+
+Report options 
+
+Delete report entries 
+
+Log files 
+
+Information
+
+Introduction 
+
+Administrative information 
+
+License information 
+
+Other topics
+
+Overview of other topics 
+
+Administration mode 
+
+Test checksums 
+
+2 ELO server ‒ Installation and operation
+
+
+
+ELO Health Check Service
+
+Requirements 
+
+The ELO Health Check Service enables you to log and visualize different server parameters. In
+
+addition, you can monitor specific threshold values, and set up an automatic e-mail notification if
+
+the values exceed the limits.
+
+If you want to use the ELO Health Check Service (in the following: HCS), you must make sure that
+
+you enter the corresponding URL in the Indexserver Configuration Options configuration interface
+
+and that the ELO Indexserver is allowed to send data to this URL. The data for the previous day is
+
+sent in the early morning hours of the following day on a daily basis.
+
+In the Indexserver Configuration Options configuration interface, use an uploadHealthCheckurl type
+
+entry with the following URL:
+
+If no URL is entered or the URL to the first version of the ELO Health Check Service is entered, the
+
+URL specified above is entered in the database/the old value is replaced with this correct URL.
+
+Enter NONE to disable transmission of the URL data.
+
+You have to send a request to the ELO Order Center to enable ELO HCS. You can submit this request
+
+to the ELO Order Center by e-mail.
+
+A technical contact person for the partner and the customer were specified when you placed the
+
+order. These e-mail addresses are used by all automated processes. Ideally, you should use a
+
+separate technical e-mail account for this.
+
+Health Check data is only sent from Indexserver versions ELO 20 or higher. Older ELO Indexservers
+
+are unable to provide this service.
+
+Starting with ELO 12, the installer distinguishes between production and test instances. When using
+
+the HCS, it is necessary to separate them in any case to ensure that test data is not mixed up with
+
+production data, which can lead to unreliable data visualizations.
+
+Since the ELO HCS Dashboard shows data from the past, we recommend that you first install it and
+
+configure the dashboard itself a few days later. This will enable you to see data about the current
+
+installation during the configuration.
+
+https://license.elo.com/HealthCheckService2/Main/data/guid
+
+3 ELO server ‒ Installation and operation
+
+
+
+Initial logon 
+
+To authenticate, open the following URL:
+
+When you log on for the first time, you won't have a password as this would need to have been
+
+sent by e-mail, which is not secure.
+
+Click Password forgotten.
+
+In the next dialog box, you need to enter your e-mail address and the GUID from the serial
+
+number. You can read this GUID from the license file, for example:
+
+1. 
+
+https://license.elo.com/HealthCheckService2/index.html
+
+1. 
+
+2. 
+
+4 ELO server ‒ Installation and operation
+
+
+
+Information
+
+The GUID is only the combination of characters inside the brackets. The brackets
+
+themselves and the preceding text are not part of the GUID.
+
+You will only receive a link for a new password if this combination is correct. The e-mail
+
+address must be identical to the address you entered when placing the order. You cannot
+
+have a new password sent to any other e-mail address.
+
+If the data was correct, you will receive an e-mail with a link within a short time. This link
+
+takes you to the new password and can only be used once.
+
+Open the link.
+
+When you click the link, the HCS generates a new password and displays it over an
+
+encrypted HTTPS connection. The password is therefore not transmitted via an insecure
+
+channel, such as e-mail.
+
+3. 
+
+5 ELO server ‒ Installation and operation
+
+
+
+Make a note of this password. We recommend saving it in your browser so that you do not
+
+have to enter it each time. It is not possible to assign your own password.
+
+You now have all the information you need to log on to the system.
+
+4. 
+
+6 ELO server ‒ Installation and operation
+
+
+
+In the Name field, you can enter the name from the serial number, the GUID, or the e-mail address.
+
+When you log on for the first time, you will see a default dashboard containing the most important
+
+parameters. If you installed a fresh ELO Indexserver or only recently entered the configuration, all
+
+charts will be empty because no data has been sent yet.
+
+Please note
+
+In case of extensions or changes to the serial number, the following applies:
+
+If the GUID of the serial number remains the same (extension of serial number), the
+
+data is maintained by ELO HCS.
+
+If a new serial number is used and the old one is deleted, the previous ELO HCS data
+
+is lost. You have to register the new GUID to restart data analysis by ELO HCS.
+
+• 
+
+• 
+
+7 ELO server ‒ Installation and operation
+
+
+
+Configure dashboard 
+
+To add charts, click the + Add graph function.
+
+After clicking this field, you will be offered a list of monitoring parameters to choose from.
+
+You can add multiple charts at this point and edit them later. A new entry is always inserted
+
+after the last entry you edited. You can also arrange the charts differently later on using drag-
+
+and-drop.
+
+If you click the Settings button, you can change the settings of the chart.
+
+1. 
+
+2. 
+
+8 ELO server ‒ Installation and operation
+
+
+
+Name: You can change the name of the chart here. This can be useful if you have multiple
+
+ELO Indexservers or want to view the same chart type with different settings, for example.
+
+Hourly/Daily/Weekly: You can use this setting to change the visualization of data changes
+
+over time. If you want to observe a trend over longer periods of time, it is useful to visualize
+
+the data averaged over weeks. If you want a more detailed overview of the current situation,
+
+it makes sense to create an hourly view, e.g. when most users log on during the course of a
+
+day. In many other cases, the daily overview is the most practical option.
+
+Day selection: If you want to restrict the daily or hourly overview to certain days of the week,
+
+you can do so with this option.
+
+Indexserver: If you have installed multiple ELO Indexservers, you can specify which ELO
+
+Indexserver should be displayed here. If you enter 0 in the field, the total values of all ELO
+
+Indexservers are displayed. If the field contains an Indexserver ID, only the values of this ELO
+
+Indexserver are displayed. You can get the ID from the ELO Indexserver status page. You need
+
+to take the value from the line IXID numeric.
+
+Information
+
+9 ELO server ‒ Installation and operation
+
+
+
+In later versions, you will be able to select from a list of available ELO Indexservers.
+
+This list can only contain servers that have already transmitted data so it will be
+
+empty on the day of installation.
+
+Duration: Specify a period of time for the data visualization here. We recommend that you
+
+specify a range from a few days or weeks in the past to the current date. The time ranges are
+
+entered in days. The default setting covers the last three months. To be exact, "93 days ago
+
+until now", i.e. 93...0.
+
+Scale: With the Minimum – Average – Maximum charts, there may be maximum values which
+
+are so high that the average values are only displayed as a flat line at the bottom of the
+
+chart.
+
+This parameter allows you to specify a divider factor for each line. If the average search time
+
+is 50 milliseconds, but there are searches that take up to one minute, you can set MAX
+
+divider to 1000.
+
+10 ELO server ‒ Installation and operation
+
+
+
+These settings allow you to monitor large outliers in a chart simultaneously, as well as the
+
+general (much smaller) average value.
+
+11 ELO server ‒ Installation and operation
+
+
+
+If you want to see both the long-term trend and the current situation for a specific parameter
+
+in a more granular view, you can create multiple charts for this parameter. The first chart
+
+could be a weekly overview of 180 days, and a second chart could be a daily overview of the
+
+last three days.
+
+12 ELO server ‒ Installation and operation
+
+
+
+Set up monitors 
+
+To set up monitors, click the configuration icon in the upper right corner to switch to the ELO Health
+
+Check Service Configuration. In this menu, you can set up monitors for each recorded parameter.
+
+The HCS distinguishes between two types of parameters. There are counters, such as for the
+
+number of logons or number of garbage collections, and Min/Max/Avr, which display average values
+
+as well as minimum and maximum values, such as the required memory or the number of active
+
+users.
+
+Under Counter Properties, you can monitor absolute threshold values, such as for failed logon
+
+attempts. If there are more than ten failed attempts in an hour, this indicates a brute force attack
+
+on passwords.
+
+You can also specify threshold values as a percentage. These relate to the average over the last
+
+three months, e.g. if the number of garbage collections increases by more than 50%, this indicates
+
+that the ELO Indexserver does not have enough heap space.
+
+As the values can fluctuate considerably on different days of the week, the specified percentage
+
+limits are only compared with the average on the same day of the week to prevent false alerts.
+
+13 ELO server ‒ Installation and operation
+
+
+
+The Min/Max/Avr properties have the same settings, although three are shown here for each chart.
+
+It makes sense to monitor the average values to detect gradual changes. Checking the maximum
+
+values is better suited to detect acute problems.
+
+14 ELO server ‒ Installation and operation
+
+
+
+Information for partners 
+
+If you specified a partner's e-mail address when you placed the order, this serial number is linked
+
+to the partner's account. As a partner, you can access the page https://license.elo.com/
+
+HealthCheckService2/alerts.html to obtain an overview of the current state of all customers.
+
+If there are no alerts for a customer, the icon to the left of the customer name is green. If no HCS
+
+data has been sent in the last three days, the icon is red. If limits have been exceeded, the icon is
+
+yellow and the corresponding values are displayed.
+
+Clicking the colored icon takes you to the respective customer dashboard. There is currently no
+
+distinction between a partner request and a customer request. This has the advantage that a
+
+partner can configure the customer dashboard and modify it at any time. However, this also means
+
+that there are no different views for customers and partners.
+
+If thresholds were set for a chart, the warning e-mail is sent to both the customer's e-mail address
+
+and the partner's e-mail address.
+
+If customers do not want to manage their own HCS dashboard, this can also be done by the partner.
+
+In this case, you should create a separate e-mail account, e.g. ELO-HCS@mycompany.com. This is the
+
+15 ELO server ‒ Installation and operation
+
+
+
+account that you need to specify as the customer's account when you place the order. However,
+
+you do not need to create a separate account for each customer. You can still log on to the
+
+dashboard with this account, since the API token can be used to distinguish between the different
+
+customers.
+
+16 ELO server ‒ Installation and operation
+
+
+
+Data protection 
+
+The ELO Health Check Service only records average values from an entire server every hour. No
+
+personal data is collected or transmitted in the process, and it is not possible to draw conclusions
+
+about individual users from the data.
+
+However, you should still keep the password and API token safe, since the HCS contains data that
+
+could be sensitive in certain contexts (e.g. the number of logons allows conclusions to be drawn
+
+about the number of employees). An attacker requires both the serial number GUID and the API
+
+token to gain unauthorized access. As this is generated automatically, a new one can be issued
+
+immediately if there is any cause for concern.
+
+17 ELO server ‒ Installation and operation
+
+
+
+Monitoring
+
+Introduction 
+
+ELO offers different starting points for monitoring the system status. The following sections contain
+
+documentation related to monitoring.
+
+The following topics are covered:
+
+Monitoring via the ELO Administration Console
+
+ELO Flows monitoring
+
+• 
+
+• 
+
+18 ELO server ‒ Installation and operation
+
+
+
+Monitoring via the ELO Administration Console 
+
+In the Monitoring area of the ELO Administration Console, you can view the status of various web
+
+applications.
+
+Proceed as follows to monitor a web application:
+
+Click Add.
+
+The Add monitoring entries wizard appears.
+
+Follow the instructions in the next section to add monitoring entries.
+
+The new monitoring entries are added according to your specifications.
+
+Add monitoring entries wizard 
+
+The wizard enables to monitor additional web applications.
+
+1. 
+
+2. 
+
+1. 
+
+19 ELO server ‒ Installation and operation
+
+
+
+Enter the server name, server port, and password for the Apache Tomcat administrator with
+
+the manager-script role and click Next. In this case, the Apache Tomcat administrator is
+
+named adminscript.
+
+Information
+
+The Apache Tomcat administrator with the manager-script role is named adminscript
+
+by default and is created automatically when the ELO Application Server is installed. If
+
+an error occurs, check the entries in tomcat-users.xml, which is located in the server's
+
+configuration directory.
+
+The Selection area opens.
+
+Select the web applications you want to monitor, then click Next.
+
+The Confirmation area opens.
+
+Check the list of web applications you want to monitor, then click Save if correct.
+
+2. 
+
+3. 
+
+20 ELO server ‒ Installation and operation
+
+
+
+The selection is saved and the status of the selected web applications is displayed.
+
+21 ELO server ‒ Installation and operation
+
+
+
+ELO Flows monitoring 
+
+ELO Flows provides a monitoring tool. In this tool, you can monitor the processing of flows and
+
+analyze errors.
+
+Click the Monitoring button at the bottom left corner of the ELO Flows administration area. 
+
+The Status report page opens. The page consists of the following tabs:
+
+Version: Shows the version currently being used
+
+Messages: Shows current status messages.
+
+Flows: Shows the available flows with the corresponding statistics.
+
+Flows timeline: Shows the timeline of executed flows. The list can be filtered.
+
+Validation errors: Shows any errors and error sources in flow templates and transformations.
+
+Clicking on one of the buttons takes you straight to the affected template or transformation.
+
+Information
+
+You can reach the ELO Flows administration status report at the following link:
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+http://<hostname>:<port>/ix-<repository>/plugin/de.elo.ix.plugin.proxy/flows/#/status
+
+22 ELO server ‒ Installation and operation
+
+
+
+Status pages 
+
+Multiple status pages are available, which you can check. In addition to the currently installed
+
+version number, they also indicate the online status of the modules:
+
+Simple status page of the ELO Flows Manager 
+
+The manager offers a very simple status page that only shows the status and can be used without
+
+authenticating:
+
+ELO Flows registry status page 
+
+You can reach the ELO Flows registry status page at the following link:
+
+http://<hostname>:<port>/flows/status
+
+http://<hostname>:<port>/registry
+
+23 ELO server ‒ Installation and operation
+
+
+
+Information
+
+Change the host name and port based on the respective installation.
+
+24 ELO server ‒ Installation and operation
+
+
+
+Report and logs
+
+Introduction 
+
+ELO offers you the option to track activities in the system via reports and logs. This enables you to
+
+recognize and eliminate potential error sources, for example.
+
+The following topics are covered:
+
+Report options
+
+Delete report entries
+
+Log files 
+
+• 
+
+• 
+
+• 
+
+25 ELO server ‒ Installation and operation
+
+
+
+Report options 
+
+Under the Report options menu item in the ELO Administration Console, you can define the settings
+
+for log files and logged activities in ELO.
+
+Information
+
+You create a report in the ELO Java Client with the standard configuration via Organize > 
+
+Properties > Report for entry.
+
+No report: No events are logged.
+
+Short report: Only the events selected for the limited report will be written to the log.
+
+Extended report: The events selected for the extended report will be written to the log.
+
+Full report: All actions will be written to the log.
+
+You can change the settings by enabling or disabling the report options. The names of the options
+
+are self-explanatory.
+
+Delete report entries: The Delete function allows you to delete logged events up to a specific point
+
+in time or completely.
+
+26 ELO server ‒ Installation and operation
+
+
+
+Delete report entries 
+
+The Delete report entries function enables you to delete report entries up to a specific date.
+
+Information
+
+You will find the link to the Delete report entries menu item in the ELO Administration
+
+Console under Report options.
+
+Delete up to the following date: Enter a date here. All report entries created before this date will be
+
+deleted.
+
+Delete all report entries: Use this option to delete all report entries.
+
+Delete: Delete the specified report entries.
+
+27 ELO server ‒ Installation and operation
+
+
+
+Log files 
+
+Under the Log files menu item in the ELO Administration Console, you can view the different log
+
+files. There are various filters to help you sort through your logs and quickly troubleshoot problems.
+
+Refresh: Click the Refresh button to reload the log files. The data (number and size of log files) in
+
+the Log files table is updated.
+
+Show: The Show button opens a new tab in the browser that shows excerpts from the selected log
+
+files according to the applied filter settings.
+
+Display filter settings 
+
+In the Display filter settings area, select the log files and edit the filter settings.
+
+Log level: In the Log level drop-down menu, you can select one or multiple filters for the log level.
+
+The log levels are: FATAL, ERROR, WARN, INFO, DEBUG and TRACE.
+
+Time filter starting: If required, you can enter a start time in the Time filter starting field. Entries
+
+created before the selected time will not be displayed.
+
+Time filter until: If required, you can enter an end time in the Time filter until field. Entries created
+
+after the selected time will not be displayed.
+
+28 ELO server ‒ Installation and operation
+
+
+
+Number of log lines: In the Number of log lines field, you can specify the maximum number of lines
+
+that will be displayed. The default value is 1000000.
+
+Refresh interval: In the Refresh interval field, you can specify the number of seconds to wait until
+
+the log information is refreshed. This setting applies for the tab that you generate with the Show
+
+button.
+
+Search text 1: You can enter a search term as a filter in the Search text 1 field.
+
+Add search text: Click the Add search text button to add another search text field. You can enter
+
+additional terms as filters in these fields. The search terms are linked with AND so that only entries
+
+containing all search terms are shown.
+
+Show newest log entries at the top: If you want the newest log entries to appear at the top of the
+
+log file, click Show newest log entries at the top.
+
+Log files: The Log files table contains all available log files. The log files that you select in the table
+
+are the ones that will be displayed in an additional browser tab according to the settings you
+
+selected above.
+
+Information
+
+You can select multiple options by holding down the SHIFT or CTRL key.
+
+Advanced manual input 
+
+In the Advanced manual input area, you can see the selected filter settings in a console window.
+
+You can edit the commands here.
+
+29 ELO server ‒ Installation and operation
+
+
+
+Information
+
+Introduction 
+
+ELO provides you with different sources of information: The following sections provide brief
+
+descriptions of the following points:
+
+Server information
+
+Users in system
+
+Highest IDs assigned (statistics)
+
+License overview
+
+License report 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+30 ELO server ‒ Installation and operation
+
+
+
+Administrative information 
+
+The ELO Administration Console offers a range of information you can use to manage your system.
+
+The following sections will go into more detail.
+
+Server information 
+
+The Server information area contains an overview of the server settings.
+
+Users in system 
+
+The Users in system area contains an overview of the users currently logged on to the system.
+
+31 ELO server ‒ Installation and operation
+
+
+
+Information
+
+User accounts for various services and modules are also shown here.
+
+Statistics 
+
+Description: This contains an overview of the IDs assigned in the repository.
+
+32 ELO server ‒ Installation and operation
+
+
+
+License information 
+
+In the ELO Administration Console, you can access information about the respective license.
+
+The following sections will go into more detail.
+
+License overview 
+
+The License overview area provides an overview of the license usage.
+
+Download license overview: Downloads the license overview as a TXT file compressed into a ZIP
+
+file.
+
+Import license file: This function is no longer supported. You can import license files in the ELO
+
+server setup.
+
+License report 
+
+The License report page provides you with a report about access and used licenses in ELO as well
+
+as information about the users who have performed write actions via the full clients and via the
+
+Indexserver.
+
+33 ELO server ‒ Installation and operation
+
+
+
+Refresh: Refreshes the license report.
+
+Download report: Downloads the license report as a TXT file compressed into a ZIP file.
+
+Active users with full client access: The table provides information about the users who have
+
+performed write actions in ELO via an ELO client.
+
+Active users with Indexserver access: The table provides information about the users who have
+
+performed write actions in ELO via the ELO Indexserver or corresponding modules.
+
+34 ELO server ‒ Installation and operation
+
+
+
+Other topics
+
+Overview of other topics 
+
+ELO offers additional functions that support you in maintaining and testing the system.
+
+The following topics are covered here:
+
+Administration mode
+
+Test checksums 
+
+• 
+
+• 
+
+35 ELO server ‒ Installation and operation
+
+
+
+Administration mode 
+
+Administration mode can be used to restrict client access to ELO, e.g. during system maintenance.
+
+Information
+
+If administration mode is enabled, only users with administrator rights are able to log on to
+
+the ELO clients. Administration mode is active for all repositories that are accessed by the
+
+same ELO Access Manager.
+
+36 ELO server ‒ Installation and operation
+
+
+
+Test checksums 
+
+In the Test checksums area of the ELO Administration Console, you can test the integrity of one or
+
+more documents.
+
+Document IDs to check: Enter the document ID that the check should start at in the top field. Enter
+
+the document ID that the check should end on in the field below that. The lowest and highest
+
+document IDs in the ELO repository are entered by default.
+
+Full report: To obtain a full report, enable the Full report option. If the option is disabled, the report
+
+will only contain basic information and notifications of any incorrect checksums. The report is
+
+generated as a TXT file that you can download.
+
+Last document ID checked: Shows the last document ID that was checked during the current
+
+validation process.
+
+Number of incorrect checksums: Shows the number of errors detected during the current validation
+
+process.
+
+Number of correct checksums: Shows the number of correct checksums detected during the current
+
+validation process.
+
+Number of failed access requests: Shows the number of documents whose checksum could not be
+
+validated during the current process. This can occur if a document within the selected ID range has
+
+been deleted in the meantime.
+
+Check: Click the Check button to start the checksum test for the selected ID range.
+
+Cancel: Click the Cancel button to stop the current check process.
+
+37 ELO server ‒ Installation and operation
+
+
+
+Check report: Once the check has completed, the Check report button appears. Click the Check
+
+report button to download the report as a TXT file.
+
+38 ELO server ‒ Installation and operation
+
+
+	Table of contents
+	ELO Health Check Service
+	Requirements
+	Initial logon
+	Configure dashboard
+	Set up monitors
+	Information for partners
+	Data protection
+
+	Monitoring
+	Introduction
+	Monitoring via the ELO Administration Console
+	Add monitoring entries wizard
+
+	ELO Flows monitoring
+	Status pages
+	Simple status page of the ELO Flows Manager
+	ELO Flows registry status page
+
+
+
+	Report and logs
+	Introduction
+	Report options
+	Delete report entries
+	Log files
+	Display filter settings
+	Advanced manual input
+
+
+	Information
+	Introduction
+	Administrative information
+	Server information
+	Users in system
+	Statistics
+
+	License information
+	License overview
+	License report
+
+
+	Other topics
+	Overview of other topics
+	Administration mode
+	Test checksums
+
+

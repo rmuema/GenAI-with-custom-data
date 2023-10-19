@@ -1,0 +1,354 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®) | ELO Smart Link for SAP® ERP – Configuring an SSL connection
+
+
+ELO Suite for SAP
+
+ArchiveLink® (SAP
+
+NetWeaver® & SAP S/
+
+4HANA®)
+
+ELO Smart Link for SAP® ERP –
+
+Configuring an SSL connection
+
+
+
+3
+
+3
+
+4
+
+9
+
+Table of contents
+
+ELO Smart Link for SAP® ERP – Configuring an SSL connection
+
+Introduction 
+
+Configuration in the SAP system 
+
+Troubleshooting 
+
+2 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+ELO Smart Link for SAP® ERP – Configuring
+
+an SSL connection
+
+Introduction 
+
+This documentation describes how to configure an SSL connection between an SAP system or the
+
+associated content repository and the ELO Smart Link for SAP® ERP interface, called ELO Smart
+
+Link in the following.
+
+Basics 
+
+Certain requirements have to be met to configure an SSL connection between these two systems.
+
+For example, the SAP system kernel should be up-to-date and the SAP system should have the
+
+current cryptography library (CommonCryptoLib). The profile parameters used should also be
+
+configured so that the ELO Application Server cipher suites can be accepted.
+
+You will find more information on SAP configuration and the required versions on the SAP support
+
+site under the following notes:
+
+510007 – Additional information about setting up SSL on the Application Server ABAP
+
+2287896 – saphttp and SSL: client cipersuites configuration
+
+Information
+
+Accessing the SAP Support Launchpad requires an S-user on SAP sites.
+
+The ELO server setup must have also been performed with the settings for configuring an SSL
+
+connection with certificate chain.
+
+Issues 
+
+One common reason why the SAP system won't connect to ELO Smart Link for SAP® ERP via SSL
+
+even though certificates have been imported is that no common cipher suite is found during
+
+negotiation.
+
+This is because many SAP systems are only configured for the old TLS protocol version 1.0 as
+
+standard. By updating the kernel and the cryptography library, the SAP system also supports newer
+
+protocols. However, these have to be activated in the configuration (see information in the chapter 
+
+Basics).
+
+To test this scenario, we recommend setting the cipher suite parameters to 967:PFS:HIGH:MEDIUM:
+
++e3DES::EC\_P256:EC\_HIGH.
+
+As the SAP system has to be restarted every time changes are made to these profile parameters,
+
+we recommend using a very high profile parameter value right from the start.
+
+• 
+
+• 
+
+3 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+http://launchpad.support.sap.com/
+http://launchpad.support.sap.com/
+http://launchpad.support.sap.com/
+
+
+Configuration in the SAP system 
+
+First, export the certificate from ELO and import it to the corresponding SAP system. Use an up-to-
+
+date browser. In this example, we used Firefox.
+
+Certificate export 
+
+The certificate can be exported right within the browser using the ELO Smart Link for SAP® ERP
+
+configuration interface.
+
+Fig.: Browser: Connection details
+
+Navigate to the connection details in the browser address bar.
+
+Fig.: Browser: More Information
+
+In the connection details, now select More Information.
+
+1. 
+
+2. 
+
+4 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Fig.: Web Site Identity
+
+In the following window, select Security in the ribbon. Under Web Site Identity, click View
+
+Certificate.
+
+Fig.: Certificate view
+
+3. 
+
+4. 
+
+5 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Export the entire certificate hierarchy. Select each of the certificates and export them
+
+separately. As the certificates have to be imported to the SAP system in the correct order, we
+
+recommend numbering the certificates when downloading them.
+
+Certificate import 
+
+To import the certificates, open the transaction STRUST in the SAP system.
+
+In the certificate store, select the SSL Client (Standard) folder.
+
+Fig.: Importing certificates
+
+Fig.: Trust Manager in the SAP system
+
+Click Import certificate, select the file path and exported certificates individually, then add
+
+each of these certificates to the certificate list by clicking Add to Certificate List.
+
+1. 
+
+2. 
+
+3. 
+
+6 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Configuring the content repository 
+
+In the next step, the content repositories also have to be switched to HTTPS.
+
+To do this, open transaction OAC0. This transaction contains another option for configuring an
+
+HTTPS connection.
+
+Fig.: Content repositories – HTTPS
+
+In the command field/transaction field, enter %HTTPS and confirm with the ENTER key.
+
+1. 
+
+2. 
+
+7 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Fig.: Connection settings
+
+If you only want to communicate via HTTPS, make the following settings.
+
+Port number
+
+SSL port number 9063
+
+Frontend HTTPS HTTPS required
+
+Backend HTTPS HTTPS required
+
+The port entered here corresponds to the port selected in the ELO Smart Link for SAP® ERP
+
+installation.
+
+Please note
+
+The value entered to the HTTP server field must match the name in the certificate. For
+
+example, the IP address cannot be entered here if the certificate has been issued with a
+
+name.
+
+Once all settings have been applied, the SAP system and ELO now communicate exclusively via an
+
+HTTPS connection.
+
+3. 
+
+8 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Troubleshooting 
+
+The HTTPS calls used by the SAP system are performed on the application server with a utility
+
+library. For this reason, you won't find any detailed log files for troubleshooting purposes. We
+
+therefore recommend configuring the following scenario to ensure logging and enable subsequent
+
+troubleshooting.
+
+Call the transaction SM59 and double-click the TCP/IP connection SAPHTTPA to select it.
+
+The Show/Change button takes you to edit mode for the transaction.
+
+Fig.: RFC Destination SAPHTTPA
+
+Switch to the Special Options tab and check the box next to Set RFC Trace in the Trace area.
+
+Now, save the settings.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+9 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Next, you want to perform a call (connection) between the SAP system and ELO. For
+
+example, you can perform a connection test with a configured content repository in
+
+transaction OAC0.
+
+Call the transaction AL11.
+
+Fig.: Work directory
+
+Double-click the entry DIR_HOME in the list to select it (work directory). In this directory, you
+
+should now find a file named dev_http.
+
+You can analyze any possible errors within this file.
+
+Fig.: Example error
+
+6. 
+
+7. 
+
+8. 
+
+10 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+As an example, we entered an incorrect configuration and performed a connection test. In this case,
+
+the client cipher suite only accepts TLS version 1.0.
+
+11 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+	Table of contents
+	ELO Smart Link for SAP® ERP – Configuring an SSL connection
+	Introduction
+	Basics
+	Issues
+
+	Configuration in the SAP system
+	Certificate export
+	Certificate import
+	Configuring the content repository
+
+	Troubleshooting
+
+

@@ -1,0 +1,1307 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO XC | Installation
+
+
+ELO XC
+
+Installation
+
+
+
+3
+
+3
+
+4
+
+7
+
+26
+
+Table of contents
+
+Installation
+
+System requirements 
+
+Installation steps 
+
+Installation details
+
+Updating the main version 
+
+2 ELO XC
+
+
+
+Installation
+
+System requirements 
+
+ELO XC requires an ELO server that is currently supported. You will find the version number in the 
+
+ELOxcVersion.txt version history.
+
+ELO XC must be installed on one of these systems:
+
+Microsoft Windows Server 2016
+
+Microsoft Windows Server 2019
+
+Microsoft Windows Server 2022
+
+These Exchange servers are supported:
+
+Microsoft Exchange Server 2013 SP1
+
+Microsoft Exchange Server 2016
+
+Microsoft Exchange Server 2019
+
+Microsoft Exchange Online (Microsoft 365)
+
+Local authentication (on-premises) is done using basic authentication for LDAP and EWS.
+
+Authentication with Microsoft 365 (cloud) is done using an app registration (Modern Authentication
+
+OAuth 2.0). This also requires the following installations:
+
+Windows Management Framework 5.1
+
+Microsoft PowerShell 5 (possibly Microsoft PowerShell 7 as well)
+
+Exchange Online PowerShell V3 module
+
+The integrated configuration interface ELO XC Manager is supported by the following browsers:
+
+Current version of Microsoft Edge
+
+Current version of Google Chrome
+
+Current version of Mozilla Firefox
+
+Up to four certificates may be required on the ELO XC system, which must be available in the
+
+system's certificate store:
+
+Source Meaning/Requirement
+
+Z1 ELO server (Tomcat certificate) SSL connections to Indexserver
+
+Z2 EWS (Exchange certificate) SSL connection to EWS
+
+Z3 ELO XC Integrated web host for ELO XC Manager
+
+Z4 ELO XC App registration in Microsoft 365 tenant
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+3 ELO XC
+
+
+
+Installation steps 
+
+You will need to perform the following steps to test and configure your environment. For
+
+documentation purposes, transfer the values of your environment into the highlighted variables in
+
+the notes template.
+
+ELO server system is S1
+
+Tomcat certificate is Z1
+
+ELO XC installation system is S2 (S1=S2 is possible)
+
+Successful validation of the HTTPS connection from S2 to the ELO server on S1
+
+Import from Z1 into certificate store of S2
+
+Set an ELO user XCADM (as main administrator) to access XC Manager
+
+Exchange server certificate is Z2
+
+Export from Z2 and import into S2 in the Trusted Publishers store
+
+Create certificate Z3 for ELO XC on S2 and save fingerprint TP1
+
+Exchange local Exchange M365
+
+Import from Z2 into certificate store of S2 and
+
+check Autodiscover URL with Edge
+
+Install PowerShell and Exchange Online
+
+PowerShell V3 3.0.0 (or higher) module in 
+
+S2
+
+Create ELO XC service account XCSRV in
+
+domain AD1, save account XCACC and
+
+password XCPWD
+
+Create certificate Z4, export for
+
+registration, and save fingerprint TP2
+
+Ensure XCSRV has read access to AD via LDAP
+Create app registration for ELO XC in M365,
+
+save TNNT tenant and XCAPP app ID
+
+Assign ApplicationImpersonation role for XCSRV
+
+in EAC
+Authentication of registration with Z4
+
+API permissions to the registration for EWS
+
+and PowerShell
+
+Assignment of the Exchange Administrator
+
+role for the XCAPP service principal object
+
+(ServicePrincipal)
+
+Select the installation directory, the log directory for ELO XC in S2 and the HTTPS port 
+
+XCPORT above 5000
+
+Register ELO XC via the command line (administrator):
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+4 ELO XC
+
+
+
+Start ELO XC via Windows Services and open it in Edge https://S2:XCPORT
+
+Log on to ELO XC Manager with XCADM
+
+Updates 
+
+The content of the installation directory is replaced by the update package. The ELOxc.xml file must
+
+be retained.
+
+The automatic update of the configuration takes place whenever an older configuration version
+
+than the current program version is found.
+
+Connection settings 
+
+Local M365
+
+Directory name AD1 TNNT
+
+Authentication XCACC XCAPP
+
+Key XCPWD TP2
+
+Notes template 
+
+Checklist Local M365 Value
+
+ELO user XCADM XCADM
+
+ELO XC system S2 S2
+
+Manager port XCPORT XCPORT
+
+Manager certificate TP1 TP1
+
+Directory name AD1 TNNT
+
+Authentication XCACC XCAPP
+
+Key XCPWD TP2
+
+Execution 
+
+As a Windows service, ELO XC can be executed in the Local System context. The necessary
+
+authentication for the system environment and for ELO is provided in the configuration. It is
+
+recommended to run cmd.exe with administrative permissions when using a command prompt.
+
+To access the ELO XC Manager user interface, open the browser and enter the following URL:
+
+https://<ELO XC host name>:<port>
+
+eloxc.exe -install -port:< HTTPS port > -logdir:<log directory> -cert:<fingerprint-Z3>
+
+• 
+
+• 
+
+1. 
+
+5 ELO XC
+
+
+
+You will see the ELO XC Manager logon screen.
+
+Enter the address of the ELO Indexserver in the Indexserver URL field. You can select
+
+previously entered addresses from the drop-down menu.
+
+Enter an ELO user in the User account field and the corresponding password in the field below.
+
+Click Log on.
+
+The ELO XC Manager home screen opens.
+
+2. 
+
+3. 
+
+4. 
+
+6 ELO XC
+
+
+
+Installation details
+
+ELO server certificate 
+
+If you are using Windows Server 2016, you may need to make adjustments in the registry to use
+
+the SSL server certificate. We recommend using at least Transport Layer Security (TLS) 1.2. For
+
+information on how to configure the TLS version for Windows systems, refer to the Microsoft
+
+documentation.
+
+The Tomcat server.xml file should look like this:
+
+<Connector
+
+    SSLEnabled="true"
+
+    ciphers="TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,
+
+        TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,
+
+        TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,
+
+        TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,
+
+        TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384,
+
+        TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,
+
+        TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256,
+
+        TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256,
+
+        TLS_AES_256_GCM_SHA384,
+
+        TLS_CHACHA20_POLY1305_SHA256,
+
+        TLS_AES_128_GCM_SHA256"
+
+    clientAuth="false"
+
+    keystoreFile="C:\keystore.jks"
+
+    keystorePass="aaa"
+
+    maxHttpHeaderSize="65536"
+
+7 ELO XC
+
+
+
+The keystoreFile, keystorePass, and port properties must be adapted to the respective server
+
+installation. Make sure that you enter the cipher suites TLSECDHERSAWITHAES256GCMSHA384*
+
+and TLSECDHERSAWITHAES128GCMSHA256*. If you make changes in the server.xml, you have to
+
+restart the ELO server.
+
+If you have activated the correct TLS version in the system, configured the server.xml as described,
+
+and ELO XC still cannot establish an SSL connection to the Indexserver, you can try removing the 
+
+ciphers property from server.xml.
+
+If this also fails, you can still try to enter TLS version 1.1 as well:
+
+PowerShell cmdlets 
+
+Please note
+
+The following PowerShell cmdlets illustrate what needs to be done to establish a successful
+
+PowerShell connection to Microsoft 365 Exchange Online. You can find the complete
+
+documentation and help for troubleshooting issues on the Microsoft website. In particular,
+
+the examples used here may not be as complete or up-to-date as the current software.
+
+Certificates 
+
+When generating a self-signed certificate, you should copy the fingerprint from PowerShell and save
+
+it separately for use in other cmdlets or the ELO XC configuration.
+
+This is how you create a certificate:
+
+    maxThreads="1000"
+
+    port="9093"
+
+    protocol="org.apache.coyote.http11.Http11NioProtocol"
+
+    scheme="https"
+
+    secure="true"
+
+    sslEnabledProtocols="+TLSv1.2,+TLSv1.3"
+
+/>
+
+sslEnabledProtocols="+TLSv1.1,+TLSv1.2,+TLSv1.3"
+
+New-SelfSignedCertificate -DnsName "dns.name" -CertStoreLocation "cert:\LocalMachine\My" -NotAfter 
+
+8 ELO XC
+
+
+
+The DnsName parameter must not contain any wildcards. The ELO XC host certificate (Z3) requires
+
+the local fully qualified domain name (FQDN), whereas the app registration certificate (Z4) requires
+
+the Microsoft 365 tenant name. We recommend that you always save the fingerprint of new
+
+certificates.
+
+In this example, 0C202737F8B809FAFA532C61E878F8DEEB385787 was used for Z3 and 
+
+2E5B4D92DFBE8CFB49CF57106534EC50B12E6974 was used for Z4. Since Z4 is required for app
+
+registration in Microsoft 365, you need to export it as CER file without private key:
+
+If you want to use the same certificate for the ELO XC web host and the app registration (Z3=Z4),
+
+generate the certificate with two values for DnsName.
+
+In this case, you would need a new fingerprint (here: 9428F14E2E9A50DEC74D8EFD9D95DB5C3602F38D).
+
+You can check the DNS name in the local certificate store:
+
+$cert = Get-ChildItem -Path cert:\LocalMachine\My\2E5B4D92DFBE8CFB49CF57106534EC50B12E6974
+
+$cert | Export-Certificate -FilePath C:\XcAppReg.cer
+
+9 ELO XC
+
+
+
+Install module for Exchange Online 
+
+The PowerShell examples assume that the user has administrative privileges. Run PowerShell as
+
+administrator. Use at least PowerShell version 5.1. If necessary, update the local PowerShell
+
+version.
+
+This is how to check the local PowerShell version:
+
+Most cmdlets require external calls. In particular, the connection to Exchange Online must be
+
+enabled for remote PowerShell access. To install missing modules and the PackageProvider, you
+
+may be required to change the TSL version:
+
+$PSVersionTable
+
+::SecurityProtocol = ::Tls12[Net.ServicePointManager] [Net.SecurityProtocolType]
+
+10 ELO XC
+
+
+
+To allow remote PowerShell access, you need to enable this function:
+
+You should only run signed external cmdlets and scripts. You need to confirm the start of the
+
+execution manually:
+
+First, you can check whether the Exchange Online module (ExchangeOnlineManagement module) is
+
+available locally:
+
+If it is missing, you must download and install it. First install the PackageProvider for NuGet and
+
+import it. Afterwards, you need the PowerShellGet module.
+
+This is how to install and import the PackageProvider:
+
+Enable-PSRemoting
+
+Set-ExecutionPolicy RemoteSigned
+
+Get-Module
+
+Install-PackageProvider -Name NuGet -Force
+
+Import-PackageProvider -Name NuGet
+
+11 ELO XC
+
+
+
+This is how to install the PowerShellGet module:
+
+Now you can install and import the module for Exchange Online:
+
+Install-Module PowershellGet -Force
+
+Install-Module -Name ExchangeOnlineManagement -Scope AllUsers
+
+Import-Module -Name ExchangeOnlineManagement
+
+12 ELO XC
+
+
+
+Please note
+
+The module for Exchange Online must be installed for all users, because the ELO XC service
+
+is usually registered with its own account or the system account, but the module is installed
+
+with a different account.
+
+Test module for Exchange Online
+
+If the module for Exchange Online is installed, ELO XC imports it automatically at runtime. If the
+
+import is successful, the connection to Exchange Online can be established. Once you have set up
+
+the app registration, you can test the PowerShell connection manually. Use the app ID and the
+
+tenant from the registration:
+
+Connect-ExchangeOnline -CertificateThumbPrint 2E5B4D92DFBE8CFB49CF57106534EC50B12E6974 -Organization 
+
+13 ELO XC
+
+
+
+Once the connection is successfully established, you can test the two required Get-Mailbox and 
+
+Get-MailboxPermission cmdlets:
+
+You should disconnect active PowerShell connections at the end as follows:
+
+To prevent ELO XC from accessing specific mailboxes through the PowerShell connection, you can
+
+use New-ApplicationAccessPolicy. This requires an active PowerShell connection:
+
+Get-Mailbox -RecipientTypeDetails 'sharedmailbox' * | Get-MailboxPermission | where {$_.user
+
+Disconnect-ExchangeOnline
+
+New-ApplicationAccessPolicy -AppId cbfafa12-36c7-4586-a9c7-f94e923f1d26 -PolicyScopeGroupId xc2@tenant
+
+14 ELO XC
+
+
+
+Please note
+
+After a successful test, the Exchange Online module may fail to load in some environments.
+
+If you check the MainCatalog log, you will see a message that the Connect-ExchangeOnline
+
+cmdlet cannot be found. In this case, you should install Microsoft PowerShell 7 in addition to
+
+Microsoft PowerShell 5. Install the module there again.
+
+EAC: ApplicationImpersonation 
+
+In an on-premises installation, ELO XC requires the ApplicationImpersonation role. This role allows
+
+the service account (XCACC) to impersonate access to mailboxes. The role needs to be assigned in
+
+EAC (Exchange Admin Center).
+
+15 ELO XC
+
+
+
+App registration 
+
+To allow ELO XC to connect to Microsoft 365 with Modern Authentication (OAuth 2.0), an app
+
+registration in the tenant (TNNT) is required, which administratively acts as the service principal of
+
+ELO XC and is assigned the Exchange administrator role. The app registration has an ID that is used
+
+to recognize that external authentication has taken place. The key is a locally generated certificate
+
+whose public key (CER file) must be added to the app registration. The API permissions of the app
+
+registration determine which functions are available to ELO XC in Microsoft 365.
+
+Create 
+
+1. 
+
+16 ELO XC
+
+
+
+Sign in to the Microsoft Azure Portal: https://portal.azure.com/.
+
+Select Manage Azure Active Directory > View.
+
+Select App registrations > New registration tab.
+
+2. 
+
+3. 
+
+17 ELO XC
+
+https://portal.azure.com/
+https://portal.azure.com/
+
+
+The Register an application window opens.
+
+Enter ELO XC as the display name for the application.
+
+Under Supported account types, select Accounts in this organizational directory only ....
+
+ELO XC is now registered as an application and listed in the Microsoft Azure overview. Save
+
+the application ID (XCAPP).
+
+Upload certificate 
+
+App registration in Microsoft Azure requires a certificate file. Refer to the Self-signed certificates
+
+section of the PowerShell documentation to learn how to create them in PowerShell.
+
+4. 
+
+5. 
+
+18 ELO XC
+
+
+
+Select Certificates & secrets in the sidebar.
+
+Click Upload certificate.
+
+Select a locally stored certificate and click Add.
+
+Please note
+
+App registrations only allow public certificate keys, which CER files are. PFX files
+
+contain public and private keys, which is why they cannot be used.
+
+You will find the uploaded certificates in the Microsoft Azure overview of ELO XC certificates and
+
+secrets. At this point, you can also check the fingerprint again, which must match Z4.
+
+1. 
+
+2. 
+
+3. 
+
+19 ELO XC
+
+
+
+API permissions 
+
+In this section, you will learn which API permissions are required and how to grant them.
+
+Select API permissions in the sidebar.
+
+Right-click the User.Read permission of the Microsoft Graph API to open the context menu.
+
+Select Revoke admin consent first and then Remove permission to remove the Microsoft
+
+Graph API.
+
+1. 
+
+2. 
+
+20 ELO XC
+
+
+
+Click Add a permission.
+
+In the APIs my organization uses tab, select the Office 365 Exchange Online application.
+
+3. 
+
+4. 
+
+21 ELO XC
+
+
+
+Click Application permissions and select the following application permissions: 
+
+fullaccessas_app, Exchange.ManageAsApp.
+
+5. 
+
+22 ELO XC
+
+
+
+Click Grant admin consent for ... and click Yes to confirm.
+
+Once admin consent is granted, the status in the API permissions overview changes to 
+
+Granted for ....
+
+6. 
+
+23 ELO XC
+
+
+
+The fullaccessas_app permission allows full access to all mailboxes.
+
+To limit access to specific Exchange Online mailboxes, you need to generate application
+
+access policies.
+
+The process is described here: https://learn.microsoft.com/en-us/graph/auth-limit-mailbox-
+
+access.
+
+'Exchange administrator' role 
+
+A ServicePrincipal is automatically created during the app registration. With the API permissions,
+
+ELO XC is authorized to get proxy access to mailboxes and read their permission settings to find
+
+delegates in shared mailboxes. To establish a connection with the Connect-ExchangeOnline cmdlet,
+
+the service principal needs the Exchange administrator role.
+
+1. 
+
+24 ELO XC
+
+https://learn.microsoft.com/en-us/graph/auth-limit-mailbox-access
+https://learn.microsoft.com/en-us/graph/auth-limit-mailbox-access
+https://learn.microsoft.com/en-us/graph/auth-limit-mailbox-access
+
+
+In the Microsoft Azure Active Directory sidebar, select the Roles and administrators tab.
+
+Select the Exchange administrator role.
+
+Assign ELO XC to the created app registration.
+
+ELO XC has now been assigned the role of Exchange administrator.
+
+2. 
+
+3. 
+
+25 ELO XC
+
+
+
+Updating the main version 
+
+Update paths 
+
+ELO XC updates the configuration automatically. This includes changes to the configuration
+
+formatted in XML due to dropped, new or renamed items or properties. 
+
+In versions prior to ELOxc 12, this requires a separate command prompt.
+
+From ELOxc 12 onwards, this is done automatically every time the program is started.
+
+Up to and including ELOxc 20, all configuration versions down to and including ELOxc 9
+
+are recognized.
+
+As of ELO XC 21, the oldest allowed configuration version is ELOxc 11.
+
+When switching the main version, however, changes can occur that cannot be implemented
+
+automatically but require manual intervention. It is always advisable to check things
+
+manually in this case.
+
+Warning
+
+To allow you to easily perform a rollback in the event of unexpected issues, we recommend
+
+creating backup copies of the instance configurations in the Manager repository area before
+
+version migration.
+
+Upgrade ELOxc 9 to ELOxc 10 
+
+Stop ELOxc and the Tomcat that the console is running on.
+
+Go to the directory …\server\webapps and delete the xc-console.war file.
+
+In the ELOxc installation directory, run the ELOxcTools.exe as administrator and delete the
+
+ELOxc service.
+
+Uninstall ELOxc for Microsoft EWS 9 via the Control Panel.
+
+Delete the remaining files in the installation directory.
+
+In the registry, rename the HKLM\Software\ELO Digital\ELOxc9 key to ELOxc.
+
+Install ELOxc for Microsoft EWS 10.
+
+Copy the console from the installation directory to the ...\prog\webapps directory.
+
+Start the Tomcat.
+
+Run ELOxcTools.exe to register the service again and insert the new license key.
+
+Use the ELO client (Administrator) to remove the <Licenses>…</Licenses> XML element from
+
+the SORDS extra text in the //Administration//ELOxc Base//Workspace and //Administration//
+
+ELOxc Base//Service paths.
+
+• 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+• 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+6. 
+
+7. 
+
+8. 
+
+9. 
+
+10. 
+
+11. 
+
+12. 
+
+26 ELO XC
+
+
+
+Run ELOxc.exe -update from the command line (Administrator).
+
+Upgrade ELOxc 10 to ELOxc 11 
+
+Install .NET Framework 4.7.2
+
+Stop ELOxc and the Tomcat that the console is running on.
+
+Delete the xc-console.war file in …\server\webapps and the associated folders in …
+
+\servers\Tomcat\webapps and …\servers\Tomcat\work\catalina\localhost.
+
+In the ELOxc installation directory, run the ELOxcTools.exe as administrator and delete the
+
+ELOxc service.
+
+Uninstall ELOxc for Microsoft EWS 10 via the Control Panel. Delete the remaining files in the
+
+installation directory.
+
+Copy all files in the ELOxc 11 package to the installation directory.
+
+Copy the console from the installation directory to the ...\prog\webapps directory.
+
+Start the Tomcat.
+
+Run ELOxcTools.exe to register and start the service. Insert the new license key.
+
+Run ELOxc.exe -update from the command line (Administrator).
+
+After a few moments, check the update log file to see if it contains the line update finished
+
+and succeeded.
+
+Since the Keywording action was removed in ELOxc 11 and replaced by templates, all
+
+instance configurations have to be adjusted manually.
+
+Keywording with ELOxc 11 
+
+In ELOxc version 11, the Keywording action was removed. Instead, keywording is stored as a
+
+template, which makes it easier to work with ELOxc EWS in the long term.
+
+You can quickly and easily convert existing keywording into templates.
+
+Go to the Keywording action that is currently displayed and copy the XML contents (from line
+
+2, the first line is created when you create the template with names).
+
+Switch to Templates > Keywording and add the keywording with the desired name.
+
+Then edit the XML file and insert the old XML lines.
+
+Finally, you only need to change the last line in your XML file: Replace </KeywordingDef> with 
+
+</TemplateKeywordingDef> and remove the slash / from the first line.
+
+Old Keywording action XML:
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+6. 
+
+7. 
+
+8. 
+
+9. 
+
+10. 
+
+11. 
+
+12. 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+<KeywordingDef>
+
+<Mask Name="EMail" EloSearchKey="ELOOUTL3" />
+
+27 ELO XC
+
+
+
+New Keywording template:
+
+<TemplateKeywordingDef Name="test"/>
+
+End result:
+
+Upgrade ELOxc 11 to ELOxc 12 
+
+Stop ELOxc and the Tomcat that the console is running on.
+
+Delete the WAR file and the console directories.
+
+Remove the old service registration with eloxc.exe -uninstall.
+
+Delete all ELOxc 11 files other than ELOxc.xml from the installation directory.
+
+Extract all ELOxc 12 files to the installation directory.
+
+Restart Tomcat.
+
+Register ELOxc 12 with eloxc.exe -install -logdir:<logdir> -port:<port> -
+
+cert:<certificate>
+
+Start ELOxc 12.
+
+The configuration updates are performed automatically the first time you start the program.
+
+If you use LDAP filters in action trees, you must transfer the filters to the instance connection
+
+settings and use the name assigned there as the parameter value in the action trees.
+
+<ObjType TypeDefault="261" TypeWithAttachments="261" />
+
+<OKey Name="ELOOUTL1">
+
+<Match FieldName="EloSender" Id="1" Pattern="*" />
+
+</OKey>
+
+<OKey Name="ELOOUTL2">
+
+<Match FieldName="EloRecipients" Id="2" Pattern="*" />
+
+</OKey>
+
+</KeywordingDef>
+
+<TemplateKeywordingDef Name="test">
+
+<Mask Name="EMail" EloSearchKey="ELOOUTL3" />
+
+<ObjType TypeDefault="261" TypeWithAttachments="261" />
+
+<OKey Name="ELOOUTL1">
+
+<Match FieldName="EloSender" Id="1" Pattern="*" />
+
+</OKey>
+
+<OKey Name="ELOOUTL2">
+
+<Match FieldName="EloRecipients" Id="2" Pattern="*" />
+
+</OKey>
+
+</TemplateKeywordingDef>
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+6. 
+
+7. 
+
+8. 
+
+9. 
+
+10. 
+
+28 ELO XC
+
+
+
+Upgrade ELOxc 12 to ELOxc 20 
+
+Set all instances to idle processing mode so that when ELOxc 20 is started for the first time,
+
+the program will not start processing without prior validation.
+
+The catalog type ews no longer exists in ELOxc 20. Replace it with a PowerShell or Azure
+
+catalog and test the affected instances.
+
+Stop ELOxc 12.
+
+Remove the old service registration with eloxc.exe -uninstall.
+
+Delete all ELOxc 12 files other than ELOxc.xml from the installation directory.
+
+Extract all ELOxc 20 files to the installation directory.
+
+Register ELOxc 20 with eloxc.exe -install -logdir:<logdir> -port:<port> -
+
+cert:<certificate>
+
+Start ELOxc 20.
+
+The configuration updates are performed automatically the first time you start the program.
+
+Validate the instances again. Check for possible validation errors, especially:
+
+a. Consolidate deleted collective folders
+
+b. Consolidate path types
+
+c. Consolidate stubbing
+
+Publish the validated instance configurations.
+
+Restart ELOxc 20.
+
+Incorrect validation of instances 
+
+Validate each instance. In some cases, error messages are expected that you need to correct
+
+manually in the instance configuration:
+
+Removal of collective folders 
+
+Due to the removal of collective folders (when extracting attachments) and the changes in
+
+associated options for entering metadata, the pseudo-property EloSplitFolderGuid needs to be
+
+removed manually if used. You can simulate the mechanism for using collective folders by making
+
+simple configuration additions in ArcPathDef. However, a GUID for these folders is no longer
+
+available.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+6. 
+
+7. 
+
+8. 
+
+9. 
+
+10. 
+
+11. 
+
+12. 
+
+29 ELO XC
+
+
+
+Introduction of path types 
+
+By introducing path types, all paths are marked as main paths, which violates the rule that there
+
+can only be one main path for each ArcPathDef action. All paths starting from the second one must
+
+be manually configured as paths for logical references as this is how they were used in ELOxc 12.
+
+Stubbing 
+
+If you skeletonize messages (StubbingDef and TemplateStubDef), you have to change the action
+
+and the template, because the variables in TemplateStubDef have changed significantly. In
+
+addition, a template now requires you to specify both template types: HTML and text. This enables
+
+you to use a template for both message body types.
+
+Upgrade ELOxc 20 to ELO XC 21 
+
+The minimum version for automatic updates is ELOxc 11. Older versions must be migrated to
+
+an ELOxc 11 version or newer.
+
+In ELO XC 21, the instance configurations distributed to SORDS extra text are combined in an
+
+XML file. We therefore recommend that you create a backup of the ELOxc 20 configuration
+
+structure.
+
+PowerShell catalogs can no longer be used with basic authentication, but require the 
+
+Exchange Online PowerShell V3 module and an app registration.
+
+Change the Cert property in the ELOxc.xml file. The property value must be the certificate
+
+fingerprint. A TP= prefix or even CN= is no longer needed and must be removed.
+
+Stop ELOxc 20.
+
+If necessary, remove the old service registration with eloxc.exe -uninstall.
+
+Delete all ELOxc 20 files other than ELOxc.xml from the installation directory.
+
+Extract all ELO XC 21 files to the installation directory.
+
+Register ELO XC 21 with eloxc.exe -install -logdir:<logdir> -port:<port> -
+
+cert:<certificate>
+
+Start ELOxc 20.
+
+Check the main log of each instance for configuration errors.
+
+Log on to ELO XC Manager and change/validate the instance configurations if necessary.
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+6. 
+
+7. 
+
+8. 
+
+30 ELO XC
+
+
+	Table of contents
+	Installation
+	System requirements
+	Installation steps
+	Updates
+	Connection settings
+	Notes template
+	Execution
+
+	Installation details
+	ELO server certificate
+	PowerShell cmdlets
+	Certificates
+	Install module for Exchange Online
+	Test module for Exchange Online
+
+	EAC: ApplicationImpersonation
+	App registration
+	Create
+	Upload certificate
+	API permissions
+	'Exchange administrator' role
+
+
+	Updating the main version
+	Update paths
+	Upgrade ELOxc 9 to ELOxc 10
+	Upgrade ELOxc 10 to ELOxc 11
+	Keywording with ELOxc 11
+	Upgrade ELOxc 11 to ELOxc 12
+	Upgrade ELOxc 12 to ELOxc 20
+	Incorrect validation of instances
+	Removal of collective folders
+	Introduction of path types
+	Stubbing
+
+
+	Upgrade ELOxc 20 to ELO XC 21
+
+
+

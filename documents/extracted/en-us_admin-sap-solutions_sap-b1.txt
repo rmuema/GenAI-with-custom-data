@@ -1,0 +1,1438 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO for SAP Solutions | SAP Business One®
+
+
+ELO for SAP Solutions
+
+SAP Business One®
+
+
+
+3
+
+3
+
+4
+
+20
+
+25
+
+25
+
+26
+
+31
+
+37
+
+Table of contents
+
+ELO Integration Service for SAP Business One®
+
+Introduction 
+
+Preconfiguration in ELO 
+
+Installation in SAP Business One® 
+
+ELO Output Link for SAP Business One®
+
+Introduction
+
+Preconfiguration in ELO 
+
+Installation in SAP Business One® 
+
+Troubleshooting 
+
+2 ELO for SAP Solutions
+
+
+
+ELO Integration Service for SAP Business
+
+One®
+
+Introduction 
+
+This documentation describes how to set up the ELO Integration Service for SAP Business One®. It
+
+forms the technical platform for implementing the ELO Integration Client in an SAP Business One®
+
+system. The ELO Integration Client is available as an additional tab in configured views of the SAP
+
+Business One® client. When called, a configurable path in ELO is generated (if one doesn't already
+
+exist) and shown using the ELO Integration Client. The functions of the ELO Integration Client are
+
+available here and can be customized.
+
+Basics 
+
+To use the ELO Integration Service for SAP Business One® and ELO Integration Client within SAP
+
+Business One®, the systems must meet the following requirements:
+
+ELOprofessional or ELOenterprise version 12 or higher
+
+ELO Business Solutions Common version 1.07.000 or higher
+
+The ELO license must include the ELO Integration Client
+
+SAP Business One® version 10 or higher (64-bit client on Microsoft Windows)
+
+On the computers running the extension: Microsoft .NET Framework 4.7.2 or higher
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+3 ELO for SAP Solutions
+
+
+
+Preconfiguration in ELO 
+
+First, ELO Integration Service for SAP Business One® has to be installed and configured in the ELO
+
+system.
+
+You will find the necessary installation packages on the ELO SupportWeb under Integration > ELO
+
+for SAP BUSINESS ONE® > ELO Integration Service for SAP Business One®.
+
+erp.sbo.integrationservice
+
+erp.sbo.integrationservice.custom
+
+The ELO Integration Client also requires a configuration file in ELOapps.
+
+elo.integration.Client
+
+'elo.integration.client' configuration file 
+
+The configuration file elo.integration.client in JSON format is required for the ELO Integration Client.
+
+You will find this file in ELO under:
+
+Administration // ELOapps // Configuration
+
+If this file already exists, you will have to add the entry sbo. This is the case if the ELO Integration
+
+Client is already integrated with Salesforce, for example. In this case, multiple profiles are used.
+
+If the file does not exist, create it with the following parameters:
+
+• 
+
+• 
+
+• 
+
+"sbo": {
+
+    "noForm": false,
+
+    "noFeed": false,
+
+    "noFulltext": false,
+
+    "noImagePreview": false,
+
+    "rFInit": "RF_erp_sbo_integrationservice_service_Init",
+
+    "newDocVersFct": true,
+
+    "saveDocFct": true,
+
+    "gotoFct": true,
+
+    "webClientURL": "http://<Server>:<Port>/ix-<Repository>/plugin/de.elo.ix.plugin.proxy/web"
+
+    "editInOfficeFct": true,
+
+    "removeEntryFct": true,
+
+    "startWorkflowFct": false,
+
+    "startWorkflowTemplates": null,
+
+    "externalLinkFct": true,
+
+    "folderMask": "<GUID of folder form>",
+
+    "documentMask": "<GUID of document form>",
+
+    "hasSearch": true,
+
+    "referenceEntryFct": true,
+
+4 ELO for SAP Solutions
+
+
+
+For more information on this configuration file, refer to the ELO Integration Client manual.
+
+Check the following important functions:
+
+rFInit: Function that creates the folder path; provided with the erp.sbo.integrationservice
+
+package.
+
+webClientURL: To prevent the user from having to log on multiple times, the proxy behind the
+
+ELO Indexserver has to be configured. The ELO Web Client has to be configured as a plug-in
+
+behind the proxy.
+
+folderMask: Defines the metadata form that the ELO Integration Service for SAP Business
+
+One® uses to create new structures from within the SAP Business One® object.
+
+documentMask: Defines the metadata form that the ELO Integration Service for SAP Business
+
+One® uses when filing documents from the ELO Integration Client within SAP Business
+
+One®. You can use metadata forms that pass information onto the objects.
+
+Configuring the ELO Integration Service for SAP Business One® 
+
+Once you have successfully installed erp.sbo.integrationservice, you will find the configuration app
+
+in the ELO Administration Console.
+
+    "refreshFct": true
+
+}
+
+• 
+
+• 
+
+• 
+
+• 
+
+5 ELO for SAP Solutions
+
+https://docs.elo.com/admin/integration-client/
+https://docs.elo.com/admin/integration-client/
+
+
+Navigate to the app to view a selection of configurations.
+
+Click the ELO Integration Service tile.
+
+The Structures and folders tab appears.
+
+General settings 
+
+On the Structures and folders tab, you define the paths per object. You can create as many entries
+
+as you want here. Due to their complexity, objects are split into multiple areas:
+
+General settings
+
+Structure and metadata matching
+
+1. 
+
+2. 
+
+• 
+
+• 
+
+• 
+
+6 ELO for SAP Solutions
+
+
+
+Assignment of user and group rights 
+
+When performing calls, the system always checks from top to bottom. For example, if a certain
+
+object (such as 17 for sales order) is configured first, followed by a wildcard with a regular
+
+expression, the first entry is used when performing a call with object 17. For this reason, you should
+
+make sure to sort entries from specific to general (corresponding buttons).
+
+Default filing path 
+
+Object type: In the Object type column, enter the number of the respective object type in SAP
+
+Business One®.
+
+A general filing path is configured as standard. This path uses the wildcard character .* (period and
+
+asterisk) in the Object type column. The option is RegEx is also enabled. This path handles all
+
+object types that do not have a more specific configuration.
+
+Intermediate form: In the Intermediate form column, enter the metadata form for folders that may
+
+have to be created on storage so that the specified path can be generated.
+
+Folder form: The final metadata form is specified in the Folder form column, e,g. SBO-Folder.
+
+Document form: Reserved for future use cases. The same form should be entered here as in the
+
+ELO Integration Client configuration file.
+
+7 ELO for SAP Solutions
+
+
+
+Structure and metadata matching 
+
+Repository path: The filing path is defined in the Repository path column. With Handlebars syntax,
+
+you can use variables from SAP Business One® that are defined for transfer in the advanced
+
+configuration.
+
+ELO field matching: This is where you specify how to complete the fields on the metadata form
+
+defined under Folder form. In our example, this is the form SBO-Folder.
+
+Key field: You can select a key field. The value of the key field is used to specify a property of the
+
+object that remains a unique identifier even when other data changes. For example, you can
+
+specify an ID that uniquely identifies an object. This ensures that an object is not created twice
+
+(with a new name) in the repository, for example. Instead, the corresponding folder is found and a
+
+new path is created according to the new name. The folder and its contents are moved to this new
+
+path. The documents that were stored under the old name remain in the folder with the new name.
+
+Add entry: If necessary, you can add fields. You can enter additional variables with Handlebars
+
+syntax or a static string without additional syntax.
+
+The fields have to be part of the metadata form and are not created automatically. Only the fields
+
+configured on the SAP Business One® configuration tab are available. The following variants are
+
+feasible:
+
+a) The field was configured in the Default fields for transferring object information area.
+
+b) The field was configured in the Configuration of SAP Business One Forms (objects) area in
+
+the Object-specific fields column.
+
+Refer to the Installation in SAP Business One® section for more information.
+
+You can also use map fields.
+
+• 
+
+• 
+
+8 ELO for SAP Solutions
+
+
+
+Example 1 
+
+In this example, the objects are filed to the default filing path in Other objects under the variables 
+
+ObjType and DocNum.
+
+Filing path by object type 
+
+If necessary, you can create additional paths with special configurations for individual object types.
+
+Example 2 
+
+Object type: For this documentation, we use object type 17 (sales order).
+
+Intermediate form: As with the default filing path. Folder form: As with the default filing path.
+
+Document form: As with the default filing path.
+
+Repository path:
+
+ELO field matching: As with the default filing path.
+
+/SAP Business One/Sales orders/{{{DocNum}}}
+
+9 ELO for SAP Solutions
+
+
+
+In this example, we create a child folder Sales orders in the SAP Business One folder in ELO.
+
+Objects are stored in this folder under the DocNum.
+
+If you request the object-specific fields CardCode and CardName in the advanced configuration for
+
+the order form, you can also build the path as follows:
+
+Assignment of templates, user and group rights 
+
+In this area, you can use a stored template (template structure) when creating an entry as well as
+
+assign user and group rights. The required template can be created in the configuration area of
+
+Business One under
+
+// Administration // Business Solutions Custom // erp.sbo.serviceintegration // Configuration //
+
+FolderTemplates.
+
+The template is only copied the first time the entry is created.
+
+/Business partner/Customer/{{{CardCode}}} - {{{CardName}}}/Orders/{{{DocNum}}}
+
+10 ELO for SAP Solutions
+
+
+
+Path to template: Enter the path to the template structure here. For example, if you created a
+
+template structure PurchaseOrder, this would mean that when you call the ELO Integration Client in
+
+the Business One purchase order object, assuming all conditions are met, the structure is created
+
+under
+
+Administration // Business Solutions Custom // erp.sbo.integrationservice // Configuration //
+
+FolderTemplates // PurchaseOrder.
+
+At this point, you must use a separator to define a deeper folder structure. However, the separator
+
+used must be leading, e.g. if you enter /Vendor/Orders, the slash is recognized as a separator.
+
+Handlebars syntax is also allowed, which enables you to control templates flexibly.
+
+If you use Handlebars syntax to create the structure, you can only use metadata from the fields of
+
+the initial template, in this case SBO folder.
+
+Rights for users and groups
+
+Replace rights: ELO takes on the rights of the parent element by default. If the Replace rights option
+
+is enabled, the rights of the parent element are discarded and only the set rights are assigned.
+
+Please note that this function only works if a folder structure does not yet exist.
+
+Rights for users and groups: Enter the users or groups that you want to assign rights to here.
+
+RWDELP: Use the check boxes to set the different permissions types for users or groups.
+
+R = View
+
+W = Change metadata
+
+D = Delete
+
+E = Edit
+
+L = Edit list
+
+P = Set permissions
+
+For more information, refer to the documentation Concept for assigning rights and permissions.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+11 ELO for SAP Solutions
+
+https://docs.elo.com/admin/config/en-us/user-management/concept-recommendations/
+https://docs.elo.com/admin/config/en-us/user-management/concept-recommendations/
+
+
+Working with multiple companies/databases 
+
+If you work with multiple companies/databases in SAP Business One®, but manage them in a
+
+single ELO repository, you can configure the Company column.
+
+To show the Company column, you have to enable the Expert mode option.
+
+In the Company column, you enter the technical name of the respective company.
+
+1. 
+
+2. 
+
+12 ELO for SAP Solutions
+
+
+
+You will find it in SAP Business One® under Administration > Choose Company.
+
+Using the Company column, you can define different paths for different databases.
+
+SAP Business One® configuration 
+
+To configure additional settings for ELO for SAP Business One®, switch to the tab SAP Business
+
+One® configuration.
+
+The SAP Business One® configuration tab is divided into multiple areas.
+
+Basic settings 
+
+In the Basic settings area, you will find the fields described below.
+
+13 ELO for SAP Solutions
+
+
+
+Title – Integration Client tab: Here, you enter a name for the ELO tab in SAP Business One®.
+
+Integration Client call URL: Here, you enter the ELO Integration Client URL. ELOwf provides the ELO
+
+Integration Client and, like the ELO Web Client, has to be configured behind the proxy server. The
+
+server name and port have to be identical for the call URL and the ELO Web Client URL so that the
+
+logon ticket is applied automatically (SSO).
+
+URL schema:
+
+User relation: In this field, you configure how ELO maps users.
+
+a) Users in ELO and in SAP Business One® have identical names: Select the ELO user name
+
+menu item.
+
+b) Users in ELO and SAP Business One® are not identical: The user name from SAP Business
+
+One® has to be configured in ELO as a user property. In this case, select the corresponding
+
+user property.
+
+Information
+
+http://<Server_name
+
+  >:<Port
+
+    >/ix-<Repository
+
+      >/plugin/de.elo.ix.plugin.proxy/wf/app.integration.Client/?debug=false&amp;system=sbo
+
+    ></Port
+
+></Server_name
+
+>
+
+• 
+
+• 
+
+14 ELO for SAP Solutions
+
+
+
+If ELO is configured with SSO via Kerberos, you can select the option None under User
+
+relation.
+
+In this case, the URL has to be adjusted. Replace /plugin/ with /plugin-auth/.
+
+Default fields for transferring object information 
+
+Here, you can specify which fields can be used for the filing path structure on the Structures and
+
+folders tab. The fields entered here are requested for all forms. Additional fields with a specific
+
+reference to individual forms can be entered under Object-specific fields in the respective form.
+
+Configuring the display 
+
+In the Configuration of SAP Business One Forms (objects) area, you can configure how the
+
+embedded ELO system looks.
+
+15 ELO for SAP Solutions
+
+
+
+Forms ID: With the Forms ID field, you can specify the form in SAP Business One® the settings
+
+apply to by entering an ID.
+
+Element ID: With the Element ID field, you can specify the form element in SAP Business One® to
+
+serve as a basis for display by entering an ID.
+
+16 ELO for SAP Solutions
+
+
+
+Margin (left, top, etc.): The margin fields allow you configure custom settings for indents and
+
+margins. The values are relative to the element entered in Element ID.
+
+Adjacent tab (left): Enter the ID of the tab to be shown next to the ELO tab.
+
+Object-specific fields: Click Add entry to add fields that will then be available for structuring.
+
+These fields and the corresponding identifiers depend on the type of form selected and have to be
+
+identified first.
+
+In this example, the Customer field has the identifier CardCode.
+
+17 ELO for SAP Solutions
+
+
+
+Information
+
+The technical field names are only shown if you have enabled the System Information
+
+option under View.
+
+Calling the ELO Integration Client within an object 
+
+If a new document is created within an object (e.g. a customer offer) in SAP Business One®, the
+
+ELO Integration Client will not be displayed until the corresponding data set has been saved and
+
+18 ELO for SAP Solutions
+
+
+
+the offer number can be used as identifier. This is necessary because the temporary ID assigned by
+
+SAP Business One® (e.g. the offer number) could change before the document is stored.
+
+Additional fields for compatibility reasons 
+
+The following fields can be enabled in expert mode:
+
+Display level
+
+UID folder item
+
+UID browser control
+
+Please note
+
+These fields are available for compatibility reasons. Normally, these values do not have to
+
+be changed. However, there may be forms already using the display level. Or, other
+
+extensions may be installed that use the same display level or UID. In these cases, you will
+
+have to make some changes.
+
+• 
+
+• 
+
+• 
+
+19 ELO for SAP Solutions
+
+
+
+Installation in SAP Business One® 
+
+After ELO has been configured, the service is installed in SAP Business One®. You need the
+
+installation files that are provided as a ZIP file (EloIntegrationServiceB1-1.0.zip; with the
+
+corresponding version number).
+
+You will find the ZIP file as a download on the ELO SupportWeb under Integration > ELO for SAP®
+
+ERP > ELO for SAP Business One®.
+
+Open SAP Business One® Extension Manager. This tool is supplied with the SAP System
+
+Landscape Directory.
+
+Normally, the call is carried out via a URL with the following structure:
+
+A Business One Site User is required to log on. This is a general user and is not managed via
+
+the SAP database.
+
+1. 
+
+https://<server>/40000/ExtensionManager/
+
+20 ELO for SAP Solutions
+
+https://supportweb.elo.com/en-us/integration/elo-for-sap-business-one.html
+https://supportweb.elo.com/en-us/integration/elo-for-sap-business-one.html
+
+
+Import 
+
+Click Import.
+
+A dialog box opens.
+
+Click Browse.
+
+Select the ZIP file with the installation data.
+
+Click Upload.
+
+The data is loaded.
+
+Click Next.
+
+Skip the Specify Shared Parameters page and upload by clicking Finish.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+6. 
+
+21 ELO for SAP Solutions
+
+
+
+Assignment 
+
+Open the Company Assignment tab.
+
+Select the desired company/database.
+
+Click Assign.
+
+Select the extension ELO Integration Service for SAP Business One®.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+22 ELO for SAP Solutions
+
+
+
+Click Next.
+
+Edit the parameters:
+
+ixUrl: Enter the URL to the ELO Indexserver.
+
+user: Enter the ELO service account (normally ELO Service).
+
+configPath: The config path for the ELO Integration Client. It can be changed when used
+
+at different companies.
+
+password: Enter the password for the ELO service account used above. You can encrypt
+
+the password first in the ELO Administration Console and then enter the encrypted
+
+password here.
+
+Click Next to confirm.
+
+6. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+7. 
+
+23 ELO for SAP Solutions
+
+
+
+If needed, edit the startup mode. You can choose whether you want to select the same mode
+
+for all users or configure custom settings per user.
+
+Click Next and then Finish.
+
+Please note
+
+The Windows user who starts the Business One Client must have appropriate rights in the
+
+add-on directory of the Business One Client installation.
+
+The following rights must be granted:
+
+Change
+
+Read
+
+Execute
+
+Write
+
+Example path: C:\Program Files\SAP\SAP Business One\AddOns\ELO\ELO Integration Service
+
+for SAP Business One®\X64Client
+
+8. 
+
+9. 
+
+• 
+
+• 
+
+• 
+
+• 
+
+24 ELO for SAP Solutions
+
+
+
+ELO Output Link for SAP Business One®
+
+Introduction
+
+This document describes how to set up ELO Output Link for SAP Business One®.
+
+ELO Integration Service for SAP Business One® is required as the foundation for ELO Output Link to
+
+function. This not only forms the technical platform for implementing the ELO Integration Client in
+
+an SAP Business One® system, but also acts as the interface between ELO and SAP Business One®
+
+for the ELO Output Link for SAP Business One®.
+
+Basics
+
+To use ELO Output Link for SAP Business One®, the following system requirements must be met:
+
+ELOprofessional or ELOenterprise version 12 or higher
+
+ELO Business Solutions Common version 1.15.000 or higher
+
+The ELO license must include the ELO Integration Client
+
+SAP Business One® version 10 or higher (64-bit client on Microsoft Windows)
+
+On the computers running the extension: Microsoft .NET Framework 4.7.2 or higher
+
+Configured ELO Integration Service for SAP Business One®
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+25 ELO for SAP Solutions
+
+
+
+Preconfiguration in ELO 
+
+First, ELO Output Link for SAP Business One® has to be installed and configured in the ELO system.
+
+You will find the necessary installation packages on the ELO SupportWeb under Integration. The ELO
+
+installation package contains the following files:
+
+erp.sbo.outputlink
+
+custom_erp.sbo.outputlink
+
+Configuring ELO Output Link for SAP Business One® 
+
+The configuration is rolled out via the Integration Service package for version 1.00.004 and higher.
+
+This is therefore a requirement.
+
+Like the Integration Service, Output Link includes a sample configuration. This includes the
+
+following objects:
+
+Sales orders
+
+Sales quotations
+
+Delivery notes
+
+Invoices
+
+Credits
+
+Purchase orders
+
+Once you have successfully installed the ELO packages, you will find the configuration app in the
+
+ELO Administration Console under Solutions > ELO for SAP Business One® > ELO Output Link.
+
+Click the ELO Output Link tile to access the configuration interface of ELO Output Link for SAP
+
+Business One®.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+26 ELO for SAP Solutions
+
+
+
+General settings 
+
+In the General settings area, you define an object type. With customer extensions within SAP
+
+Business One®, this could also be an ID defined by development. The object type helps you
+
+identify the configuration entry.
+
+As soon as you add a new entry in this area, corresponding lines are automatically created in the 
+
+Structures and metadata matching and Assignment of user and group rights areas.
+
+27 ELO for SAP Solutions
+
+
+
+Object type: In this column, enter the ID that uniquely identifies an object.
+
+Company: You can enter a company here to distinguish between several companies in use. Multiple
+
+entries can exist for one object type. Under structure and metadata matching, you can configure a
+
+separate path for the respective company for each entry.
+
+Document form: This is where you specify which metadata form to use for documents filed via ELO
+
+Output Link for SAP Business One®. You can enter the same form as in the ELO Integration Client
+
+configuration file, or a separate one for each SAP Business One® object.
+
+Version comment: The comment is entered for the document filed from SAP Business One® and is
+
+visible in the document's feed. If a report or an object is printed again, ELO generates a new
+
+version, which is saved in the comment/feed with the entry configured here.
+
+Delete afterwards: If this option is enabled, a PDF document is deleted after it has successfully
+
+been transferred to ELO.
+
+In detail: If the document comes from the Archived Documents child folder within the attachments
+
+folder, the PDF file there is deleted. If the PDF comes from the attachments folder and it was also
+
+linked on the Attachments tab in the application, the PDF is deleted along with the entry in the SAP
+
+Business One® database.
+
+Only one version: No other versions will be filed. If a document already exists, the previous
+
+metadata remain unchanged.
+
+Structure and metadata matching 
+
+As described in the chapter General settings, when you create an entry under General settings, a
+
+separate entry for the object type is automatically created in the Structure and metadata matching
+
+area.
+
+28 ELO for SAP Solutions
+
+
+
+Object type: The entry is copied directly from the General settings area and can also only be
+
+modified in that area.
+
+Repository subpath: The filing path in ELO is defined in the Repository subpath column. In this field,
+
+you can also enter SAP Business One® variables, e.g. using Handlebars syntax.
+
+ELO field matching: This is where you specify how to complete the fields on the metadata form
+
+defined under Document form (see chapter General settings).
+
+ELO field: Choose between GRP for metadata fields and MAP for map fields and enter the technical
+
+name of the field here. In MAP fields, it is possible to use iteration by attaching the value {i} to the
+
+technical name. This is useful in relation to the value in Alternative table if a table of lines is
+
+specified there and multiple values can be transferred. If the metadata fields do not exist in the
+
+metadata form, the corresponding values will be lost and written as a warning in the log.
+
+Value in Handlebars: The value entered here is stored in the corresponding ELO field in the ELO
+
+entry. To copy the value of the transfer parameter from the URL, it must be enclosed in triple curly
+
+brackets.
+
+If the values are iterated, you can use the {i} identifier to indicate the Handlebar.
+
+Please note
+
+If an iteration is defined but there is no {i} in the ELO field, all values will be concatenated
+
+in this field up to a maximum of 255 characters. Any values above this will be rejected.
+
+Key field (expert mode): You can select one key field. The value of the key field is used to specify a
+
+property of the object that remains a unique identifier even when other data changes. For example,
+
+you can specify an ID that uniquely identifies an object. New versions of the object are created at
+
+the new location when moving the object instead of creating it (and therefore a duplicate) at the
+
+old location, for example.
+
+29 ELO for SAP Solutions
+
+
+
+Assignment of user and group rights 
+
+Replace rights: ELO inherits the rights of the folder by default. If this option is enabled, the rights of
+
+the folder are discarded and only the set rights are assigned.
+
+Rights for users and groups: Enter the users or groups that you want to assign rights to here.
+
+RWDELP: Use the check boxes to set the different permissions types for users or groups.
+
+R = View
+
+W = Change metadata
+
+D = Delete
+
+E = Edit
+
+L = Edit list
+
+P = Set permissions
+
+For more information, refer to the documentation Concept for assigning rights and permissions.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+30 ELO for SAP Solutions
+
+https://docs.elo.com/admin/config/en-us/user-management/concept-recommendations/
+https://docs.elo.com/admin/config/en-us/user-management/concept-recommendations/
+
+
+Installation in SAP Business One® 
+
+After you have completed the configuration in ELO, you have to configure SAP Business One®.
+
+Open SAP Business One® Extension Manager.
+
+Import the ELO for SAP Business One® add-on by clicking Import.
+
+Assign the add-on to the company via the Company Assignment tab.
+
+The settings you are familiar with from the Integration Service have been added to use the
+
+new configPathOl.
+
+Client start 
+
+Start the SAP Business One® client with administrator rights if the client has been started for a
+
+user for the first time or after updates have been installed.
+
+Requirements for printing documents 
+
+Output Link bases its behavior on the system default. This means PDF files with a defined name
+
+structure are expected in the attachments folder in the child folder Archived Documents or in the
+
+main folder. These folders are linked via the document attachments. The PrintEvent also has to be
+
+triggered. If using add-ons or custom developments that work differently or affect the system
+
+behavior, this may impact function in part or completely.
+
+Once Output Link is in use, SAP Business One® should be avoided during ELO maintenance
+
+windows. Otherwise, any failed transfers while the system was unavailable will have to be
+
+repeated manually (see section 'queue' folder). This work may accumulate on different computers
+
+due to the architecture of SAP Business One®.
+
+1. 
+
+2. 
+
+3. 
+
+31 ELO for SAP Solutions
+
+
+
+Attachments folder 
+
+A valid path for attachments has to be configured in the connected SAP Business One® system.
+
+This setting should generally be coordinated with a system administrator.
+
+Clients should be able to access the path at all times and the user accounts running the SAP
+
+Business One® client should have read/write and, if necessary, delete rights.
+
+The path is configured here:
+
+Main menu > Modules tab > Administration > System Initialization > General Settings > Path tab
+
+> Attachments folder field
+
+Generate PDF 
+
+For both manual and serial printing, the Generate PDF when printing option has to be enabled. A
+
+PDF with a specific file name is then created in the Archived Documents child folder within the
+
+attachments folder for all print actions.
+
+Example: <object type>_<document number>_<date>_<time>_<report>_<user>.pdf results in 
+
+17_971_20220708_075850_RDR20005_manager.pdf.
+
+If this doesn't happen even though the box has been checked, Output Link will not work.
+
+The option can be set here:
+
+Main menu > Modules tab > Administration > System Initialization > Print Preferences > General
+
+tab > Generate PDF When Printing check box
+
+32 ELO for SAP Solutions
+
+
+
+Generate PDF per document 
+
+To generate a PDF when adding a sales order or outgoing invoice and transfer it to ELO, this has to
+
+be configured per document. This configuration generates a PDF, files it to the attachments folder,
+
+and writes an entry to the document's attachments. This function can also be tested without Output
+
+Link.
+
+If there is no entry in the document's attachments after adding the document, Output Link will not
+
+work.
+
+The option can be set here:
+
+Main menu > Modules tab > Administration > System Initialization > Print Preferences > Per
+
+Document tab > Export to PDF
+
+Example for adding a sales order:
+
+33 ELO for SAP Solutions
+
+
+
+Optional settings 
+
+If using the Integration Service, you can restrict access to the standard Attachments function for
+
+users. There are different ways to do this. Besides the more complicated option of editing the form
+
+in SAP Business One® Studio, you can also hide the button for adding new attachments in UI edit
+
+mode.
+
+Select Extras > Edit Form UI….
+
+The UI edit mode window opens.
+
+Click Browse and select the Hide menu item.
+
+1. 
+
+2. 
+
+34 ELO for SAP Solutions
+
+
+
+Functionality 
+
+ELO Output Link for SAP Business One® responds to the Application PrintEvent of the SAP Business
+
+One® client. If the object being printed has been configured accordingly, the document is
+
+transferred to ELO and removed in SAP Business One® depending on the configuration.
+
+To transfer a document to ELO, saving of the PDF must be enabled in the configuration.
+
+There are different actions that can trigger the event and creation of a PDF:
+
+Manual printing via the Print button
+
+Serial printing via the Document Printing function (also suitable for subsequent archiving).
+
+Available in: Main menu > Modules tab > Sales > Document Printing > Internal Number From
+
+field > OK button > Print button
+
+• 
+
+• 
+
+35 ELO for SAP Solutions
+
+
+
+For certain document actions, such as adding a new document. Different options are
+
+available in SAP Business One® depending on the document type. This depends on what the
+
+system offers.
+
+Example for a sales order:
+
+• 
+
+36 ELO for SAP Solutions
+
+
+
+Troubleshooting 
+
+This chapter features possible solutions for frequent issues.
+
+'AppData' directory 
+
+The add-on creates different folders in the AppData directory of the executing user.
+
+To find the directory, proceed as follows:
+
+In the Windows Explorer Address Bar, enter %appdata% and navigate to the ELO for SAP Business
+
+One® folder.
+
+'log-files' folder 
+
+A log file is written to the log-files folder for each day of the month. It is overwritten completely
+
+when a new month starts. This is a rolling log to keep the hard drive from filling up and to keep the
+
+installation maintenance-free.
+
+You will find the log-files folder in the \AppData > Roaming > ELO for SAP Business One® directory.
+
+37 ELO for SAP Solutions
+
+
+
+Debug mode 
+
+Sometimes, a more detailed debug log is required for support reasons. To enable this log, proceed
+
+as follows:
+
+In the ELO for SAP Business One® folder, create a file named DEBUG without an extension,
+
+e.g. via context menu (right-click) > New > Text document.
+
+If the file name extensions are not shown, you will have to enable this option and remove the
+
+extension .txt.
+
+Once the file has been created, restart the add-on or better yet the entire SAP Business One®
+
+client.
+
+'queue' folder 
+
+Internally, Output Link works with a queue to repeat any failed transfers or to continue after a
+
+crash. JSON files that reflect the current status of a transfer are stored in the queue folder. They are
+
+processed and cleaned up automatically.
+
+If the ELO system is down for a longer period of time and SAP Business One® is still used in this
+
+time, you will have to inspect the queue folders for all users. Check whether the error child folder
+
+has been created there and whether it contains entries. If this is the case, you can move the entries
+
+back to the queue folder. Within these files, check whether the RetryCount is greater than 10. It
+
+may have to be set back to the value 0. When the SAP Business One® client (including the ELO
+
+add-on) is started back up, the files are processed.
+
+1. 
+
+2. 
+
+38 ELO for SAP Solutions
+
+
+
+39 ELO for SAP Solutions
+
+
+	Table of contents
+	ELO Integration Service for SAP Business One®
+	Introduction
+	Basics
+
+	Preconfiguration in ELO
+	'elo.integration.client' configuration file
+	Configuring the ELO Integration Service for SAP Business One®
+	General settings
+	Default filing path
+
+	Structure and metadata matching
+	Example 1
+	Filing path by object type
+	Example 2
+
+	Assignment of templates, user and group rights
+	Working with multiple companies/databases
+
+	SAP Business One® configuration
+	Basic settings
+	Default fields for transferring object information
+	Configuring the display
+	Calling the ELO Integration Client within an object
+
+	Additional fields for compatibility reasons
+
+	Installation in SAP Business One®
+	Import
+	Assignment
+
+
+	ELO Output Link for SAP Business One®
+	Introduction
+	Basics
+
+	Preconfiguration in ELO
+	Configuring ELO Output Link for SAP Business One®
+	General settings
+	Structure and metadata matching
+	Assignment of user and group rights
+
+	Installation in SAP Business One®
+	Client start
+	Requirements for printing documents
+	Attachments folder
+	Generate PDF
+	Generate PDF per document
+	Optional settings
+	Functionality
+
+	Troubleshooting
+	'AppData' directory
+	'log-files' folder
+	Debug mode
+	'queue' folder
+
+
+

@@ -1,0 +1,2131 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Business Solution ELO Public Sector | Business Solution ELO Public Sector 1.04
+
+
+Business Solution ELO
+
+Public Sector
+
+Business Solution ELO Public Sector 1.04
+
+
+
+3
+
+3
+
+4
+
+7
+
+13
+
+24
+
+32
+
+38
+
+43
+
+47
+
+Table of contents
+
+null
+
+Introduction 
+
+Basics 
+
+Importing, exporting, and maintaining filing plans 
+
+Filling the filing plan 
+
+Change filing plan 
+
+Processes 
+
+Generating reports 
+
+Automatically generating record objects 
+
+Routines 
+
+2 Business Solution ELO Public Sector
+
+
+
+null
+
+Introduction 
+
+Structure of the documentation 
+
+The goal of this documentation is to explain all functions of Business Solution ELO Public Sector.
+
+Basics 
+
+The Basics chapter explains the basics of the ELO Public Sector program interface.
+
+Possible actions 
+
+The remaining chapters address possible actions using ELO Public Sector.
+
+Target audience 
+
+This documentation is addressed to Business Solution ELO Public Sector users. Separate
+
+documentation is available for administrators on the ELO SupportWeb.
+
+The scope of functions presented in this documentation may differ greatly from those in your
+
+client.
+
+If you do not find functions described in this documentation in your client, you do not have
+
+permission to perform the action.
+
+3 Business Solution ELO Public Sector
+
+
+
+Basics 
+
+Basic principle 
+
+Business Solution ELO Public Sector is designed to meet the special requirements of government
+
+and public authorities.
+
+ELO Public Sector covers the process of managing official records.
+
+You can use ELO Public Sector to digitalize your filing plan in ELO. In your filing plan, you can create
+
+and manage files. You can link your digitalized files to your physical files using QR codes as
+
+needed.
+
+Reports help you keep an overview of your filing plan and your files.
+
+Cases and circulation folders also help you map routines.
+
+General note 
+
+ELO Public Sector works with the following clients:
+
+ELO Web Client
+
+ELO Java Client
+
+ELO Desktop Client
+
+Information
+
+In this documentation, we use screenshots from the ELO Web Client. The standard ELO
+
+Public Sector solution is shown.
+
+Requirements 
+
+Your administrator must have configured ELO Public Sector for you.
+
+Program interface 
+
+You will find ELO Public Sector functions in the following areas:
+
+• 
+
+• 
+
+• 
+
+4 Business Solution ELO Public Sector
+
+https://docs.elo.com/user/elo-web-client/en-us/elo-web-client/
+https://docs.elo.com/user/elo-web-client/en-us/elo-web-client/
+https://docs.elo.com/user/elo-java-client/en-us/elo-java-client/
+https://docs.elo.com/user/elo-java-client/en-us/elo-java-client/
+https://docs.elo.com/user/elo-desktop-client/en-us/elo-desktop-client/
+https://docs.elo.com/user/elo-desktop-client/en-us/elo-desktop-client/
+
+
+Fig.: Business Solution ELO Public Sector program interface
+
+1 'Public Sector' group on the 'New' tab
+
+With the functions in this group, you create elements in the filing plan.
+
+Fig.: 'Public Sector' tab
+
+2 'Public Sector' tab
+
+With the functions on this tab, you can make changes to the filing plan or request changes, start 
+
+signature processes and directives, create reports, and automatically generate record objects.
+
+Filing plan 
+
+You can reach your filing plan via the repository.
+
+The filing plan contains files with different statuses. You will recognize the statuses based on the
+
+color of the files:
+
+Green: The file is open and can be edited. Files can be closed and re-opened.
+
+Red: The file is closed and can no longer be edited. A closed file can be re-opened on request.
+
+Yellow: The file is locked and should no longer be edited. A locked file can be unlocked.
+
+File references are generated automatically when creating files.
+
+• 
+
+• 
+
+• 
+
+5 Business Solution ELO Public Sector
+
+
+
+Fig.: Part of a filing plan with file, case, and record objects
+
+Files can be structured differently depending on your needs. They can be organized in file groups, or
+
+contain sub-files, cases, documents, or record objects.
+
+6 Business Solution ELO Public Sector
+
+
+
+Importing, exporting, and maintaining filing plans 
+
+The following explains the functions of Business Solution ELO Public Sector, which are generally
+
+performed by the filing department. Additional rights are required for these functions.
+
+This chapter addresses the following functions:
+
+Import filing plan
+
+Create group
+
+Structure group
+
+Export filing plan
+
+Import filing plan 
+
+Information
+
+You can digitalize an existing filing plan and import an entire structure.
+
+Requirements
+
+This function is only available in the ELO Java Client.
+
+Fig.: XLS file with filing plan
+
+You need a CSV file or an XLS file with your filing plan.
+
+Information
+
+Only the first worksheet is read and processed.
+
+The first row of the table must contain the respective ELO fields. There is no restriction to the
+
+type and number of transferred fields here.
+
+Method
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+7 Business Solution ELO Public Sector
+
+
+
+At the top level, create a folder for the filing plan using the New > New folder function.
+
+Select the folder you just created to import the filing plan to it.
+
+On the Output tab, click Export/Import > Import filing plan.
+
+In the Import filing plan dialog box, select the CSV or XLS file.
+
+Fig.: 'Import filing plan' dialog box
+
+Click Load and confirm your selection in the Import filing plan dialog box.
+
+Result
+
+The filing plan is imported to the selected folder.
+
+Outlook
+
+The filing plan can now be filled by creating files in the groups of the filing plan via Create file.
+
+You can also create additional groups.
+
+Create group 
+
+Information
+
+You can also add individual groups to the filing plan.
+
+Method
+
+In the filing plan, select the group where you want to create additional groups.
+
+On the New tab, click New folder.
+
+2. 
+
+3. 
+
+4. 
+
+1. 
+
+1. 
+
+2. 
+
+8 Business Solution ELO Public Sector
+
+
+
+Fig.: 'New folder' dialog box, 'Filing plan' metadata form
+
+In the New folder dialog box, keep the Filing plan metadata form.
+
+Complete the required fields.
+
+Click OK.
+
+Parameter
+
+Tab Field Meaning
+
+Files
+Unit for
+
+retention period
+Select a unit and enter a number in the Retention period field as well.
+
+Retention period
+If you also enter a number in addition to the unit, the retention period for
+
+elements created within this group is calculated automatically.
+
+Options Entry type Select sol.Filing Plan as the icon for the group.
+
+Keyword lists
+
+Keyword lists are available for some of the fields. You have the following options:
+
+Select an element: All entries appear via the menu at the end of the field. Select the element.
+
+Select multiple elements: Using a separator (¶), you can string multiple elements. In this
+
+case, you can only select the first element. Right-click to insert a separator. You will have to
+
+enter the other elements manually, separated by separators.
+
+1. 
+
+2. 
+
+• 
+
+• 
+
+• 
+
+9 Business Solution ELO Public Sector
+
+
+
+Select all elements: To select all elements, enter an asterisk (*).
+
+Result
+
+The group is created at the selected position in the filing plan.
+
+Outlook
+
+It can now be filled by creating files via Create file.
+
+Structure group 
+
+Information
+
+You can further structure a group in your filing plan, for example by creating a folder from A to Z.
+
+Method
+
+In the filing plan, select the group you want to structure.
+
+On the New tab, click New folder.
+
+Fig.: 'New folder' dialog box, 'Filing plan structure' metadata form
+
+In the New folder dialog box, select the Filing plan structure metadata form.
+
+1. 
+
+2. 
+
+1. 
+
+10 Business Solution ELO Public Sector
+
+
+
+As this metadata form may only be used to structure groups, all the fields on the Filing plan tab are
+
+disabled, with the exception of Short name and Date. The other groups are inherited from the
+
+parent group.
+
+Click OK.
+
+Result
+
+The folder is created at the selected position in the filing plan.
+
+Outlook
+
+It can now be filled by creating files via Create file.
+
+Export filing plan 
+
+Information
+
+You can export a filing plan or part of a filing plan to transfer it to another ELO repository, for
+
+example.
+
+Requirements
+
+This function is only available in the ELO Java Client.
+
+Method
+
+Select the filing plan or the part of the filing plan you want to export.
+
+Fig.: Selected groups
+
+To select multiple groups, select the parent group. In the table view, select the groups you want to
+
+export:
+
+To select multiple, specific groups, press and hold the CTRL key and click all the groups you
+
+want to select.
+
+To select multiple groups in a row, press the SHIFT key then click the top-most and bottom-
+
+most entry you want to select.
+
+On the Output tab, click Export/Import > Export.
+
+1. 
+
+1. 
+
+• 
+
+• 
+
+1. 
+
+11 Business Solution ELO Public Sector
+
+
+
+Fig.: 'Export' dialog box
+
+In the Export dialog box, select a target path for the export.
+
+To export only filing plan entries, filter for the Filing plan metadata form under Filter
+
+documents > By metadata form.
+
+Click OK.
+
+Result
+
+The filing plan is saved at the selected target location as a ZIP file.
+
+Outlook
+
+In the ELO Java Client, you can import the filing plan to another ELO repository using the Output >
+
+Export/import > Import function.
+
+1. 
+
+2. 
+
+3. 
+
+12 Business Solution ELO Public Sector
+
+
+
+Filling the filing plan 
+
+This chapter contains an overview of the functions in the Public Sector group on the New tab.
+
+With these functions, you fill your filing plan.
+
+Create file 
+
+Information
+
+You can create a file in your filing plan.
+
+Requirement
+
+At least one permitted file type has been created by the administrator.
+
+Method
+
+In the filing plan, select the position where you want to create the file.
+
+This position can be a file. Within a file, you have to create sub-files.
+
+On the New tab, click Public Sector > New file.
+
+1. 
+
+1. 
+
+13 Business Solution ELO Public Sector
+
+
+
+Fig.: 'Select file type' dialog box
+
+If multiple file types are available, the Select file type dialog box opens.
+
+Click the file type that corresponds to your file.
+
+Information
+
+If the overview does not contain file type you need and you do not have permission to
+
+create new file types, you can report this to your administrator with the function Request
+
+change.
+
+1. 
+
+14 Business Solution ELO Public Sector
+
+
+
+Fig.: 'Create file' dialog box
+
+Several fields in the Create file dialog box will already be filled with information from the file type.
+
+These fields are grayed out.
+
+Complete the other fields on the Create file and Information tabs.1. 
+
+2. 
+
+15 Business Solution ELO Public Sector
+
+
+
+Click Create file.
+
+Parameter
+
+Field Meaning
+
+Disposal
+
+date
+
+The disposal date is calculated automatically based on the retention date set for the
+
+group.
+
+Filing
+
+location
+You can indicate where the corresponding physical file can be found.
+
+Result
+
+The file is created in the selected group.
+
+The file reference is generated automatically.
+
+If a structure has been defined for the selected filing type, it is automatically created.
+
+Outlook
+
+A file in ELO Public Sector corresponds to a file in a physical filing plan and can be filled like one as
+
+well.
+
+Sub-files can be created within the file.
+
+File groups allow you to keep files over several years, for example.
+
+Documents can further structure the file.
+
+Routines can also be started right in a file.
+
+Create sub-file 
+
+Information
+
+You can create a sub-file for an existing file.
+
+Requirement
+
+At least one permitted file type has been created by the administrator.
+
+Method
+
+Select the file in the filing plan.
+
+On the New tab, click Public Sector > New sub-file.
+
+Now proceed as if you were creating a file.
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+16 Business Solution ELO Public Sector
+
+
+
+Fig.: No file type available.
+
+If this message appears, you cannot create sub-files in the selected file. If you still want to create a
+
+sub-file, you will have to submit a change request via Request change.
+
+Result
+
+The sub-file is created in the selected file.
+
+The file reference is generated automatically.
+
+If a structure has been defined for the selected filing type, it is automatically created.
+
+Outlook
+
+You can treat and fill sub-files like files.
+
+Create file group 
+
+Information
+
+You can create a file group for an existing file, for example when a new year begins.
+
+Requirement
+
+The file you want to create a file group for has been closed using the Close function first.
+
+Method
+
+Select the file you want to create a file group for.
+
+On the New tab, click Public Sector > New file group.
+
+The fields in the Create file dialog box will already be filled with information from the previous file.
+
+Result
+
+The file group is created.
+
+The file is identical to the structure of the previous file.
+
+1. 
+
+2. 
+
+17 Business Solution ELO Public Sector
+
+
+
+Create document 
+
+Information
+
+You can create a new document.
+
+In this case, the document is a container for multiple files and contains their metadata.
+
+Method
+
+Select the file or the case where you want to create a document.
+
+On the New tab, click Public Sector > New document.
+
+Fig.: 'New document' dialog box
+
+Enter a name for the document.
+
+Click Create document.
+
+Result
+
+The document is created at the selected position.
+
+Outlook
+
+The document can now be filled with record objects.
+
+In the document form, you will find the fields Name and Value under Additional information. These
+
+fields are only relevant for the Create Word document function and are completed by
+
+administrators only.
+
+Create case 
+
+Information
+
+1. 
+
+2. 
+
+1. 
+
+2. 
+
+18 Business Solution ELO Public Sector
+
+
+
+You can create a case for processing a routine.
+
+Requirement
+
+At least one permitted case type has been created by the administrator.
+
+Method
+
+Select the file where you want to create a case.
+
+On the New tab, click Public Sector > New case.
+
+If multiple case types are available, select the case type you want to create in the Create
+
+case dialog box.
+
+No case type available. No case was created: If this message appears, you cannot create cases in
+
+the selected file. If you still want to create a case, you will have to submit a change request via 
+
+Request change.
+
+1. 
+
+2. 
+
+3. 
+
+19 Business Solution ELO Public Sector
+
+
+
+Fig.: 'Create case' dialog box
+
+Several fields in the Create case dialog box will already be filled with information from the case
+
+type.
+
+Complete the other fields on the Create case and Information tabs.
+
+Click Create case.
+
+Result
+
+1. 
+
+2. 
+
+20 Business Solution ELO Public Sector
+
+
+
+The case is created at the selected position.
+
+Outlook
+
+In a case, you can
+
+Create documents
+
+File record objects
+
+Start routines
+
+Create circulation folder 
+
+Information
+
+You can create a circulation folder with contents from a file or case. In addition, you can file
+
+elements within a circulation folder that are not part of your filing plan. With this circulation folder,
+
+you can start one or more routines.
+
+Method
+
+Select the file, case, or document you want to use to create a circulation folder.
+
+To select multiple files, cases, or documents, select the parent element. In the table view, select
+
+the entries you want to reference in the circulation folder:
+
+To select multiple, specific entries, press and hold the CTRL key and click all the entries you
+
+want to select.
+
+To select multiple entries in a row, press the SHIFT key then click the top-most and bottom-
+
+most entry you want to select.
+
+On the New tab, click Public Sector > New circulation folder.
+
+• 
+
+• 
+
+• 
+
+1. 
+
+• 
+
+• 
+
+1. 
+
+21 Business Solution ELO Public Sector
+
+
+
+Fig.: 'Create circulation folder' dialog box
+
+Complete the fields as required.
+
+Click Create circulation folder.
+
+Parameter
+
+Field Meaning
+
+Routine
+
+template
+
+You can select a routine that has already been defined. You can change the routine
+
+before starting it if necessary. You can also leave the field blank and define a
+
+custom routine after creating the circulation folder.
+
+Extend
+
+permissions
+
+Users without permission to the contents of a circulation folder will only see the
+
+circulation folder and not its contents. If you check this box, they will also see the
+
+contents.
+
+Result
+
+1. 
+
+2. 
+
+22 Business Solution ELO Public Sector
+
+
+
+The circulation folder is created in the Circulation folders folder, which is not part of the filing plan.
+
+The selected elements are referenced in the circulation folder. As a result, the circulation folder
+
+always contains the latest versions.
+
+Outlook
+
+Now that you have created a circulation folder, you have to start the routine.
+
+23 Business Solution ELO Public Sector
+
+
+
+Change filing plan 
+
+This chapter contains an overview of the functions in the Edit group on the Public Sector tab.
+
+With these functions, you can make changes to the filing plan and/or the files. If you have the
+
+necessary permissions, the changes are applied immediately. If you do not have the necessary
+
+permissions, you can submit a change request using the relevant function.
+
+Close 
+
+Information
+
+You can close a file or case.
+
+Information
+
+If you do not see the Close button, you can submit a change request via Request change.
+
+Method
+
+Select the file or case you want to close.
+
+To select multiple files/cases, select the parent group. In the table view, select the files/cases you
+
+want to close:
+
+To select multiple, specific files/cases, press and hold the CTRL key and click all the files/
+
+cases you want to select.
+
+To select multiple files/cases in a row, press the SHIFT key then click the top-most and
+
+bottom-most entry you want to select.
+
+On the Public Sector tab, click Close.
+
+1. 
+
+• 
+
+• 
+
+1. 
+
+24 Business Solution ELO Public Sector
+
+
+
+Fig.: 'Close' dialog box
+
+Click Close file.
+
+Result
+
+Closed files/cases cannot be edited. However, they are still visible in the filing plan.
+
+Outlook
+
+A closed file or case can be re-opened using the Open function.
+
+A closed file or case can be deleted using the Delete function.
+
+You can create a file group for a closed file.
+
+Delete 
+
+Information
+
+You can delete a file or case.
+
+Information
+
+If you do not see the Delete button, you can submit a change request via Request change.
+
+Requirement
+
+1. 
+
+• 
+
+• 
+
+• 
+
+25 Business Solution ELO Public Sector
+
+
+
+The case has to be closed with the Close function first.
+
+Method
+
+Select the file or case you want to delete.
+
+To select multiple files/cases, select the parent group. In the table view, select the files/cases you
+
+want to delete:
+
+To select multiple, specific files/cases, press and hold the CTRL key and click all the files/
+
+cases you want to select.
+
+To select multiple files/cases in a row, press the SHIFT key then click the top-most and
+
+bottom-most entry you want to select.
+
+On the Public Sector tab, click Delete.
+
+Result
+
+Deleted files/cases are no longer visible in the filing plan.
+
+Please note
+
+This only assigns files a deletion marker, and does not delete them permanently. Deleted
+
+entries have to be removed from ELO permanently by an administrator. They can be
+
+restored until the point at which they are permanently deleted.
+
+Reclassify file 
+
+Information
+
+You can move a file to another position within the filing plan.
+
+Information
+
+If you do not see the Reclassify file button, you can submit a change request via Request
+
+change.
+
+Method
+
+Select the file you want to reclassify.
+
+On the Public Sector tab, click Edit > Reclassify file.
+
+1. 
+
+• 
+
+• 
+
+1. 
+
+1. 
+
+2. 
+
+26 Business Solution ELO Public Sector
+
+
+
+Fig.: 'Reclassify file' dialog box
+
+In the Reclassify file dialog box, select the target position for the file.
+
+Click OK.
+
+Result
+
+You will now find the file at the position you have selected.
+
+The file reference and any derived references within the file are automatically adapted to the new
+
+position.
+
+Please note
+
+Do not move files using the standard Start > Move function, as this does not reclassify the
+
+file reference. If you have already moved a file with the Move function, you can move it
+
+back to its original location in the same way and then use the Reclassify file function.
+
+Open 
+
+Information
+
+You can re-open a closed file or case.
+
+Information
+
+1. 
+
+2. 
+
+27 Business Solution ELO Public Sector
+
+
+
+If you do not see the Open button, you can submit a change request via Request change.
+
+Method
+
+Select the file or case you want to open.
+
+To select multiple files/cases, select the parent group. In the table view, select the files/cases you
+
+want to open:
+
+To select multiple, specific files/cases, press and hold the CTRL key and click all the files/
+
+cases you want to select.
+
+To select multiple files/cases in a row, press the SHIFT key then click the top-most and
+
+bottom-most entry you want to select.
+
+On the Public Sector tab, click Open.
+
+Fig.: 'Open' dialog box
+
+Click Open elements.
+
+Result
+
+The file or the case is open again and can be edited. If you don't have permission to open the file, a
+
+request is submitted to open it.
+
+Restriction note 
+
+Information
+
+You can set a restriction note for a file whose projects are currently on hold.
+
+1. 
+
+• 
+
+• 
+
+1. 
+
+1. 
+
+28 Business Solution ELO Public Sector
+
+
+
+Information
+
+If you do not see the Restriction note button, you can submit a change request via Request
+
+change.
+
+Method
+
+Select the file you want to lock.
+
+On the Public Sector tab, click Restriction note.
+
+Fig.:'Restriction note' dialog box
+
+Enter a restriction note.
+
+Click Set restriction note.
+
+Result
+
+Files with restriction notes are shown in a yellow font in the repository. Your entries in the 
+
+Restriction note dialog box are visible to other users in the feed.
+
+Outlook
+
+A locked file can be unlocked using the Restriction note function.
+
+Request change 
+
+Information
+
+You can request changes in a filing plan if you don't have the rights to make changes yourself.
+
+1. 
+
+2. 
+
+1. 
+
+2. 
+
+29 Business Solution ELO Public Sector
+
+
+
+Method
+
+In the filing plan, select the position where you want to request a change.
+
+The editor of the request sees which file/group in the filing plan is selected while you submit the
+
+request.
+
+On the Public Sector tab, click Request change.
+
+Fig.: 'Request change' dialog box
+
+Enter your change request in the Request change dialog box.
+
+If none of these options apply, you can also simply fill out the text field under Information on the
+
+change request.
+
+Click Send request.
+
+Result
+
+1. 
+
+1. 
+
+1. 
+
+1. 
+
+30 Business Solution ELO Public Sector
+
+
+
+The change request is forwarded to a user with the corresponding rights. This user can either reject
+
+the request or carry out the changes.
+
+31 Business Solution ELO Public Sector
+
+
+
+Processes 
+
+Start signature 
+
+Information
+
+You can start the signing process separate from an existing routine.
+
+If you want to start signing as part of a routine, you can start the function from within your Tasks
+
+work area. With the corresponding task open, click Public Sector.
+
+Method
+
+Select the entry you want to start a signature for.
+
+On the Public Sector tab, click Start signature.
+
+Fig.: 'Select signature' dialog box
+
+If multiple signature types are configured, select the desired signature type in the Select
+
+signature dialog box.
+
+1. 
+
+2. 
+
+1. 
+
+32 Business Solution ELO Public Sector
+
+
+
+Fig.: 'Start signature' dialog box
+
+In the Start signature dialog box, select a user or group as the recipient under Owner.
+
+Suggestions will appear as you begin to type.
+
+Click Start signature.
+
+Result
+
+The selected recipient receives a task in their Tasks work area.
+
+Outlook
+
+Once the recipient has signed, you will see this action and, if applicable, a comment in the feed.
+
+Sign 
+
+Information
+
+If you are assigned a signature task, you will find it in your Tasks work area.
+
+Method
+
+Select the task in your Tasks work area.
+
+Optional: Click Accept workflow if you received the workflow as a member of a group.
+
+On the Task tab, click Forward workflow.
+
+1. 
+
+2. 
+
+1. 
+
+1. 
+
+33 Business Solution ELO Public Sector
+
+
+
+Fig.: 'Forward workflow' dialog box
+
+In the Forward workflow dialog box, select how you want to forward the workflow.
+
+Click OK.
+
+Result
+
+The workflow disappears from your tasks area. The signature is visible as a comment.
+
+Start directive 
+
+Information
+
+You can start a directive separate from an existing routine.
+
+If you want to start a directive as part of a routine, you can start the function from within your
+
+Tasks work area. With the corresponding task open, click Public Sector.
+
+Method
+
+Select the entry you want to start a directive for.
+
+1. 
+
+2. 
+
+1. 
+
+2. 
+
+34 Business Solution ELO Public Sector
+
+
+
+On the Public Sector tab, click Start directive.
+
+Fig.: 'Select directive' dialog box
+
+If multiple directive types are configured, select the desired directive type in the Select
+
+directive dialog box.
+
+Fig.: 'Start directive' dialog box
+
+In the Start directive dialog box, select a user or group as the recipient under Owner.
+
+Suggestions will appear as you begin to type.
+
+Click Start directive.
+
+Result
+
+1. 
+
+1. 
+
+2. 
+
+35 Business Solution ELO Public Sector
+
+
+
+The selected recipient receives a task in their Tasks work area.
+
+Outlook
+
+Once the recipient has completed the directive, you will see this action and, if applicable, a
+
+comment in the feed.
+
+Run directive 
+
+Information
+
+If you are assigned a directive, you will find it in your Tasks work area.
+
+Method
+
+Select the task in your Tasks work area.
+
+Optional: Click Accept workflow if you received the workflow as a member of a group.
+
+On the Task tab, click Forward workflow.
+
+Fig.: 'Forward workflow' dialog box
+
+In the the Forward workflow dialog box, click OK.
+
+Result
+
+1. 
+
+1. 
+
+1. 
+
+36 Business Solution ELO Public Sector
+
+
+
+The workflow disappears from your tasks area. The directive is visible as a comment.
+
+37 Business Solution ELO Public Sector
+
+
+
+Generating reports 
+
+This chapter contains an overview of the reports you can create.
+
+Reports help you keep an overview of your filing plan. You can use these functions to create PDF
+
+documents that are filed to a location you have selected.
+
+Create file report 
+
+Information
+
+You can create an overview for a selected file. The report contains information on the file as well as
+
+a QR code. The report contains all cases with their statuses, as well as documents and record
+
+objects that are part of the file.
+
+Method
+
+Select the file you want to create a report for.
+
+On the Public Sector tab, click Report > Create file report.
+
+Fig.: 'Generate report' dialog box
+
+In the Generate report dialog box, select a location where you want to file the report.
+
+Click OK.
+
+Result
+
+1. 
+
+2. 
+
+1. 
+
+2. 
+
+38 Business Solution ELO Public Sector
+
+
+
+The report is filed as a PDF at the selected target position.
+
+Outlook
+
+If you print the report and file it to a physical file, mobile end devices will take you straight to the
+
+digital file by scanning the QR code.
+
+Create file overview 
+
+Information
+
+You can create an overview of the files in the selected group of the filing plan.
+
+Method
+
+Select the group you want to create a report for.
+
+On the Public Sector tab, click Report > Create file overview.
+
+In the Select template dialog box, select the desired template.
+
+Fig.: 'Select template' dialog box
+
+You have the following options:
+
+File overview: The file overview contains the name of the selected group as well as the file
+
+references and the names of the files.
+
+File overview with filing department: The file overview contains the name of the selected
+
+group as well as the file references and the names of the files. It also contains additional
+
+information on the files.
+
+1. 
+
+2. 
+
+3. 
+
+• 
+
+• 
+
+39 Business Solution ELO Public Sector
+
+
+
+Fig.: 'Generate report' dialog box
+
+In the Generate report dialog box, select a location where you want to file the report.
+
+Click OK.
+
+Result
+
+The report is filed as a PDF at the selected target position.
+
+Create filing plan 
+
+Information
+
+You can create an overview for the selected filing plan or sub-filing plan.
+
+Method
+
+Select the filing plan or the group you want to create a report for.
+
+On the Public Sector tab, click Report > Create filing plan.
+
+1. 
+
+2. 
+
+1. 
+
+2. 
+
+40 Business Solution ELO Public Sector
+
+
+
+Fig.: 'Select template' dialog box
+
+In the Select template dialog box, select the desired template.
+
+You have the following options:
+
+Filing plan: The filing plan overview contains the name of the selected group as well as all
+
+groups within this group.
+
+Filing plan with filing department: The filing plan overview contains the name of the selected
+
+group as well as all groups within this group. It also contains additional information on the
+
+groups, e.g. what file types may be created in the group.
+
+1. 
+
+• 
+
+• 
+
+41 Business Solution ELO Public Sector
+
+
+
+Fig.: 'Generate report' dialog box
+
+In the Generate report dialog box, select a location where you want to file the report.
+
+Click OK.
+
+Result
+
+The report is filed as a PDF at the selected target position.
+
+1. 
+
+2. 
+
+42 Business Solution ELO Public Sector
+
+
+
+Automatically generating record objects 
+
+With the functions
+
+Create Word document
+
+Create cover sheet
+
+Create label
+
+you can automatically generate documents with information from your filing plan.
+
+Create Word document 
+
+Information
+
+You can generate a record object for the selected file/case. The record object automatically contains
+
+information on the file/case.
+
+This function is useful for creating text templates for fines, for example. Custom, preconfigured
+
+information for the file is added to the text template.
+
+Method
+
+Select the entry you want to generate a record object for.
+
+On the Public Sector tab, click Create Word document.
+
+Fig.: 'Select template' dialog box
+
+In the Select template dialog box, select the document template.
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+1. 
+
+2. 
+
+43 Business Solution ELO Public Sector
+
+
+
+Click OK.
+
+Fig.: 'New document' dialog box
+
+Enter a name in the New document dialog box.
+
+Click Create document.
+
+Result
+
+The record object is created in the selected file. The placeholders in the template are filled with
+
+information from the file.
+
+The new Word document opens automatically.
+
+Outlook
+
+If the information from the file changes, the record object can be updated using the Update Word
+
+document function.
+
+The Update Word document function has no effect on subsequent changes to the record object. It
+
+only updates the information automatically transferred from the form.
+
+Update Word document 
+
+Information
+
+This function applies to record objects you have generated using the Create Word document
+
+function. You can update the selected record object. As a result, you do not have to create a new
+
+record object or make manual changes to an existing one.
+
+The Update Word document function has no effect on subsequent changes to the record object. It
+
+only updates the information automatically transferred from the form.
+
+1. 
+
+2. 
+
+44 Business Solution ELO Public Sector
+
+
+
+Method
+
+Select the record object you want to update.
+
+On the Public Sector tab, click Update Word document.
+
+Result
+
+Old information and blank spaces in the document are replaced with new information from the file.
+
+Create cover sheet 
+
+Information
+
+You can create a cover sheet for the selected file.
+
+Method
+
+Select the file you want to create a cover sheet for.
+
+On the Public Sector tab, click Document > Create cover sheet.
+
+Result
+
+The cover sheet is saved to the file.
+
+Outlook
+
+The cover sheet contains information on the file as well as a QR code. If you print the cover sheet
+
+and file it to a physical file, mobile end devices will take you straight to the digital file by scanning
+
+the QR code.
+
+Create label 
+
+Information
+
+You can create a label for the selected file.
+
+Method
+
+Select the file you want to create a label for.
+
+On the Public Sector tab, click Document > Create label.
+
+Result
+
+The label is stored in the file.
+
+Outlook
+
+The label contains information on the file as well as a QR code. If you print the label using a label
+
+printer and file it to a physical file, mobile end devices will take you straight to the digital file by
+
+scanning the QR code.
+
+1. 
+
+2. 
+
+1. 
+
+2. 
+
+1. 
+
+2. 
+
+45 Business Solution ELO Public Sector
+
+
+
+If you want to use the Print document function in the ELO Java Client, you will have to set the label
+
+printer as the default printer in Windows.
+
+You can also select the label printer as the default printer for faxes in the ELO Java Client
+
+configuration and print using the Fax document function.
+
+46 Business Solution ELO Public Sector
+
+
+
+Routines 
+
+Once you have created cases or circulation folders, you can start routines on them. You can either
+
+use a preconfigured routine or define a custom one.
+
+It is also possible to start multiple routines for one case or circulation folder.
+
+This chapter addresses:
+
+Start routine
+
+Create multiple routines
+
+Edit routine
+
+Start routine 
+
+Information
+
+You can start a routine either by using the routine configured when creating the case or circulation
+
+folder or by defining your own routine.
+
+Method
+
+Select the case or circulation folder you want to start a routine for.
+
+Fig.: 'Routine' tab
+
+Click the Routine tab.
+
+How you proceed depends on whether you have already configured a routine.
+
+1) A routine was configured on creation: On the Routine tab, you will see the individual steps of the
+
+configured routine.
+
+Click Start routine to start the routine without any additional changes.
+
+You can also tailor the routine to your needs:
+
+Delete step: Move the cursor over the step you want to delete. Click the X that appears.
+
+• 
+
+• 
+
+• 
+
+1. 
+
+1. 
+
+• 
+
+• 
+
+47 Business Solution ELO Public Sector
+
+
+
+Move step: Move the cursor over the step you want to move. Click the step and drag it to the
+
+position where you need it holding down the mouse button.
+
+Edit step: Move the cursor over the step you want to edit. Click the Edit button that appears.
+
+You can edit all elements of the step. You will find a description of the elements under No
+
+routine figured on creation.
+
+Add step: To add a step to the routine, click + Step. You will find a more exact description
+
+under No routine figured on creation.
+
+Fig.: 'Save' button
+
+If you want to save your changes without starting the routine, click the down arrow. Click Save.
+
+Otherwise, click Start routine.
+
+2) No routine configured on creation: To create steps for the routine, click + Step and define the
+
+step:
+
+• 
+
+• 
+
+48 Business Solution ELO Public Sector
+
+
+
+Fig.: 'Edit step' dialog box
+
+Field Meaning
+
+Step name
+
+and
+
+description
+
+In the Step text field, enter a descriptive name. The name is shown on the tile
+
+created for the step. In the Description text field, you can enter additional
+
+instructions or explanations. The recipient of the step sees the description.
+
+User name
+You can select a user or a group as the recipient. Suggestions will appear as you
+
+begin to type.
+
+Due date
+You can select a due date by clicking the calendar icon. Alternatively, you can type
+
+a date.
+
+Signatures
+
+Clicking the field opens the input options. To prevent the step from being completed
+
+before all signatures have been completed, check the Block routine box. You can
+
+create multiple signatures by clicking + New signature. In the field with the Co-
+
+signature placeholder, enter the type of signature required. If only this signature
+
+should be mandatory, click Optional. The button changes to Mandatory.
+
+Directives
+
+Clicking the field opens the input options. You can create multiple directives by
+
+clicking + New directive. In the field with the Directive placeholder, enter the type
+
+of directive required. If only this directive should be mandatory, click Optional. The
+
+button changes to Mandatory.
+
+49 Business Solution ELO Public Sector
+
+
+
+Repeat this process for all the necessary steps.
+
+Save: You can save your entries without starting the routine. To do so, click the button with the
+
+down arrow. Click Save.
+
+Start routine: Otherwise, click Start routine.
+
+Result
+
+The routine is started.
+
+Fig.: Feed post
+
+You will see the actions of the individual editors in your feed.
+
+Outlook
+
+Once your routine has gone through all the processing steps or was canceled, you will finally find it
+
+in your Tasks work area.
+
+To complete the routine, click Pass workflow forward.
+
+Create multiple routines 
+
+Information
+
+You can start multiple routines for a case or circulation folder.
+
+Method
+
+Select the case or circulation folder you want to start a routine for.
+
+Click the Routine tab.
+
+1. 
+
+2. 
+
+50 Business Solution ELO Public Sector
+
+
+
+Fig.: '+ Add routine' button
+
+Click + Add routine.
+
+Fig.: 'Add new routine' dialog box
+
+In the Add new routine dialog box, you give the routine a name and, if necessary, select a
+
+template for the routine by marking the template in the overview.
+
+Proceed as described in the chapter Start routine.
+
+Result
+
+You have now created two or more routines you can switch between.
+
+1. 
+
+1. 
+
+51 Business Solution ELO Public Sector
+
+
+
+Fig.: Changing the routine
+
+To change the routine, click the arrow next to the name of the case or circulation folder. All created
+
+routines appear in a drop-down menu for selection.
+
+Edit routine 
+
+Information
+
+If you are set as the editor of a step in a routine, you will receive it in your Tasks work area.
+
+Method
+
+Select the task you want to process.
+
+Fig.: 'Steps' tab
+
+On the Steps tab, you will see the completed, current, and future steps of the routine.
+
+Optional: Click Accept workflow if you received the workflow as a member of a group.
+
+Information
+
+1. 
+
+52 Business Solution ELO Public Sector
+
+
+
+You can edit the future steps of the routine or add more steps before forwarding the routine.
+
+The chapter Start routine explains how to proceed.
+
+On the Task tab, click Forward workflow.
+
+Fig.: 'Forward workflow' dialog box
+
+In the Forward workflow dialog box, select whether you want to forward the routine or cancel.
+
+Click OK.
+
+Result
+
+The workflow disappears from your tasks area and goes to the next step.
+
+1. 
+
+1. 
+
+2. 
+
+53 Business Solution ELO Public Sector
+
+
+	Table of contents
+	null
+	Introduction
+	Structure of the documentation
+	Basics
+	Possible actions
+
+	Target audience
+
+	Basics
+	Basic principle
+	General note
+	Requirements
+	Program interface
+	Filing plan
+
+	Importing, exporting, and maintaining filing plans
+	Import filing plan
+	Create group
+	Structure group
+	Export filing plan
+
+	Filling the filing plan
+	Create file
+	Create sub-file
+	Create file group
+	Create document
+	Create case
+	Create circulation folder
+
+	Change filing plan
+	Close
+	Delete
+	Reclassify file
+	Open
+	Restriction note
+	Request change
+
+	Processes
+	Start signature
+	Sign
+	Start directive
+	Run directive
+
+	Generating reports
+	Create file report
+	Create file overview
+	Create filing plan
+
+	Automatically generating record objects
+	Create Word document
+	Update Word document
+	Create cover sheet
+	Create label
+
+	Routines
+	Start routine
+	Create multiple routines
+	Edit routine
+
+
+

@@ -1,0 +1,1519 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+New in ELO | New in ELO
+
+
+New in ELO
+
+New in ELO
+
+
+
+3
+
+9
+
+12
+
+17
+
+Table of contents
+
+Base technology 
+
+Server modules 
+
+Clients 
+
+Integrations 
+
+2 New in ELO
+
+
+
+Base technology 
+
+Metadata (gen. 2) 
+
+With aspects, relations, and inheritance, the new second generation metadata model
+
+supports efficient modeling of complex scenarios and enables the visualization of large
+
+volumes of data.
+
+Metadata forms in the new metadata module (gen. 2) are made up of aspects.
+
+Aspects are groups of related fields, such as street, postal code, city, and country for an
+
+address.
+
+The same aspects can be used multiple times in one metadata form.
+
+There are no quantity restrictions in metadata fields.
+
+All metadata can be searched.
+
+Metadata forms can be inherited. This helps you quickly create similar/extended metadata
+
+forms based on an existing one.
+
+Metadata is shown and edited in forms (gen. 2). Different views can be used for different
+
+uses. This results in a standardized appearance across all clients.
+
+The existing and new data models will work in parallel, metadata forms can still be used,
+
+and old data does not have to be converted currently.
+
+In addition to the established field types, the metadata model (gen. 2) also includes the field
+
+types User, Relation, URL, E-mail, Selection list, and Check box.
+
+The metadata model (gen. 2) in version 21.3 features additional data/field types.
+
+The metadata model now features dashboard views.
+
+New in ELO 23.0 
+
+Keyword lists with new translation logic are available as packages.
+
+Parent metadata forms are used.
+
+Forms (gen. 2) can be used in workflows.
+
+For more information, refer to the Metadata (gen. 2) documentation.
+
+Forms (gen. 2) 
+
+The forms (gen. 2) offer a flexible, modern interface and enable you to display and edit
+
+metadata (gen. 2).
+
+Forms (gen. 2) are the foundation for a standardized metadata view in all clients.
+
+The forms (gen. 2) are responsive, automatically enabling different views for different
+
+devices (desktop monitor, tablet, smartphone).
+
+The usual structured layout with headers and tabs is still possible, now complemented with
+
+form blocks that can be shown and hidden. You can also easily create lists in the form of a
+
+table.
+
+In the new form designer, you can create different views using drag-and-drop and combine
+
+them to build more complex forms.
+
+Field types (IBAN, URL, e-mail) are validated using regular expressions.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+3 New in ELO
+
+https://docs.elo.com/admin/packages/en-us/metadata/
+https://docs.elo.com/admin/packages/en-us/metadata/
+
+
+The new forms will initially remain in parallel to the existing forms but will replace the
+
+existing workflow forms in the medium term.
+
+In addition to the established field types, the forms (gen. 2) also include the field types User, 
+
+Relation, URL, E-mail, Selection list, and Check box.
+
+The form designer now includes the option to create dashboards.
+
+New in ELO 23.0 
+
+Keyword lists with new translation logic are available as packages.
+
+Parent metadata forms are used.
+
+Forms (gen. 2) can be used in workflows.
+
+For more information, refer to the Forms (gen. 2) documentation.
+
+Packages & transport 
+
+Related configurations are combined into individual packages, enabling easy installation and 
+
+transfer between systems, e.g. of an entire ELO Business Solution.
+
+Packages form the foundation for transferring solutions or custom developments to different
+
+systems (development, test, or production system).
+
+Packages can be created on different levels. Currently, the levels Basic, Custom, and Staging
+
+are available.
+
+Packages can be created, edited, deleted, imported and exported in the ELO Administration
+
+Console.
+
+Packages are based on Metadata forms, Aspects, and Forms. The following components can
+
+be added: 
+
+ELO Flows
+
+Workspaces
+
+Teamspaces
+
+Import and export translations
+
+Groups with corresponding rights and role management
+
+Markers in the ELO Administration Console for adjustments to workspace templates
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+4 New in ELO
+
+https://docs.elo.com/admin/packages/en-us/metadata/forms/
+https://docs.elo.com/admin/packages/en-us/metadata/forms/
+
+
+New in ELO 23.0 
+
+Keyword lists with new translation logic are available as packages.
+
+Parent metadata forms are used.
+
+Forms (gen. 2) can be used in workflows.
+
+For more information, refer to the Packages documentation.
+
+Workspaces 
+
+The workspaces use custom dynamic filters to provide access to business objects. Users can
+
+also directly access other related objects.
+
+Workspaces are invisible folders within ELO that contain different object types and are 
+
+displayed independent of the tree view.
+
+Different visualizations are available for different user groups, e.g. a table view and Kanban
+
+boards.
+
+Dashboards are available to visualize metadata.
+
+You can search for objects within a workspace.
+
+New in ELO 23.0 
+
+The space authorization feature grants users who are not members of a workspace access to
+
+entries in the workspace.
+
+For more information, refer to the Workspaces documentation.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+5 New in ELO
+
+https://docs.elo.com/admin/packages/en-us/getting-started/
+https://docs.elo.com/admin/packages/en-us/getting-started/
+https://docs.elo.com/admin/packages/en-us/workspaces/
+https://docs.elo.com/admin/packages/en-us/workspaces/
+
+
+Teamspaces 
+
+The new ELO Teamspace acts as a separate area for collaboration across teams. Team or
+
+project members (ELO users) can be added to different teamspaces, documents made
+
+available for collaboration, and information communicated via the ELO feed.
+
+Business Solution ELO Knowledge can currently be integrated and additional ELO Business
+
+Solutions will follow.
+
+New in ELO 23.0 
+
+The space authorization feature grants users who are not members of a teamspace access to
+
+entries in the teamspace.
+
+For more information, refer to the Teamspaces documentation.
+
+ELO Flows 
+
+The new ELO module implements automation and integration tasks at the service level.
+
+Automation does not require scripting, offers more configuration options, and is easier to get
+
+started with.
+
+The platform is used to develop custom components.
+
+An authentication token is available.
+
+Templates can be imported and exported.
+
+Monitoring: Execution statistics and execution results can be kept per flow.
+
+The user ID is transferred to ELO Flows (for authentication, additional actions, or user-specific
+
+views).
+
+ELO Flows administration: the user interface of the home screen has been updated.
+
+In the template editor, you can save different stages of flow templates as versions.
+
+You can select, configure, and save a new primary translation of translation keys in the Flows
+
+template editor.
+
+ELO Flows supports queries in JSONata syntax.
+
+New in ELO 23.0 
+
+Dynamic keyword lists can be created with ELO Flows.
+
+Improved integration of ELO Flows in the ELO workflow designer.
+
+A workflow template can be started on multiple entries at the same time.
+
+Aspect data and changed aspect data are supported by automatic triggers.
+
+Preview components: Preview components are available in addition to several basic
+
+components. These are still in the development stage. They are marked with the Preview
+
+banner.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+6 New in ELO
+
+https://docs.elo.com/admin/packages/en-us/teamspaces/
+https://docs.elo.com/admin/packages/en-us/teamspaces/
+
+
+The following preview components are available:
+
+FTP: The FTP component provides various services for communication with FTP
+
+servers.
+
+Barcode: The barcode component provides services for working with barcodes. The
+
+services read barcodes on documents and separate documents according to barcode
+
+pages.
+
+E-mail: The e-mail component provides services for working with e-mails. There are
+
+services for reading the e-mail metadata, exporting e-mail attachments, and
+
+converting an e-mail to PDF.
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+7 New in ELO
+
+
+
+Microsoft Excel: The Excel component provides services for working with Microsoft
+
+Excel documents.
+
+Image: The image component contains services for working with TIFF files.
+
+PDF: The PDF component offers a comprehensive set of services for handling PDF
+
+documents.
+
+Microsoft Word: The Word component provides services for working with Microsoft Word
+
+documents.
+
+XML: The XML component provides services for working with XML files. The services
+
+can read values out of an XML file and convert XML files to PDF.
+
+For more information, refer to the ELO Flows documentation.
+
+Search optimization and Elasticsearch update 
+
+Elasticsearch was updated from version 5.6.3 to 7.15.2. This requires re-indexing of the 
+
+search index database.
+
+A new logic for removing special characters in word tokens was implemented as a result.
+
+Bulgarian, Finnish, Greek, Norwegian, and Russian can now be selected as additional 
+
+languages for the iSearch.
+
+ELO Analytics (gen. 2) - Dashboards 
+
+ELO Analytics (gen. 2) is used to visualize metadata in the workspaces.
+
+ELO Analytics (gen. 2) allows users to create dashboards for visualizing metadata. The
+
+dashboard view has so far only been implemented in the workspaces.
+
+There are three chart types: Bar chart, line chart, and doughnut chart.
+
+In addition to field values and metrics, you can select different color palettes for improved
+
+visualization of data.
+
+ELO for DocuSign 
+
+This solution enables digital signing with ELO.
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+8 New in ELO
+
+https://docs.elo.com/admin/config/en-us/elo-flows/getting-started/
+https://docs.elo.com/admin/config/en-us/elo-flows/getting-started/
+
+
+Server modules 
+
+The following changes have been made on the server side.
+
+ELO Indexserver 
+
+The new events onBeforeTerminateDeleteWorkFlow and onAfterTerminateDeleteWorkFlow are
+
+called when closing and deleting workflows.
+
+The error message in case of failed logon has been changed. If the client application uses a
+
+client library from ELO 21, the new error code ELOIX:3008 is returned.
+
+The new optiondisableCacheSync disables cache synchronization, which can make sense for
+
+development environments.
+
+The number of registered OCR workers is output on the status page.
+
+The DBConnection class for scripting and plug-ins offers the option to create tables largely
+
+independent of a database. This function is provided via 
+
+de.elo.ix.jscript.DBConnection.schema().
+
+PDFs with embedded JBIG2 images are supported.
+
+The ELO Indexserver API is available via REST calls.
+
+New in ELO 23.0 
+
+ELO Textreader is being replaced by the new ELO Textreader (gen. 2).
+
+The OCR application and the document preview will be integrated into ELO Textreader (gen.
+
+2).
+
+ELO XML Importer 
+
+ELO XML Importer supports the X right.
+
+ELO Replication 
+
+The module assumes, controls, and monitors data transfer between different repositories
+
+without requiring permanent, direct, performant availability of the repositories.
+
+ELO Replication is integrated in the ELO Indexserver (ELOix).
+
+Parts of the repository are synchronized.
+
+This module enables centralized data retention or data backup.
+
+References are replicated transparently when both the folder and the target of the reference
+
+is replicated.
+
+The substitution rules are taken into account, but are not replicated.
+
+Corrections for replicating document versions: Read-only documents, for example, can be
+
+replicated.
+
+Reliable handling of timeouts (may occur if it takes an unusually long period of time to
+
+receive the next data/data packages).
+
+Export errors are logged separately (error log in the repository under Replication Base or in
+
+the transfer log in the transfer overview).
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+9 New in ELO
+
+
+
+BundleExchange enables data transmission between sites that do not share a network
+
+connection.
+
+The time of the next data export is shown for each repository.
+
+For more information, refer to the ELO Replication documentation.
+
+ELO XC 
+
+A new log viewer is available.
+
+The test tools have been improved and integrated in the configuration area.
+
+The connection parameters for Microsoft Exchange on-premises and Microsoft 365 have been
+
+optimized and simplified.
+
+The Microsoft 365 mailbox catalog is connected via the PowerShell EXO 2.0.4 module from
+
+Microsoft.
+
+The repository folder for configurations is created as Administration/XC Base. It was
+
+previously called Administration/ELOxc Base.
+
+It is now possible to configure custom message classes in an instance.
+
+Aspect forms can be used as an alternative to the standard metadata form for e-mails.
+
+There is now an option to set a memory limit.
+
+As of version 21.16, ELO XC will be maintained as a standardized version for ELO 21, ELO 20,
+
+and ELO 12. Patches or extensions for ELOxc 20 and ELOxc 12 are no longer provided.
+
+New in ELO 23.0 
+
+It is now possible to search for metadata (gen. 2) with the metadata search.
+
+For more information, refer to the ELO XC documentation.
+
+ELOauth plug-in 
+
+Previously available as a beta version, this plug-in has now been officially released.
+
+For more information, refer to the ELOauth plug-in documentation.
+
+ELO Administration Console 
+
+Additional ELO server components such as ELO Bot have been integrated.
+
+Packages have been introduced.
+
+Forms (gen. 2) can be edited.
+
+Aspects have been added to the metadata.
+
+The migration to OSGi services has been completed.
+
+The group and user management functions have been separated.
+
+New in ELO 23.0 
+
+The user manager has been redesigned.
+
+Keyword lists were added to the packages.
+
+The dashboard designer is available in the metadata.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+10 New in ELO
+
+https://docs.elo.com/admin/config/en-us/elo-replication/
+https://docs.elo.com/admin/config/en-us/elo-replication/
+https://docs.elo.com/admin/elo-xc/en-us/basics/
+https://docs.elo.com/admin/elo-xc/en-us/basics/
+https://docs.elo.com/admin/config/en-us/elo-indexserver/eloauth-plugin/introduction.html
+https://docs.elo.com/admin/config/en-us/elo-indexserver/eloauth-plugin/introduction.html
+
+
+You can find more information in the ELO Administration Console documentation.
+
+ELO for Microsoft 365 
+
+Check out to OneDrive 
+
+On check-out, the documents are temporarily copied to Microsoft OneDrive and deleted again
+
+on check-in.
+
+The function allows users to collaborate on documents.
+
+Search optimization and Elasticsearch update 
+
+Elasticsearch was updated from version 5.6.3 to 7.15.2. This requires re-indexing of the 
+
+search index database.
+
+A new logic for removing special characters in word tokens was implemented as a result.
+
+Bulgarian, Finnish, Greek, Norwegian, and Russian can now be selected as additional 
+
+languages for the iSearch.
+
+With the update of Elasticsearch, ELO Analytics (first generation) will no longer work as of
+
+version 21.2 and is therefore unavailable.
+
+The ELO iSearch port (default: 9200) is secured with TLS/SSL.
+
+ELO Web Forms Services (ELOwf) 
+
+ELO Flows can be integrated in workflows.
+
+The languages Indonesian, Spanish (Latin America), and Portuguese (Brazil) were added.
+
+ELO feed 
+
+The ELO feed plug-in performs several ELOwf tasks.
+
+ELO feed provides the document feeds, hashtag overviews, My ELO, the profile pages and
+
+profile images, and the teamspace feed.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+11 New in ELO
+
+https://docs.elo.com/admin/config/en-us/elo-administration-console/
+https://docs.elo.com/admin/config/en-us/elo-administration-console/
+
+
+Clients 
+
+The following changes have been made to the ELO clients.
+
+ELO Java Client 
+
+Layout: The display settings, for example for tables, tiles, and lists, can now be reached
+
+faster. They were previously located on the ribbon, and can now be accessed via an icon in
+
+the viewer pane.
+
+Display mode: Light and dark contrast modes as well as dark mode are now available. The
+
+contrast modes are an accessibility feature.
+
+Most recently used list: This list contains a text field for filtering the entries starting with ten
+
+entries. Folders are now also included in the list. Selected entries can be added after a
+
+specific display time that can be set in the configuration.
+
+Filter: A new filter field for searching the short name in tables is available in the viewer pane.
+
+Views: The buttons for the views in the navigation bar can be moved via drag-and-drop.
+
+ELO Flows has been integrated.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+12 New in ELO
+
+
+
+In the version dialog box, the date of the most recent change can be set as the document
+
+date when checking in a new version.
+
+Task view: It is possible to make multiple entries and separate them with a pilcrow for the 
+
+Name, Workflow step, and Status filters. AND links are also possible for these filters.
+
+Tree view: When you expand a node, the tree view scrolls automatically so that the last entry
+
+is in the visible area.
+
+Creating new folders: The document or object date now defaults to the current time. Drag-
+
+and-drop actions use the date a file was changed from the file system.
+
+Metadata: The fields File name, Entry type, and Document path are no longer overwritten
+
+with F3.
+
+Notes:
+
+The context menu can be used to open URLs/e-mail address links/ELO links in a sticky/margin
+
+note.
+
+Sorting via multiple columns: When a refresh is performed, the system now also saves
+
+changes to the sort order of a table made by holding down the CTRL key and applies the
+
+changes to other sessions.
+
+Workflow designer: When selecting the node start/end scripts, it is now possible to filter via
+
+the script name.
+
+ELO Connect: The configured devices can now be managed in a dialog box.
+
+Aspects and flow enhancements: Aspect forms and fields are available in the metadata
+
+dialog box and the search.
+
+The evaluation of flow integration was extended to include actions after execution.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+13 New in ELO
+
+
+
+The Teamspaces function is now available.
+
+Workspaces are supported.
+
+Optimization of the duplicate check for the Go to function for all entries shown.
+
+The double-click behavior in the ELO Java Client can now be configured.
+
+Editing in Microsoft OneDrive: Documents can now be checked out to Microsoft OneDrive and
+
+edited there when using the plug-in. The function requires ELOauth.
+
+A check box for serial filing like in the drag-and-drop dialog box for multiple files is also
+
+displayed in the dialog box for the Insert file function.
+
+OCR now uses the system language of the server as the default language, and no longer
+
+defaults to German.
+
+Language regions are now transferred to web interfaces instead of the language.
+
+PDFs can now remain permanently rotated in the Intray.
+
+When the Go to function is used to access the contents of a space, e.g. from the search, ELO
+
+switches to the associated space and shows the object there.
+
+New in ELO 23.0 
+
+In the New task view dialog box, it is possible to select whether the fields are linked with and
+
+or or.
+
+The Add stamp dialog box contains clickable examples of additional time and date formats.
+
+Aspect lines are now also offered for decision nodes in the workflow designer.
+
+When searching with a metadata form filter, any existing dashboards for the metadata form
+
+are available as buttons.
+
+You will find more information about this in the ELO Java Client documentation.
+
+ELO Web Client 
+
+ELO Flows has been integrated.
+
+Version comments can now be edited in the Document versions dialog box
+
+A task can be marked as unread again in the context menu.
+
+A new option Use simple ribbon has been added to the configuration.
+
+Forms (gen. 2) are supported.
+
+If configured, logon is authenticated via the plug-in de.elo.ix.plugin.auth.
+
+Editing in Microsoft OneDrive: Documents can now be checked out to Microsoft OneDrive and
+
+edited there when using the plug-in. The function requires ELOauth.
+
+New in ELO 23.0 
+
+Workspaces and teamspaces including teamspace functions are supported.
+
+The Search space function now runs in its own search tab.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+14 New in ELO
+
+https://docs.elo.com/user/elo-java-client/en-us/elo-java-client/
+https://docs.elo.com/user/elo-java-client/en-us/elo-java-client/
+
+
+When searching with a metadata form filter, any existing dashboards for the metadata form
+
+are available as buttons.
+
+You will find more information about this in the ELO Web Client documentation.
+
+ELO Desktop Client/ELO Desktop Client Plus 
+
+Optimizations for interaction with Microsoft Outlook: 
+
+The ELO Client for Microsoft Outlook is being replaced. The e-mail-only variant will be
+
+part of the ELO XC license.
+
+A combined search is available in Microsoft Outlook and ELO with shared results.
+
+E-mails are filed from Microsoft Outlook.
+
+A preview is available for e-mails.
+
+E-mails can be replied to and forwarded from within the ELO Desktop Client.
+
+Entire folders can be filed from Microsoft Outlook.
+
+Interaction with Microsoft OneNote is possible.
+
+The Outlook security dialog box has been updated.
+
+ELO Flows has been integrated.
+
+Various improvements in terms of accessibility have been implemented.
+
+Editing in Microsoft OneDrive: Documents can now be checked out to Microsoft OneDrive and
+
+edited there when using the plug-in. The function requires ELOauth.
+
+Files/e-mails can be inserted with the CTRL+V.
+
+In accessibility mode, the area for the drag-and-drop function in the Link dialog box is now
+
+identical to that of normal mode.
+
+The Enable accessibility support setting is available in the configuration.
+
+Other accessibility features in the ELO Desktop Client: 
+
+The contrast for task priorities was improved.
+
+The client automatically adjusts if a contrast theme is enabled in Windows.
+
+The color contrast accessibility feature was improved.
+
+The keyboard control in the ELO Desktop Client was optimized in various places,
+
+including search, filter settings, tables. F6 (and Shift+F6) can now be used to switch
+
+between areas of the client more quickly.
+
+Display of validation errors was improved.
+
+In accessibility mode, only readable fields are treated as tab stops.
+
+New in ELO 23.0 
+
+The accessibility features have been improved.
+
+The languages Spanish (Latin America) and Portuguese (Brazil) were added.
+
+When searching with a metadata form filter, any existing dashboards for the metadata form
+
+are available as buttons.
+
+You will find more information about this in the ELO Desktop Client documentation.
+
+ELO for Microsoft 365 
+
+ELO Integration for Microsoft Teams 
+
+• 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+• 
+
+• 
+
+• 
+
+• 
+
+15 New in ELO
+
+https://docs.elo.com/user/elo-web-client/en-us/elo-web-client/
+https://docs.elo.com/user/elo-web-client/en-us/elo-web-client/
+https://docs.elo.com/user/elo-desktop-client/en-us/elo-desktop-client/
+https://docs.elo.com/user/elo-desktop-client/en-us/elo-desktop-client/
+
+
+The Integrate in Microsoft Teams button is available in the ELO Java Client and ELO Web
+
+Client, also with the Microsoft Teams web app.
+
+The ELO Integration Client and ELO Web Client can be integrated in Microsoft Teams.
+
+The solution ELO Knowledge can be integrated.
+
+For more information, refer to the ELO for Microsoft Teams documentation.
+
+ELO Bot for Microsoft Teams 
+
+The ELO Bot allows you to perform searches in ELO right in Microsoft Teams.
+
+Access to object-independent functions of the ELO Business Solutions is possible. Object-
+
+independent functions are actions that can be performed without selecting an entry in the
+
+repository, e.g. Create new contact.
+
+Functions can be accessed via ELO Flows. ELO Flows allows you to map and initiate 
+
+processes, such as submitting a request for leave.
+
+You can now receive notifications of new ELO tasks in Microsoft Teams.
+
+For more information, refer to the ELO Bot for Microsoft Teams documentation.
+
+ELO for Mobile Devices 
+
+ELO app (iOS) 
+
+Ad hoc workflows are supported.
+
+iOS widgets are available to enable quick access to ELO tasks.
+
+App onboarding has been optimized.
+
+The read-aloud function (beta version) is supported for accessibility.
+
+The app has been adapted to the new ELO design.
+
+Rendering of the task list has been optimized.
+
+On the iPad, users can now expand the preview with a single click via a new icon.
+
+No more numbering of versions.
+
+You will find more information about this in the ELO app (iOS) documentation.
+
+ELO app (Android) 
+
+Ad hoc workflows are supported.
+
+ELO Flows is supported.
+
+The app has been adapted to the new ELO design.
+
+Rendering of the task list has been optimized.
+
+The functions Delegate workflow and Postpone workflow have been optimized.
+
+No more numbering of versions.
+
+You will find more information about this in the ELO app (Android) documentation.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+16 New in ELO
+
+https://docs.elo.com/admin/elo-for-microsoft/en-us/elo-for-microsoft-teams/
+https://docs.elo.com/admin/elo-for-microsoft/en-us/elo-for-microsoft-teams/
+https://docs.elo.com/admin/elo-for-microsoft/en-us/elo-bot-for-microsoft-teams/
+https://docs.elo.com/admin/elo-for-microsoft/en-us/elo-bot-for-microsoft-teams/
+https://docs.elo.com/user/mobile-apps/en-us/elo-app-ios/
+https://docs.elo.com/user/mobile-apps/en-us/elo-app-ios/
+https://docs.elo.com/user/mobile-apps/en-us/elo-app-android/
+https://docs.elo.com/user/mobile-apps/en-us/elo-app-android/
+
+
+Integrations 
+
+Here is an overview of the new features in ELO integration solutions.
+
+ELO for SAP® ERP 
+
+ELO Toolbox for SAP® ERP 
+
+The ELO Integration Client (in combination with ELO Connectivity Pack for SAP® ERP –
+
+Indexdownload) has been integrated in the ELO Toolbox.
+
+The ELO Integration Client is available in SAP Screen Personas.
+
+For more information, refer to the ELO Toolbox for SAP® ERP documentation.
+
+ELO Connectivity Pack for SAP® ERP – Indexdownload 
+
+The structure is event-based.
+
+The metadata are refreshed automatically.
+
+The ELO Integration Client is available in combination with ELO Toolbox for SAP® ERP.
+
+For more information, refer to the ELO Connectivity Pack for SAP® ERP – Indexdownload
+
+documentation.
+
+ELO Integration Service for SAP Business One®
+
+This integration is available as a feature stable solution.
+
+For more information, refer to the ELO Integration Service for SAP Business One® documentation.
+
+ELO Integration Service for Business Central 
+
+Currently, the feature preview is only available to the ELO Innovation Partner Program.
+
+The configuration interfaces are available in the ELO Administration Console.
+
+Write actions are possible in an administrative context so that no user count takes place in
+
+case of read calls.
+
+ELO Output Link for Business Central 
+
+Currently, the feature preview is only available to the ELO Innovation Partner Program.
+
+The configuration interfaces are available in the ELO Administration Console.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+17 New in ELO
+
+https://docs.elo.com/admin/suite-for-sap-archivelink/en-us/elo-toolbox-for-sap/
+https://docs.elo.com/admin/suite-for-sap-archivelink/en-us/elo-toolbox-for-sap/
+https://docs.elo.com/admin/suite-for-sap-archivelink/en-us/elo-connectivity-pack-for-sap-erp-indexdownload/
+https://docs.elo.com/admin/suite-for-sap-archivelink/en-us/elo-connectivity-pack-for-sap-erp-indexdownload/
+https://docs.elo.com/admin/sap-solutions/en-us/sap-b1/
+https://docs.elo.com/admin/sap-solutions/en-us/sap-b1/
+
+	Table of contents
+	Base technology
+	Metadata (gen. 2)
+	New in ELO 23.0
+
+	Forms (gen. 2)
+	New in ELO 23.0
+
+	Packages & transport
+	New in ELO 23.0
+
+	Workspaces
+	New in ELO 23.0
+
+	Teamspaces
+	New in ELO 23.0
+
+	ELO Flows
+	New in ELO 23.0
+
+	Search optimization and Elasticsearch update
+	ELO Analytics (gen. 2) - Dashboards
+	ELO for DocuSign
+
+	Server modules
+	ELO Indexserver
+	New in ELO 23.0
+
+	ELO XML Importer
+	ELO Replication
+	ELO XC
+	New in ELO 23.0
+
+	ELOauth plug-in
+	ELO Administration Console
+	New in ELO 23.0
+
+	ELO for Microsoft 365
+	Check out to OneDrive
+
+	Search optimization and Elasticsearch update
+	ELO Web Forms Services (ELOwf)
+	ELO feed
+
+	Clients
+	ELO Java Client
+	New in ELO 23.0
+
+	ELO Web Client
+	New in ELO 23.0
+
+	ELO Desktop Client/ELO Desktop Client Plus
+	New in ELO 23.0
+
+	ELO for Microsoft 365
+	ELO Integration for Microsoft Teams
+	ELO Bot for Microsoft Teams
+
+	ELO for Mobile Devices
+	ELO app (iOS)
+	ELO app (Android)
+
+
+	Integrations
+	ELO for SAP® ERP
+	ELO Toolbox for SAP® ERP
+	ELO Connectivity Pack for SAP® ERP – Indexdownload
+
+	ELO Integration Service for SAP Business One®
+	ELO Integration Service for Business Central
+	ELO Output Link for Business Central
+
+
+

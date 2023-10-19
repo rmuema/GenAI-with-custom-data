@@ -1,0 +1,1025 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Business Solution ELO Knowledge | Business Solution ELO Knowledge 1.05
+
+
+Business Solution ELO
+
+Knowledge
+
+Business Solution ELO Knowledge 1.05
+
+
+
+3
+
+3
+
+4
+
+6
+
+10
+
+11
+
+18
+
+21
+
+Table of contents
+
+null
+
+Introduction
+
+Basics
+
+Knowledge Board
+
+Moderation
+
+Posts
+
+User profile
+
+Keep track of news
+
+2 Business Solution ELO Knowledge
+
+
+
+null
+
+Introduction
+
+Contents of the manual
+
+The goal of this user guide is to explain all functions of Business Solution ELO Knowledge.
+
+Basics and knowledge board
+
+The Basics and Knowledge board chapters explain the ELO Knowledge program interface.
+
+Possible actions and other elements
+
+The remaining chapters address possible actions and other elements of ELO Knowledge.
+
+Target audience
+
+This manual is addressed to Business Solution ELO Knowledge users. Separate documentation is
+
+available for administrators on the ELO SupportWeb.
+
+The scope of functions presented in this manual may differ greatly from those in your client.
+
+If you do not find functions described in this manual in your client, you do not have permission to
+
+perform the action.
+
+3 Business Solution ELO Knowledge
+
+
+
+Basics
+
+Basic principle
+
+ELO Knowledge is a platform for sharing insight within a company. Employees are motivated to
+
+participate thanks to the different post types, Questions, Ideas, Articles, and Guides, as well as a
+
+voting system.
+
+General note
+
+ELO Knowledge works with the following clients:
+
+ELO Web Client
+
+ELO Java Client
+
+ELO Desktop Client
+
+Information
+
+In this manual, we use screenshots from the ELO Web Client.
+
+Requirements
+
+Your administrator must have configured ELO Knowledge for you.
+
+Program interface
+
+• 
+
+• 
+
+• 
+
+4 Business Solution ELO Knowledge
+
+
+
+Fig.: ELO Web Client with ELO Knowledge
+
+1 The Knowledge group on the New ribbon tab
+
+You can create new spaces via the Knowledge group.
+
+Only moderators have permission to create new spaces.
+
+See the Create space chapter for more information.
+
+2 The Knowledge Board tile in the tile navigation area
+
+You can reach the Knowledge Board by clicking this tile or entering the corresponding URL.
+
+5 Business Solution ELO Knowledge
+
+
+
+Knowledge Board
+
+This chapter explains the Knowledge Board interface, as well as its breakdown into boards, spaces,
+
+and topics.
+
+Start page
+
+You can reach the home screen of the Knowledge Board by entering the corresponding URL or
+
+clicking the Knowledge Board tile in the My ELO area.
+
+Fig.: Home screen
+
+The Knowledge Board can be organized by topics. On the Knowledge Board home screen, you will
+
+find an overview of the available boards and spaces.
+
+If there are many boards, not all of them will be shown on the home screen. The most frequently
+
+used boards are shown, while ones visited less often can be opened at the very bottom via a drop-
+
+down menu under Other boards.
+
+You can configure your own home screen by pinning boards.
+
+Board interface
+
+On a board, all posts are shown in chronological order. The newest post is shown first. Unread posts
+
+are marked with a blue dot.
+
+6 Business Solution ELO Knowledge
+
+
+
+Fig.: Filter options
+
+To narrow down the posts, search and filter options are available.
+
+In the screenshot, you will see all the options for narrowing down posts shown.
+
+Create space
+
+Information
+
+Only moderators can create spaces.
+
+Information
+
+Only administrators can create boards.
+
+The Knowledge Board can be structured with boards and spaces. For example, you can create
+
+spaces for company departments.
+
+Information
+
+Users only have access to the spaces they have permission to. You can change permissions
+
+in the metadata (Organize > Metadata or F4).
+
+Method
+
+1. 
+
+7 Business Solution ELO Knowledge
+
+
+
+In the Repository work area, select the Knowledge management folder or the board where
+
+you want to create a space.
+
+On the New tab, click Knowledge > New space.
+
+Fig.: 'New space' dialog box
+
+In the New space dialog box, enter a name and, if necessary, a description.
+
+Click OK.
+
+Result
+
+Fig.: Spaces in the repository
+
+2. 
+
+1. 
+
+2. 
+
+8 Business Solution ELO Knowledge
+
+
+
+The new space is created in the folder selected in the Knowledge management folder.
+
+Outlook
+
+The space is now available on the Knowledge Board for creating posts.
+
+In the space folder, you will see all posts created in this space.
+
+Topics
+
+In addition to spaces, topics also help to structure the Knowledge Board. Topics are not bound to
+
+any specific space. Topics are saved.
+
+When you use a topic for the first time, it is made available for the entire space and to all users.
+
+Frequently used topics are suggested when creating a post and can be clicked and selected.
+
+9 Business Solution ELO Knowledge
+
+
+
+Moderation
+
+As moderator, you can perform the following actions in addition to the standard actions:
+
+Create and edit space
+
+Create guides
+
+Edit posts
+
+Mark replies as 'Best reply'
+
+Change the status of ideas
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+10 Business Solution ELO Knowledge
+
+
+
+Posts
+
+This chapter explains the available post types, as well as how you can create and reply to posts.
+
+What kind of post types are there?
+
+You can create four types of posts: Questions, Ideas, Articles, and Guides.
+
+Questions
+
+To get information, ask a question.
+
+Other users can respond to your question with the following actions:
+
+Reply
+
+Comment
+
+Voting
+
+As the author, you have the following options:
+
+Fig.: 'Mark as best reply' button
+
+Best reply: This reply then appears directly below your question and the question is
+
+considered solved.
+
+Edit post: If you want to edit your post later on, click the button with the three dots at the top
+
+right of the input field.
+
+Close post
+
+Ideas
+
+To bring ideas up for discussion, create an idea.
+
+Each idea has one of the following statuses:
+
+Suggested
+
+Accepted
+
+Implemented
+
+Rejected
+
+Ideas start with the status Suggested.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+11 Business Solution ELO Knowledge
+
+
+
+Information
+
+The status can only be changed by moderators.
+
+Fig.: Drop-down menu
+
+To change the status, click the current status below the post title and select the new status from
+
+the drop-down menu.
+
+Other users can respond to your idea with the following actions:
+
+Opinion
+
+Comment
+
+Voting
+
+As the author, you have the following options:
+
+Edit post: If you want to edit your post later on, click the button with the three dots at the top
+
+right of the input field.
+
+Close post
+
+Article
+
+To convey information, write an article.
+
+Other users can respond to your article with the following actions:
+
+Comment
+
+Voting
+
+As the author, you have the following options:
+
+Edit post: If you want to edit your post later on, click the button with the three dots at the top
+
+right of the input field.
+
+Close post: If you want to lock a post for additional comments, you can close your article.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+12 Business Solution ELO Knowledge
+
+
+
+Guide
+
+A guide is different from the other post types: In a guide, you can link multiple posts within one
+
+post.
+
+Information
+
+Only moderators can create guides.
+
+You can use all types of posts and combine different post types.
+
+Fig.: Published guide
+
+Other users can respond to your guide with the following actions:
+
+Comment
+
+Voting
+
+As the author, you have the following options:
+
+Edit post: If you want to edit your post later on, click the button with the three dots at the top
+
+right of the input field.
+
+Close post: If you want to lock a post for additional comments, you can close your guide.
+
+How do I create a post?
+
+Information
+
+The process is the same, regardless of whether you want to post a question, idea, or article.
+
+• 
+
+• 
+
+• 
+
+• 
+
+13 Business Solution ELO Knowledge
+
+
+
+The process for creating a guide is slightly different from that for other post types.
+
+Information
+
+Only moderators can create guides.
+
+Requirements for guides
+
+In a guide, you can combine multiple posts into one single post. The posts should already be
+
+created.
+
+Method
+
+Select the post type by clicking the button next to Ask a question and then clicking the post
+
+type. To ask a question, click Ask a question.
+
+Fig.: 'Write an article' page
+
+Enter your post to the input field, then add a title and other information.
+
+Language: To change the language of your post, click the globe icon and select the relevant
+
+language from the drop-down menu.
+
+1. 
+
+1. 
+
+14 Business Solution ELO Knowledge
+
+
+
+Input field: You can format your post as needed. You can also insert links, images, and documents.
+
+There are relevant buttons available for this. You can also insert elements into the input field using
+
+drag-and-drop or from the Clipboard with CTRL+V.
+
+In the space: You have to select exactly one space from the drop-down menu, which your post is
+
+then assigned to.
+
+On topics: Once you begin typing, the system suggests corresponding existing topics. Below the
+
+input field, you will see suggestions, which you can click and select.
+
+Pin (only for guides): When creating guides, you can choose whether they should be pinned in the
+
+board or in the space. If you pin a guide, it appears at the very top of the overview of posts for all
+
+users.
+
+Posts contained (only for guides): With this field, you can select which posts the guide will contain.
+
+When you begin to type in the Add post ... field, relevant posts are suggested.
+
+Click Post.
+
+Result
+
+Your post is published.
+
+Outlook
+
+You are automatically subscribed to your own posts, meaning you are automatically notified of any
+
+responses via your feed in My ELO.
+
+You can edit your post later on. Moderators also have permission to edit your post.
+
+How do I edit a post?
+
+Information
+
+You can edit your own posts later on. Moderators can edit all posts.
+
+Method
+
+Various editing options are available via the button with the three dots.
+
+Edit: In editing mode, the same functions are available as when creating a post.
+
+Link: You can link a post with other posts. When you click in the Add post ... field, relevant
+
+posts are suggested. Linked posts are shown next to the post itself for all users. Clicking Link
+
+again removes the link.
+
+Pin/unpin: If you pin a post, it appears at the very top of the overview of posts for all users.
+
+You can pin a post to a board or in a space.
+
+Information
+
+Only moderators can pin posts.
+
+1. 
+
+• 
+
+• 
+
+• 
+
+• 
+
+15 Business Solution ELO Knowledge
+
+
+
+Close post
+
+Change post type
+
+Move: You can move a post to a different space or board.
+
+Remove
+
+How can I respond to a post?
+
+Depending on the post type, you have different options for responding to a post.
+
+Reply
+
+You can respond to questions by creating a reply. The moderator or user asking the question can
+
+mark the best reply.
+
+Opinion
+
+You can respond to ideas by creating an opinion. An opinion is intended to flesh out the idea or
+
+argue for or against the idea.
+
+Comment
+
+You can post comments for all post types. Comments are intended for questions and
+
+acknowledgements. You can also comment on replies or opinions.
+
+Voting
+
+You can rate posts by giving them a thumbs up or thumbs down. Each user can vote once. You
+
+cannot vote on your own posts. You can also vote on replies and opinions.
+
+How do I reply to a post?
+
+Information
+
+The method is identical for replies and opinions.
+
+Method
+
+Scroll to the bottom of the page with the post.
+
+Enter your reply or opinion to the input field.
+
+You can format your reply or opinion. You can also insert links, images, and documents. There are
+
+relevant buttons available for this. You can also insert elements into the input field using drag-and-
+
+drop or from the Clipboard with CTRL+V.
+
+Result
+
+Your reply or opinion is posted.
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+16 Business Solution ELO Knowledge
+
+
+
+How do I search for posts?
+
+To search for specific posts, you have the following options:
+
+Free text search
+
+Filter
+
+Free text search
+
+The free text search can be used alone or combined with filters to refine the search.
+
+Enter the term to the search field at the top of the Knowledge Board and click the magnifying glass.
+
+All posts related to your search term are shown in the viewer pane.
+
+If you search for a user, the user will appear on the right side of the window. Click the user to view
+
+their posts.
+
+Filter
+
+Filters can be used alone or combined with a free text search to refine the search.
+
+The filters are located above the viewer pane and at the right of the window, as well as in each
+
+post.
+
+Click the desired filter. Repeat this for all the filters you need.
+
+All posts matching the selected filters are listed in the viewer pane.
+
+• 
+
+• 
+
+17 Business Solution ELO Knowledge
+
+
+
+User profile
+
+Each user has a user profile. The user profile contains:
+
+Information about the user
+
+Reputation
+
+Badges
+
+Posts
+
+Your user profile also contains the following buttons:
+
+User profile
+
+Notifications: This function depends on other settings and therefore is not available to all
+
+users. Contact your system administrator if necessary.
+
+Edit user profile
+
+Information
+
+You can edit your own ELO user profile via the Knowledge Board.
+
+Method
+
+Fig.: 'Mine' button
+
+In the Knowledge Board, click Mine.
+
+In your user profile, click User profile.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+18 Business Solution ELO Knowledge
+
+
+
+Fig.: User profile
+
+In the dialog box with your user profile, click Edit data.
+
+You have the following options:
+
+Edit profile image
+
+Edit data
+
+Result
+
+The changes are applied to your user profile and visible to other users.
+
+Reputation
+
+Each user has a reputation. The more active a user is in the Knowledge Board, the higher their
+
+score.
+
+You can earn points both actively and passively.
+
+You can actively earn points as follows:
+
+1. 
+
+• 
+
+• 
+
+• 
+
+19 Business Solution ELO Knowledge
+
+
+
+Questions, ideas, articles, and guides
+
+Replies and opinions
+
+Marking your or someone else's reply as the best reply
+
+Voting on someone else's post or reply/opinion
+
+Closing a post
+
+You can passively earn points as follows:
+
+Your post, reply, or opinion was upvoted
+
+Your reply was marked as the best reply
+
+Your idea was accepted
+
+Your idea was implemented
+
+You can lose points due to the following actions:
+
+Your post, reply, or opinion was downvoted
+
+Your idea was rejected
+
+Badges
+
+Badges are based on your own actions or the related actions of other users.
+
+The badge type indicates which actions have been performed especially frequently in relation to
+
+your user account.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+20 Business Solution ELO Knowledge
+
+
+
+Keep track of news
+
+To keep track of relevant news, you can subscribe to posts or spaces, or set up notifications.
+
+Subscribe
+
+Information
+
+You can subscribe to single posts or entire spaces. When there are new entries, you will receive a
+
+notification on your My ELO home screen. You are automatically subscribed to your own posts.
+
+Method
+
+Navigate to the post or space you want to subscribe to.
+
+Click Subscribe.
+
+Result
+
+If there is any new activity in the post or space, you will see it in your feed in My ELO.
+
+Outlook
+
+To unsubscribe, click the same button again.
+
+1. 
+
+1. 
+
+21 Business Solution ELO Knowledge
+
+
+
+Set up e-mail notifications
+
+Information
+
+To receive regular e-mails with news, you can set up notifications.
+
+Information
+
+This function depends on other settings and therefore is not available to all users. Contact
+
+your system administrator if necessary.
+
+Requirement
+
+The e-mails contain your subscriptions. So, you have to have subscribed to at least one space or
+
+post first.
+
+Method
+
+Fig.: 'Mine' button
+
+In the Knowledge Board, click Mine.
+
+In your personal area, click Notifications.
+
+1. 
+
+2. 
+
+22 Business Solution ELO Knowledge
+
+
+
+Fig.: Notification settings dialog box
+
+In the dialog box for configuring notifications, check the box next to the option Enable e-mail
+
+notifications.
+
+Check the box next to Show news from My ELO.
+
+Select a language for notifications and confirm with OK.
+
+Result
+
+You will receive e-mail notifications with all the news for your subscriptions.
+
+Outlook
+
+To disable notifications, go back and remove the check next to the Enable e-mail notifications
+
+option.
+
+1. 
+
+2. 
+
+3. 
+
+23 Business Solution ELO Knowledge
+
+
+	Table of contents
+	null
+	Introduction
+	Contents of the manual
+	Basics and knowledge board
+	Possible actions and other elements
+
+	Target audience
+
+	Basics
+	Basic principle
+	General note
+	Requirements
+	Program interface
+
+	Knowledge Board
+	Start page
+	Board interface
+	Create space
+	Topics
+
+	Moderation
+	Posts
+	What kind of post types are there?
+	Questions
+	Ideas
+	Article
+	Guide
+
+	How do I create a post?
+	How do I edit a post?
+	How can I respond to a post?
+	Reply
+	Opinion
+	Comment
+	Voting
+
+	How do I reply to a post?
+	How do I search for posts?
+	Free text search
+	Filter
+
+
+	User profile
+	Edit user profile
+	Reputation
+	Badges
+
+	Keep track of news
+	Subscribe
+	Set up e-mail notifications
+
+
+

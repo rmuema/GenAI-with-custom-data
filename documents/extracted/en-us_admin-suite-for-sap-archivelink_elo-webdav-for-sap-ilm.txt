@@ -1,0 +1,246 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®) | ELO WebDAV for SAP® ILM
+
+
+ELO Suite for SAP
+
+ArchiveLink® (SAP
+
+NetWeaver® & SAP S/
+
+4HANA®)
+
+ELO WebDAV for SAP® ILM
+
+
+
+3
+
+3
+
+Table of contents
+
+ELO WebDAV for SAP® ILM
+
+Configuration 
+
+2 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+ELO WebDAV for SAP® ILM
+
+Configuration 
+
+This document describes how to set up ELO WebDAV for SAP® ILM.
+
+Information
+
+The following examples of an SAP system are merely for demonstration purposes and do
+
+not cover the points that are required when using multiple systems and the ILM storage
+
+service in remote mode.
+
+Version and license 
+
+The add-on is included with the following ELO Indexserver versions:
+
+10.18.62
+
+11.02
+
+12.0 and higher
+
+The add-on can be activated by the order center with the license key/license file.
+
+User and path 
+
+You need to perform the following steps in advance:
+
+Specify an ELO user in the SAP system that is able to connect to ELO WebDAV for SAP® ILM.
+
+Create a path in ELO that you define as the source path in SAP®. This path must be empty
+
+and should not be modifiable.
+
+Create an HTTP connection 
+
+You need to create an HTTP connection to enable communication with ELO WebDAV for SAP® ILM.
+
+In transaction SM59, define an HTTP connection to an external server.
+
+In this example, the repository is called Repository1 and the folder SAP_ILM is at the top
+
+level.
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+1. 
+
+3 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Fig.: RFC Destination – 'Technical Settings' tab
+
+Enter a name for the RFC Destination as well as a meaningful description in the fields
+
+provided.
+
+In the Technical Settings tab, enter the corresponding server data under Target System
+
+Settings.
+
+2. 
+
+3. 
+
+4 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Fig.: Settings on the 'Logon & Security' tab
+
+In the Logon & Security tab, change the authentication mode to Logon with User.
+
+Select the option Basic Authentication and enter a corresponding ELO user.
+
+4. 
+
+5. 
+
+5 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Fig.: Settings on the 'Special Options' tab
+
+Check that your settings in the Special Options tab are identical to those in the figure 
+
+Settings on the 'Special Options' tab.
+
+Settings
+
+Timeout: Specify Timeout, Timeout in 600 seconds
+
+HTTP Setting
+
+HTTP Version: HTTP 1.1
+
+Compression: Inactive
+
+Compressed Response: Yes
+
+6. 
+
+◦ 
+
+◦ 
+
+▪ 
+
+▪ 
+
+▪ 
+
+◦ 
+
+6 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+HTTP Cookies
+
+Accept Cookies: Yes (All)
+
+Set up storage 
+
+Once you have established the HTTP connection, you need to create an ILM store.
+
+Fig.: Store Administration
+
+Start the transaction ILMSTOREADM.
+
+Create a new entry here.
+
+Enter a name and a description.
+
+Assign the entry to the HTTP connection created in the previous step.
+
+After saving, click Test to check the connection.
+
+You can now use storage for ILM scenarios.
+
+Combination with SAP® ArchiveLink 
+
+Fig.: Right in the ELO Administration Console
+
+If the same repository is used to store documents via SAP® ArchiveLink, the ELO user should not
+
+have the right View all entries, ignore permissions.
+
+▪ 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+7 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+	Table of contents
+	ELO WebDAV for SAP® ILM
+	Configuration
+	Version and license
+	User and path
+	Create an HTTP connection
+	Set up storage
+	Combination with SAP® ArchiveLink
+
+
+

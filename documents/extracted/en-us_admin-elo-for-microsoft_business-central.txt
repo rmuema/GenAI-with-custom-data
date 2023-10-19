@@ -1,0 +1,2406 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO for Microsoft | ELO for Microsoft Dynamics 365 Business Central
+
+
+ELO for Microsoft
+
+ELO for Microsoft Dynamics 365 Business
+
+Central
+
+
+
+3
+
+3
+
+6
+
+16
+
+30
+
+30
+
+33
+
+42
+
+Table of contents
+
+ELO Integration Service for Business Central
+
+Introduction 
+
+Configuration in ELO 
+
+Configuration in Business Central 
+
+ELO Output Link for Business Central
+
+Introduction 
+
+Configuration in ELO 
+
+Configuration in Business Central 
+
+2 ELO for Microsoft
+
+
+
+ELO Integration Service for Business
+
+Central
+
+Introduction 
+
+The ELO Integration Service for Business Central forms the technical platform for implementing the
+
+ELO Integration Client in a Microsoft Dynamics 365 Business Central system (referred to as
+
+Business Central in the rest of the document). Following installation, the ELO Integration Client is
+
+available as a FactBox in correspondingly configured objects in the Business Central client. You will
+
+find a list of the object pages extended with the ELO Integration Client under ELO Integration Client
+
+integration points.
+
+When the ELO Integration Client is called within Business Central, a configurable path is created
+
+(assuming one doesn't already exist) and displayed in ELO. The functions of the ELO Integration
+
+Client, which can also be customized if required, are available to users here.
+
+The ELO Integration Service for Business Central is available for both on-premises and cloud
+
+systems. Please note the different deployment methods within Business Central.
+
+ELO basics 
+
+To use the ELO Integration Service for Business Central and the ELO Integration Client within
+
+Business Central, the ELO systems must meet the following requirements:
+
+ELOprofessional or ELOenterprise version 12 and higher
+
+Depending on the version, at least the following modules are required:
+
+ELO 20:
+
+ELOwf 20.05.000
+
+ELO 12:
+
+ELOwf 12.06.000
+
+ELO REST API 12.04.000
+
+ELO Business Solutions Common version 1.07.000 or higher
+
+Microsoft Dynamics 365 Business Central on-premises version 16 or higher
+
+The ELO license must also include the ELO Integration Client.
+
+• 
+
+• 
+
+◦ 
+
+▪ 
+
+◦ 
+
+▪ 
+
+▪ 
+
+• 
+
+• 
+
+3 ELO for Microsoft
+
+
+
+Business Central – On-Premises basics 
+
+A module within Business Central is required for communication between ELO and Business
+
+Central. This module has been developed in a separate ELO object range and therefore cannot
+
+conflict with other developments.
+
+The download contains a package for the ELO Integration Service for Business Central, which you
+
+need to install in the Business Central Administration Shell. If you want to use this installation
+
+package later on, you need to import a new license with the following modules in Business Central:
+
+70670580 ELO Integration Service for Business Central
+
+If you also use the ELO Output Link for Business Central, you must add the following module to the
+
+license:
+
+70670590 ELO Output Link for Business Central
+
+To obtain these licenses, you must provide us with the Microsoft PartnerSource Business Center
+
+account number of the partner who issues the licenses for the Business Central systems. This must
+
+be an ELO authorized reseller of these two modules in the Microsoft PartnerSource Business Center.
+
+Information
+
+If you do not have a Microsoft PartnerSource Business Center account number, you must
+
+contact the customer, the Business Central implementation partner, or the issuer of the
+
+Business Central license.
+
+ELO Integration Client integration points 
+
+Posted Sales Shipment
+
+Posted Sales Invoice
+
+Posted Sales Credit Memo
+
+Posted Purchase Receipt
+
+Posted Purchase Invoice
+
+Posted Purchase Credit Memo
+
+Customer Card
+
+Vendor Card
+
+Sales Quote
+
+Sales Order
+
+Sales Invoice
+
+Sales Credit Memo
+
+Purchase Quote
+
+Purchase Order
+
+Blanket Sales Order
+
+Blanket Purchase Order
+
+Purchase Invoice
+
+Purchase Credit Memo
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+4 ELO for Microsoft
+
+
+
+Sales Return Order
+
+Purchase Return Order
+
+Posted Return Shipment
+
+Posted Return Receipt
+
+Planned Production Order
+
+Released Production Order
+
+Item Card
+
+Service Invoice
+
+Service Credit Memo
+
+Posted Service Invoice
+
+Posted Service Credit Memo
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+5 ELO for Microsoft
+
+
+
+Configuration in ELO 
+
+First, you need to install and configure the ELO Integration Service for Business Central in the ELO
+
+system.
+
+You will find the necessary installation packages on the ELO SupportWeb under Integration. The ELO
+
+installation package contains the following files:
+
+erp.mbc.integrationservice
+
+erp.mbc.integrationservice.custom
+
+The ELO Integration Client also requires a configuration file in the ELO app area.
+
+elo.integration.Client
+
+'elo.integration.client' configuration file 
+
+To use the ELO Integration Client, you need the configuration file elo.integration.client in JSON
+
+format, which is stored in the Administration folder. You will find this configuration file under this
+
+path:
+
+//Administration// ELOapps//Configuration//elo.integration.Client
+
+If this file already exists because the ELO Integration Client is already being used in other systems,
+
+you need to add the entry mbc. If it does not yet exist, create it with the following parameters. This
+
+is important for calling the URL.
+
+• 
+
+• 
+
+• 
+
+{
+
+  "mbc": {
+
+    "noForm": false,
+
+    "noFeed": false,
+
+    "noFulltext": false,
+
+    "noImagePreview": false,
+
+    "rFInit": "RF_erp_mbc_integrationservice_service_Init",
+
+    "newDocVersFct": true,
+
+    "saveDocFct": true,
+
+    "gotoFct": true,
+
+    "webClientURL": "http://serverurl:serverport/ix-repository/plugin/de.elo.ix.plugin.proxy/web/"
+
+    "editInOfficeFct": true,
+
+    "removeEntryFct": true,
+
+    "startWorkflowFct": false,
+
+    "startWorkflowTemplates": null,
+
+    "externalLinkFct": true,
+
+    "folderMask": "(E10E1000-E100-E100-E100-E10E10E10E31)",
+
+    "documentMask": "(E10E1000-E100-E100-E100-E10E10E10E30)",
+
+6 ELO for Microsoft
+
+
+
+Be sure to check the following parameters when creating or modifying the file:
+
+rFInit: Function that creates the folder path in ELO; provided with the 
+
+erp.mbc.integrationservice package.
+
+webClientURL: URL to open the ELO Web Client when the Go to function is enabled. To
+
+prevent the user from having to log on multiple times, the proxy behind the ELO Indexserver
+
+must be configured. The ELO Web Client should be configured accordingly as a plug-in behind
+
+the ELOix proxy (recommended method).
+
+folderMask: Defines the metadata form that the ELO Integration Service for Business Central
+
+uses to create new structures based on the Business Central object.
+
+documentMask: Defines the metadata form that the ELO Integration Service for Business
+
+Central uses when filing documents from the ELO Integration Client within Business Central.
+
+You can use metadata forms that pass information onto the objects.
+
+For more information on the parameters of this configuration file, refer to the documentation on the
+
+ELO Integration Client.
+
+Configuring ELO Integration Service for Business Central 
+
+Once you have successfully installed the ELO packages, you will find the configuration app in the
+
+ELO Administration Console under:
+
+Solutions > ELO for Microsoft Dynamics 365 Business Central > ELO Integration Service
+
+Click the ELO Integration Service tile to access the configuration interface of the ELO Integration
+
+Service for Business Central.
+
+    "hasSearch": true,
+
+    "referenceEntryFct": true,
+
+    "refreshFct": true
+
+  }
+
+}
+
+• 
+
+• 
+
+• 
+
+• 
+
+7 ELO for Microsoft
+
+https://docs.elo.com/admin/integration-client/en-us/
+https://docs.elo.com/admin/integration-client/en-us/
+
+
+In the first step, create a client or company on the Structures and folders tab. Once you have done
+
+this, you will see the configuration area under Structures and folders where you can create the
+
+following configurations:
+
+Basic settings
+
+General settings
+
+Structure and metadata matching
+
+Assignment of user and group rights
+
+Basic settings 
+
+If necessary, enable expert mode for the next configurations.
+
+Integration Client URL
+
+In this field, enter the full HTTP address that is initially used to call the ELO Integration Client. The
+
+URL is structured as follows:
+
+ELOix proxy address, path to ELOwf, and the ELO Integration Client app. The system comes at the
+
+end as well as the ID created in the JSON configuration file.
+
+Example:
+
+• 
+
+• 
+
+• 
+
+• 
+
+http://mbcdemo:9090/ix-MBCDEMO/plugin/de.elo.ix.plugin.proxy/wf/apps/app/elo.integration.Client/?debug=fals
+
+8 ELO for Microsoft
+
+
+
+General settings 
+
+Under General settings, you can create configurations for each Business Central object. As soon as
+
+you add a new entry, corresponding lines are automatically created in the Structures and metadata
+
+matching area. Lines are also created in the Assignment of user and group rights area.
+
+BC table: In the BC table column, enter the Business Central table name (database table) you want
+
+to use.
+
+Alias: The alias is a technical name you can define yourself. For example, you could copy the entry
+
+from the BC table field without spaces. The alias is used for unique identification later on.
+
+Object description: This field can be used to describe the entry, for example, if you want to provide
+
+more information.
+
+Intermediate form: In the Intermediate form column, enter the metadata form for folders that may
+
+have to be created on storage so that the specified path can be generated.
+
+Folder form: The final metadata form is specified in the Folder form column, e.g. MBC folder
+
+Document form: This is where you specify which metadata form to use when filing from Business
+
+Central. You can enter the same form as in the ELO Integration Client configuration file, or a
+
+separate one for each Business Central object.
+
+Structure and metadata matching 
+
+As described in the chapter General settings, when you create an entry under General settings, a
+
+separate entry for the alias is automatically created in the Structure and metadata matching area.
+
+Alias: This entry is copied directly from the Alias column under General settings and can also only
+
+be modified in this area.
+
+9 ELO for Microsoft
+
+
+
+Repository path: The filing path in ELO is defined in the Repository path column. In this field, you
+
+can also enter Business Central variables, e.g. using Handlebars syntax. You will find an example in
+
+the chapter Implementation example 'SalesHeader'
+
+ELO field matching: This where you specify how to complete the fields on the metadata form
+
+defined under Folder form (see chapter General settings). In our example, this is the form MBC
+
+folder.
+
+BC field name: Enter the name of the column in the BC table here.
+
+Untranslated (expert mode): Enable this option to return the BC table values untranslated. These
+
+are the so-called Options. Document Type is such a column, since the Document Type is transferred
+
+either as an untranslated numerical value (e.g. 1 for orders) or as text in the current Business
+
+Central language (order).
+
+Mandatory field (expert mode): Enable this option if you want this field to be mandatory. For
+
+example, this is important if you are using the value within a path. This can prevent incomplete
+
+paths from being created in ELO.
+
+ELO field: Choose between GRP for metadata fields and MAP for MAP fields and enter the technical
+
+name of the field here. In MAP fields, it is possible to use iteration by attaching the value {i} to the
+
+technical name. This is useful in relation to the value in Alternative table if a table of lines is
+
+specified there and multiple values can be transferred.
+
+If the metadata fields do not exist in the metadata form, the corresponding values will be lost and
+
+written as a warning in the log.
+
+Value in Handlebars: The value entered here is stored in the corresponding ELO field in the ELO
+
+entry. To copy the value of the transfer parameter from the URL, it must be enclosed in triple curly
+
+brackets.
+
+If the values are iterated, you can use the {i} identifier to indicate the Handlebar.
+
+Please note
+
+If an iteration is defined but there is no {i} in the ELO field, all values will be concatenated
+
+in this field up to a maximum of 255 characters. Any values above this will be rejected.
+
+Parameter: The parameter for mapping from the URL is stored here.
+
+Key field: You can select one key field per BC table. The value of the key field is used to specify a
+
+property of the object that remains a unique identifier even when other data changes. For example,
+
+you can specify an ID that uniquely identifies an object. This ensures that an object is not created
+
+twice (with a new name) in the repository, for example. Instead, the corresponding folder is found
+
+and a new path is created according to the new name. The folder and its contents are moved to this
+
+10 ELO for Microsoft
+
+
+
+new path. The documents that were stored under the old name remain in the folder with the new
+
+name.
+
+Filter (expert mode): Enabling this field sets a filter within Business Central. This function can be
+
+used if two entries have been created for Sales Header. For example, it is possible to restrict 
+
+Document Type to use different configurations for orders and requests. Alternatively, you can also
+
+make the distinction in the path itself using Handlebars.
+
+Alternative BC table (expert mode): Enter an alternative table here. A primary key must be used to
+
+establish a relation to the primary table. The classic case is the header table to line table relation,
+
+for example, Sales Header as the leading table and Sales Lines as the alternative table.
+
+Implementation example 'SalesHeader' 
+
+General settings
+
+BC table: Sales Header
+
+Alias: SalesHeader
+
+Object description: Sales Quote/(Blanket/Return) Order/Inv./Cr. Memo
+
+Intermediate form: Folder
+
+Folder form: MBC folder
+
+Document form: Basic entry
+
+Structure and metadata matching
+
+Repository path:
+
+ELO field matching:
+
+Document Type: X Untranslated X Mandatory field
+
+Field type: MAP
+
+ELO field: DOCTYPE_PLAIN
+
+Value in Handlebars:
+
+Parameter in URL: DOCTYPEPLAIN Document Type: O Untranslated O Mandatory field
+
+/MS Business Central/{{{Client}}}/Sales/{{#ifCond DOCTYPEPLAIN '==' '0'}}Quotes{{else}}{{#ifCond DOCTYPEPLA
+
+• 
+
+• 
+
+• 
+
+{{{DOCTYPEPLAIN}}}
+
+• 
+
+• 
+
+11 ELO for Microsoft
+
+
+
+Field type: MAP
+
+ELO field: DOCTYPE
+
+Value in Handlebars:
+
+Parameter in URL: DOCTYPE No.: O Untranslated X Mandatory field
+
+Field type: GRP
+
+ELO field: MBC_DOC_NO
+
+Value in Handlebars:
+
+Parameter in URL: DOCNO 
+
+In this example, a child folder with the name of the client and the fixed value //Sales//Orders is
+
+created in the MS Business Central folder in ELO. Objects are stored in this folder under the 
+
+DOCNUM. All values transferred with POSNO1, POSNO2 ...POSNOX are stored in the corresponding
+
+MAP field POSITION_NO1, POSITION_NO2 ... POSITION_NOX.
+
+Assignment of templates, user and group rights 
+
+In this area, you can use a stored template (template structure) when using an entry for the first
+
+time as well as assign user and group rights. The required template can be created in the
+
+configuration area of Business Central under:
+
+//Administration//Business Solutions Custom//erp.mbc.serviceintegration//Configuration//
+
+FolderTemplates
+
+• 
+
+• 
+
+{{{DOCTYPE}}}
+
+• 
+
+• 
+
+• 
+
+• 
+
+{{{DOCNO}}}
+
+• 
+
+12 ELO for Microsoft
+
+
+
+The template is only copied the first time the entry is created.
+
+Path to template: Enter the path to the template structure here. For example, if you created a
+
+template structure PurchaseOrder, this would mean that when you call the ELO Integration Client in
+
+the Business Central purchase order object, assuming all conditions are met, the structure is
+
+created under:
+
+// Administration // Business Solutions Custom // erp.mbc.integrationservice // Configuration //
+
+FolderTemplates // PurchaseOrder
+
+At this point, you must use a separator to define a deeper folder structure. However, the separator
+
+used must be leading, e. g. if you enter /Vendor/Orders, the slash is recognized as a separator.
+
+Handlebars syntax is also allowed, which enables you to control templates flexibly.
+
+If you use Handlebars syntax to create the structure, you can only use metadata from the fields of
+
+the initial template, in this case MBC folder.
+
+Rights for users and groups
+
+Replace rights: ELO takes on the rights of the parent element by default. If the Replace rights option
+
+is enabled, the rights of the parent element are discarded and only the set rights are assigned.
+
+Please note that this function only works if a folder structure does not yet exist.
+
+Rights for users and groups: Enter the users or groups that you want to assign rights to here.
+
+RWDELP: Use the check boxes to set the different permissions types for users or groups.
+
+R = View
+
+W = Change metadata
+
+D = Delete
+
+E = Edit
+
+L = Edit list
+
+P = Set permissions
+
+For more information, refer to the documentation Concept for assigning rights and permissions.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+13 ELO for Microsoft
+
+https://docs.elo.com/admin/config/en-us/user-management/concept-recommendations/
+https://docs.elo.com/admin/config/en-us/user-management/concept-recommendations/
+
+
+Working with multiple companies/databases 
+
+If you work with multiple companies/databases in Business Central but want to manage them in a
+
+single ELO repository, you can add an entry in the integrationservice.config file.
+
+After you have confirmed the new entry, you will get an empty configuration interface.
+
+You also have to create a new configuration entry in the configuration file elo.integration.Client to
+
+address the new client. You could create an entry mbc2 as a copy of mbc and then also change the
+
+URL. In the example we used, it would look like this (see also chapter 'elo.integration.client'
+
+configuration file):
+
+ELOix proxy address, path to ELOwf, and the ELO Integration Client app. The system comes at the
+
+end as well as the ID created in the JSON configuration file.
+
+Example:
+
+14 ELO for Microsoft
+
+
+
+Now you can configure the other parameters.
+
+http://mbcdemo:9090/ix-MBCDEMO/plugin/de.elo.ix.plugin.proxy/wf/apps/app/elo.integration.Client/?debug=fals
+
+15 ELO for Microsoft
+
+
+
+Configuration in Business Central 
+
+Deployment in Business Central – on-premises 
+
+After you have completed the configuration in ELO, you need to install Business Central. You can do
+
+the installation at the same time as the configuration in ELO. However, you need a corresponding
+
+ELO configuration to be able to configure the ELO Integration Service for Business Central in
+
+Business Central.
+
+The required installation files for Business Central are part of the download package, which you will
+
+find in the ELO SupportWeb under Integration > MS Business Central.
+
+Start the Business Central Administration Shell and deploy the installation package for ELO
+
+Integration Service for Business Central. In the following example, the package was deployed using
+
+these commands:
+
+Publish-NAVApp
+
+Sync-NAVApp
+
+Implementation example:
+
+Setup and extensions in Business Central on-premises 
+
+After the deployment, log on in the Business Central system.
+
+Go to the Setup & Extensions menu, and select the Extensions menu item.
+
+After successful deployment, you can install the package.
+
+Click Show more options (button with three dots) and then select the Install menu item.
+
+• 
+
+• 
+
+Publish-NAVApp -Serverinstance BC160 -Path "ELO Digital Office GmbH_ELO Integration Service for Business Ce
+
+Sync-NAVApp -ServerInstance BC160 -Name 'ELO Integration Service for Business Central' -Version 16.0.0.18
+
+1. 
+
+2. 
+
+3. 
+
+16 ELO for Microsoft
+
+
+
+The package will be installed and the entry will be marked as Installed.
+
+Information
+
+If you want to install the ELO Output Link for Business Central in addition to the ELO
+
+Integration Service for Business Central, you must first install the ELO Integration
+
+Service.
+
+After the installation, log on to Business Central again.
+
+Deployment in Business Central – Cloud 
+
+Microsoft AppSource provides an ELO Integration Service app for Business Central cloud systems.
+
+You can search for the app in AppSource via the search in Business Central. Please note that this
+
+requires administrator rights outside of Business Central.
+
+Under Get from Microsoft AppSource in the search, select the entry ELO Integration Service.
+
+4. 
+
+1. 
+
+17 ELO for Microsoft
+
+
+
+You will be forwarded to Microsoft AppSource and can download the app there.
+
+18 ELO for Microsoft
+
+
+
+Check and confirm your Microsoft profile information.2. 
+
+19 ELO for Microsoft
+
+
+
+Select the language you want to install the extension in.3. 
+
+20 ELO for Microsoft
+
+
+
+Begin installing the ELO Integration Service app on your Business Central Cloud system. In
+
+the next step, you can configure the extension outside of Business Central.
+
+Fix error while loading the configuration 
+
+After successful installation, attempting to load the configuration from ELO may result in an error. In
+
+this case, you will have to check the ELO Integration Service extension settings and enable the
+
+function Allow HttpClient Request.
+
+In Business Central, call the Extension Management function using the search.
+
+4. 
+
+1. 
+
+21 ELO for Microsoft
+
+
+
+Search for ELO Integration Service within the installed extensions and select the option 
+
+Configure from the additional actions (button with three dots).
+
+2. 
+
+22 ELO for Microsoft
+
+
+
+In the configuration area, enable Allow HttpClient Request.3. 
+
+23 ELO for Microsoft
+
+
+
+Update apps in Business Central – Cloud 
+
+To update the ELO app in Microsoft AppSource, perform the following steps:
+
+Log on to the Microsoft Dynamics 365 Business Central browser client.
+
+In the global search, enter Extension Management and select the corresponding link.
+
+Select the ELO app.
+
+1. 
+
+2. 
+
+3. 
+
+24 ELO for Microsoft
+
+
+
+The Uninstall Extension dialog box opens.
+
+Select Uninstall.
+
+Switch to the Microsoft Dynamics 365 Business Central AppSource and install the app again.
+
+Configuration of 'ELO Setup' in Business Central 
+
+Once you have completed the installation and logged on again, you can search for the ELO Setup
+
+configuration and click the entry to open it.
+
+4. 
+
+5. 
+
+25 ELO for Microsoft
+
+
+
+Please note
+
+To be able to load the configuration and connect ELO to your Business Central Cloud system
+
+later, the two systems have to be able to communicate. Either your ELO system or at least
+
+the REST-URL used must be able to be reached externally, or you can configure an
+
+alternative, such as a Microsoft Application Proxy. In any case, your Business Central System
+
+will have to be able to reach the ELO system directly.
+
+ELO Setup – General 
+
+Switch to editing mode and enter the Indexserver URL into the URL ELO REST field under General. In
+
+our example, this is the following address:
+
+You need to enter an ELO user and the corresponding password as well. We recommend that you
+
+enter the user ELO Service.
+
+http://mbcdemo:9090/ix-development20/ix
+
+26 ELO for Microsoft
+
+
+
+Please note
+
+For version ELO 12: In the General area, you have to enter the address of the ELO REST
+
+service in the URL ELO REST field. In our example, this is the following address:
+
+ELO Setup – Integration Service 
+
+In the next step, you need to create the ELO Integration Service for Business Central configuration.
+
+The Configuration path field is usually already completed. If you want to use a different
+
+configuration in ELO, you can modify the configuration path. The configuration path in our example
+
+is as follows:
+
+/erp.mbc.integrationservice/Configuration/integrationservice.config
+
+The Configuration entry field can be left blank if there is only one configuration entry in the 
+
+integrationservice.config file in ELO. In our example, Business Central uses the configuration entry 
+
+CRONUS AG.
+
+If multiple Business Central systems are connected, the corresponding ELO configuration can be
+
+assigned via this configuration entry.
+
+Load configuration
+
+After you have created or checked the configuration path and, where applicable, specified a
+
+configuration entry, you can download the ELO Integration Service for Business Central
+
+configuration from the ELO system using the Actions menu item Load Integration Service
+
+configuration. You must have already completed the configuration in the ELO system (see 
+
+Configuring ELO Integration Service for Business Central).
+
+Information
+
+Business Central stores the configuration in the cache at this point, so you need to load the
+
+configuration initially as well as when adjusting the configuration in ELO.
+
+If Business Central successfully loaded the configuration, you will see a success message.
+
+http://mbcdemo:9090/ix-development20/plugin/de.elo.ix.plugin.proxy/rest/
+
+27 ELO for Microsoft
+
+
+
+FactBox height
+
+This parameter allows you to set the size of the ELO Integration Client in the Business Central
+
+system. The default setting is 500 pixels.
+
+Last import
+
+This menu item tells you when the configuration was last uploaded from the ELO system.
+
+Enable
+
+This function allows you to enable or disable the ELO Integration Client in the Business Central
+
+system.
+
+ELO Setup – Check configuration 
+
+Under the menu item Actions > Integration Service configuration (Integr. Serv. config.), you can
+
+view and check the configured entries in ELO.
+
+28 ELO for Microsoft
+
+
+
+ELO Setup – Debugging 
+
+In the Debugging area, you will see the URL of the Integration Client that is used in Business
+
+Central. This is the URL stored in the ELO Integration Service configuration in ELO (see chapter 
+
+Basic settings).
+
+29 ELO for Microsoft
+
+
+
+ELO Output Link for Business Central
+
+Introduction 
+
+This document describes how to set up ELO Output Link for Business Central. ELO Integration
+
+Service for Business Central is required as the foundation for ELO Output Link to function. This not
+
+only forms the technical platform for implementing the ELO Integration Client in a Microsoft
+
+Dynamics 365 Business Central system (referred to as Business Central in the rest of the
+
+document), but also acts as the interface between ELO and Business Central for ELO Output Link for
+
+Business Central. In addition to filing document reports via defined event-based functions such as
+
+Post/Print document (see chapter Output Link integration points), the Send to ELO button is also
+
+implemented. The list also includes the pages that have the Send to ELO button.
+
+ELO Output Link for Business Central is available for both on-premises and cloud systems. Please
+
+note the different deployment methods within Microsoft Dynamics 365 Business Central.
+
+ELO basics 
+
+To use ELO Output Link for Business Central, the following system requirements must be met for
+
+the following ELO versions:
+
+ELOprofessional or ELOenterprise version 12 and higher
+
+Depending on the version, at least the following modules are required:
+
+ELO 20:
+
+ELOwf 20.05.000
+
+ELO 12:
+
+ELOwf 12.06.000
+
+ELO REST API 12.04.000
+
+ELO Business Solutions Common version 1.07.000 or higher
+
+Microsoft Dynamics 365 Business Central on-premises version 16 or higher
+
+Configured ELO Integration Service for Business Central
+
+Microsoft Dynamics 365 Business Central – on-premises basics 
+
+To use ELO Output Link for Business Central, two modules within Business Central are required.
+
+These modules have been developed in a separate ELO object range and therefore cannot conflict
+
+with other developments.
+
+• 
+
+• 
+
+◦ 
+
+▪ 
+
+◦ 
+
+▪ 
+
+▪ 
+
+• 
+
+• 
+
+• 
+
+30 ELO for Microsoft
+
+
+
+The download contains a package for the ELO Integration Service for Business Central, which you
+
+need to install in the Business Central Administration Shell. If you want to use this installation
+
+package later on, you need to import a new license with the following modules in Business Central:
+
+70670580 ELO Integration Service for Business Central
+
+To use ELO Output Link for Business Central, you must add the following module to the license:
+
+70670590 ELO Output Link for Business Central
+
+To obtain these licenses, you must provide us with the Microsoft PartnerSource Business Center
+
+account number of the partner who issues the licenses for the Business Central systems. This must
+
+be an ELO authorized reseller of these two modules in the Microsoft PartnerSource Business Center.
+
+Information
+
+If you do not have a Microsoft PartnerSource Business Center account number, you must
+
+contact the customer, the Business Central implementation partner, or the issuer of the
+
+Business Central license.
+
+Please note
+
+In the Business Central versions 17, 18, and 19, it is not possible to intercept print jobs in
+
+the browser. Interception is only possible if a printer is configured.
+
+As of Business Central version 20, a new event (OnAfterDocumentReady) is provided which
+
+can be used with the ELO Output Link for Business Central starting with version 1.0.1.20.
+
+Microsoft Dynamics 365 Business Central – Cloud basics 
+
+Microsoft AppSource provided an ELO Output Link app for Business Central cloud systems. Using
+
+ELO Output Link requires the ELO Integration service. This app is also available from Microsoft
+
+AppSource.
+
+Output Link integration points 
+
+Function BC Event/Page Comment
+
+Print
+
+BC 16-19:
+
+OnAfterDocumentPrintReady 
+
+BC >= 20: OnAfterDocumentReady
+
+General print event. Only when a report is sent to a
+
+printer. Note the information about the Business
+
+Central versions on intercepting print jobs in the
+
+browser in the Microsoft Dynamics 365 Business
+
+Central – on-premises basics chapter.
+
+Event
+
+For purchase and sales documents. Also executed
+
+for e-mails, when sending to Word. If this flag is
+
+enabled, sendByPrinting has to be disabled,
+
+otherwise items will be filed twice.
+
+• 
+
+• 
+
+31 ELO for Microsoft
+
+
+
+Function BC Event/Page Comment
+
+OnBeforeDoPrintSalesHeader
+Send e-mail (sales order, sales quotation). Print
+
+document (sales complaint, sales frame order)
+
+OnBeforePrintSalesOrder Print document (sales order, sales quotation)
+
+OnBeforePrintWithGUIYesNoVendor
+Print document (purchase order, purchase frame
+
+order, purchase query, purchase complaint)
+
+OnAfterSendVendor
+Purchase document, send e-mail (purchase request,
+
+purchase order)
+
+Post OnAfterPostSalesDoc When posting sales documents
+
+OnAfterPostPurchaseDoc When posting purchase documents
+
+Manual
+
+Sales Order 
+
+Posted Sales Shipment 
+
+Posted Sales Invoice 
+
+Posted Sales Credit Memo 
+
+Posted Purchase Receipt 
+
+Posted Purchase Invoice 
+
+Posted Purchase Credit Memo 
+
+Posted Return Shipment 
+
+Posted Return Receipt 
+
+Sales Quote 
+
+Purchase Quote 
+
+Purchase Order 
+
+Blanket Sales Order 
+
+Blanket Purchase Order 
+
+Sales Return Order 
+
+Purchase Return Order 
+
+Planned Production Order 
+
+Released Production Order 
+
+Service Invoice 
+
+Service Credit Memo 
+
+Posted Service Invoice 
+
+Posted Service Credit Memo
+
+Button on the page for manual transfer. Via
+
+customer app: Send Report2ELOFromRec function
+
+There are no ELO Output Link for Business Central functions for event-based functions/pages that
+
+are not named here at this time.
+
+32 ELO for Microsoft
+
+
+
+Configuration in ELO 
+
+First, you need to install and configure the ELO Integration Service for Business Central in the ELO
+
+system.
+
+You will find the necessary installation packages on the ELO SupportWeb under Integration. The ELO
+
+installation package contains the following files:
+
+erp.mbc.outputlink
+
+erp.mbc.outputlink.custom
+
+Configuring ELO Output Link for Business Central 
+
+Once you have successfully installed the ELO packages, you will find the configuration app in the
+
+ELO Administration Console under:
+
+Solutions > ELO for Microsoft Dynamics 365 Business Central > ELO Output Link
+
+Click the ELO Output Link tile to access the configuration interface of ELO Output Link for Business
+
+Central.
+
+Add client/company 
+
+First, you will have to add a client or company. Once you have created a client, you can no longer
+
+rename it.
+
+• 
+
+• 
+
+33 ELO for Microsoft
+
+
+
+Please note
+
+Only edit the configuration in the Business Solutions Custom path to ensure the system can
+
+be updated in the future. When a module is updated, the configuration in the Business
+
+Solutions folder can be overwritten.
+
+After you create a client, the following areas appear for further configuration:
+
+General settings
+
+Structure and metadata matching
+
+Assignment of user and group rights
+
+General settings 
+
+In the General settings area, you define an Identifier. In standard scenarios, this can be the report
+
+ID, for example. With customer extensions within Business Central, this could also be an ID defined
+
+by development. The identifier helps you identify the configuration entry. As soon as you add a new
+
+entry in this area, corresponding lines are automatically created in the Structures and metadata
+
+matching and Assignment of user and group rights areas.
+
+Identifier: In this column, you enter the report ID from Business Central, which is used to print
+
+documents there, for example.
+
+Structure alias: The structure alias is a technical name that you defined in the ELO Integration
+
+Service for Business Central configuration. The alias is used for unique identification later on. It is
+
+used to identify the base path where the document will be filed.
+
+• 
+
+• 
+
+• 
+
+34 ELO for Microsoft
+
+
+
+Object description: This field can be used to describe the entry, for example, if you want to provide
+
+more information.
+
+Version comment: The comment is entered for the document filed from Business Central and is
+
+visible in the document's feed. If a report/an object is printed again, ELO generates a new version,
+
+which is saved in the comment/feed with the entry configured here.
+
+BC table: In the BC table column, enter the Business Central table name (database table) you want
+
+to use.
+
+Document form: This is where you specify which metadata form to use for documents filed via ELO
+
+Output Link for Business Central. You can enter the same form as in the ELO Integration Client
+
+configuration file, or a separate one for each Business Central object.
+
+Print: A document is filed when a document is printed in Business Central.
+
+Event: A document is filed when an event takes place that generates a report within Business
+
+Central. The event in Business Central relates to the functions Send/Attach as PDF/Print.
+
+Please note
+
+Objects and reports that support the Event function within Business Central should not
+
+activate the Print function. Otherwise, the document would be filed with two versions.
+
+Printing can be used as a global event with Business Central.
+
+Post: A document is filed when the object is posted in Business Central.
+
+Please note
+
+If technical errors are shown during posting in Business Central (within an object, for
+
+example a customer order, that supports and has been configured for Output Link), Business
+
+Central may not correctly forward the event to ELO and the printout of the document will not
+
+be filed.
+
+We therefore recommend combining the Post function with the job queue to file any
+
+documents that have not been filed later on.
+
+Manual: A document is filed when a separate function is called in Business Central (Send to ELO
+
+button in Business Central).
+
+Information
+
+The filing functions are not available in all Business Central objects. You will find detailed
+
+information on which Business Central flags/events there are implementations for in the
+
+table Output Link integration points.
+
+35 ELO for Microsoft
+
+
+
+Only one version: No other versions will be filed. If a document already exists, the previous
+
+metadata remain unchanged.
+
+Job: As soon as this option is enabled, the configuration entry in a defined entry in the job queue in
+
+Business Central is used for post-processing or automatic processing. See also Job queue.
+
+Structure and metadata matching 
+
+As described in the chapter General settings, when you create an entry under General settings, a
+
+separate entry for the identifier is automatically created in the Structure and metadata matching
+
+area.
+
+Identifier: This entry is copied directly from the Identifier column under General settings and can
+
+also only be modified in this area.
+
+Repository path: The filing path in ELO is defined in the Repository path column. In this field, you
+
+can also enter Business Central variables, e.g. using Handlebars syntax.
+
+Implementation example for Identifier 1305:
+
+ELO field matching: This where you specify how to complete the fields on the metadata form
+
+defined under document form (see chapter General settings). In our example, this is the form MBC
+
+PrintedOrder.
+
+BC field name: Enter the name of the column in the BC table here.
+
+Untranslated (expert mode): Enable this option to return the BC table values untranslated. These
+
+are the so-called Options. Document Type is such a column, since the Document Type is transferred
+
+either as an untranslated numerical value (e.g. 1 for orders) or as text in the current Business
+
+Central language (order).
+
+Mandatory field (expert mode): Enable this option if you want this field to be mandatory. For
+
+example, this is important if you are using the value within a path This can prevent incomplete
+
+paths from being created in ELO.
+
+ELO field: Choose between GRP for metadata fields and MAP for MAP fields and enter the technical
+
+name of the field here. In MAP fields, it is possible to use iteration by attaching the value {i} to the
+
+technical name. This is useful in relation to the value in Alternative table if a table of lines is
+
+specified there and multiple values can be transferred.
+
+/Printed/{{{DOCNO}}}
+
+36 ELO for Microsoft
+
+
+
+If the metadata fields do not exist in the metadata form, the corresponding values will be lost and
+
+written as a warning in the log.
+
+Value in Handlebars: The value entered here is stored in the corresponding ELO field in the ELO
+
+entry. To copy the value of the transfer parameter from the URL, it must be enclosed in triple curly
+
+brackets.
+
+If the values are iterated, you can use the {i} identifier to indicate the Handlebar.
+
+Please note
+
+If an iteration is defined but there is no {i} in the ELO field, all values will be concatenated
+
+in this field up to a maximum of 255 characters. Any values above this will be rejected.
+
+Parameter in URL: The parameter for mapping from the URL is stored here.
+
+Filter (expert mode): Enabling this field sets a filter within Business Central. If two entries have
+
+been created for Sales Header, for example, it is possible to restrict Document Type to use different
+
+configurations for orders and requests. Alternatively, you can also make the distinction in the path
+
+itself using Handlebars.
+
+This filter is used in the context of processing the job queue entry (Job option enabled) (not yet
+
+implemented).
+
+Alternative BC table (expert mode): Enter an alternative table here. A primary key must be used to
+
+establish a relation to the primary table. The classic case is the header table to line table relation,
+
+for example, Sales Header as the leading table and Sales Lines as the alternative table.
+
+Key field (expert mode): You can select one key field per BC table. The value of the key field is used
+
+to specify a property of the object that remains a unique identifier even when other data changes.
+
+For example, you can specify an ID that uniquely identifies an object. New versions of the object
+
+are created at the new location when moving the object instead of creating it (and therefore a
+
+duplicate) at the old location, for example.
+
+Assignment of user and group rights 
+
+This is where you assign user and group rights.
+
+Rights for users and groups
+
+Replace rights: ELO takes on the rights of the folder by default. If this option is enabled, the rights
+
+of the folder are discarded and only the set rights are assigned.
+
+Rights for users and groups: Enter the users or groups that you want to assign rights to here.
+
+37 ELO for Microsoft
+
+
+
+RWDELP: Use the check boxes to set the different permissions types for users or groups.
+
+R = View
+
+W = Change metadata
+
+D = Delete
+
+E = Edit
+
+L = Edit list
+
+P = Set permissions
+
+For more information, refer to the documentation Concept for assigning rights and permissions.
+
+Implementation example 'SalesHeader' 
+
+General settings
+
+Identifier: 1305
+
+Structure alias: SalesHeader
+
+Object description: printed sales orders
+
+Version comment: Sales Order Printed from MBC
+
+BC table: Sales Header
+
+Document form: MBC-PrintedOrder
+
+Print: O Event: X Post: X
+
+Manual: X Only one version: O Job: O
+
+Structure and metadata matching
+
+Identifier: 1305 (taken from General settings)
+
+Repository subpath:
+
+ELO field matching:
+
+BC field name: No.
+
+Field type: GRP
+
+ELO field: MBC_DOC_NO
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+/Printed/{{{DOCNO}}}
+
+• 
+
+• 
+
+• 
+
+38 ELO for Microsoft
+
+https://docs.elo.com/admin/config/en-us/user-management/concept-recommendations/
+https://docs.elo.com/admin/config/en-us/user-management/concept-recommendations/
+
+
+Value in Handlebars:
+
+Parameter in URL: DOCNO
+
+BC field name: Posting Date
+
+Field type: MAP
+
+ELO field: POSTING_DATE
+
+Value in Handlebars:
+
+Parameter in URL: POSTDATE
+
+BC field name: Document Type
+
+Field type: MAP
+
+ELO field: DOCTYPE
+
+Value in Handlebars:
+
+Parameter in URL: DOCTYPE
+
+BC field name: Line No.
+
+Field type: MAP
+
+ELO field: LINE_NO{i}
+
+Value in Handlebars:
+
+Parameter in URL: LINENO
+
+BC field name: Description
+
+Field type: MAP
+
+ELO field: LINE_DESC{i}
+
+Value in Handlebars:
+
+{{{DOCNO}}}
+
+• 
+
+• 
+
+• 
+
+• 
+
+{{{POSTDATE}}}
+
+• 
+
+• 
+
+• 
+
+• 
+
+{{{DOCTYPE}}}
+
+• 
+
+• 
+
+• 
+
+• 
+
+{{{LINENO{i}}}}
+
+• 
+
+• 
+
+• 
+
+• 
+
+39 ELO for Microsoft
+
+
+
+Parameter in URL: LINEDESC
+
+BC field name: Quantity
+
+Field type: MAP
+
+ELO field: LINE_QUAN{i}
+
+Value in Handlebars:
+
+Parameter in URL: LINEQUAN
+
+BC field name: Unit of Measure
+
+Field type: MAP
+
+ELO field: LINE_UNIT{i}
+
+Value in Handlebars:
+
+Parameter in URL: LINEUNIT
+
+BC field name: Unit Price
+
+Field type: MAP
+
+ELO field: LINE_PRICE{i}
+
+Value in Handlebars:
+
+Parameter in URL: LINEPRICE
+
+BC field name:
+
+Field type: GRP
+
+ELO field: MBC_KEY
+
+Value in Handlebars:
+
+{{{LINEDESC{i}}}}
+
+• 
+
+• 
+
+• 
+
+• 
+
+{{{LINEQUAN{i}}}}
+
+• 
+
+• 
+
+• 
+
+• 
+
+{{{LINEUNIT{i}}}}
+
+• 
+
+• 
+
+• 
+
+• 
+
+{{{LINEPRICE{i}}}}
+
+• 
+
+• 
+
+• 
+
+• 
+
+40 ELO for Microsoft
+
+
+
+Parameter in URL:
+
+(This field is a key field (expert mode)) 
+
+Working with multiple companies/databases 
+
+If you work with multiple clients/databases in Business Central, create a new client in the ELO
+
+Output Link for Business Central configuration.
+
+You can then configure the client as described.
+
+ORDER-{{{DOCNO}}}
+
+• 
+
+• 
+
+41 ELO for Microsoft
+
+
+
+Configuration in Business Central 
+
+Deployment in Business Central – on-premises 
+
+After you have completed the configuration in ELO, you need to install Business Central. You can do
+
+the installation at the same time as the configuration in ELO. However, you need a corresponding
+
+ELO configuration to be able to configure ELO Output Link for Business Central in Business Central.
+
+The required installation files for Business Central are part of the download package, which you will
+
+find in the ELO SupportWeb under Integration > MS Business Central.
+
+Start the Business Central Administration Shell and deploy the installation package for ELO
+
+Integration Service for Business Central. In the following example, the package was deployed using
+
+these commands:
+
+Publish-NAVApp
+
+Sync-NAVApp
+
+Implementation example:
+
+Information
+
+If you do not have a Microsoft PartnerSource Business Center account number, you must
+
+contact the customer, the Business Central implementation partner, or the issuer of the
+
+Business Central license.
+
+Setup and extensions in Business Central on-premises 
+
+After the deployment, log on in the Business Central system.
+
+Go to the Setup & Extensions menu, and select the Extensions menu item.
+
+After successful deployment, you can install the package.
+
+Click Show more options (button with three dots) and then select the Install menu item.
+
+• 
+
+• 
+
+Publish-NAVApp -Serverinstance BC160 -Path "ELO Digital Office GmbH_ELO Output Link for Business Central_16
+
+Sync-NAVApp -ServerInstance BC160 -Name 'ELO Output Link for Business Central' -Version 16.0.0.10
+
+1. 
+
+2. 
+
+3. 
+
+42 ELO for Microsoft
+
+
+
+The package will be installed and the entry will be marked as Installed.
+
+Please note
+
+Install ELO Integration Service for Business Central first, before ELO Output Link for
+
+Business Central.
+
+After the installation, log on to Business Central again.
+
+Deployment in Business Central – Cloud 
+
+Microsoft AppSource provides an ELO Output Link app for Business Central cloud systems.
+
+You can search for the app in AppSource via the search in Business Central. Please note that this
+
+requires administrator rights outside of Business Central.
+
+Open the Extensions Marketplace from the search.
+
+4. 
+
+1. 
+
+43 ELO for Microsoft
+
+
+
+Enter ELO Output Link in the search field and select the app shown.
+
+You will be forwarded to Microsoft AppSource and can download the app there.
+
+First, check and confirm your Microsoft profile information.
+
+2. 
+
+3. 
+
+44 ELO for Microsoft
+
+
+
+Select the language you want to install the extension in.4. 
+
+5. 
+
+45 ELO for Microsoft
+
+
+
+Begin installing the ELO Integration Service app on your Business Central Cloud system. In
+
+the next step, you can configure the extension outside of Business Central.
+
+Fix error while loading the configuration 
+
+After successful installation, attempting to load the configuration from ELO may result in an error. In
+
+this case, you will have to check the ELO Output Link extension settings and enable the function 
+
+Allow HttpClient Request.
+
+In Business Central, call the Extension Management function using the search.
+
+Search for ELO Output Link within the installed extensions and select the option Configure
+
+from the additional actions (button with three dots).
+
+1. 
+
+2. 
+
+46 ELO for Microsoft
+
+
+
+In the configuration area, enable Allow HttpClient Request.3. 
+
+47 ELO for Microsoft
+
+
+
+Update apps in Business Central – Cloud 
+
+To update the ELO app in Microsoft AppSource, perform the following steps:
+
+Log on to the Microsoft Dynamics 365 Business Central browser client.
+
+In the global search, enter Extension Management and select the corresponding link.
+
+Select the ELO app.
+
+1. 
+
+2. 
+
+3. 
+
+48 ELO for Microsoft
+
+
+
+The Uninstall Extension dialog box opens.
+
+Select Uninstall.
+
+Switch to the Microsoft Dynamics 365 Business Central AppSource and install the app again.
+
+Configuration of 'ELO Setup' in Business Central 
+
+Once you have completed the installation and logged on again, you can search for the ELO Setup
+
+configuration and click the entry to open it.
+
+4. 
+
+5. 
+
+49 ELO for Microsoft
+
+
+
+The General, Integration Service, and Debugging configuration areas are described in the
+
+documentation for the ELO Integration Service for Business Central.
+
+Please note
+
+To be able to load the configuration and connect ELO to your Business Central Cloud system
+
+later, the two systems have to be able to communicate. Either your ELO system or at least
+
+the Indexserver URL used must be able to be reached externally, or you can configure an
+
+alternative, such as a Microsoft Application Proxy. In any case, your Business Central System
+
+will have to be able to reach the ELO system directly.
+
+ELO Setup – Output Link 
+
+In the next step, you need to create the ELO Output Link for Business Central configuration.
+
+The Configuration path field is usually already completed. If you want to use a different
+
+configuration in ELO, you can modify the configuration path. The configuration path in our example
+
+is as follows:
+
+/erp.mbc.outputlink/Configuration/outputlink.config
+
+50 ELO for Microsoft
+
+
+
+The Configuration entry field can be left blank if there is only one configuration entry in the 
+
+outputlink.config file in ELO. In our example, Business Central uses this one configuration entry.
+
+If multiple Business Central systems are connected, the corresponding ELO configuration can be
+
+assigned via this configuration entry.
+
+Load configuration
+
+After you have created or checked the configuration path and, where applicable, specified a
+
+configuration entry, you can import the ELO Output Link for Business Central configuration from the
+
+ELO system to Business Central using the Actions menu item Load Output Link config. You must
+
+have already completed the configuration in the ELO system (see chapter Configuring ELO Output
+
+Link for Business Central).
+
+Information
+
+Business Central stores the configuration in the cache at this point, so you need to load the
+
+configuration initially as well as when adjusting the configuration in ELO.
+
+If Business Central successfully loaded the configuration, you will see a success message.
+
+Last import
+
+This menu item tells you when the configuration was last uploaded from the ELO system.
+
+Enable
+
+This function allows you to enable or disable ELO Output Link for Business Central.
+
+51 ELO for Microsoft
+
+
+
+ELO Setup – Check configuration 
+
+Under the menu item Integration Service configuration (Integr. Serv. config.), you can view and
+
+check the configured entries in ELO.
+
+General 
+
+Among other things, Business Central differentiates between two types of document reports:
+
+reports in RDLC format (Report Definition Language, identifier beginning with 2xx for sales and 4xx
+
+for purchasing scenarios, for example) and Word report layout (beginning with 130* for sales and
+
+132* for purchasing). This has to be taken into consideration depending on the customer system
+
+during creation. To find a used report ID within a Business Central object (for example a sales
+
+order), the ID can be shown via page validation (keyboard shortcut: CTRL + ALT + F1) in the
+
+corresponding report.
+
+Information
+
+In Business Central, the term Report is also used for certain external documents such as
+
+sales invoices and order confirmations, which you send to customers as PDF files.
+
+Source: Documentation for Microsoft Dynamics 365
+
+For document reports, the ID can be analyzed via the Report Selection menu.
+
+52 ELO for Microsoft
+
+https://learn.microsoft.com/en-us/dynamics365/business-central/ui-manage-report-layouts
+https://learn.microsoft.com/en-us/dynamics365/business-central/ui-manage-report-layouts
+
+
+Via Report Selection – Sales you can view the reports selected: in this example, report ID 1307 –
+
+Sales - Credit Memo (in RDLC format) for a credit. 
+
+The report ID can now be applied to the Output Link configuration.
+
+More information is available from the manufacturer (see source in the info box).
+
+Information
+
+In a customer production system, you may encounter customized reports that you will have
+
+to configure as identifiers within ELO.
+
+53 ELO for Microsoft
+
+
+
+Job queue 
+
+Within Business Central, you can use job queues to define static automated processes. These allow
+
+you to perform activities within the system without requiring an action. Job queues do not react to
+
+conditions within the system, but are instead automatically performed by the system itself based
+
+on a defined pattern. For example, job queues can be used to automatically repeat any failed
+
+transfers, for example when invoices aren't filed to ELO when printed because the server could not
+
+be reached. Job queues can also be used to transfer documents that already exist to the ELO
+
+system when introducing ELO at a company.
+
+Please note
+
+To use the job queue function, the Job box must be checked for the corresponding reports in
+
+the ELO configuration.
+
+Configuration in ELO 
+
+To file the generated reports/documents in ELO, you will have to define multiple steps. First, you
+
+have to define a field in the Output Link configuration where you can filter the date range for the
+
+reports, for example. In our example, we use the field POSTING_DATE from Business Central for 
+
+Sales invoice – report ID 1306.
+
+The value $Job_Range$ also has to be entered in the Filter field in the Output Link configuration.
+
+Information
+
+After saving the configuration, remember to reload the scripts in ELO and to read the
+
+configuration back into Business Central.
+
+Additional filters applying to fixed values can also be defined, for example if you want to select
+
+explicit reports. In the Filter field, enter the value of the corresponding DocType, for instance. You
+
+can also enter an explicit date to the Filter field. In this case, only postings/reports on this day are
+
+considered.
+
+Configuration in Business Central 
+
+Open the Job Queue Entries list in Business Central and create a new report. In the General area,
+
+enable the Show more function and enter the required configurations.
+
+54 ELO for Microsoft
+
+
+
+Object Type to Run: CodeUnit
+
+Object ID to Run: 70670677 (elo-ol-batchjobs)
+
+Parameter String: 1 (as an example for 1 day back)
+
+If you only want to run the report once, you can do so via Menu > Job > Restart. Once this is
+
+executed, the created report is removed.
+
+To configure repeats for this report, you can configure this job with the desired parameters in the 
+
+Repeat area. You can check via the Job queue log entries whether they are being run.
+
+55 ELO for Microsoft
+
+
+	Table of contents
+	ELO Integration Service for Business Central
+	Introduction
+	ELO basics
+	Business Central – On-Premises basics
+	ELO Integration Client integration points
+
+	Configuration in ELO
+	'elo.integration.client' configuration file
+	Configuring ELO Integration Service for Business Central
+	Basic settings
+	General settings
+	Structure and metadata matching
+	Implementation example 'SalesHeader'
+
+	Assignment of templates, user and group rights
+	Working with multiple companies/databases
+
+	Configuration in Business Central
+	Deployment in Business Central – on-premises
+	Setup and extensions in Business Central on-premises
+	Deployment in Business Central – Cloud
+	Fix error while loading the configuration
+	Update apps in Business Central – Cloud
+
+	Configuration of 'ELO Setup' in Business Central
+	ELO Setup – General
+	ELO Setup – Integration Service
+	ELO Setup – Check configuration
+	ELO Setup – Debugging
+
+
+
+	ELO Output Link for Business Central
+	Introduction
+	ELO basics
+	Microsoft Dynamics 365 Business Central – on-premises basics
+	Microsoft Dynamics 365 Business Central – Cloud basics
+	Output Link integration points
+
+	Configuration in ELO
+	Configuring ELO Output Link for Business Central
+	Add client/company
+	General settings
+	Structure and metadata matching
+	Assignment of user and group rights
+	Implementation example 'SalesHeader'
+	Working with multiple companies/databases
+
+	Configuration in Business Central
+	Deployment in Business Central – on-premises
+	Setup and extensions in Business Central on-premises
+	Deployment in Business Central – Cloud
+	Fix error while loading the configuration
+	Update apps in Business Central – Cloud
+
+	Configuration of 'ELO Setup' in Business Central
+	ELO Setup – Output Link
+	ELO Setup – Check configuration
+
+	General
+	Job queue
+	Configuration in ELO
+	Configuration in Business Central
+
+
+
+

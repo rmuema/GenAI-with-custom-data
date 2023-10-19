@@ -1,0 +1,630 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Business Solution ELO Visitor | Basics
+
+
+Business Solution ELO
+
+Visitor
+
+Basics
+
+
+
+3
+
+3
+
+5
+
+11
+
+Table of contents
+
+Basics
+
+Roles and groups 
+
+Version history and dependencies 
+
+Glossary and abbreviations 
+
+2 Business Solution ELO Visitor
+
+
+
+Basics
+
+Roles and groups 
+
+User roles 
+
+User roles control the availability of actions in visitor management. The corresponding functions
+
+are available on the ribbon to users in this group.
+
+Front desk staff: sol.visitor.roles.Reception 
+
+Front desk staff has access to all visitor management actions. They can register and check in
+
+visitors and groups, and have access to report functions.
+
+Involved employees: sol.visitor.roles.Employees 
+
+Company employees can be granted the right to pre-register visitors and visitor groups. Users in
+
+this ELO group (role) are given access to pre-registration actions.
+
+Self-service: sol.visitor.roles.SelfService 
+
+Individual company employees can be granted the right to use self-services. This refers to the
+
+actions Self check-in and Self check-out.
+
+Configuration: sol.visitor.roles.Administration 
+
+Individual company employees can be given the right to edit the contract management
+
+configuration. This applies to the custom configuration under //Administration//Business Solutions
+
+Custom//visitor//Configuration as well as the configuration interface in the ELO Administration
+
+Console.
+
+Groups and permissions 
+
+The standard version of the ELO visitor management solution features a number of groups that are
+
+used for selection lists and permissions concepts.
+
+Locations/branches: sol.visitor.Locations 
+
+A user group that contains the branches for visitor management. A branch should be represented
+
+by a group whose members are all people with the corresponding rights.
+
+You will find more information on the permissions of individual locations or branches in the
+
+chapters Branches and Permissions to visitors and groups.
+
+3 Business Solution ELO Visitor
+
+
+
+Welcome screens: sol.visitorWelcomeScreens 
+
+Welcome screens require access to visitor data to be able to display it. A group containing the
+
+users that can check in at the screen should be created for each screen.
+
+Information
+
+By default, a new account named Welcome Screen is created and assigned to this group.
+
+The account password should be changed after installation.
+
+For more information, refer to the chapter Welcome screen.
+
+Signature devices: sol.visitor.SignatureDevice 
+
+Signature devices require access to visitor data to be able to edit visitor documents.
+
+Each signature device requires a separate ELO account. This account can be selected when
+
+requesting a signature. A signature request is then submitted to this account.
+
+Information
+
+By default, a new account named Signature Device is created and assigned to this group.
+
+The account password should be changed after installation.
+
+For more information, refer to the Request signature and Sign documents chapters.
+
+Security check: sol.visitor.roles.Security 
+
+In security-critical areas, you may have to perform a security check. Members of this group belong
+
+to the internal security department.
+
+For more information, refer to the Security check – basics chapter.
+
+General information/procedure for updates 
+
+Single actions can be enabled individually for users and groups. For this, individual rights have to
+
+be assigned for the corresponding action configuration (definition). When updating to a new
+
+version, these rights are reset since they are contained in the base package.
+
+The default groups above are created during installation. It is therefore recommended not to
+
+rename or delete the groups. If the standardized naming of these groups presents an issue, you can
+
+remove the Visible in user lists flag for them.
+
+4 Business Solution ELO Visitor
+
+
+
+Version history and dependencies 
+
+Refer to the official version history for more information. You will find it on the ELO SupportWeb as
+
+well as in the corresponding packages.
+
+Version 1.06.004 
+
+The Common version 1.15.000 includes an important AngularJS security update, which affects all
+
+AngularJS-based apps as well as most app modules. The apps that come with this version of ELO
+
+Visitor have been modified accordingly.
+
+The following ELOwf versions are required for use with Common 1.15.000:
+
+ELO 12: Version 12.09.000 and higher
+
+ELO 20: Version 20.09.002 and higher
+
+ELO 21: Version 21.02.004 and higher
+
+For more information, refer to the Information regarding update to version 1.15.000 part of the
+
+Common documentation.
+
+ELO Visitor 1.06.004 has been tested with the following ELO components. Before you start
+
+installation, make sure that all components have been updated to at least the following versions.
+
+Component ELO 12 ELO 20 ELO 21
+
+ELOix 12.04.000.6309 20.06.002 21.02.003
+
+ELO Java Client 12.04.002.179 20.09.001 21.02.002
+
+ELO Web Client 12.01.000.378 20.09.000 21.02.001
+
+ELOwf 12.09.000 20.09.002 21.02.004
+
+ELOas 12.01.000.013 20.02.018 21.02.006
+
+Please note
+
+To prevent issues with ELO apps, the 64-bit ELO Java Client should be used.
+
+Dependencies/minimum requirements for ELO Business Solutions packages 
+
+Package Version
+
+common 1.15.000
+
+common_document 1.15.000
+
+common_monitoring 1.15.000
+
+common_signature 1.15.000
+
+contact 1.09.004
+
+• 
+
+• 
+
+• 
+
+5 Business Solution ELO Visitor
+
+https://supportweb.elo.com/proxy/solutions/common_1.17.001/docs_en/index.html#!/guide/pB2C95215_99EF_44C7_9D4F_E844332A73F2
+https://supportweb.elo.com/proxy/solutions/common_1.17.001/docs_en/index.html#!/guide/pB2C95215_99EF_44C7_9D4F_E844332A73F2
+
+
+Version 1.06.000 
+
+This update adds the following important functions to ELO Visitor:
+
+Handling of visitor lists for contact tracing
+
+Employee self check-in and check-out (non-contact via long-term badges or completely
+
+digitally with new self-service functions)
+
+Completing and confirming surveys
+
+Data protection
+
+Major new features 
+
+Area Description
+
+Visit data New fields Precise location and ELO user name
+
+Visitor
+
+category
+New Employee category as standard
+
+Long-term
+
+badge
+
+Automatic creation of a badge document (PDF) when creating a new long-term
+
+badge is now optional. At the same time, it is also possible to create this
+
+document at any time later on.
+
+Visitor list
+Upstream dialog box with filter options for creating custom visitor lists. The
+
+primary focus is contact tracing within a specific period.
+
+Self-service
+
+The new functions Self check-in and Self check-out enable ELO users to check
+
+themselves in and out. The ELO user name has to be associated with the long-
+
+term badge for this.
+
+Launchpad The new self-services are now also available as a launchpad tile.
+
+Welcome
+
+screen
+Check-in via barcode is now also supported in the welcome app.
+
+Sign
+
+documents
+
+The mechanism for signing documents has been extended. Additional fields are
+
+now offered besides the signature field. In the standard solution, this takes the
+
+form of a health survey. This template can be extended and used for other
+
+purposes as well.
+
+Data privacy
+
+fields
+
+The fields Personal identifier and End of deletion period can now be completed
+
+automatically. Targeted deletion rules are defined for this reason.
+
+E-mail
+
+notifications
+Optionally, visitors can receive an e-mail invitation when pre-registered.
+
+Contact
+
+management
+
+The new ELO user name field is also synchronized with ELO Contact. Please make
+
+sure that Contact is also up-to-date.
+
+Information
+
+The filing path for visitor lists is now in a new location in the configuration and may have to
+
+be updated again.
+
+• 
+
+• 
+
+• 
+
+• 
+
+6 Business Solution ELO Visitor
+
+
+
+Please note
+
+The period of validity for a long-term badge includes the specified end date with version
+
+1.06.000. In earlier versions, the period of validity excluded the specified end date.
+
+Version 1.05.000 
+
+ELO Visitor 1.05.000 has been tested with the following ELO components. Before you start
+
+installation, make sure that all components have been updated to at least the following versions:
+
+Component ELO 11 ELO 12 ELO 20
+
+ELOix 11.05.000.2293 12.04.000.6309 20.00.000
+
+ELO Java Client 11.09.000.140 12.04.002.179 20.00.001.94
+
+ELO Web Client 11.07.000 12.01.000.378 20.00.006 Build 395
+
+ELOwf 11.00.000 12.01.002.377 20.00.005
+
+ELOas 11.00.002 12.01.000.013 20.00.000 Build 011
+
+Information
+
+Whenever possible, ELO Business Solutions are developed to be backward compatible. The
+
+solution may work in older versions of the program, but as no testing is performed,
+
+functionality cannot be guaranteed.
+
+Please note
+
+To prevent issues with ELO apps, the 64-bit ELO Java Client should be used.
+
+Dependencies/minimum requirements for ELO Business Solutions packages 
+
+Package Version
+
+common 1.09.000
+
+common_document 1.09.000
+
+common_monitoring 1.09.000
+
+common_signature 1.09.000
+
+contact 1.09.000
+
+The visitor management configuration has been completely revised and from ELO 12 it is located in
+
+the ELO Administration Console; for ELO 10 and 11, it is available to administrators as a tile in the
+
+client. Starting with this version, settings no longer have to be made in the custom package in the
+
+repository.
+
+7 Business Solution ELO Visitor
+
+
+
+8 Business Solution ELO Visitor
+
+
+
+Version 1.03.000 
+
+The following ELO components must be installed as a minimum requirement for ELO Visitor
+
+1.03.000. Before you start installation, make sure that all components have been updated to at
+
+least the following versions:
+
+Component ELO 10
+
+ELOix 10.17.61
+
+ELO Java Client 10.01.005 64-bit
+
+ELO Web Client 10.01.005
+
+ELOwf 10.01.006
+
+ELOas 10.01.000
+
+Please note
+
+To prevent issues with ELO apps, the 64-bit ELO Java Client should be used.
+
+Dependencies/minimum requirements for ELO Business Solutions packages 
+
+Package Version
+
+common 1.03.006
+
+common_document 1.03.006
+
+common_monitoring 1.03.006
+
+common_signature 1.03.006
+
+contact 1.03.000
+
+Version 1.02.002 
+
+Version 1.02.002 contains several improvements and bug fixes.
+
+Dependencies/minimum requirements for ELO Business Solutions packages 
+
+Package Version
+
+common 1.02.002
+
+common_monitoring 1.02.002
+
+common_signature 1.02.002
+
+contact 1.02.002
+
+We recommend using ELO 10.02.000 einzusetzen, as ELO 10.02.000 and ELO Web Client 9.03.002
+
+feature improved stability and performance.
+
+9 Business Solution ELO Visitor
+
+
+
+Version 1.02.000 
+
+The following ELO components must be installed as a minimum requirement for ELO Visitor
+
+1.02.000. Before you start installation, make sure that all components have been updated to at
+
+least the following versions:
+
+We recommend using ELO 10.01 components since this version contains improvements to the
+
+updateability of ELOwf forms.
+
+Please note
+
+To prevent issues with ELO apps, the 64-bit ELO Java Client should be used.
+
+Component ELO 9 ELO 10
+
+ELOix 9.16.110 10.00.011
+
+ELO Java Client 9.03.018 64-bit 10.00.010 64-bit
+
+ELO Web Client 9.03.002 10.00.002
+
+ELOwf 9.03.002 10.00.002
+
+ELOas 9.03.006 10.00.002
+
+Dependencies/minimum requirements for ELO Business Solutions packages 
+
+Package Version
+
+common 1.02.000
+
+common_monitoring 1.02.000
+
+common_signature 1.02.000
+
+contact 1.02.000
+
+The following modules require licenses:
+
+Business Solution ELO Visitor• 
+
+10 Business Solution ELO Visitor
+
+
+
+Glossary and abbreviations 
+
+Glossary 
+
+Term Description
+
+ARCPATH
+
+The filing path of an object in ELO.
+
+Example: All new visitor registrations are filed in a separate folder structure.
+
+ARCPATH: /Visitors/All Visitors
+
+Form
+
+module
+
+ELO Visitor provides forms for capturing data. These consist of modules that include
+
+information on different aspects of visitor registration and are merged into forms using
+
+tab groups.
+
+Example: Form component 02 contains all the information relevant to the visit date.
+
+GUID
+
+A unique reference number generated automatically when filing an object in ELO
+
+(Globally Unique IDentifier). GUIDs are normally displayed in an 8-4-4-4-12 format
+
+(XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX), where each X stands for a character
+
+from the hexadecimal system and can therefore be a number from 0 to 9 or a letter
+
+from A to F.
+
+SORD An entry in ELO. This can either be a document or a folder.
+
+Abbreviations 
+
+Abbreviation Term
+
+ELOas ELO Automation Services
+
+ELO Visitor Business Solution ELO Visitor
+
+ELOix ELO Indexserver
+
+JS JavaScript
+
+11 Business Solution ELO Visitor
+
+
+	Table of contents
+	Basics
+	Roles and groups
+	User roles
+	Front desk staff: sol.visitor.roles.Reception
+	Involved employees: sol.visitor.roles.Employees
+	Self-service: sol.visitor.roles.SelfService
+	Configuration: sol.visitor.roles.Administration
+
+	Groups and permissions
+	Locations/branches: sol.visitor.Locations
+	Welcome screens: sol.visitorWelcomeScreens
+	Signature devices: sol.visitor.SignatureDevice
+	Security check: sol.visitor.roles.Security
+
+	General information/procedure for updates
+
+	Version history and dependencies
+	Version 1.06.004
+	Dependencies/minimum requirements for ELO Business Solutions packages
+
+	Version 1.06.000
+	Major new features
+
+	Version 1.05.000
+	Dependencies/minimum requirements for ELO Business Solutions packages
+
+	Version 1.03.000
+	Dependencies/minimum requirements for ELO Business Solutions packages
+
+	Version 1.02.002
+	Dependencies/minimum requirements for ELO Business Solutions packages
+
+	Version 1.02.000
+	Dependencies/minimum requirements for ELO Business Solutions packages
+
+
+	Glossary and abbreviations
+	Glossary
+	Abbreviations
+
+
+

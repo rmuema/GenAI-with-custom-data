@@ -1,0 +1,969 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®) | ELO Workflow Client for SAP® ERP
+
+
+ELO Suite for SAP
+
+ArchiveLink® (SAP
+
+NetWeaver® & SAP S/
+
+4HANA®)
+
+ELO Workflow Client for SAP® ERP
+
+
+
+3
+
+3
+
+4
+
+7
+
+8
+
+17
+
+Table of contents
+
+ELO Workflow Client for SAP® ERP
+
+Introduction 
+
+Installation 
+
+Configuration 
+
+Administration area 
+
+Using the client 
+
+2 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+ELO Workflow Client for SAP® ERP
+
+Introduction 
+
+This documentation describes how to install and configure the ELO Workflow Client for SAP® ERP.
+
+This client enables SAP users to participate in ELO workflows within the SAP system. Fully
+
+integrated into the SAP system, the client enables users to process all steps of a workflow and is
+
+completely integrated into the SAP front end.
+
+In detail, it contains the following functions:
+
+Accept/delete workflow
+
+Delegate/hand off/return/postpone workflow
+
+Structure and document preview, workflow form view, and document feed
+
+Security and licensing requirements 
+
+When using the ELO Workflow Client for SAP® ERP, the systems must be licensed properly. The
+
+user must be licensed in the SAP system and the ELO system. In case of doubt, clear this up with
+
+SAP and/or your system specialist. ELO is not liable for any license violations.
+
+Basics 
+
+To use the ELO Workflow Clients for SAP® ERP, your computer must meet the following system
+
+requirements and release statuses of ELO and SAP:
+
+ELOprofessional or ELOenterprise 20.00.000 or higher
+
+The following SAP versions or higher: 
+
+SAP_BASIS 702 SAPKB70213
+
+SAP_BASIS 730 SAPKB73009
+
+SAP_BASIS 731 SAPKB73106
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+◦ 
+
+◦ 
+
+◦ 
+
+3 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Installation 
+
+A license for the ELO Workflow Client for SAP® ERP includes functions for processing ELO
+
+workflows in the SAP GUI. This enables SAP users to participate in ELO workflows without having to
+
+change programs. The client contains an SAP transport that has to be imported to the SAP target
+
+system.
+
+You will find the current installation files on the ELO SupportWeb in the following area:
+
+Integration > SAP® ERP > ELO Suite for SAP ArchiveLink® > ELO Workflow Client for SAP® ERP.
+
+SAP function module 
+
+Inform your customer or the SAP partner about the SAP transport to be installed and provide it to
+
+them.
+
+The current SAP transport is available on the ELO SupportWeb.
+
+Information
+
+Inform your customers or SAP partner of the following:
+
+The standard SAP transport routes must be used.
+
+All developments and functions within the transport in ELO were developed in a
+
+separate SAP namespace, called /ELO/.
+
+You may have to enable the Ignore Invalid Component Version option when importing the
+
+SAP transport.
+
+It is also possible that you will encounter warnings when importing the transport due to
+
+different release statuses (return code 8), which can be ignored.
+
+Once an SAP transport has successfully been transported to the SAP systems, you can provide your
+
+customer/the SAP partner with the technical description for the /ELO/WF_CLIENT transaction.
+
+Configuring permissions 
+
+To use the client, permissions are required for all users in the SAP system. The following table
+
+provides a list of all permissions required in the SAP system.
+
+Permissions object Field name Value
+
+S_TCODE TCD /ELO/WF_CLIENT
+
+--- --- ---
+
+S_ADMI_FCD S_ADMI_FCD ST0M
+
+S_RFC_ADM ACTVT 3
+
+S_RFC_ADM RFCTYPE
+
+• 
+
+• 
+
+4 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+https://supportweb.elo.com/en-us/competence-center-erp/competence-center-sap/elo-suite-for-sap-archivelink/elo-workflow-client-for-sapr-erp.html
+https://supportweb.elo.com/en-us/competence-center-erp/competence-center-sap/elo-suite-for-sap-archivelink/elo-workflow-client-for-sapr-erp.html
+
+
+Permissions object Field name Value
+
+S_RFC_ADM RFCDEST *<name ihrer="" destination="">
+
+S_RFC_ADM ICF_VALUE
+
+S_ALV_LAYO ACTVT 23
+
+S_GUI ACTVT 61
+
+P_RUNTIME P_APP_ID /ELO/WF_CLIENT
+
+P_RUNTIME P_ACTVT_FW 1
+
+P_RUNTIME P_ACTVT_RT 1
+
+P_RUNTIME P_ACTVT_RT 2
+
+P_RUNTIME P_ACTVT_RT 3
+
+P_RUNTIME P_ACTVT_RT 4
+
+P_RUNTIME P_ACTVT_RT 5
+
+P_RUNTIME P_ACTVT_RT 6
+
+P_RUNTIME P_ACTVT_RT 7
+
+* Enter the name(s) of your configured destination(s) here. You will learn more about configuring
+
+the destination in the next chapter.
+
+Configuring a destination 
+
+Fig.: 'Technical Settings' tab
+
+1. 
+
+5 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+To ensure access from the SAP system to the ELO Indexserver, you will have to configure an 
+
+HTTP connection to an external server in transaction SM59.
+
+In the Technical Settings tab, enter your connection data for the ELO Indexserver.
+
+Fig.: 'Logon & Security' tab
+
+Use the Basic Authentication method in the Logon & Security tab and enter the logon
+
+information for an administrative ELO user.
+
+2. 
+
+3. 
+
+6 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Configuration 
+
+To install the interface, go to the ELO SupportWeb and download the current version of the
+
+ELO Workflow Client for SAP® ERP to the ELO server, then extract the files to a temporary
+
+folder.
+
+Your directory will now contain the transport files for your SAP system.
+
+First, you have to upload them to your SAP system (transaction CG3Z).
+
+Please note
+
+The files have to be stored in the correct folders so that they can be transferred to the
+
+transport chain (transaction STMS) manually later on.
+
+cofiles file (K*) in the cofiles folder (/usr/sap/trans/cofiles)
+
+data file (R*) in the data folder (/usr/sap/trans/data).
+
+Information
+
+The path to the cofiles file and data file may have been custom-configured depending on the
+
+system. For this reason, first check which directory is specified under DIR_TRANS
+
+(transaction: AL11).
+
+1. 
+
+2. 
+
+• 
+
+• 
+
+7 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Administration area 
+
+Before you can use the client, you will have to configure some settings, which you can open in
+
+transaction /n/ELO/WF_ADMIN. The following explains all these settings.
+
+Repository settings 
+
+In the repository settings, you configure the ELO repositories you want to be available for the client.
+
+Fig.: Configure repository, insert line
+
+To configure a repository, click Insert line.
+
+Fig.: Configure repository, edit line
+
+Another line appears. The ID is incremented automatically and cannot be edited.
+
+Enter a name here. The user will see the repository under this name in the ELO Workflow
+
+Client for SAP® ERP.
+
+1. 
+
+2. 
+
+8 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Fig.: Configure repository, Logon type
+
+Confirm N/A in the Logon Type column.
+
+The client offers two options for configuring a connection to a repository.
+
+Select RFC Destination and enter the name of your configured RFC destination here. The
+
+chapter Configuring a destination explains how to configure an RFC destination.
+
+Alternative: Instead of an RFC destination, you can also define settings for a connection here.
+
+Select Manual HTTP server.
+
+The following parameters must be completed:
+
+Host: Name of the DNS or IP address of the target system
+
+Port: Target system port
+
+Path: Path to the ELOix web app component; /ix-<Repository>/
+
+User: User name for connecting to the ELO system
+
+Password: Password of the specified user. This is saved by ELO encrypted if all logon
+
+data was correct. If this is not the case, the password is temporarily saved in SAP
+
+unencrypted.
+
+Computer name: Shown under the active sessions in the ELOix.
+
+3. 
+
+4. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+9 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+SSL certificate: Required if SSL is set to active
+
+Proxy Host: DNS or IP address of the proxy host
+
+PROXY SERVICE: Service name of the proxy service
+
+Fig.: Configure repository, user mapping
+
+Select N/A in the User mapping column.
+
+There are three options for creating a reference between SAP users and ELO users.
+
+ELO field: The ELO field can be set from 1 to 5. These are property fields, which you can
+
+access in the User manager of the ELO Administration Console for the respective users.
+
+Under the ELO user, enter the name of the associated SAP user in the property field.
+
+SAP table: Maintain the supplied table /ELO/WF_MAPPING.
+
+Identical: If the ELO user name and SAP user name are always identical in your system
+
+landscape, select Identical.
+
+User settings 
+
+All users that have ever logged on to the ELO Workflow Client for SAP® ERP are listed here.
+
+Fig.: User settings
+
+◦ 
+
+◦ 
+
+5. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+10 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+You can reset the layout by clicking Delete layout in the line for the corresponding user. The layout
+
+is the user's personalized settings for the graphical interface.
+
+The Repository column indicates which repository the user logs onto automatically on logon. You
+
+can manually change the repository here by selecting the table field and pressing the F4 key. The
+
+list is made up of the configured repositories, see the chapter Repository settings.
+
+Active sessions 
+
+You can get an overview of all active sessions and manually end them here.
+
+Fig.: Manage active sessions
+
+Select the row and click Delete Row.
+
+Event settings 
+
+The client can respond to special events and run functions according to the configuration. In the
+
+ELO forms, a special event embedded in HTML (beginning with sapevent:) has to be implemented.
+
+This allows you to book a posting document "online" from an ELO form (opened in the ELO
+
+Workflow Client for SAP® ERP) in the SAP ERP via batch input, for example.
+
+Fig.: Event settings
+
+For example, if the sapevent: FI_POST is thrown, the method FI_POST of the class /ELO/
+
+CL_WF_C_HTTP_EVENTS is called.
+
+Notification settings 
+
+So that ELO Workflow Clients for SAP® ERP users are informed of the tasks assigned to them, you
+
+can configure notification settings here.
+
+These are read and applied by the supplied report /ELO/WF_NOTIFY. We recommend planning the
+
+report as a job so that it's started periodically and the user is kept informed.
+
+1. 
+
+11 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Fig.: Add message
+
+To add a notification template, click Insert line.
+
+Another line appears. The ID is incremented automatically and cannot be edited.
+
+Enter a name for your message here.
+
+Click the Subject field.
+
+A screen opens where you can enter the message. The placeholders in the following table are
+
+intended for the subject and the actual message field.
+
+When used, these placeholders are automatically replaced with information from ELO.
+
+&ITEM_LINK Link to the workflow in the ELO Workflow Client for SAP® ERP
+
+&ITEM Workflow/task item number
+
+&NODE Workflow/task node number
+
+&NAME Name of the workflow/task
+
+&KIND Type (reminder/task/etc.)
+
+&NODENAME Workflow/task node name
+
+1. 
+
+2. 
+
+3. 
+
+12 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Fig.: Report /ELO/WF_NOTIFY
+
+The /ELO/WF_NOTIFY report can then be set.
+
+Repository Repository checked for messages
+
+User User notifications whose notifications should be sent
+
+Message Message ID; indicates the text to be sent
+
+incl. attachment (SAP
+
+file)
+Include SAP shortcut file
+
+Sender
+Sender the notification will be sent as. The user requires the
+
+relevant permissions.
+
+Test (do not send) No message is sent.
+
+Fig.: Display log
+
+The log of sent messages can be viewed via transaction SLG1.
+
+Use the following object /ELO/LOG
+
+Child object: ELO/WF_NOTIFY
+
+4. 
+
+5. 
+
+◦ 
+
+◦ 
+
+13 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Transport 
+
+Fig.: Transport
+
+This setting is only available if you have enabled the advanced settings, see the Advanced
+
+settings. With this function, you can write all relevant settings as a transport order.
+
+Advanced settings 
+
+Fig.: Advanced settings, Transport settings
+
+14 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+The option under Transport settings allows you to enable or disable the transport function. Check
+
+this box accordingly. This option applies to the interface immediately.
+
+Fig.: Advanced settings, Logging
+
+You can also enable app logging here. Four log levels are available.
+
+Please note: A great deal of information is logged. This function should only be
+
+enabled if necessary and old log entries should be deleted in regular cycles.
+
+15 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Fig.: Advanced settings, Reset notifications
+
+To delete the history of sent notifications, click Reset notification within this function group.
+
+16 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Using the client 
+
+To start the ELO Workflow Client for SAP® ERP, use transaction /n/ELO/WF_CLIENT.
+
+Logon takes place automatically based on the settings in the administrative area.
+
+Overview 
+
+After logon, the client starts with the following overview:
+
+Fig.: ELO Workflow Client for SAP® ERP overview
+
+1 Ribbon: The selected area is only available for settings in the ELO Workflow Client for SAP® ERP.
+
+The area that is left out contains the standard SAP menu navigation.
+
+Settings:
+
+Change repository:
+
+• 
+
+• 
+
+17 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Fig.: Settings: Change repository
+
+Switch between configured repositories.
+
+Set notifications:
+
+Fig.: Notification settings
+
+Set whether, how, and for which types you want to receive notifications. The Show tasks that
+
+are X days in the future setting controls whether you want to see future tasks on start-up.
+
+View:
+
+• 
+
+• 
+
+• 
+
+18 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Toggle list: Two layouts are available. With this option, you switch between the two of them.
+
+Reset layout: Reset the client to the default layout setting.
+
+Show additional columns: Show additional columns that are hidden by default. This includes 
+
+ID, Node ID, and Type.
+
+Hide additional columns: Hide the additional columns again.
+
+Info:
+
+About: Provides information on the product. You will find all the information regarding the
+
+version in use for possible support cases.
+
+2 Toolbar: This bar provides functions for the selected task/reminder and is explained in more detail
+
+in the chapter Toolbar.
+
+3 Tasks and reminder overview: This area contains an overview of your workflows and reminders.
+
+The functions on the toolbar are used for editing workflows and reminders. You can access all
+
+functions from the toolbar via the context menu (right-click). This tab contains options for editing
+
+workflows, and provides an overview of your existing tasks. The tasks are sorted according to their
+
+priority: 0 (high), 1 (medium), and 2 (low). Overdue tasks are denoted with a red icon with a white
+
+exclamation mark. You can create additional views for the Tasks work area. With the filter function,
+
+you can show a part of the tasks in each of the views. You can define different views so that you
+
+are only shown reminders or workflows, for example.
+
+4 Form: In the form area, you will see the form provided by ELOwf for the task. To view the
+
+document linked to the workflow, select the Preview tab. If the workflow is linked to a folder, you
+
+will see a tree view with all the linked child elements. Double-click the file to display or download
+
+it.
+
+5 Feed: The feed is used to share information on an entry in ELO (document or folder) and track
+
+changes. New feed posts are denoted with a green dot. The feed presents the history of the
+
+selected task/reminder.
+
+6 ALV toolbar: The ALV toolbar offers the standard SAP functions belonging to what is referred to as
+
+the ALV grid and are described in the documentation for the SAP client. All functions deviating from
+
+the standard in this area are explained in the chapter ALV toolbar.
+
+7 Repository: The name of the repository the user is logged onto.
+
+Toolbar 
+
+The buttons shown on the toolbar depend on the selected task/reminder.
+
+Fig.: Toolbar
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+19 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Refresh 
+
+Fig.: Refresh
+
+Click the Refresh button or use the keyboard combination CTRL + F5 to refresh your client and your
+
+tasks/reminder view.
+
+Accept workflow 
+
+Fig.: Accept workflow
+
+Can also be called via the context menu or by pressing F2.
+
+Use this function to accept a workflow node that was assigned to a group. You will be entered as
+
+the user in the workflow node. The workflow is no longer displayed in the work areas of the other
+
+group members.
+
+Use the Return workflow function to undo this action.
+
+Delete 
+
+Fig.: Delete
+
+Can also be called via the context menu or by using the keyboard shortcut SHIFT + F9.
+
+Forward workflow 
+
+Fig.: Forward workflow
+
+Can also be called via the context menu or by pressing F5.
+
+20 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Use this function to forward the selected workflow to the next workflow node. This ends your own
+
+workflow task and sends it to the next user.
+
+Delegate workflow 
+
+Fig.: Delegate workflow
+
+Can also be called via the context menu or by pressing F6.
+
+Use this function to delegate a workflow node to another user. The user is displayed in an
+
+additional node in the workflow. Use the Delegate workflow dialog box to specify whether you want
+
+to be notified after completing the workflow task.
+
+Information
+
+Whereas in the Hand off workflow function, another user is assigned the workflow node, the 
+
+Delegate workflow function creates an additional node for the user. The original assignment
+
+remains unchanged.
+
+Hand off workflow 
+
+Fig.: Hand off workflow
+
+Can also be called via the context menu or by pressing F7.
+
+Use this function to transfer an active workflow node to another user. The user is displayed in the
+
+node and the workflow appears in the user's work area. The new user is entered in place of the
+
+original user.
+
+Return workflow 
+
+Fig.: Return workflow
+
+Can also be called via the context menu or by using the keyboard shortcut SHIFT + F8.
+
+21 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Use this function to return a workflow node to the group that was originally assigned the node. The
+
+group is displayed again in the workflow node.
+
+Postpone workflow 
+
+Fig.: Postpone workflow
+
+Can also be called via the context menu or by pressing F8.
+
+Use this function to determine the date until which a workflow should be hidden from the work
+
+area. Once the date has been reached, the workflow appears in the list again. Use the Cancel
+
+postponement function to cancel a workflow postponement.
+
+Cancel postponement 
+
+Fig.: Cancel postponement
+
+Can also be called via the context menu or by pressing F9.
+
+Use this function to cancel postponement of a workflow. If a workflow has been postponed, it
+
+remains active but is hidden in the work area, unless you explicitly enabled the display of
+
+postponed workflows.
+
+To cancel a postponement, select the corresponding workflow and click the Cancel postponement
+
+button.
+
+Edit reminder 
+
+Fig.: Edit reminder
+
+Can also be called via the context menu or by using the keyboard shortcut SHIFT + F1.
+
+ALV toolbar 
+
+The client shows tasks with an extended ALV grid. The advanced functions are explained in the
+
+following.
+
+22 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Fig.: ALV toolbar
+
+Group tasks: Filters all tasks whose nodes are assigned to groups that the user is in
+
+Substitution tasks: Filters all tasks the user is assigned as substitute for
+
+Escalations: Filters all tasks whose nodes have exceeded the escalation deadline
+
+Postponements: Shows all tasks that have been postponed to a date after the current date
+
+Reminders: Filters all reminders
+
+Feed 
+
+The following message types are shown in the feed:
+
+Posts (written by a user)
+
+Comments (on a post)
+
+Polls
+
+Events (e.g. when a new version of a document is filed or changes are made to the working
+
+version) 
+
+Fig.: Feed; Create/comment on post
+
+The feed enables you to write posts related to entries in ELO and comment on posts uploaded by
+
+other users.
+
+Enter your post/comment in the respective input fields.
+
+Click Create to upload the post/comment.
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+23 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+	Table of contents
+	ELO Workflow Client for SAP® ERP
+	Introduction
+	Security and licensing requirements
+	Basics
+
+	Installation
+	SAP function module
+	Configuring permissions
+	Configuring a destination
+
+	Configuration
+	Administration area
+	Repository settings
+	User settings
+	Active sessions
+	Event settings
+	Notification settings
+	Transport
+	Advanced settings
+
+	Using the client
+	Overview
+	Toolbar
+	Refresh
+	Accept workflow
+	Delete
+	Forward workflow
+	Delegate workflow
+	Hand off workflow
+	Return workflow
+	Postpone workflow
+	Cancel postponement
+	Edit reminder
+
+	ALV toolbar
+	Feed
+
+
+

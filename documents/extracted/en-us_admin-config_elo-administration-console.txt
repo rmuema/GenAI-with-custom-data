@@ -1,0 +1,1263 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Configuration and administration | ELO Administration Console
+
+
+Configuration and
+
+administration
+
+ELO Administration Console
+
+
+
+3
+
+3
+
+4
+
+12
+
+13
+
+18
+
+19
+
+28
+
+33
+
+36
+
+41
+
+Table of contents
+
+ELO Administration Console
+
+Introduction 
+
+Basics 
+
+ELO packages 
+
+Proxy 
+
+Servers 
+
+System settings 
+
+Maintenance 
+
+Server modules 
+
+System information 
+
+Other menu items 
+
+2 Configuration and administration
+
+
+
+ELO Administration Console
+
+Introduction 
+
+Copyright notices 
+
+The copyright for this program belongs to ELO Digital Office GmbH. The product may only be copied
+
+and used in accordance with the License Agreement.
+
+It is illegal to copy, reproduce, or transfer the ELO Administration Console program either in full or
+
+in part.
+
+No part of this user manual may be reproduced, distributed, translated, or otherwise duplicated
+
+without the prior written consent of ELO Digital Office GmbH. The contents of this book in no way
+
+represent an entitlement on the part of the purchaser.
+
+Trademarks 
+
+ELO Administration Console is a registered trademark of ELO Digital Office GmbH.
+
+Microsoft Windows, Microsoft Word, Microsoft Excel and Microsoft PowerPoint are registered
+
+trademarks of the Microsoft Corporation. All other product names are protected by copyright and
+
+are registered trademarks/brand names of their respective owners.
+
+Please note 
+
+We have made every effort to supply product documentation that is as accurate as possible.
+
+However, as we are continuously developing the ELO Administration Console, the status of the
+
+program changes very quickly. For this reason, there may be minor discrepancies between the
+
+descriptions and images in the manual and in the program. We ask for your understanding if this
+
+occurs.
+
+3 Configuration and administration
+
+
+
+Basics 
+
+This chapter explains some of the basics in the ELO Administration Console.
+
+System requirements 
+
+You will find more information related to the system requirements in the ELO system requirements
+
+documentation.
+
+Please note
+
+The version of the ELO Administration Console must be compatible with the corresponding
+
+ELO Indexserver. Note the information in the ELO Server Setup.
+
+Installation 
+
+You can install the ELO Administration Console via the ELO server setup program.
+
+Refer to the the ELO Server manual for more information.
+
+Start and logon 
+
+4 Configuration and administration
+
+
+
+To start the ELO Administration Console, enter the URL in the browser as follows:
+
+http://<ELO server with installed ELOac>:<Port>/AdminConsole/
+
+Example 
+
+http://eloserver:9080/AdminConsole/
+
+Enter your user data to open the ELO Administration Console.
+
+User name: Enter your user name here.
+
+Password: Enter your user password here.
+
+Show logon options: If the Show logon options button is enabled, you will see additional logon
+
+options.
+
+The ELO Administration Console remembers whether the logon options were enabled or disabled
+
+and loads the corresponding state the next time you start the program.
+
+Language: Select the language of the program interface here.
+
+ELO Administration Console status report: View the ELO Administration Console status report.
+
+Log on: Sign in with Log on.
+
+The menu area 
+
+The home screen of the ELO Administration Console consists of the menu area.
+
+5 Configuration and administration
+
+
+
+The upper section of the menu area, the menu bar, contains the following menu items:
+
+ELO Administration Console <repository name>: Click this to open the settings for the system,
+
+maintenance, server modules, system information, and the clients.
+
+Browse: Searches the settings and options in the ELO Administration Console.
+
+Configuration: You can edit the configuration here.
+
+Information about the repository and the ELO Administration Console: This is where you can
+
+edit the settings for the current repository and the program.
+
+Help: Open the help page.
+
+Log off: Log off from the program.
+
+The menu items Configuration, Information about the repository and the ELO Administration
+
+Console, and Log off are explained in more detail in the following sections of this chapter.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+6 Configuration and administration
+
+
+
+Below the header, you see the different areas of the ELO Administration Console, which are
+
+organized into the following groups:
+
+Packages
+
+Proxy
+
+Servers
+
+System settings
+
+Maintenance
+
+Server modules
+
+System information
+
+Other menu items
+
+You can find more information about the different areas of the ELO Administration Console in the
+
+following chapters.
+
+Configuration 
+
+In the Configuration section, you can define basic settings as well as the layout and behavior of the
+
+ELO Administration Console.
+
+Change setting 
+
+Select the respective setting to make changes.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+7 Configuration and administration
+
+
+
+The setting switches to edit mode.
+
+Open the drop-down menu.
+
+Select the required setting.
+
+Click Save (green check mark) to confirm your changes.
+
+The new setting is applied.
+
+ELO Administration Console home screen options 
+
+Menu item display settings: Specify whether you want to display a description next to the menu
+
+items or just the title.
+
+Behavior when a menu title is clicked: Specify whether you want the page to open in the same or in
+
+a new window when you select the menu title.
+
+Behavior when a menu icon is clicked: Specify whether you want the page to open in the same or in
+
+a new window when you select the menu icon.
+
+2. 
+
+3. 
+
+4. 
+
+8 Configuration and administration
+
+
+
+ELOas configuration 
+
+GUID of ELOas Base folder: The ELOas Base folder is defined as the default. This folder is also used
+
+if the field is left blank. You can enter an alternative GUID if you want to use a different folder for
+
+your ELOas rules.
+
+Save rules as: Save ELOas rules created with the ELO Administration Console as extra text to an
+
+empty entry or as a text file in ELO.
+
+Temporary directory for text files: Enter the directory path you want to save text files in when
+
+checking out. This is only relevant if you save ELOas rules as text files.
+
+Visibility of menu items on the home screen 
+
+Under Visibility of menu items on the start page, you determine which menu items are available in
+
+the ELO Administration Console. Enable or disable the various options by selecting the check
+
+boxes.
+
+Save menu as XML file (diskette icon): Select the diskette icon to create the XML file menu.xml,
+
+which is stored on the server in the directory ...\config\AdminConsole\<name of instance>\. ELO
+
+stores the settings for the menu items of the ELO Administration Console in the menu.xml file. The
+
+file can be edited manually and is loaded when you restart the ELO Administration Console.
+
+9 Configuration and administration
+
+
+
+Manage profiles 
+
+You can edit the settings for the current profile here.
+
+Select the entry for the current profile in the list of profiles.
+
+The program switches to edit mode. You can change the settings for the profile and the ELO
+
+Indexserver in the input fields.
+
+Profile name: Edit the name of the profile in the Profile name field.
+
+Indexserver URL: Edit the Indexserver URL of the profile in the Indexserver URL field.
+
+Hide during logon: To hide the profile when logging on to the ELO Administration Console,
+
+enable the Hide during logon option.
+
+Proxy redirect logic: If you access the ELO Administration Console from the Apache Tomcat
+
+Manager page, you can use the redirect logic to select which ELO Indexserver you want to
+
+connect to. You can change the default behavior with the Proxy redirect logic field.
+
+The following values apply:
+
+-1 = Redirect is not allowed.
+
+0 = Redirect is allowed (default).
+
+1 and higher = Redirect is allowed. The higher the number, the lower the redirect
+
+priority.
+
+Repository GUID: The Repository GUID field contains the GUID of the repository. This is also
+
+the GUID of the top level in the repository.
+
+Save the changes.
+
+Alternative: Select Delete to delete a profile.
+
+Information
+
+The Delete button does not delete the repository. It only deletes the profile in the ELO
+
+Administration Console.
+
+1. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+2. 
+
+10 Configuration and administration
+
+
+
+Information about the repository and the ELO Administration Console 
+
+The Information about the repository and the ELO Administration Console button ("i" icon) takes
+
+you to the Information about the current user and repository page. This page contains menu items
+
+with information about the current user and the active repository.
+
+The information includes the user name, the Indexserver URL, the version number of the ELO
+
+Indexserver, the language, the session ID, and the ELO Administration Console version.
+
+Logon activity in the ELO Administration Console: The Logon activity in the ELO Administration
+
+Console area contains information about which users have logged on to the ELO Administration
+
+Console and at which time.
+
+Click OK to leave the page and return to the menu.
+
+Log off 
+
+Click Logout (door icon) to log out of the ELO Administration Console.
+
+The dialog to log on to the ELO Administration Console appears again.
+
+• 
+
+11 Configuration and administration
+
+
+
+ELO packages 
+
+Packages allow you to create and edit related configurations.
+
+ELO packages can contain configurations for the following areas:
+
+Metadata forms, aspects, and fields (gen. 2)
+
+Forms (gen. 2)
+
+Groups
+
+ELO Teamspaces
+
+ELO Workspaces
+
+ELO Flows
+
+Translations
+
+Font colors
+
+For more information, refer to the ELO packages documentation.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+12 Configuration and administration
+
+
+
+Proxy 
+
+In the Proxy area, you can open the ELO Flows configuration, the ELO App Manager, the ELO form
+
+designer, the ELO Web Client configuration, and ELO Smart Input.
+
+ELO Flows configuration 
+
+In the ELO Flows configuration area, you can create, edit, and manage flows.
+
+ELO Flows is an ELO module for easily implementing automation and integration tasks.
+
+For more information, refer to the ELO Flows documentation.
+
+13 Configuration and administration
+
+
+
+ELO App Manager 
+
+In the ELO App Manager area, you can manage the ELO Apps from ELO Solutions and ELO
+
+integrations, for example.
+
+You also have the ability to develop and control your own apps.
+
+For more information, refer to the ELO Apps API Documentation (only available in English). This
+
+documentation must be downloaded and installed separately. You can find the ELOwf API Doc ZIP
+
+package on the ELO SupportWeb under <Version> > ELO Web Forms Services (ELOwf) >
+
+Downloads. You can find an installation guide in the ZIP package in the Readme.txt file.
+
+You can find an overview of the URLs to access the documentation in the ELO workflow
+
+documentation under Advanced functions > Events and global functions.
+
+Form designer 
+
+In the Form designer area, you can create, edit, and manage forms and templates for the form-
+
+based workflow.
+
+14 Configuration and administration
+
+
+
+You will find more information on how to use forms under Form workflow > The form designer in
+
+the ELO workflow documentation.
+
+ELO Web Client configuration 
+
+From here, you automatically switch to the configuration section of the ELO Web Client.
+
+15 Configuration and administration
+
+
+
+Condition: The ELO Web Client must be installed and functioning correctly for this option to be
+
+available.
+
+You will find more information on the ELO Web Client and its configuration in the ELO Web Client
+
+and ELO Web Client administration documentation.
+
+ELO Smart Input 
+
+In the ELO Smart Input area, you perform the settings for the server module ELO Smart Input. You
+
+may need to log on to ELO Smart Input.
+
+Information
+
+The ELO Smart Input area is only displayed if you have installed the module.
+
+16 Configuration and administration
+
+
+
+ELO Smart Input analyzes the full text of a document and extracts data from it, such as addresses,
+
+sums, or e-mail addresses. Users receive suggestions for automatically detected data, which they
+
+can apply to the metadata.
+
+ELO Smart Input is based on an incoming and target folder principle.
+
+The incoming folder is where you save documents that have not yet been assigned
+
+metadata.
+
+Use ELO Smart Input to enter the metadata.
+
+The documents tagged with metadata are moved to a specified target folder or a folder
+
+created dynamically via the metadata form.
+
+ELO Smart Input recognizes the following patterns by default:
+
+Amounts (net, VAT, gross)
+
+Addresses
+
+IBAN
+
+Date
+
+E-mail addresses
+
+Telephone numbers
+
+VAT ID
+
+Custom regular expressions
+
+For more information, refer to the ELO Smart Input documentation.
+
+1. 
+
+2. 
+
+3. 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+17 Configuration and administration
+
+
+
+Servers 
+
+In the Servers area, you can open the settings for ELO Azure Administration.
+
+Information
+
+This area is only available if ELO Azure Administration was installed using the ELO Server
+
+Setup.
+
+ELO Azure Administration 
+
+ELO Azure Administration is a service for managing app registrations for Microsoft Azure.
+
+The following ELO apps can currently be registered via ELO Azure Administration:
+
+ELO Bot for Microsoft Teams
+
+ELOauth
+
+For more information, refer to the ELO Azure Administration documentation:
+
+• 
+
+• 
+
+18 Configuration and administration
+
+
+
+System settings 
+
+This chapter describes the settings for the Group manager, User manager, Organizational units, 
+
+Metadata forms and fields, Field templates, Keyword lists, Entry types, Document paths, Default
+
+document paths, Encryption keys, Manage URLs, Stamps, Respository properties, and Font colors.
+
+Group manager 
+
+The Group manager section is where you can manage users. The rights for groups are defined here.
+
+You will find more under Groups in the User management documentation.
+
+You will find more information on groups in ELO packages under Users and groups in the ELO
+
+packages documentation.
+
+19 Configuration and administration
+
+
+
+User manager 
+
+The User manager section is where you can manage users. The rights for users are defined here.
+
+You will find more under Users in the User management documentation.
+
+20 Configuration and administration
+
+
+
+Organizational units 
+
+In this menu item, you can manage organizational units.
+
+Organizational units provide a way to classify users.
+
+You will find more under Organizational units in the User management documentation.
+
+Metadata forms and fields (gen. 1) 
+
+Description: You can create and manage metadata forms (gen. 1) in the Metadata forms and fields
+
+area.
+
+Information
+
+You need to create the field templates required for the metadata forms before you create
+
+the metadata form. You can use field templates in different metadata forms.
+
+For more information, refer to the Metadata forms and fields documentation.
+
+You will find information on metadata forms and aspects (gen. 2) under ELO packages in the 
+
+Metadata documentation.
+
+21 Configuration and administration
+
+
+
+Field templates (gen. 1) 
+
+You can define templates for fields (gen. 1) in the Field templates area. These templates can be
+
+used to create metadata forms in the Metadata forms and fields area.
+
+You will find more information under Field templates in the Metadata forms and fields
+
+documentation.
+
+You will find information on metadata forms and aspects (gen. 2) under ELO packages in the 
+
+Metadata documentation.
+
+Keyword lists 
+
+Create new keyword lists and edit existing keyword lists in the Keyword lists area.
+
+Keyword lists help you enter and standardize metadata.
+
+You will find more information under Keyword lists in the Metadata forms and fields documentation.
+
+You will find more information under ELO packages > Keyword lists in the Metadata documentation.
+
+Entry types 
+
+By assigning entry types, you can see what type of entry you are dealing with at a glance. The
+
+icons that are used for this purpose can be customized.
+
+22 Configuration and administration
+
+
+
+For more information, refer to the Entry types section of the System administration documentation.
+
+Document paths 
+
+ELO manages storage media (physical storage) using document paths. In the Document paths area
+
+of the ELO Administration Console, you can set up new media, make moved media accessible
+
+again, or check the free storage space on a medium. The document path specifies where the
+
+documents are stored physically.
+
+23 Configuration and administration
+
+
+
+You will find more information under ELO Server > Document paths in the Repository & documents
+
+documentation.
+
+Default document paths 
+
+In the Default document paths area, you specify which paths to use as document paths or restore
+
+paths.
+
+24 Configuration and administration
+
+
+
+You will find more information under ELO Server > Default document paths in the Repository &
+
+documents documentation.
+
+Encryption keys 
+
+The encryption keys used in ELO are managed in the Encryption keys area. Documents encrypted
+
+with these keys are encrypted and assigned a password.
+
+You will find more information under Encryption keys in the System administration documentation.
+
+Manage URLs 
+
+In the Manage URLs area, you enter the URLs for different ELO modules.
+
+You will find more information under ELO Server > Manage URLs in the Repository & documents
+
+documentation.
+
+25 Configuration and administration
+
+
+
+Stamps 
+
+You can use stamps on documents in ELO just as you would on paper documents. In the Stamps
+
+area, you can create new stamps, or edit and delete existing stamps.
+
+The stamps are available to users in the viewer pane in the ELO Java Client.
+
+You will find more information under Stamps in the System administration documentation.
+
+Repository properties 
+
+In the Repository properties area, you can change the display name for the repository.
+
+The display name is used in different places. For example, as the name of the top repository level.
+
+Similarly, it is used as the name of the main tile for the Repository work area in the clients.
+
+Please note
+
+Altering the display name does not change the actual name of the repository.
+
+You will find more information under Repository properties in the System administration
+
+documentation.
+
+26 Configuration and administration
+
+
+
+Font colors 
+
+The colors used to display entries are defined in the Font colors area. You can assign a separate
+
+color for each document and folder type.
+
+You will find more information under Font colors in the System administration documentation.
+
+You will find information about font colors in ELO under ELO packages > Font colors in the Other
+
+topics documentation.
+
+27 Configuration and administration
+
+
+
+Maintenance 
+
+This chapter provides descriptions and explanations of the settings for the Administration mode, 
+
+Report options, Delete and remove, Backup tasks, Password rules, and Move document files.
+
+Administration mode 
+
+Administration mode can be used to restrict client access to ELO, e.g. during system maintenance.
+
+Information
+
+Only administrators can access the ELO clients! Administration mode is active for all
+
+repositories that are accessed by the same ELO Access Manager.
+
+Report options 
+
+In the Report options, administrators can define the settings for log files and logged activities in
+
+ELO.
+
+28 Configuration and administration
+
+
+
+Information
+
+You create a report in the ELO Java Client with the standard configuration via Organize > 
+
+Properties > Report for entry.
+
+You will find more information under ELO Server > Report options in the Maintenance and
+
+monitoring documentation.
+
+Delete report entries 
+
+The Delete report entries function enables you to delete report entries up to a specific date.
+
+You will find more information under ELO Server > Delete report entries in the Maintenance and
+
+monitoring documentation.
+
+29 Configuration and administration
+
+
+
+Delete and remove 
+
+The Delete and remove area contains the settings for deleting and removing documents from the
+
+repository.
+
+You will find more information under Delete and remove in the System administration
+
+documentation.
+
+Backup tasks 
+
+In the Backup tasks area, you define the settings for backups.
+
+30 Configuration and administration
+
+
+
+You will find more information under ELO Server > Backup in the Repository & documents
+
+documentation.
+
+Password rules 
+
+In the Password rules area, you define the password security settings.
+
+You will find more under Password rules in the User management documentation.
+
+Move document files 
+
+In the Move document files area, you can move files, file versions, attachments, and/or attachment
+
+versions to a different document path. The repository structure remains the same.
+
+31 Configuration and administration
+
+
+
+You will find more information under ELO Server > Move document files in the Repository &
+
+documents documentation.
+
+32 Configuration and administration
+
+
+
+Server modules 
+
+The Server modules area contains the areas ELO Automation Services, Backup profiles, Create
+
+password, and ELO Transport.
+
+ELO Automation Services 
+
+ELO Automation Services are used to automate tasks within ELO. This area of the ELO
+
+Administration Console is where you enter rulesets for ELO Automation Services.
+
+For more information, refer to the ELO Automation Services documentation.
+
+Backup profiles 
+
+In the Backup profiles area, you enter the settings for the backup profiles.
+
+Please note
+
+Before you can create a backup profile, you must have defined a document path. Once you
+
+have done so, the document path will be available in the backup profiles.
+
+33 Configuration and administration
+
+
+
+You will find more information under ELO Server > Backup service in the Repository & documents
+
+documentation.
+
+Create password 
+
+In the Create password area, you can create encrypted/encoded passwords for ELO.
+
+You will find more information under ELO Server > Passwords in the Repository & documents
+
+documentation.
+
+34 Configuration and administration
+
+
+
+ELO Transport 
+
+The ELO Transport area is used to create transport files. A transport file can contain information
+
+about ELO users, font colors, keyword lists, metadata forms, folders, and documents. The
+
+information is stored in a file that can be imported into an ELO repository.
+
+You will find more information under ELO Server > ELO Transport in the Update and migration
+
+documentation.
+
+35 Configuration and administration
+
+
+
+System information 
+
+These functions help you manage users and the system. This chapter provides information about
+
+the Server information, Users in system, Statistics, License overview, License report, and Test
+
+checksum areas.
+
+Server information 
+
+The Server information area contains an overview of the server settings.
+
+Users in system 
+
+Under the Users in system menu item, you will find an overview of the users currently logged on to
+
+the system.
+
+36 Configuration and administration
+
+
+
+Information
+
+User accounts for various services and modules are shown here.
+
+Statistics 
+
+Description: This contains an overview of the IDs assigned in the repository.
+
+License overview 
+
+The License overview area provides an overview of the license usage.
+
+37 Configuration and administration
+
+
+
+You will find more information under ELO Server > License information in the Maintenance and
+
+monitoring documentation.
+
+License report 
+
+The License report page provides you with a report about access and used licenses in ELO as well
+
+as information about the users who have performed write actions via the full clients and via the
+
+Indexserver.
+
+38 Configuration and administration
+
+
+
+You will find more information under ELO Server > License information in the Maintenance and
+
+monitoring documentation.
+
+Test checksums 
+
+In the Test checksums area, you can test the integrity of one or more documents.
+
+39 Configuration and administration
+
+
+
+You will find more information under ELO Server > Test checksum in the Maintenance and
+
+monitoring documentation.
+
+40 Configuration and administration
+
+
+
+Other menu items 
+
+This page provides a summary of the Clients, Others, LDAP, and ClientInfos areas.
+
+Clients/ELO for Mobile Devices 
+
+In the ELO for Mobile Devices area, you can modify the available functions in the ELO app (Android)
+
+and ELO app (iOS). You can grant or restrict specific users or groups access to work areas and
+
+functions.
+
+Settings for: You can see who the settings apply for next to Settings for.
+
+Select user: Select Select user to open the Select user or group dialog box. In the Select user or
+
+group dialog box, you can select the user or option group that you want to edit the settings for.
+
+Information
+
+To edit the settings for all users (global), select the Everyone group.
+
+Work areas: In the Work areas table, you can enable or disable work areas for the selected user/
+
+group.
+
+41 Configuration and administration
+
+
+
+Functions: In the Functions table, you can enable or disable functions for the selected user/group.
+
+Set by: In the Set by column, you can see whether a setting has been assigned to an individual user
+
+or through an option group.
+
+For more information, refer to the ELO mobile apps documentation.
+
+Others/Block access 
+
+Under Block access, you can restrict access to ELO based on membership of a selected group.
+
+You will find more under Block access in the User management documentation.
+
+LDAP 
+
+The following menu items are available in the LDAP area:
+
+LDAP import
+
+LDAP interface configuration
+
+Enable LDAP authentication
+
+You will find more under LDAP in the User management documentation.
+
+• 
+
+• 
+
+• 
+
+42 Configuration and administration
+
+
+
+ClientInfos 
+
+The ClientInfos menu area is visible if you have installed ELO Business Solutions.
+
+Depending on what you select, you will see options for the respective ELO Business Solution.
+
+For detailed information, refer to the documentation for the respective ELO Business Solution.
+
+43 Configuration and administration
+
+
+	Table of contents
+	ELO Administration Console
+	Introduction
+	Copyright notices
+	Trademarks
+	Please note
+
+	Basics
+	System requirements
+	Installation
+	Start and logon
+	Example
+
+	The menu area
+	Configuration
+	Change setting
+	ELO Administration Console home screen options
+	ELOas configuration
+	Visibility of menu items on the home screen
+	Manage profiles
+
+	Information about the repository and the ELO Administration Console
+	Log off
+
+	ELO packages
+	Proxy
+	ELO Flows configuration
+	ELO App Manager
+	Form designer
+	ELO Web Client configuration
+	ELO Smart Input
+
+	Servers
+	ELO Azure Administration
+
+	System settings
+	Group manager
+	User manager
+	Organizational units
+	Metadata forms and fields (gen. 1)
+	Field templates (gen. 1)
+	Keyword lists
+	Entry types
+	Document paths
+	Default document paths
+	Encryption keys
+	Manage URLs
+	Stamps
+	Repository properties
+	Font colors
+
+	Maintenance
+	Administration mode
+	Report options
+	Delete report entries
+	Delete and remove
+	Backup tasks
+	Password rules
+	Move document files
+
+	Server modules
+	ELO Automation Services
+	Backup profiles
+	Create password
+	ELO Transport
+
+	System information
+	Server information
+	Users in system
+	Statistics
+	License overview
+	License report
+	Test checksums
+
+	Other menu items
+	Clients/ELO for Mobile Devices
+	Others/Block access
+	LDAP
+	ClientInfos
+
+
+

@@ -1,0 +1,141 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO Integration Client | Basics
+
+
+ELO Integration Client
+
+Basics
+
+
+
+3
+
+3
+
+Table of contents
+
+ELO Integration Client
+
+General 
+
+2 ELO Integration Client
+
+
+
+ELO Integration Client
+
+General 
+
+Basic range of functions 
+
+The client is a root entry from the ELO repository depending on the parameters and configuration. A
+
+document view component is used. If the root entry is a folder, users can navigate within this
+
+folder and view all child entries of the folder.
+
+A number of ELO functions are available for the current entry depending on the configuration. Users
+
+can search for entries from ELO (including outside of the root entry) to create a reference to
+
+individual search results within the root entry.
+
+Document view 
+
+The document view is a standard component of the ELO Integration Client. It shows the content of
+
+an entry, any configured ELO apps (e.g. Business Solution ELO Knowledge), the form (configurable),
+
+and the feed (configurable). The content is displayed depending on the entry. For folders, a list of
+
+the folder content (child entries) is shown, while different viewers are used to show documents,
+
+depending on their type (web viewer, e-mail viewer, text viewer, image viewer, WOPI viewer). If
+
+the document has a preview document, it is also offered through an image viewer. If the document
+
+has full text, the text viewer is offered.
+
+Viewers 
+
+Web viewer: Loads the document in an embedded iFrame. Different plug-ins are used to
+
+display the document depending on the browser and document type.
+
+E-mail viewer: e-mail files (.msg, .eml) are shown by the e-mail viewer. It requests the
+
+contents of the e-mail from the server and displays them.
+
+Text viewer: the text contents of the file are displayed. In the viewer, you can change the font
+
+size.
+
+Image viewer: the contents of the file are queried and shown page by page as an image. This
+
+viewer allows you to switch between pages and scale the current image to different sizes.
+
+WOPI viewer: If you have installed the ELO Interface for Microsoft Office Online (ELOimo), the
+
+document preview can also show Office documents and PDF files using Microsoft Office
+
+Online.
+
+Minimum requirements 
+
+You will find the minimum requirements under ELO system requirements > ELO Integration Client.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+3 ELO Integration Client
+
+https://docs.elo.com/ops/requirements/en-us/overview/clients.html#elo-integration-client
+https://docs.elo.com/ops/requirements/en-us/overview/clients.html#elo-integration-client
+
+	Table of contents
+	ELO Integration Client
+	General
+	Basic range of functions
+	Document view
+	Viewers
+	Minimum requirements
+
+
+

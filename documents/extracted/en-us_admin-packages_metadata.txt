@@ -1,0 +1,1875 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO packages | Metadata
+
+
+ELO packages
+
+Metadata
+
+
+
+3
+
+3
+
+4
+
+6
+
+9
+
+13
+
+14
+
+14
+
+15
+
+19
+
+33
+
+34
+
+34
+
+35
+
+37
+
+38
+
+45
+
+46
+
+49
+
+49
+
+50
+
+51
+
+Table of contents
+
+Aspects
+
+Aspects 
+
+Create aspect 
+
+Add fields 
+
+Create view for aspect 
+
+Delete item 
+
+Metadata forms
+
+Metadata forms 
+
+Create metadata form 
+
+Configure metadata forms 
+
+Delete metadata form 
+
+Forms
+
+Forms (gen. 2) 
+
+Form designer (gen. 2) 
+
+Add items 
+
+Field properties 
+
+Remove items from the layout area 
+
+Create tabs 
+
+Keyword lists
+
+Overview 
+
+Add keyword list 
+
+Edit keyword list 
+
+2 ELO packages
+
+
+
+Aspects
+
+Aspects 
+
+The heart of the metadata (gen. 2) is formed by the aspects.
+
+Aspects consist of fields and views. You can find default fields, e.g. Filing date, in the views area of
+
+the form designer. For aspects to be shown in the client, you have to define at least one view per
+
+aspect.
+
+Information
+
+Before creating metadata forms, it makes sense to create a plan of which aspects are
+
+needed and which aspects may be able to be used in multiple metadata forms.
+
+3 ELO packages
+
+
+
+Create aspect 
+
+In the menu area of the ELO Administration Console, click the package you want to edit.
+
+The package opens.
+
+Click Aspects.
+
+The Aspects tab opens.
+
+1. 
+
+2. 
+
+3. 
+
+4 ELO packages
+
+
+
+Click Add aspect.
+
+The Aspect dialog box appears.
+
+Enter a technical name in the Identifier field.
+
+Information
+
+Only uppercase letters are possible.
+
+Enter a translation variable into the Translation variable field.
+
+Information
+
+Option 1: Select one of the available translation variables from the drop-down menu.
+
+The Name field is completed automatically.
+
+Option 2: Generate a new translation variable via direct input. Then, enter a name in
+
+the Name field and click the Save icon at the end of the field. The name is assigned to
+
+the translation variable and stored in the translation variable database.
+
+Click Save aspect.
+
+The aspect is created.
+
+4. 
+
+5. 
+
+6. 
+
+5 ELO packages
+
+
+
+Add fields 
+
+After an aspect is created, you can add one or more fields to the aspect.
+
+Click the aspect you want to edit.
+
+The settings for the selected aspect open.
+
+Click Add field.
+
+1. 
+
+2. 
+
+6 ELO packages
+
+
+
+The settings for the field you are adding open.
+
+Enter a technical name in the Identifier field.
+
+Information
+
+Only uppercase letters are possible.
+
+Enter a translation variable into the Translation variable field.
+
+Information
+
+Option 1: Select one of the available translation variables from the drop-down menu.
+
+The Name field is completed automatically.
+
+3. 
+
+4. 
+
+7 ELO packages
+
+
+
+Option 2: Generate a new translation variable via direct input. Then, enter a name in
+
+the Name field and click the Save icon at the end of the field. The name is assigned to
+
+the translation variable and stored in the translation variable database.
+
+Select a field type via the Field type drop-down menu.
+
+Choose from the following options:
+
+Text in general: In Text type fields, you can enter any characters.
+
+Integer: In Integer type fields, you can enter any whole numbers.
+
+Floating-point number: In Number type fields, you can enter floating-point numbers.
+
+Date: In Date type fields, you can enter a date via a calendar function. The format is
+
+based on the settings in the client.
+
+Date with time: In DateTime type fields, you can enter a date and time via the
+
+calendar/clock function. The format is based on the settings in the client.
+
+Selection list: Choice type fields are shown as selection lists. A keyword list has to be
+
+configured.
+
+Relation: Relation type fields are shown in relation to a metadata form. A metadata
+
+form has to be configured as a relation target.
+
+User: User type fields are shown with a selection of users.
+
+E-mail address: In E-mail type fields, you can enter an e-mail address. From this field,
+
+the user can open a linked window in an e-mail program.
+
+URL: In URL type fields, you can enter a URL. From this field, the user can open a
+
+browser window with the website.
+
+Check box: Check box type fields generate a check box.
+
+Option 1: If necessary, enter a value in the Default value field. This value is automatically
+
+entered when the metadata form is shown. The user can change the value as required.
+
+Option 2: To not add the content of the field to the ELO iSearch search index, enable the
+
+option Exclude from iSearch.
+
+Option 3: If necessary, enter additional information in the Comment field.
+
+Option 4: If necessary, enter a translation variable for the comment in the Translation
+
+variable field.
+
+Option 5: Add a dynamic keyword list.
+
+Click Save aspect.
+
+The field is saved and added to the aspect.
+
+5. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+6. 
+
+8 ELO packages
+
+
+
+Create view for aspect 
+
+For the aspect to be shown in the client, you have to define at least one view.
+
+You can also create multiple views for one aspect. This makes it easier to use an aspect in multiple
+
+metadata forms, including variants when displaying them.
+
+Click the aspect you want to edit.
+
+The Views dialog box opens.
+
+Click Create view.
+
+The form designer (gen. 2) opens. The Create view dialog box is open.
+
+Enter a name in the Name field.
+
+Select a view type via the radio buttons.
+
+Choose from the following options:
+
+Normal: Default view
+
+List: View as list/table.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+◦ 
+
+◦ 
+
+9 ELO packages
+
+
+
+Please note
+
+The view for the aspect must be created with the List type if you want to enable the
+
+option May be created multiple times for aspect mapping.
+
+Click OK.
+
+This closes the dialog box. You are now in the form designer (gen. 2).
+
+You will find more information about the items and functions of the form designer under 
+
+Forms (gen. 2)
+
+5. 
+
+10 ELO packages
+
+
+
+On the Fields tab, you will see the fields of the aspect as well as default fields.
+
+Drag a field to the layout area using drag-and-drop.
+
+Repeat the process until you have placed all the desired fields.
+
+Optional: Edit additional field settings under Properties.
+
+Depending on the data type, you will have different setting options here and can set a
+
+minimum number of characters or configure field content validation via regular expressions,
+
+for example.
+
+6. 
+
+7. 
+
+11 ELO packages
+
+
+
+Click Save.
+
+The view is saved and is now available.
+
+Close the form designer 
+
+To close the form designer, click the arrow icon.
+
+Once you have defined the necessary aspects and views, you can create metadata forms.
+
+8. 
+
+1. 
+
+12 ELO packages
+
+
+
+Delete item 
+
+Items such as aspects, aspect mappings, and fields are deleted in a similar way. This method is
+
+explained below based on an aspect.
+
+Please note
+
+An item can only be deleted if no metadata forms are using this item.
+
+Open the package containing the item.
+
+Click the item you want to delete.
+
+The corresponding dialog box opens.
+
+Click Delete <item> (recycle bin icon).
+
+A prompt dialog box opens.
+
+Confirm with Delete.
+
+The item is deleted.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+13 ELO packages
+
+
+
+Metadata forms
+
+Metadata forms 
+
+Metadata forms allow you to classify ELO documents by different types. Metadata forms are the
+
+framework that hold the aspects and fields together.
+
+What follows in an explanation of the steps for adding new metadata forms and for configuring
+
+their content, usage and default values.
+
+To be able to use the aspects you previously created, you have to:
+
+Create metadata forms
+
+Assign aspects
+
+Create views
+
+Please note
+
+When configuring metadata forms, the number of forms used should not reach double-digits.
+
+A separate search index is built for each metadata form. A large number of metadata forms
+
+therefore requires a large amount of RAM and hard disk space for the ELO iSearch.
+
+This applies for first generation and second generation metadata forms.
+
+• 
+
+• 
+
+• 
+
+14 ELO packages
+
+
+
+Create metadata form 
+
+In the menu area of the ELO Administration Console, click the package you want to edit.
+
+The Metadata forms tab is selected automatically.
+
+Click Add metadata form.
+
+1. 
+
+2. 
+
+15 ELO packages
+
+
+
+The Form dialog box opens.
+
+16 ELO packages
+
+
+
+Configure content 
+
+If you create a new metadata form, a Content tab opens by default. Here, you can specify the
+
+contents of metadata form properties, e.g. the technical names of forms, aspect mappings, views,
+
+or dashboards.
+
+Create overview 
+
+Enter a technical name in the Identifier field.
+
+Information
+
+Only uppercase letters are possible.
+
+Enter a translation variable into the Translation variable field.
+
+Information
+
+Option 1: Select one of the available translation variables from the drop-down menu.
+
+The Name field is completed automatically.
+
+1. 
+
+2. 
+
+17 ELO packages
+
+
+
+Option 2: Generate a new translation variable via direct input. Then, enter a name in
+
+the Name field and click the Save icon at the end of the field. The name is assigned to
+
+the translation variable and stored in the translation variable database.
+
+Optional: Click Edit inheritance to apply aspects and fields from one or more other metadata
+
+forms as needed. You can then add to the aspects and create new views.
+
+Click Apply.
+
+Result
+
+The metadata form is created.
+
+3. 
+
+4. 
+
+18 ELO packages
+
+
+
+Configure metadata forms 
+
+Metadata forms have to be configured before you can use them.
+
+Assign aspects 
+
+To fill the metadata form with aspects and forms, you have to assign aspects to the metadata form.
+
+19 ELO packages
+
+
+
+Method
+
+Click Add aspect mapping.
+
+The Aspect mapping dialog box opens.
+
+Click the Select aspect button.
+
+The pick list of available aspects opens.
+
+Select a suggestion.
+
+Enter a technical name in the Identifier field.
+
+Information
+
+Only uppercase letters are possible.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+20 ELO packages
+
+
+
+Enter a translation variable into the Translation variable field.
+
+Information
+
+Option 1: Select one of the available translation variables from the drop-down menu.
+
+The Name field is completed automatically.
+
+Option 2: Generate a new translation variable via direct input. Then, enter a name in
+
+the Name field and click the Save icon at the end of the field. The name is assigned to
+
+the translation variable and stored in the translation variable database.
+
+Option 1: If necessary, enable the option May be created multiple times.
+
+If this option is enabled, the behavior of the aspect in the form changes. A plus icon appears
+
+that can be used to add the aspect to the metadata form multiple times.
+
+This can make sense if you've created an aspect for telephone numbers, for example.
+
+Instead of creating a separate aspect for all types of telephone numbers, use a basic type
+
+and enable the option May be created multiple times for it. Users can add as many telephone
+
+numbers as they'd like, as needed.
+
+Please note
+
+The view for the aspect must be created with the List type if you want to enable the
+
+option May be created multiple times for aspect mapping.
+
+Option 2: If necessary, edit the permissions settings for the aspect mapping.
+
+With the default settings, the aspect mapping can be used and seen by everyone.
+
+Click Save to save the aspect mapping.
+
+Add all the aspects you need for the metadata form in this way.
+
+6. 
+
+7. 
+
+8. 
+
+21 ELO packages
+
+
+
+Create views 
+
+Once all the required aspects have been assigned to the metadata form, you have to create views
+
+for the form.
+
+Method
+
+Click Create view.1. 
+
+22 ELO packages
+
+
+
+The form designer (gen. 2) opens. The Create view dialog box is open.
+
+Select a type via the radio buttons.
+
+Choose from the following options:
+
+Default view (EDIT)
+
+View for the viewer pane in the client (VIEW)
+
+View for creating new entries (CREATE)
+
+Assign any name: Create a custom type. In this case, you have to enter a name in the 
+
+Name field.
+
+Click OK.
+
+This closes the dialog box. You are now in the form designer (gen. 2).
+
+You will find more information about the items and functions of the form designer under 
+
+Forms (gen. 2)
+
+On the Aspect mappings tab, you will see the aspect mappings of the metadata form.
+
+Drag an aspect mapping to the layout area using drag-and-drop.
+
+2. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+3. 
+
+4. 
+
+23 ELO packages
+
+
+
+Under Properties, select a view from the View drop-down menu.
+
+Optional: If necessary, edit the settings for displaying the name via Settings > Show title
+
+Choose from the following options:
+
+Show title: If this option is enabled, the title of the aspect mapping is shown.
+
+Use name of the aspect mapping: If this option is enabled, the name of the aspect
+
+mapping is used as the title.
+
+5. 
+
+◦
+
+◦ 
+
+◦ 
+
+24 ELO packages
+
+
+
+Title is collapsible: If this option is enabled, the aspect mapping can be expanded and
+
+collapsed.
+
+Title is collapsed: If this option is enabled, the aspect mapping is collapsed by default.
+
+Repeat these two steps until you have placed all the desired aspect mappings.
+
+Click Save.
+
+The view is saved and is now available. The metadata form can be used in the clients.
+
+Create dashboards 
+
+Method
+
+Click Add dashboard.
+
+The form designer (gen. 2) opens. The Create dashboard dialog box is open.
+
+Enter a name for the dashboard.
+
+Optional: Enter a translation variable into the Translation variable field.
+
+Information
+
+◦ 
+
+6. 
+
+7. 
+
+1. 
+
+2. 
+
+25 ELO packages
+
+
+
+Option 1: Select one of the available translation variables from the drop-down menu.
+
+The Display name field is completed automatically.
+
+Option 2: Generate a new translation variable via direct input. Then, enter a name in
+
+the Display name field and click the Save icon at the end of the field. The name is
+
+assigned to the translation variable and stored in the translation variable database.
+
+Click OK.
+
+This closes the dialog box. You are now in the form designer (gen. 2).
+
+You will find more information about the items and functions of the form designer under 
+
+Forms (gen. 2)
+
+Under the Charts tab, you can select between bar chart, line chart, or doughnut chart.
+
+Drag a chart type to the layout area using drag-and-drop.
+
+3. 
+
+4. 
+
+26 ELO packages
+
+
+
+27 ELO packages
+
+
+
+Under Properties, you can configure the charts. The Field type field is fixed and cannot be
+
+configured.
+
+The following configurations are possible:
+
+1 Component: You can change the selected chart type via a drop-down menu.
+
+2 Alignment: Use the drop-down menu to select the alignment of the chart. In a bar chart, for
+
+example, you can select whether you want to arrange the bars vertically or horizontally.
+
+3 Breakdown by field: The representation in the chart is based on a field with aspect mapping
+
+from the metadata form. Select a previously created field for the chart in the drop-down
+
+menu.
+
+4 Metrics: Select a metric for the chart. You can select between the following metrics for the
+
+calculation basis of the chart: Count, Average, Minimum, Maximum, Total.
+
+Information
+
+Different metric selections are available depending on the field type. While Count is
+
+especially suitable for field types such as keyword lists or text, use Average,
+
+Minimum, Maximum, Total for numeric field types.
+
+5 Filter: Click the plus icon to add a field with aspect mapping as a filter. 
+
+6 Color palette: Select a color scheme for the representation of the chart.
+
+7 Mapping type: You can assign colors by clicking the pencil icon next to the Mapping type
+
+field.
+
+28 ELO packages
+
+
+
+Select a color palette and a mapping type. Depending on the selected mapping type, you can
+
+assign specific colors for minimum and maximum values, thresholds and rule-based values.
+
+8 Title translation key: Select a translation variable for the title of the dashboard.
+
+9 Title: Select a title for the dashboard.
+
+10 Subheader localization key: Select a translation variable for the dashboard subheader.
+
+11 Subheader: Select a subheader for the dashboard.
+
+Information
+
+For fields with the assigned localization key field there are two optional methods:
+
+Option 1: Select one of the available translation variables from the drop-down menu.
+
+The Name field is completed automatically.
+
+29 ELO packages
+
+
+
+Option 2: Generate a new translation variable via direct input. Then, enter a name in
+
+the Name field and click the Save icon at the end of the field. The name is assigned to
+
+the translation variable and stored in the translation variable database.
+
+12 Size: To set the size of the chart, choose between the options Small width and height;
+
+Medium width, small height; Medium width and height; Large width, medium height; Large
+
+width and height.
+
+Repeat these two steps until you have placed all the desired charts.
+
+Click Save.
+
+The dashboard is saved and is now available. The dashboard can be used.
+
+6. 
+
+7. 
+
+30 ELO packages
+
+
+
+Configure usage 
+
+In the Usage tab, you can select which data type the metadata form is used for, assign form-
+
+specific permissions, and assign workflows.
+
+31 ELO packages
+
+
+
+Configure default values 
+
+In the Default values tab, you can define preset values for the entries and specify permissions in
+
+the context of the entries.
+
+32 ELO packages
+
+
+
+Delete metadata form 
+
+Please note
+
+A metadata form can only be deleted if no entries in ELO are using the metadata form.
+
+If there are entries using the metadata form in ELO and they have been marked for deletion,
+
+the entries have to be deleted permanently first before the metadata form can be deleted.
+
+Method
+
+Open the package containing the metadata form.
+
+Click the metadata form you want to delete.
+
+The Form dialog box opens.
+
+Click Delete metadata form (recycle bin icon).
+
+A prompt dialog box opens.
+
+Confirm with Delete.
+
+Result
+
+The metadata form is deleted if possible.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+33 ELO packages
+
+
+
+Forms
+
+Forms (gen. 2) 
+
+The forms (gen. 2) are the new default for displaying metadata.
+
+They are configured in the form designer (gen. 2) and are characterized by the following, among
+
+others:
+
+Flexible, modern form layout
+
+Responsive design on different devices
+
+Various validation options
+
+Fully functional preview
+
+Information
+
+The form designer (gen. 2) can be opened via Views in the Aspects and Metadata forms
+
+areas.
+
+• 
+
+• 
+
+• 
+
+• 
+
+34 ELO packages
+
+
+
+Form designer (gen. 2) 
+
+The form designer (gen. 2) contains the following control items:
+
+1 Close: The Close button (arrow icon) closes the form designer.
+
+2 Fields/Items: You will find all available components for the form on the Fields and Items
+
+tab.
+
+3 Layout area: In the layout area, you design the form.
+
+4 Add block: Click the Add block button to add more layout formats in the layout area.
+
+5 View: Select the view you want to edit via the View drop-down menu.
+
+6 Create view: Click Create view (plus icon) to create a view.
+
+7 Designer: If the Designer button is enabled, you are in editing mode. You can change the
+
+layout of the form and the field settings.
+
+8 Preview: If the Preview button is enabled, you are in preview mode. You can test the form
+
+in different variants.
+
+9 Save: Click Save to save the form.
+
+Preview 
+
+Once you have placed and saved contents in the layout area, you can switch from editing mode to
+
+preview mode.
+
+Click Preview.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+35 ELO packages
+
+
+
+Preview mode is enabled. You will see the form.
+
+Test the form as needed.
+
+The following items are available:
+
+1 Device size: Display the preview for different device types.
+
+2 Preview area: You see the form fields.
+
+The form behaves as it would in actual use in the client. Fields can be completed to test their
+
+functionality.
+
+Example: A field with a validation function also checks whether the input is correct in the
+
+preview.
+
+2. 
+
+• 
+
+• 
+
+36 ELO packages
+
+
+
+Add items 
+
+Placing a field or aspect mapping 
+
+Place fields or aspect mappings in the layout area depending on the context. In the following, we
+
+explain this process based on a field.
+
+To place a field, drag it from the Fields tab to the layout area using drag-and-drop.
+
+Drop it in the desired position.
+
+Option: You can move aspect mappings in the same way.
+
+Add layout item 
+
+There are two ways to add a layout item (block):
+
+Using the Add block button
+
+Place blocks in the layout area using drag-and-drop.
+
+The following briefly explains the approach using the Add block button:
+
+In the layout area, click Add block.
+
+A drop-down menu appears.
+
+Select one of the options.
+
+The block is added.
+
+1. 
+
+2. 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+37 ELO packages
+
+
+
+Field properties 
+
+To edit the properties of a field, click the relevant field in the layout area.
+
+The Properties area opens.
+
+Edit the settings as required.
+
+Different settings are available depending on the field type. Read the following sections for
+
+more information.
+
+Click Save to save the data.
+
+1. 
+
+2. 
+
+3. 
+
+38 ELO packages
+
+
+
+General field properties 
+
+39 ELO packages
+
+
+
+40 ELO packages
+
+
+
+The following properties are available for all fields:
+
+Field type: Shows the selected field type. This cannot be changed here.
+
+Component: Shows the selected data type. This can be changed for some fields. 
+
+Title translation key: Shows the entered translation variable. Can be changed.
+
+Title: Shows the title depending on the Title translation key field.
+
+Name: Shows the technical name of the field. 
+
+Placeholder translation key: Shows the entered translation variable. Can be changed.
+
+Placeholder: Shows the placeholder depending on the Placeholder translation variable field.
+
+Field size: This option lets you set the size of the field.
+
+Disabled: If the Disabled option is enabled, the field is set to Read-only.
+
+Required: If the Required option is enabled, the field is a mandatory field.
+
+Information
+
+Only the general properties can be changed for the Relation and Check box field types in the
+
+form designer (gen. 2).
+
+Text in general, e-mail address, URL 
+
+The following properties are available for the Text and TextArea data type fields:
+
+Min. characters: Indicates the minimum number of characters that have to be entered in the
+
+field.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+41 ELO packages
+
+
+
+Max. characters: Indicates the maximum number of characters that can be entered in the
+
+field.
+
+Regular expression: Via this field, you can define a regular expression that is used to validate
+
+the field content.
+
+Error message for regular expression translation key: Here, you define the message to be
+
+shown in the event that validation fails. This is the case if the input does not match the
+
+regular expression defined above. Enter a corresponding translation variable.
+
+Error message for regular expression: Shows the error message of the regular expression
+
+corresponding to the translation variable.
+
+Integer 
+
+The following properties are available for Integer data type fields:
+
+Min. value: Indicates the smallest value that can be entered in this field.
+
+Max. value: Indicates the largest value that can be entered in this field.
+
+Floating-point number 
+
+The following properties are available for Double data type fields:
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+42 ELO packages
+
+
+
+Min. value: Indicates the smallest value that can be entered in this field.
+
+Max. value: Indicates the largest value that can be entered in this field. 
+
+Show thousands separators: If this option is enabled, separators are shown for thousands. 
+
+Number of decimal places: Defines how many decimal places will be shown. 
+
+Date 
+
+The following properties are available for Date_Only data type fields:
+
+Min. date: Indicates the lower limit for date selection.
+
+Max. date: Indicates the upper limit for date selection.
+
+Date and time 
+
+The following properties are available for Date_Time data type fields:
+
+Min. time: Indicates the lower limit for date and time selection.
+
+Max. time: Indicates the upper limit for date and time selection.
+
+Selection list 
+
+The following properties are available for Choice data type fields:
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+43 ELO packages
+
+
+
+Name of keyword list: Enter the name of the keyword list to be used for this field in this field.
+
+Information
+
+You are currently creating and editing the keyword list outside the package view. You can find
+
+more information on Keyword lists in the Keyword lists section.
+
+Relation 
+
+The general field properties are available for the Relation field. The relation target mapping is
+
+based on the field properties that were created when creating the field.
+
+User 
+
+The following properties are available for User data type fields:
+
+Restrict selection: Restricts the selection of the field content. You can choose between Both, 
+
+Group, or User.
+
+User from group: If you select Both for Restrict selection, you can select certain users from
+
+groups.
+
+Registered function 
+
+• 
+
+• 
+
+• 
+
+44 ELO packages
+
+https://docs.elo.com/admin/config/en-us/metadata-forms-and-fields/keywordlists.html
+https://docs.elo.com/admin/config/en-us/metadata-forms-and-fields/keywordlists.html
+https://docs.elo.com/admin/config/en-us/metadata-forms-and-fields/keywordlists.html
+
+
+Remove items from the layout area 
+
+Depending on the context, you will find fields, aspect mappings, or layout items in the layout area.
+
+These items are removed in the same way. In the following, we explain this process based on a
+
+field.
+
+Move the mouse cursor over a field in the layout area.
+
+An X icon appears on the field.
+
+Click the X icon.
+
+The field is removed from the layout area.
+
+1. 
+
+2. 
+
+45 ELO packages
+
+
+
+Create tabs 
+
+A form can be divided into tabs for a clearer structure. Follow the steps below.
+
+Information
+
+This function is currently only available for metadata form views.
+
+Create first tab 
+
+Open the metadata form view you want to edit.
+
+Click the Blocks tab.
+
+On the Blocks tab, you will see the Tabs item.
+
+Drag the Tabs item to the layout area and place it above the existing aspect mappings.
+
+The tab is shown.
+
+Option 1: Change the name of the tab under Properties > Tab name.
+
+1. 
+
+2. 
+
+3. 
+
+46 ELO packages
+
+
+
+Option 2: Enter something under Properties > API name.
+
+Click Save.
+
+The first tab is created.
+
+Add tabs 
+
+To add another tab, click the plus icon.
+
+The tab is shown.
+
+Option 1: Change the name of the tab under Properties > Tab name.
+
+4. 
+
+1. 
+
+47 ELO packages
+
+
+
+Option 2: Enter something under Properties > API name.
+
+Option 3: Repeat the steps above until you have created all the tabs you want.
+
+Click Save.
+
+Multiple tabs have been created.
+
+Placing aspect mappings 
+
+Drag an aspect mapping to the desired tab and drop it.
+
+You can drag the aspect mappings to the respective tab in the layout area from both the
+
+layout area and the Aspect mappings tab.
+
+Optional: Repeat the step for additional aspect mappings as needed.
+
+Click Save.
+
+The created tabs are now filled with aspect mappings.
+
+Delete tab 
+
+Click the tab you want to delete.
+
+Click the X icon in the tab bar.
+
+The tab is deleted.
+
+Click Save to save the changes.
+
+2. 
+
+1. 
+
+2. 
+
+1. 
+
+2. 
+
+3. 
+
+48 ELO packages
+
+
+
+Keyword lists
+
+Overview 
+
+Keyword lists are used to standardize entries and make it easier to enter metadata. Keyword lists
+
+are required for fields of the Selection list type. In addition, kanban views, for example, are based
+
+on keyword lists.
+
+In the Keyword lists area, you create, edit, and manage the keyword lists within a package.
+
+Add keyword list: Click the Add keyword list button to add a keyword. Each keyword list must
+
+contain at least one keyword.
+
+Keyword lists: The table contains all the available keyword lists in this package.
+
+Search for keyword list: You can search for keyword lists using the Search button (magnifying
+
+glass icon).
+
+Import keyword list: The Import keyword list button allows you to import keyword lists as TXT
+
+files if there are presently no values for the current list yet.
+
+Delete keyword list: Click the Delete keyword list button to remove the current keyword list.
+
+Identifier: The technical name of the keyword list.
+
+Translation variable: Translation variable for the display name of the keyword list.
+
+Name: The display name of the keyword list.
+
+Keywords: The Keywords list shows all the keywords in the list.
+
+Add keyword: Click the Add keyword button to add a keyword to the keyword list.
+
+Search for keyword: You can search for keywords using the Search button (magnifying glass
+
+icon).
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+6. 
+
+7. 
+
+8. 
+
+9. 
+
+10. 
+
+11. 
+
+49 ELO packages
+
+
+
+Add keyword list 
+
+To add a keyword list, follow the steps below.
+
+Open the Keyword lists area.
+
+Click the Add keyword list button.
+
+The Keyword list dialog box opens.
+
+Edit the metadata of the keyword list:
+
+Identifier: Enter a technical name for the keyword list in the Identifier field.
+
+Translation variable: Enter a translation variable into this field. Alternative: Select an
+
+existing translation variable with the List button (list icon).
+
+Name: Enter the display name of the keyword list and click Save (floppy disk icon).
+
+Add at least one keyword.
+
+Alternative: Click the Import keyword list button to import a keyword list as a TXT file.
+
+Click the Save keyword list button.
+
+The keyword list is created.
+
+1. 
+
+2. 
+
+3. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+4. 
+
+5. 
+
+50 ELO packages
+
+
+
+Edit keyword list 
+
+You have the following options for editing keyword lists:
+
+Add keyword
+
+Change the order of keywords
+
+Delete keyword
+
+Delete keyword list
+
+Add keyword 
+
+To add an entry to a keyword list, follow the steps below.
+
+Under Keyword lists, click the keyword list you want to add an entry to.
+
+The Keyword list dialog box opens.
+
+Click the Add keyword button (plus icon).
+
+The Keyword dialog box opens.
+
+Enter a technical name in the Identifier field.
+
+Enter a translation variable into the Translation variable field.
+
+Alternative: Select an existing translation variable with the List button (list icon).
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+51 ELO packages
+
+
+
+Enter the display text of the translation variable into the Name field.
+
+Click Save (floppy disk icon).
+
+Click the Save keyword list button.
+
+The keyword is added to the list.
+
+Change the order of keywords 
+
+You can change the order of the keywords using drag-and-drop.
+
+Under Keyword lists, click the keyword list you want to add an entry to.
+
+The Keyword list dialog box opens. Under Keywords, you can see all the keywords you have
+
+already created.
+
+Click on the keyword you want to move and keep the mouse button pressed.
+
+Move the keyword to the desired position.
+
+Release the mouse button.
+
+The keyword is inserted at the new position.
+
+Click the Save keyword list button.
+
+6. 
+
+7. 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+52 ELO packages
+
+
+
+Delete keyword 
+
+Under Keyword lists, click the keyword list you want to remove a keyword from.
+
+The Keyword list dialog box opens. Under Keywords, you can see all the keywords you have
+
+already created.
+
+Click on the keyword you want to delete.
+
+The Keyword dialog box opens.
+
+Click the Delete keyword button.
+
+Click the Save keyword list button.
+
+The keyword is removed.
+
+Delete keyword list 
+
+Under Keyword lists, click the keyword list you want to remove.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+1. 
+
+53 ELO packages
+
+
+
+The Keyword list dialog box opens.
+
+Click the Delete keyword list button.
+
+The Delete keyword list dialog box opens.
+
+Click Delete.
+
+The keyword list is deleted.
+
+2. 
+
+3. 
+
+54 ELO packages
+
+
+	Table of contents
+	Aspects
+	Aspects
+	Create aspect
+	Add fields
+	Create view for aspect
+	Close the form designer
+
+	Delete item
+
+	Metadata forms
+	Metadata forms
+	Create metadata form
+	Configure content
+	Create overview
+
+
+	Configure metadata forms
+	Assign aspects
+	Create views
+	Create dashboards
+	Configure usage
+	Configure default values
+
+	Delete metadata form
+
+	Forms
+	Forms (gen. 2)
+	Form designer (gen. 2)
+	Preview
+
+	Add items
+	Placing a field or aspect mapping
+	Add layout item
+
+	Field properties
+	General field properties
+	Text in general, e-mail address, URL
+	Integer
+	Floating-point number
+	Date
+	Date and time
+	Selection list
+	Relation
+	User
+
+	Remove items from the layout area
+	Create tabs
+	Create first tab
+	Add tabs
+	Placing aspect mappings
+	Delete tab
+
+
+	Keyword lists
+	Overview
+	Add keyword list
+	Edit keyword list
+	Add keyword
+	Change the order of keywords
+	Delete keyword
+	Delete keyword list
+
+
+

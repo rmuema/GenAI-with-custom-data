@@ -1,0 +1,578 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO for CAS | ELO Integration Service for SmartWe
+
+
+ELO for CAS
+
+ELO Integration Service for SmartWe
+
+
+
+3
+
+3
+
+4
+
+9
+
+12
+
+14
+
+Table of contents
+
+ELO for SmartWe
+
+Introduction 
+
+ELO configuration 
+
+Configuration in SmartWe 
+
+Usage example 
+
+OAuth authentication 
+
+2 ELO for CAS
+
+
+
+ELO for SmartWe
+
+Introduction 
+
+This documentation describes how to set up the ELO Integration Service for SmartWe. This service
+
+provides the technical platform for implementing the ELO Integration Client in SmartWe. Following
+
+installation, the ELO Integration Client is available as an iframe in correspondingly configured
+
+objects in the SmartWe application.
+
+When the ELO Integration Client is called within SmartWe, a configurable path is created (assuming
+
+one doesn't already exist) and displayed in ELO. This provides the user with the functions of the
+
+ELO Integration Client, which can also be customized if required.
+
+ELO basics 
+
+To use the ELO Integration Service for SmartWe and the ELO Integration Client within SmartWe, the
+
+systems must meet the following requirements:
+
+ELOprofessional or ELOenterprise version 12 and higher
+
+Depending on the version, at least the following modules are required: 
+
+ELO 23: 
+
+ELOwf 23.00.000
+
+ELO 21: 
+
+ELOwf 21.00.000
+
+ELO 20: 
+
+ELOwf 20.05.000
+
+ELO 12: 
+
+ELOwf 12.06.000
+
+ELO Business Solutions Common version 1.13.000 or higher
+
+Installed and configured ELOauth plug-in
+
+Correctly set SameSite flag (see ELO Integration Client documentation)
+
+The ELO license must also include the ELO Integration Client.
+
+• 
+
+• 
+
+◦ 
+
+▪ 
+
+◦ 
+
+▪ 
+
+◦ 
+
+▪ 
+
+◦ 
+
+▪ 
+
+• 
+
+• 
+
+• 
+
+3 ELO for CAS
+
+https://docs.elo.com/admin/integration-client/en-us/installation-operation/known-issues.html#samesite-flag
+https://docs.elo.com/admin/integration-client/en-us/installation-operation/known-issues.html#samesite-flag
+
+
+ELO configuration 
+
+First, you need to install and configure the ELO Integration Service for SmartWe in the ELO system.
+
+You will find the necessary installation packages on the ELO SupportWeb under Integration. The ELO
+
+installation package contains the following files:
+
+crm.csw.integrationservice
+
+custom_crm.csw.integrationservice
+
+The ELO Integration Client also requires a configuration file in ELOapps:
+
+elo.integration.Client
+
+'elo.integration.client' configuration file 
+
+To use the ELO Integration Client, you need the configuration file elo.integration.client in JSON
+
+format, which is stored in the Administration folder. You will find this configuration file under this
+
+path:
+
+//Administration//ELOapps//Configuration//elo.integration.Client
+
+If it does not yet exist, create it with the following parameters. This is essential for calling
+
+the client.
+
+Alternative: If this file already exists because the ELO Integration Client is already being used
+
+in other systems, you need to add the entry "csw".
+
+• 
+
+• 
+
+• 
+
+1. 
+
+{
+
+"csw": {
+
+    "noForm": false,
+
+    "noFeed": false,
+
+    "noFulltext": false,
+
+    "noImagePreview": false,
+
+    "rFInit": "RF_crm_csw_integrationservice_service_Init",
+
+    "newDocVersFct": true,
+
+    "saveDocFct": true,
+
+    "gotoFct": true,
+
+    "webClientURL":"http(s)://<ELOSERVER>:<PORT>/ix-<REPOSITORY>/plugin/
+
+                   de.elo.ix.plugin.proxy/web/",
+
+    "editInOfficeFct": true,
+
+    "removeEntryFct": true,
+
+    "startWorkflowFct": false,
+
+    "startWorkflowTemplates": null,
+
+    "externalLinkFct": true,
+
+    "folderMask": "(E10E1000-E100-E100-E100-E10E10E10E31)",
+
+    "documentMask": "(E10E1000-E100-E100-E100-E10E10E10E30)",
+
+4 ELO for CAS
+
+https://supportweb.elo.com/en-us/integration/elo-for-cas.html
+https://supportweb.elo.com/en-us/integration/elo-for-cas.html
+
+
+Be sure to check the following important parameters when creating or modifying the file:
+
+rFInit: Function that creates the folder path in ELO; provided with the
+
+crm.csw.integrationservice package.
+
+webClientURL: URL to open the ELO Web Client when the GoTo function is enabled. To
+
+prevent the user from having to log on multiple times, the proxy behind the ELO
+
+Indexserver must be configured. The ELO Web Client should be configured accordingly
+
+as a plug-in behind the ELOix proxy (recommended method).
+
+folderMask: Defines the metadata form that the ELO Integration Service for SmartWe
+
+uses to create new structures based on the SmartWe object.
+
+documentMask: Defines the metadata form that the ELO Integration Service for
+
+SmartWe uses when filing documents from the ELO Integration Client within SmartWe.
+
+You can use metadata forms that pass information onto the objects.
+
+For more information on the parameters of this configuration file, refer to the technical
+
+documentation on the ELO Integration Client.
+
+Configuration of ELO Integration Client for SmartWe 
+
+Once you have successfully installed the ELO packages, you will find the configuration app in the
+
+ELO Administration Console under:
+
+//Solutions//ELO for SmartWe//ELO Integration Service
+
+    "hasSearch": true,
+
+    "referenceEntryFct": true,
+
+    "refreshFct": true
+
+    }
+
+}
+
+2. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+5 ELO for CAS
+
+https://docs.elo.com/admin/integration-client/en-us/
+https://docs.elo.com/admin/integration-client/en-us/
+
+
+Now click on the ELO Integration Service tile to access the configuration interface of the ELO
+
+Integration Service for SmartWe.
+
+You can make the following configurations in the Structures and folders configuration area:
+
+General settings
+
+Structure and metadata matching
+
+Assignment of user and group rights
+
+• 
+
+• 
+
+• 
+
+6 ELO for CAS
+
+
+
+General settings 
+
+Under General settings, you can now create configurations for each SmartWe object. As soon as
+
+you add a new entry, corresponding lines are automatically created in the Structures and metadata
+
+matching area. Lines are also created in the Assignment of user and group rights area.
+
+Object: In the Object column, enter the name of the object you are creating the configuration for.
+
+The selected object name must correspond to the SmartWe name of the object type (objectType
+
+attribute in SmartWe) that you want to configure the object type for.
+
+Intermediate form: In the Intermediate form column, enter the metadata form for folders that may
+
+have to be created on storage so that the specified path can be generated.
+
+Folder form: The final metadata form is specified in the Folder form column. You have the option to
+
+specify it with the GUID or the name of the metadata form.
+
+Document form: This is where you specify which metadata form to use when filing from SmartWe.
+
+You can enter the same form as in the ELO Integration Client configuration file, or a separate one for
+
+each SmartWe object.
+
+Structure and metadata matching 
+
+As described in the section General settings, when you create an entry under General settings, a
+
+separate entry for the object is automatically created in the Structure and metadata matching area.
+
+Object: This entry is copied directly from the Object column under General settings and can also
+
+only be modified in this area.
+
+Repository path: The filing path in ELO is defined in the Repository path column. In this field, you
+
+can also enter SmartWe variables passed in the URL, e.g. using Handlebars syntax.
+
+7 ELO for CAS
+
+
+
+ELO field matching: This where you specify how to complete the fields on the metadata form
+
+defined under Folder form. In our example, it is the Folder metadata form. Choose between GRP for
+
+metadata field and MAP for map fields and enter the technical name of the field here.
+
+ELO field: In MAP fields, it is possible to use iteration by attaching the value {i} to the technical
+
+name. This is useful for transferring multiple values for a parameter passed from SmartWe, for
+
+example.
+
+If the metadata fields do not exist in the metadata form, the corresponding values will be lost and
+
+written as a warning in the log.
+
+Value in Handlebars: The value entered here is stored in the corresponding ELO field in the ELO
+
+entry. To copy the value of the transfer parameter from the URL, it must be enclosed in triple curly
+
+brackets.
+
+If the values are iterated, you can use the {i} identifier to indicate the Handlebars.
+
+Please note
+
+If an iteration is defined but there is no {i} in the ELO field, all values will be concatenated
+
+in this field up to a maximum of 255 characters. Any values above this will be rejected.
+
+Key field: You can select one key field. The value of the key field is used to specify a property of the
+
+object that remains a unique identifier even when other data changes. For example, you can
+
+specify an ID that uniquely identifies an object.
+
+This ensures that an object is not created twice (with a new name) in the repository, for example.
+
+Instead, the corresponding folder is found and a new path is created according to the new name.
+
+The folder and its contents are moved to this new path. The documents that were stored under the
+
+old name remain in the folder with the new name.
+
+8 ELO for CAS
+
+
+
+Configuration in SmartWe 
+
+Before you can use the ELO Integration Service in SmartWe, you have to do some configurations in
+
+SmartWe.
+
+Method
+
+Subscribe to the ELO Integration Service in the SmartWe App Store.
+
+In the SmartWe administration area, a new entry for ELO for SmartWe appears om the 
+
+Administration tab.
+
+1. 
+
+2. 
+
+9 ELO for CAS
+
+https://appstore.smartwe.world/details/smartdesignx.elo.integration
+https://appstore.smartwe.world/details/smartdesignx.elo.integration
+
+
+3. 
+
+10 ELO for CAS
+
+
+
+Click the ELO for SmartWe button.
+
+Enter the URL of your ELO Indexserver in the dialog box. Use the following syntax: http(s)://
+
+<ELOSERVER>:<PORT>/ix-<REPOSITORY>/ix
+
+Click Save.
+
+Result
+
+SmartWe now communicates with ELO and you can use the ELO Integration Service in SmartWe.
+
+4. 
+
+5. 
+
+11 ELO for CAS
+
+
+
+Usage example 
+
+After successful configuration, the ELO Integration Client is available for the corresponding objects.
+
+12 ELO for CAS
+
+
+
+The screenshot shows an example of the corresponding ELO configuration.
+
+13 ELO for CAS
+
+
+
+OAuth authentication 
+
+ELO for SmartWe uses oAuth authentication to authenticate the SmartWe user. You therefore need
+
+to install the ELOauth plug-in and configure it accordingly.
+
+You can download the ELOauth plug-in on the ELO SupportWeb. The installation process is described
+
+in the ELOauth plug-in documentation.
+
+The plug-in is configured using a JSON file named de.elo.ix.plugin.auth.json located in the ELO
+
+Indexserver configuration directory:
+
+Add the following entry to your ELOauth plugin-in configuration file and store your required values.
+
+The clientUrl parameter is passed to the /login/ request. It is redirected after authentication to call
+
+the ELO Integration Client or ELO Web Client, for example.
+
+The parameter is available with ELOauth version 1.5.0.
+
+The values you need to enter for appKey and appSecret are provided by ELO. The <smartWE
+
+instance URL> can be taken from your browser. This is the URL used to call your SmartWe instance.
+
+Example: https://beta.smartwe.de
+
+In the example shown here, the mapping value is set to mail. This means that the system checks
+
+whether the e-mail field of the ELO user matches an e-mail address transferred from SmartWe.
+
+<ELO-Inst>/config/ix-<repository>/<server name>
+
+{
+
+"smartWe":{
+
+     "clientUrl": "http(s)://<ELOSERVER>:<PORT>/ix-<REPOSITORY>/plugin/de.elo.ix.plugin.proxy/wf/
+
+                  apps/app/elo.integration.Client/?debug=false&system=csw",
+
+    "mapping": "mail",
+
+    "api": "default",
+
+    "appKey":"elo-pkce-2cdbb0e0-01e0-45df-a9be-a853c35fd37f.smartwe.de",
+
+    "appSecret":"eloPkce2022",
+
+    "authorizationBaseUrl":"https://<URL smartWe Instanz>/identity/oauth/auth",
+
+    "accessTokenEndpoint":"https://<URL smartWe Instanz>/identity/oauth/token",
+
+    "userInfoEndpoint": "https://<URL smartWe Instanz>/identity/oauth/userinfo",
+
+    "defaultScope": "openid email",
+
+    "pkce": true,
+
+    "userInfoJsonPath": "email"
+
+    }
+
+}
+
+14 ELO for CAS
+
+https://docs.elo.com/admin/config/en-us/elo-indexserver/eloauth-plugin/configuration.html#saml
+https://docs.elo.com/admin/config/en-us/elo-indexserver/eloauth-plugin/configuration.html#saml
+
+
+To check this, go to //System settings//User manager in the ELO Administration Console and select
+
+the user.
+
+15 ELO for CAS
+
+
+	Table of contents
+	ELO for SmartWe
+	Introduction
+	ELO basics
+
+	ELO configuration
+	'elo.integration.client' configuration file
+	Configuration of ELO Integration Client for SmartWe
+	General settings
+	Structure and metadata matching
+
+
+	Configuration in SmartWe
+	Usage example
+	OAuth authentication
+
+

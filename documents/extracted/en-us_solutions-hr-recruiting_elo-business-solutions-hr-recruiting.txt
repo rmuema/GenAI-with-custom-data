@@ -1,0 +1,1382 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Business Solution ELO HR Recruiting | Business Solution ELO HR Recruiting 1.03
+
+
+Business Solution ELO HR
+
+Recruiting
+
+Business Solution ELO HR Recruiting 1.03
+
+
+
+3
+
+4
+
+10
+
+22
+
+36
+
+39
+
+Table of contents
+
+Introduction
+
+Basics
+
+Posting
+
+Application process
+
+Correspondence with candidates
+
+Dashboard overview
+
+2 Business Solution ELO HR Recruiting
+
+
+
+Introduction
+
+Structure of the documentation
+
+The goal of this documentation is to explain all functions of Business Solution ELO HR Recruiting.
+
+Basics
+
+The Basics chapter explains the basics of the ELO HR Recruiting program interface.
+
+Possible actions
+
+The remaining chapters address possible actions using ELO HR Recruiting.
+
+Target audience
+
+This documentation is addressed to Business Solution ELO Recruiting users. Separate
+
+documentation is available for administrators on the ELO SupportWeb.
+
+The scope of functions presented in this documentation may differ greatly from those in your
+
+client.
+
+If you do not find functions described in this documentation in your client, you do not have
+
+permission to perform the action.
+
+The majority of functions can only be performed by employees of the HR department. Only the 
+
+Submit personnel request function may be performed by department heads.
+
+3 Business Solution ELO HR Recruiting
+
+
+
+Basics
+
+Basic principle
+
+Business Solution ELO HR Recruiting covers the entire recruitment process within a company, from
+
+submitting a job request to hiring or turning down a candidate.
+
+You can also publish job postings and accept applications on connected job portals.
+
+General note
+
+ELO HR Recruiting works with the following clients:
+
+ELO Web Client
+
+ELO Java Client
+
+ELO Desktop Client
+
+Information
+
+In this documentation, we use screenshots from the ELO Web Client.
+
+Refer to the specific ELO client documentation for more details on how they work in general.
+
+Requirements
+
+Your administrator must have configured ELO HR Recruiting for you.
+
+• 
+
+• 
+
+• 
+
+4 Business Solution ELO HR Recruiting
+
+https://docs.elo.com/user/elo-web-client/en-us/elo-web-client/
+https://docs.elo.com/user/elo-web-client/en-us/elo-web-client/
+https://docs.elo.com/user/elo-java-client/en-us/elo-java-client/
+https://docs.elo.com/user/elo-java-client/en-us/elo-java-client/
+https://docs.elo.com/user/elo-desktop-client/en-us/elo-desktop-client/
+https://docs.elo.com/user/elo-desktop-client/en-us/elo-desktop-client/
+
+
+Program interface
+
+Fig.: Business Solution ELO HR Recruiting program interface
+
+You will find ELO HR Recruiting functions in the following areas:
+
+1 Candidates & positions and New application tiles in the tile navigation area
+
+The screenshot shows all ELO HR Recruiting tiles in a group. However, this view can vary
+
+depending on your individual configuration.
+
+2 Candidate group on the New tab
+
+You can use the functions in this group to create new jobs, postings, candidate pools, and 
+
+applications.
+
+Fig.: 'Recruiting' tab
+
+3 'Recruiting' tab
+
+When you select a candidate, the Recruiting tab opens.
+
+On this tab, you can do things such as send e-mails to candidates.
+
+5 Business Solution ELO HR Recruiting
+
+
+
+Fig.: 'Position' tab
+
+4 Position tab
+
+As soon as you select a position, the Position tab appears where you can close the position or 
+
+publish a posting.
+
+Fig.: 'Submit personnel request' function
+
+5 Submit personnel request on the New tab in the Self-service group
+
+The Submit personnel request function is mainly used by supervisors to notify the HR department
+
+that they have a staffing requirement.
+
+Repository
+
+The structure and appearance of the repository depend greatly on your specific configuration. The
+
+default state is described here.
+
+Candidate files and positions are filed under // Recruiting.
+
+6 Business Solution ELO HR Recruiting
+
+
+
+Fig.: 'Candidates by phase' and 'Pools' folders
+
+Candidate files are filed to the // Candidates by phase folder.
+
+Fig.: 'Positions' and 'Positions by status' folders
+
+Positions are filed to the // Positions folder and can also be accessed through the // Positions by
+
+status folder.
+
+Candidate files are also assigned to the position the candidate applied to. Otherwise, they are
+
+assigned to a pool in the // Pools folder.
+
+7 Business Solution ELO HR Recruiting
+
+
+
+Candidate file
+
+Fig.: 'Candidate' form
+
+The file of a candidate is assigned the Candidate form. You can store additional documents for a
+
+candidate, such as a photo, cover letter, and any correspondence in the file.
+
+The Candidate form consists of the tabs Cover sheet, Candidate data, Communication, and Rating.
+
+8 Business Solution ELO HR Recruiting
+
+
+
+Position file
+
+Fig.: 'Position request' form
+
+A position file contains the Position request form as well as the position posting and candidates
+
+who have applied. The Position request form contains an overview of the most important data
+
+related to the position.
+
+9 Business Solution ELO HR Recruiting
+
+
+
+Posting
+
+To publish a posting, you will first have to create a position in ELO.
+
+You can create a position as follows:
+
+Department heads or executive managers can submit a request via New > Self-service > 
+
+Submit personnel request. The personnel request now has to be approved by the HR
+
+department.
+
+Employees from the HR department create positions via New > Recruiting > New position.
+
+Once a position has been created, a posting has to be created and published for the position. If the
+
+position is no longer required, it can be closed again. The remaining candidates are sent rejections.
+
+Fig.: Positions with postings and candidates
+
+When a position is created, it is assigned a folder in ELO. The posting and all relevant candidates
+
+are filed to this folder, along with any other related documents.
+
+Status
+
+Every position has a status. The following statuses are available:
+
+D - Draft: The position has already been created, but is still being edited.
+
+S - Submitted: A personnel request was submitted and is currently in the approval process.
+
+A - Approved: The position has been approved. A posting can be created.
+
+X - Rejected: The position was rejected.
+
+O - Open: The position is open for applications. The associated posting has the status Active.
+
+C - Closed: The position was closed.
+
+Submit personnel request
+
+Information
+
+As the department head, you want to submit a personnel request for your department.
+
+Method
+
+On the New tab, click Self-service > Submit personnel request.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+10 Business Solution ELO HR Recruiting
+
+
+
+Fig.: 'Personnel request' dialog box
+
+Complete the fields in the Personnel request dialog box as required.
+
+Mandatory fields are marked with a red asterisk.
+
+Fields with a pencil icon contain keyword lists. When you enter a value in the respective field,
+
+matching list entries appear.
+
+Description: Enter the requirements in brief, as the description is only intended for internal use.
+
+1. 
+
+1. 
+
+11 Business Solution ELO HR Recruiting
+
+
+
+Click OK.
+
+Result
+
+The personnel request is sent to the HR department.
+
+Outlook
+
+If the HR department approves the personnel request, it can then publish a posting. You will be
+
+notified as to whether the personnel request has been approved in your Tasks work area.
+
+Approve personnel request
+
+Information
+
+You have received a personnel request from a department head or executive manager in your Tasks
+
+work area. You would like to confirm the personnel request.
+
+Method
+
+Select the Personnel request workflow with the personnel request.
+
+Optional: Click Accept workflow to process the form.
+
+1. 
+
+12 Business Solution ELO HR Recruiting
+
+
+
+Fig.: 'Complete position request' form
+
+In the Complete position request form, check the personnel request.
+
+Enter a comment about the submitted personnel request to the My comment text field and
+
+click Confirm.
+
+Result
+
+The personnel request is approved. The position can be found in the repository under // Positions by
+
+status // Approved.
+
+The user who submitted the personnel request receives a notification.
+
+Outlook
+
+1. 
+
+2. 
+
+13 Business Solution ELO HR Recruiting
+
+
+
+You can create and publish a posting.
+
+Personnel request was approved
+
+Information
+
+The personnel department has approved your personnel request. You will receive a notification in
+
+your Tasks work area for notification and to review.
+
+Method
+
+Select the Personnel request approved workflow.
+
+Fig.: 'Personnel request approved' form
+
+In the form, click Confirm.
+
+1. 
+
+1. 
+
+14 Business Solution ELO HR Recruiting
+
+
+
+Result
+
+You confirm that you have acknowledged the possibly revised position.
+
+Create new position
+
+Information
+
+As an employee from the HR department, you want to create a new position.
+
+Method
+
+On the Recruiting tab, click New position.
+
+Fig.: 'Position request' dialog box
+
+1. 
+
+1. 
+
+15 Business Solution ELO HR Recruiting
+
+
+
+Complete the fields in the Position request dialog box as required.
+
+Mandatory fields are marked with a red asterisk.
+
+Fields with a pencil icon contain keyword lists. When you enter a value in the respective field,
+
+matching list entries appear.
+
+Position number: You can enter a number based on your system. If you leave this field blank, a
+
+number is automatically generated when a position is filed to the repository.
+
+Start approval process: If you want to initiate an approval process for the position, check this box.
+
+Click OK.
+
+Result
+
+The position is created in ELO.
+
+Outlook
+
+To publish the position, you have to create a new posting for it.
+
+Create new posting
+
+Information
+
+A personnel request was received and approved. You would like to post the position. Once you have
+
+entered information for internal use when creating the position, you now formulate the text for the
+
+posting.
+
+To publish the position, you first have to create a posting. You can then publish the posting on a job
+
+portal.
+
+Method
+
+Select the position you want to publish.
+
+You can also create a posting without having selected a position. When you select a position, the
+
+posting is automatically allocated correctly, and several fields are filled in automatically.
+
+On the New tab, click Recruiting > New posting.
+
+1. 
+
+1. 
+
+1. 
+
+16 Business Solution ELO HR Recruiting
+
+
+
+Fig.: 'Posting' dialog box
+
+Complete the fields in the Posting dialog box as required.
+
+Mandatory fields are marked with a red asterisk.
+
+Fields with a pencil icon contain keyword lists. When you enter a value in the respective field,
+
+matching list entries appear.
+
+Posting number: The posting number is generated automatically as soon as you have created the
+
+posting.
+
+Result
+
+1. 
+
+17 Business Solution ELO HR Recruiting
+
+
+
+Fig.: Posting in the repository
+
+The posting is created in the position folder. Its status is I - Inactive.
+
+Outlook
+
+With the Publish posting function, you can publish the posting on a job portal.
+
+Publish posting
+
+Information
+
+You want to publish a posting to a job portal.
+
+Requirement
+
+You must have created the position with the Posting function.
+
+Method
+
+Select the posting you want to publish.
+
+On the Position tab, click Publish posting.
+
+1. 
+
+2. 
+
+18 Business Solution ELO HR Recruiting
+
+
+
+Fig.: 'Publish a new posting' dialog box
+
+Complete the fields in the Publish a new posting dialog box as required.
+
+The grayed out fields cannot be edited.
+
+Publish date: You can publish the position on a certain date or effective immediately.
+
+Transfer to GOhiring: If you select this option, a button will appear in the posting form that redirects
+
+you to GOhiring.
+
+Click OK.
+
+Result
+
+The posting is published on the job portal on the desired date.
+
+The status of the posting is A - Active.
+
+Outlook
+
+You can edit the posting on GOhiring.
+
+1. 
+
+1. 
+
+19 Business Solution ELO HR Recruiting
+
+
+
+Fig.: 'Edit GOhiring posting' button
+
+The Edit GOhiring posting button takes you to GOhiring where you can publish the posting.
+
+Close position
+
+Information
+
+If you have filled a position or no longer want to, the position has to be closed in ELO as well. The
+
+remaining candidates automatically receive rejections and are moved to a talent pool if applicable.
+
+Method
+
+Select the position you want to close.
+
+On the Position tab, click Close position.
+
+Fig.: 'Close position' dialog box
+
+1. 
+
+2. 
+
+20 Business Solution ELO HR Recruiting
+
+
+
+In the Close position dialog box, you will see an overview of the remaining candidates.
+
+Optional: Enter the information for the individual candidates to the fields.
+
+Talent pool: If a candidate has agreed to being added to the talent pool via the job portal, the box
+
+under Talent pool will be checked. If you do not want to add the candidate to your talent pool,
+
+uncheck this box.
+
+If a candidate has not agreed to being added to the talent pool, you must not check this box.
+
+Template: Select a suitable rejection for the respective candidate.
+
+Result
+
+The status of the position then changes to Closed. No more applications will be accepted for the
+
+position.
+
+The candidates receive rejections by e-mail. The files of the candidates added to the talent pool are
+
+automatically moved to the talent pool.
+
+21 Business Solution ELO HR Recruiting
+
+
+
+Application process
+
+Applications can either be received through a job portal or be created using the Create new
+
+application function.
+
+Generally, applications are assigned to a position or a candidate pool.
+
+Each candidate has an application phase. Using the dashboard, you can simulate real recruitment
+
+phases by moving candidates.
+
+You can rate candidates based on selected criteria or request ratings from decision-makers to help
+
+make a decision.
+
+If you use both ELO HR Recruiting and ELO HR Personnel File, you can create personnel files for new
+
+employees using the Hire candidate function.
+
+Create new application
+
+Information
+
+You have received an application through a channel other than the job portal. You'd like to file the
+
+application.
+
+Method
+
+Select the position where you want to create the application. This can be a position or a
+
+candidate pool.
+
+Information
+
+If you do not select a position or candidate pool, a separate structure is created for the
+
+application.
+
+On the New tab, click Recruiting > New application.
+
+1. 
+
+1. 
+
+22 Business Solution ELO HR Recruiting
+
+https://docs.elo.com/user/hr-personnel-file/en-us/elo-business-solutions-hr-personnel-file/
+https://docs.elo.com/user/hr-personnel-file/en-us/elo-business-solutions-hr-personnel-file/
+
+
+Fig.: 'Application' dialog box
+
+Complete the fields in the Application dialog box as required.
+
+If you have selected a position or candidate pool first, the Position number and Name fields will
+
+already be completed.
+
+Mandatory fields are marked with a red asterisk.
+
+Fields with a pencil icon contain keyword lists. When you enter a value in the respective field,
+
+matching list entries appear.
+
+Candidate number: The candidate number is generated automatically as soon as you have created
+
+an application.
+
+Click OK.
+
+Result
+
+1. 
+
+1. 
+
+23 Business Solution ELO HR Recruiting
+
+
+
+Fig.: Candidate in the 'New application' folder
+
+The application is filed and assigned the New application phase.
+
+Fig.: Candidate in the folder of the selected position
+
+If you have selected a position or a candidate pool, the application is filed to the corresponding
+
+folder. If you have not selected a position or candidate pool, a separate folder is created.
+
+Outlook
+
+24 Business Solution ELO HR Recruiting
+
+
+
+Fig.: Candidate form
+
+You can add application documents via the form. Simply click the desired tab.
+
+Ranking: Enter a ranking for the candidate ranging from A to C via the drop-down menu. The
+
+ranking is also shown on the candidate Cover sheet tab.
+
+Add the information and confirm via Save.
+
+With the Add picture function, you can add a picture to the candidate file.
+
+25 Business Solution ELO HR Recruiting
+
+
+
+Move candidate file
+
+Information
+
+You can move the candidate files to map the recruitment process. Candidate files can be moved
+
+within a position to different phases, as well as between positions and talent pools.
+
+Method: Phases
+
+On your My ELO home screen, click the Candidates & positions tile.
+
+Click where you want to move the candidate files to.
+
+Fig.: 'Phases' button
+
+Optional: Click Phases when you are in the table view.
+
+Fig.: Drop-down menu
+
+If the status changes within a phase, use the drop-down menu.
+
+Move the candidate file to the new phase via drag-and-drop.
+
+Result: Phases
+
+1. 
+
+2. 
+
+1. 
+
+26 Business Solution ELO HR Recruiting
+
+
+
+The phase of the candidate file now also changes in the repository.
+
+Method: Position and talent pool
+
+On your My ELO home screen, click the Candidates & positions tile.
+
+Click anywhere in the position overview.
+
+In the left bar with the position overview, click Talent pool.
+
+Optional: Click Phases when you are in the table view.
+
+Fig.: Candidate in the talent pool
+
+Click the candidate and drag-and-drop the file to the selected position.
+
+1. 
+
+2. 
+
+3. 
+
+1. 
+
+27 Business Solution ELO HR Recruiting
+
+
+
+Fig.: 'Move application' dialog box
+
+In the Move application dialog box, select a phase for the candidate after you have moved
+
+the file.
+
+You have the following options:
+
+Remain in current phase: The candidate is in the same phase as before in the talent pool.
+
+Treat as new application: Regardless of the previous phase, the candidate is moved to the 
+
+New application phase with the status Moved.
+
+Edit: Via the drop-down menus, you can choose the candidate's phase and status.
+
+Result
+
+The candidate appears in the dashboard next to the newly selected position in the selected phase.
+
+Information
+
+The candidate is also assigned to the position in the repository. This may take a few
+
+minutes.
+
+Rate candidate
+
+Information
+
+You have the option to rate candidates during different phases of the recruitment process. Various
+
+categories are available.
+
+Employees from the HR department can submit the criteria to be rated to other users involved in
+
+the recruitment process.
+
+Method
+
+Select the file of the candidate you want to request ratings for.
+
+1. 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+1. 
+
+28 Business Solution ELO HR Recruiting
+
+
+
+On the Recruiting tab, click Request ratings.
+
+Fig.: 'Select questionnaire' dialog box
+
+In the Select questionnaire dialog box, select the questionnaire you want to assign.1. 
+
+29 Business Solution ELO HR Recruiting
+
+
+
+Fig.: 'Rating process' dialog box
+
+In the Rating process dialog box, determine who should rate the candidate under Check
+
+steps. Clicking the Add step button inserts an additional input field for an additional check
+
+step.
+
+Optional: Add another rating criterion by clicking Add criterion.
+
+Click OK.
+
+Result
+
+The selected employees receive the Rate candidate workflow in their Tasks work area.
+
+1. 
+
+1. 
+
+30 Business Solution ELO HR Recruiting
+
+
+
+Fig.: 'Rating' tab in the candidate form
+
+In the candidate file form, the selected questionnaire appears on the Rating tab.
+
+Outlook
+
+Under Progress (participant), the first number indicates how many ratings have already been
+
+submitted. The second number indicates how many ratings have been requested in total.
+
+You will see the average rating from the questionnaire under Rating (average). The average value
+
+of all questionnaires appears in the Overall rating field.
+
+Received ratings are shown in your feed.
+
+Ranking: You can rank candidates based on these ratings. You will find the Ranking field on the 
+
+Candidate data tab in the candidate file. The value you enter here (A, B, or C) is shown both on the 
+
+Cover sheet in the candidate file and on the dashboard.
+
+Hire candidate
+
+Information
+
+31 Business Solution ELO HR Recruiting
+
+
+
+After the application process is complete and the candidate is hired, you want to transfer the
+
+candidate to ELO.
+
+Requirement
+
+This function is only available if you use ELO HR Personnel File in addition to ELO HR Recruiting.
+
+Method
+
+Select the file of the candidate you want to hire.
+
+On the Recruiting tab, click Hire candidate.
+
+Fig.: 'Onboarding process' dialog box
+
+In the Onboarding process dialog box, enter the type of employment.
+
+Click OK.
+
+Result
+
+The candidate phase changes to H – Hired.
+
+A personnel file is created in ELO HR Personnel File based on the candidate file.
+
+Delete files of rejected candidates
+
+Information
+
+1. 
+
+2. 
+
+1. 
+
+2. 
+
+32 Business Solution ELO HR Recruiting
+
+https://docs.elo.com/user/hr-personnel-file/en-us/elo-business-solutions-hr-personnel-file/
+https://docs.elo.com/user/hr-personnel-file/en-us/elo-business-solutions-hr-personnel-file/
+
+
+You want to delete the data of rejected candidates.
+
+Method
+
+On your My ELO home screen, click the Candidates & positions tile.
+
+Click the position containing candidate files you want to delete.
+
+Fig.: 'Phases' button
+
+Optional: Click Phases when you are in the table view.
+
+Drag-and-drop the candidate files to the Rejected phase.
+
+Result
+
+After the set deletion period has passed, the candidate files are deleted automatically.
+
+Information
+
+This only assigns candidate files a deletion marker, and does not delete them permanently.
+
+Deleted entries have to be removed from ELO permanently by an administrator. They can be
+
+restored until the point at which they are permanently deleted.
+
+Create new candidate pool
+
+Information
+
+You'd like to create a new pool for promising candidates.
+
+Method
+
+Select the Pools folder.
+
+On the New tab, click Recruiting > New candidate pool.
+
+1. 
+
+2. 
+
+1. 
+
+1. 
+
+2. 
+
+33 Business Solution ELO HR Recruiting
+
+
+
+Fig.: 'Candidate pool' dialog box
+
+Complete the fields in the Candidate pool dialog box as required.
+
+Mandatory fields are marked with a red asterisk.
+
+Fields with a pencil icon contain keyword lists. When you enter a value in the respective field,
+
+matching list entries appear.
+
+Pool number: The pool number is generated automatically as soon as you have created the pool.
+
+Status: If all information is complete and you'd like to use the pool right away, set the status of the
+
+pool to Open.
+
+Click OK.
+
+Result
+
+The new candidate pool is created at the selected location.
+
+1. 
+
+1. 
+
+34 Business Solution ELO HR Recruiting
+
+
+
+Outlook
+
+If the pool has the status Open, you can now move the candidate files to the candidate pool via
+
+drag-and-drop in the dashboard, or automatically file candidate files to the candidate pool using the
+
+Close position function.
+
+35 Business Solution ELO HR Recruiting
+
+
+
+Correspondence with candidates
+
+Information
+
+To streamline correspondence with candidates, various text templates are available for e-mails.
+
+The following templates are available for correspondence:
+
+Reject candidate
+
+Request information
+
+Schedule appointment
+
+Send message
+
+Correspondence can be divided further, for example different templates can be used for applicants
+
+rejected in different phases.
+
+Method
+
+The method is identical for all types of correspondence. In this manual, it is described taking the 
+
+Request information function as an example.
+
+Select the file of the candidate you want to request information from.
+
+On the Recruiting tab, click Request information.
+
+Fig.: 'Request type' dialog box
+
+In the Request type dialog box, select the type of request you want to send.
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+1. 
+
+36 Business Solution ELO HR Recruiting
+
+
+
+Fig.: 'Request' dialog box
+
+The Request dialog box already contains a standard text. You can change and format this text as
+
+needed.
+
+Fig.: 'Clips' button
+
+Clips: Clips help you add to the text. They contain information on the application and can be
+
+inserted into the text. To use them, select the position in the text where you want to insert text and
+
+click Clips.
+
+37 Business Solution ELO HR Recruiting
+
+
+
+Fig.: Configured clips
+
+When you select a clip, the corresponding information is inserted.
+
+Click OK.
+
+Result
+
+The request is sent to the candidate by e-mail.
+
+The e-mail is filed to the candidate's file.
+
+1. 
+
+38 Business Solution ELO HR Recruiting
+
+
+
+Dashboard overview
+
+The dashboard offers different views of available positions and candidates.
+
+During the phase view, you can also replicate the application process for individual candidates.
+
+You can reach the dashboard by clicking the Candidates & positions tile in the My ELO area.
+
+The dashboard remembers your settings. When you close then open the dashboard again, it
+
+remembers and displays your most recent view.
+
+Position view
+
+When you open the dashboard, you will see the position view.
+
+Fig.: Dashboard in the position view
+
+The dashboard is divided into the following areas:
+
+1 Search: In addition to text values, you can also search for number values. All data that you can
+
+select as column values in the position view serves as the basis.
+
+2 Status: The dashboard header contains a button for each status. If a button is active, all positions
+
+with the corresponding status are shown in the dashboard viewer pane.
+
+3 Viewer pane: In the dashboard viewer pane, you will see a list of positions. This list changes
+
+depending on the filter criteria applied.
+
+Customize the view using the drop-down menus.
+
+39 Business Solution ELO HR Recruiting
+
+
+
+Fig.: Customize view
+
+The drop-down menus in the column headings contain the following functions:
+
+Sort ascending
+
+Sort descending
+
+Remove sorting: This option appears if you have sorted the column. Click Remove sorting to
+
+clear the sorting option.
+
+Alternative: You can sort the column by clicking the column heading. Clicking once sorts in
+
+ascending order. Clicking a second time sorts in descending order. Clicking a third time clears
+
+sorting.
+
+Hide column
+
+Group: The content of a column is joined into groups. The number of positions in each group
+
+is shown in brackets. Click the plus icon before the group to expand it and view all contained
+
+positions. The minus icon minimizes it again. Clicking the plus icon in the header expands all
+
+groups.
+
+Information
+
+You can combine multiple groups. You can specify a hierarchy with the order in which you
+
+select the columns.
+
+Ungroup: This option appears if you have grouped items. Click Ungroup to discard the group.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+40 Business Solution ELO HR Recruiting
+
+
+
+Fig.: Overview of all columns
+
+Menu: You can show hidden columns. Click the button with three lines at the top right of the
+
+dashboard viewer pane. A drop-down menu with all available columns appears.
+
+Candidate view
+
+Clicking a posting brings you to the dashboard candidate view.
+
+Fig.: Dashboard in the candidate view
+
+41 Business Solution ELO HR Recruiting
+
+
+
+1 All positions/Pools/Candidates: You will find a list of the available entries here. Clicking an entry
+
+opens the entry in the viewer.
+
+2 Table/Phases: In the candidate view, you can choose between these two dashboard views.
+
+Table
+
+Fig.: Position view in table form
+
+If you have selected a position, you will see the candidate who applied for the position here.
+
+If you have selected a pool or an application phase, you will see all candidates in the pool or
+
+application phase.
+
+Clicking an entry shows a preview of the entry. Double-clicking an entry brings you to the
+
+repository.
+
+You can edit Phase and Status using drop-down menus.
+
+Phases
+
+Fig.: Position view in phase form
+
+If you have selected a position, you will see the candidate who applied for the position here.
+
+If you have selected a pool or an application phase, you will see all candidates in the pool or
+
+application phase.
+
+Move a candidate to another phase or another position/pool via drag-and-drop.
+
+Each candidate file is shown in the form of a business card. Clicking the name of a candidate opens
+
+the preview for the candidate file. Double-clicking a name brings you to the selected candidate file
+
+42 Business Solution ELO HR Recruiting
+
+
+
+in the repository. You can change a candidate's status via the drop-down menu. For example, in the 
+
+Interview phase, you can change the status from In process to Called for interview.
+
+43 Business Solution ELO HR Recruiting
+
+
+	Table of contents
+	Introduction
+	Structure of the documentation
+	Basics
+	Possible actions
+
+	Target audience
+
+	Basics
+	Basic principle
+	General note
+	Requirements
+	Program interface
+	Repository
+	Candidate file
+	Position file
+
+
+	Posting
+	Status
+	Submit personnel request
+	Approve personnel request
+	Personnel request was approved
+	Create new position
+	Create new posting
+	Publish posting
+	Close position
+
+	Application process
+	Create new application
+	Move candidate file
+	Rate candidate
+	Hire candidate
+	Delete files of rejected candidates
+	Create new candidate pool
+
+	Correspondence with candidates
+	Dashboard overview
+	Position view
+	Candidate view
+
+
+

@@ -1,0 +1,2915 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®) | ELO Toolbox for SAP® ERP
+
+
+ELO Suite for SAP
+
+ArchiveLink® (SAP
+
+NetWeaver® & SAP S/
+
+4HANA®)
+
+ELO Toolbox for SAP® ERP
+
+
+
+3
+
+3
+
+5
+
+7
+
+20
+
+25
+
+32
+
+63
+
+65
+
+Table of contents
+
+ELO Toolbox for SAP® ERP
+
+Introduction 
+
+Installation 
+
+Easy storage in SAP 
+
+Jumping from ELO to an SAP document 
+
+Automatic links 
+
+ELO Integration Client in SAP systems 
+
+Configuring ELO Toolbox in SAP 
+
+Information and tips 
+
+2 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+ELO Toolbox for SAP® ERP
+
+Introduction 
+
+This documentation describes how to install and configure ELO Toolbox for SAP® ERP, referred to
+
+as ELO Toolbox in the following. ELO Toolbox contains the following functions:
+
+Easy storage in SAP
+
+Jumping to SAP from ELO
+
+Automatic links (in combination with ELO Connectivity Pack for SAP® ERP)
+
+ELO Integration Client within the SAP system (in combination with ELO Connectivity Pack for
+
+SAP® ERP)
+
+This implementation has been tested for the following ELO versions:
+
+ELOprofessional/ELOenterprise version 10.02.000 and higher
+
+ELO Business Solutions Common 1.05.002 and higher
+
+Information
+
+Easy storage of documents is a Windows client function that communicates between the
+
+SAP front-end client SAP GUI and the File Explorer/Microsoft Outlook Client.
+
+Basics 
+
+ELO Toolbox requires customizing of SAP ArchiveLink® on the SAP system connected to ELO.
+
+Document types, document classes, a content repository, and link entries have to be created for
+
+this purpose.
+
+To use ELO Toolbox, your computer must also meet the following system requirements and release
+
+statuses of ELO and SAP:
+
+ELO version 10.02 or higher incl. Business Solutions Common package 1.05.002 or higher
+
+The following SAP versions or higher: 
+
+SAP_BASIS 702 SAPKB70213
+
+SAP_BASIS 730 SAPKB73009
+
+SAP_BASIS 731 SAPKB73106
+
+The following requirements have to be met to use the ELO Integration Client within the SAP
+
+system:
+
+The ELO license must include the ELO Integration Client
+
+ELOprofessional or ELOenterprise version 12 and higher
+
+Depending on the version, at least the following modules are required: 
+
+ELO 20:
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+◦ 
+
+◦ 
+
+◦ 
+
+• 
+
+• 
+
+• 
+
+◦ 
+
+▪ 
+
+3 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+ELOwf 20.05.000
+
+ELO REST Service 20.02.000
+
+ELO 12:
+
+ELOwf 12.06.000
+
+ELO REST API 12.04.000
+
+ELO Business Solutions Common version 1.07.000 or higher
+
+▪ 
+
+◦ 
+
+▪ 
+
+▪ 
+
+◦ 
+
+4 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Installation 
+
+When purchasing a license, ELO Digital Office provides two packages for ELO Toolbox. One is an
+
+SAP transport that has to be imported to the SAP target system. The other is an ELO Business
+
+Solutions package.
+
+You will find the current installation files on the ELO SupportWeb in the following area:
+
+Integration > ELO for SAP® ERP > ELO Suite for SAP ArchiveLink® > ELO Toolbox for SAP® ERP.
+
+SAP components 
+
+Inform your customers/SAP partner of the SAP transport to be installed and give them access to it.
+
+Information
+
+Inform your customers or SAP partner of the following:
+
+The standard SAP transport routes must be used.
+
+All developments and functions within the transport in ELO were developed in a
+
+separate SAP namespace, called /ELO/.
+
+You may have to enable the Ignore Invalid Component Version option when importing the
+
+SAP transport.
+
+Once an SAP transport has successfully been imported into the SAP systems, you can provide your
+
+customer/SAP partner with the technical implementation.
+
+You can find these under Technical implementation – Customizing.
+
+ELO Business Solutions package 
+
+First, install the current ELO Business Solution Common package if it has not already been installed
+
+on your ELO system. In addition, refer to the requirements listed in the chapter Basics. The ELO
+
+Business Solution Common package provides the class framework, namespaces, and architectural
+
+concepts for services, actions, and function modules.
+
+To start installation, log on to the ELO Java Client as Administrator. You can install the
+
+individual packages from the ELO SupportWeb with a single click.
+
+Alternative: You can download the package containing the .eloinst files on the ELO
+
+SupportWeb. At this point, ELO Toolbox only requires the following two files:
+
+00_sol.common_X.xx.xxx.eloinst
+
+Custom_sol.common_X.xx.xxx.eloinst
+
+• 
+
+• 
+
+1. 
+
+◦ 
+
+◦ 
+
+2. 
+
+5 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+https://supportweb.elo.com/en-us/integration/elo-for-sapr-erp/elo-suite-for-sap-archivelinkr/elo-toolbox-for-sapr-erp.html
+https://supportweb.elo.com/en-us/integration/elo-for-sapr-erp/elo-suite-for-sap-archivelinkr/elo-toolbox-for-sapr-erp.html
+
+
+Install the current ELO Toolbox package. You will now find the configuration for ELO Toolbox in
+
+the Business Solutions Custom folder in ELO. For more information on the configuration, refer
+
+to the Configuring ELO Toolbox in ELO chapter.
+
+Installation information 
+
+When installing ELO Toolbox, the web app installation may not finish completely. You can tell that
+
+this is the case if no interface is shown when you open the configuration. To fix this, go to the ELO
+
+Application Server and open the ELOwf status report. You will see the App Manager entry in the
+
+menu bar on the right.
+
+In the ELO App Manager, the App status indicates whether the web app installation was successful.
+
+If this is the case, the entry Installed is shown at the location. If it is set to Archived, you will have
+
+to enable/install, and refresh the web app.
+
+6 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Easy storage in SAP 
+
+This chapter describes the functions for easy storage and the steps required for configuration.
+
+Descriptions of functions 
+
+The easy storage function in SAP offers SAP users the option to file documents in SAP to ELO via the
+
+selected object (e.g. purchase order) and link them. This is based on an SAP transport and the
+
+settings in the Generic Object Services area. It is also necessary for customizing ArchiveLink with
+
+document types, links, etc. for the selected object (SAP BUSINESS object).
+
+ELO Toolbox is implemented in Generic Object Services in SAP. In the Generic Object Services
+
+menu, you will find the ELO Toolbox item with sub-items Upload selected file(s) from Explorer and 
+
+Upload selected mail(s) from Outlook.
+
+ELO Toolbox has also been implemented in the Generic Object Services toolbar.
+
+To use these functions, switch to File Explorer or Microsoft Outlook.
+
+7 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Filing from File Explorer 
+
+Select the desired files in File Explorer. You can select up to ten files at once for upload.
+
+Switch to an SAP transaction and in the Generic Object Services menu, click ELO Toolbox >
+
+Upload selected file from Explorer
+
+SAP accesses the selected files via the GUI control and provides them to the user in a pick
+
+list. You can deselect files you no longer want.
+
+Different file types can be filed depending on the SAP ArchiveLink customizing. Document
+
+types or file types that are not contained in the customizing cannot be filed. As the file type
+
+used in the example here, Image_Offer.new, is not included in the customizing, the file is
+
+grayed out and cannot be imported.
+
+After confirming your selection, the documents are filed straight to ELO and an entry is created in
+
+the SAP link tables. The documents are also available in the attachments list for Generic Object
+
+Services.
+
+1. 
+
+2. 
+
+8 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Filing e-mails from Microsoft Outlook 
+
+Select the desired e-mails in Microsoft Outlook. You can select up to ten e-mails at once for
+
+upload.
+
+Switch to an SAP transaction and in the Generic Object Services menu, click ELO Toolbox >
+
+Upload selected mail(s) from Outlook.
+
+SAP now accesses the selected e-mails via the GUI control and provides them to the user in a
+
+pick list. You can deselect files you no longer want.
+
+After confirming your selection, the e-mails are filed straight to ELO and an entry is created in the
+
+SAP link tables. The e-mails are also available in the attachment list for Generic Object Services.
+
+1. 
+
+2. 
+
+9 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Attachment list 
+
+One major advantage of this filing option is that it applies the file names when using the Explorer
+
+function, as well as the e-mail subject when using the e-mail function.
+
+This information is stored in the title of the linked entries and thus shown in the attachment list. As
+
+a result, the user has more information on the filed document than just the name of the document
+
+type.
+
+Selecting the document type 
+
+Chapters Adding specific document types and Selecting specific document types describe the
+
+configuration that enables you to work with multiple document types for each business object.
+
+You can define a specific document type for business objects in a whitelist for a file type (e. g. PDF).
+
+This document type will be used every time you store a document with ELO Toolbox.
+
+If you also want to work with multiple document types for an SAP business object and allow the
+
+user to select a specific document type, you can use the configurations described in chapter 
+
+Selecting specific document types. With the component provided by ELO, the user can select the
+
+configured document link options in a dialog box when storing a document via ELO Toolbox.
+
+10 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Technical implementation – Customizing 
+
+To implement the easy storage function in your SAP system, you have to make several
+
+adjustments to settings. To be able to make these settings, you have to import the SAP transport
+
+you received when purchasing a license into your SAP system.
+
+Extending the Generic Object Services 
+
+After importing the SAP transport, you can now add the ELO Toolbox menu item to the Generic
+
+Object Services.
+
+Start the SAP transaction SM30 – Maintain Table Views.
+
+Enter the table SGOSATTR into the Table/View field and confirm your input with ENTER or the 
+
+Maintain button.
+
+The next window shows you all attributes of the generic services.
+
+Select the New entries button to create a new entry for ELO Toolbox.
+
+Menu level – ELO Toolbox 
+
+Enter the following details:
+
+1. 
+
+2. 
+
+3. 
+
+1. 
+
+11 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Name of service: ZZELOFUNC
+
+Description: ELO Toolbox
+
+Quick info: ELO Toolbox
+
+Service Type: Service List
+
+Icon: ICON_BIW_SOURCE_SYS_EXT
+
+Next service: CREATE_ATTA
+
+Subservice: ZZELOFOL
+
+Save your input with the Save button or by pressing CTRL+S.
+
+As these changes are sent to the SAP transport system, you will be prompted for your own
+
+SAP transport. If you do not have one, you can create a new SAP transport on saving.
+
+Information
+
+If entries have already been added to SGOSATTR, CREATE_ATTA may not be the "first" entry
+
+in the Generic Object Services. In the Next table field, check whether the entry CREATE_ATTA
+
+is already listed. If so, change the order.
+
+Menu level – Filing from Explorer 
+
+After you have created the main ELO Toolbox level, click New Entries again and enter the
+
+following data for filing from Explorer:
+
+2. 
+
+1. 
+
+12 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Name of service: ZZELOFOL
+
+Description: Upload selected file(s) from Explorer
+
+Quick info: Upload from Explorer
+
+Class f. Gen. Service: /ELO/CL_GOS_EXPLORER
+
+Service Type: Single Service
+
+Icon: ICON_OBJECT_FOLDER
+
+Next service: ZZELOOUTL
+
+Commit required: Enabled
+
+Save your input with the Save button or by pressing CTRL+S.
+
+Menu level – Filing e-mails 
+
+After you have created the main ELO Toolbox level, click New Entries again and enter the
+
+following data for filing e-mails:
+
+2. 
+
+1. 
+
+13 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Name of service: ZZELOOUTL
+
+Description: Upload selected mail(s) from Outlook
+
+Quick info: Upload from Outlook
+
+Class f. Gen. Service: /ELO/CL_GOS_OUTLOOK
+
+Service Type: Single Service
+
+Icon: ICON_ADDRESS
+
+Commit required: enabled
+
+Save your input with the Save button or by pressing CTRL+S.
+
+Required basic settings – ELO Toolbox 
+
+As mentioned before, ELO Toolbox requires several basic settings in the SAP ArchiveLink
+
+environment to be able to use its full scope of functions. You do not have to enable ELO Toolbox for
+
+SAP. Once the necessary basic settings have been configured, ELO Toolbox is active for the desired
+
+business object.
+
+Document type and linking 
+
+2. 
+
+14 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+If the basic customizing for SAP ArchiveLink contains neither a document type nor a link to a
+
+business object, the ELO Toolbox functions are disabled (gray).
+
+In the basic customizing, create a document type (transaction OAC2) and link (transaction
+
+OAC3) this type or an existing document type to the desired business object. In our example,
+
+we have used the object BUS2105 – purchase requisition.
+
+Document type:
+
+Link:
+
+Once the customizing settings have been adjusted as described above, the functions of ELO
+
+Toolbox are active.
+
+The file types that can be stored depend on the SAP ArchiveLink customizing. If document types
+
+have been created for PDF and DOCX file types as described above, PDF documents and DOCX
+
+documents can be filed.
+
+1. 
+
+15 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+If you try to upload an XLSX document, for example, the file is marked as "inactive" (gray) in the
+
+"Select files" dialog box.
+
+This is similar to the function Upload selected mail(s) from Outlook. This menu item in ELO Toolbox
+
+is disabled until a document type is configured for SAP ArchiveLink and the right link is created for
+
+the MSG file type.
+
+Once the entry has been added to the customizing, the Upload selected mail(s) from Outlook
+
+function is active and can be used.
+
+Configuring specific document types 
+
+For existing SAP ArchiveLink configurations, there may be multiple identical document types of the
+
+same class set up for one SAP business object. To use the ELO Toolbox functions with a specific
+
+16 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+document type, configure the document type to be used for a business object in the /ELO/
+
+WL_DOCTYPE table.
+
+Select Table maintenance – transaction SM30 > '/ELO/WL_DOCTYPE' table
+
+Selecting specific document types 
+
+If you want the users to be able to select the document types stored in SAP via ELO Toolbox as
+
+described in Selecting the document type, you must do the following configurations.
+
+Call the ELO transaction /elo/tb_ext.
+
+You can use the ELO class /ELO/CL_TB_EXT_DOC_TYPE to display the selection list in ELO
+
+Toolbox area. Enter the class in the transaction under Class/Interface.
+
+In the Object Type column, you can enable the selection of the document type for
+
+corresponding SAP business objects. Enter the business object, e. g. BUS2012, or enter * to
+
+enable this configuration for all objects.
+
+Save your entries. The changes are saved in an SAP transport, which can then be transported
+
+within the SAP system chain.
+
+This process depends on what customizing has been done to the SAP ArchiveLink® interface on the
+
+SAP system. The user can only select document types or document links that have the same
+
+content repository.
+
+1. 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+17 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+The process is as follows: When a user selects a document in ELO Toolbox (with the functions 
+
+Upload selected file(s) from Explorer/Upload selected mail(s) from Outlook) and confirms the
+
+selected document, this document is uploaded within the SAP system based on the corresponding
+
+customization (transaction OAC3 links for content repositories). If an entry for the corresponding
+
+SAP business object has been added to the whitelist, the document is uploaded based on this
+
+configuration (see Adding specific document types). In the next step, if the extension configuration
+
+is enabled, the user is presented with the possible document types corresponding to the previous
+
+entries (same content repository and document class). After the user selects an entry, a
+
+corresponding link entry is created in the SAP link tables (e. g. TOA01).
+
+Implementation of custom logic 
+
+It is possible to implement your own logic for this scenario.
+
+Please note
+
+We only recommend this option if you have extensive knowledge of SAP-ABAP
+
+programming.
+
+In this case, it is necessary to create a separate class that implements the /ELO/IF_TB_EXT
+
+interface. You also need to define the method MODIFY_CONNECTION_DATA within the class. The
+
+method in the extension is executed after the document or e-mail has been uploaded but before
+
+the link entry is written to the corresponding tables (e.g. TOA01). The class /ELO/
+
+CL_TB_EXT_DOC_TYPE uses this to provide a selection of document types that are allowed based
+
+on the content repository and document type (DocType) according to the SAP customization.
+
+The entry point does not necessarily have to be used to change the link parameters. It can also be
+
+used, e. g. to start a custom process in the background or to perform other queries (description) for
+
+the link.
+
+Configuring the services depending on the role 
+
+The toolbox filing functions for user roles can be adjusted with the function /ELO/TB_CONF.
+
+18 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+In this table, the most precise match is compared to the roughest as in Configuring the
+
+Indexdownload destination and the entry is used in the corresponding line.
+
+A differentiation is made between an active and an inactive status:
+
+The inactive status is set if a user does not have permission due to their role or the object is
+
+not fully available.
+
+The status is active if the user has the corresponding permissions and the object has been
+
+saved.
+
+You can choose between active, inactive, and hidden in the drop-down menu. All applications are
+
+active with the default settings.
+
+If a function is set to inactive, it is grayed out:
+
+If a function is set to hidden, it is removed from the view:
+
+1. 
+
+2. 
+
+19 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Jumping from ELO to an SAP document 
+
+Another ELO Toolbox function is jumping from an entry selected in ELO to the corresponding SAP
+
+transaction. For this function to work, you must have selected a document or folder in the ELO
+
+client that has a valid document ID (ARC_DOC_ID) in the SAPPATH field and therefore represents a
+
+document linked in the SAP system.
+
+Now, you can click the Show SAP object button on the SAP tab. If the SAPPATH field in the selected
+
+entry is empty or not available, the two fields SAP_OBJECT and OBJECT_ID are used instead.
+
+Depending on the ELO client, there are other requirements that are described in the chapter 
+
+Jumping from different ELO clients.
+
+Required permissions in the SAP system (Jump) 
+
+To use the Show SAP object function, the user must have the following permissions in the SAP
+
+system:
+
+Execute the transactions /ELO/SHOW and /ELO/SHOW_BO
+
+Display the SAP business object transaction associated with the selected document
+
+Example: A document was selected for an SAP purchase order (BUS2012). The user requires
+
+permission to display transaction me23n.
+
+Configuring ELO Toolbox in ELO 
+
+Once you have implemented the erp.sap.toolbox package, you can go to Configuration > 
+
+toolbox.config and autoLinkDocs.config.
+
+The ELO Toolbox configuration interface opens.
+
+• 
+
+• 
+
+1. 
+
+20 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Information
+
+When installing the solution, you may not be able to open the configuration interface.
+
+For more information, refer to the chapter Installation information.
+
+Please note
+
+Only edit the configuration in the Business Solutions Custom folder to ensure the system
+
+can be updated in the future. When a module is updated, the configuration in the Business
+
+Solutions folder can be overwritten.
+
+This is where you can configure ELO Toolbox. For example, you can enter the settings for the
+
+corresponding SAP system. If multiple SAP systems with different content repositories are used, as
+
+described in the Advanced SAP settings section, different configuration settings can be entered per
+
+content repository. If no settings were made, these central settings apply. You can also define
+
+permissions for other functions.
+
+Settings for the 'Show SAP object' button 
+
+Restrict to user group: Here, you can enable the Show SAP object function for specific user groups.
+
+If this field is blank, the button is shown to all ELO users.
+
+Information
+
+The SAP transport for ELO Toolbox contains two separate SAP transactions to test the
+
+function of the solution. These can be called in the SAP system via /N/ELO/SHOW or /N/ELO/
+
+SHOW_BO. The corresponding SAP transaction is opened after you enter a linked document
+
+and a content repository in transaction /N/ELO/SHOW or after you enter the SAP object and
+
+the object ID of transaction /N/ELO/SHOW_BO.
+
+21 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Please note
+
+The packages in ELO for SAP® ERP include predefined user groups for restricting functions
+
+(e.g. erp.sap.toolbox.roles.LinkDocs and erp.sap.toolbox.roles.NavToSap). If possible, these
+
+should not be changed. They are used to control whether corresponding scripts can be
+
+loaded in the client. In the standard package, the Solutions group is included in the groups
+
+mentioned above. Changing the default settings in the configuration of these packages
+
+means that these changes must also be made manually to the corresponding scripts. These
+
+steps would have to be repeated every time you do an update and is therefore not
+
+recommended.
+
+Settings for automatic document links 
+
+This menu item allows you to enable the functions in chapter Automatic linking for a defined user
+
+group. Enter the corresponding user group. For more details on the function, refer to the chapter
+
+named above.
+
+Advanced SAP settings 
+
+In the first part of these settings, the default settings are entered for all content repositories that
+
+are not managed explicitly.
+
+System ID SAP system ID
+
+Client SAP client number
+
+User
+
+name
+
+origin
+
+To ensure users can log on to the SAP system, the origin of the required SAP user name
+
+can be entered here. The Automatic linking function also uses the location of the user
+
+name defined here.
+
+Fig.: Drop-down menu for the 'User name origin' field
+
+ELO user name: If the ELO user is the same as the SAP user.
+
+Windows user: When the SAP user is the Windows user.
+
+Property 1 to Property 5: Here, you can enter the SAP user name in the ELO user
+
+master data set in the desired property field.
+
+Please note
+
+• 
+
+• 
+
+• 
+
+22 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Windows and ELO users are automatically transferred to the SAP system in capital letters
+
+for user matching in the SAP system. This is not the case with the property fields from the
+
+ELO Administration Console. During configuration, make sure to enter the user names in
+
+uppercase letters for this reason.
+
+However, you can also custom configure each configured content repository.
+
+The other configuration parameters are identical to the ones for the Advanced SAP settings menu
+
+item.
+
+Jumping from different ELO clients 
+
+To be able to use this function, an entry has to be selected in the ELO client that represents a
+
+document linked in SAP.
+
+ELO Java Client 
+
+Based on the configuration above, the ELO Java Client allows users to jump straight to the SAP
+
+front-end client (SAP GUI). This requires the correct installation of the SAP GUI and the assignment
+
+of the file extension .sap.
+
+ELO Web Client 
+
+If you want to use the function in the ELO Web Client, clicking the Show SAP object button initiates
+
+the download of a file in the browser. This file with the extension .sap runs the SAP front-end client
+
+(SAP GUI) by default and the transaction of the linked SAP object is opened.
+
+23 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+For increased convenience, you can configure your browser to automatically open file types with
+
+the .sap extension.
+
+ELOwf form 
+
+Both the ELO Web Client and the ELO Java Client can display an SAP object if a function has been
+
+saved in the form. Both clients respond to the following command in the form's user script:
+
+The values BUS2012 and 45000000 are variables and represent the SAP object and the corresponding
+
+object ID in this case.
+
+api.communication.Parent.sendCustomMessage( "SAP_TOOLBOX_GOTO_BO", { "BO": "BUS2012", "ID": "4500000000"} )
+
+24 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Automatic links 
+
+The Automatic linking function allows you to automatically store documents filed in ELO in your
+
+SAP system as shortcuts. Here, ELO requires an object/folder superior to the document that already
+
+contains a link to the corresponding SAP object.
+
+Example:
+
+A folder structure already exists for orders from a specific supplier (C.E.B. Berlin), which already
+
+contains documents and where new ones are filed (folder 4500022470). This folder is configured
+
+with the SAP folder metadata form where the SAP object type (BUS2012 order) and the object ID
+
+(purchase order number 4500022470) are entered.
+
+If a new document is filed to this structure, ELO can automatically link the document to SAP order 
+
+4500022470 and create an entry in the corresponding link table in the SAP system. In this case, the
+
+parent folder is the folder titled 4500022470 with the SAP folder metadata form.
+
+Requirements 
+
+To use the Automatic linking function, you need ELO Toolbox as well as the licensed ELO
+
+Connectivity Pack for SAP® ERP with the Datatransfer function. For more information on installing
+
+the ELO Connectivity Pack for SAP® ERP – Datatransfer, refer to the relevant documentation. You
+
+also have to enter a setting in the User name origin field in the toolbox.config configuration.
+
+Indirect use of SAP systems 
+
+If an ELO user uses the Automatic linking function, a link entry is written to the corresponding link
+
+table in SAP when filing a document (e.g. TOA01). In SAP, the creation of this link is considered a
+
+value-adding event, which means that the ELO user performing this action must also have a
+
+licensed user in the SAP system.
+
+The User name origin field must define where in ELO the corresponding SAP user name can be
+
+found. For more information, refer to the chapter Advanced SAP settings.
+
+To minimize the risk of a licensing violation, you can take precautions in the ELO Toolbox
+
+configurations (toolbox.config and autoLinkDocs.config) (see chapter Settings for automatic
+
+document links). Please note that the customer is responsible for complying with SAP licensing
+
+regulations.
+
+25 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+file:///builds/documentation/admin/integrations/suite-sap-al/.temp/elo-connectivity-pack-for-sap-datatransfer
+
+
+Setting up the event function 
+
+To automatically link a document, ELO needs a corresponding event function. Once the 
+
+erp.sap.toolbox has been installed, the required script can be found in the path to the ELO Toolbox
+
+package.
+
+The erp.sap.toolbox.ix.events.AutoLinkDocs script now has to be referenced in the following
+
+directory:
+
+Administration/IndexServer Scripting Base/_ALL / business_solutions
+
+The script is enabled after restarting the ELOix components. It is run every time a user files a
+
+document in an ELO client.
+
+Information
+
+Automatic linking is based on an ELOix event interface and uses the asynchronous event
+
+function. This means that a maximum of 5 threads that can process the script is available to
+
+the ELO Indexserver at this point as standard. In case of high numbers of users, we
+
+recommend increasing the thread limit.
+
+Configuring the 'Automatic linking' function 
+
+Besides the event script, all other settings can be performed in the Configuration area of the ELO
+
+Toolbox package. The autoLinkDocs.config configuration file takes you to the ELO Toolbox
+
+configuration interface for automatically linking documents.
+
+Please note
+
+26 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Only edit the configuration in the Business Solutions Custom path to ensure the system can
+
+be updated in the future. When a module is updated, the configuration in the Business
+
+Solutions path can be overwritten.
+
+The configuration interface contains the General area where you can configure the settings for the 
+
+Automatic linking function. In addition, there is a check box for the expert mode, which is
+
+explained in more detail in the Document reference setting section.
+
+Information
+
+When installing the solution, you may not be able to open the configuration interface. For
+
+more information, refer to the chapter Installation information.
+
+General settings 
+
+Write post to document feed: If this option is enabled, positive or negative feedback is written in
+
+the feed of the filed document that is supposed to be linked to SAP.
+
+An error message appears if an error occurs.
+
+27 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Identify parent folder 
+
+To link the document to SAP, ELO needs the corresponding information. In this configuration area,
+
+you can set the location where ELO retrieves the necessary data from the parent structure
+
+elements that are required for an SAP link.
+
+Metadata form: Technical name of the metadata form. The metadata form GUID is also possible.
+
+SAP object metadata field: Field where information for the SAP object is entered.
+
+Object ID metadata field: Field where information for the object ID is entered.
+
+Information
+
+To write a document link, the SAP system needs the SAP object SAP (e.g. for order BUS2012)
+
+and the object ID (e.g. order number 4500022515).
+
+Triggering form 
+
+When filing documents in ELO, a metadata form always has to be assigned to a document. The 
+
+Basic entry form is suggested by default.
+
+In the Triggering form configuration, you can determine which metadata forms should trigger a
+
+document link in SAP when filing a document. In addition, you can also define a target form to
+
+change the document to after linking, e.g. to perform an index download afterwards. Remember
+
+that the selected Target form also contains the fields necessary for establishing a link to SAP (e.g. 
+
+SAPPATH field in the SAPDATA metadata form).
+
+The metadata form is only switched to the target form if ELO has received the information required
+
+for a link from a parent element.
+
+Source form: Technical name of metadata form or GUID of the form that is used to file the
+
+document in ELO and start the process of automatic linking.
+
+28 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Target form: Technical name of metadata form or GUID of the form the document should switch to
+
+after linking.
+
+Note reference to document in target form: If this box is checked, an extended process for changing
+
+the metadata form takes place. This is described in the next chapter.
+
+Document reference setting 
+
+This configuration area allows you to allocate documents to a metadata form depending on their
+
+document type and class. These terms are SAP ArchiveLink terms that have to be custom-
+
+configured in an SAP system.
+
+If expert mode is enabled, the two fields Smart Link instance and SAP system ID are also shown in
+
+this configuration area.
+
+SAP object: Description/name of the corresponding SAP object.
+
+Content repository: SAP content repository through which the document should be filed. (This entry
+
+must be identical to the configuration in SAP ArchiveLink® or ELO Smart Link for SAP® ERP.)
+
+Document type: Name of the document type existing in the SAP ArchiveLink® customizing (SAP
+
+transaction OAC2) that is also entered as Links for content repositories (SAP transaction OAC3).
+
+Document class: The value here corresponds to the extension that is also required in the SAP
+
+ArchiveLink® configuration (SAP transaction OAD2), as well as a matching link entry in SAP
+
+transaction OAC3 – links for content repositories.
+
+Information
+
+The selected settings for content repository, document type, and document class must be
+
+entered to the SAP ArchiveLink® configuration (SAP transaction OAC3).
+
+Smart Link instance (expert mode): Name of the ELO Smart Link for SAP® ERP instance used to
+
+write the link to the corresponding SAP system. If this field is left blank, the Default instance from
+
+the ELO Connectivity Pack for SAP® ERP configuration is used.
+
+29 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+SAP system ID (expert mode): SAP system ID of the SAP system where the link will be created. If
+
+this field is left blank, the Default instance from the ELO Connectivity Pack for SAP® ERP
+
+configuration is also used.
+
+Target form: Name of the metadata form the document is switched to.
+
+Subpath (expert mode): Enter a path here if you want to set up a path dependency for an SAP
+
+object. The first character is always interpreted as a separator.
+
+Information
+
+The order of the entries is crucial. If you want to distinguish between /subpath1/subpath2
+
+and only /subpath1, make sure that the more complex path has a higher priority than the
+
+subordinate path. A blank entry takes effect with all results, and this should have the lowest
+
+priority.
+
+Example:
+
+If you want to store a defined document type Z2012PDFA within a path under /Delivery
+
+Notes/Original, and you want to store the document type Z2012PDFB within the path under /
+
+Delivery Notes, and you want to store the document type *Z2012PDF in the main folder, the
+
+entries of the deeper nested path up to the base path (general path) must be sorted
+
+manually.
+
+Z2012PDFA Main folder/Delivery notes/Original/
+
+Z2012PDFB Main folder/Delivery notes/
+
+Z2012PDF Main folder/
+
+Trigger index download: If the Indexdownload function is set up for ELO Connectivity Pack for SAP®
+
+ERP, you can check this box to trigger an index download after switching metadata forms.
+
+Information
+
+If a user does not have permission to write document links, the document is filed to ELO but
+
+not linked with the SAP system. An error message is not generated in this case.
+
+Link document manually 
+
+If the document link cannot be created due to a problem, users can start the automatic linking
+
+process manually by selecting the Link document button on the SAP tab. If all required
+
+30 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+configurations and permissions have been met, the document link is created in the SAP system and
+
+an entry is generated in the document feed.
+
+31 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+ELO Integration Client in SAP systems 
+
+With the ELO Integration Client, ELO and documents stored in ELO can be used within SAP
+
+transactions. For information on installing the ELO Integration Client in ELO, refer to the
+
+corresponding documentation in the ELO SupportWeb. This documentation describes which
+
+configurations are necessary within the SAP system and the required products ELO Toolbox for
+
+SAP® ERP and ELO Connectivity Pack for SAP® ERP (Indexdownload function).
+
+The requirements for using the ELO Integration Client are listed in the chapter Basics.
+
+For SAP NetWeaver® and SAP S/4HANA® systems, the ELO Integration Client has been integrated
+
+as a pop-up window. It is also possible to embed the ELO Integration Client directly in an SAP
+
+transaction with third-party software, e. g. GuiXT or SAP Screen Personas. Chapter SAP Screen
+
+Personas describes an implementation example for SAP Screen Personas.
+
+The pop-up for the ELO Integration Client is displayed as a separate window and can be opened
+
+within any SAP transaction that provides the Generic Object Services.
+
+The Extending the Generic Object Services chapter contains a description of the initial extension of
+
+the Generic Object Services.
+
+The implementation of the pop-up is stored in the class /ELO/CL_GOS_POPUP, which is called by the
+
+GOS class /ELO/CL_GOS_INTEGRATION_CLIENT. Depending on the business object and object ID, a
+
+URL is requested via the connected ELO system and displayed in the pop-up window.
+
+For the functionality to work, the ELO Connectivity Pack for SAP® ERP must be installed and
+
+configured in the SAP system, since the URL is determined via the class /ELO/CL_KE_REQUEST.
+
+Important: The structure of a folder path is defined and configured within the Indexdownload
+
+function in ELO Connectivity Pack for SAP® ERP. When the ELO Integration Client is called, the 
+
+Indexdownload function is used to query whether the required path (e.g. based on SAP business
+
+object BUS2012 and the purchase order number) already exists or needs to be created. In the next
+
+step, the existing or new GUID of the path is integrated into the URL used to call the ELO
+
+Integration Client.
+
+32 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Indexdownload transfer 
+
+To use the ELO Integration Client in an SAP transaction, ELO requires a defined path to the
+
+corresponding SAP document. An RFC destination within the SAP system is required to create this
+
+path. The path defined in ELO Connectivity Pack for SAP® ERP – Indexdownload is used to create
+
+the path. For more information on creating paths, refer to the ELO Connectivity Pack for SAP® ERP
+
+– Indexdownload documentation.
+
+Create a new RFC destination via SAP transaction SM59.
+
+'Technical Settings' tab
+
+RFC destination Basic entry
+
+Connection type HTTP Connection to External Server
+
+Description 1 Basic entry
+
+Target machine ELO servers
+
+Service no. Port number of the ELO REST Service on the ELO server
+
+1. 
+
+33 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+'Logon & Security' tab
+
+User ELO user
+
+Password Password of the relevant user
+
+Configuring the Indexdownload destination 
+
+The ELO Integration Client is connected using the ELO REST Service.
+
+To establish a connection, the entry to the ELO REST Service has to be configured as the
+
+destination name and path prefix via SAP transaction /ELO/KE_DESTINATIONS.
+
+1. 
+
+34 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Object type
+Specification of the desired SAP business object, e.g. BUS2012 for
+
+purchase orders.
+
+Destination
+
+Name
+Name of the ELO destination
+
+Path Prefix Path to the ELO REST Service via the IX proxy plug-in
+
+The path also points to the delivered RF within the ELO REST Service:
+
+/ix-SAPDEMO/plugin/de.elo.ix.plugin.proxy/rest/api/misc/functions/
+
+RF_erp_sap_indexdownload_service_CreatePath
+
+Starting with version 1.0.9 of the ELO Connectivity Pack for SAP® ERP – Indexdownload 
+
+The table has been extended by the column Role to get to the various ELO systems using the
+
+Integration Client, depending on the user role.
+
+Column Explanation
+
+Object type
+Specification of the desired SAP business object, such as BUS2012 for orders.
+
+Alternative: * as a wildcard
+
+Role Role of the user
+
+Destination name Name of the ELO destination
+
+Path prefix Path to the ELO REST Service module via the IX proxy plug-in
+
+Remote Function
+
+Name
+Access to the REST-API via Indexserver
+
+From ELO 21, the REST API interface that was integrated into the Indexserver can be called via the
+
+column Remote Function Name with the following function:
+
+35 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+If there is an entry in this field, the field Path prefix is ignored. In addition, the Indexserver must be
+
+entered under the destination name.
+
+Please note
+
+The roles used must be valid and added accordingly in the user master record. If the role of
+
+a user role is invalid, a search is performed for the role *.
+
+Example for determining the valid entry 
+
+The following example explains how the most precise match is compared to the roughest match to
+
+use the corresponding destination:
+
+First, a search is performed for the biggest object type and object role match. Our example
+
+only refers to system 4 if the object type is BUS2012 and the role Z_IC_ELO_4 was added in
+
+the user's master record.
+
+If no results are found, a check is performed to determine whether an entry with the
+
+available object type and role exists. Therefore, all users who do not have the role 
+
+Z_IC_ELO_4 for the object type BUS2012 are forwarded to system 3.
+
+If there is no match here either, a search is performed for a result in the object type * and the
+
+corresponding role. Therefore, if the user has the role Z_IC_ELO_2, the user is forwarded to
+
+system 2 independently of the object type.
+
+A default entry should be created so that a destination can be referred to if there is no match,
+
+in this example system 1.
+
+RF_erp_sap_indexdownload_service_CreatePath
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+36 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Configuring the ELO Integration Client in ELO 
+
+In the next step, you need to configure the ELO Integration Client in the administration folder in
+
+ELO.
+
+Open the configuration file elo.integration.Client at the following path:
+
+Administration//ELOapps//Configuration//elo.integration.Client
+
+If the JSON file does not exist, you need to create it first. If the file already exists, you need to
+
+add the entry "sap". This is important for calling the URL.
+
+Contents of the configuration file in relation to the entry "sap":
+
+1. 
+
+{
+
+    "sap": {
+
+        "noForm": false,
+
+        "noFeed": false,
+
+        "noFulltext": false,
+
+        "noImagePreview": false,
+
+        "rFInit": null,
+
+        "newDocVersFct": true,
+
+        "saveDocFct": true,
+
+        "gotoFct": true,
+
+        "webClientURL": null,
+
+        "editInOfficeFct": true,
+
+        "removeEntryFct": true,
+
+        "startWorkflowFct": false,
+
+        "startWorkflowTemplates": null,
+
+        "externalLinkFct": true,
+
+        "folderMask": "(E10E1000-E100-E100-E100-E10E10E10E31)",
+
+37 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Configuring the ELO Integration Client URL 
+
+You also need to configure ELO Toolbox for use with the ELO Integration Client. In the first step, you
+
+need to enter the URL used to call the ELO Integration Client in transaction /ELO/IC_CONF in the SAP
+
+system. In the second step, you need to configure a Business Add-In (BAdI) that reacts to a change
+
+in documents in SAP transactions.
+
+URL configuration 
+
+The URL is made up of: ELOix proxy address, path to ELOwf, and the ELO Integration Client app. The
+
+system comes at the end as well as the ID created in the JSON configuration file.
+
+Example:
+
+http://sapdemo:9090/ix-SAPDEMO/plugin/de.elo.ix.plugin.proxy/wf/apps/app/
+
+elo.integration.Client/?debug=false&system=sap
+
+From version 1.0.9 
+
+To get to the various ELO systems using the Integration Client depending on the user role, the table
+
+is extended by the column Role.
+
+In this table, the most precise and the roughest match are compared as in Configuring the
+
+Indexdownload destination, and the corresponding URL is used.
+
+To reach the Integration Client even if there is no match, a default entry that can be referred to
+
+must also be created.
+
+        "documentMask": "(E10E1000-E100-E100-E100-E10E10E10E30)",
+
+        "hasSearch": true,
+
+        "referenceEntryFct": true
+
+    }
+
+}
+
+38 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Please note
+
+The entries must be created according to the Configuring the Indexdownload destination so
+
+that entries that use the identical object type and the identical role in both tables indicate
+
+the same system.
+
+Configuring the Business Add-Ins (BAdI) 
+
+You will find a detailed description of Business Add-Ins (BAdI) in the chapter Updating the pop-up
+
+for background activities.
+
+Information
+
+"A BAdI is an object-oriented enhancement option […] and thus the most sophisticated
+
+enhancement type. The main characteristic of a BAdI is that it provides a mechanism to
+
+change the functionality of a well-defined business function (e.g. a BAPI) without making
+
+changes to the delivered source code. Future upgrades of the original business function can
+
+be applied without losing the customer-specific enhancements or the need to merge the
+
+changes." (Source: SAP Help Portal)
+
+The two source lines (the original and the one modified by the customer) are strictly
+
+separated but still integrated.
+
+Start the SAP transaction SE38.
+
+Execute the program /ELO/GOS_BADI.
+
+To execute multiple BAdI implementations in one system, you need to activate the BAdI /ELO/
+
+GOS_INVOKE. This is deactivated by default since other BAdIs may be activated. If this is the
+
+case, you need to deactivate these first and then execute them in the BAdI provided by ELO.
+
+Maintaining the Generic Object Services 
+
+In the last step, you need to set up the ELO Integration Client in the Generic Object Services. In this
+
+context, also refer to chapter Extending the Generic Object Services, which describes how to
+
+extend the Generic Object Services for ELO Toolbox.
+
+1. 
+
+2. 
+
+3. 
+
+1. 
+
+39 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+http://help.sap.com/saphelp_gbt10/helpdata/DE/8f/f2e540f8648431e10000000a1550b0/frameset.htm
+http://help.sap.com/saphelp_gbt10/helpdata/DE/8f/f2e540f8648431e10000000a1550b0/frameset.htm
+
+
+Start the SAP transaction SM30.
+
+Start the table/view SGOSATTR.
+
+Create a new service called ZZELOIC.
+
+Name of service ZZELOIC
+
+Description ELO Integration Client
+
+Quick info ELO Integration Client
+
+Class f. Gen. Service: /ELO/CL_GOS_INTEGRATION_CLIENT
+
+Service Type Single Service
+
+Icons ICON_ICON_LIST
+
+In the ZZELOOUTL service, enter the newly created ZZELOIC service in the Next service field.
+
+The ELO Integration Client entry will now appear in ELO Toolbox.
+
+2. 
+
+3. 
+
+4. 
+
+40 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Information
+
+This configuration can take on a different appearance depending on the customer system. If
+
+necessary, check the entries Next service and Subservice.
+
+Updating the pop-up for background activities 
+
+The pop-up, as part of a mode, always runs in the foreground but the dynpro running in the
+
+background can still be used.
+
+Information
+
+"Dynpro is an abbreviation for 'dynamic program'. A dynpro is a repository object and is
+
+always a component of an ABAP program. It consists of the screen with its screen elements
+
+and the dynpro flow logic. Dynpro fields are assigned to the screen elements." (Source: SAP
+
+Help Portal)
+
+If the user switches to another object (e.g. a different purchase order) without closing the window,
+
+the ELO Integration Client, which remains in the foreground, updates automatically. The following
+
+screenshots illustrate this behavior.
+
+41 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+https://help.sap.com/doc/abapdocu_752_index_htm/7.52/en-us/abenabap_dynpros.htm
+https://help.sap.com/doc/abapdocu_752_index_htm/7.52/en-us/abenabap_dynpros.htm
+https://help.sap.com/doc/abapdocu_752_index_htm/7.52/en-us/abenabap_dynpros.htm
+
+
+After switching to another purchase order number (clicking Other Document), the ELO Integration
+
+Client is also updated.
+
+Information
+
+SAP systems have transactions, such as XD03 – Display customer, which close the ELO
+
+Integration Client when the object (customer) is closed. This is due to a different control
+
+executed by the GOS (Generic Object Services) that ELO has no control over. In this case, the
+
+ELO Integration Client will be closed.
+
+Please note that the dynpro control of some more complex transactions (e.g. me23n) makes it
+
+necessary to update the pop-up independently of the main dynpro. A new session is created in the
+
+background and the pop-up data is updated there. The user does not see this and it has no effect on
+
+other SAP modules that are in use. To use this function, you need to activate a BAdI
+
+implementation of the BAdI GOS_SRV_SELECT.
+
+Switch to one of the transactions SA38, SE38, or SE80 and execute the program /ELO/
+
+GOS_BADI provided with the SAP transport.
+
+1. 
+
+42 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+As other BAdI implementations may be activated for the BAdI GOS_SRV_SELECT, the BAdI
+
+implementation /ELO/GOS_POPUP provided by ELO is inactive by default. You need to
+
+activate it before you can use it.
+
+After calling the program /ELO/GOS_BADI all implementations of the BAdI GOS_SRV_SELECT
+
+are displayed.
+
+In the column Im. Sy. St. (Implementation System Status), the runtime behavior currently
+
+maintained in the SAP system is displayed:
+
+Implementation is called = active
+
+Implementation is not called = inactive
+
+Switch to editing mode in the SAP transaction and click on the entry inactive in the
+
+corresponding line of the Im. Sy. St. column to activate the required BAdI implementation.
+
+Confirm the activation and save the settings in an SAP transport request (Workbench).
+
+Please note
+
+The BAdI GOS_SRV_SELECT can only be activated once in an SAP system. If another
+
+implementation is already active, this implementation cannot be activated again. The next
+
+chapter contains a description of how to implement the BAdI GOS_SRV_SELECT if other
+
+implementations are active.
+
+Activating the BAdI implementation '/ELO/GOS_INVOKE' 
+
+Within an SAP system, only one implementation of the BAdI GOS_SRV_SELECT can be active, since
+
+inconsistencies can otherwise occur when data is changed in the BAdI implementation (for more
+
+◦ 
+
+◦ 
+
+2. 
+
+3. 
+
+43 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+information, see article 2505833 in the SAP help portal). However, the /ELO/GOS_POPUP
+
+implementation (which reacts to a change in documents) does not change any data but is only
+
+used to update the pop-up with the ELO Integration Client. If another implementation is already
+
+activated that cannot or should not be deactivated, the following solution scenario has been
+
+created:
+
+Another implementation of the BAdI GOS_SRV_SELECT called /ELO/GOS_INVOKE is also provided.
+
+This implementation allows you to execute additional implementations of this BAdI even though
+
+they are not activated on the system side. The report /ELO/GOS_BADI (start via transaction SA38/
+
+SE38 or SE80) can be used to make the corresponding settings.
+
+Functions of the report '/ELO/GOS_BADI' 
+
+After starting the program, all implementations of the BAdI GOS_SRV_SELECT are displayed. In this
+
+example, the SAP transport provided by ELO was imported into an SAP S/4HANA® system and the
+
+report was executed. In the screenshot, you can see that the BAdI implementation for 
+
+GOS_SRV_SELECT is already active (FIN_GOS_HTMLGUI).
+
+Activating the BAdI implementation /ELO/GOS_POPUP would lead to short dumps within the SAP
+
+system. For this reason, perform the following steps.
+
+Information
+
+A short dump is an "Error log displayed and saved after a runtime error or exit message.
+
+Saved short dumps can be displayed using the ABAP dump analysis tool." (Source: SAP Help
+
+Portal)
+
+44 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+https://help.sap.com/doc/abapdocu_752_index_htm/7.52/en-us/abenshort_dump_glosry.htm
+https://help.sap.com/doc/abapdocu_752_index_htm/7.52/en-us/abenshort_dump_glosry.htm
+https://help.sap.com/doc/abapdocu_752_index_htm/7.52/en-us/abenshort_dump_glosry.htm
+
+
+Deactivating an active BAdI implementation 
+
+Deactivate the currently active BAdI implementation by switching to editing mode in the SAP
+
+transaction and click on the entry active in the corresponding line of the Im. Sy. St. column.
+
+Confirm the deactivation of the BAdI implementation FIN_GOS_HTMLGUI in the SAP system.
+
+The changes are saved in an SAP transport request (Workbench). If necessary, create a new
+
+transport request.
+
+Please note
+
+There can only be one active implementation of the BAdI in an SAP system. It is not possible
+
+to activate multiple implementations (see error message in the status bar).
+
+If you want to activate another implementation, you need to deactivate the currently active
+
+implementation first. You can do this either in this report or in BAdI Builder (transaction 
+
+SE19).
+
+1. 
+
+2. 
+
+45 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Activating the BAdI implementation '/ELO/GOS_INVOKE' 
+
+As there is currently no implementation active, you can activate the BAdI implementation /ELO/
+
+GOS_INVOKE provided by ELO.
+
+Click inactive in the entry /ELO/GOS_INVOKE in the corresponding line of the Im. Sy. St.
+
+column to activate the implementation.
+
+Confirm the activation with Yes.
+
+Save the settings in the SAP transport request you just created.
+
+1. 
+
+2. 
+
+3. 
+
+46 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Activating the BAdI implementation via the ELO BAdI 
+
+You are now able to activate the required BAdIs but they are now called with the ELO BAdI /ELO/
+
+GOS_INVOKE.
+
+Click the entry not called in the corresponding line in the Call via ELO BAdI column and
+
+confirm your input.
+
+Save the settings in the SAP transport request you just created.
+
+Repeat the steps for the second BAdI implementation you require. In this case, 
+
+FIN_GOS_HTMLGUI.
+
+1. 
+
+2. 
+
+3. 
+
+47 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+The two BAdI implementations are now executed in the BAdI settings via the BAdI implementation /
+
+ELO/GOS_INVOKE.
+
+Warning
+
+Make sure that the implementation /ELO/GOS_INVOKE does not call itself as this would
+
+result in an infinite loop.
+
+SAP Screen Personas 
+
+Information
+
+"SAP Screen Personas 3.0 provides customers flexibility to personalize and transform
+
+screens to suit their business needs. It gives business users and IT users the ability to meet
+
+the need for rapid screen changes, delivering improved user experience, and increased work
+
+efficiency. Personalization happens via flavors, which are customized views of a screen. A
+
+flavor is related to one (and only one) transaction, and allows the user creating it to change
+
+the layout of the screen, hide unnecessary elements, add custom elements, and automate
+
+keystrokes and other user actions." (Source: SAP Help Portal)
+
+As already explained, the ELO Integration Client can also be embedded directly in an SAP
+
+transaction within the SAP GUI for Windows (SAP GUI). This chapter describes an example
+
+implementation using SAP Screen Personas.
+
+Please note
+
+48 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+https://help.sap.com/viewer/e9aec5d380204249836a4fc3fc76f38e/3.0.8/en-US
+https://help.sap.com/viewer/e9aec5d380204249836a4fc3fc76f38e/3.0.8/en-US
+
+
+This implementation was done with SAP Screen Personas version 3 and service pack 6. The
+
+steps in other versions may differ from this documentation. It is also possible that certain
+
+functions are not available in older versions.
+
+Administration configuration 
+
+Before you start, you must have created a configuration in the SAP Screen Personas administration
+
+interface, which is called via transaction /n/Personas/admin.
+
+Select the Function Modules entry under Whitelists.
+
+Click New Entry.
+
+Create the following two entries:
+
+1. Dynpro:
+
+Function Module /ELO/GET_URL_FROM_MEMORY
+
+Framework Dynpro
+
+Application ID … *
+
+Same session Check box
+
+Information
+
+"Dynpro is an abbreviation for 'dynamic program'. A dynpro is a repository object and
+
+is always a component of an ABAP program. It consists of the screen with its screen
+
+1. 
+
+2. 
+
+3. 
+
+49 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+elements and the dynpro flow logic. Dynpro fields are assigned to the screen
+
+elements." (Source: SAP Help Portal)
+
+2. Web Dynpro
+
+Function Module /ELO/GET_URL_FROM_MEMORY
+
+Framework Web Dynpro
+
+Application ID … *
+
+Same session Check box
+
+Information
+
+"Web Dynpro for ABAP or Web Dynpro for ABAP (WD4A, WDA) is the SAP standard UI
+
+technology for developing Web applications in the ABAP environment. It consists of a
+
+runtime environment and a graphical development environment with special web
+
+dynpro tools that are integrated in the ABAP Workbench (SE80)." (Source: SAP Help
+
+Portal)
+
+Since developments in SAP Screen Personas are always based on SAP GUI for HTML
+
+(WebGUI), it is important to create both entries here. You also need to select the check box
+
+next to Same session.
+
+Create a new entry for access to the ELO server in the URLs menu item under Whitelists.
+
+Under the URL Whitelist Expression parameter, define the connection to the URL with regular
+
+expressions. Click the New Entry button and enter the required data.
+
+Whitelist ID ELO
+
+URL Whitelist Expression https?:\/\/eloserver:9090\/.*
+
+4. 
+
+50 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+https://help.sap.com/doc/abapdocu_752_index_htm/7.52/en-us/abenabap_dynpros.htm
+https://help.sap.com/doc/abapdocu_752_index_htm/7.52/en-us/abenabap_dynpros.htm
+https://help.sap.com/doc/saphelp_nw70/7.0.31/en-US/77/3545415ea6f523e10000000a155106/content.htm?no_cache=true
+https://help.sap.com/doc/saphelp_nw70/7.0.31/en-US/77/3545415ea6f523e10000000a155106/content.htm?no_cache=true
+https://help.sap.com/doc/saphelp_nw70/7.0.31/en-US/77/3545415ea6f523e10000000a155106/content.htm?no_cache=true
+
+
+Replace eloserver with the name of the ELO system you are using and 9090 with the ELOwf
+
+port or, if using a proxy, the ELO Indexserver port.
+
+Flavors development 
+
+As developments in SAP Screen Personas can only be done in WebGUI, you have to switch to
+
+the SAP webgui using the transaction code webgui.
+
+Switch to the transaction in which you want to embed the ELO Integration Client. This
+
+implementation example uses the transaction me23n – Display purchase order.
+
+A blue line appears at the top of the transaction window. If you hover over this blue line, the
+
+SAP Screen Personas icon appears.
+
+Click the icon to open the SAP Screen Personas – My Flavors – Original Screen window.
+
+To create a new flavor, click the plus icon and enter a name and a description for the flavor. In
+
+this example, we used the following data:
+
+Name: ELO Integration Client – me23n
+
+Description: ELO Integration Client – Purchase Order me23n
+
+Save the name and description.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+51 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+The SAP Screen Personas window switches to the Edit Flavor – ELO Integration Client – me23n
+
+menu.
+
+Now you have to select where you want to embed the ELO Integration Client within the
+
+transaction. In the SAP Screen Personas menu, select Insert and then HTML Viewer.
+
+The HTML Viewer window opens.
+
+Leave the URL entry blank and confirm with Done.
+
+A separate frame for the HTML Viewer appears, which you can now place on the screen of the
+
+transaction. You can also adjust the size of the frame.
+
+Information
+
+You can also resize the individual transaction frames. Note, however, that frames
+
+contain other frames that you may also need to resize as a result.
+
+Save your settings with Save at the top right corner and select Exit to close editing mode.
+
+Script development 
+
+Once you have created the flavor, you need to create a script for it.
+
+Open the SAP Screen Personas menu again.
+
+Select the flavor you just created, ELO Integration Client – me23n, and click the Scripting
+
+button.
+
+This opens a scripting window. Select the button Create Script here.
+
+As we want the script to run when the transaction is refreshed (screen event), we will name
+
+the script here onAfterRefresh.
+
+Next, we need to read the ID of the HTML viewer we just created. After creating the script,
+
+click Inspector and then the Object Selector icon.
+
+6. 
+
+7. 
+
+8. 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+52 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Click the HTML viewer you just created to display the ID in the Inspector info area.
+
+Use the icon to the left of the ID to transfer the value to the script window.
+
+Copy the following script and correct the ID value of the HTML viewer (source code: wnd[0]/
+
+usr/htmlViewerPersonas_161244953637589) which you just applied.
+
+6. 
+
+7. 
+
+8. 
+
+try {
+
+    var htmlViewer = session.findById("wnd[0]/usr/htmlViewerPersonas_161244953637589")
+
+    var rfc = session.createRFC("/ELO/GET_URL_FROM_MEMORY");
+
+    rfc.requestResults(["RV_URL"]);
+
+53 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Use the Save button to save your changes.
+
+You can test the previous configuration steps using the Execute.
+
+Assigning an event in a flavor 
+
+Close the Scripting window after you have saved the script. We recommend that you reload
+
+WebGUI and the transaction to configure the next steps.
+
+In the previously configured transaction (me23n in this example), select the flavor you just
+
+created and click Edit.
+
+Switch to the Insert menu.
+
+Under the Screen Events menu item for the onAfterRefresh event, select the script you just
+
+created (onAfterRefresh in this case) and save the entries using the Save button.
+
+    rfc.send();
+
+    var icUrl = rfc.getResult("RV_URL");
+
+    if(!icUrl || !icUrl.length) {
+
+        // todo: handling
+
+        return;
+
+    }
+
+    var currentUrl = session.utils.get("RV_URL");
+
+    if(currentUrl !== icUrl || !htmlViewer.url || !htmlViewer.url.length) {
+
+        session.utils.put("RV_URL", icUrl);
+
+        htmlViewer.url = icUrl;
+
+    }
+
+}   catch(e) {
+
+    session.utils.log(e.message);
+
+    console.log(e);
+
+}
+
+9. 
+
+10. 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+54 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+You have now completed the configuration for the transaction me23n and the flavor is available to
+
+users with the corresponding permissions in WebGUI and SAP GUI. The user can view the flavor by
+
+selecting the SAP Screen Personas icon.
+
+The user can set this flavor as the default with the star icon.
+
+Note that the views in WebGUI and SAP GUI may be different. In particular, the size of the HTML
+
+viewer window may differ and so you may need to adjust the size.
+
+Assigning SAP permissions 
+
+To give users access to the new flavor, you still need to assign the appropriate permissions or roles.
+
+Switch to the administration interface of SAP Screen Personas using the transaction code /n/
+
+Personas/admin.
+
+1. 
+
+55 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Under Object Maintenance, search for the flavor you created and switch to the Assignments
+
+tab.
+
+You can assign permissions for users or SAP roles here.
+
+Save your entries by selecting the floppy disk icon.
+
+GuiXT 
+
+As an alternative to integration via custom SAP Screen Personas flavors, the ELO Integration Client
+
+can also be embedded directly in an SAP transaction within the SAP GUI for Windows (SAP GUI)
+
+using GuiXT. This chapter describes an example implementation using GuiXT.
+
+Information
+
+GuiXT allows you to simplify SAP ERP forms and adapt them to the requirements of
+
+individual user groups without having to modify SAP programs or forms (dynpros). Source: 
+
+Synactive.
+
+Requirements 
+
+Certain requirements must be met if you want to use the ELO Integration Client in an SAP
+
+transaction with GuiXT.
+
+2. 
+
+3. 
+
+56 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+https://www.synactive.com/index_e.html
+https://www.synactive.com/index_e.html
+
+
+You need to activate GuiXT in your SAP client to allow the scripts to run.
+
+After you have activated the option, the GuiXT window opens.
+
+The following steps are required for the integration of the ELO Integration Client within SAP®
+
+ERP. This documentation is not GuiXT developer documentation, but requires prior knowledge
+
+of GuiXT. The additional component Controls is required. This can be purchased with a
+
+corresponding license from Synactive. The Controls component can be used to call external
+
+programs, functions, and scripts.
+
+1. 
+
+57 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Set an RFC user with sufficient permissions in the GuiXT profile. You can view a list of the
+
+required permissions on the Synactive website.
+
+The menu item Tools > Check RFC Connection can be used to check whether a connection
+
+can be established.
+
+The path to the GuiXT scripts must be known, i.e. must have been created. This is where you
+
+will store the scripts used to execute GuiXT.
+
+Furthermore, the corresponding path to an external VBS/JavaScript script file must be stored
+
+in the profile, since a VB script must also be included for the desired functionality in addition
+
+to the actual GuiXT script. If this file doesn't exist, it needs to be created.
+
+You need to modify the path and the name of the .vbs file to meet your own requirements.
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+58 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+https://www.synactive.com/docu_e/doc_rfc.html
+https://www.synactive.com/docu_e/doc_rfc.html
+https://www.synactive.com/docu_e/doc_rfc.html
+
+
+Information
+
+If you are already using GuiXT, use your script paths. You also have the option to use your
+
+existing scripts for transactions and adapt them where necessary.
+
+VBScript development 
+
+Extend your .vbs file with the following function.
+
+Alternative: If the file doesn't exist, create a corresponding file with the following content.
+
+GuiXT script development 
+
+You need to create and maintain a GuiXT script for each SAP transaction you are going to use the
+
+ELO Integration Client in. The following script can be used as a template for additional transactions.
+
+Switch to the transaction in which you want to embed the ELO Integration Client. This
+
+implementation example uses the transaction me23n – Display purchase order.
+
+Start transaction me23n and select the Script entry in the GuiXT window. This opens the
+
+GuiXT editor for the corresponding SAP dynpro. Enter the code here.
+
+1. 
+
+Function ie_init(ie, url)
+
+    ie.Navigate(url)
+
+End Function
+
+1. 
+
+2. 
+
+Set V[busobj] "BUS2012"
+
+Set V[objID] &F[MEPO_TOPLINE-EBELN]
+
+Call /ELO/GET_URL_FROM_BO cache="transaction" in.IV_SAP_OBJECT=&V[busobj] in.IV_OBJECT_ID=&V[objID] ou
+
+box (0,165) (15,200) //"ELO Integration Client"
+
+Control (0,165) (15,200) progid="Shell.Explorer" name="elo_client"
+
+59 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+You can change the position and size of the ELO Integration Client by adjusting the
+
+coordinates of the box and control elements.
+
+Save your file and go back to the transaction you just customized.
+
+You should now be able to see the ELO Integration Client.
+
+Information
+
+If you want to integrate the ELO Integration Client in other transactions, you have to modify
+
+the BUS object (busobj) and the object ID (objID) in the respective script accordingly.
+
+CallVbs ie_init "&V[elo_client]" "&V[url]" //“the VB script is called here
+
+connectHTML object="&V[elo_client]"
+
+3. 
+
+Set V[busobj] "BUS2012"                        //<- the desired BUS object
+
+Set V[objID] &F[MEPO_TOPLINE-EBELN]            //<- the ObjectID
+
+60 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+61 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+You will find a corresponding overview via the SAP transaction SWO3.
+
+You can find the required object ID structure in the respective BUS object.
+
+62 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Configuring ELO Toolbox in SAP 
+
+Applications in the ELO Toolbox in SAP
+
+Easy storage in SAP 
+
+Upload selected file(s) from Explorer
+
+Upload selected mail(s) from Outlook
+
+ELO Integration Client
+
+can be activated/deactivated or hidden as required based on user roles. This makes sense, for
+
+example, if there are different groups of users in SAP. I.e. those who should have access to the
+
+Integration Client, and those who should not use it and therefore should not be able to view it.
+
+Up to version 1.0.8 
+
+This functionality is not available in all versions of the ELO Toolbox for SAP® ERP < 1.0.8.
+
+From version 1.0.8 
+
+To configure which applications should be activated/deactivated or switched to hidden for a user
+
+group, a configuration must be made using the transaction /N/ELO/TB_CONF. This configuration is
+
+empty as default, and therefore all applications in ELO Toolbox for SAP® ERP are available to
+
+users.
+
+The basis for the configuration table looks like this:
+
+Name Meaning
+
+Application Application in the toolbox to which the configuration should be applied.
+
+Object
+
+type
+Bus object for which the entry is valid
+
+Role Role used to identify the user group and for which the entry should be applied
+
+inact. stat
+Behavior of the assigned application in the affected object to the associated user role
+
+in the case inact.stat
+
+act.status
+Behavior of the assigned application in the affected object to the associated user role
+
+in the case act.status
+
+Information
+
+The column inact. stat controls how the application should behave if the object is either not
+
+available (for example, the Purchase order object has not yet been saved) or if the user
+
+• 
+
+◦ 
+
+◦ 
+
+• 
+
+63 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+does not have valid permission based on their user role. There is no permission if the used
+
+role is not assigned or it has expired.
+
+The column act.status determines how the application should behave if the user has the
+
+appropriate permission and the object is available.
+
+The user roles must first be created to configure which user can use which applications. These user
+
+roles can then be added to the user in the user master record (transaction: su01).
+
+Example for determining the valid entry using the Integration Client 
+
+In the following example, we explain how the most precise match can be compared to the roughest
+
+match to control the corresponding application, depending on the set status:
+
+First, the biggest object type and role match is sought for each set application. In our
+
+example, ELO Integration Client is shown as available for selection in the toolbox if the
+
+object type is BUS2012 and the role Z_IC_ELO has been added to the user's master record. If
+
+the object has the status inactive then the ELO Integration Client entry is switched to
+
+inactive.
+
+If no results are found, a check is performed to determine whether an entry with the
+
+available object type and role * exists.
+
+If there is no match here either, a search is performed for a result for the object type * and
+
+the suitable role Z_IC_ELO, therefore, the respective value given (inactive/active/hidden) is
+
+applied independently of the object type.
+
+If there is no match there either, a result for the object type * and the role * is sought,
+
+therefore the respective value given (inactive/active/hidden) is applied independently of the
+
+object type and independently of the role.
+
+If no matching entry is found, because no entry exists for object type * and role *, the
+
+application is shown as default.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+64 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Information and tips 
+
+This chapter contains additional useful information. You will learn how to disable security
+
+information in the SAP GUI as well as how to store documents with Generic Object Services.
+
+Security information in the SAP GUI 
+
+When using the Upload selected file(s) from Explorer and Upload selected mail(s) from Outlook
+
+functions, a security prompt may appear depending on how the local SAP GUI client is configured.
+
+With the Allow button, you enable the function to upload a document.
+
+Check the box next to Remember My Decision to prevent the message from appearing again.
+
+However, the security prompt is file-dependent in this case: If the user opens a document from
+
+within another transaction, the security prompt will appear again. The local system administrator
+
+can choose between two SAP GUI settings to disable the message.
+
+Open the Options menu item for your SAP logon using the menu icon.
+
+1. 
+
+2. 
+
+1. 
+
+65 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+The SAP GUI Options– SAP Logon dialog box opens.
+
+On the left side of the dialog box, select Security > Security Settings. Now, you can choose
+
+one of the three status options.
+
+Information
+
+The status option Strict Deny blocks use of ELO Toolbox.
+
+Security module – 'Disabled' status 
+
+If you set the status to Disabled, no security check is performed when uploading documents. The
+
+security prompt is therefore also disabled and no longer shown to the user.
+
+Security module – 'Customized' status 
+
+Once you have set the status to Customized, you can adjust other settings by selecting the Open
+
+Security Configuration button.
+
+2. 
+
+66 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+If you set Remember my Decision to disable the previous security prompt, the security
+
+configuration will already contain two entries.
+
+The MSScriptControl.ScriptControl.1 entry stands for the script call within SAP. This entry is
+
+transaction-independent.
+
+Double-click it to see the entry details.
+
+In this example, the call was performed via transaction ME23N – Display Purchase Order.
+
+To make sure this message shows up for every further transaction/screen, in the table, click
+
+the Transaction field and enter an asterisk (*) in place of the transaction code (ME23N).
+
+Also replace the entry next to Screen Name and Screen Number with *.
+
+In the example below, a PDF file was uploaded from the following path: C:/Users/<user
+
+name>/Documents/SAPDOCS/Sharp 47002827.pdf
+
+1. 
+
+2. 
+
+3. 
+
+67 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+This entry now exists in the security configuration. You have the option to add individual file
+
+types or enable all data types.
+
+Double-click the entry to do this.
+
+To enable all file types for all transactions, go to the Object field and replace the specified
+
+path with an asterisk (*).
+
+Alternative: If you only want to enable PDF files without a security prompt, enter *.pdf here.
+
+In addition, the values in the table fields Transaction, Screen Name, and Screen Number must
+
+be changed to an asterisk *.
+
+Information
+
+The settings made here depend on the system and client. If needed, they can also be
+
+replaced with an asterisk (*).
+
+If these two settings have been made, the security prompt is no longer shown to the SAP GUI user.
+
+Deleting these entries restores the state on initial installation.
+
+Disable – Create Attachment 
+
+In standard SAP, it is possible to file documents in the Generic Object Services.
+
+In the Generic Object Services menu, go to Create… > Create Attachment.
+
+4. 
+
+5. 
+
+6. 
+
+1. 
+
+68 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+In this form of filing, the document is not filed to ELO or a repository/content server, but instead
+
+straight to the SAP database. No link entry is written to the TOA tables.
+
+However, it is also possible to disable this function and restrict users to ELO Toolbox or the
+
+standard SAP method via Store business document.
+
+Now, switch to SAP transaction SGOS and select New Entries.
+
+Name of service: PCATTA_CREA
+
+Status Gen. Service: Inactive
+
+After saving the settings, the Create Attachment function is disabled for all transactions in
+
+the Generic Object Services. You also have the option to mark the entire entry as invisible.
+
+1. 
+
+69 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+	Table of contents
+	ELO Toolbox for SAP® ERP
+	Introduction
+	Basics
+
+	Installation
+	SAP components
+	ELO Business Solutions package
+	Installation information
+
+	Easy storage in SAP
+	Descriptions of functions
+	Filing from File Explorer
+	Filing e-mails from Microsoft Outlook
+	Attachment list
+	Selecting the document type
+
+	Technical implementation – Customizing
+	Extending the Generic Object Services
+	Menu level – ELO Toolbox
+	Menu level – Filing from Explorer
+	Menu level – Filing e-mails
+
+	Required basic settings – ELO Toolbox
+	Document type and linking
+	Configuring specific document types
+	Selecting specific document types
+	Implementation of custom logic
+
+	Configuring the services depending on the role
+
+
+	Jumping from ELO to an SAP document
+	Required permissions in the SAP system (Jump)
+	Configuring ELO Toolbox in ELO
+	Settings for the 'Show SAP object' button
+	Settings for automatic document links
+	Advanced SAP settings
+
+	Jumping from different ELO clients
+	ELO Java Client
+	ELO Web Client
+	ELOwf form
+
+
+	Automatic links
+	Requirements
+	Indirect use of SAP systems
+	Setting up the event function
+	Configuring the 'Automatic linking' function
+	General settings
+	Identify parent folder
+	Triggering form
+	Document reference setting
+	Link document manually
+
+
+	ELO Integration Client in SAP systems
+	Indexdownload transfer
+	Configuring the Indexdownload destination
+	Starting with version 1.0.9 of the ELO Connectivity Pack for SAP® ERP – Indexdownload
+	Example for determining the valid entry
+
+
+	Configuring the ELO Integration Client in ELO
+	Configuring the ELO Integration Client URL
+	URL configuration
+	From version 1.0.9
+
+	Configuring the Business Add-Ins (BAdI)
+	Maintaining the Generic Object Services
+
+	Updating the pop-up for background activities
+	Activating the BAdI implementation '/ELO/GOS_INVOKE'
+	Functions of the report '/ELO/GOS_BADI'
+	Deactivating an active BAdI implementation
+	Activating the BAdI implementation '/ELO/GOS_INVOKE'
+	Activating the BAdI implementation via the ELO BAdI
+
+	SAP Screen Personas
+	Administration configuration
+	Flavors development
+	Script development
+	Assigning an event in a flavor
+	Assigning SAP permissions
+
+	GuiXT
+	Requirements
+	VBScript development
+	GuiXT script development
+
+
+	Configuring ELO Toolbox in SAP
+	Up to version 1.0.8
+	From version 1.0.8
+	Example for determining the valid entry using the Integration Client
+
+	Information and tips
+	Security information in the SAP GUI
+	Security module – 'Disabled' status
+	Security module – 'Customized' status
+
+	Disable – Create Attachment
+
+
+

@@ -1,0 +1,557 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Client administration | ELO Desktop Client
+
+
+Client administration
+
+ELO Desktop Client
+
+
+
+3
+
+3
+
+4
+
+8
+
+12
+
+Table of contents
+
+ELO Desktop Client administration
+
+Introduction 
+
+Installation 
+
+Connect to ELO 
+
+Configuration 
+
+2 Client administration
+
+
+
+ELO Desktop Client administration
+
+Introduction 
+
+The goal of this documentation is to explain the administrative functions of the ELO Desktop Client.
+
+Structure of the documentation 
+
+The first chapter provides information about installation.
+
+We will then show you how to set up a connection with ELO.
+
+In the Configuration chapter, you will learn how you can configure the client from the
+
+administrator's perspective and how to integrate WebDAV without SSO.
+
+Target audience 
+
+This document is addressed to ELO Desktop Client administrators.
+
+Separate documentation is available for users. The user documentation explains how the client
+
+works.
+
+3 Client administration
+
+https://docs.elo.com/user/elo-desktop-client/en-us/elo-desktop-client/
+https://docs.elo.com/user/elo-desktop-client/en-us/elo-desktop-client/
+
+
+Installation 
+
+This chapter describes the installation of the ELO Desktop Client.
+
+Setup 
+
+Method
+
+Double-click setup.exe to begin installation.
+
+The ELO Desktop Client Setup dialog box appears.
+
+Click Next to continue.
+
+1. 
+
+2. 
+
+4 Client administration
+
+
+
+The dialog box to select the installation directory appears.
+
+Alternative: Click Change to change the suggested target directory and choose a different
+
+installation directory.
+
+Click Next to continue.3. 
+
+5 Client administration
+
+
+
+The Ready to install ELO Desktop Client dialog box opens.
+
+Click Install.
+
+The ELO Desktop Client is installed by the setup wizard.
+
+4. 
+
+6 Client administration
+
+
+
+The setup wizard indicates when setup is complete.
+
+Click Finish to complete setup.
+
+Result
+
+The ELO Desktop Client is installed.
+
+5. 
+
+7 Client administration
+
+
+
+Connect to ELO 
+
+Before working with the client for the first time, you have to establish a connection to ELO.
+
+Create profile 
+
+For new installations, no connection is available. To connect to an ELO repository, you first have to
+
+create a profile. Profiles are managed in the configuration.
+
+Method
+
+Click Create profile.
+
+The Create new profile dialog box opens.
+
+Enter the name of the repository in the Profile name field.
+
+1. 
+
+2. 
+
+3. 
+
+8 Client administration
+
+
+
+Enter the Indexserver URL. It must follow this syntax: https://<host>:<port>/ix-<repository
+
+name>/ix.
+
+If an operational Indexserver is found with the correct URL, the message Server available
+
+appears below the URL.
+
+Click OK to create the profile.
+
+Information
+
+You will see your profile in the Profile management area. Click Configuration >
+
+Administration. The Configuration chapter explains how to manage your profiles.
+
+4. 
+
+9 Client administration
+
+
+
+Logon 
+
+Your profile is now available. Connect to ELO via the Logon dialog box.
+
+Method
+
+Enter your ELO user name in the User field.
+
+Enter your ELO password in the Password field.
+
+Optional: If the Show logon options option is enabled, the logon options are displayed.
+
+1. 
+
+2. 
+
+10 Client administration
+
+
+
+Optional: If the Log on with the Windows user option is enabled, the Windows user and
+
+Windows password are entered automatically. SSO (single sign-on) has to be set up in
+
+Windows first.
+
+Optional: If the Save password option is enabled, you are logged in automatically the next
+
+time you start the ELO Desktop Client. You can save the password for each profile. To see
+
+what passwords have been saved, go to the Administration category under Profile
+
+management and click the key icon. You can also remove passwords here.
+
+In the Repository area, you will see the name of the connected ELO repository. A checkmark
+
+next to the profile name indicates that the repository is available.
+
+To connect to the ELO repository, click Connect.
+
+Optional: The first time you log on to the repository, the Functional roles dialog box opens
+
+provided that your user account is assigned to a group.
+
+Information
+
+Functional roles allow you to use different sets of rights and permissions for different
+
+tasks. Groups can be defined as functional roles in the ELO Administration Console.
+
+In this dialog box, you can choose which functional roles you want to enable. You can save
+
+your selection. The dialog box then no longer appears the next time you log on.
+
+The Enable roles function in the User menu [your name] allows you to change the roles.
+
+Result
+
+A connection has been established with the ELO repository. The ELO Desktop Client tile navigation
+
+opens.
+
+3. 
+
+11 Client administration
+
+
+
+Configuration 
+
+In this chapter, you will learn how you can make changes to the configuration as an administrator.
+
+You will also find more information on integrating WebDAV without SSO and setting the ELO
+
+Desktop Client Plus right in the ELO Administration Console.
+
+Making universal changes to the configuration 
+
+Settings in the configuration are always assigned to a specific user. If no settings have been made
+
+for the user, the option group settings for the groups the user is a member of are applied.
+
+Please note
+
+Option groups cannot be used to transfer permissions.
+
+If there are no settings for the user in the option groups, the global settings take effect. If no
+
+options have been configured at the level of global settings, the preset client configuration is used.
+
+First, the settings are evaluated for the user, if settings have been applied there. Afterwards, the
+
+permission levels are evaluated in the order described above.
+
+How can you check the settings for a level?
+
+Method
+
+As administrator, open the configuration from the drop-down menu in the header.1. 
+
+12 Client administration
+
+
+
+The Configuration dialog box opens.
+
+Click Change user.
+
+The Select user dialog box appears.
+
+Select the desired user or group from the drop-down menu.
+
+Click OK.
+
+2. 
+
+3. 
+
+4. 
+
+13 Client administration
+
+
+
+Result
+
+The name of the selected user or group is now shown at the top left in the configuration.
+
+A new column appears in the configuration next to the settings. The Set by column shows at what
+
+level changes have been made to settings. You can show and hide the Set by column using the
+
+button in the configuration header.
+
+Transfer settings 
+
+In the example above, a specific path is set to default for the document templates in the General
+
+area. Change these settings for a specific user and select a different filing path.
+
+14 Client administration
+
+
+
+The setting for this option at the level of the User (see figure: Levels concept in the configuration)
+
+overrides all settings at all levels below it. You can delete the settings for the currently selected
+
+option group or user by clicking the X in the column.
+
+You can transfer the current settings to other users by clicking the yellow arrow button in the
+
+configuration header.
+
+Method
+
+Click Transfer settings (yellow arrow).1. 
+
+15 Client administration
+
+
+
+The Transfer settings dialog box opens.
+
+First, select the users or option groups you want to transfer the settings to from the drop-
+
+down menu. You can select multiple users or groups. They are shown in a list. Remove
+
+individual users or groups by clicking the x button.
+
+Optional: To replace user-defined settings with group settings, check the corresponding box.
+
+To transfer all settings, click All.
+
+Alternative: To only transfer the settings changed by the user, click Only modified.
+
+2. 
+
+3. 
+
+16 Client administration
+
+
+
+Optional: Check the settings you want to transfer. You can transfer individual areas of the
+
+configuration by checking the corresponding boxes. Alternatively, you can select individual
+
+settings separately by expanding the areas.
+
+To transfer the settings, click OK.
+
+Load settings 
+
+To open a saved configuration profile, click Load existing settings for the configuration (folder icon
+
+at the top in the configuration header) and select a user profile file from the Windows file system in
+
+the Open dialog box.
+
+Save settings 
+
+You can save the configuration to your Windows file system.
+
+Method
+
+Click the floppy disk icon in the header of the configuration to save the configuration settings
+
+as an XML file.
+
+4. 
+
+1. 
+
+17 Client administration
+
+
+
+The Export settings dialog box opens.
+
+To select all settings, click All.
+
+Alternative: To only select the settings changed by the user, click Only modified.
+
+Optional: Check the settings you want to export. You can export individual areas of the
+
+configuration by checking the corresponding boxes. Alternatively, you can select individual
+
+settings separately by expanding the areas.
+
+To export the settings, click OK.
+
+Select the path and file name on the Windows file system and click Save.
+
+Result
+
+The configuration profile is saved to the Windows file system as an XML file.
+
+Integrate WebDAV without SSO 
+
+If single sign-on (SSO) is not available for ELO Indexserver, you will have to change a setting in the 
+
+WebClient Windows Service for WebDAV integration (Connect ELO as a drive function).
+
+Method
+
+In Windows, open the Registry Editor desktop app.
+
+In the registry, navigate to the following key:
+
+Create a new DWORD value named BasicAuthLevel if it does not already exist.
+
+BasicAuthLevel has the following values:
+
+0: authentication with user name/password disabled
+
+1: authentication with user name/password only for SSL WebDAV directories
+
+2: authentication with user name/password only for SSL WebDAV directories
+
+Important
+
+Setting the value 2 for BasicAuthLevel can enable potential hackers to steal
+
+passwords, as the authentication process is not encrypted.
+
+If you can connect to ELO Indexserver via HTTPS, change the value to 2. If only HTTP
+
+connection is possible, change the value to 1.
+
+Close the registry editor.
+
+In Windows, open the Services app.
+
+2. 
+
+3. 
+
+4. 
+
+1. 
+
+2. 
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WebClient\Parameters
+
+3. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+4. 
+
+5. 
+
+6. 
+
+7. 
+
+18 Client administration
+
+
+
+Select the entry WebClient and restart the service.
+
+Result
+
+Your changes are applied. The Connect ELO as a drive function is now available.
+
+Configure the ELO Desktop Client Plus right 
+
+ELO Desktop Client Plus users require an appropriate license.
+
+As administrator, set the right in the ELO Administration Console under User manager.
+
+Check the box next to ELO Desktop Client Plus user.
+
+The next time the user logs on, the ELO Desktop Client includes an additional view and functions in
+
+the Tasks area.
+
+19 Client administration
+
+
+	Table of contents
+	ELO Desktop Client administration
+	Introduction
+	Structure of the documentation
+	Target audience
+
+	Installation
+	Setup
+
+	Connect to ELO
+	Create profile
+	Logon
+
+	Configuration
+	Making universal changes to the configuration
+	Transfer settings
+	Load settings
+	Save settings
+
+	Integrate WebDAV without SSO
+	Configure the ELO Desktop Client Plus right
+
+
+

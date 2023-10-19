@@ -1,0 +1,1228 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Client administration | ELO Web Client
+
+
+Client administration
+
+ELO Web Client
+
+
+
+3
+
+3
+
+5
+
+16
+
+17
+
+17
+
+18
+
+19
+
+20
+
+22
+
+23
+
+23
+
+24
+
+25
+
+Table of contents
+
+ELO Web Client for administrators
+
+Basics 
+
+Administration 
+
+Scripting API 
+
+ELO Web Add-ons
+
+Introduction 
+
+Download 
+
+Installation 
+
+Technical settings 
+
+Troubleshooting 
+
+Internet access
+
+Background 
+
+Requirements 
+
+Install web server 
+
+2 Client administration
+
+
+
+ELO Web Client for administrators
+
+Basics 
+
+Target audience 
+
+This document is addressed to ELO Web Client administrators.
+
+Separate documentation is available for users explaining how the ELO Web Client works.
+
+Requirements and installation 
+
+Web archive 
+
+The ELO Web Client consists of a web archive (.war) that is deployed on an Apache Tomcat server.
+
+The ELO Web Client must be installed individually for each repository that is managed through a
+
+separate ELO Indexserver.
+
+ELO Server/Tomcat 
+
+To enable parameter transfer with special characters, the /conf/server.xml file must have the entry 
+
+URIEncoding=“UTF-8“ in the Connector section of the ELO server/Tomcat.
+
+Example
+
+Browser 
+
+The ELO Web Client runs as a web application in a browser. As an HTML5 application, the ELO Web
+
+Client requires a current browser. The browser must support the latest HTML5, CSS, and JavaScript
+
+standards.
+
+Information
+
+Configure the browser to allow cookies and enable JavaScript.
+
+The System requirements contains information about which browsers are currently supported.
+
+Though the ELO Web Client is generally supported by older browser versions, we recommended
+
+using the latest versions for better performance.
+
+Information
+
+<Connector port="8080" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443" URIEncoding="UTF-8
+
+3 Client administration
+
+https://docs.elo.com/user/elo-web-client/en-us/elo-web-client/
+https://docs.elo.com/user/elo-web-client/en-us/elo-web-client/
+https://docs.elo.com/ops/requirements/en-us/overview/clients.html#elo-web-client-23
+https://docs.elo.com/ops/requirements/en-us/overview/clients.html#elo-web-client-23
+
+
+When using Internet Explorer, icons may not load correctly. In this case, the default icons are
+
+displayed instead.
+
+ELO Indexserver access 
+
+The ELO Indexserver must be directly available for the browser (see section ELO Web Client
+
+Internet Access).
+
+Single sign-on 
+
+The single sign-on (SSO) function is run automatically via the ELO Indexserver. You do not need to
+
+configure this in the ELO Web Client.
+
+Installation 
+
+The ELO Web Client installed using the ELO Server Setup (see separate documentation).
+
+ELO Web Client Internet Access 
+
+To work with the ELO Web Client both via the intranet and the Internet, ELO Web Client Internet
+
+Access has to be configured accordingly.
+
+Refer to the separate section for information on the configuration of ELO Web Client internet
+
+access.
+
+Starting the program 
+
+The ELO Web Client offers a number of options to start the program.
+
+For more information on starting the program for the first time, refer to the Start pages and entry
+
+points chapter.
+
+Manual logon 
+
+Manual logon does not require additional settings. You access the manual logon page via a URL
+
+with the following format:
+
+http://<host>:<port>/web-<repository name>/
+
+4 Client administration
+
+https://docs.elo.com/ops/onprem/en-us/installation/setup/
+https://docs.elo.com/ops/onprem/en-us/installation/setup/
+
+
+Administration 
+
+This chapter contains information on administrative tasks in the ELO Web Client.
+
+Configuration 
+
+You can make a number of settings on the configuration page of the ELO Web Client.
+
+You can access the configuration via User menu [your name] > Configuration.
+
+Categories 
+
+The settings on the configuration page are divided into categories. When you open a category, you
+
+see the settings of the selected category. The settings are grouped by topic within the category.
+
+You will find an i with additional information next to each setting.
+
+Configuration sets 
+
+The different settings are separated into groups. These groups are called configuration sets.
+
+As the main ELO administrator, you have the right to manage all configuration sets. You can assign
+
+configuration sets to or remove them from users and option groups.
+
+Information
+
+Each user only sees the settings that were assigned to them via the configuration sets. Only
+
+you will see the sets themselves.
+
+The following configuration sets exist:
+
+• 
+
+5 Client administration
+
+
+
+Red circle: Refers to administrative settings that have a significant impact. This set should be
+
+restricted to administrators.
+
+Blue circle: Refers to the settings that have a significant impact.
+
+Green circle: Refers to settings that do not have a significant impact.
+
+Next to each setting, you will see which set they belong to.
+
+Assign configuration sets
+
+To assign a user or group a configuration set, proceed as follows:
+
+Click Select user and select the user or the group.
+
+Click the Configuration sets category and select the desired configuration sets.
+
+The changes are saved automatically.
+
+Who do these settings apply for? 
+
+First, you need to select who you want to change the settings for. The following modes are
+
+available:
+
+My configuration: All settings only apply to your own account. The configuration opens in this mode.
+
+Create configuration for user/group: The settings apply for a certain user or users in an option
+
+group. To select this mode, click the Select user button and choose a user or an option group.
+
+Please note
+
+Option groups cannot be used to transfer permissions.
+
+Create global configuration: The settings apply for all users. To select this mode, click the Select
+
+user button and choose Everyone.
+
+Important
+
+When you have changed a setting, leave the check box to the far left selected. If you clear
+
+the check box, the ELO Web Client restores the default settings.
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+6 Client administration
+
+
+
+Apply ribbon settings 
+
+This function enables you to apply the functions of the ribbon for another user or another option
+
+group.
+
+Click Select user and select the user or the group you want to apply the ribbon settings for.
+
+Click Apply ribbon settings. Here, select the user or group whose ribbon settings you want to
+
+apply.
+
+The functions on the ribbon of the two users/groups are now identical.
+
+Inheritance hierarchy of the settings 
+
+The ELO Web Client verifies which settings apply for which user at three levels. If there is an
+
+individual setting for a user, ELO uses this setting. If there are no individual settings for a user, the
+
+ELO Web Client checks whether the user is a member of an option group. If this is the case, the
+
+settings of the option group apply. The default values apply if no settings have been configured.
+
+Custom user settings: This item only appears if you create a configuration for an option group. Use
+
+the Remove custom settings button to make sure that all users of an option group have indeed
+
+been assigned the same settings.
+
+1. 
+
+2. 
+
+7 Client administration
+
+
+
+Please note
+
+The Remove custom settings action is required if the members of an option group have
+
+previously had access to certain settings. If you now remove a configuration set from an
+
+option group, this option group has fewer settings to choose from. Changes made up to this
+
+point must be overwritten once.
+
+Home screens and entry points 
+
+The ELO Web Client has multiple start pages and entry points. Each entry point redirects to the
+
+respective start page. Different functions and areas are available depending on the start page.
+
+Information
+
+The default language is determined based on your browser's language setting. However,
+
+you can change the language in the logon dialog box or in the start parameters.
+
+Start pages 
+
+Choose from the following start pages:
+
+Main page
+
+Direct view
+
+Main page 
+
+This page offers the full functionality of the ELO Web Client.
+
+The following entry points are also available for the main page:
+
+Manual logon 
+
+http://<host>:<port>/web-<repository name>/
+
+Example: http://DELOSERVER:9090/web-Repository/
+
+You will be redirected to the logon page. You must enter your user name and password.
+
+If logon is successful, you will be redirected to the main page of the program. If logon fails, a
+
+corresponding error message is shown. In this case, correct your logon data and click OK.
+
+Information
+
+If you are logging on manually, the name you entered stays the same when you change the
+
+language settings or log on to the system again.
+
+• 
+
+• 
+
+8 Client administration
+
+
+
+Alternative (start parameters possible) 
+
+http://<host>:<port>/web-<repository name>/login.html
+
+Example: http://DELOSERVER:9090/web-Repository/login.html
+
+This entry point also redirects you to the logon page. You can add other start parameters to the
+
+entry point, which will affect various settings (e.g. client language, start page, etc.).
+
+Single sign-on (SSO) 
+
+http://<host>:<port>/web-<repository name>/sso.html
+
+Example: http://DELOSERVER:9090/web-Repository/sso.html
+
+This page uses SSO to log on to the repository. If logon is successful, you will be redirected to the
+
+main page of the ELO Web Client. Otherwise, it will revert to the manual logon page.
+
+Alternative (start parameters possible) 
+
+http://<host>:<port>/web-<repository name>/login/index.jsp
+
+Example: http://DELOSERVER:9090/web-Repository/login/index.jsp
+
+This entry point provides an alternative to SSO. You can add other start parameters to the entry
+
+point, which will affect various settings (e.g. client language, start page, etc.).
+
+Direct view 
+
+This is not a start page in the conventional sense but more of an interface that you can open
+
+documents in. This requires a GUID as an additional parameter that automatically provides the
+
+browser with a link that refers to the document with the GUID entered. If the browser cannot
+
+display the document, then a message or pop-up window will appear, depending on the browser
+
+setting.
+
+Use the following entry point for direct view:
+
+Log on with GUID 
+
+http://<host>:<port>/web-<repository name>/guid.jsp?guid=<GUID>
+
+Example: http://DELOSERVER:9090/web-Repository/guid.jsp?
+
+guid=(4BE6C7FB-7F13-4297-93E5-3A26AD22EFEF)
+
+For compatibility reasons, this logon redirects you to the direct view. You also need to enter a GUID
+
+as a parameter.
+
+9 Client administration
+
+
+
+Access via start parameters 
+
+You can enter additional parameters for some logons. These parameters are attached to the URL
+
+when called. Always separate the first parameter from the URL with an ?. All additional parameters
+
+are separated with an &. The respective value is specified with an =.
+
+http://<host>:<port>/web-<repository name>/ix/login.jsp
+
+For example: http://ELOSERVER:9090/web-Repository/ix/logon.jsp?locale=fr&user=Anderson
+
+The following parameters are available:
+
+locale: Determines the language setting for the current session. The ELO Web Client currently
+
+supports the following languages: Danish, German, English, Finnish, French, Greek, Indonesian,
+
+Italian, Dutch, Portuguese, Portuguese (Brazil), Polish, Romanian, Swedish, Serbian, Slovakian,
+
+Spanish (International), Spanish (Latin America), Czech, Turkish, and Hungarian.
+
+startPage: Determines the landing page that opens after logging on. The following values are
+
+allowed: main page = 1, and direct view = 3.
+
+GUID: GUID of a document, required for the document view and can be specified for the main page.
+
+Enter the GUID of a document in parentheses, e.g. (9C0E2DA7-C1C6-4856-90D7-A50DA876F252).
+
+Log on with authentication start parameters 
+
+http://<host>:<port>/web-<repository name>/ix/urlLogin.jsp?user=<user name>&pw=<password>
+
+Enter the parameters for the user name for this logon page (user) and password (pw). After SSO,
+
+additional parameters are evaluated and you are then redirected to the corresponding start page.
+
+Please note
+
+This logon page displays the user name and password in plain text. If Secure Socket Layer
+
+(SSL) was enabled, the parameters are encrypted but will still appear in plain text in the
+
+browser or in the browser history. This also applies for server logs.
+
+Settings via the ELO Application Server Manager 
+
+Use the ELO Application Server Manager or the URL <server>:<port>/web-<repository name>/status
+
+to call the ELO Web Client status page.
+
+For example: http://ELOSERVER:9090/web-Repository/status
+
+This page shows the installed client version. You can also change settings.
+
+10 Client administration
+
+
+
+Change settings 
+
+Click the Change settings link.
+
+Information
+
+You need to log on as ELO administrator to make any changes to the configuration
+
+settings.
+
+Enter your ELO administrator logon and the corresponding password, then click OK.
+
+The ELO Web Client settings page appears.
+
+1. 
+
+2. 
+
+11 Client administration
+
+
+
+Use the drop-down menu to add different options to the view.
+
+When you select and add an option from the drop-down menu, an explanation appears in the
+
+last column.
+
+Change the settings as required.
+
+Click Save to save the changes you made.
+
+The new settings are applied.
+
+Delete selection 
+
+If you want to undo a setting, delete the entry from the list.
+
+Select the setting that you want to delete by clicking the check box next to the respective
+
+setting.
+
+Click the Delete selection button.
+
+Reload 
+
+Click Reload to reload the page.
+
+Please note
+
+Unsaved changes will be lost if you use the Reload function.
+
+Web Client logon 
+
+Use the Web Client logon link to go to the page for manual logon. Log on with your logon
+
+credentials. You are redirected to the main page of the ELO Web Client.
+
+Version history 
+
+Click the Version history link on the status page of the ELO Web Client to open the current version
+
+history of the ELO Web Client. Here you can see what changes were made in the most recent
+
+updates.
+
+Troubleshooting 
+
+Display errors in Internet Explorer 
+
+The ELO Web Client supports the current versions of all common browsers.
+
+Problem: In Microsoft Internet Explorer, there may be some display errors when in compatibility
+
+view mode.
+
+Solution: Check whether compatibility view is enabled and disable it.
+
+3. 
+
+4. 
+
+1. 
+
+2. 
+
+12 Client administration
+
+
+
+Information
+
+The following instructions apply to older versions of Microsoft Internet Explorer. Starting with
+
+version 11, the following configuration can no longer be made.
+
+Open Microsoft Internet Explorer.
+
+Press the F12 key to activate the developer tools.
+
+A window with developer tools appears.
+
+Click the Browser Mode menu name.
+
+A drop-down menu appears.
+
+Check the option Internet Explorer 10. Follow the same procedure for Internet Explorer 9.
+
+Click the Document Mode menu name.
+
+A drop-down menu appears.
+
+Check the option Standards (Page default).
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+6. 
+
+7. 
+
+13 Client administration
+
+
+
+Click the Close button.
+
+Result: Compatibility view is disabled.
+
+Display errors in the intranet 
+
+Problem: Microsoft Internet Explorer enables compatibility view by default when you access the
+
+ELO Web Client via an intranet connection. This may lead to display errors.
+
+Solution: Change the compatibility view settings.
+
+Open Microsoft Internet Explorer.
+
+Press the ALT key to show the menu bar.
+
+Click Extras in the menu bar.
+
+A drop-down menu appears.
+
+Click the Compatibility View Settings option.
+
+The Compatibility View Settings dialog box appears.
+
+Remove the address of the ELO Web Client from the list of websites to be displayed in
+
+compatibility view.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+6. 
+
+14 Client administration
+
+
+
+Uncheck the option Display intranet sites in Compatibility View.
+
+Click the Close button.
+
+Result: Compatibility view for intranet sites is disabled by default.
+
+Configuration file 
+
+When you install the ELO Web Client, a service account reads the configuration files. The
+
+installation process writes the entries to the configuration file of the ELO Web Client, config.xml.
+
+The password is encrypted.
+
+You can also make these settings manually by entering the corresponding values for configUser
+
+and configPwd.
+
+Change the password for the service account 
+
+If you changed the password for the service account, enter the changed password to configPwd.
+
+Optional: To enter your password encrypted, use the password.bat help program from the ELO
+
+Server Setup directory.
+
+Please note
+
+If you enter the password for the service account unencrypted, a message will be issued in
+
+the log file of the ELO Web Client (example: web-arc-001.log) along with an indication of the
+
+encrypted password. Enter the encrypted password string to the config.xml configuration file
+
+under configPwd.
+
+7. 
+
+15 Client administration
+
+
+
+Scripting API 
+
+A scripting API was developed for the ELO Web Client to enable developers to program extensions.
+
+The interface is currently restricted to the start page of the client.
+
+The Web Client Scripting Base folder is located in the Administration folder of the repository.
+
+Relevant files will be read from this folder.
+
+If this folder is not available, you can create a Scripting Base folder on the relevant page in the
+
+ELOprofessional Application Server Manager. Normally, the Web Client Scripting Base folder is
+
+created when ELO is installed.
+
+All scripting, CSS, and image files are read and loaded dynamically when a user starts the main
+
+page of the client (if the user has sufficient rights).
+
+Development 
+
+Some functions have been integrated to help you work with the interface. These are explained in
+
+the following section:
+
+DevMode: This enables you to activate developer mode. You will need to change the relevant entry
+
+in the settings of the ELOprofessional Application Server Manager.
+
+In developer mode, all JavaScript files will be loaded separately when starting the main page. This
+
+makes troubleshooting much easier. In addition, the folder dev (in the ELO installation directory
+
+under ...\server\webapps\web-\<repository name\>\dev) is checked for additional script, CSS, and
+
+image files. These files are integrated dynamically when starting the main page.
+
+Please note
+
+We do not recommend using developer mode in productive systems.
+
+16 Client administration
+
+
+
+ELO Web Add-ons
+
+Introduction 
+
+This documentation describes how to install and configure the ELO Web Add-ons program.
+
+ELO Web Add-ons expand or change the scope of functions of the ELO Web Client. You will find a
+
+description of the new and changed functions in the ELO Web Client manual.
+
+17 Client administration
+
+
+
+Download 
+
+You can download the ZIP file from the ELO master DVD or the ELO SupportWeb.
+
+Content of the ZIP file:
+
+Name Description
+
+ELO Web Add-ons.msi Installation wizard
+
+Setup.exe Allows you to choose the language for the installation wizard
+
+readme.txt Brief installation instructions
+
+*.mst These files are exclusively for selecting a language for Setup.exe
+
+18 Client administration
+
+
+
+Installation 
+
+After you have extracted the ZIP file, you have several options to install the program.
+
+Please note that you have to perform the installation as an administrator.
+
+Manual installation 
+
+Run the setup and follow the instructions of the installation wizard.
+
+Automatic installation 
+
+Use the MSI file.
+
+19 Client administration
+
+
+
+Technical settings 
+
+After successful installation, the program will start. You will see an icon on the taskbar.
+
+The program starts automatically when you boot Windows. To start the program manually, you can
+
+run the start file in the installation directory.
+
+In the context menu of the taskbar icon, you can open the log file or enable/disable debug log
+
+output, among others.
+
+You can also close the program via the taskbar icon. The icon then disappears.
+
+Registry entries 
+
+By default, the Apache HTTP client is used for communication, as this makes SSO authentication
+
+more reliable. To use the default HTTP client instead, you can add the following name with the
+
+value true:
+
+The program creates the following key in the registry:
+
+HKEY_CURRENT_USER\SOFTWARE\JavaSoft\Prefs\Elo Digital Office\elowebaddons
+
+You can enter different values in this key to configure program settings.
+
+The program has to be restarted after every change made to the registry entries for it to take
+
+effect.
+
+Time interval for deleting temporary files 
+
+The program regularly deletes temporary files accumulating during use. To set this time, you can
+
+add a value with the following name:
+
+HTTP port 
+
+By default, the program uses a specific port for communication via the HTTP protocol. To change
+
+this, you can add a value with the following name:
+
+You do not have to enable ports specifically as the installation wizard creates a corresponding
+
+firewall rule.
+
+use\_default\_http\_client\_factory
+
+temp\_deletion\_interval\_seconds
+
+http\_port
+
+20 Client administration
+
+
+
+HTTPS port 
+
+To enable communication via the HTTPS protocol, you can add a value with the following name:
+
+The program gives HTTPS priority over HTTP.
+
+Important
+
+If you have to change a port, you also have to configure it for all users that do not use SSO
+
+in their ELO user profiles. In the profileopts table, create the entry elo.webaddons.HTTP\_PORT
+
+or elo.webaddons.HTTPS\_PORT.
+
+Path to the keystore 
+
+To use HTTPS, you will have to configure a keystore with a corresponding certificate. For the path to
+
+this keystore, you can add a value with the following name:
+
+Password for the keystore 
+
+To use the keystore, you have to configure the password. For the password, you can add a value
+
+with the following name:
+
+When you start the program, it checks whether the password is encrypted. If not, a log output is
+
+created as a recommendation containing the encrypted variant.
+
+https\_port
+
+keystore\_path
+
+keystore\_password
+
+21 Client administration
+
+
+
+Troubleshooting 
+
+No communication between ELO Web Client and ELO Web Add-ons 
+
+Make sure the ELO Web Client has loaded after the ELO Web Add-ons program is ready for
+
+operation.
+
+Using the browser console, check whether the ELO Web Client is using both the correct
+
+protocol and port. 
+
+You can configure the port used by the ELO Web Client in the profileopts table, while the
+
+port for the ELO Web Add-ons program is configured via a registry entry (see above).
+
+These settings must match.
+
+If you have configured HTTPS and are using self-signed certificates, your browser may
+
+classify the connection as unsecured. You will recognize this by an error message in the ELO
+
+Web Client browser console. In this case, you will have to add the connection in the browser
+
+as an exception.
+
+• 
+
+• 
+
+◦ 
+
+• 
+
+22 Client administration
+
+
+
+Internet access
+
+Background 
+
+To use the ELO Web Client both locally on the Intranet as well as remotely over the Internet, you
+
+need to configure the server specifically. This document describes how to set up this configuration.
+
+Information
+
+For questions on the installation and configuration of the displayed server components,
+
+please refer to the administrator of your firewall.
+
+Primarily, a server must be installed and set up in the DMZ. If additional requirements exist for the
+
+documents to be delivered, a second Indexserver instance (here: Repository1) must be set up. The
+
+connections between them are shown in the following diagram:
+
+23 Client administration
+
+
+
+Requirements 
+
+You need the following components to set up ELO Web Client internet access:
+
+DMZ server
+
+ELO server
+
+For the DMZ server, you in turn need the following components:
+
+Apache web server (current version)
+
+An installation of ELOprofessional or ELOenterprise of version 21.00.000 or higher is needed for the
+
+ELO server.
+
+• 
+
+• 
+
+• 
+
+24 Client administration
+
+
+
+Install web server 
+
+First, you need to install the Apache web server.
+
+Download the Apache web server from the following address:
+
+http://httpd.apache.org/download.cgi
+
+Information
+
+The latest binary version 2.4.25 has a bug in mod_proxy. There is a fix for this: https://
+
+www.apachelounge.com/viewtopic.php?p=34723
+
+Install the server.
+
+Information
+
+Use the Binary Releases link on the download page to display the available versions. For the
+
+actual download, use the mirrored pages to download the file faster and not overload the 
+
+apache.org page.
+
+Apache module 'mod_proxy_ajp' 
+
+By integrating the proxy plug-in into the ELO Indexserver, only the plug-in needs to be available in
+
+the DMZ. The ELO Indexserver sends internal requests to other ELO components (ELO Web Client,
+
+ELO Forms Services).
+
+Edit the file httpd.conf in the directory <apache 2.4 install directory>/conf by adding the
+
+following lines:
+
+It is assumed that the Apache server was installed on the same server as the ELO Application
+
+Server and is therefore called elo-server. If not, the entries ProxyPassReverse need to be replaced
+
+with the internal server name of the Apache server.
+
+# Load mod_proxy_ajp module
+
+LoadModule proxy_module modules/mod_proxy.so
+
+LoadModule proxy_ajp_module modules/mod_proxy_ajp.so
+
+ProxyPass /ix-Archive1 ajp://elo-server:9092/ix-Archive1
+
+ProxyPassReverse /ix-Archive1 http://elo-server/ix-Archive1
+
+25 Client administration
+
+http://httpd.apache.org/download.cgi
+http://httpd.apache.org/download.cgi
+https://www.apachelounge.com/viewtopic.php?p=34723
+https://www.apachelounge.com/viewtopic.php?p=34723
+https://www.apachelounge.com/viewtopic.php?p=34723
+
+
+Information
+
+The port number (here: 9092) refers to the AJP connector. You can find the port number in the
+
+conf directory within the server.xml file of the ELO Application Server.
+
+Restart the Apache web server and check the log files for possible errors.
+
+Information
+
+Make sure that all ports used for internal access are unblocked on the network.
+
+Result: All preparations are now complete. The ELO Web Client can now be accessed via the
+
+Internet. Use the following URL:
+
+Configuration 
+
+Firewall 
+
+Please note that a firewall might block access to
+
+The firewall should allow all requests to ELO components.
+
+External links over the Internet 
+
+If external links created in ELO need to be available over the Internet, the ELO Indexserver
+
+configuration needs to be adjusted accordingly. To do this, open the Indexserver Configure Options
+
+under publicUrlBase and enter the externally available address of the Apache 2 server.
+
+Information
+
+This setting does not only apply for the ELO Web Client.
+
+http://www.dmz.com/ix-Archive1/plugin/de.elo.ix.plugin.proxy/web/
+
+http://www.dmz.com/
+
+http://www.dmz.com/ix-Archive1/
+
+26 Client administration
+
+
+	Table of contents
+	ELO Web Client for administrators
+	Basics
+	Target audience
+	Requirements and installation
+	Web archive
+	ELO Server/Tomcat
+	Browser
+	ELO Indexserver access
+	Single sign-on
+	Installation
+	ELO Web Client Internet Access
+
+	Starting the program
+	Manual logon
+
+
+	Administration
+	Configuration
+	Categories
+	Configuration sets
+	Who do these settings apply for?
+	Apply ribbon settings
+	Inheritance hierarchy of the settings
+
+	Home screens and entry points
+	Start pages
+	Main page
+	Manual logon
+	Alternative (start parameters possible)
+	Single sign-on (SSO)
+	Alternative (start parameters possible)
+
+	Direct view
+	Log on with GUID
+
+	Access via start parameters
+	Log on with authentication start parameters
+
+	Settings via the ELO Application Server Manager
+	Change settings
+	Delete selection
+	Reload
+	Web Client logon
+	Version history
+
+	Troubleshooting
+	Display errors in Internet Explorer
+	Display errors in the intranet
+
+	Configuration file
+	Change the password for the service account
+
+
+	Scripting API
+	Development
+
+
+	ELO Web Add-ons
+	Introduction
+	Download
+	Installation
+	Manual installation
+	Automatic installation
+
+	Technical settings
+	Registry entries
+	Time interval for deleting temporary files
+	HTTP port
+	HTTPS port
+	Path to the keystore
+	Password for the keystore
+
+
+	Troubleshooting
+	No communication between ELO Web Client and ELO Web Add-ons
+
+
+	Internet access
+	Background
+	Requirements
+	Install web server
+	Apache module 'mod_proxy_ajp'
+	Configuration
+	Firewall
+
+	External links over the Internet
+
+
+

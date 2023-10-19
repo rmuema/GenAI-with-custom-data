@@ -1,0 +1,2677 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO server ‒ Installation and operation | Repository and documents
+
+
+ELO server ‒ Installation
+
+and operation
+
+Repository and documents
+
+
+
+3
+
+3
+
+4
+
+7
+
+8
+
+9
+
+10
+
+10
+
+11
+
+11
+
+12
+
+12
+
+13
+
+13
+
+37
+
+40
+
+42
+
+42
+
+44
+
+44
+
+45
+
+45
+
+46
+
+47
+
+48
+
+51
+
+Table of contents
+
+Paths and URLs
+
+Introduction 
+
+Document paths 
+
+Default document paths 
+
+Move document files 
+
+Manage URLs 
+
+ELO OCR Service
+
+Information 
+
+ELO Indexserver OCR
+
+Information 
+
+Textreader
+
+Information 
+
+Backup service
+
+Backup 
+
+'Remove old documents' dialog box 
+
+Deleting backup documents 
+
+Passwords
+
+Creating encrypted and encoded passwords 
+
+Preview documents
+
+Information 
+
+Document redaction
+
+Introduction 
+
+Requirements 
+
+Activation on the server 
+
+Test in the ELO client 
+
+Other comments 
+
+2 ELO server ‒ Installation and operation
+
+
+
+Paths and URLs
+
+Introduction 
+
+ELO uses different paths and URLs depending on the purpose and range of tasks.
+
+This documentation covers the following topics:
+
+Document paths
+
+Default document paths
+
+Manage URLs 
+
+• 
+
+• 
+
+• 
+
+3 ELO server ‒ Installation and operation
+
+
+
+Document paths 
+
+ELO manages storage media (physical storage) using document paths. In the Document paths area
+
+of the ELO Administration Console, you can set up new media, make moved media accessible
+
+again, or check the free storage space on a medium. The document path specifies where the
+
+documents are stored physically.
+
+Information
+
+You can specify a separate document path for each document when entering metadata.
+
+However, this is only possible if you selected No fixed assignment as the document path
+
+when the metadata form was created.
+
+Information
+
+You need to have the permission Change document paths to edit document paths. Your
+
+system administrator can assign this right to you.
+
+Creating a new document path 
+
+Click Add new document path (green plus icon).
+
+The fields for a new document path appear in the right-hand program pane.
+
+Enter the name of the document path to the Name field.
+
+Define other options.
+
+Path: Enter the path on the file system that will be used to store the files.
+
+1. 
+
+2. 
+
+3. 
+
+4 ELO server ‒ Installation and operation
+
+
+
+Preview path: If you want to save the preview files separately from the documents, enter the
+
+path here.
+
+Full text path: If you want to store full text files separately from the documents, enter the
+
+path here.
+
+Structure: Define here how ELO stores the documents. Open the drop-down menu to view the
+
+options you can select, such as Flat, no child directories, for ELO to store all documents to the
+
+same directory.
+
+Example
+
+If you select Flat, no child directories, ELO will put all documents in a single directory
+
+with no limits.
+
+For 64k directories with 64k documents, ELO will file a maximum of 64,000 documents
+
+in any one of up to 64,000 directories.
+
+Information
+
+The best setting depends on your preferred directory structure and which storage
+
+medium you have in use.
+
+Use as backup path: If you select the check box, the path can be used to back up data. The
+
+option is available in the Restore path field in the Default document paths area.
+
+Please note
+
+A backup path is not a substitute for actual backups!
+
+Do not restore from backup path: The path is not used to restore documents.
+
+Read-only: A path with the status "read-only" can no longer be written to.
+
+Please note
+
+You should not store documents with an expiration date on read-only media. Doing so
+
+could lead to inconsistencies when permanently deleting expired documents.
+
+WORM path: WORM is the abbreviation for: write once read many. If this option is selected,
+
+the path can be used for applications such as jukebox storage.
+
+ELO automatically creates the following fields in this dialog box:
+
+Internal ID
+
+Default path
+
+Created on
+
+Changed on
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+5 ELO server ‒ Installation and operation
+
+
+
+The internal identification number is displayed when the path was created or changed.
+
+Information
+
+The Delete permanently function does not check whether the documents are located
+
+at a WORM path. The document path setting does not affect the document metadata.
+
+Please note
+
+Documents stored on WORM media can also be deleted from the repository. This
+
+means that access via the system is no longer possible.
+
+Click Save to confirm your entries.
+
+The new path shows up in the list on the left-hand side.
+
+All document paths will now be used according to the applied settings to save and restore
+
+documents.
+
+4. 
+
+6 ELO server ‒ Installation and operation
+
+
+
+Default document paths 
+
+In the Default document paths area of the ELO Administration Console, you specify which paths to
+
+use as document paths or restore paths.
+
+Default document paths: Use the Default document paths drop-down menu to select the main
+
+document path.
+
+No other default path: If required, you can use the fields marked No other default path to add
+
+document paths.
+
+Default filing method: These radio buttons enable you to specify how to distribute the entries to the
+
+document paths.
+
+Restore path: Use the Restore path drop-down menu to select the backup path to be used.
+
+7 ELO server ‒ Installation and operation
+
+
+
+Move document files 
+
+In the Move document files area, you can move files, file versions, attachments, and/or attachment
+
+versions to a different document path. The repository structure remains the same.
+
+Source path: In the Source path drop-down menu, you can choose whether to move document files
+
+from all paths or only from a selected path.
+
+Target path: Select the desired source path from the Source path drop-down menu. You may need to
+
+create the path first in the Document paths area.
+
+Filing date range: You can use the from and to date fields to restrict the action to a specific period. If
+
+you define a period, only document files filed within the specified period will be moved. Otherwise,
+
+all document files on the selected path will be moved.
+
+Count: Click the Count button to generate a report on the number and size of document files that
+
+would be moved according to your settings.
+
+Move: Click the Move button to start the move action.
+
+Restore default settings: Click the Restore default settings button to restore the default settings in
+
+the Move document files area.
+
+8 ELO server ‒ Installation and operation
+
+
+
+Manage URLs 
+
+In the Manage URLs area of the ELO Administration Console, you enter the URLs for different ELO
+
+modules.
+
+ELO Analytics URL: The ELO Analytics URL is automatically entered by the ELO Server Setup.
+
+External ELO Analytics URL: Enter the external URL used to make ELO Analytics available
+
+externally in this field.
+
+Please refer to the separate documentation on ELO Analytics for more information on configuring
+
+and installing ELO Analytics.
+
+ELO online help URL: The ELO Server Setup enters the URL to the help portal here.
+
+By default, this is the address:
+
+https://docs.elo.com/
+
+9 ELO server ‒ Installation and operation
+
+https://docs.elo.com/admin/elo-analytics/
+https://docs.elo.com/admin/elo-analytics/
+
+
+ELO OCR Service
+
+Information 
+
+Please note
+
+Starting with ELO 21.4, ELO Textreader (gen. 2) replaces the previous ELO Textreader (ELOtr),
+
+ELO Preview Converter (ELOpreview), and ELO OCR Service (ELOocr).
+
+For more information, refer to the ELO Textreader (gen. 2) documentation.
+
+10 ELO server ‒ Installation and operation
+
+
+
+ELO Indexserver OCR
+
+Information 
+
+This documentation has been moved.
+
+You can now find the documentation on the ELO Indexserver page.
+
+11 ELO server ‒ Installation and operation
+
+https://docs.elo.com/ops/indexserver/en-us/ocr-ix/
+https://docs.elo.com/ops/indexserver/en-us/ocr-ix/
+
+
+Textreader
+
+Information 
+
+Please note
+
+Starting with ELO 21.4, ELO Textreader (gen. 2) replaces the previous ELO Textreader (ELOtr),
+
+ELO Preview Converter (ELOpreview), and ELO OCR Service (ELOocr).
+
+For more information, refer to the ELO Textreader (gen. 2) documentation.
+
+12 ELO server ‒ Installation and operation
+
+
+
+Backup service
+
+Backup 
+
+ELO Backup is a component within the ELO Document Manager (ELOdm), meaning that additional
+
+software does not need to be installed to use it.
+
+Note on ELO Replication 
+
+If the ELO Replication module is in use and the Transfer DDS option is enabled in this module, the
+
+backup profile must always contain an SQL command under SQL Select in order to exclude certain
+
+temporary documents. You will find details in the section Only backing up certain documents.
+
+Procedure 
+
+Check license 
+
+The ELOenterprise or ELOprofessional license file, which was uploaded on installation and that is
+
+used by the ELO Access Manager, must include an ELO Backup license.
+
+The license file can also be changed later. If you wish to do so, please send a request to the ELO
+
+order center.
+
+Settings for Centera, NetApp, and DR550 
+
+If you wish to use a system based on EMC Centera, a NetApp system, or the IBM Tivoli Storage
+
+Manager (and/or a DR550), read the corresponding chapter as well.
+
+Create a path entry 
+
+You need a path for a backup to indicate where the documents should be copied to. If a backup path
+
+does not yet exist, create it in the ELO Administration Console in the Document paths area.
+
+13 ELO server ‒ Installation and operation
+
+
+
+Select the option Use as backup path.
+
+Leave the Preview path and Full text path fields blank. They will be ignored during backup.
+
+Click Save.
+
+After you have saved the path, the internal ID of the path is displayed.
+
+Create profile 
+
+One backup path is specified for each backup profile. The backup profiles are traversed and
+
+processed at specified intervals. Normally, one profile per path is sufficient.
+
+14 ELO server ‒ Installation and operation
+
+
+
+In the ELO Administration Console, go to the Document paths area and click Backup profiles.
+
+Click the green plus icon (Create new backup profile).
+
+The Create new backup profile area appears.
+
+Input field Meaning
+
+Profile
+
+name
+
+Any unique profile name within the selected repository, with no spaces or special
+
+characters. The displayed profiles apply for the selected repository, and are managed
+
+by the corresponding ELO Document Manager.
+
+15 ELO server ‒ Installation and operation
+
+
+
+Input field Meaning
+
+SQL Select
+
+(Optional) SQL Select command used to determine which documents are filed.
+
+Normally, you do not need to make an entry here. A default value will be applied. See
+
+section Backing up specific documents only.
+
+Packet size
+
+Maximum number of files processed in each run: 100 (recommended). 0 is also
+
+possible, meaning that a default value of 1000 will be used. Otherwise, values from
+
+about 100 and up are recommended.
+
+Document
+
+path
+Select the desired backup path from the drop-down menu.
+
+Slot number
+Number of the backup slots from 1 to 4. 1 (recommended) means that slot 1 is used
+
+by this profile. See section Backing up specific documents only.
+
+Retention
+
+Deletion lock in seconds. Only considered by ELO Document Manager when using 
+
+Centera (external storage medium).**0 (recommended)**means: No change to the
+
+lock defined in the ELO Document Manager elodmopt table. If a value greater than 1
+
+is entered, it will be used when writing the backup.
+
+Including
+
+metadata
+
+If this option is selected, a metadata file (extension: ESW) is generated for each
+
+backed up file.
+
+Click Save.
+
+The profile is now available. The profile appears in the list on the left-hand side of the Backup
+
+profiles area.
+
+Information:
+
+You may need to refresh the page to make changes visible.
+
+Delete a profile by clicking the X icon.
+
+Start backup 
+
+To start the backup, open the Backup tasks area under Maintenance in the ELO Administration
+
+Console.
+
+You have the following options:
+
+16 ELO server ‒ Installation and operation
+
+
+
+Option Meaning
+
+Backup profiles
+
+Click Start to start the backup process using the settings from the most recently
+
+selected backup profile. (See the Backup profiles area). Click Stop to stop the
+
+backup immediately.
+
+Backup and
+
+purge
+
+Click Start to start the backup process using the settings from the most recently
+
+selected backup profile. (See the Backup profiles area). Old documents are also
+
+removed. The settings for this mode are located in the lower part of the Backup
+
+tasks area. See also the chapter Remove old documents. Click Stop to stop the
+
+backup immediately.
+
+Click Save to
+
+confirm your
+
+entries.
+
+Click Save to save the settings to automatically remove old documents.
+
+Reset
+Click Reset to reset the settings for automatic removal of old documents to the
+
+default values.
+
+Minimum age in
+
+days
+
+This value specifies after how many days old documents may be deleted. A value
+
+of 0 means that all old documents will be deleted.
+
+Comparison
+
+mode
+
+Select the method you want to use to search for old documents: Compare
+
+contents: A document is considered old if the backup contains a document with
+
+identical contents. No comparison: All documents are considered old documents.
+
+Compare contents: A document is considered old if the backup contains a
+
+document of identical size.
+
+Document path
+Select the document path from which old documents will be removed. It is
+
+possible to choose from all paths.
+
+17 ELO server ‒ Installation and operation
+
+
+
+Option Meaning
+
+Start hour
+Defines at which hour the deletion process will start each day, or if the deletion
+
+process should be run once every hour.
+
+Information
+
+The backup process always starts every time the Apache Tomcat server/the ELO Application
+
+Server is restarted.
+
+Success check 
+
+Open the ELO Document Manager page in a browser and check whether the backup is running. You
+
+can access the status page from ELO 12 with the following navigation path: ELO Indexserver status
+
+page > Configure Options > DM Status.
+
+Alternatively: You can access the status page of the ELO Document Manager with the following URL
+
+schema:
+
+http://<server>:<port>/ix-\<repository name>/plugin/de.elo.dm.plugin/dm?\_cmd\_=status
+
+If the backup is currently running, "running" is shown in the Backup task line. If not, check the ELO
+
+Document Manager log file for error messages.
+
+Start prompts the system to check whether a backup is needed. The setting for execution time is
+
+ignored. This is useful, for example, for function tests.
+
+Now, check whether the backup is working.
+
+If your repository is still empty, file at least one document using the ELO client. A backup process
+
+always takes at least 30 seconds. Afterwards, the counter for Saved documents should increase and
+
+the document should be available on the computer at the selected backup path (assuming you are
+
+not using Centera or a TSM server).
+
+If you have enabled the Including metadata option in the backup profile, an ESW file should be
+
+generated for each backed up document.
+
+18 ELO server ‒ Installation and operation
+
+
+
+Path rerouting 
+
+When a backup path is full, another path can be written to automatically, and the existing path
+
+number will be replaced in the backup profile with the new path number.
+
+Only paths created as backup paths are taken into account.
+
+Additional backup paths must contain a number 1 higher than that of the previous path.
+
+If the first backup path does not contain a number at the end of its name, the name of the next path
+
+must end with 2 (see example 2).
+
+We recommend using leading zeros before the number. The zeros are taken into account (example
+
+3).
+
+Example 1:
+
+The name of your backup path is backup1.
+
+Now create an additional path titled backup2; which should point to another drive or another server.
+
+This would be followed by backup3 etc.
+
+Example 2:
+
+The name of your backup path is xyz.
+
+The next path is xyz2, followed by xyz3, etc.
+
+Example 3:
+
+The name of your backup path is b001.
+
+The next path is b002, followed by b003, etc.
+
+After b009 comes b010.
+
+Path rerouting occurs when a path can no longer be written to. To force or to test path rerouting, all
+
+you have to do is change the rights to the relevant backup directory and its sub-directories such
+
+that the ELO Document Manager can no longer write to it. A corresponding message will then
+
+appear in the ELO Document Manager log file, and the next path will be used if possible.
+
+If the path can no longer be written to, but no follow-up path is available, an error message will
+
+appear on the status page of the ELO Document Manager (in the browser), as well as in the log file.
+
+The backup program will pause for a period and then attempt a backup again.
+
+In this case, create one or more follow-up paths.
+
+Backup slots 
+
+One path number and backup slot are specified in each backup profile. This means that a document
+
+can be backed up to up to four paths, for example on various devices.
+
+19 ELO server ‒ Installation and operation
+
+
+
+Examples
+
+A backup profile called "Test profile" exists. Path number 2 and backup slot 1 are specified for this
+
+profile. This means that all documents are backed up on path 2. This path number 2 is entered in
+
+backup slot 1.
+
+There are two backup profiles:
+
+a) "Test profile1" with path number 2 and backup slot 1
+
+b) "Test profile2" with path number 3 and backup slot 2
+
+This means that all documents on path 2 and path 3 are backed up and are entered to slots 1 and 2.
+
+If you use multiple backup profiles and you want to back up all documents for each profile, you
+
+should try to make sure that the profiles are clearly distinguished from one another. Each profile
+
+should use a different backup slot and path number, so that each slot and each path number occurs
+
+only once.
+
+If you only want to back up certain documents, other settings are more helpful (see section Only
+
+back up certain documents).
+
+When backup documents are no longer in the repository, meaning that they need to be recovered
+
+for access, the first occupied slot with the lowest slot number is always used. The fastest backup
+
+medium should therefore ideally be specified in the profile with the lowest slot number used.
+
+In the elodmdocs database table, backup slot 1 corresponds to pathid2, slot 2 to pathid3, and so on.
+
+Only back up certain documents (SQL Select) 
+
+To only back up certain documents, such as those with a certain file extension, you must enter a
+
+corresponding SQL command to the SQL select field when creating a backup profile.
+
+If you don't enter anything, predefined SQL commands are used. In ELO Document Manager
+
+versions before 7.00.040, no backup could be created from another backup slot - only from the
+
+original. The document IDs of the documents set for backup have been collected with the simple
+
+SQL commands in the following table:
+
+Backup
+
+slot
+
+Simple SQL command (only
+
+backup from original)
+
+Advanced SQL command (backup from backup
+
+slot also possible)
+
+1 (pathid2)
+select docid from elodmdocs
+
+where pathid>0 and pathid2=0
+
+select docid from elodmdocs where pathid2=0 and
+
+(pathid>0 or pathid3>0 or pathid4>0 or pathid5>0)
+
+2(pathid3)
+select docid from elodmdocs
+
+where pathid>0 and pathid3=0
+
+select docid from elodmdocs where pathid3=0 and
+
+(pathid>0 or pathid2>0 or pathid4>0 or pathid5>0)
+
+3(pathid4)
+select docid from elodmdocs
+
+where pathid>0 and pathid4=0
+
+select docid from elodmdocs where pathid4=0 and
+
+(pathid>0 or pathid2>0 or pathid3>0 or pathid5>0)
+
+4(pathid5)
+select docid from elodmdocs
+
+where pathid>0 and pathid5=0
+
+select docid from elodmdocs where pathid5=0 and
+
+(pathid>0 or pathid2>0 or pathid3>0 or pathid4>0)
+
+20 ELO server ‒ Installation and operation
+
+
+
+Here, pathid is the path ID of the filing path. Pathid2 to pathid5 are the path IDs for the backup area,
+
+corresponding to backup slots 1 to 4.
+
+A value of 0 means that no path ID has been entered, meaning there is no backup for that slot.
+
+In the database table elodmdocs, a backup profile writing to backup slot 1 (i.e. pathid2) and
+
+entering path number 2 looks like this:
+
+Recommendations for SQL command structure 
+
+ELO Document Manager 7.00.040 and higher uses the advanced SQL commands in the table above
+
+by default to enable backup of another backup slot. You can use the corresponding SQL command
+
+from the table above. However, it should always contain the following:
+
+select docid from elodmdocs
+
+Only then will the document IDs be returned.
+
+Additionally, a condition should be specified that states a path ID is entered somewhere else (in the
+
+filing path or in another backup slot), which means a document exists that can be copied. For
+
+example:
+
+where pathid>0
+
+It is also useful to define a condition that states the path ID is still 0 from the backup slot in use
+
+(pathid2, pathid3, pathid4 or pathid5). For example:
+
+pathid2=0
+
+This condition ensures documents are only backed up once.
+
+A simple example for specific documents in backup slot 1:
+
+select docid from elodmdocs where pathid>0 and pathid2=0 and docid>1000
+
+Please note
+
+ELO Document Manager does not check whether the SQL command is correct or rational.
+
+Therefore, please check whether the SQL commands are executed correctly. Look at the ELO
+
+Document Manager log file and in the elodmdocs database table.
+
+Using ELO Replication 
+
+This section addresses backup used in combination with the ELO Replication module.
+
+21 ELO server ‒ Installation and operation
+
+
+
+If the ELO Replication module is in use and DDS transfer is enabled for replication, a command
+
+must always be entered to the profile under SQL Select ensuring that DDS replacements that are
+
+only temporarily valid will not be backed up.
+
+When DDS files are transferred, ELO Replication creates small temporary files with the extension 
+
+TXT before the original document is written. However, ELO Document Manager should not create
+
+backups of these temporary documents, as otherwise the original documents to be transferred at a
+
+later time by ELO Replication would no longer be backed up. If old documents are removed without
+
+backup control, only the backed up temporary file would still exist.
+
+These temporary files always have the MD5 hash of 90F7168D4A2F4846E5846A75092F7C83 and
+
+the same contents ("DDS temporary replacement").
+
+To prevent backup of these files, the entry for backup slot 1 would be as follows:
+
+select docid from elodmdocs where pathid\>0 and pathid2=0 and md5 !=
+
+'90F7168D4A2F4846E5846A75092F7C83'
+
+In addition, the creation of MD5 hashes when creating documents must be enabled in ELO
+
+Document Manager. This is normally the case, and can only be disabled manually. Otherwise, the 
+
+md5 column in the elodmdocs table would not be filled, which would make a query to the database
+
+impossible.
+
+EMC Centera 
+
+Procedure 
+
+If you wish to use an EMC Centera for your backup, you must do the following before creating a
+
+backup profile:
+
+You require a Centera SDK from EMC that corresponds to the Document Manager (see
+
+following section Centera SDK and CentraStar versions). If you use Windows, Linux, or
+
+Solaris, you can find the SDK on the ELO DVD (for Windows, both 32-bit and 64-bit versions
+
+are available; otherwise a version for both 32-bit and 64-bit can be used).
+
+Close the ELO client and stop the Apache Tomcat server/the ELO Application Server.
+
+Remove the files for an old Centera SDK if any exist.
+
+Install the SDK files as described in the Installation chapter of the instructions (PDF file) from
+
+EMC. In Linux and Solaris environments, a script must also be run. In Windows, extract the
+
+SDK to a temporary folder and copy (for SDK 3.2 p5) all 8 DLL files from the lib32 or lib64
+
+directory into the Apache Tomcat/ELO Application Server directory bin (i.e. not the file with
+
+the extension LIB). Alternatively, you can use a different directory where the operating
+
+system can find the files.
+
+Copy the FPLibrary.jar file from the SDK to the Apache Tomcat/ELO Application Server
+
+subdirectory shared\lib. If the file already exists from an older Centera SDK, replace it.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+6. 
+
+22 ELO server ‒ Installation and operation
+
+
+
+Linux and Solaris: Check the environment variable LD_LIBRARY_PATH. This must be set in the
+
+profile for the account used to run Apache Tomcat.
+
+Example (for Linux running a 64-bit version of Java):
+
+LD_LIBRARY_PATH=/usr/local/Centera_SDK/lib/64
+
+Java may not find the libraries, resulting in an UnsatisfiedLinkError upon the first Centera access.
+
+You must then additionally specify java.library.path for Apache Tomcat in the CATALINA_OPTS
+
+environment variable. For example:
+
+CATALINA_OPTS="-Djava.library.path=/usr/local/Centera\_SDK/lib/64"
+
+The variable can be defined in your script that calls the Tomcat start script, for example. The
+
+ELOenterprise DVD contains a small Java program from ELO in the Centera SDK directory that lets
+
+you quickly test Java access to the Centera libraries.
+
+In the corresponding ELO Document Manager, enable the use of the Centera library. Do so
+
+with the following SQL command:
+
+update elodmopt set optval='true' where optno=105
+
+Specify a temporary directory for ELO Document Manager (to which Apache Tomcat has write
+
+access) with an SQL command. If your directory is c:\temp:
+
+update elodmopt set optval= 'c:\temp' where optno=107
+
+Check whether the preset of 600 seconds for retention in ELO Document Manager should be
+
+changed. The length of the deletion lock when writing documents on the Centera can be
+
+defined in three locations:
+
+a) In the ELO Administration Console backup profile
+
+b) In the elodmopt database table (optno=12)
+
+c) In Centera itself
+
+Within these three, a) has the highest priority, b) the second highest, and c) the third-highest. If a
+
+value greater than 0 is entered to the backup profile, this number will be used. If 0 is entered to the
+
+backup profile, the value will be used that is defined in the elodmopt table. If 0 is entered to the 
+
+elodmopt table as well, the Centera preset will be used.
+
+Start Apache Tomcat.
+
+You now have to create an additional path entry in the ELO client.
+
+In the Access path field, enter the IP address or the server name of the Centera, optionally
+
+followed by the port, separated by a colon (the default is port 3218).
+
+Examples :
+
+`100.100.100.1
+
+1. 
+
+1. 
+
+1. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+1. 
+
+1. 
+
+23 ELO server ‒ Installation and operation
+
+
+
+Centera test: 3218'
+
+You may specify multiple Centeras by separating each with a semicolon.
+
+Example:
+
+100.100.100.1:3218;100.100.100.2
+
+You can also specify PEA files (see section Centera profile and PEA file).
+
+Select the Centera path option in the Structure field. Also select the option Use as backup
+
+path.
+
+An example:
+
+Please note
+
+Centera can only be used for backup paths. It can only be used for backup slot 1.
+
+1. 
+
+24 ELO server ‒ Installation and operation
+
+
+
+Older version of Centera SDK 
+
+Information
+
+If ELO was already using an older version of Centera SDK: The Centera log file you could
+
+previously enter in the elodmopt table for logging reasons in older versions is no longer
+
+created starting with SDK 3.1p1. Use the following SQL command to see whether you have
+
+specified such a file:
+
+select \* from elodmopt where optno=106 If this is the case, remove this file specification
+
+with the following: update elodmopt set optval= '' where optno=106
+
+Centera SDK and CentraStar versions 
+
+If possible, use the version of the Centera SDK on the ELO DVD. The following table shows which
+
+alternative versions may be used.
+
+In our experience, the version of CentraStar (which is the version of Centera itself) can also be
+
+higher, so for example an ELOdm and Centera SDK 3.2 will work alongside CentraStar 4.0.
+
+ELO Document
+
+Manager
+
+Centera SDK
+
+used
+
+Other tested Centera
+
+SDKs
+
+Tested
+
+CentraStar
+
+From 4.0 2.3 3.1 p1 3.1
+
+From 5.00.020 3.1 p1 3.2 3.1, 4.0
+
+From 6.00.080 3.2 3.1 p1 4.0
+
+From 8.00.012 3.2 p5 3.2 4.2
+
+Please note
+
+When using combinations that have not yet been tested (of ELO Document Manager, SDK,
+
+and CentraStar), you should perform tests before production use (backup, deletion of old
+
+documents, and restoration of documents).
+
+Centera profile and PEA file 
+
+If your Centera uses a Centera profile, which requires the use of a PEA file for access, there are two
+
+possibilities.
+
+In the document path 
+
+You can specify a PEA file when entering the document path.
+
+Example:
+
+100.120.140.1?D:\Centera\profil.pea
+
+25 ELO server ‒ Installation and operation
+
+
+
+You may specify multiple Centeras by separating each with a semicolon.
+
+100.120.140.1?D:\Centera\profil.pea;100.120.140.2?D:\Centera\profil2.pea
+
+As environment variable 
+
+Create an environment variable named CENTERA_PEA_LOCATION that is recognized by the account
+
+under which Apache Tomcat/the ELO Application Server runs. If this runs on the system account in
+
+Windows, it must be a system variable. Enter the path and the name of the PEA file as the variable.
+
+For example:
+
+d:\test\profil1.pea
+
+If it is a system variable in Windows, you will have to restart your system, as otherwise the
+
+environment variable will not be activated.
+
+The PEA file must not contain any deletion rights.
+
+Possible error messages when using a Centera profile 
+
+The error message "The use of this operation is restricted" means that a PEA file must be
+
+specified to access the Centera and no PEA file has been found.
+
+The error message "Failed to authenticate PEA data" can result in cases where the PEA file
+
+has not been found. In this latter case, check whether the PEA file is actually located in the
+
+correct location.
+
+Other error messages 
+
+java.lang.NoClassDefFoundError: com/filepool/fplibrary/FPPool 
+
+This message occurs in cases where the Centera Java file FPLibrary.jar has not been
+
+found. It must be placed in the Tomcat directory shared\lib. The directory must also be
+
+defined in the Tomcat file catalina.properties, which, however, automatically occurs
+
+during server setup.
+
+java.lang.UnsatisfiedLinkError: com.filepool.natives.FPLibraryNative.setLastError(I)V 
+
+This message occurs if the Centera libraries were not found.
+
+NetApp storage system 
+
+The NetApp system can be used in ELO either as a standard filing path or as a path for backups.
+
+Please note
+
+When using the NetApp system, Apache Tomcat/the ELO Application Server cannot run on
+
+the system account. You must use an account that is able to access the other server. This
+
+account must have full access to the Tomcat/ELO Application Server directory, as well as to
+
+the configuration and data directories of the individual web applications. We recommend
+
+changing the owner of these directories and files accordingly.
+
+• 
+
+• 
+
+• 
+
+◦ 
+
+• 
+
+◦ 
+
+26 ELO server ‒ Installation and operation
+
+
+
+With SnapLock 
+
+If you also want to use the SnapLock function, the hardware ensures that files can only be deleted
+
+after a period of time that you specify.
+
+If you use the SnapLock functionality when backing up the ELO Document Manager, you have two
+
+ways of specifying the period in which a document is protected:
+
+Use the Default retention period for the NetApp system
+
+Set the retention period when filing to the ELO client. If the document is saved by the backup
+
+program in the ELO Document Manager, the latter date will be used. If this date falls outside
+
+an interval defined on the NetApp volume, it will be automatically modified by the NetApp
+
+system.
+
+Information
+
+When using SnapLock, enable the WORM path option in ELO when creating the document
+
+path.
+
+NetApp system as default filing path 
+
+Please note
+
+You should also enable the WORM path option when using it as the default filing path.
+
+However, this means the document status of Version control disabled (previously Freely
+
+editable) can no longer be used. Additionally, it is no longer possible to move paths and
+
+remove old documents. If the WORM path option is not enabled (not recommended), errors
+
+may occur when removing old documents. Conflicts may arise between the default settings
+
+for storage (default retention period) and the NetApp limit date. It is possible that database
+
+entries are changed, but the corresponding documents will not be able to be deleted.
+
+Backup function test with SnapLock 
+
+Create a backup path on the Network Appliance server.
+
+Create the backup path in the ELO Administration Console. Enable the WORM path option.
+
+Create a corresponding backup profile.
+
+On the ELO Document Manager status page, check whether backup is running. If not, start it
+
+in the ELO Administration Console.
+
+File a document in the ELO client.
+
+Attempt to delete the backed up file in the file system. This should not be possible if
+
+SnapLock is working.
+
+1. 
+
+2. 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+6. 
+
+27 ELO server ‒ Installation and operation
+
+
+
+Using retention periods in the ELO client 
+
+If you want to set a retention period (in older versions: expiration date) in the ELO client, you must
+
+make some changes in the ELO Document Manager. The ELO Document Manager must be set to log
+
+the last access date for a document after the document has been backed up.
+
+Information
+
+The retention period is only set for the backup, not when using the NetApp system as the
+
+default filing path. You can specify NetApp date entries up to January 17, 2071 for the
+
+retention period. The ELO Document Manager automatically corrects later retention periods
+
+by setting them to the last possible date.
+
+Procedure
+
+In the database, enable the option to set the last access date on the backup
+
+(USE_BACKUP_LAST_ACCESS). Also, in the elodmopt database table, change the value for
+
+record 108 to true for the affected repository. You can use the following SQL command:
+
+update elodmopt set optval='true' where optno=108
+
+If the record does not yet exist, create it. Use the following SQL command to do so:
+
+insert into elodmopt values (108,'true','USE\_BACKUP\_LAST\_ACCESS')
+
+Restart Apache Tomcat.
+
+Now the ELO Document Manager sets the last access date for documents on the backup. However,
+
+this is only the case if a document retention period has been set in the ELO client.
+
+Function test 
+
+Create a backup path on the NetApp server.
+
+Create the document path. Enable the options to Use as backup path and WORM path.
+
+Set up the backup profile accordingly.
+
+View the path in Windows Explorer. The date/time of the last access is not shown here by
+
+default. To change this, go to the View tab and add the Date accessed column.
+
+1. 
+
+1. 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+28 ELO server ‒ Installation and operation
+
+
+
+Open the ELO Document Manager status page to see if Backup is running. Start it if it is not.
+
+File a document to ELO. Set a retention period some time in the future.
+
+As soon as the file is saved to the backup path, check the date of last access in Windows
+
+Explorer. The date must match the retention period entered to ELO and must also lie in the
+
+future.
+
+Check whether the file can be deleted. If SnapLock is working, it should not be possible to
+
+delete the file.
+
+Possible problems 
+
+If the last access time is not correct, check the ELO Document Manager log file to see
+
+whether the following line was set:
+
+<Time> INFO (EswLastAcc.java) – backup: last access date was set
+
+IBM DR550 and Tivoli Storage Manager 
+
+Software requirements 
+
+Either an IBM Tivoli Storage Manager (TSM) server or an IBM DR550 can be used. The TSM server
+
+software is installed on the DR550. This software must already be completely configured.
+
+Information
+
+A TSM server cannot be used as the default filing path.
+
+Required software 
+
+TSM server version 5.2.2 or higher (this is checked by the ELO Document Manager) 
+
+Tested versions: 5.3.3 (32-bit), 6.1.4.1 (64-bit)
+
+TSM client version 5.2.2 or higher (must be installed on the same server as the ELO
+
+Document Manager) 
+
+Tested versions: 5.3.2 (32-bit), 5.5.3.1 (64-bit), 6.1.4.0 (32-bit), and 6.2.1.0 (32-bit)
+
+Two TSM Java API files from IBM (located in the Apache Tomcat directory: 
+
+prog\serversetup\configdata\lib\tsm): 
+
+TsmJavaApi.dll
+
+TsmJavaApi.jar
+
+Restrictions 
+
+The following restrictions can occur.
+
+6. 
+
+7. 
+
+8. 
+
+• 
+
+• 
+
+◦ 
+
+• 
+
+◦ 
+
+• 
+
+◦ 
+
+◦ 
+
+29 ELO server ‒ Installation and operation
+
+
+
+Only one Document Manager per Apache Tomcat 
+
+Only one ELO Document Manager per Apache Tomcat/ELO Application Server may access the TSM.
+
+Otherwise, the IBM library will return the error message:
+
+error in tsmSetUp: ANS0238E (RC2041) The sequence of calls is invalid
+
+If multiple repositories need access to the TSM, each ELOdm must be installed to a separate
+
+Apache Tomcat. However, only one ELO Access Manager is required.
+
+Only with a 32-bit Java version 
+
+The TSM Java API files from IBM are only available for the 32-bit version of Java. The ELO Document
+
+Manager that accesses the TSM must be installed on a 32-bit version of Apache Tomcat/the ELO
+
+Application Server.
+
+At present, access from ELOdm to the TSM server has only been tested in a Windows environment.
+
+For other operating systems, special conditions may need to be fulfilled.
+
+TSM server configuration 
+
+The TSM server must be configured so data can be saved to it.
+
+A physical tape drive must not be used, as then the access times would be too long to work
+
+with the Document Manager.
+
+A primary storage pool is required. If you want to run more than one TSM session per ELO
+
+Document Manager, a storage pool with random access should be used (unit class: DISK). If
+
+subsequent media are defined, they must be of the same type, i.e. not with sequential
+
+access. Otherwise, simultaneous accesses would block each other until the end of the
+
+affected TSM session. More than one TSM session per ELO Document Manager is currently not
+
+recommended for production use, but it is at least possible for testing environments. With
+
+only one session, a storage pool with sequential access (unit class: FILE) can be used, such
+
+as for a virtual tape drive.
+
+A copy group of type Archive will be required (not Backup).
+
+In the used copy group, a value of NOLIMIT should be entered for Retain Version if possible,
+
+so that documents will not be deleted without the ELO Document Manager being notified of
+
+such.
+
+A client node with the corresponding password must be created for the ELO Document
+
+Manager that will access the TSM server. This password must not be set to expire. Any node
+
+name is possible, and it can be identical to the ELO repository name.
+
+Normally, only one mount point is required. 
+
+To create it, you can use the following command in the TSM console (<name> is the
+
+node name, <password> is the password):
+
+register node <name> <password> passexp=0 domain=standard
+
+Installing the software 
+
+Install the TSM client on the server that will also run the Document Manager.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+◦ 
+
+1. 
+
+30 ELO server ‒ Installation and operation
+
+
+
+Information
+
+The 32-bit TSM runtime files are required on the server running the ELO Document Manager.
+
+This means that if a 64-bit version of Windows is running on the server, you can only install
+
+a 64-bit TSM client. To install it, use the adjusted setup and select the Client API (32-bit)
+
+runtime files feature.
+
+If ELOdm is not yet installed, please install it on a 32-bit Apache Tomcat/ELO Application
+
+Server.
+
+Stop Apache Tomcat/the ELO Application Server.
+
+Copy TsmJavaApi.dll to the Apache Tomcat/ELO Application Server directory \bin.
+
+Alternatively, you can use a different directory where the file can be found by the
+
+operating system in a specific path.
+
+Copy TsmJavaApi.jar to the Apache Tomcat/ELO Application Server child directory shared\lib.
+
+Enter any missing records to the elodmopt database table if needed. With older versions of
+
+the ELO Document Manager, these do not yet exist, especially the data set with optid=19.
+
+SQL commands for the required new data sets (preset values):
+
+1. 
+
+2. 
+
+3. 
+
+◦ 
+
+4. 
+
+5. 
+
+insert into elodmopt values (19,'1','TSM SESSIONS');
+
+insert into elodmopt values (109,'false','USE TSM');
+
+insert into elodmopt values (110,'','TSM DSMI_CONFIG');
+
+insert into elodmopt values (111,'','TSM DSMI_DIR');
+
+insert into elodmopt values (112,'','TSM DSMI_LOG');
+
+insert into elodmopt values (113,'','TSM CLIENT NODE');
+
+insert into elodmopt values (114,'','TSM CLIENT NODE PWD');
+
+insert into elodmopt values (115,'','TSM FILESPACE NAME');
+
+31 ELO server ‒ Installation and operation
+
+
+
+Change the values in the optval column as described in the following section.
+
+Records in the 'elodmopt' table 
+
+The following records in the elodmopt database table are meaningful when using TSM:
+
+The ELO Document Manager reads the records at startup. Any time manual changes are made, the
+
+ELO Document Manager must be restarted. The entries in the remark column will not be evaluated
+
+by the ELO Document Manager, as they are only comments.
+
+Optid remark Explanation for the optval column
+
+19 TSM SESSIONS
+Number of TSM sessions. More than one session is not recommended for
+
+productive use.
+
+107 TEMP_PATH
+
+An already existing directory for temporary files on the Document
+
+Manager, to which Apache Tomcat/the ELO Application Server has write
+
+access. The entry is already entered if Centera is in use, in which case no
+
+changes are necessary. For example:c:\temp
+
+109 USE TSM
+
+Determines whether TSM should be used (true or false). This allows the
+
+TSM to be turned on and off, regardless of whether the other data sets
+
+exist. However, if it is turned off, access to the TSM will no longer be
+
+possible.
+
+110
+TSM
+
+DSMI_CONFIG
+
+TSM configuration file with path, such as: C:\ELOenterprise\config\dm-
+
+elo\dsm.opt(See the following section) The operating system environment
+
+variable with the same name will not be used.
+
+111 TSM DSMI_DIR
+
+Directory that contains the language files for the TSM client (in Windows
+
+this is dscenu.txt). Enter the corresponding child directory in the TSM
+
+client installation here. For example: C:\Programme\Tivoli\TSM\baclien
+
+The operating system environment variable with the same name will not
+
+be used.
+
+112 TSM DSMI_LOG
+Directory for the log file (dsierror.log). The operating system environment
+
+variable with the same name will not be used.
+
+113
+TSM CLIENT
+
+NODE
+Name of the client node. This must exist on the TSM server.
+
+114
+TSM CLIENT
+
+NODE PWD
+
+Password for the client node, in cleartext (will be encrypted when ELOdm
+
+next starts).
+
+115
+TSM FILESPACE
+
+NAME
+
+TSM File space name. Recommendation: no special characters or umlauts.
+
+The name is converted to lowercase and ELOdm automatically places a
+
+backslash in front of the name.
+
+insert into elodmopt values (116,'DEFAULT','TSM MANAGEMENT CLASS');
+
+insert into elodmopt values (117,'true',
+
+'TSM ARCHIVE RET PROTECTION');
+
+1. 
+
+32 ELO server ‒ Installation and operation
+
+
+
+Optid remark Explanation for the optval column
+
+116
+
+TSM
+
+MANAGEMENT
+
+CLASS
+
+TSM management class. This will be used when saving files. Please note
+
+that the desired storage pool will be used. Uppercase or lowercase does
+
+not matter. Example: DEFAULT
+
+117
+
+TSM ARCHIVE
+
+RET
+
+PROTECTION
+
+Determines whether retention protection should be used, and if it should
+
+be checked that it is running on the TSM server (true or false). If using a
+
+DR550, true must be entered here.
+
+TSM configuration file 'dsm.opt' 
+
+The TSM configuration file exists for additional settings for the TSM to be able to be set. The file can
+
+be empty.
+
+Recommendation: Create the file in the configuration directory of the ELO Document Manager.
+
+Example: C:\ELOenterprise\config\dm-elo
+
+If a port needs to be entered for the TSM server, which is normally not necessary, you can do so in
+
+the file (the entry then refers to all TSM servers in use). For example: TCPPORT 1500
+
+Create backup path 
+
+You must note the following options when you create a backup path with access to a TSM server:
+
+Enter the server name or IP address of the TSM server in the Path field.
+
+You can add relative path entries if you wish (they will be converted to lowercase). A
+
+question mark needs to be placed between the server ID and the relative path.
+
+Examples:
+
+dr550?abc or
+
+192.168.60.2?abc/def
+
+A forward slash may not be placed directly after the question mark. A forward slash at the
+
+end will be removed. If you create multiple DR550 paths, please ensure that you always use
+
+the same entry before the question mark, because at least one session will be created for
+
+each server name. Otherwise, this would cause multiple sessions to be established
+
+unintentionally. The used TSM server names can be seen on the Document Manager status
+
+page.
+
+Select the TSM path option in the Structure field.
+
+Information
+
+If you want to create more than one backup path to a TSM server per ELO Document
+
+Manager, use relative paths. Additional path entries with the same server name would still
+
+work, but still only one session for this server would be created. A TSM server should not be
+
+entered once using the server name and then in an additional entry, e.g. under its IP
+
+• 
+
+• 
+
+◦ 
+
+◦ 
+
+• 
+
+33 ELO server ‒ Installation and operation
+
+
+
+address, as this would establish two sessions to the same server, which could block
+
+simultaneous accesses, depending on the storage pool in use.
+
+Backup profile 
+
+Note the following information on using a backup profile with a TSM server:
+
+The default setting of 0 should be used in the Retention field.
+
+The TSM can be used in any backup slot.
+
+Function tests 
+
+Regularly check the status page and the ELO Document Manager log file, as well as the TSM
+
+server log file (dsierror.log, see table above).
+
+Check whether the ELO Document Manager starts at all. The TSM server is only accessed
+
+when documents are backed up or restored.
+
+Check whether the backup service is running (see section Check).
+
+Document backup to the TSM server should work without putting out error messages. If a
+
+connection to the TSM server cannot be established, another attempt will be made later.
+
+Test whether documents can be restored (not recommended for productive repositories!).
+
+Also test the purge documents feature. Use the current date as the expiration date. The
+
+backed up documents will first be deleted from the hard drive. After restarting the ELO client,
+
+the old documents should be restored from the TSM server when you attempt to access
+
+them.
+
+Other notes 
+
+Please also note the following.
+
+Filing structure of documents on the TSM server 
+
+If you intend to use more than one ELO Document Manager with a TSM connection, you should
+
+know the filing structure, in order to avoid writing in the same data range. If they write data in the
+
+same range, although no documents will be lost, various documents with various TSM object IDs
+
+will be created. This means it will be unclear which documents will be retrieved after a query.
+
+Incidentally, this can also occur if the elodmdocs table is manipulated in such a way that
+
+documents are stored a second time on the TSM.
+
+The following values are decisive for the filing structure:
+
+Client node name
+
+The ELO Document Manager will log on to the TSM as a client node. A node does not normally
+
+see the files in another node.
+
+File space name
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+34 ELO server ‒ Installation and operation
+
+
+
+The file space name is roughly the same as the drive letter. It is defined in the elodmopt
+
+table. Example: elofs1.
+
+High level name
+
+The high level name is comparable to the directories. The ELO Document Manager uses the
+
+repository name, followed by a special directory name.
+
+Example (repository name = EXTEN1): EXTEN1/upr00000
+
+If relative path entries are used, the high level name is placed after the relative path,
+
+separated from each other with a forward slash.
+
+Example : servername?abc would turn into: abc/EXTEN1/upr00000
+
+Low level name
+
+The low level name is comparable to the file name, e.g. 00000001.jpg.
+
+These three entries combine to form the following filing structure for the first document, when the
+
+file space name, high level name, and low level name are written in sequence:
+
+/elofs1/EXTEN1/upr00000/00000001.jpg
+
+With another ELO Document Manager, it looks like this (with the same file space name):
+
+/elofs1/EXTEN2/upr00000/00000001.jpg
+
+If each ELO Document Manager has its own node name, there should be no problems.
+
+Alternatively (or in addition), you can also define a different file space name for each ELO
+
+Document Manager.
+
+A name of a repository always refers to a specific ELO Document Manager.
+
+Conclusion 
+
+Care should be taken in the configuration if, in addition to a server with a production system, a
+
+server with a test system with its own database is to be used, that however is to access the same
+
+TSM.
+
+'Remove old documents' dialog box 
+
+If the ELO Document Manager only establishes one session per TSM server, only one access to the
+
+TSM server can take place at one time. Further access attempts must then wait. In this case, wait
+
+times may arise when restoring purged documents.
+
+Additionally, the Do not restore from backup option should not be enabled in this case. That option
+
+can also result in wait times.
+
+• 
+
+• 
+
+35 ELO server ‒ Installation and operation
+
+
+
+Other 
+
+Information
+
+The expiration date, which can be set for documents in the ELO client, is disregarded when
+
+using TSM.
+
+36 ELO server ‒ Installation and operation
+
+
+
+'Remove old documents' dialog box 
+
+You can use this function to remove seldom-needed old documents from the filing path after a
+
+backup.
+
+Please note
+
+If the WORM path option is active for a path, no old documents will be removed.
+
+Automatically remove old documents 
+
+It is also possible to remove old documents during the backup process.
+
+Procedure 
+
+Open the Backup tasks area in the ELO Administration Console.
+
+Select the desired settings.
+
+Minimum age in days: This value specifies after how many days old documents may be deleted. A
+
+value of 0 means that all old documents will be deleted.
+
+Compare mode: This is where you select the mode used to search for old documents.
+
+Compare contents: A document is considered old if the backup contains a document with
+
+identical contents.
+
+1. 
+
+1. 
+
+• 
+
+• 
+
+37 ELO server ‒ Installation and operation
+
+
+
+No comparison: All documents are considered old documents.
+
+Compare contents: A document is considered old if the backup contains a document of
+
+identical size.
+
+Document path: Select the document path from which old documents will be removed. It is
+
+possible to choose from all paths.
+
+Start hour: Defines at which hour the deletion process will start each day, or if the deletion process
+
+should be run once every hour.
+
+Click Start after the Backup and purge menu item to start the process.
+
+Database settings 
+
+The settings for backup and automatic removal are also located in the elodmopt database table.
+
+Information
+
+After making a change to the elodmopt table, restart the ELO Document Manager or Apache
+
+Tomcat to apply the changes.
+
+The table on the following page explains these values.
+
+optno optval remark Explanation
+
+13 0 BACKUP_MODE Please do not change this value. It will be set by ELOdm.
+
+0 = Do not start backup
+
+1 = Backup without deletion
+
+2 = Backup with deletion
+
+14 1000 PURGE_DAY_LIMIT Number of days (from 0) before today.
+
+Examples :
+
+365 = one year or older
+
+0 = today or older (i.e. all documents)
+
+When using NetApp, be aware that documents can only
+
+be deleted after a certain period of time if you have set
+
+this option in NetApp. Example: If a half year has been
+
+set in NetApp, enter 183 here (always round up).
+
+15 0 PURGE_PATH_ID Possible path restriction for filing paths:
+
+0 = include all paths
+
+1 or higher = path with corresponding path ID
+
+16 2 PURGE_FILE_CHECK_MODE Comparison type:
+
+2 = By file size
+
+3 = By file content
+
+17 20 PURGE_START_HOUR When processing should take place:
+
+-1 = Every 60 minutes
+
+• 
+
+1. 
+
+38 ELO server ‒ Installation and operation
+
+
+
+optno optval remark Explanation
+
+0 to 23 = Hour of the day, such as 20 for 8:00 p.m.
+
+Control 
+
+Check that automatic deletion is running. Also check the ELO Document Manager status page. The
+
+value running should appear in the Purge task line. If not, check the ELO Document Manager log file
+
+for error messages.
+
+If the check for automatic deletion finds matching documents, the number after Purged documents
+
+should increase.
+
+The Last purge time row shows you the last time documents were removed.
+
+The Next purge check row shows you when the next check for old documents will be performed.
+
+Do not restore documents 
+
+Whenever a user views a file removed from the filing path (old document removed) in the ELO
+
+client, the file is restored from the backup path. If you want to prevent this, enable the Do not
+
+restore from backup option when creating the backup path.
+
+39 ELO server ‒ Installation and operation
+
+
+
+Deleting backup documents 
+
+Activation 
+
+The Delete permanently function does not affect old documents when used with default settings.
+
+This means that old documents will not be deleted permanently. However, the function can be
+
+extended correspondingly.
+
+Please note
+
+The expansion is not possible for paths with the WORM path option enabled.
+
+The expansion of the Delete permanently function occurs through the elodmopt database table.
+
+The value of the optno=20 record is decisive here. If it does not exist, you can create it with the
+
+following SQL command:
+
+insert into elodmopt values (20,'0','DELETE_BACKUP_FILE_MODE (0=off, 1=file system, 2=extern
+
+storage devices, 3=all)')
+
+Please note
+
+If deletion protection is enabled, for example on Centera or NetApp, deletion will not be
+
+possible. Use values of 1 or 2 as alternatives.
+
+optno
+optval
+
+(default)
+remark Explanation
+
+20 0 DELETE_BACKUP_FILE_MODE 0 = do not delete backup files
+
+1 = only delete backup files on the file system
+
+2 = only delete backup files on external data
+
+storage devices (such as Centera or Azure Blob)
+
+3 = delete backup files
+
+Information
+
+Backup documents that have been backed up using the Activator interface can only be
+
+deleted if the newer Activator libraries (after 2009) are used.
+
+Restriction with MD5 paths 
+
+With MD5 paths, only one original copy may exist for each file. If an identical file is used
+
+somewhere else, it is considered as a reference to the original file. Thus, when deleting documents
+
+from MD5 paths, the ELO Document Manager must check whether a file is still in use somewhere
+
+else. For each backup slot, a check will be performed to see if a file may be deleted.
+
+40 ELO server ‒ Installation and operation
+
+
+
+If, however, the same MD5 path is used in multiple backup profiles, a file may occur in multiple
+
+backup slots. In this case, deletion must be prevented from that path. There are a few ways to
+
+achieve this:
+
+Disable deletion of backup documents (a value of 0 for the optno 20 record).
+
+Only delete backup files on external storage devices like Centera or Azure Blob (a value of 2
+
+for the optno 20 record), but only if no MD5 path is used.
+
+Set the affected MD5 path as a WORM path. In that case, however, no temporary files will be
+
+used with the backup.
+
+Manual deletion 
+
+Important
+
+No files can be deleted manually on the file system or on external data storage devices,
+
+since these are still stored in the database.
+
+If a backup device fails completely or becomes unusable in such a way that the backed up
+
+documents no longer exist on a backup slot, this must be applied to the database. To do so, the
+
+backup service must be stopped and the path column must be set to 0 for the affected backup slot
+
+in the elodmdocs database table (slot 1 corresponds to the pathid2 column, slot 2 corresponds to 
+
+pathid3, and so on).
+
+Sample SQL command for backup slot 1:
+
+update elodmdocs set pathid2=0
+
+Additionally, the backup profile in use should be deleted if the backup device is no longer available.
+
+• 
+
+• 
+
+• 
+
+41 ELO server ‒ Installation and operation
+
+
+
+Passwords
+
+Creating encrypted and encoded passwords 
+
+In the Create password area of the ELO Administration Console, you can create encrypted/encoded
+
+passwords for ELO.
+
+Input: Enter the unencrypted password in the Input field.
+
+The encrypted/encoded passwords appear automatically in the Encrypted ELO password, Encrypted
+
+ELOas database password, and Encoded Base64 password fields.
+
+42 ELO server ‒ Installation and operation
+
+
+
+Click the document icon to the right of the fields to copy the field contents to the Windows
+
+clipboard.
+
+43 ELO server ‒ Installation and operation
+
+
+
+Preview documents
+
+Information 
+
+Please note
+
+Starting with ELO 21.4, ELO Textreader (gen. 2) replaces the previous ELO Textreader (ELOtr),
+
+ELO Preview Converter (ELOpreview), and ELO OCR Service (ELOocr).
+
+For more information, refer to the ELO Textreader (gen. 2) documentation.
+
+44 ELO server ‒ Installation and operation
+
+
+
+Document redaction
+
+Introduction 
+
+This document describes how to configure the ELO Document Manager to use the redaction feature
+
+in ELO, which allows the user to redact parts of TIFF documents in the repository using a black
+
+rectangle. This does not change the original document. The user can configure permissions to only
+
+allow specific users or groups to see the area underneath the black rectangle.
+
+The ELO Document Manager performs redaction on the original image file provided to the client
+
+application. This means that it is not possible for users without the required permissions to view or
+
+copy the text behind the redaction mark.
+
+Please note
+
+Before you can use the redaction tool, you need to make changes in SQL Server. For more
+
+information about the entries in SQL, refer to the chapter Activation on the server. This is
+
+also necessary if you can click the Redaction function in the viewer toolbar.
+
+45 ELO server ‒ Installation and operation
+
+
+
+Requirements 
+
+ELOenterprise or ELOprofessional 6.00.080 or higher (server version).
+
+Apache Tomcat version 6.0.20 or higher. If Apache Tomcat 6.0.24 or higher is used, you must
+
+use version 7.00.020 or higher of the ELO Document Manager.
+
+Uncompressed TIFF files, or TIFF files with LZW, packbits, CCITT, or ZIP compression. JPEG
+
+compression in TIFF files is not supported. Some older compression settings are also
+
+unsupported. In this case, the image is not created.
+
+Server: Windows, Linux (Mac OS is not supported).
+
+Warning
+
+If you use document redaction with file formats other than those listed here, redaction may
+
+not work properly and text may still be visible.
+
+In addition, configuration errors can disable document redaction.
+
+Only use document redaction in controlled environments.
+
+• 
+
+• 
+
+• 
+
+• 
+
+46 ELO server ‒ Installation and operation
+
+
+
+Activation on the server 
+
+To enable document redaction on the server, you need to change two settings in the ELO Document
+
+Manager elodmopt table:
+
+Enable TIFF redaction:
+
+First, check whether the required data set exists:
+
+If the data set already exists:
+
+If it doesn't exist:
+
+Define a temporary directory that must already exist. It is best to set a different directory for
+
+each ELO Document Manager, such as:
+
+Restart the ELO Application Server running the ELO Indexserver.
+
+1. 
+
+select * from elodmopt where optno=122
+
+update elodmopt set optval='true' where optno=122
+
+insert into elodmopt values (122, 'true', 'TIFF MASK ACTIVE')
+
+2. 
+
+update elodmopt set optval='c:\temp\elo\archive1' where optno=107
+
+3. 
+
+47 ELO server ‒ Installation and operation
+
+
+
+Test in the ELO client 
+
+Open a TIFF file in the repository.
+
+In the document viewer toolbar, select the function Redaction.
+
+Use the mouse to drag a box around the part of the document you want to redact.
+
+1. 
+
+2. 
+
+3. 
+
+48 ELO server ‒ Installation and operation
+
+
+
+Now right-click and select the entry Permissions.
+
+Select the users and/or groups who should be able to see the text.
+
+Option 1: Edit the permission settings for the users/groups.
+
+Option 2: Click the X icon to remove the selected user's permissions to the part that has been
+
+redacted. The user can no longer see the text on that part of the document.
+
+Click OK.
+
+4. 
+
+5. 
+
+6. 
+
+49 ELO server ‒ Installation and operation
+
+
+
+The changes are applied. If a user logs on who does not have permissions to the redacted
+
+area, they will not be able to see the redacted information.
+
+50 ELO server ‒ Installation and operation
+
+
+
+Other comments 
+
+If a user without permission for the redacted part checks the document's checksum, an
+
+invalid status is shown, as the local version with redaction deviates from the original
+
+document.
+
+Redacted documents can only be edited by users with permission for the redacted parts.
+
+Users without permissions can check the documents out and view the redacted version.
+
+However, they are unable to check them back in.
+
+• 
+
+• 
+
+51 ELO server ‒ Installation and operation
+
+
+	Table of contents
+	Paths and URLs
+	Introduction
+	Document paths
+	Creating a new document path
+
+	Default document paths
+	Move document files
+	Manage URLs
+
+	ELO OCR Service
+	Information
+
+	ELO Indexserver OCR
+	Information
+
+	Textreader
+	Information
+
+	Backup service
+	Backup
+	Note on ELO Replication
+	Procedure
+	Check license
+	Settings for Centera, NetApp, and DR550
+	Create a path entry
+	Create profile
+	Start backup
+	Success check
+	Path rerouting
+	Backup slots
+	Examples
+
+	Only back up certain documents (SQL Select)
+	Recommendations for SQL command structure
+	Using ELO Replication
+
+
+	EMC Centera
+	Procedure
+	Older version of Centera SDK
+	Centera SDK and CentraStar versions
+	Centera profile and PEA file
+	In the document path
+	As environment variable
+	Possible error messages when using a Centera profile
+
+	Other error messages
+
+	NetApp storage system
+	With SnapLock
+	NetApp system as default filing path
+	Backup function test with SnapLock
+
+	Using retention periods in the ELO client
+	Procedure
+	Function test
+	Possible problems
+
+
+	IBM DR550 and Tivoli Storage Manager
+	Software requirements
+	Required software
+	Restrictions
+	Only one Document Manager per Apache Tomcat
+	Only with a 32-bit Java version
+
+	TSM server configuration
+	Installing the software
+	Records in the 'elodmopt' table
+	TSM configuration file 'dsm.opt'
+	Create backup path
+	Backup profile
+	Function tests
+	Other notes
+	Filing structure of documents on the TSM server
+	Conclusion
+
+	'Remove old documents' dialog box
+	Other
+
+
+
+	'Remove old documents' dialog box
+	Automatically remove old documents
+	Procedure
+
+	Database settings
+	Control
+	Do not restore documents
+
+
+	Deleting backup documents
+	Activation
+	Restriction with MD5 paths
+	Manual deletion
+
+
+	Passwords
+	Creating encrypted and encoded passwords
+
+	Preview documents
+	Information
+
+	Document redaction
+	Introduction
+	Requirements
+	Activation on the server
+	Test in the ELO client
+	Other comments
+
+

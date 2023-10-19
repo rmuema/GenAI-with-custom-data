@@ -1,0 +1,8252 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO Web Client | ELO Web Client
+
+
+ELO Web Client
+
+ELO Web Client
+
+
+
+3
+
+3
+
+9
+
+32
+
+36
+
+56
+
+75
+
+81
+
+94
+
+103
+
+105
+
+114
+
+125
+
+131
+
+155
+
+162
+
+174
+
+Table of contents
+
+null
+
+Basics 
+
+Program interface 
+
+Navigation and use 
+
+Important components 
+
+Important actions in detail 
+
+User menu [your name] 
+
+Workspaces 
+
+Teamspaces 
+
+'Favorites' tab 
+
+'New' tab 
+
+'View' tab 
+
+'Output' tab 
+
+'Organize' tab 
+
+'Task' tab 
+
+'Document' tab 
+
+'Search' tab 
+
+2 ELO Web Client
+
+
+
+null
+
+Basics 
+
+What is the ELO Web Client? 
+
+The ELO Web Client provides flexible access to your ELO system. All you need are your logon
+
+credentials and the browser URL to access ELO.
+
+Target audience 
+
+This document is addressed to ELO Web Client users. Separate documentation is available for
+
+administrators.
+
+The scope of functions presented in this documentation may differ greatly from those in your ELO
+
+repository.
+
+If you do not find functions described in this documentation, you do not have permission to perform
+
+the action.
+
+Getting started 
+
+If you have no previous experience with the ELO Web Client or any other ELO client, the following
+
+chapters are a good place to start:
+
+Important actions in detail: This chapter introduces you to some important features with
+
+detailed step-by-step instructions and explanations. With the help of these instructions, you
+
+will learn basic actions, which can be applied to most other functions.
+
+Create view: If you initially want to test a function that does not affect other users, this
+
+function is a good choice.
+
+Program interface, Navigation and use, Important components: These chapters explain the
+
+interface and how to use ELO in general. They cover individual topics at a more advanced
+
+level.
+
+Structure of the documentation 
+
+The goal of this documentation is to explain the functions of the ELO Web Client, as well as the ELO
+
+Web Add-ons and the ELO Interface for Microsoft Office Online.
+
+Basics
+
+The first chapter contains general information about using the documentation and an overview of
+
+the chapter contents.
+
+Program interface
+
+This chapter contains an introduction to the program interface and a description of all work areas.
+
+• 
+
+• 
+
+• 
+
+3 ELO Web Client
+
+https://docs.elo.com/admin/clients/en-us/web-client/
+https://docs.elo.com/admin/clients/en-us/web-client/
+
+
+Navigation and use
+
+This chapter provides information about the basics of using ELO.
+
+Important components
+
+This chapter contains a description of important components that you will find in all work areas.
+
+Important actions in detail
+
+This chapter provides descriptions of some important actions with instructions and explanations.
+
+Functions
+
+The remaining chapters cover the functions that are not described in the Important actions in detail
+
+chapter.
+
+Which chapter(s) should I read if I... 
+
+want to personalize ELO? 
+
+Tile navigation
+
+Change tile settings and pin tiles to the navigation bar
+
+Group tiles
+
+Create folder view
+
+Create task view
+
+Add search favorite
+
+Ribbon
+
+Pin function
+
+Hide function text
+
+Pin function to the 'Favorites' tab
+
+Viewer pane
+
+Configure viewer pane
+
+Show entries
+
+General settings
+
+Configuration
+
+Personal settings
+
+Edit profile
+
+want to create entries? 
+
+Folders
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+4 ELO Web Client
+
+
+
+Create new folder
+
+Dynamic folder
+
+Documents
+
+File document
+
+Drag-and-drop
+
+Document from template
+
+Metadata
+
+Metadata
+
+Personal data
+
+want to update entries? 
+
+Edit document
+
+Check out and edit document
+
+Upload and check in document
+
+Edit in Microsoft Office
+
+Check out to OneDrive
+
+Edit online
+
+Collaborate
+
+Load new version
+
+Load new version
+
+Drag-and-drop
+
+want to create tasks? 
+
+Workflows
+
+Start workflow
+
+Ad hoc workflow
+
+Reminders
+
+Reminder
+
+want to edit tasks? 
+
+Workflows
+
+Edit workflow with a form
+
+Show workflow
+
+Forward workflow
+
+Accept workflow
+
+Return workflow
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+5 ELO Web Client
+
+
+
+Delegate workflow
+
+Hand off workflow
+
+Postpone workflow
+
+Reminders
+
+'Tasks' work area
+
+Delete
+
+want to keep track of changes in ELO? 
+
+My ELO
+
+'My ELO' button
+
+Show number of entries
+
+News
+
+Monitoring entries
+
+Monitor changes
+
+Monitoring overview
+
+Overviews
+
+Workflows for this entry
+
+Workflow overview
+
+Monitoring overview
+
+Search
+
+Add favorite
+
+Dynamic folder
+
+want to output information from ELO? 
+
+Entries
+
+Send as ELO link
+
+Send document (ELO Web Add-ons)
+
+Save as
+
+Print document (ELO Web Add-ons)
+
+Create external link
+
+Metadata
+
+Export table
+
+want to search for entries? 
+
+'Search' work area
+
+Search entries
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+6 ELO Web Client
+
+
+
+Search with ELO Click OCR
+
+Search metadata
+
+want to structure the repository area? 
+
+Move
+
+Reference
+
+Drag-and-drop
+
+Copy
+
+Link
+
+Start ELO 
+
+To start ELO, enter the URL in your browser.
+
+Enter your logon credentials. If you have been given a temporary password for your first log on,
+
+change it during the first session using the Change password function.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+7 ELO Web Client
+
+
+
+Information
+
+If you have forgotten your password, contact your system administrator.
+
+If functional roles have been defined for you, you can enable or disable them here.
+
+If you disable your functional roles, all access and user rights associated with the role cannot be
+
+used during the session. This makes it easier to navigate ELO and allows you to focus on tasks
+
+beyond the scope of the role.
+
+Save selection and don't ask again: If you save your selection, you can enable the roles again
+
+under User menu [your name] > Enables roles.
+
+8 ELO Web Client
+
+
+
+Program interface 
+
+This chapter contains basic information on the ELO Web Client interface to help you get familiar
+
+with the program.
+
+The program interface is divided into the following areas:
+
+1 'My ELO' button: This button takes you to the My ELO home screen.
+
+2 Ribbon: On the ribbon, you will find the functions available to you in the respective work areas.
+
+3 Navigation bar: Navigate between the work areas using the navigation bar.
+
+4 User menu [your name]: In the user menu, you will find various functions mainly for your
+
+personal settings.
+
+5 Profile: In your profile, you can enter information and upload a profile picture.
+
+6 News/Most recently used: This area is split up into News and Most recently used. The News tab
+
+helps you keep track of changes in ELO. You will find your most recently used entries on the Most
+
+recently used tab.
+
+7 Tile navigation: This area is for navigating the program.
+
+9 ELO Web Client
+
+
+
+What is a work area? 
+
+ELO contains different work areas. Each work area is used to complete specific tasks. Accordingly,
+
+not all functions are available in every work area.
+
+My ELO: This work area is on the home screen when you start the program. Tiles on the left-
+
+hand side provide access to the main areas in ELO.
+
+Repository: This area contains all folders and documents that you are authorized to access.
+
+This is also where you create additional folders and documents.
+
+Search: This area is where you search for folders and documents that are stored in the 
+
+Repository work area.
+
+Tasks: If you are assigned tasks, you will find them here. Tasks are always related to folders
+
+or documents in the Repository work area.
+
+Clipboard: You can copy frequently used folders and documents from the Repository work
+
+area to the Clipboard. This enables you to quickly find the entries you need frequently or are
+
+currently working on.
+
+In use: When you edit a document, it automatically appears in the In use work area. Editing a
+
+document means that you have checked it out.
+
+'My ELO' work area 
+
+The My ELO work area is on the home screen when you open ELO. Tiles on the left-hand side
+
+provide access to the main areas in ELO.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+10 ELO Web Client
+
+
+
+Tile navigation 
+
+The tile navigation contains all available tiles. Tiles can be used to represent work areas, folder
+
+views, task views, search favorites, spaces and ELO apps. The following tiles are shown by default:
+
+ELO (or the name of your repository; this is the Repository work area)
+
+Search
+
+Tasks
+
+In use
+
+Clipboard
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+11 ELO Web Client
+
+
+
+Tiles are organized into groups.
+
+Edit via the context menu 
+
+Each tile has a context menu that is opened by right-clicking the tile.
+
+You can make the following tile settings within the tile's context menu.
+
+Pin to the navigation bar or Unpin from the navigation bar: This function places the tile on the
+
+navigation bar or removes it. Pinning tiles makes it easier for you to switch between the
+
+work areas.
+
+Change size
+
+Hide: When you hide tiles, they are moved to the Hidden tiles area. To restore hidden tiles,
+
+drag them to the place you want in the tile navigation.
+
+• 
+
+• 
+
+• 
+
+12 ELO Web Client
+
+
+
+Change tile settings 
+
+Right-clicking a tile and selecting Settings opens the settings for the selected tile. You can change
+
+the color, the icon, and the size of the tile.
+
+You can also enable the following options:
+
+Pinned to the navigation bar: This function places the tile on the navigation bar or removes it.
+
+Pinning tiles makes it easier for you to switch between the work areas.
+
+Show number of entries: If this option is enabled, the tile shows the number of direct child
+
+entries in the work area. If you enable this option for the Repository work area, for example,
+
+only the top folder level will be shown, and not all the entries it contains. This option is
+
+particularly useful in the Tasks work area. If the number next to the Tasks work area is green,
+
+you have at least one new task.
+
+• 
+
+• 
+
+13 ELO Web Client
+
+
+
+The changes are saved automatically.
+
+Close the tile settings by clicking the selected tile or the button with the left arrow.
+
+You can open the tile settings for another tile by clicking the other tile.
+
+Create tiles 
+
+You can create tiles for quick access to folders, tasks, and searches.
+
+Create group 
+
+To sort your tiles by topic, you can create groups.
+
+Method
+
+Click the plus icon or right-click a group name to create a new group.
+
+Outlook
+
+To change the position of a group, click the group name and drag the group to the place you
+
+want it holding down the left mouse button.
+
+Right-click a group name to change the name of the group or delete the group via the context
+
+menu. If you delete a group, the tiles in the group are moved to the Hidden tiles group. You
+
+can move groups around in the tile navigation with drag-and-drop.
+
+Information
+
+The names of standard ELO groups cannot be changed.
+
+News 
+
+The News tab helps you keep track of changes in ELO.
+
+You will see feed posts from different entries here. Some examples include feeds you have
+
+subscribed to or in which you have been mentioned by another user. In addition, a hashtag cloud, 
+
+escalated workflows, and recently started workflows that are relevant for you are shown in this
+
+work area.
+
+• 
+
+• 
+
+14 ELO Web Client
+
+
+
+Information
+
+Most functions in the My ELO work area are feed functions. For more information, refer to
+
+the chapter Feed.
+
+Most recently used 
+
+The Most recently used area contains a list of documents that you recently viewed or edited.
+
+You can pin entries you need regularly by clicking the pin icon.
+
+Under User menu [your name] > Configuration > Display > List of recently used entries, you can
+
+configure how many entries the list should contain and when a selected entry should be added.
+
+'Repository' work area 
+
+You will find all folders and documents created in ELO in the Repository work area.
+
+15 ELO Web Client
+
+
+
+The work area is divided into the:
+
+1 Repository structure: Overview of folders and documents
+
+2 Viewer pane: View of folders or documents selected in the tree
+
+For a detailed description of each component, refer to the Important components chapter.
+
+'Search' work area 
+
+In the Search work area, you can search through folders and documents in the Repository work
+
+area.
+
+Various filters are available. For searches you need regularly, you can create favorites, which
+
+enable fast searches in the tile navigation area next to My ELO.
+
+16 ELO Web Client
+
+
+
+When you open the Search work area, the Search tab appears. Using the functions on the Search
+
+tab, you can narrow down and continue your search.
+
+The chapters 'Search' tab and Search entries explain each of the search elements and how to
+
+perform a search.
+
+After a search, the work area is divided into the following:
+
+17 ELO Web Client
+
+
+
+1 Search elements: Elements for narrowing down your search
+
+2 Results: Results of your search in list form
+
+Search elements 
+
+Search elements help you narrow down your search.
+
+Input
+
+Enter one or more search terms into the input field.
+
+As soon as you type the first letters of the search term, ELO iSearch provides you with relevant
+
+suggestions. If you enter additional letters, ELO iSearch updates the suggestions accordingly.
+
+Clicking one of the suggestions applies it to the search field.
+
+Information
+
+You will find tips for entering search terms by clicking Tips for using ELO iSearch.
+
+AND search: If you enter two terms into the search field, the system will search for entries that
+
+contain both terms.
+
+OR search: If you enter two terms into the search field and separate them with a comma (e. g., 
+
+order, invoice), the system searches for entries that include at least one of the terms.
+
+Exclude term: To exclude a term from your search, enter it in the search field and put a minus sign
+
+in front of the term. For example, a search for -document excludes entries that contain the term 
+
+document. You can combine the negated term with other terms that you do not negate.
+
+Phrase search: To search for multiple related terms, enter the terms in the search field with
+
+quotation marks, e.g., social media. Only entries that contain all the terms in the order entered will
+
+be found.
+
+Narrow down search 
+
+The following options are available for narrowing down your search:
+
+Areas
+
+Folders
+
+Filters or facets
+
+Use facets
+
+Filters and facets allow you to narrow down your search using metadata, such as the filing date.
+
+• 
+
+• 
+
+• 
+
+18 ELO Web Client
+
+
+
+Filters and facets work in the same way. The only difference is how they are selected.
+
+To learn how to select a filter, refer to the Filters chapter.
+
+To select a facet, click the facet. You can also select multiple facets in this way.
+
+Negate facets
+
+You can apply reverse facets. For example, if you select a user and set the filter to is not, only
+
+entries that were not processed by this editor are shown. It is not possible to only negate individual
+
+filters or facets.
+
+To negate a facet, click the facet.
+
+Results 
+
+The results field consists of the following elements:
+
+1 Results of the current search
+
+The results of the current search are shown as a list.
+
+19 ELO Web Client
+
+
+
+If you need more information on the individual entries, switch to the table view (Ribbon > View >
+
+Table). Clicking Table again closes the table view.
+
+For a better overview, you can sort the results according to your requirements.
+
+Click an entry to view its contents.
+
+The view is closed when you click the X icon at the top right.
+
+To go to the filing location of the selected entry, click View > Go to on the ribbon.
+
+20 ELO Web Client
+
+
+
+Hits: You can also see where the search was found (short name, full text ...). You need to enable this
+
+option in the configuration (User menu [your name] > Configuration > Search > Show results text
+
+or hits > Hits).
+
+Results text: You can also display the results text. You need to enable this option in the
+
+configuration (User menu [your name] > Configuration > Search > Show results text or hits >
+
+Results text).
+
+Reset search: Clicking this button restores the search default. You can set the default as follows:
+
+Narrow down your search using areas and filters/facets. On the ribbon, click Search > Filter > Set
+
+as default.
+
+2 Past searches
+
+Your most recent searches are shown below the results list of the current search.
+
+Clicking a past search runs it again. Click the X icon to delete the search.
+
+Outlook
+
+In the Search work area, you can use the same functions on entries as in the Repository work area,
+
+for example edit documents, create tasks, or send entries.
+
+To go to the filing location of the selected entry, click View > Go to on the ribbon.
+
+You can create favorites and dynamic folders, which work with custom searches.
+
+'Tasks' work area 
+
+In the Tasks work area, you will find a list of your tasks.
+
+To learn how to edit tasks, refer to the 'Task' tab chapter.
+
+The following types of tasks are available; you can distinguish them by their icon.
+
+21 ELO Web Client
+
+
+
+Workflows Workflow icon
+
+Workflows with form Form icon
+
+Reminders Calendar icon
+
+Monitoring entries Camera icon
+
+New entries are shown with a green dot.
+
+If you need more information on the individual entries, switch to the table view (Ribbon > View >
+
+Table). Clicking Table again closes the table view.
+
+For a better overview, you can sort the tasks according to your requirements.
+
+22 ELO Web Client
+
+
+
+Click an entry to view its contents.
+
+The view is closed when you click the X icon.
+
+The job instruction tells you what the task is.
+
+Tasks disappear from your Tasks work area in the following ways:
+
+Workflows: Actively: You forward the workflow using the form or the function (Ribbon > Tasks
+
+> Forward workflow), delegate it, or hand it off. Passively: A group workflow is accepted by
+
+another member of the group.
+
+Reminders and monitoring: You delete the entry (Ribbon > Organize > Delete).
+
+Edit workflow with a form 
+
+For workflows with forms, you will find the form on the Metadata tab. You can edit and forward it
+
+here.
+
+If you receive a workflow you have to forward via a form, the Forward workflow button is not
+
+active.
+
+• 
+
+• 
+
+23 ELO Web Client
+
+
+
+Method
+
+Edit the fields of the form as indicated in the task.
+
+To forward the workflow after editing the form, click the corresponding button within the
+
+form.
+
+'Clipboard' work area 
+
+The Clipboard is a work area where you can store documents temporarily. You can also create a
+
+favorites list here.
+
+To place an entry on the Clipboard, select it and, on the ribbon, click View > Copy to Clipboard.
+
+You can edit entries on the Clipboard in the same way as entries in the Repository work area. The
+
+changes are applied to the Repository work area.
+
+Navigation and display are the same as in the Repository work area.
+
+For a detailed description of each component, refer to the Important components chapter.
+
+An entry remains in the Clipboard work area until you remove it (Ribbon > View > Remove from
+
+Clipboard).
+
+1. 
+
+2. 
+
+24 ELO Web Client
+
+
+
+'In use' work area 
+
+The In use work area shows you all the documents you have checked out for editing. The chapter 
+
+Check out and edit document explains how to check out and edit documents.
+
+Navigation and display are the same as in the Repository work area.
+
+For a detailed description of each component, refer to the Important components chapter.
+
+Once you check in the document or cancel editing, it automatically disappears from the In use work
+
+area.
+
+Spaces 
+
+Spaces are areas where you can collaborate with other users. You can file new entries and work on
+
+them with members of the space.
+
+Workspaces are workspaces in ELO for different functional levels. With the help of filters and
+
+different views, you can edit data and analyze it in charts and tables.
+
+The Teamspace function enables you to collaborate across teams. All ELO users added to a
+
+teamspace can gather and edit documents together and exchange information using the feed.
+
+For more information, refer to the Workspaces and Teamspaces chapters.
+
+This section explains how you can access spaces.
+
+25 ELO Web Client
+
+
+
+You can find the spaces in the My ELO work area via the Spaces tile. In this area, you see all spaces
+
+that you are a member of.
+
+26 ELO Web Client
+
+
+
+In the overview of spaces, you have access to the Spaces tab.
+
+You have the following options:
+
+1 Create a new teamspace or workspace: If these buttons are disabled, there are no teamspace
+
+templates or workspace types available for creating new spaces.
+
+2 Switch between teamspaces and workspaces
+
+3 Navigate in a teamspace or workspace: They are shown as tiles and sorted by creation date.
+
+'My ELO' button 
+
+Use the My ELO button to open the 'My ELO' work area. The My ELO work area is on the home
+
+screen when you open ELO.
+
+Alternative: Use the CTRL + WINDOWS keyboard shortcut to open your My ELO start screen.
+
+This area contains your news and most recently used entries, as well as the tile navigation.
+
+If My ELO is highlighted in green, this means you have news in My ELO.
+
+27 ELO Web Client
+
+
+
+Ribbon 
+
+You can launch functions from the ribbon.
+
+The ribbon provides access to most functions in ELO.
+
+Information
+
+Some functions can also be run from the context menu. Right-click an entry in ELO to open
+
+the context menu.
+
+Tabs: The ribbon is organized into tabs. Some tabs are always shown (default tabs), while others
+
+only appear when the tab functions can be used (contextual tabs).
+
+The default tabs are:
+
+Favorites: With the default settings, this tab contains several important functions. You can
+
+add other functions.
+
+New
+
+View
+
+Output
+
+Organize
+
+Task
+
+The contextual tabs are:
+
+Document: This tab appears when you select a document.
+
+Search: This tab appears when you click the Search work area.
+
+Clipboard: This tab opens when copying, referencing, or moving entries.
+
+Functions: The functions are arranged logically by relation. The most important functions are
+
+pinned to the ribbon. Others can be found in drop-down menus. If a function is grayed out, you
+
+cannot use it at your current position in ELO.
+
+Search functions: You can search for functions using the search field. Clicking a function in the
+
+results list executes the function.
+
+You can customize your ribbon so that you can find the functions you need quickly in the following
+
+ways:
+
+Pin function to ribbon and remove from ribbon
+
+Only show icon on function buttons
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+28 ELO Web Client
+
+
+
+Pin function 
+
+Many functions can be found in drop-down menus as standard. You can pin functions from the drop-
+
+down menu you need more frequently to the ribbon. You can pin functions to the respective tab or
+
+to the Favorites tab.
+
+Method
+
+Click the drop-down menu containing the function.
+
+Right-click the function that you want to pin.
+
+Pin to favorites: The function is pinned to the Favorites tab. You can save the functions you
+
+use most frequently to the Favorites tab. This function can also be found in the drop-down
+
+menu you pinned it from.
+
+Pin here: The function is pinned to the tab you currently have open. This function can no
+
+longer be found in the drop-down menu you pinned it from.
+
+Remove function from ribbon 
+
+You can also remove pinned functions from the ribbon.
+
+Method
+
+'Favorites' tab: Right-clicking the function and selecting Unpin from favorites removes the function
+
+from the Favorites tab.
+
+Additional tabs: Right-clicking the function and selecting Unpin from here returns the function to
+
+the drop-down menu.
+
+Hide function text 
+
+If the icon for a function is enough for you, you can hide the text. This only works for functions
+
+pinned to the ribbon.
+
+1. 
+
+2. 
+
+• 
+
+• 
+
+29 ELO Web Client
+
+
+
+Method
+
+Right-click the function.
+
+Click Hide text.
+
+Show function text 
+
+You can disable the option to hide the text.
+
+Method
+
+Right-click the function.
+
+Click Show text.
+
+Navigation bar 
+
+The navigation bar gives you quick access to several work areas in ELO. You can quickly switch to
+
+work areas without having to go to the My ELO home screen.
+
+You can pin all areas available as tiles in My ELO to the navigation bar by right-clicking the tile.
+
+If you have enabled the option to show the number of entries on the tiles, they will also be shown
+
+on the navigation bar. To learn how to show the number of entries, refer to the chapter 'My ELO'
+
+work area.
+
+Active substitutions 
+
+1. 
+
+2. 
+
+1. 
+
+2. 
+
+30 ELO Web Client
+
+
+
+You can substitute for other users or be substituted for by others. In both cases, you can see that a
+
+substitution is active by the person icon.
+
+Orange person: A substitute is currently set for you.
+
+Blue person: You are currently substituting for at least one user.
+
+Clicking the icon opens more information on your substitutions.
+
+You can learn how to appoint a substitute in the chapter Assign substitute.
+
+You can learn how to accept a substitution in the chapter Accept substitution.
+
+User menu [your name] 
+
+User menu [your name]
+
+Clicking the User menu [your name] button opens a drop-down menu. This menu takes you to
+
+areas where you can configure settings for your user account. You can also log off at the end of your
+
+session here.
+
+You can find explanations on each of these functions in the chapter User menu [your name].
+
+Profile 
+
+Clicking this button takes you to your profile. In your profile, you can enter information on your
+
+professional background, your contact details, and upload a profile picture.
+
+Context menu 
+
+Right-click an entry to open the context menu. Alternatively, use the menu key of a selected entry.
+
+The context menu contains selected functions that you will also find on the ribbon.
+
+The context menu contains different functions depending on the work area you are in.
+
+• 
+
+• 
+
+31 ELO Web Client
+
+
+
+Navigation and use 
+
+This chapter provides information about the general use of ELO. You can find information on specific
+
+actions in the chapters about the actions or the tabs.
+
+Navigating between work areas 
+
+To switch from one work area to another, you have the following options:
+
+My ELO: Click My ELO to switch to the desired work area using tiles. This option is always
+
+available.
+
+Navigation bar: Click the desired work area right in the navigation bar. This option is only
+
+available if the work area tile is pinned to the navigation bar or you have pinned it as
+
+described in the chapter 'My ELO' work area.
+
+How do I use a function? 
+
+Contextual functions: Functions can only be selected if they can be used in the current context.
+
+Otherwise, they are grayed out or are not displayed at all. Most functions are contextual.
+
+To use them, you must establish a reference to a folder or document by selecting it. Once you have
+
+selected the entry, click the function. In most cases, this opens a dialog box or another control
+
+element with instructions on how to proceed.
+
+Non-contextual functions: Some functions are not contextual and can be used at any time. These
+
+functions are not related to selected entries. Assign substitute or Refresh are examples of functions
+
+that are not contextual.
+
+How do I select multiple entries? 
+
+You can select multiple folders or documents at once to execute a function on all selected entries.
+
+You can only select multiple entries in the viewer pane. The entries must therefore be in the same
+
+folder.
+
+• 
+
+• 
+
+32 ELO Web Client
+
+
+
+Method
+
+Select the folder containing the entries you want to select.
+
+Keep the CTRL key pressed and click all the entries you want to select. If you want to select
+
+all entries or all entries you want to select are in a row, press the SHIFT key then click the
+
+top-most and bottom-most entry you want to select.
+
+On the ribbon, click the function you want to use, e.g. Send as ELO link.
+
+Drag-and-drop 
+
+You can also execute some functions on the ribbon using a drag-and-drop action.
+
+Insert document
+
+Select the folder that you want to file the document to.
+
+Click the document you want to file and drag it to ELO.
+
+1. 
+
+2. 
+
+3. 
+
+1. 
+
+2. 
+
+33 ELO Web Client
+
+
+
+Select a metadata form.
+
+Enter metadata.
+
+For more information on the individual fields, refer to the chapter Metadata.
+
+Click OK.
+
+Move or reference entry
+
+Click the entry you want to move and drag it to the target folder holding down the mouse button.
+
+You can reference or move folders or documents in this way.
+
+Load new version
+
+Click the document in your file system you want to file as a new version and drag it to the
+
+document in ELO holding down the mouse button.
+
+3. 
+
+4. 
+
+5. 
+
+34 ELO Web Client
+
+
+
+Non-deletable version: If you check the box next to this option, this version of the document cannot
+
+be deleted. This does not mean that you cannot file a new version. You simply cannot delete it from
+
+the overview of document versions.
+
+The document is loaded as a new version.
+
+35 ELO Web Client
+
+
+
+Important components 
+
+Repository structure 
+
+The repository gives you an overview of all folders and documents that you are authorized to
+
+access. Navigate between entries in the repository here.
+
+You have the following navigation options:
+
+Mouse: Click an entry using the mouse. If you click a folder, you will see the contents of the
+
+folder in the viewer pane. Clicking the arrow next to the folder expands the contents of the
+
+folder in the tree.
+
+Keyboard: You can navigate up and down the tree using the up and down arrow keys. Pressing
+
+the right arrow key opens a folder. Pressing the left arrow key closes the folder.
+
+Icons in entries
+
+• 
+
+• 
+
+36 ELO Web Client
+
+
+
+Folders or documents with an arrow icon are references. Clicking View > Go to on the ribbon takes
+
+you to the original entry.
+
+Documents with a yellow arrow next to the document icon and a name in brackets are checked out
+
+by the corresponding user. They can be viewed (Document > Open in read-only mode) but not
+
+edited.
+
+Folders 
+
+If you have selected a folder, you will see the child folders and/or documents within it.
+
+You have the following options:
+
+You can search the folder (1) or change the sort order (2).
+
+Press the CTRL or SHIFT key and click the entries to select multiple entries. This is not
+
+possible in the repository structure.
+
+If you need more information on the individual entries, switch to the table view (Ribbon >
+
+View > Table). Clicking Table again switches the view back. Double-clicking an entry takes
+
+you straight to this entry.
+
+• 
+
+• 
+
+• 
+
+37 ELO Web Client
+
+
+
+Document 
+
+If you have selected a document, the document will be displayed.
+
+If the document cannot be displayed, you have the following options:
+
+Save document: Ribbon > Output > Save as
+
+Open document in read-only mode: Ribbon > Document > Open in read-only mode.
+
+Switch to different viewing options as described below
+
+You have the following options for viewing the contents of a document:
+
+Original document: Automatic if no other option is selected.
+
+Image preview: Available in Ribbon > View > Image preview
+
+Full text: Available in Ribbon > View > Full text
+
+Viewer pane 
+
+In the viewer pane, you will see the most recently selected entry (folder or document).
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+38 ELO Web Client
+
+
+
+Each entry is made up of three elements:
+
+1 Content
+
+2 Metadata/Form
+
+3 Feed
+
+The contents and metadata/form are shown on the left, while the feed is always located on the
+
+right.
+
+You can switch between Content and the Metadata/Form using the tabs.
+
+Configure viewer pane
+
+With the buttons next to the Content and Metadata tabs, you can show the contents and metadata
+
+adjacent to one another. You can also configure which element is shown on the left and which is
+
+shown on the right.
+
+If you hover the mouse over a preview element, the element's location is highlighted in green in
+
+the miniature preview to the left.
+
+• 
+
+• 
+
+• 
+
+39 ELO Web Client
+
+
+
+For example, if you have currently selected the metadata for an entry in your viewer pane, click 
+
+Contents in the drop-down menu. The contents appear to the left of the metadata. To swap the
+
+position of the metadata and contents, click Metadata. To return to the simple view, click the
+
+element marked green, in this case Metadata.
+
+Information
+
+The settings for an entry are saved automatically. They are not applied to other entries.
+
+Clicking the X button closes the viewer pane and expands the tree view. The viewer pane appears
+
+again when you select an entry in the tree view.
+
+For more information, refer to the Metadata, Form, and Feed chapters.
+
+Show entries 
+
+On the Content tab, you will see the contents of a folder or document.
+
+You can change how entries are shown on the View tab.
+
+Folders
+
+Folders are shown in list view by default. You can switch to the table view by clicking the Table
+
+function on the View tab of the ribbon. The table view shows select metadata for the individual
+
+documents.
+
+If you do not need all of the metadata, click the arrow icon next to the column header. Clicking 
+
+Columns opens the selection dialog box, where you can uncheck the respective boxes. You can add
+
+columns in the same dialog box.
+
+40 ELO Web Client
+
+
+
+By clicking the arrow icons, you can group documents based on their metadata. If you uncheck the 
+
+Show in groups box, the table is once again shown without grouping.
+
+Documents
+
+Image preview: Use this function to display documents if there is no viewer available for the
+
+original format.
+
+Full text: This function is useful for searches. A search field for entering terms appears below
+
+the text. This mode is also suitable if you do not have a viewer for the original format and no
+
+image preview is available.
+
+Metadata 
+
+Before you can file documents to ELO or create new folders, you must enter metadata for the
+
+entries. This is done by using metadata forms, which contain corresponding input fields (called 
+
+fields).
+
+The Metadata dialog box is used to enter and edit the metadata. Unless you have a different
+
+configuration, the dialog box appears automatically when you file a document or create a folder.
+
+• 
+
+• 
+
+41 ELO Web Client
+
+
+
+The metadata for an entry is shown on the Metadata tab. If you click the Edit button at the bottom,
+
+you can edit the metadata right in the viewer pane.
+
+If you have selected an entry with a form, the form is displayed. In this case, you can open and edit
+
+the metadata from the ribbon by clicking Organize > Metadata.
+
+For more information, refer to the chapter Metadata.
+
+Form 
+
+If you have selected an entry with a form, the form is displayed. In this case, you can open and edit
+
+the metadata from the ribbon by clicking Organize > Metadata.
+
+You can use forms to record and forward data.
+
+You can use forms to process workflows.
+
+42 ELO Web Client
+
+
+
+Feed 
+
+You will find automatically generated information on the entry in the feed and can discuss the entry
+
+with other users here.
+
+When you subscribe to a feed for an entry, any new posts in the feed are shown on your My ELO
+
+home screen.
+
+If you tag users with @, the post will also appear in the feed on their My ELO home screen even if
+
+they have not subscribed to the feed.
+
+The following message types are shown in the feed:
+
+Posts (written by a user)
+
+Comments (on a post)
+
+Polls
+
+Events (e.g. when a new version of a document is filed or changes are made to the working
+
+version)
+
+Create a post 
+
+Use the Create a post field to comment on the respective entry in a feed. Click Create to post the
+
+comment.
+
+Alternative: Press CTRL+ENTER to submit a post.
+
+The text in posts, polls, and comments can be formatted as follows:
+
+• 
+
+• 
+
+• 
+
+• 
+
+43 ELO Web Client
+
+
+
+Bold: To format a part of the text in bold type, place an asterisk (*) at the beginning and end of the
+
+text section. I would like to emphasize this *again*. will appear in the ELO feed as follows: "I
+
+would like to emphasize this again."
+
+Information
+
+If you want the asterisk to appear as a character in the text, enter a backslash before the
+
+asterisk.
+
+Create a poll 
+
+If you click the Create poll button, fields for creating a poll with multiple answer options appear.
+
+Poll duration: With this field, you can specify how long you want the poll to remain open. You can
+
+select a value from the drop-down menu or manually enter how many days you want the poll to
+
+remain open. For example, if you enter 4, the poll will remain open for four days.
+
+Show additional options: Clicking this button opens an area with additional settings. You can you
+
+define whether you want to offer the user multiple options to select from, whether you want the
+
+user name of the participants to be visible in the poll result, and whether you want participants to
+
+be able to add further answer options.
+
+Click Create to start the poll.
+
+44 ELO Web Client
+
+
+
+Click the pencil icon to edit a poll that has already started. You can edit the poll as long as no one
+
+has taken part yet.
+
+Click the X icon to delete a poll that has already started. You cannot undo this.
+
+Mention 
+
+Use the Mention button (@ symbol) to address a feed post to another ELO user or group. The users
+
+mentioned then see the corresponding feed post in the My ELO work area.
+
+Alternative: As soon as you type an @ character, ELO automatically recognizes that you want to
+
+insert a mention.
+
+Reference 
+
+Use the Reference button (document icon with arrow) to link a feed post with an entry in ELO. Click
+
+the reference to go straight to the respective entry.
+
+You can select the entry that you want to refer to in the Reference dialog box.
+
+Alternatives:
+
+As soon as you type a > character, ELO automatically recognizes that you want to insert a
+
+reference.
+
+Select the entry you want to reference and then press CTRL+C. Click the feed post you want
+
+to insert the reference into and press CTRL+V. This requires the current ELOwf version.
+
+• 
+
+• 
+
+45 ELO Web Client
+
+
+
+Hashtag 
+
+Use the Hashtag button (# symbol) to add hashtags to a post. You can subscribe to hashtags. You
+
+can also filter the My ELO work area by hashtags.
+
+Alternative: As soon as you type a # character, ELO automatically recognizes that you want to
+
+insert a hashtag. The hashtag drop-down menu opens.
+
+Subscribe to a hashtag 
+
+Method
+
+Click a hashtag to subscribe to it.
+
+The discussion page for the selected hashtag appears.
+
+Click the Subscribe button.
+
+You have subscribed to the hashtag. All posts that are marked with the corresponding hashtag
+
+appear in the My ELO work area.
+
+1. 
+
+2. 
+
+46 ELO Web Client
+
+
+
+Visibility 
+
+Use the Visibility button (eye icon) to restrict who can read the post.
+
+Search feed 
+
+Use the Search feed button (magnifying glass icon) to search within the currently selected feed.
+
+When the search term is found, the feed is narrowed down to the corresponding posts. The matches
+
+are highlighted. Start the search by clicking Search. Click Reset search to exit the results list and
+
+return to the full feed.
+
+Subscribe to feed 
+
+Use the Subscribe button (antenna icon) to subscribe to the feed. All feeds you have subscribed to
+
+are listed in the My ELO work area. Once a post is added to one of these feeds, you also see the
+
+post in the My ELO work area.
+
+47 ELO Web Client
+
+
+
+Automatically subscribe to feed 
+
+ELO provides you with the option to automatically subscribe to feeds.
+
+You can enable the automatic feed subscription option under My ELO > Settings or User menu [your
+
+name] > Configuration > Administration > My ELO.
+
+Show filter options 
+
+The Show filter options button opens a window with filters for the corresponding feed. You can use
+
+these filters to restrict the feed to posts that match the respective filter. To close the selection, click
+
+the button again.
+
+You can also see when filters are active, even when filter options are hidden.
+
+48 ELO Web Client
+
+
+
+Enter a comment 
+
+You can enter comments on any post. The procedure for adding a comment is almost identical to
+
+creating a post. However, the visibility settings for a comment are bound to the visibility settings
+
+for the commented post, which is why you are unable to change the visibility settings for
+
+comments.
+
+Edit post 
+
+Click the Edit button (pencil icon) to edit posts and comments.
+
+Feed history 
+
+Edited entries are marked as edited below the entry. To open the editing history, click edited.
+
+Settings 
+
+Click Settings to change settings related to the feed.
+
+49 ELO Web Client
+
+
+
+Show current hashtags 
+
+If the preview in My ELO is not large enough to show hashtag information, the Show current
+
+hashtags button will appear.
+
+If you click the Show current hashtags button, hashtag information is displayed above the
+
+subscribed feed.
+
+50 ELO Web Client
+
+
+
+Hashtag cloud 
+
+Hashtags that have been used in recent weeks are shown in a hashtag cloud. If you click a hashtag,
+
+you will see all feed items that contain that hashtag, provided you have the required permissions.
+
+Show workflows 
+
+If the preview in My ELO is not large enough to show workflow information, the Show workflows
+
+button will appear.
+
+If you click the Show workflows button, workflow information is displayed above the subscribed
+
+feed.
+
+Escalated workflows 
+
+In the Escalated workflows area, you can see which escalated workflows you are involved in.
+
+Click the name of the workflow to go to the respective workflow in the Tasks work area.
+
+51 ELO Web Client
+
+
+
+Recently started workflows 
+
+In the My recently started workflows area, you see which workflows you have recently started.
+
+Clicking the workflow name takes you to the entry you started the workflow on.
+
+Show filter options 
+
+If the preview in My ELO is not large enough to show the filters, the Show filter options button will
+
+appear.
+
+Click Show filter options to display the filters above the subscribed feed.
+
+To hide the filters, click Hide filter options.
+
+Filters in 'My ELO' 
+
+Various filter categories are available.
+
+Post type The Post type is filter option lets you filter the My ELO area by the type of post. There are
+
+two basic types:
+
+Automatically created posts (e.g. working version changed)
+
+Posts created by users (e.g. user posts)
+
+• 
+
+• 
+
+52 ELO Web Client
+
+
+
+Apply filters 
+
+To apply a filter, click the corresponding filter in the list.
+
+Negate filters 
+
+In the default settings, all filters are applied in is mode.
+
+The mode can be switched to is not in all categories apart from New since. Click the word is next to
+
+the name of the filter category.
+
+Reset filter 
+
+To reset all filters, click the Reset filters button (arrow icon).
+
+Mark as important 
+
+The Mark as important button (flag icon) lets you pin a post to the My ELO work area. The post
+
+remains in My ELO even if it is more than one month old. You can recognize posts that are marked
+
+as important by the red flag icon.
+
+53 ELO Web Client
+
+
+
+Delete marker 
+
+Delete the marker you added to a post with the Delete marker button (red flag icon). As soon as the
+
+post is more than a month old, it will no longer be displayed in the My ELO work area.
+
+Hide post 
+
+You can hide a post in the My ELO work area by clicking the Remove from My ELO button.
+
+Information
+
+The Remove from my ELO function only hide posts in the My ELO area. The entries are not
+
+deleted.
+
+After you have hidden a post, you can restore it by clicking the Undo button.
+
+Information
+
+With the default settings, the Undo button disappears after five seconds. You can edit this
+
+option under Number of seconds to display the "Undo" button before it disappears. This
+
+option is in My ELO > Settings > My ELO settings.
+
+Margin notes, links, attachments 
+
+If available for the selected document, you will see the following additional elements:
+
+54 ELO Web Client
+
+
+
+Margin notes: You will see margin notes for an entry on the split bar. Clicking the icon opens
+
+the margin note. 
+
+Links: The chain icon represents a link. Clicking the icon opens an overview of links. You can
+
+also create additional entries as links. The embedded dialog box does not close
+
+automatically when you select another entry. Close it by clicking Close.
+
+Attachments: The paper clip icon represents an attachment that was filed along with the
+
+selected document. Click the icon to open the attachment.
+
+Attachments open in the browser or in an external program, depending on the administrative
+
+settings. If attachments are set to open in your browser, you may not be able to open some
+
+documents in read-only mode.
+
+• 
+
+• 
+
+• 
+
+55 ELO Web Client
+
+
+
+Important actions in detail 
+
+This chapter is especially helpful for new users. It explains how to perform basic actions.
+
+Create new folder 
+
+Before you can file documents, you will need folders in the Repository work area.
+
+There are several ways to create a folder. This chapter describes the function New folder.
+
+Alternatives
+
+Copy: If a folder with the basic structure you need already exists, you can copy this basic
+
+structure without content.
+
+Dynamic folder: This function allows you to create a folder whose content changes
+
+dynamically. The content of a dynamic folder is based on the result of a search. All search
+
+results appear in the folder.
+
+Example
+
+You want to create a folder for a new project your team is working on. Only part of the team is
+
+actively involved the project and should be allowed to store content. The rest of the team should
+
+only have read access.
+
+Method
+
+In the repository, click the folder where you want to create the new folder.
+
+A new folder is always created within the folder you have currently selected. The top level of
+
+your repository is also a folder.
+
+On the ribbon, click New folder on the New tab.
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+56 ELO Web Client
+
+
+
+Enter the name of the project folder in the Short name field.
+
+The name you enter here is the folder name users will see in the repository.
+
+You don't usually need the Additional text tab. It can be used to store information in the
+
+metadata if a corresponding field is not available. This can be useful for the search function.
+
+Click the Options tab.
+
+To ensure that the folder is easy to find, select Green from the drop-down menu in the Font
+
+color field.
+
+Click the Permissions tab.
+
+When you create a new folder, the permissions of the parent folder are always applied.
+
+To change the permissions, first delete the parent permissions by clicking the X icon.
+
+To apply the new permissions, click the arrow in the Add user/group field.
+
+Select your team members.
+
+For all team members who should only have read permissions, uncheck all the boxes except 
+
+View (R).
+
+For a detailed description of other fields, refer to the Metadata chapter.
+
+Click OK.
+
+3. 
+
+4. 
+
+5. 
+
+6. 
+
+7. 
+
+8. 
+
+9. 
+
+10. 
+
+11. 
+
+57 ELO Web Client
+
+
+
+Result
+
+The folder is created at the location you chose and can be accessed by all team members you
+
+selected. Other users will see the folder but not the contents.
+
+Outlook
+
+Like physical folders, you can add contents to folders: You can create additional child folders or file
+
+documents directly to them.
+
+Change folder name: If you want to change the name of a folder afterwards, proceed as follows:
+
+Click on the folder.
+
+On the ribbon, click Organize > Metadata.
+
+Change the name in the Short name field and confirm with OK.
+
+Create view 
+
+A view provides you with quick access to a specific area of the repository.
+
+When you create a view, it is displayed as a tile in the tile navigation on your My ELO home screen.
+
+There are different types of views. This chapter covers the Create view function for a folder.
+
+Alternatives
+
+Task view: A task view shows you tasks with criteria you selected.
+
+Add favorite: Like views, search favorites are also displayed as tiles on your My ELO home
+
+screen.
+
+Copy to Clipboard: If you want to quickly access your folder without creating a tile, you can
+
+place it on your Clipboard.
+
+Most recently used: Another way to quickly access your folder is with the Most recently used
+
+tab on your My ELO home screen. You can pin folders here.
+
+Example
+
+Since you are likely to need your project folder frequently during the project, create a tile for it that
+
+will take you directly to the folder from your My ELO home screen.
+
+Method
+
+In the Repository work area, select the project folder you want to create a view for.
+
+Click Create view on the View tab of the ribbon.
+
+In the Create view dialog box, the name of the folder is automatically displayed in the Name
+
+of view field. You can change this name if you want to use a different one.
+
+Click Save.
+
+Result
+
+1. 
+
+2. 
+
+3. 
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+3. 
+
+58 ELO Web Client
+
+
+
+A tile is created for the new view under the Repository group in the tile navigation.
+
+Outlook
+
+You can drag and drop a tile to another position.
+
+If you have created multiple views, you have the option to group them. To learn how to
+
+create a group in the tile navigation, refer to the chapter Create group.
+
+You can rename or delete a folder view.
+
+File document 
+
+You can store documents in a folder. Other users who are authorized to do so can view or edit the
+
+documents.
+
+There are several ways to store a document. This chapter describes the function Insert file.
+
+Alternatives
+
+Drag-and-drop: You can drag documents straight from your file system to a folder in ELO.
+
+Document from template: If you want to create a document from a template, use this
+
+function.
+
+Example
+
+You want to put a Word document in your project folder so you can plan the project with the other
+
+team members.
+
+Method
+
+Select the folder that you want to file the document to.
+
+On the ribbon, click Insert file on the New tab.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+59 ELO Web Client
+
+
+
+You have two options:
+
+1: Click the button to the right of the Select file field and select the document.
+
+2: Drag the document to the Drop file here area.
+
+Select a metadata form.
+
+Enter metadata.
+
+For more information on the individual fields, refer to the chapter Metadata.
+
+Click OK.
+
+Result
+
+The document is stored in the folder you selected.
+
+Outlook
+
+Once you have stored a document, you and other users can perform all the functions that are
+
+available when you select the document.
+
+The Document tab opens. The functions on this tab are only available for documents. For more
+
+information on these functions, refer to the chapter 'Document' tab.
+
+Some important functions for working with documents are:
+
+3. 
+
+4. 
+
+5. 
+
+• 
+
+60 ELO Web Client
+
+
+
+Check out
+
+Upload and check in
+
+Start workflow
+
+Ad hoc workflow
+
+Send as ELO link
+
+General margin note
+
+Check out and edit document 
+
+A document stored in ELO can be changed unless it has been configured otherwise.
+
+There are different functions you can use to edit documents. This chapter covers the Check out
+
+function.
+
+While the document is checked out, it is locked for other users. During this time, other users can
+
+only view the document in read-only mode (Document > Open in read-only mode). This prevents a
+
+document from being edited by multiple users at the same time, resulting in conflicting versions.
+
+You can recognize checked out documents by a yellow arrow next to the document icon. The name
+
+of the editor is shown in square brackets.
+
+A new version of the document is created, which becomes the new working version. The working
+
+version is always the version that you see when you select the document.
+
+The old version is still retained.
+
+Alternatives
+
+Edit in Microsoft Office: This function allows you to open and edit Microsoft Office documents.
+
+Edit online: This function allows you to edit Microsoft Office documents in your browser. The
+
+availability of this function depends on your ELO Web Client installation.
+
+Collaborate: This function allows multiple users to simultaneously edit a Microsoft Office
+
+document. The availability of this function depends on your ELO Web Client installation.
+
+Method
+
+Click the document you want to edit.
+
+On the ribbon, click Check out on the Document tab.
+
+Information
+
+If you click Close now, the document is still checked out. If you want to cancel the process,
+
+click Close and then Versions > Cancel editing on the Document tab of the ribbon.
+
+Information
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+61 ELO Web Client
+
+
+
+If you use ELO Web Add-ons in combination with SSO, the document is opened in an external
+
+application and can be edited.
+
+Click Save as.
+
+The document is saved in your standard download folder.
+
+Optional: A Windows dialog box may appear. Select an option for saving the document.
+
+Warning
+
+You must save the document to your computer. This is necessary for uploading and checking
+
+in a new version. If you do not save the document, all changes made will be lost.
+
+1. 
+
+62 ELO Web Client
+
+
+
+The document appears at the bottom of your browser.
+
+Click the document to open it.
+
+Edit the document.
+
+Save the changes to your document.
+
+You do not have to check the document back in right away. You can keep it checked out and edit it
+
+later by opening it from the local storage location on your computer.
+
+In addition to the Repository work area, you will also conveniently find the document in your In use
+
+work area as long as you have it checked out.
+
+Result
+
+The document is changed locally but not in ELO.
+
+Outlook
+
+To apply your changes to ELO and save your document as a new version, use the Upload and
+
+check in document function.
+
+If you want to discard the changes, use the Cancel editing function.
+
+1. 
+
+2. 
+
+3. 
+
+• 
+
+• 
+
+63 ELO Web Client
+
+
+
+Upload and check in document 
+
+After you have checked out a document and finished editing it, check it back in.
+
+This saves the modified document as a new version and unlocks the document.
+
+Alternative
+
+Cancel editing: If you want to discard the changes, use this function.
+
+Method
+
+Information
+
+If you edited a document immediately after checking it out, the Upload and check in dialog
+
+box remains open. Steps 1 and 2 are no longer necessary in this case.
+
+In ELO, select the document you want to check in.
+
+The quickest way to find the document is through the In use work area.
+
+On the ribbon, click Upload and check in on the Document tab.
+
+Information
+
+If you use ELO Web Add-ons in combination with SSO, click Upload and check in. The
+
+document is already selected and can be checked in directly.
+
+Select the file. You have the following options:
+
+• 
+
+1. 
+
+2. 
+
+1. 
+
+64 ELO Web Client
+
+
+
+1 Click the button to the right of the Select file field and select the file.
+
+2 Drag the file to the Drop file here area.
+
+Result
+
+The document is filed as a new version.
+
+The document is unlocked for other users.
+
+Outlook
+
+To learn how to revert to an older version, refer to the Document versions chapter.
+
+Start workflow 
+
+You can use workflows to assign tasks to other users or user groups.
+
+An integrated escalation management function allows you to track whether the set deadlines are
+
+met once a workflow is started.
+
+This chapter describes the function Start workflow. This function gives you access to workflows
+
+with different levels of complexity designed for specific processes within your company.
+
+Alternative
+
+Ad hoc workflow: The function Ad hoc workflow is used to start short default workflows
+
+(approval and notification).
+
+Example
+
+• 
+
+65 ELO Web Client
+
+
+
+You want to place an order for materials at the start of your new project. You have already created a
+
+document listing the required materials using the Document from template function. To forward the
+
+order to the corresponding department in your company, you need to start the workflow.
+
+Method
+
+Select the document you want to start a workflow on.
+
+You can also start workflows on folders.
+
+On the New tab of the ribbon, click Create task > Start workflow.
+
+Click the workflow template Material orders to select it.
+
+Preview: This is where you can see the different steps of the workflow. As the workflow is
+
+already configured, you do not have to make any additional settings.
+
+In addition to the workflow steps, you will see the respective editor and, if applicable, the
+
+time allowed for the workflow step until escalation (days:minutes:seconds).
+
+Click OK.
+
+Result
+
+The workflow starts.
+
+Outlook
+
+1. 
+
+1. 
+
+2. 
+
+3. 
+
+• 
+
+66 ELO Web Client
+
+
+
+Once you have started a workflow, it will appear in your My ELO work area under My recently
+
+started workflows.
+
+If one of your workflows was escalated, you will see the Escalated workflows area.
+
+Forward workflow 
+
+When you are assigned a workflow task, it will appear in your Tasks work area.
+
+The next step depends on whether or not the workflow contains a form.
+
+There are different ways to forward a workflow. This chapter describes the function Forward
+
+workflow.
+
+Alternatives
+
+Forward workflow with a form: If the workflow you receive contains a form, forward it using
+
+the form.
+
+Return workflow
+
+Delegate workflow
+
+Hand off workflow
+
+Postpone workflow
+
+Example
+
+You received a workflow with an order for materials. The information under Workflow step told you
+
+what task you are being asked to complete. You placed the order for materials and now want to
+
+forward the workflow.
+
+Method
+
+Select the workflow that you want to forward.
+
+Click Forward workflow on the Task tab of the ribbon.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+67 ELO Web Client
+
+
+
+Comments: The content of this field will not be forwarded to the next users. You can only
+
+view comments in the ELO Java Client if you navigate to the function Organize > Overviews
+
+> Workflow overview and enable the List view.
+
+Select the desired option.
+
+Click OK.
+
+Result
+
+The workflow is forwarded and disappears from your tasks area.
+
+Search entries 
+
+You can search for documents and folders. The more information you enter about the entry you are
+
+looking for, the better the result will be.
+
+This chapter describes an example of a search. You will find descriptions of the interface and all
+
+search options in the chapters 'Search' work area and 'Search' tab.
+
+Alternatives
+
+Search with ELO Click OCR
+
+Search metadata
+
+Example
+
+You want to search for a document. You know
+
+3. 
+
+4. 
+
+• 
+
+• 
+
+• 
+
+68 ELO Web Client
+
+
+
+which folder the document is in,
+
+that it is not an e-mail,
+
+that the document was filed in 2020 or 2021, and
+
+that the title of the document contains the words 'ideas' or 'project'.
+
+Method
+
+Select the folder that contains the document in the Repository work area.
+
+Navigate to the Search work area.
+
+On the ribbon, click the drop-down menu in all areas.
+
+Check the Current folder only option to limit the search to the folder you just selected.
+
+Uncheck the boxes next to Full text, Fields, Extra text, and Feed. This way, the search is
+
+restricted to the title of the document, i.e. the Short name.
+
+Click the facet Entry type. The facet is now negated.
+
+Check the box next to the entry type E-mail. This excludes all entries of the type E-mail from
+
+your search.
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+6. 
+
+7. 
+
+8. 
+
+69 ELO Web Client
+
+
+
+Under the facet Filing date, check the boxes for 2020 and 2021.
+
+Enter ideas, project in the search field.
+
+Click Search (magnifying glass button).
+
+Result
+
+The search is performed.
+
+Outlook
+
+To view an entry in the results list, click the entry.
+
+To go to the filing location of the entry, select the entry. Click Go to on the View tab of the
+
+ribbon.
+
+Search with ELO Click OCR 
+
+You can mark terms in documents and search all entries for the selected term using ELO Click OCR.
+
+ELO Click OCR works on TIF documents and in the image preview (Ribbon > View > Image
+
+preview).
+
+The following options are available for using ELO Click OCR:
+
+Start a search in the Repository work area
+
+Start a search in the Search work area
+
+Start a search in the 'Repository' work area 
+
+You can start the search in the Repository work area and are directed to the search from there.
+
+Method
+
+Select the document you want to use for the search.
+
+Press and hold the CTRL + ALT keys. In the viewer pane, box in the terms in the document
+
+that you want to use for the search using the left mouse button.
+
+9. 
+
+10. 
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+3. 
+
+70 ELO Web Client
+
+
+
+Release.
+
+You are directed to the Search work area. The selected terms are now in the search field.
+
+Click Search to view the search results.
+
+Start a search in the 'Search' work area 
+
+In the Search work area, you can select a document you want to start a search on.
+
+Method
+
+Select the document you want to use for the search.
+
+Click in the search field of ELO iSearch.
+
+Hold down the CTRL key. In the viewer pane, box in the terms in the document that you want
+
+to use for the search.
+
+Release.
+
+Information
+
+If you want to transfer multiple terms after another, select each individual term using the
+
+left mouse button while holding CTRL + SHIFT. Release the mouse button after each term.
+
+Repeat the process until you have transferred all desired terms.
+
+The selected terms are now in the search field.
+
+Click Search to view the search results.
+
+Assign substitute 
+
+You can create substitutes and activate them immediately or later on.
+
+This way, you can prevent workflow tasks from escalating, such as when you are absent.
+
+Please note
+
+A substitution rule can only be changed or deleted by the
+
+creator,
+
+main administrator,
+
+subadministrator, and
+
+the supervisor of the user
+
+being substituted.
+
+Method
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+71 ELO Web Client
+
+
+
+On the ribbon, click User menu [your name] > Assign substitute.
+
+Select your substitute using the input field or from the drop-down menu.
+
+You can be substituted for by other users or by groups.
+
+As long as you haven't configured any settings for a substitute, their status will be 
+
+Incomplete. With this status, the substitute cannot be used. You can configure settings either
+
+right away or later on.
+
+You can configure different settings for different substitutes. For example, you can plan your
+
+substitutions in advance and edit their settings after the fact.
+
+To configure more exact settings for your substitute, click the respective substitute.
+
+Settings
+
+The following options are available for assigning a substitute:
+
+Period: You can set a period during which another user automatically acts as your substitute.
+
+Substitution rights: This gives the other user the right to substitute for you. In this case, they
+
+have to activate and deactivate substitution themselves.
+
+2. 
+
+3. 
+
+• 
+
+• 
+
+72 ELO Web Client
+
+
+
+Period: The Active substitution in this period option enables the input fields for the period. If you
+
+remove the check next to this option, the input fields are disabled. Entered periods are retained and
+
+can be reactivated later on.
+
+You can define the following periods:
+
+A definite period with a start and end
+
+An unlimited period with a start
+
+Multiple definite and/or unlimited periods
+
+Information
+
+You can add a time to the selected date. Enter the time after the date in the following
+
+format: 2023-04-19 15:30.
+
+If you have defined a substitution with an unlimited period, you can end the substitution by
+
+deleting the period with the X icon.
+
+Information
+
+Periods are not deleted automatically; you have to delete them by clicking the X icon.
+
+Substitution rights: If you enable the May activate/deactivate outside a scheduled period option,
+
+the substitute is allowed to activate or deactivate the substitution. This gives them permission to
+
+substitute for you in general without you defining a substitution period.
+
+May forward substitution
+
+Substitutions are not forwarded automatically.
+
+This means: Cole has appointed Anderson as his substitute. In turn, Anderson appoints a
+
+different user as her substitute. This user does not receive the tasks, rights, etc. that Anderson is
+
+given as substitute for Cole.
+
+Enabling the option May forward substitution allows your substitute to pass on the substitution to
+
+another user.
+
+Even in this case, the substitution is not forwarded automatically – the user has to forward it
+
+actively.
+
+Please note
+
+Use this option with caution to prevent rights from being forwarded unintentionally within
+
+the company.
+
+Substitution scope
+
+You can individually configure how many rights you want to give your substitutes.
+
+• 
+
+• 
+
+• 
+
+73 ELO Web Client
+
+
+
+Substitute inherits everything: Your substitute can see everything that you see.
+
+Restrict substitution: You decide what your substitute is allowed to see.
+
+You must enable at least one of the following three options:
+
+Personal tasks and workflows: If you enable this option, your substitute can access tasks and
+
+workflows that you have been assigned personally, not those given to you as a member of a
+
+group.
+
+Intray access: If you enable this option, your substitute has access to your Intray. The Intray
+
+is only available in the ELO Java Client.
+
+Inherit group membership: Use the drop-down menu to select which of your groups the
+
+substitution applies to. The substitute is assigned the user rights, permissions to entries,
+
+annotations, feed entries, and group tasks associated with the group. This allows you to
+
+create multiple substitutes for the same period and allocate permissions for different groups.
+
+Only the groups that allow substitution are available for selection.
+
+Result
+
+You have set up a substitution. If the substitution period has already begun, the substitution is
+
+already active. Otherwise, the substitution will become active when the defined start date is
+
+reached or the authorized user activates the substitution.
+
+If you are currently being substituted for, you will recognize this by the orange person next to your 
+
+Profile menu [your name].
+
+You will also see on your My ELO start screen that you are being substituted for.
+
+Outlook
+
+A substitution ends
+
+at the end of the defined period, or
+
+if a user substituting for you ends the substitution.
+
+You can learn how to accept a substitution in the chapter Accept substitution.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+74 ELO Web Client
+
+
+
+User menu [your name] 
+
+Configuration 
+
+Available in: User menu [your name] > Configuration
+
+You can change the settings in the configuration.
+
+The following option is available in the upper bar:
+
+Reset my view data: Using this function, you restore the default values for your user account. The
+
+view data includes table settings, window sizes, and positions.
+
+75 ELO Web Client
+
+
+
+Categories 
+
+The configuration is split into categories, which you will find on the left side.
+
+If you want to search for a specific setting, use the search field under the categories.
+
+There is an i next to each setting.
+
+Clicking the i provides you with additional information on the setting.
+
+Enable roles 
+
+Available in: User menu [your name] > Enable roles
+
+If you have been assigned to one or more groups, this option allows you to specify whether you
+
+want to enable your role as part of this group.
+
+If you disable your functional roles, all access and user rights associated with the role cannot be
+
+used during the session. This makes it easier to navigate ELO and allows you to focus on tasks
+
+beyond the scope of the role.
+
+76 ELO Web Client
+
+
+
+Change password 
+
+Available in: User menu [your name] > Change password
+
+You can change your password as often as you want.
+
+To change your password, you need your old password.
+
+If your new password is rejected, it does not meet the minimum password requirements at your
+
+company.
+
+If you have forgotten your password, notify your system administrator.
+
+Assign substitute 
+
+To learn how to appoint a substitute, refer to the chapter Assign substitute.
+
+Accept substitution 
+
+On the ribbon, click User menu [your name] > Accept substitution. In the dialog box, you can see
+
+who you are currently substituting for or may substitute for. The following options are available for
+
+accepting substitution:
+
+Period: Another user has defined a period during which you automatically accept their
+
+substitution.
+
+Substitution rights: Another user has given you the right to substitute for them. In this case,
+
+you have to activate the substitution yourself. 
+
+• 
+
+• 
+
+77 ELO Web Client
+
+
+
+I have the right to substitute for 
+
+On the left-hand side, you will see an overview of the users you have permission to substitute for.
+
+If you are a supervisor of other users, you automatically have the right to substitute for
+
+these users. Users for whom you are a supervisor are not automatically displayed in the
+
+overview. Select a user from the Add employee drop-down field. The Add employee field is
+
+only displayed if you have been assigned the role of supervisor.
+
+You will recognize active substitutions by a green bar to the left of the profile picture.
+
+If you click a user, their exact substitute permissions are shown in the right-hand pane. This area is
+
+for information purposes only and cannot be edited.
+
+Edit substitutions 
+
+You have the following options:
+
+Activate/deactivate: These buttons allow you to activate substitutions that are currently
+
+inactive or deactivate active substitutions you want to end. These buttons are only available
+
+if the user you want to substitute for has given you the right to activate and deactivate the
+
+substitution yourself.
+
+Forward: With this button, you can forward a substitution if the user you are substituting for
+
+has given you the corresponding right. You can either hand off the substitution entirely or
+
+appoint an additional substitute. 
+
+If you are currently substituting for another user, you will recognize this by the blue person next to
+
+your User menu [your name].
+
+You will also see on your My ELO home screen that you are substituting for another user.
+
+Edit profile 
+
+Available in: User menu [your name] > Edit profile
+
+• 
+
+• 
+
+78 ELO Web Client
+
+
+
+You can enter information about your position and contact details in your profile.
+
+You can also upload a profile picture.
+
+Information
+
+Use PNG, JPG, or GIF image files with a minimum of 280 x 280 pixels. If ELO is unable to
+
+process the format or the size of the selected image, a message will appear at the bottom
+
+of the dialog box.
+
+Your profile is visible to other users when they click your name or profile picture in the feed.
+
+About 
+
+Available in: User menu [your name] > About
+
+79 ELO Web Client
+
+
+
+This is where you will find information about the version of your program. It can be useful to have
+
+the exact version when errors occur in your program.
+
+ELO help 
+
+Available in: User menu [your name] > ELO help
+
+This takes you to the in-program help for ELO. If you need information about a specific dialog box,
+
+click the question mark next to the X button in the dialog box.
+
+Log off 
+
+Available in: User menu [your name] > Log off
+
+This where you log off from ELO.
+
+80 ELO Web Client
+
+
+
+Workspaces 
+
+Workspaces are workspaces in ELO for different functional levels. With the help of filters and
+
+different views, you can edit data and analyze it in charts and tables.
+
+Workspaces are based on workspace types. These are created by administrators and define which
+
+views and filters are available to you. They also define which objects can be created in a
+
+workspace.
+
+Objects 
+
+Objects are a shell with metadata where entries can be compiled. Files and folders can be inserted
+
+in an object.
+
+Connections between objects are not established via a hierarchical structure, but by relations.
+
+The chapter Create object explains how to create an object.
+
+Relations 
+
+You can establish a connection between objects, for example between a job application and the
+
+position it was submitted for.
+
+You establish these connections using relation fields. Relation fields can be found in the metadata
+
+form of an object.
+
+In the table view, a relation is indicated by a button with a chain icon.
+
+If you've entered the corresponding position in the relation field of a job application, for example,
+
+the button with the chain icon takes you from the position to the application. This gives you an
+
+overview of all applications for a position.
+
+Workspace home screen 
+
+Refer to the Spaces section to learn how to access a workspace.
+
+81 ELO Web Client
+
+
+
+You can access all the elements of the workspace via the home screen of a workspace. The ribbon
+
+features a tab with additional workspace functions.
+
+You have the following options:
+
+1 Show as tile: You can create a tile in My ELO that provides quick access to the workspace.
+
+2 Search space: You can search the entries of the selected space. Refer to the chapter on Filters for
+
+a more detailed description of the search.
+
+3 Create new object: You can create an object. For more information, refer to the Create object and 
+
+Objects chapters.
+
+4 Switch view: If multiple views have been created for a workspace, you can use the tabs to switch
+
+between views. There are tables and kanban boards. The tabs are named by the administrator and
+
+are customized.
+
+5 Show entry: You can select the chain icon to view entries that are related to the selected entry.
+
+6 Select relation: You can view entries that are related to the selected entry.
+
+7 Edit workspace: You can edit the workspace if you are authorized to do so based on your role.
+
+8 Workspace filter tree: You can switch between the workspace filters. Filters can be single or multi-
+
+tier.
+
+82 ELO Web Client
+
+
+
+Edit workspace 
+
+You can edit the workspace here. In the ELO Workspaces documentation, you can find more
+
+information about the following:
+
+Overview
+
+Permitted metadata forms
+
+Views
+
+Filter trees
+
+Roles
+
+Please note
+
+When you edit the settings in one area, it is no longer linked to the corresponding area of
+
+the workspace type. Changes to the workspace type are therefore no longer automatically
+
+applied to this area in the workspace.
+
+The Roles area can only be edited after the workspace has been created.
+
+The following options are only available in the workspace:
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+83 ELO Web Client
+
+https://docs.elo.com/admin/packages/en-us/workspaces/
+https://docs.elo.com/admin/packages/en-us/workspaces/
+
+
+You can add members to the workspace and set roles for them.
+
+You can delete the workspace.
+
+'Workspace member' area 
+
+You have the following options:
+
+You can add members to the workspace.
+
+You can change the role of workspace members with the drop-down menu. Workspace members
+
+can have multiple roles.
+
+84 ELO Web Client
+
+
+
+You can delete workspace members. Administrators can only be deleted by administrators. The last
+
+administrator cannot be deleted.
+
+Table 
+
+In a table, you see all the entries that match the selected filters. The selection of filters is based on
+
+the workspace type.
+
+You have the following options:
+
+You can select the filtered entries. The entry is shown and you can edit it in the Metadata tab. You
+
+can insert documents and folders for an entry and view them in the Content tab. This area works
+
+like the viewer pane in the repository.
+
+85 ELO Web Client
+
+
+
+You can edit the entries using the functions on the ribbon. You can also use the context menu for
+
+documents and folders associated with an entry.
+
+You can view entries that are related to the selected entry. The metadata of the entry has to contain
+
+a relation field that establishes the link.
+
+You can enter a feed post. The feed works as described in the chapter Feed.
+
+86 ELO Web Client
+
+
+
+Kanban board 
+
+In a kanban board, entries are assigned to columns depending on the value of a specific status
+
+field.
+
+You have the following options:
+
+You can move entries via drag-and-drop. The corresponding value in the metadata changes.
+
+87 ELO Web Client
+
+
+
+You can select the filtered entries. The entry is shown and you can edit it or create additional
+
+entries. This area works like the viewer pane in the repository.
+
+You can edit the entries using the functions on the ribbon. You can also use the context menu for
+
+documents and folders associated with an entry.
+
+You can enter a feed post. The feed works as described in the chapter Feed.
+
+88 ELO Web Client
+
+
+
+Dashboard 
+
+Workspace entries can be visualized in various ways in a dashboard. The types of visualization
+
+available depend on the administrative settings.
+
+You have the following options:
+
+You can filter the dashboards.
+
+89 ELO Web Client
+
+
+
+You can view details about dashboards by clicking on them.
+
+Create workspace 
+
+You can create new workspaces.
+
+Requirements
+
+The administrator will already have created workspace types.
+
+Method
+
+In My ELO, select the Spaces tile.
+
+Select ribbon > Spaces tab > New workspace.
+
+In the New workspace dialog box, select the type you want to base the workspace on.
+
+Enter a meaningful workspace name.
+
+Show as tile in "My ELO": You can create a tile while you are creating the workspace. This
+
+only applies to your own client. You can also create the tile later, as described in the chapter 
+
+Workspace home screen.
+
+Select OK.
+
+Result
+
+The workspace is created. You will find it as a tile in the tile navigation area.
+
+Outlook
+
+You will learn how to work with workspaces in the chapters
+
+Workspace home screen
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+• 
+
+• 
+
+90 ELO Web Client
+
+
+
+Table
+
+Kanban board
+
+Dashboard
+
+Create object
+
+Create object 
+
+You can create objects.
+
+For more information about the concept of objects, refer to the chapter Objects.
+
+Requirements
+
+You can only create objects if the function was enabled when the workspace template was created.
+
+Method
+
+In My ELO, select the Spaces tile.
+
+Open a workspace.
+
+On the ribbon, go to the tab with the workspace functions and select New object.
+
+In the New object dialog box, choose what kind of object you want to create. The
+
+administrator has configured which object types are possible for each workspace.
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+91 ELO Web Client
+
+
+
+The New object dialog box appears with the metadata form appropriate for this object.
+
+Complete the fields as required.
+
+If your object is related to another object, you can establish a connection via relation fields.
+
+For more information about the concept of relation fields, refer to the chapter Relations.
+
+Select Save.
+
+Result
+
+The object is created in the workspace. It can be found in the Newly added area right away and via
+
+filters after a short delay.
+
+Outlook
+
+You will learn how to work with workspaces in the chapters
+
+5. 
+
+6. 
+
+• 
+
+92 ELO Web Client
+
+
+
+Workspace home screen
+
+Table
+
+Kanban board
+
+Dashboard
+
+• 
+
+• 
+
+• 
+
+93 ELO Web Client
+
+
+
+Teamspaces 
+
+The Teamspace function enables you to collaborate across teams. All ELO users added to a
+
+teamspace can gather and edit documents together and exchange information using the feed.
+
+The rights you have in a teamspace depend on the role you have been assigned by the
+
+administrator.
+
+Workspaces can be integrated into a teamspace.
+
+Teamspace home screen 
+
+Refer to the Spaces section to learn how to access a teamspace.
+
+You can access all the elements of the teamspace via the home screen of a teamspace. The ribbon
+
+features a tab with additional teamspace functions.
+
+You have the following options:
+
+To quickly access the teamspace, you can create a tile in the tile navigation area of My ELO.
+
+You can search the entries of the selected space. Refer to the chapter on Filters for a more detailed
+
+description of the search.
+
+You can navigate between areas in a teamspace. Every teamspace has the areas Overview and 
+
+Team members. The names and number of additional areas is customized.
+
+94 ELO Web Client
+
+
+
+'Overview' area 
+
+You have the following options:
+
+1 Pinned documents: You can open a pinned document or unpin a document from this space. The 
+
+Document space chapter explains how to pin a document in a teamspace.
+
+2 Latest documents. You can open one of the latest documents. The Document space chapter
+
+explains how to insert a document in a teamspace.
+
+3 Overview of team members: You can see the members of the teamspace and navigate to the 
+
+Team members area by selecting a member. You can only edit members in the 'Team members'
+
+area.
+
+4 Feed: You can enter a feed post. In the Overview area, the posts for all entries in the teamspace
+
+are displayed in the feed. Otherwise, the feed works as described in the chapter Feed.
+
+5 Edit teamspace: You can edit the teamspace if you are authorized to do so based on your role.
+
+95 ELO Web Client
+
+
+
+Edit teamspace 
+
+You have the following options:
+
+1 Change the teamspace name
+
+2 Change the teamspace description
+
+3 Add widgets: You can drag widgets to the field in the bottom area of the overview.
+
+4 Close edit mode: All your changes will be saved.
+
+5 Delete teamspace: Deleting the teamspace removes all the entries contained. A deletion marker
+
+is set so that the teamspace can be restored if necessary.
+
+6 Create new space: Your options are Document spaces and Workspaces.
+
+All options that are not listed here can be found in the chapter 'Overview' area.
+
+96 ELO Web Client
+
+
+
+'Team members' area
+
+You have the following options:
+
+You can add team members. All team members are initially assigned the role which was set as the
+
+default. This role can be changed after creation, however.
+
+You can edit the roles if you are authorized to do so based on your role.
+
+You can change the role of team members with the drop-down menu. Team members can have
+
+multiple roles.
+
+97 ELO Web Client
+
+
+
+You can delete team members. Administrators can only be deleted by administrators. The last
+
+administrator cannot be deleted.
+
+You can search for team members.
+
+Roles 
+
+The following four roles are available as standard:
+
+Role Permissions
+
+Administrator
+
+The user who created the teamspace is automatically the administrator. Additional
+
+members can also be named administrators. Administrators have all the rights and
+
+permissions to the teamspace and its contents.
+
+Moderator
+
+Moderators have all the rights to the teamspace and its contents. The only
+
+difference from an administrator is that they are not allowed to delete the
+
+teamspace.
+
+Participant Participants can create, edit, move, and delete contents in the teamspace.
+
+Guest Guests can only read contents.
+
+The roles can be edited.
+
+Edit roles 
+
+The default roles can be edited or removed, and new roles can be created.
+
+Method
+
+Select Edit roles.
+
+98 ELO Web Client
+
+
+
+In the Edit roles dialog box, you have the following options:
+
+1 Add new role: This is where you define the rights for the role members.
+
+2 Edit existing role
+
+3 Delete role
+
+4 Set default for new team members: You can specify in the drop-down menu which role newly
+
+created team members are assigned by default. This role can still be changed after creating a
+
+member.
+
+Document space 
+
+A document space can have any name.
+
+You have the following options:
+
+99 ELO Web Client
+
+
+
+This area works like the viewer pane in the repository. You can create new documents as well as
+
+view and edit existing documents.
+
+You can edit the entries using the functions on the ribbon and in the context menu as usual.
+
+You can pin documents in the 'Overview' area of the teamspace. You will find the button on the 
+
+Document tab.
+
+You can enter a feed post. The post does not apply to any specific entry, and is instead shown in the
+
+document space. Otherwise, the feed works as described in the chapter Feed.
+
+You can edit the document space.
+
+100 ELO Web Client
+
+
+
+Edit document space 
+
+You have the following options:
+
+1 Create new space: Your options are Document spaces and Workspaces.
+
+2 Delete space
+
+3 Change the name of the document space
+
+4 Change the icon of the document space
+
+5 Close edit mode: All your changes will be saved.
+
+Workspace 
+
+A workspace can have any name. A teamspace can also contain multiple workspaces or none at
+
+all.
+
+You will find general information in the chapter Workspaces.
+
+You can edit a workspace within a teamspace like a document space.
+
+The members and roles of a teamspace are inherited by the workspace.
+
+Create teamspace 
+
+You can create new teamspaces.
+
+Requirements
+
+The administrator will already have created teamspace templates.
+
+Method
+
+In My ELO, select the Spaces tile.1. 
+
+2. 
+
+101 ELO Web Client
+
+
+
+Select ribbon > Spaces tab > New teamspace.
+
+In the New teamspace dialog box, select the template you want to base the teamspace on.
+
+Enter a meaningful teamspace name and, optionally, a description.
+
+Show as tile in "My ELO": You can create a tile while you are creating the teamspace. This
+
+only applies to your own client. You can also create the tile later, as described in the chapter 
+
+Teamspace home screen.
+
+Select OK.
+
+Result
+
+You have created a teamspace. You are automatically entered as the administrator for teamspaces
+
+you have created.
+
+Outlook
+
+You can now edit the teamspace and add other members.
+
+You will learn how to proceed in the next chapters:
+
+Edit teamspace
+
+'Team members' area
+
+Edit document space
+
+Teamspace
+
+3. 
+
+4. 
+
+5. 
+
+• 
+
+• 
+
+• 
+
+• 
+
+102 ELO Web Client
+
+
+
+'Favorites' tab 
+
+This tab contains several important functions by default.
+
+You can customize this tab by adding functions or removing ones you don't need from the tab.
+
+The Most recently used drop-down menu lists the 20 functions you most recently used. If you
+
+cannot run a function from your current position, it will be listed but grayed out.
+
+Pin function to the 'Favorites' tab 
+
+You can pin any function from other tabs to the Favorites tab. The function also remains on the
+
+original tab.
+
+Method
+
+Right-click the function that you want to pin.
+
+Click Pin to favorites.
+
+Result
+
+The function will now appear on your Favorites tab.
+
+Outlook
+
+If you no longer need a function in your favorites, you can unpin it again.
+
+Unpin function from the 'Favorites' tab 
+
+You can unpin functions that were originally on the Favorites tab as well as ones you added
+
+yourself.
+
+Method
+
+Right-click the function you want to unpin.
+
+1. 
+
+2. 
+
+1. 
+
+2. 
+
+103 ELO Web Client
+
+
+
+Click Unpin from favorites.
+
+Result
+
+The function is removed from your Favorites tab. You can still access it from its usual position on
+
+the ribbon.
+
+104 ELO Web Client
+
+
+
+'New' tab 
+
+The functions on the New tab allow you to create folders or documents in ELO and start tasks.
+
+New folder 
+
+For information on how to use this function, refer to the chapter Create new folder.
+
+Alternatives
+
+Copy: If a folder with the basic structure you need already exists, you can copy this basic
+
+structure without content.
+
+Dynamic folder: This function allows you to create a folder whose content changes
+
+dynamically. The content of a dynamic folder is based on the result of a search. All search
+
+results appear in the folder.
+
+Insert file 
+
+For information on how to use this function, refer to the chapter File document.
+
+Alternatives
+
+Drag-and-drop: You can drag documents straight from your file system to a folder in ELO.
+
+Document from template: If you want to create a document from a template, use this
+
+function.
+
+Copy: If you want to file a document that already exists in identical form in the repository,
+
+use this function.
+
+Document from template 
+
+This function allows you to generate documents from a template, for example reports. Generally,
+
+you can use any document that you have access to as a template.
+
+Method
+
+Select the folder that you want to file the document to.
+
+On the ribbon, click New > Document from template.
+
+Select the document you want to use as a template.
+
+To make sure you select the right document, you can view it using the Open in read-only
+
+mode function.
+
+Enter metadata.
+
+For more information, refer to the chapter Metadata.
+
+Click OK.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+105 ELO Web Client
+
+
+
+Result
+
+The document is stored in the folder you selected.
+
+At the same time, the Check out dialog box appears automatically so that you can edit the
+
+document right away.
+
+Outlook
+
+You can learn how to check out and edit the document in the chapter Check out and edit document.
+
+If you do not want to edit the document, click Close in the Check out dialog box. On the ribbon,
+
+click Document > Versions > Cancel editing.
+
+Start workflow 
+
+For information on how to use this function, refer to the chapter Start workflow.
+
+Alternative
+
+Ad hoc workflow: The function Ad hoc workflow is used to start short default workflows
+
+(approval and notification).
+
+Ad hoc workflow 
+
+Ad hoc workflows represent simple business processes: approvals and notifications. Ad hoc
+
+workflows are predefined by ELO.
+
+Alternative
+
+Start workflow: Use this function to start more complex workflows that were created
+
+specifically for your company.
+
+Method
+
+Select the entry you want to start an ad hoc workflow for.
+
+On the ribbon, click New > Create task > Ad hoc workflow.
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+106 ELO Web Client
+
+
+
+Configure the settings for the ad hoc workflow:
+
+Type: Here, you will see all ad hoc workflows you can choose from. Clicking a workflow
+
+selects it.
+
+For user/group: Select the recipient(s) of the ad hoc workflow from the drop-down menu.
+
+In the field below For user/group, you can see which recipients have already been selected.
+
+Click the X icon to remove the users.
+
+Enter individual job instruction: In this field, you can an individual notification text for the
+
+selected user as needed. Press the ENTER key to confirm the text.
+
+Order: To change the order of recipients in serial ad hoc workflows, click a recipient and
+
+change their position using the up and down arrows.
+
+Expand: The Expand button enables you to view the individual members of a group. To do so,
+
+mark a group you selected and then click Expand. You can now remove members by clicking
+
+the X icon.
+
+3. 
+
+107 ELO Web Client
+
+
+
+Escalation management: In the Escalation management dialog box, you can set escalations
+
+for ad hoc workflows. If your workflow has escalated, you will see this in your Tasks work
+
+area and on your My ELO home screen on the right-hand side under Escalated workflows.
+
+Clicking the escalated workflow in My ELO takes you to the escalated workflow in your Tasks
+
+work area.
+
+Show members: If you selected and clicked a group, you can view the group's members.
+
+108 ELO Web Client
+
+
+
+Click Finish on the right side of the dialog box and configure additional settings for the ad hoc
+
+workflow here:
+
+4. 
+
+109 ELO Web Client
+
+
+
+Recipient: Use the drop-down menu in the Recipient field to select who to notify after the ad
+
+hoc workflow is completed.
+
+Success message: The text from this field is shown to the recipients above once the ad hoc
+
+workflow has been completed. It appears in the recipient's Tasks work area.
+
+Cancellation message ('Approval' workflows only): The text from this field is shown to the
+
+recipient above if the ad hoc workflow has been canceled. It appears in the recipient's Tasks
+
+work area.
+
+Withdraw the workflow from all users as soon as one user does not approve it. ('Parallel
+
+approval' workflows only): If this option is enabled, all recipients must approve the workflow.
+
+Otherwise, the ad hoc workflow is canceled entirely and the task is removed from the Tasks
+
+work areas of the other selected users. In your tasks area and your home screen, you will
+
+receive the message Not approved in My ELO under My recently started workflows.
+
+End script: If needed, you can enter the name of a script to the End script field that will run
+
+when the ad hoc workflow is completed.
+
+5. 
+
+110 ELO Web Client
+
+
+
+Click OK.
+
+Result
+
+The workflow is started and displayed in the Tasks work area of the selected users.
+
+Reminder 
+
+You can use reminders to remind yourself of entries that you want to deal with at a later time.
+
+You can create reminders for folders and for documents. You can create a reminder for multiple
+
+entries within a folder at the same time.
+
+Method
+
+Select the entry you want to create a reminder for.
+
+You can also create reminders for multiple entries at the same time. You can learn how to do
+
+this in the chapter How do I select multiple entries?
+
+On the ribbon, click New > Create task > Reminder.
+
+Configure the settings for your reminder in the Reminder dialog box.
+
+If you selected multiple entries, only the dialog box for the topmost selected entry
+
+appears at first. As soon as you have edited the settings and clicked OK, a new dialog
+
+box opens for the next selected entry.
+
+Priority: The priority level is shown in the tasks overview when a reminder is received.
+
+1. 
+
+2. 
+
+3. 
+
+111 ELO Web Client
+
+
+
+Date: Select the date the task should be completed on. The date appears in the tasks
+
+overview as the Task date. Depending on the settings for how tasks are displayed, the
+
+reminder may also show up in the Tasks work area of the selected users a few days
+
+beforehand.
+
+Information
+
+The time at which the reminder appears in the Tasks work area depends on the setting
+
+under User menu [your name] > Configuration > Display > Task list display options >
+
+Show tasks due in the following number of days.
+
+For user/group: Select the recipient(s) of the reminder from the drop-down menu.
+
+In the field below For user/group, you can see which recipients have already been selected.
+
+Click the X icon to remove the users.
+
+Show members: If you selected and clicked a group, you can view the group's members.
+
+Click OK.
+
+Result
+
+The reminder appears in the Tasks work area of the selected users at the configured time. You will
+
+recognize it by the calendar icon.
+
+Outlook
+
+To remove the reminder from your task view, select the notification, then, on the ribbon, click 
+
+Organize > Delete.
+
+Monitor changes 
+
+You can monitor individual entries. If changes have been made to monitored entries, you will be
+
+notified in your Tasks work area.
+
+Folder: If you monitor a folder, you receive a notification as soon as other users add entries
+
+to this folder.
+
+Document: If you monitor a document, you receive a notification as soon as other users file
+
+new versions of the document.
+
+Method
+
+Select the entry you want to monitor.
+
+On the ribbon, click New > Create task > Monitor changes.
+
+4. 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+112 ELO Web Client
+
+
+
+Make the settings in the Monitor changes dialog box.
+
+Click OK.
+
+Result
+
+As soon as other users modify the entry, you will receive a notification in your Tasks work area.
+
+You can recognize notifications by the camera icon.
+
+Under the entry name, you will see the text you entered when you started monitoring the entry.
+
+You will also see the name of the user who edited the entry.
+
+Outlook
+
+To remove the notification from your task view, select the notification, then, on the ribbon,
+
+click Organize > Delete.
+
+You can edit or end monitoring actions at a later point. For more information, refer to the 
+
+Monitoring overview chapter.
+
+3. 
+
+4. 
+
+• 
+
+• 
+
+113 ELO Web Client
+
+
+
+'View' tab 
+
+The View tab contains functions for changing how entries are displayed in ELO.
+
+Go to 
+
+This function takes you to the filing location of the selected entry in the Repository work area.
+
+Links also have a Go to button. For more information, refer to the chapter Link.
+
+If you are in one of the work areas Search, Tasks, Clipboard, or In use, Go to takes you to the
+
+corresponding entry in the Repository work area.
+
+Used in the Repository work area, this function takes you from a reference to the original entry.
+
+Method
+
+Select the entry whose filing location you want to go to.
+
+On the ribbon, click View > Go to.
+
+Result
+
+You are now at the filing location of the selected entry in the Repository work area.
+
+Link
+
+Available in: Repository work area
+
+You can link folders or documents that are related. This enables you to access an entry from
+
+another entry using the link.
+
+Method
+
+Select an entry you want to link with another entry. The order in which you select the entries
+
+is irrelevant. Both entries are linked.
+
+On the ribbon, click View > Navigation > Link.
+
+Click the second entry you want to link.
+
+1. 
+
+2. 
+
+1. 
+
+2. 
+
+3. 
+
+114 ELO Web Client
+
+
+
+Click Add as link.
+
+The entry you selected in step 4 appears in the list of links.
+
+To link multiple entries with the entry you selected first, repeat this process with the other
+
+entries. This way, each entry is linked with the first one but not with each other.
+
+If you do not want to link any more entries, click Close.
+
+Result
+
+The documents are linked.
+
+You will recognize documents with links by the chain icon that appears.
+
+4. 
+
+5. 
+
+115 ELO Web Client
+
+
+
+Outlook
+
+Clicking the chain button takes you to the overview of links for the entry.
+
+Additional functions
+
+Once you have created a link, the other buttons become active as soon as you select one or more
+
+entries in the list of links. You can learn how to select multiple entries in the chapter How do I
+
+select multiple entries?
+
+Permanent link: You can link two or more entries permanently if you select them at the same
+
+time and click Permanent link. If you do this, you can no longer remove the links from the list
+
+of links with the Remove button.
+
+Mesh links: If you create mesh links for multiple entries, the entries are no longer only linked
+
+to the original entry but also with each other. Select all entries that you want to link and click
+
+Mesh links.
+
+Go to: If a link exists, select the entry and click Go to to go straight to the linked entry.
+
+Remove: To remove one or more entries from the list of links, select the corresponding
+
+entries and click Remove. If the Remove button does not become active after selecting an
+
+entry, the link you are trying to remove is permanent.
+
+Go to top level 
+
+Available in: 'Organize' tab > Go to top level
+
+This function takes you to the top level of the Repository work area from any position in any of the
+
+work areas.
+
+If you are in a folder view, the function takes you to the top folder level. If you select the Go to top
+
+level function from here, this takes you to the top level of the Repository work area.
+
+Copy to clipboard 
+
+You can place entries that you require frequently on the Clipboard. For more information, refer to
+
+the chapter Clipboard.
+
+Method
+
+Select the entry or entries that you want to place on the Clipboard.
+
+You can learn how to select multiple entries in the chapter How do I select multiple entries?
+
+On the ribbon, click View > Navigation > Copy to Clipboard.
+
+Result
+
+You will now find the entry in your Clipboard work area.
+
+Outlook
+
+To remove the entry from the Clipboard, use the Remove from Clipboard function.
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+116 ELO Web Client
+
+
+
+Remove from Clipboard 
+
+You can remove an entry from the Clipboard if you no longer need it. For more information, refer to
+
+the chapter Clipboard.
+
+Method
+
+Select the entry or entries that you want to remove from the Clipboard.
+
+You can learn how to select multiple entries in the chapter How do I select multiple entries?
+
+On the ribbon, click View > Navigation > Remove from Clipboard.
+
+Result
+
+You can no longer access the entry from the Clipboard.
+
+Refresh 
+
+If you click View > Refresh on the ribbon, changes recently made by other users are immediately
+
+applied.
+
+Create view 
+
+A view provides you with quick access to a specific area of the repository.
+
+When you create a view, it is displayed as a tile in the tile navigation on your My ELO home screen.
+
+You can create views for folders or tasks. This chapter describes how to create a task view. You can
+
+learn how to create a folder view in the chapter Create view.
+
+You can create task views with your own custom criteria, for example with a high priority.
+
+A task view creates a tile that gives you direct access to the tasks that meet the selected criteria.
+
+Method
+
+Navigate to the Tasks work area.
+
+On the ribbon, click View > Create view.
+
+1. 
+
+2. 
+
+1. 
+
+2. 
+
+117 ELO Web Client
+
+
+
+In the New task view dialog box, define the criteria for showing tasks in the task view.
+
+Some fields are only enabled based on other fields. For example, Fields is enabled once you
+
+have made a selection under Metadata form.
+
+Metadata form: Use the Metadata form drop-down menu to select a metadata form if you
+
+only want tasks with the corresponding metadata form to be displayed in the task view.
+
+3. 
+
+118 ELO Web Client
+
+
+
+Fields: If you have selected a metadata form in the Form field, you can select a field from the
+
+metadata form from the Field drop-down menu.
+
+Click Save.
+
+Result
+
+A tile is created for the new view under the Repository group in the tile navigation in My ELO.
+
+Outlook
+
+You can drag and drop a tile to another position.
+
+If you have created multiple views, you have the option to group them. To learn how to
+
+create a group in the tile navigation, refer to the chapter Create group.
+
+You can rename or delete a task view.
+
+Show postponed workflows 
+
+To view postponed workflows, you need a corresponding task view.
+
+Available in: Tasks work area
+
+Method
+
+On the ribbon, click View > Create view.
+
+Check the Show postponed workflows box.
+
+Make additional settings if needed.
+
+Result
+
+A new tile is created on your My ELO home screen. This tile takes you to your postponed workflows
+
+in the Tasks work area.
+
+Rename view 
+
+You can change the name of a folder view or task view after you create it.
+
+You can learn how to create a folder view in the chapter Create view.
+
+You can learn how to create a task view in the chapter Create view.
+
+Method
+
+On your My ELO home screen, click the view tile you want to rename.
+
+This opens your view.
+
+On the ribbon, click View > Views > Rename view.
+
+In the Rename view dialog box, enter the new name of the view.
+
+4. 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+3. 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+119 ELO Web Client
+
+
+
+Click Save.
+
+Result
+
+The view tile now has the new name you entered.
+
+Delete view 
+
+If you no longer need a folder view or task view, you can delete it.
+
+You can learn how to create a folder view in the chapter Create view.
+
+You can learn how to create a task view in the chapter Create view.
+
+Method
+
+On your My ELO home screen, click the view tile you want to delete.
+
+This opens your view.
+
+On the ribbon, click View > Views > Delete view.
+
+Click Yes to confirm the Delete view dialog box.
+
+Result
+
+The view tile disappears from your tile navigation.
+
+Table 
+
+The table view shows you more information about the child entries. You can use it in all work areas
+
+when you select a folder.
+
+Method
+
+Select a folder or task in the Tasks work area.
+
+On the ribbon, click View > Table.
+
+Result
+
+You see the metadata of the child entries in table form. More information about the task is
+
+displayed in the Tasks work area.
+
+Outlook
+
+You can close the table view by clicking View > Table on the ribbon again.
+
+Image preview 
+
+You can use the Image preview function to display documents if there is no viewer available for the
+
+original format.
+
+1. 
+
+2. 
+
+3. 
+
+1. 
+
+2. 
+
+120 ELO Web Client
+
+
+
+This button is only enabled if a preview image is available for the document.
+
+Information
+
+An image preview is always available for PDF and TIFF documents. For other formats, you
+
+will have to create one, for example using the Create document preview function in the ELO
+
+Java Client. You do not have the option to create a image preview in the ELO Web Client.
+
+Method
+
+Select the document that you want to display as an image preview.
+
+On the ribbon, click View > Image preview.
+
+Result
+
+You can now see the document in the image preview.
+
+The image preview has a menu bar with the following functions:
+
+Show annotations: You see the annotations applied to the document. Sticky notes can only be
+
+created with the ELO Java Client.
+
+Next or previous page: The next or previous page of a multi-page document is displayed.
+
+Zoom in or zoom out: Increases or decreases the size of the image shown.
+
+Zoom to 100%: The image is displayed in the original size.
+
+Fit image width to the frame: The image size fits the width of the viewer pane.
+
+1. 
+
+2. 
+
+121 ELO Web Client
+
+
+
+Fit image size to the frame: The image is adjusted to the height of the viewer pane so that the
+
+entire page of the document is displayed.
+
+Rotate all pages 90 degrees: Rotates the preview 90 degrees.
+
+Outlook
+
+To close the image preview, click View > Image preview on the ribbon again.
+
+Full text 
+
+The text view is used to display the full text information of documents that have been added to the
+
+full text database. You can also configure this view for documents with specific file extensions.
+
+If there is no full text information for the document, the button is grayed out.
+
+Please note
+
+Binary files may result in display errors.
+
+Method
+
+Select the document whose full text content you want to display.
+
+On the ribbon, click View > Full text.
+
+Result
+
+1. 
+
+2. 
+
+122 ELO Web Client
+
+
+
+The full text is displayed.
+
+Documents in the full text view have a menu bar with the following functions:
+
+Increase or decrease font size: Increases or decreases the size of the displayed text.
+
+Fixed font width: Switches the display to a non-proportional font so that all characters are displayed
+
+with the same spacing. This improves readability, e.g. of code.
+
+Automatic word wrap: Lines are wrapped automatically.
+
+123 ELO Web Client
+
+
+
+Highlight: To search for a term in the full text database, enter the term in the Highlight field and
+
+click Search. Any hits are marked.
+
+Show previous or next hit: Jumps to the last or next highlighted entry in the text.
+
+Outlook
+
+To close the full text view, click View > Full text on the ribbon again.
+
+124 ELO Web Client
+
+
+
+'Output' tab 
+
+This tab contains functions that allow you to save or send entries in ELO.
+
+Send as ELO link 
+
+You can send a folder or document from ELO via e-mail. The recipient requires an ELO user account
+
+and access to your repository to open the ELO link. The user also requires permission to read the
+
+selected entry.
+
+Information
+
+This function behaves differently if you have installed the ELO Web Add-ons. However, the
+
+method is identical.
+
+Alternatives
+
+Create external link: If you want to send a document to someone without access to ELO, use
+
+this function.
+
+Send document: If you have installed the ELO Web Add-ons, you can also use this function to
+
+send a document to someone without access to ELO.
+
+Method
+
+Select the entry or entries you want to send.
+
+You can learn how to select multiple entries in the chapter How do I select multiple entries?
+
+On the ribbon, click Output > Send as ELO link.
+
+Result
+
+A new e-mail opens in your e-mail program. The short name of the entry is automatically used as
+
+the subject.
+
+The recipient can open the filing location of the entry in ELO from the ELO link.
+
+ELO Web Add-ons: In addition to the link to the ELO Web Client, the attachment also includes a link
+
+to the ELO Java Client.
+
+Send document (ELO Web Add-ons) 
+
+You can send a document from ELO via e-mail. The recipient does not need an ELO user account to
+
+open the document.
+
+Information
+
+This function is only available if you have installed the ELO Web Add-ons.
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+125 ELO Web Client
+
+
+
+Alternatives
+
+Create external link: If you want to send a document to someone without access to ELO, you
+
+can also use this function.
+
+Send as ELO link: If you want to send a document to someone with access to ELO, use this
+
+function.
+
+Method
+
+Select the document or documents you want to send.
+
+You can learn how to select multiple entries in the chapter How do I select multiple entries?
+
+On the ribbon, click Output > Send document.
+
+Result
+
+A new email with the documents attached opens in your e-mail program. The short name is
+
+automatically used as the subject.
+
+Save as 
+
+You can save local copies of all documents that are stored in the Repository work area.
+
+Information
+
+It is not advisable to use this function in combination with the Document > Load new
+
+version function to edit a document because this would mean that document is not locked
+
+for other users.
+
+Method
+
+Select the document you want to save.
+
+On the ribbon, click Output > Save as.
+
+Result
+
+The document is saved in your usual folder.
+
+Export table 
+
+You can export metadata for entries in a folder. The metadata is exported as a CSV file.
+
+The entries themselves are not exported.
+
+This function is only enabled in the table view. If you are not in the table view, click View > Table
+
+on the ribbon.
+
+Method
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+1. 
+
+2. 
+
+1. 
+
+126 ELO Web Client
+
+
+
+Select the folder whose table you want to export.
+
+In the viewer pane, select the entry or entries whose metadata you want to export.
+
+You can learn how to select multiple entries in the chapter How do I select multiple entries?
+
+On the ribbon, click Output > Save > Export table.
+
+Result
+
+The CSV file appears at the bottom of your browser.
+
+Outlook
+
+You can import the CSV file into popular spreadsheet programs and database systems, or into Excel
+
+spreadsheets.
+
+Print document (ELO Web Add-ons) 
+
+You can print a document directly from ELO. You can also print even if the document cannot be
+
+shown.
+
+Information
+
+This function is only available if you have installed the ELO Web Add-ons.
+
+Method
+
+Select the document you want to print.
+
+On the ribbon, click Output > Print document.
+
+Create external link 
+
+You can send a folder or document from ELO via e-mail. The recipient does not need an ELO user
+
+account to open the link.
+
+2. 
+
+3. 
+
+1. 
+
+2. 
+
+127 ELO Web Client
+
+
+
+Alternatives
+
+Send as ELO link: If you want to send a document to someone with access to ELO, use this
+
+function.
+
+Send document: If you have installed the ELO Web Add-ons, you can also use this function to
+
+send a document to someone without access to ELO.
+
+Method
+
+Select the entry you want to send.
+
+On the ribbon, click Output > External link > Create external link.
+
+Restrict availability: You can restrict availability to a specific period or the number of times
+
+the link can be opened.
+
+Click Create external link.
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+3. 
+
+128 ELO Web Client
+
+
+
+Send the link by e-mail. Alternatively, you can save it to the clipboard.
+
+Result
+
+The link is sent.
+
+An external link also works when the entry it refers to has been moved.
+
+Outlook
+
+You can use the function External links overview to see a list of all external links. You can also use
+
+this function to edit or delete the external links.
+
+External links overview 
+
+This function provides you with a list of all external links. You can edit or delete all the links in the
+
+list.
+
+Method
+
+On the ribbon, click Output > External link > External links overview.
+
+4. 
+
+129 ELO Web Client
+
+
+
+Result
+
+In the External links overview dialog box, you can see the links that have been created.
+
+Outlook
+
+If you select a link in the list, the following buttons become active:
+
+Go to: This function takes you to the entry in the Repository work area that the link was
+
+created for.
+
+Open in read-only mode
+
+Edit external link: This function allows you to change how long the link is available or the
+
+number of times it can be accessed.
+
+Delete external link: As soon as the external link is deleted, you can no longer access the
+
+entry using the link.
+
+• 
+
+• 
+
+• 
+
+• 
+
+130 ELO Web Client
+
+
+
+'Organize' tab 
+
+This tab contains functions that will help you organize your repository.
+
+Move 
+
+Available in: Repository work area
+
+Use this function to move folders or documents within the repository.
+
+Alternative
+
+Drag-and-drop
+
+Method
+
+Select the entry you want to move.
+
+On the ribbon, click Organize > Move.
+
+The Clipboard tab appears.
+
+To select a target folder, click the corresponding folder in the repository.
+
+If you selected the wrong folder, you can correct this by clicking the right folder. The other
+
+folder is selected.
+
+Click Move entry.
+
+When moving a folder or document, if the permissions settings for the entry differ from the
+
+permission settings for the target folder, the Move entries dialog box appears. In this dialog box,
+
+you are provided with different options for the permissions settings.
+
+Save selection and don't show this dialog box again: In the ELO Web Client configuration
+
+(Configuration > Dialog boxes > Inherit permissions when moving entries), you can define the
+
+settings for moving entries and also disable the dialog box.
+
+Result
+
+You will now find the entry at the selected new position in the Repository work area.
+
+Reference 
+
+Available in: Repository work area
+
+• 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+131 ELO Web Client
+
+
+
+This function allows you to create a reference for folders or documents that you need at multiple
+
+positions in the repository.
+
+Unlike when moving an entry, the entry remains at its original position. A reference is also created.
+
+Unlike a copy, references and their original documents are always identical. They cannot be edited
+
+individually.
+
+Alternative
+
+Drag-and-drop
+
+Method
+
+Select the entry you want to reference.
+
+On the ribbon, click Organize > Structure > Reference.
+
+The Clipboard tab appears.
+
+To select a target folder for the reference, click the corresponding folder in the repository.
+
+If you selected the wrong folder, you can correct this by clicking the right folder. The other
+
+folder is selected.
+
+Click Create reference.
+
+Result
+
+You will now find the reference at the selected position in the Repository work area.
+
+Outlook
+
+If you want to delete a document that has been referenced, ELO will notify you that this reference
+
+exists.
+
+Copy 
+
+Available in: Repository work area
+
+This function allows you to copy folders or documents that you need at multiple positions in the
+
+repository.
+
+Unlike with referencing, the two entries are not linked after copying. They can be edited separately
+
+from one another.
+
+Method
+
+Select the entry you want to copy.
+
+• 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+1. 
+
+2. 
+
+132 ELO Web Client
+
+
+
+On the ribbon, click Organize > Structure > Copy.
+
+The Clipboard tab appears.
+
+To select a target folder for the reference, click the corresponding folder in the repository.
+
+If you selected the wrong folder, you can correct this by clicking the right folder. The other
+
+folder is selected.
+
+You can modify the copy via the Copy options menu:
+
+Documents and folders: If you did not check the box next to Retain user in "Filed by" and
+
+"Editor" field, your name will appear in these fields in the metadata of the copy.
+
+Folder: You can select which elements of the folder your copy should include.
+
+Click Insert copy.
+
+Metadata 
+
+This function allows you to view the metadata for the entry.
+
+If you have permission, you can edit the metadata. Metadata is data about a folder or a document.
+
+It includes information on the entry itself, such as when it was filed, or its name in the repository. It
+
+also includes the permissions for the entry, meaning which users have what access to the entry.
+
+The quality of a repository depends to a great extent on the quality of the metadata. Metadata
+
+allows you to organize documents in a standardized way and file them quickly to ELO. In addition,
+
+metadata makes it easier to find documents.
+
+A new metadata model was introduced with version ELO 21 in addition to the previous metadata
+
+model. Both models are used in parallel. In the following, these metadata models are referred to as
+
+generation 1 (gen. 1) and generation 2 (gen. 2).
+
+In gen. 2, forms and metadata forms are shown differently in the Metadata dialog box. The
+
+metadata concept will remain the same.
+
+There are three ways to open the Metadata dialog box manually. Select an entry and
+
+click Organize > Metadata on the ribbon.
+
+right-click to open the context menu, then click Metadata.
+
+press the keyboard shortcut F4.
+
+This section provides information about entering metadata. Click on one of the following links to go
+
+straight to a topic:
+
+Metadata forms
+
+Fields
+
+'Metadata' or 'Basic' tab
+
+3. 
+
+• 
+
+• 
+
+1. 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+133 ELO Web Client
+
+
+
+'Extra text' tab
+
+'Options' tab
+
+'Permissions' tab
+
+Enter metadata with ELO Click OCR
+
+Identify personal data
+
+Information
+
+If the ELO Barcode module is installed, ELO can extract metadata from barcodes. You can
+
+find more information on the ELO Barcode module and configuring it in the ELO
+
+Administration Console in the ELO Barcode documentation.
+
+Metadata forms 
+
+You enter metadata into metadata forms. Metadata forms contain templates that are specifically
+
+created for this document type. All documents of the same type receive the same permission
+
+settings and are filed to ELO based on a fixed pattern.
+
+The view and functions in the metadata forms depend on the metadata model.
+
+Gen. 2 metadata form
+
+Gen. 1 metadata form
+
+• 
+
+• 
+
+• 
+
+• 
+
+134 ELO Web Client
+
+file:///builds/documentation/user/elo-web-client/.temp/export/ELODOC-3D8A417A3C3A47FF8E6B18FFE3D256AE
+https://docs.elo.com/admin/clients/en-us/java-client/elo-barcode/
+https://docs.elo.com/admin/clients/en-us/java-client/elo-barcode/
+
+
+The Available forms area lists all the available metadata forms. The list contains either metadata
+
+forms for folders or for documents, depending on the type of entry selected in ELO.
+
+Please note
+
+When you change the metadata form, metadata may be lost or incorrectly assigned.
+
+Fields 
+
+The metadata for a document is entered into fields.
+
+The type of field determines the data you need to enter and what you need to consider when doing
+
+so. There are different types of fields, which can be configured differently from metadata form to
+
+metadata form.
+
+Icons 
+
+If a field contains an icon, this means that ELO helps you to enter content in the field.
+
+The following tools are available:
+
+Keyword list
+
+135 ELO Web Client
+
+
+
+Drop-down menu
+
+Calendar
+
+Clock
+
+Relation
+
+Keyword lists 
+
+Fields with keyword lists are used to standardize entries as they only allow you to enter predefined
+
+values.
+
+To open the keyword list, click the keyword list icon. Navigate the list and select a keyword using
+
+the mouse or the up and down keys. Alternatively, you can type a keyword in the field. You will be
+
+offered possible keywords in the drop-down menu.
+
+Keyword lists (gen. 1)
+
+There are two types of fields with keyword lists in gen. 1 metadata forms:
+
+You have to select an entry from the keyword list.
+
+You can select an entry from the keyword list or you can type in your own entry.
+
+If you click a field and a keyword list appears, you cannot make entries.
+
+To open the keyword list, click the keyword list icon. Navigate the list using the mouse or the up
+
+and down keys.
+
+To edit the keyword list, right-click a keyword list entry.
+
+• 
+
+• 
+
+136 ELO Web Client
+
+
+
+You can add new keyword list entries or child entries via the context menu and edit or delete
+
+existing ones.
+
+The following options are also available:
+
+Merge keyword: If a keyword has child entries, you can use this option so that the child entries are
+
+always inserted into the field together with the parent keyword. The parent keyword option must be
+
+enabled for this to work.
+
+For example , if your keyword list contains the keyword Invoice with the child entries Miller and 
+
+Smith, either the expression Invoice Miller or Invoice Smith will be used. You can only choose
+
+between the child entries of the keyword.
+
+137 ELO Web Client
+
+
+
+Disable keyword: Use this option to deactivate a keyword. The keyword can no longer be selected
+
+and will be grayed out.
+
+For fields without a keyword list, press F7 to open a list of previous entries to the selected fields.
+
+Navigate the list using the mouse or the up and down keys.
+
+Relations 
+
+Relation type fields are used to link a field with the metadata of another entry.
+
+Clicking the chain icon opens a list of entries. Navigate the list using the mouse or arrow keys.
+
+Sort the list using the drop-down menu next to the column headers.
+
+Select the entry you want to link. Clicking the chain icon takes you straight from the metadata of
+
+the entry to the metadata of the linked entry.
+
+If you right-click the field in the metadata for the entry, you can open the filing location of the
+
+linked entry by clicking Go to (closes all windows). Using this function closes the Metadata dialog
+
+box. For this reason, you should only use this function after saving the entry.
+
+138 ELO Web Client
+
+
+
+Tabs 
+
+Metadata forms are divided into tabs. There are several default tabs:
+
+Metadata (called Basic in gen. 1 metadata forms)
+
+Extra text (only in gen. 1 metadata forms)
+
+Options
+
+Permissions
+
+The default tabs are briefly described in the following section. Additional tabs appear depending on
+
+the settings in the metadata form.
+
+'Metadata' or 'Basic' tab 
+
+In gen. 1 metadata forms, the Basic tab contains the following default fields:
+
+Short name: The short name is the name of the entry that is shown in the tree structure in the 
+
+Repository work area.
+
+Date:
+
+For documents: In this field, the date on which a document was created or most recently
+
+edited appears automatically. If you want to change the date to the day you file the
+
+document, check the box next to the Adjust document date (set to today) option. If you do
+
+not enable this option, you will see the date on which the document was created under Date,
+
+and the date the document was filed to ELO is shown under Filing date. Another term for the
+
+date is Document date.
+
+For folders: You can select a date of your choice for this field.
+
+For folders only:
+
+ELOINDEX: This field is for the filing definition. When filing documents automatically, ELO identifies
+
+where to file the document through the ELOINDEX.
+
+'Extra text' tab 
+
+::: tiptip Information This tab only appears in gen. 1 metadata forms. :::
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+139 ELO Web Client
+
+
+
+In this text field, you can enter information that is not covered by the other fields, for example a
+
+more exact description or a comment. The field can also be used for script settings.
+
+'Options' tab 
+
+The Options tab is where you specify the characteristics and behavior of an entry. Depending on
+
+whether you are entering metadata for a document or a folder, different settings will be displayed.
+
+You will find more information on the Personal identifier, End of deletion period, and End of
+
+retention period fields in the chapter Identify personal data.
+
+Entry type: This option defines the type of entry. The icon of the entry is displayed in the list view in
+
+ELO according to the settings made here.
+
+Font color: Select a color for the entry to highlight it in your repository structure.
+
+Starting point for replication: If this option is enabled, you only replicate the selected entry and not
+
+the parent folders. This option allows you to replicate parts of repositories that are not stored in
+
+identical repository structures. First, you have to enable this option and then assign the folder to a
+
+replication set (Ribbon > Organize > Properties > Assign replication sets). You will find more
+
+information in the chapter Assign replication sets.
+
+Information
+
+If you configure this option for documents, the parent folder is still replicated.
+
+For folders only:
+
+Sort order: Define the sort order of the contents of the corresponding folder in the Sort order field. If
+
+you select Manual, you can move entries within the folder manually. To sort the contents of a folder
+
+manually, select the folder in the tree view. In the viewer pane, click the entry you want to move
+
+and drag it to the position where you want it.
+
+Enable quick preview for documents in the folder: Use this option to view the first document in a
+
+folder in the viewer pane as soon as you click the folder.
+
+For documents only:
+
+Document status: In the Document status field, you can configure how the document behaves in
+
+the event of changes.
+
+Version control disabled: Only one version of the document is stored. A new version replaces
+
+the previous version. The previous version is deleted and is no longer available.
+
+• 
+
+140 ELO Web Client
+
+
+
+Important
+
+If you select this option, the previous version is overwritten each time you save. The View >
+
+Document > Versions > Load new version function overwrites the current version without
+
+creating a new one. Therefore, we do not recommend using this option.
+
+Version control enabled: If the document is changed, the previous versions are saved. The
+
+versions of a document can be restored.
+
+Non-modifiable: Neither the document nor the associated metadata can be edited.
+
+Important
+
+The status Non-modifiable cannot be reversed.
+
+Encryption key: This field is completed automatically depending on the selected metadata form
+
+and cannot be changed.
+
+Add to full text database: Enable this option to add the document to the full text database. This
+
+function indexes words so that they are available in the search.
+
+File name: The previous name of the document is entered into this field automatically. The name
+
+you entered as the Short name on the Metadata or Basic tab is the one shown in the repository, and
+
+not this name.
+
+'Permissions' tab 
+
+The users and groups that have access rights to the selected entry are listed on the Permissions
+
+tab. Users with the corresponding rights are able to change the settings.
+
+• 
+
+• 
+
+141 ELO Web Client
+
+
+
+User/group: You can also select the options Owner permissions and Parent permissions from the
+
+drop-down menu. If you select Owner permissions, you assign yourself all the rights to the folder or
+
+document. Owner permissions can be transferred, such as when you leave the company. Select the 
+
+Parent permissions option to assign the new folder or document the same rights as its parent entry.
+
+Select permissions: To edit the permissions settings for a selected user or group, select the user or
+
+group and then enable or disable individual options.
+
+The following options are available:
+
+View (R): Users have read access to the entry. They cannot change the entry, but they can
+
+add margin notes.
+
+Change metadata (W): Users can edit the metadata of the entry.
+
+Delete (D): Users can delete the entry.
+
+Edit (E) (documents only): Users can edit the selected entry. This means they can check out
+
+the document, load a new version, and change the working version.
+
+Edit list (L) (folders only): Users can change the contents of the folder. For example, they can
+
+create documents in this folder or move, copy, or remove documents from the folder.
+
+Change permissions (P): Users can change the permissions for the selected entry.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+142 ELO Web Client
+
+
+
+Information
+
+Options that are not applicable are shown in italics and enclosed in pointy brackets.
+
+Personal: Use this button to assign yourself sole access to the respective entry. If other users or
+
+groups had permissions, they are removed.
+
+AND group: To create an AND group, select two groups in the middle column and click AND group.
+
+AND groups only give permissions to the users who are members of both groups.
+
+Show members: To show the members of a group, select the group, then click Show members.
+
+Permissions for entries in spaces 
+
+There are additional authorization options for entries that were created in a space.
+
+With the default settings, users have the permissions for these entries they were granted according
+
+to their roles in the space.
+
+You can find more information on spaces in the Spaces section.
+
+143 ELO Web Client
+
+
+
+You can grant users who are not members of a space access to entries in the space. Users can open
+
+these entries from the search or with ELO links, for example.
+
+Example 1
+
+A user needs to be able to read and edit the metadata of an entry create in a workspace. Add the
+
+user on the Permissions tab and assign the user R and W permissions.
+
+You can also set permissions for specific entries separately in the space to restrict access to the
+
+entries.
+
+Authorization only for members of the space<space name>: Users and groups granted this
+
+permission can only access the entry if they are members of the corresponding space.
+
+Information
+
+This option only appears for entries created in a space. For entries created elsewhere but
+
+displayed in a space, the permissions of the entry in the repository apply.
+
+144 ELO Web Client
+
+
+
+If you enable this option for users or groups, they are granted the permissions for entries in a space
+
+according to their role in the space.
+
+You can see the permissions in effect when you select a user or group in the Metadata dialog box.
+
+Example 2
+
+A user has the Member role in a workspace. Members have RWDEL permissions for entries. The
+
+user is also a member of the Team leader group. In the Metadata dialog box, this group has all
+
+permissions for the entry.
+
+The user only has RWDEL permissions for this entry because only these permissions overlap.
+
+Outlook 
+
+If you change the permissions of a folder in the Metadata dialog box, the new permissions can be
+
+passed on to the child entries (child folders and documents). After you have changed the
+
+permissions, the Permissions changed dialog box opens. Specify what effects this change should
+
+have.
+
+145 ELO Web Client
+
+
+
+Please note
+
+The changes do not affect references, since they retain the permission settings of the
+
+original entry.
+
+Choose from the following options:
+
+Do not pass on permissions: The changes are not applied to the documents and child folders in the
+
+folders.
+
+Pass on permissions to child entries: All permissions are passed on to the entries in the folder.
+
+Only apply changes, keep other permissions: Only permissions are passed on that result in changes
+
+to permissions for the documents and child folders in the folder.
+
+146 ELO Web Client
+
+
+
+Apply to: Using the drop-down menu, select whether to apply the changes to all child entries or
+
+only folders/documents.
+
+Enter metadata with ELO Click OCR 
+
+The integrated text recognition feature can be used as a tool for entering metadata. ELO Click OCR
+
+transfers text from a document into the metadata form. To use this method, you will have to save
+
+the document first. OCR works on TIF documents and in the image preview (Ribbon > View >
+
+Image preview).
+
+Method
+
+Select the document whose metadata you want to edit.
+
+Configure the viewer pane so that you see both the metadata and the document.
+
+To learn how to do this, refer to the Viewer pane chapter.
+
+Click Edit at the bottom of the metadata dialog box.
+
+Click the field you want to copy the value from the document into.
+
+Holding the CTRL key and left mouse button, draw a frame around the information in the
+
+document that you want to use for the metadata.
+
+Information
+
+If you want to transfer multiple terms after another, select each individual term while
+
+holding CTRL + SHIFT + left mouse button. Release the mouse button after each term.
+
+Repeat the process until you have transferred all desired terms.
+
+Release.
+
+ELO Click OCR reads the text contents of the selected area. The recognized text information
+
+is transferred to the selected field.
+
+Information
+
+If you did not select a field, the recognized text is displayed in the OCR dialog box. You can
+
+copy the text you need and paste it to the Clipboard.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+1. 
+
+1. 
+
+147 ELO Web Client
+
+
+
+Click Save to end editing mode and accept the changes.
+
+Identify personal data 
+
+The Options tab in the Metadata dialog box contains three fields that allow you to find entries with
+
+personal data and delete them in due time.
+
+Personal identifier: If the entry contains a personal identifier, enter information that enables you to
+
+identify the relevant person in this field. This term is intended to help you find the entry using the 
+
+metadata search. For this reason, you need a company-wide system for assigning these terms. This
+
+will help you find entries containing a user's personal data. You can also search all entries
+
+containing personal data – regardless of the individual.
+
+End of deletion period: Enter the date on which the entry must be deleted at the latest. This date
+
+must come after the date you have entered under End of retention period. You can select a date by
+
+clicking the calendar icon in the field.
+
+End of retention period: Enter the date up to which the entry has to be retained. The entry cannot
+
+be deleted before the entered date.
+
+Outlook
+
+For information on how to search for entries with personal data, see the chapter Search
+
+entries with personal data.
+
+For information on how to delete entries with personal data, see the chapter Delete entries
+
+with personal data.
+
+Assign replication sets 
+
+The function Assign replication sets enables you to assign replication sets to entries in ELO.
+
+Replication sets allow you to synchronize data between multiple locations. The replication sets
+
+must have already been mapped to the entries with the ELO Replication module.
+
+Information
+
+You only have to assign replication sets at one location. The assigned replication sets are
+
+configured at the other locations through replication.
+
+• 
+
+• 
+
+148 ELO Web Client
+
+
+
+Method
+
+Please note
+
+Replication sets are inherited upward to parent folders in the repository structure. To prevent
+
+inheritance, select the Start point for replication option for the entry you want to replicate
+
+(Organize > Metadata > Options).
+
+Select the entry you want to assign a replication set.
+
+On the ribbon, click Organize > Properties > Assign replication sets.
+
+Click Add.
+
+In the dialog box Add replication sets, you will see the replication sets defined in the
+
+configuration. The name of the replication set is made up of the location name and the name
+
+of the repository.
+
+Information
+
+The local replication set, that is the replication set where the entries are located, is assigned
+
+automatically. You do not have to add it manually.
+
+Select one or more replication sets.
+
+Click OK.
+
+1. 
+
+2. 
+
+3. 
+
+1. 
+
+2. 
+
+149 ELO Web Client
+
+
+
+The selected replication sets appear in the Assign replication sets dialog box.
+
+The following options are available:
+
+Set: All the listed replication sets are assigned to the entry.
+
+Differences: If you removed a replication set from the list and/or added a replication set to
+
+the list, this change is passed on to the entry. Replication sets from the list that were not
+
+changed are not passed on. The replication sets of the entry that were not changed are
+
+retained.
+
+Cut: The replication set is assigned to the entry selected. The replication sets that do not
+
+overlap are removed.
+
+Including child entries: If this option is enabled, the replication set is also assigned to the
+
+child entries of the selected entry.
+
+Click OK.
+
+Workflows for this entry 
+
+With this function, you can display all workflows that have been started on a folder or document.
+
+Method
+
+Select the entry whose workflows you want to view.
+
+On the ribbon, click Organize > Workflows for this entry.
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+1. 
+
+2. 
+
+150 ELO Web Client
+
+
+
+These settings are the same as the settings for the Workflow overview function.
+
+Workflow overview 
+
+With this function, you can view all workflows that have been started and that you have
+
+permissions for.
+
+Method
+
+On the ribbon, click Organize > Overviews > Workflow overview.1. 
+
+151 ELO Web Client
+
+
+
+The workflows are listed as a table on the left-hand side. The selected workflow is shown as
+
+a diagram on the right-hand side. The status of the respective node is indicated by the colors
+
+in the diagram.
+
+Green: Node completed successfully
+
+Blue: Current node
+
+Red: Escalated node
+
+Gray: Future node
+
+Configure the settings to specify how you want the workflows to be displayed:
+
+Passed deadlines only: If this option is selected, you will only see escalated workflows. This option
+
+can be selected in combination with Active, Completed, or All workflows.
+
+User: You can select a user/group from the drop-down menu.
+
+Once you have selected a user/group, you can narrow down the list by selecting additional filter
+
+options:
+
+Owner: If this option is enabled, you only see workflows that the selected user/group is the
+
+owner of.
+
+Any node: If this option is enabled, you only see workflows in which the selected user/group
+
+is the editor of at least one node.
+
+Active node: If this option is enabled, you only see workflows in which the selected user/
+
+group is entered as the editor of the node.
+
+Start date: With the From and To fields, you can specify how long you want the workflow to be
+
+shown. The start date of the workflow must be within this period.
+
+If you click the blue square in the minimized view of the workflow and move it while keeping the
+
+mouse button pressed down, you can change the section shown in the large view.
+
+Click a workflow node in the workflow diagram to get more information on the node settings.
+
+Monitoring overview 
+
+This function gives you an overview of all entries you are monitoring.
+
+Method
+
+On the ribbon, click Organize > Overviews > Monitoring overview.
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+• 
+
+• 
+
+• 
+
+152 ELO Web Client
+
+
+
+The functions in the dialog box become active as soon as you click a monitored object.
+
+Go to: This takes you to the monitored folder or document in the Repository work area.
+
+Open in read-only mode: If you select a document that is being monitored, you can open it in
+
+read-only mode. If the entry you select is a dialog box that is being monitored, this button is
+
+grayed out.
+
+Edit monitoring: The same dialog box as for creating a monitored object appears for editing.
+
+End monitoring: Monitoring is ended without any further confirmation.
+
+Delete 
+
+The Delete function allows you to delete folders or documents as well as tasks.
+
+Information
+
+Workflows cannot be deleted from the Tasks work area. Workflows have to be forwarded.
+
+Whether you can delete folders or documents depends on your permissions.
+
+Important
+
+This only assigns entries a deletion marker and does not delete them permanently. It is not
+
+possible to delete an entry permanently in the ELO Web Client. Deleted entries have to be
+
+• 
+
+• 
+
+• 
+
+• 
+
+153 ELO Web Client
+
+
+
+removed from ELO permanently by an administrator. They can be restored until the point at
+
+which they are permanently deleted.
+
+Alternative:
+
+Depending on the settings, the folders or documents are automatically removed from ELO as soon
+
+as they have reached the end of their retention period.
+
+You can enter the retention period in the metadata when filing a document.
+
+Method
+
+Select the entry or task you want to delete.
+
+On the ribbon, click Organize > Delete.
+
+Result
+
+The entry is no longer shown in ELO. It is assigned a deletion marker until the administrator finally
+
+deletes it.
+
+If you delete a task, it is deleted permanently.
+
+Delete entries with personal data 
+
+The purpose of marking entries with personal data is to be able to delete the corresponding entries
+
+in accordance with legal requirements.
+
+Method
+
+To delete entries with personal data, first perform a search. You can narrow down your search
+
+based on the End of deletion period or End of retention period fields.
+
+In the search results, select the entries that have to be deleted. To select multiple entries,
+
+press the CTRL key and click all the entries you want to select. If you want to select all
+
+entries or all entries you want to select are in a row, press the SHIFT key then click the top-
+
+most and bottom-most entry you want to select.
+
+Once you have marked the entry or entries in the search results, click Organize > Delete on
+
+the ribbon.
+
+Result
+
+The entries can no longer be seen in the repository.
+
+Important
+
+The entries are not deleted permanently, just marked as deleted. This marker tells the
+
+administrator that the documents need to be removed from ELO permanently.
+
+1. 
+
+2. 
+
+1. 
+
+2. 
+
+3. 
+
+154 ELO Web Client
+
+
+
+'Task' tab 
+
+This tab appears when you are in the Tasks work area.
+
+You can use the functions here to edit your tasks.
+
+Refresh 
+
+If you click Task > Refresh on the ribbon, changes recently made by other users are immediately
+
+applied.
+
+This means that tasks can disappear from the task list in your Tasks work area if they have been
+
+accepted by other users in the meantime.
+
+Show workflow 
+
+This function allows you to view details of the selected workflow.
+
+Method
+
+Select the workflow you want to view.
+
+On the ribbon, click Task > Show workflow.
+
+Result
+
+You can see all steps of the workflow in the Show workflow dialog box.
+
+The status of the respective node is indicated by the colors in the diagram.
+
+1. 
+
+2. 
+
+• 
+
+155 ELO Web Client
+
+
+
+Green: Node completed successfully
+
+Blue: Current node
+
+Red: Escalated node
+
+Gray: Future node
+
+If you click the blue square in the minimized view of the workflow and move it while keeping the
+
+mouse button pressed down, you can change the section shown in the large view.
+
+Click a workflow node in the workflow diagram to get more information on the node settings.
+
+Forward workflow 
+
+To learn how to forward a workflow, refer to the chapter Forward workflow.
+
+Accept workflow 
+
+If you have received a workflow as part of a group, you have to accept it before you can process
+
+and forward it. This prevents the workflow from being processed by multiple users at once.
+
+Method
+
+Select the workflow that you want to accept.
+
+On the ribbon, click Task > Accept workflow.
+
+Result
+
+Once the workflow is accepted, it is removed from the Tasks work area of the other group
+
+members.
+
+Outlook
+
+Use the Return workflow function to undo this action.
+
+To forward the workflow, use the function Forward workflow or the form.
+
+Return workflow 
+
+You can return a workflow you received as a group member and accepted with the Accept workflow
+
+function.
+
+Alternatives
+
+Delegate workflow
+
+Hand off workflow
+
+Postpone workflow
+
+Method
+
+Select the workflow you want to return.
+
+On the ribbon, click Task > Return workflow.
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+156 ELO Web Client
+
+
+
+Result
+
+The workflow now appears in the Tasks work area of all group members the workflow was sent to.
+
+Delegate workflow 
+
+You can delegate your workflow step to other users or groups.
+
+Alternatives
+
+Return workflow
+
+Hand off workflow
+
+Postpone workflow
+
+Method
+
+Select the workflow that you want to delegate.
+
+On the ribbon, click Task > Delegate workflow.
+
+Make the required settings.
+
+As recipient, you can select one user or group, or multiple users or groups. If you select
+
+multiple users or groups, they will receive the workflow in the order in which they appear in
+
+the list. To change the order of recipients, click a recipient and change their position using the
+
+up and down arrows.
+
+Show members: If you selected and clicked a group, you can view the group's members.
+
+Notify after processing the node: You will receive a notification after the workflow is
+
+processed. This gives you the opportunity to check the workflow status before you forward it
+
+to the next recipient.
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+157 ELO Web Client
+
+
+
+Click OK.
+
+Result
+
+The workflow is handed off according to your settings.
+
+In the workflow overview under Show workflow, you will still be shown as the editor of your step.
+
+The users you have delegated the workflow to represent an additional step.
+
+Hand off workflow 
+
+You can hand off your workflow step to another user or group. Unlike the Delegate workflow
+
+function, you hand off your processing step entirely and are no longer notified regarding the
+
+progress of the workflow.
+
+Alternatives
+
+Return workflow
+
+Delegate workflow
+
+Postpone workflow
+
+Method
+
+Select the workflow that you want to hand off.
+
+On the ribbon, click Task > Hand off workflow.
+
+Click OK.
+
+Result
+
+In the workflow overview under Show workflow, you are no longer shown as the editor of your step.
+
+You will be replaced by the user you have handed off the workflow to.
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+3. 
+
+158 ELO Web Client
+
+
+
+Postpone workflow 
+
+You can postpone the workflow to process it at a later time.
+
+Alternatives
+
+Return workflow
+
+Delegate workflow
+
+Hand off workflow
+
+Method
+
+Select the workflow that you want to postpone.
+
+On the ribbon, click Task > Postpone workflow.
+
+In the Postpone workflow dialog box, specify the date you want to postpone the task up to.
+
+Click OK.
+
+Result
+
+The workflow disappears from your task overview.
+
+Outlook
+
+When this date is reached, the workflow reappears in your Tasks work area.
+
+You can show or delete postponements.
+
+Cancel postponement 
+
+To cancel a postponement, you need a task view that shows your postponed workflows. Learn how
+
+to create this type of task view in the chapter Show postponed workflows.
+
+Method
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+• 
+
+• 
+
+159 ELO Web Client
+
+
+
+Click the tile on your My ELO home screen that takes you to your postponed workflows.
+
+Select the workflow you want to cancel the postponement for.
+
+On the ribbon, click Task > Edit > Cancel postponement.
+
+Result
+
+The postponement is canceled. The workflow reappears in the Tasks work area.
+
+Edit reminder 
+
+You can change existing reminders once they are in your Tasks work area.
+
+You can learn how to create reminders in the chapter Reminder.
+
+Method
+
+Select the reminder you want to change.
+
+On the ribbon, click Task > Edit > Edit reminder.
+
+Make the changes as required.
+
+Click OK.
+
+Result
+
+If you change a reminder, the changed reminder will appear in your Tasks work area and overwrite
+
+the previous entries made to the reminder.
+
+Reminders you have created for other users can no longer be changed. If you have created a
+
+reminder for yourself and other users and add the other users via For user/group, their reminder is
+
+not changed. Instead, the other users receive a new reminder.
+
+Mark as unread 
+
+New unread tasks are denoted with a green dot. Once you have selected the task, the green dot
+
+disappears. If you want to remind yourself that you haven't worked on a task yet, you can mark it
+
+as unread again.
+
+Method
+
+Select the task you want to mark as unread.
+
+1. 
+
+2. 
+
+3. 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+1. 
+
+2. 
+
+160 ELO Web Client
+
+
+
+On the ribbon, click Task > Edit > Mark as unread.
+
+Result
+
+The task is denoted with a green dot again until you click on it.
+
+x active 
+
+You can show tasks based on different criteria. On the ribbon, click Task > x active. Here, select
+
+whether you want to view group tasks, substitution tasks, or escalations.
+
+Escalations: If you check this option, escalated tasks for which you have been entered as a user to
+
+be notified are shown. Using the Show workflow function, you can see what step resulted in the
+
+escalation.
+
+161 ELO Web Client
+
+
+
+'Document' tab 
+
+Open in read-only mode 
+
+This function allows you to view a document without having to save it locally.
+
+Information
+
+If this button is permanently grayed out, it is due to the administrative settings made for
+
+you.
+
+Method
+
+Select the document you want to open in read-only mode.
+
+On the ribbon, click Document > Open in read-only mode.
+
+Result
+
+The document opens in a new tab in the browser or in an external program, depending on the
+
+administrative settings.
+
+Edit in Microsoft Office 
+
+This function allows you to edit Microsoft Office documents.
+
+Alternatives:
+
+Check out: This function allows you to edit Microsoft Office documents and all other
+
+document types.
+
+Check out to OneDrive: This function allows you to check out Microsoft Office documents to
+
+OneDrive and edit them alone or collaboratively.
+
+Edit online: This function allows you to edit Microsoft Office documents in your browser. This
+
+function is only available if you have installed the ELO Interface for Microsoft Office Online.
+
+Collaborate: This function allows multiple users to simultaneously edit a Microsoft Office
+
+document. This function is only available if you have installed the ELO Interface for Microsoft
+
+Office Online.
+
+Method
+
+Select the document you want to edit.
+
+On the ribbon, click Document > Edit in Microsoft Office.
+
+Information
+
+Microsoft Office 2010 with Service Pack 1 is required at minimum.
+
+1. 
+
+2. 
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+162 ELO Web Client
+
+
+
+Alternative: Select Document > Check out and then Edit in Microsoft Office.
+
+Confirm that the website is allowed to open the link.
+
+Click Open link.
+
+Result
+
+The Microsoft Office document opens.
+
+While you are editing the document, it has the status Checked out for other users.
+
+Outlook
+
+You do not have to check the document back in. Once you save the Microsoft Office document, the
+
+changes are saved in ELO.
+
+Check out to OneDrive 
+
+Use this function to check out a Microsoft Office document in ELO to Microsoft OneDrive for editing.
+
+The document is stored in your OneDrive folder until you check it back into ELO.
+
+This function is only available if you have a Microsoft account with Microsoft OneDrive for Business
+
+that has been activated for ELO by an administrator.
+
+Please note
+
+You can only use this function to edit documents with standard file formats such as DOCX.
+
+The document size is limited to 4 MB.
+
+1. 
+
+2. 
+
+163 ELO Web Client
+
+
+
+For documents with older file formats like DOC, use the Check out function.
+
+Alternatives
+
+Check out: This function allows you to edit Microsoft Office documents and all other
+
+document types.
+
+Edit in Microsoft Office: This function allows you to open and edit Microsoft Office documents.
+
+The document is not opened in the browser but in an external program.
+
+Edit online: This function allows you to edit Microsoft Office documents in your browser. This
+
+function is only available if you have installed the ELO Interface for Microsoft Office Online.
+
+Collaborate: This function allows multiple users to simultaneously edit a Microsoft Office
+
+document. This function is only available if you have installed the ELO Interface for Microsoft
+
+Office Online.
+
+Method
+
+Select the document you want to edit.
+
+On the ribbon, click Document > Check out to OneDrive.
+
+Result
+
+The document is opened in a new browser tab.
+
+While you are editing the document, it has the status Checked out for other users.
+
+Changes are automatically saved in Microsoft OneDrive.
+
+Other options:
+
+Edit in the desktop app: You can open and edit the document in the desktop app.
+
+Edit collaboratively: You can invite other people to edit the document collaboratively. These
+
+people do not need an ELO account for this, but they must have a Microsoft account. For more
+
+information, refer to the Microsoft documentation Share OneDrive files and folders.
+
+Outlook
+
+To save a new document version, close the document and click the Upload and check in
+
+button. The document is directly selected in the dialog box.
+
+If you want to continue editing the document at some point without checking it in, you can
+
+always open it from the following folder: OneDrive > Apps > <Name of target folder>.
+
+Edit online 
+
+This function allows you to open and edit Microsoft Office documents in your browser.
+
+This function is only available if you have installed the ELO Interface for Microsoft Office Online.
+
+Alternatives
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+164 ELO Web Client
+
+https://support.microsoft.com/en-us/office/share-onedrive-files-and-folders-9fcc2f7d-de0c-4cec-93b0-a82024800c07
+https://support.microsoft.com/en-us/office/share-onedrive-files-and-folders-9fcc2f7d-de0c-4cec-93b0-a82024800c07
+
+
+Check out: This function allows you to edit Microsoft Office documents and all other
+
+document types.
+
+Edit in Microsoft Office: This function allows you to open and edit Microsoft Office documents.
+
+The document is not opened in the browser but in an external program.
+
+Check out to OneDrive: This function allows you to check out Microsoft Office documents to
+
+OneDrive and edit them alone or collaboratively.
+
+Collaborate: This function allows multiple users to simultaneously edit a Microsoft Office
+
+document. This function is only available if you have installed the ELO Interface for Microsoft
+
+Office Online.
+
+Method
+
+Select the document you want to edit.
+
+On the ribbon, click Document > Edit online.
+
+Select the program you want to open the document in.
+
+Confirm that you trust the source of the file.
+
+Result
+
+The document is opened in a new browser tab.
+
+While you are editing the document, it has the status Checked out for other users.
+
+Outlook
+
+You do not have to check the document back in. Once you close the tab containing the document,
+
+the changes are saved in ELO.
+
+Collaborate 
+
+This function allows you to open Microsoft Office documents in your browser and edit them in
+
+collaboration with other users.
+
+This function is only available if you have installed the ELO Interface for Microsoft Office Online.
+
+Alternatives
+
+This function is the only one that allows you to edit a document at the same time as other users.
+
+If you want to work on a document on your own, you have the following alternatives:
+
+Check out: This function allows you to edit Microsoft Office documents and all other
+
+document types.
+
+Edit in Microsoft Office: This function allows you to open and edit Microsoft Office documents.
+
+The document is not opened in the browser but in an external program.
+
+Check out to OneDrive: This function allows you to check out Microsoft Office documents to
+
+OneDrive and edit them alone or collaboratively.
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+• 
+
+• 
+
+• 
+
+• 
+
+165 ELO Web Client
+
+
+
+Edit online: This function allows you to edit Microsoft Office documents in your browser. This
+
+function is only available if you have installed the ELO Interface for Microsoft Office Online.
+
+Method
+
+Select the document you want to edit.
+
+On the ribbon, click Document > Collaborate.
+
+Result
+
+The document is opened in a new browser tab. The user ELO Service is shown as the editor.
+
+Outlook
+
+You do not have to check the document back in. Once you close the tab containing the document,
+
+the changes are saved in ELO.
+
+Check out 
+
+You can learn how to check out documents in the chapter Check out and edit document.
+
+Alternatives
+
+Edit in Microsoft Office: This function allows you to open and edit Microsoft Office documents.
+
+The document is not opened in the browser but in an external program.
+
+Check out to OneDrive: This function allows you to check out Microsoft Office documents to
+
+OneDrive and edit them alone or collaboratively.
+
+Edit online: This function allows you to edit Microsoft Office documents in your browser. This
+
+function is only available if you have installed the ELO Interface for Microsoft Office Online.
+
+Collaborate: This function allows multiple users to simultaneously edit a Microsoft Office
+
+document. This function is only available if you have installed the ELO Interface for Microsoft
+
+Office Online.
+
+Upload and check in 
+
+You can learn how to check a document back in after editing in the chapter Upload and check in
+
+document.
+
+Document versions 
+
+Only one version of a document is shown in the repository. Unless it has been explicitly changed,
+
+the version you see in the repository is always the last version that was filed. You can use the 
+
+Document versions function to view the old versions or to set an older version as the current
+
+working version again.
+
+Method
+
+Select the document whose versions you want to view.
+
+On the ribbon, click Document > Versions > Document versions.
+
+1. 
+
+2. 
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+166 ELO Web Client
+
+
+
+You see all versions of the document in the Document versions dialog box.
+
+You can recognize the current working version by the pen icon in the overview.
+
+As soon as you select a version, the following buttons become active:
+
+Open in read-only mode: This function opens the selected version. You can open multiple
+
+versions to compare them with each other.
+
+Edit comment: When filing a version, you can enter a comment. You can edit it afterwards
+
+with this function.
+
+Set as working version: First, click the version you want to set as the new working version,
+
+then click the Set as working version button. The newly selected version is now shown in the 
+
+Repository work area.
+
+Set as non-deletable: First, click the version you want to set as non-deletable, then click the 
+
+Set as non-deletable version button. The version can no longer be deleted.
+
+Delete version
+
+Load new version 
+
+Use this function to upload a new version of a document to your repository.
+
+Alternative
+
+Drag-and-drop
+
+Method
+
+In ELO, select the document you want to upload a new version of.
+
+On the ribbon, click Document > Versions > Load new version.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+167 ELO Web Client
+
+
+
+Select the file. You have the following options:
+
+1 Click the button to the right of the Select file field and select the file.
+
+2 Drag the file to the Drop file here area.
+
+Non-deletable version: If you check the box next to this option, this version of the document
+
+cannot be deleted. This does not mean that you cannot file a new version. You simply cannot
+
+delete it from the overview of document versions.
+
+Click OK.
+
+Result
+
+The version you filed is the new working version.
+
+Outlook
+
+You can use the Document versions function to view the old versions or to set an older version as
+
+the current working version again.
+
+3. 
+
+4. 
+
+168 ELO Web Client
+
+
+
+Cancel editing 
+
+If you have checked out a document and do not want to make any changes to it after all, you can
+
+cancel editing with this function.
+
+Method
+
+In ELO, select the document you want to cancel editing for.
+
+The quickest way to find the document is through the In use work area.
+
+On the ribbon, click Document > Versions > Cancel editing.
+
+Result
+
+The current version is retained. The document is unlocked for other users.
+
+General margin note 
+
+You can use margin notes to comment on documents.
+
+General margin notes can be created, seen, and edited by all users.
+
+Alternatives
+
+Personal margin note: You can learn how to create a margin note in this chapter.
+
+Permanent margin note
+
+Personal margin note 
+
+You can use margin notes to comment on documents.
+
+Personal margin notes can only been seen and edited by the user who created them.
+
+Alternatives
+
+General margin note
+
+Permanent margin note
+
+Method
+
+All types of margin notes are applied in the same way.
+
+Select the document you want to apply a margin note to.
+
+1. 
+
+2. 
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+169 ELO Web Client
+
+
+
+On the ribbon, click Document > Margin notes > General/Personal/Permanent margin note.
+
+Enter the text for your margin note and confirm with OK.
+
+Result
+
+The margin note is displayed on the split bar. If you run the mouse over the margin note icon, the
+
+content of the margin note is displayed.
+
+Clicking the margin note icon opens the margin note for editing (or for viewing in the case of a
+
+permanent margin note).
+
+A margin note applies to the entire document and not just the current version.
+
+Permanent margin note 
+
+Permanent margin notes cannot be edited or removed from the document once they are created.
+
+They are visible to all users. You can only delete a permanent margin note by deleting the
+
+document.
+
+Alternatives
+
+2. 
+
+3. 
+
+• 
+
+170 ELO Web Client
+
+
+
+Personal margin note: You can learn how to create a margin note in this chapter.
+
+General margin note
+
+Attachment 
+
+You can add attachments to documents in ELO.
+
+If the document already has an attachment, your attachment is not stored as the second
+
+attachment but as a new version of the existing attachment.
+
+Method
+
+Select the document you want to add an attachment to.
+
+On the ribbon, click Document > Attachment > Add attachment.
+
+Select the file in the Add attachment dialog box. You have the following options:
+
+1 Click the button to the right of the Select file field and select the file.
+
+2 Drag the file to the Drop file here area.
+
+Click OK.
+
+Result
+
+• 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+171 ELO Web Client
+
+
+
+The attachment is added to the document.
+
+You will recognize an attachment by the paper clip icon.
+
+Outlook
+
+To open the attachment, click the paper clip icon.
+
+Attachments open in the browser or in an external program, depending on the administrative
+
+settings. If attachments are set to open in your browser, you may not be able to open some
+
+documents in read-only mode.
+
+With the Attachments function, you can view all versions of the attachment or delete versions.
+
+Attachments 
+
+If you click the paper clip icon, only one version of an attachment is shown. With the Attachments
+
+function, you can also view or delete old versions.
+
+Method
+
+Select the document whose attachments you want to open.
+
+On the ribbon, click Document > Attachment > Attachments.
+
+The Attachment versions dialog box provides an overview of the versions of the attachment.
+
+If you select a version, the following buttons become active:
+
+1. 
+
+2. 
+
+• 
+
+172 ELO Web Client
+
+
+
+Open in read-only mode: This function opens the selected version in an external program.
+
+You can open multiple versions to compare them with each other. If this button is
+
+permanently grayed out, it is due to the administrative settings made for you.
+
+Delete version: If a version is not marked as non-deletable, you can delete it. Select the
+
+version and then click Delete version.
+
+Information
+
+The ELO Java Client offers additional options. For example, attachments can only be marked
+
+as non-deletable in the ELO Java Client.
+
+• 
+
+173 ELO Web Client
+
+
+
+'Search' tab 
+
+This tab only appears when you are in the Search work area.
+
+It contains functions that help you run a search or use a finished search.
+
+For a description of the Search work area, refer to the chapter 'Search' work area.
+
+You can see an example of a search in the chapter Search entries.
+
+Filters 
+
+Filters and facets allow you to narrow down your search using metadata, such as the filing date.
+
+Filters and facets work in the same way. The only difference is how they are selected.
+
+To learn how to select a facet, refer to the Narrow down search chapter.
+
+To select a filter, on the ribbon, click Search > Filter and select the desired filter. After you have
+
+selected the filter, specify the filter via the drop-down menu. To select a filter that has already been
+
+selected again, click the name of the selected filter.
+
+'Date' and 'Filing date' filters
+
+You can select a specific date or period of time using the drop-down menu.
+
+Alternatively, you can enter a date (DD.MM.YYYY) or period of time in the field.
+
+Enter period of time:
+
+• 
+
+174 ELO Web Client
+
+
+
+Time: Enter a minus to search in the past. Enter a plus to search in the future. Additionally,
+
+enter a number that determines the length of the period of time.
+
+Unit: If you only enter a number in addition to the minus or plus sign, the unit searched for is 
+
+days. If you put an m after the number, the unit searched for is months.
+
+Examples: -14 searches for all entries in the last 14 days. -6m searches for all entries in the
+
+last six months.
+
+Negate filters
+
+You can apply reverse filters. For example, if you select a user and set the filter to is not, only
+
+entries that were not processed by this editor are shown. It is not possible to only negate individual
+
+filters or facets.
+
+To negate a selected filter, right-click the filter and then click is not.
+
+Set as default
+
+This function saves your current search settings as the default. The default is restored when you
+
+reset the search.
+
+Search in areas 
+
+You can limit your search to specific areas.
+
+Configure this setting in the In x areas menu.
+
+If you have selected multiple areas, the search behaves as follows:
+
+• 
+
+• 
+
+175 ELO Web Client
+
+
+
+One search term:
+
+If you enter one search term in the search field, entries containing the search term in one of
+
+the areas are shown.
+
+Multiple search terms:
+
+AND search: With an AND search (entering terms without a connecting element, for example 
+
+dog cat), all entries that contain all search terms in one of the searched areas are shown.
+
+OR search: With an OR search (entering terms with a comma, for example dog, cat), all
+
+entries that contain at least one search term in one of the searched areas are shown.
+
+Current folder only
+
+You can narrow down the search to a single folder.
+
+For technical reasons, this option may cause the search results to take a long time to load.
+
+Method
+
+In the Repository work area, select the folder you want to search.
+
+Switch to the Search work area.
+
+On the ribbon, click Search > In x areas > Current folder only.
+
+Configure the additional search settings.
+
+Add favorite 
+
+You can create search favorites for searches you need frequently.
+
+A search favorite creates a tile on your My ELO home screen that allows you to immediately launch
+
+a previously defined search.
+
+Method
+
+In the Search work area, configure the desired search settings.
+
+On the ribbon, click Search > Search favorites > Add favorite.
+
+Enter a meaningful name for the search favorite and save it.
+
+Click My ELO.
+
+Result
+
+You will find your new tile in the Hidden tiles area.
+
+Drag the tiles to the desired group.
+
+You will also find your search favorites in the Search work area on the ribbon under Search >
+
+Search favorites.
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+1. 
+
+176 ELO Web Client
+
+
+
+Outlook
+
+You can overwrite or delete a search favorite.
+
+Overwrite: To overwrite a search favorite, enter the changed search settings in the Search
+
+work area. If the search favorite includes many settings and you only want to change a few,
+
+you can click the tile and perform the search. This way, you only need to make the changes
+
+and don't have to enter all settings. On the ribbon, click Search > Search favorites > [Name
+
+of the search favorite] > Overwrite.
+
+Delete: To delete a search favorite, on the ribbon, click Search > Search favorites > [Search
+
+favorite name] > Delete.
+
+Search metadata 
+
+You can search the metadata of folders or documents.
+
+This search is not as precise as the ELO iSearch but can provide faster results.
+
+The metadata search allows you to specifically search for entries containing personal data.
+
+Method
+
+On the ribbon, click Search > Search logic > Search metadata.
+
+Select which metadata you want to search. You have the following options:
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+• 
+
+177 ELO Web Client
+
+
+
+All metadata forms: If you don't know which metadata form was used to file the entry, use
+
+the Search form. All metadata forms are searched.
+
+One metadata form: If you know which metadata form was used to file the entry, use this
+
+form. Only the selected metadata form is searched.
+
+Click Search.
+
+Result
+
+The results of your search are shown in the Search work area.
+
+Outlook
+
+To return to ELO iSearch, click Reset search (red arrow button at the top right).
+
+To create a dynamic folder with your search, use the Dynamic folder function.
+
+To remove individual entries from your search result, use the Remove from search result
+
+function.
+
+Search entries with personal data 
+
+To find entries with personal data and delete them in due time, use the metadata search.
+
+To learn how to identify personal data in an entry, refer to the chapter Identify personal data.
+
+Method
+
+On the ribbon, click Search > Search logic > Search metadata.
+
+• 
+
+1. 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+178 ELO Web Client
+
+
+
+In the Personal identifier field, enter the term you entered for the metadata. If you want to
+
+search all entries with a personal identifier, enter * in the search field.
+
+Click Search.
+
+Result
+
+The results of your search are shown in the Search work area.
+
+Outlook
+
+For information on how to delete entries with personal data, see the chapter Delete entries with
+
+personal data.
+
+Dynamic folder 
+
+Dynamic folders are folders whose contents change automatically. The contents of a dynamic
+
+folder are based on the results of a search. References to the search results are stored in dynamic
+
+folders.
+
+Method
+
+Perform a search.
+
+On the ribbon, click Results > Dynamic folder.
+
+In the folder Create dynamic folder, click to select a target folder for your dynamic folder.
+
+Click OK.
+
+Enter metadata for the dynamic folder.
+
+Click OK.
+
+Result
+
+The dynamic folder is created at the selected filing location. The current results of the search are
+
+immediately created as a reference.
+
+Outlook
+
+The references automatically appear in or disappear from the dynamic folder if the search
+
+returns other results.
+
+You can also delete folders that you no longer need.
+
+Remove from search results 
+
+You can remove individual entries from your search results.
+
+Method
+
+Perform a search.
+
+3. 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+6. 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+179 ELO Web Client
+
+
+
+Select the entry or entries you want to remove from the search results.
+
+You can learn how to select multiple entries in the chapter How do I select multiple entries?
+
+On the ribbon, click Result > Remove from search results.
+
+Result
+
+The entries are removed from the list.
+
+3. 
+
+180 ELO Web Client
+
+
+	Table of contents
+	null
+	Basics
+	What is the ELO Web Client?
+	Target audience
+	Getting started
+	Structure of the documentation
+	Which chapter(s) should I read if I...
+	want to personalize ELO?
+	want to create entries?
+	want to update entries?
+	want to create tasks?
+	want to edit tasks?
+	want to keep track of changes in ELO?
+	want to output information from ELO?
+	want to search for entries?
+	want to structure the repository area?
+
+	Start ELO
+
+	Program interface
+	What is a work area?
+	'My ELO' work area
+	Tile navigation
+	Edit via the context menu
+	Change tile settings
+	Create tiles
+	Create group
+	News
+	Most recently used
+
+	'Repository' work area
+	'Search' work area
+	Search elements
+	Narrow down search
+	Results
+
+	'Tasks' work area
+	Edit workflow with a form
+
+	'Clipboard' work area
+	'In use' work area
+	Spaces
+	'My ELO' button
+	Ribbon
+	Pin function
+	Remove function from ribbon
+	Hide function text
+	Show function text
+
+	Navigation bar
+	Active substitutions
+	User menu [your name]
+	Profile
+	Context menu
+
+	Navigation and use
+	Navigating between work areas
+	How do I use a function?
+	How do I select multiple entries?
+	Drag-and-drop
+
+	Important components
+	Repository structure
+	Folders
+	Document
+	Viewer pane
+	Show entries
+
+	Metadata
+	Form
+	Feed
+	Create a post
+	Create a poll
+	Mention
+	Reference
+	Hashtag
+	Subscribe to a hashtag
+	Visibility
+	Search feed
+	Subscribe to feed
+	Automatically subscribe to feed
+	Show filter options
+	Enter a comment
+	Edit post
+	Feed history
+	Settings
+	Show current hashtags
+	Hashtag cloud
+	Show workflows
+	Escalated workflows
+	Recently started workflows
+	Show filter options
+	Filters in 'My ELO'
+	Apply filters
+	Negate filters
+	Reset filter
+	Mark as important
+	Delete marker
+	Hide post
+
+	Margin notes, links, attachments
+
+	Important actions in detail
+	Create new folder
+	Create view
+	File document
+	Check out and edit document
+	Upload and check in document
+	Start workflow
+	Forward workflow
+	Search entries
+	Search with ELO Click OCR
+	Start a search in the 'Repository' work area
+	Start a search in the 'Search' work area
+
+	Assign substitute
+
+	User menu [your name]
+	Configuration
+	Categories
+
+	Enable roles
+	Change password
+	Assign substitute
+	Accept substitution
+	I have the right to substitute for
+	Edit substitutions
+
+	Edit profile
+	About
+	ELO help
+	Log off
+
+	Workspaces
+	Objects
+	Relations
+
+	Workspace home screen
+	Edit workspace
+	'Workspace member' area
+
+
+	Table
+	Kanban board
+	Dashboard
+	Create workspace
+	Create object
+
+	Teamspaces
+	Teamspace home screen
+	'Overview' area
+	Edit teamspace
+
+	'Team members' area
+	Roles
+	Edit roles
+
+	Document space
+	Edit document space
+
+	Workspace
+	Create teamspace
+
+	'Favorites' tab
+	Pin function to the 'Favorites' tab
+	Unpin function from the 'Favorites' tab
+
+	'New' tab
+	New folder
+	Insert file
+	Document from template
+	Start workflow
+	Ad hoc workflow
+	Reminder
+	Monitor changes
+
+	'View' tab
+	Go to
+	Link
+	Go to top level
+	Copy to clipboard
+	Remove from Clipboard
+	Refresh
+	Create view
+	Show postponed workflows
+
+	Rename view
+	Delete view
+	Table
+	Image preview
+	Full text
+
+	'Output' tab
+	Send as ELO link
+	Send document (ELO Web Add-ons)
+	Save as
+	Export table
+	Print document (ELO Web Add-ons)
+	Create external link
+	External links overview
+
+	'Organize' tab
+	Move
+	Reference
+	Copy
+	Metadata
+	Metadata forms
+	Fields
+	Icons
+	Keyword lists
+	Relations
+
+
+	Tabs
+	'Metadata' or 'Basic' tab
+	'Extra text' tab
+	'Options' tab
+	'Permissions' tab
+	Permissions for entries in spaces
+	Outlook
+
+	Enter metadata with ELO Click OCR
+	Identify personal data
+
+	Assign replication sets
+	Workflows for this entry
+	Workflow overview
+	Monitoring overview
+	Delete
+	Delete entries with personal data
+
+
+	'Task' tab
+	Refresh
+	Show workflow
+	Forward workflow
+	Accept workflow
+	Return workflow
+	Delegate workflow
+	Hand off workflow
+	Postpone workflow
+	Cancel postponement
+	Edit reminder
+	Mark as unread
+	x active
+
+	'Document' tab
+	Open in read-only mode
+	Edit in Microsoft Office
+	Check out to OneDrive
+	Edit online
+	Collaborate
+	Check out
+	Upload and check in
+	Document versions
+	Load new version
+	Cancel editing
+	General margin note
+	Personal margin note
+	Permanent margin note
+	Attachment
+	Attachments
+
+	'Search' tab
+	Filters
+	Search in areas
+	Add favorite
+	Search metadata
+	Search entries with personal data
+
+	Dynamic folder
+	Remove from search results
+
+
+

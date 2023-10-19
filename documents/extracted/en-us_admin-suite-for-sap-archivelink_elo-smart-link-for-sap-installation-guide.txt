@@ -1,0 +1,558 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®) | ELO Smart Link for SAP® ERP installation guide
+
+
+ELO Suite for SAP
+
+ArchiveLink® (SAP
+
+NetWeaver® & SAP S/
+
+4HANA®)
+
+ELO Smart Link for SAP® ERP installation
+
+guide
+
+
+
+3
+
+3
+
+4
+
+7
+
+14
+
+Table of contents
+
+ELO Smart Link for SAP® ERP installation guide
+
+Introduction 
+
+Preparing for installation 
+
+Installation 
+
+Information 
+
+2 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+ELO Smart Link for SAP® ERP installation
+
+guide
+
+Introduction 
+
+This documentation describes how to install the ELO Smart Link for SAP® ERP interface, referred to
+
+as ELO Smart Link in the following. This interface also includes the previous functions of ELO
+
+Archive Link for SAP®. In detail, ELO Smart Link contains the following functions:
+
+Filing documents in SAP to ELO
+
+Barcode upload
+
+New configuration interface
+
+Basic functions for ELO Connectivity Pack for SAP® ERP
+
+This installation documentation is intended for the following ELOprofessional and ELOenterprise
+
+versions:
+
+ELOprofessional and ELOenterprise version 10.02.000 and higher
+
+Basics 
+
+You must have already installed an ELO server (ELOprofessional or ELOenterprise).
+
+Information
+
+We recommend installing ELO Smart Link on a separate ELO Application Server (Apache
+
+Tomcat).
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+3 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Preparing for installation 
+
+ELO user – SAP Service
+
+Fig.: New ELO user – ELO Administration Console
+
+An ELO user with elevated permissions is required to set up the ELO Smart Link interface.
+
+To do this, create your own user in the ELO Administration Console (e.g. SAP Service).
+
+Information
+
+Apply the user rights of the ELO Service user.
+
+1. 
+
+4 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Modes of operation 
+
+The following modes of operation are possible via installation and configuration:
+
+Single-Archive – Single-Instance-System 
+
+Fig.: Single-Archive – Single-Instance-System
+
+Single-Archive – Multi-Instance-System 
+
+Fig.: Single-Archive – Multi-Instance-System
+
+5 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Multi-Archive – Multi-Instance-System 
+
+Fig.: Multi-Archive – Multi-Instance-System
+
+6 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Installation 
+
+To install the interface, go to the ELO SupportWeb and download the current version of ELO Smart
+
+Link to the ELO server, then extract the files to a temporary folder.
+
+You will find the installation files on the ELO SupportWeb under Integrations > ELO for SAP® ERP >
+
+ELO Suite for SAP ArchiveLink® > ELO Smart Link for SAP® ERP.
+
+Installing Apache Tomcat 
+
+Within ELOprofessional or ELOenterprise, you can install another Apache Tomcat e.g. for the ELO
+
+Smart Link interface from the ELO Server Setup. Depending on the installation and version of the
+
+system, you will find the server setup in the server's installation directory.
+
+Please not
+
+Make sure to run the ELO Server Setup as administrator.
+
+Click the Application Servers tab.
+
+Under ELO Server Engines, click Add to create a new entry.
+
+Enter a name, the maximum memory, and a port for the Tomcat you are creating. In our
+
+example, we use the following data:
+
+Name: ELO-ELOCCDEMO11-SL
+
+Maximum memory (MB): 1024
+
+Port: 9060
+
+Information
+
+The ELO Smart Link instance name should only contain uppercase and lowercase letters,
+
+numbers, the minus sign, and underscores. The instance name cannot be longer than
+
+180 characters.
+
+Follow the server setup instructions to install the new Apache Tomcats (ELO-ELOCCDEMO11-
+
+SL in the example). Installation can take several minutes, and you will see the various steps
+
+as the installation proceeds. The installation is completed when you see the entry Finished –
+
+SUCCESS.
+
+Complete the installation and close the ELO Server Setup.
+
+Please note
+
+1. 
+
+2. 
+
+3. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+1. 
+
+2. 
+
+7 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Before you start to install and configure the ELO Smart Link interface, you should stop the
+
+new service (here: ELOCCDEMO11-SL).
+
+Information
+
+The SAP Java Connector libraries can also be installed in the corresponding directories when
+
+installing the Tomcat. Simply copy the .ZIP file to the temporary installation directory of the
+
+ELO Server Setup into the /repository folder. Example: C:\temp\ELO server setup\repository.
+
+Refer to the chapter SAP Java Connector libraries, which describes how to store these files
+
+manually.
+
+Installing additional instances 
+
+Please note
+
+Another instance on the same Indexserver or Tomcat is not usually required and does not
+
+bring significant advantages. Therefore, only carry out the following steps if you really need
+
+to.
+
+If you want to run more than one instance on an ELO Application Server (Tomcat), you will have to
+
+provide an additional library on this Tomcat.
+
+Open the ZIP directory.
+
+Fig.: Contents of the 'smartLink.war' file
+
+Before starting the Tomcat, extract the smartLink.war ZIP file, then copy the 
+
+sharedRfcAccess.jar file located in the *\resources* directory to the Tomcat *lib* directory.
+
+This library enables multiple ELO Smart Link instances to access the SAP Java Connector.
+
+1. 
+
+2. 
+
+8 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Information
+
+The ELO Smart Link instance name should only contain uppercase and lowercase letters,
+
+numbers, the minus sign, and underscores. The instance name cannot be longer than
+
+180 characters.
+
+!['resources' webapps directory](../../en-us/elo-smart-link-for-sap-installation-guide/installation/resources-webapps-dir
+
+*Fig.: 'resources' webapps directory*
+
+**Alternative**: A second option for obtaining the *sharedRfcAccess.jar* file is the *webapps* folder of the actual ELO S
+
+Create a new directory within the Tomcat server for the new instance and then perform the
+
+following steps.
+
+If the file is not copied to this folder, you will receive the following error message when testing the
+
+connection within an instance.
+
+Fig.: Error during connection test
+
+After copying this file, the connection test is successful.
+
+9 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Fig.: Connection test successful
+
+Deploy the '.xml' file 
+
+Switch to the directory that you just created on the Tomcat server (in our example ELO-
+
+ELOCCDEMO11-SL) and then to the file path conf\Catalina\localhost.
+
+Fig.: ELO Smart Link – Tomcat 'localhost' folder
+
+Copy the XML file sl-<repository>.xml to this location, replacing <repository> with the name
+
+of the repository where you want to file ELO Smart Link documents.
+
+In our example, this is the following path:
+
+E:\ELOprofessional\servers\ELO-ECLOCCDEMO11-SL\conf\Catalina\localhost
+
+Information
+
+If you need to connect multiple ELO repositories with ELO Smart Link, create a separate .xml
+
+file for each repository. Use the naming convention sl-<repository>.xml.
+
+Open the copied file – in our example sl-CCDEMO11.xml – with the following contents:
+
+1. 
+
+2. 
+
+1. 
+
+<?xmlversion="1.0" encoding="UTF-8" standalone="no"?>
+
+10 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Edit the paths of the following parameters:
+
+docBase= always points to the ELO Smart Link .war file in the webapps directory.
+
+path= sl-<Repository> indicates the path segment of the ELO Smart Link URL.
+
+value= points to the directory of the configuration files.
+
+Information
+
+These are file path examples. You should also check the drive letters.
+
+SAP Java Connector libraries 
+
+To use the ELO Smart Link functions in conjunction with SAP, you need the SAP Java Connector
+
+(JCo). For licensing reasons, ELO Digital Office GmbH is unable to supply the SAP Java Connector.
+
+Notify your customers or SAP partners to this regard, as customers/partners require access to the 
+
+SAP Software Downloads area to download it.
+
+Provided you have the relevant permissions, you can download the required SAP Java Connector at
+
+the following link. As the components contain both packages and system class libraries, the
+
+system class libraries are platform-dependent.
+
+SAP Support Portal: SAP Java Connector
+
+For more information, go to the following link:
+
+SAP documentation: SAP JCo installation
+
+<Context docBase="D:\ELOenterprise\prog\webapps\smartLink.war" path="/sl-<repository>"
+
+<Environment name="webappconfigdir" override="false" type="java.lang.String" value="D:\ELOenterprise\c
+
+</Context>
+
+2. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+11 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+https://support.sap.com/en/product/connectors/jco.html
+https://support.sap.com/en/product/connectors/jco.html
+https://help.sap.com/doc/saphelp_nwpi711/7.1.1/de-DE/48/707c54872c1b5ae10000000a42189c/content.htm?no_cache=true
+https://help.sap.com/doc/saphelp_nwpi711/7.1.1/de-DE/48/707c54872c1b5ae10000000a42189c/content.htm?no_cache=true
+
+
+Information
+
+The SAP Java Connector 3.1 SDK released by SAP requires Windows systems to have
+
+Microsoft Visual Studio 2013 C/C++ runtime libraries (see also SAP Note 2786882).
+
+After installing this required environment, you will have to restart ELO Smart Link for SAP®
+
+ERP.
+
+As an example, after installing the environment in the Control Panel of a 64-bit Windows
+
+system, you will see the following entry under Programs:
+
+Fig.: Control Panel entry under 'Programs'
+
+Once you have obtained the SAP Java Connector SAP JCo 3 libraries, extract them to a
+
+temporary directory.
+
+Fig.: Tomcat – 'lib' and 'bin' directories
+
+Copy the sapjco3.jar file to the lib directory of the Tomcat server and the sapjco3.dll file to
+
+the bin directory of the Tomcat server.
+
+ELO Smart Link is now installed.
+
+Information
+
+This is an example implementation. The native libraries of the JCo may not be DLL files on
+
+other operating systems. For example, the native libraries on Linux have the extension .so
+
+and have to be copied to either the LIB or BIN directory.
+
+The platform-dependent requirements also have to be met for the respective version
+
+(example: on Windows, the C/C++ runtime library).
+
+Start the service 
+
+Open the Windows Task Manager.
+
+1. 
+
+2. 
+
+1. 
+
+12 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Fig.: Windows Task Manager – Services
+
+Click the Services tab, and start the Tomcat server service (example: ELO-ELOCCDEMO11-
+
+SL).
+
+As soon as the service has the status Running, you can access the ELO Smart Link configuration
+
+interface from the browser.
+
+Information
+
+Before you proceed with configuring ELO Smart Link, make sure that the Windows user
+
+configured in the service has write access to the Tomcat directories.
+
+2. 
+
+13 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Information 
+
+Temporary ELO Smart Link directory 
+
+Fig.: Path to Java options
+
+14 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Fig.: Tomcat Java options
+
+ELO Smart Link requires a temporary directory. The standard directory of the Tomcat is used here
+
+(Fig. Tomcat Java options). If this directory does not exist or the user does not have write rights to
+
+this directory, errors will occur.
+
+Log messages 
+
+RF_erp_sap_conn_service_GetInstanceUrls 
+
+You may find a message for the RF_erp_sap_conn_service_GetInstanceUrls function in the ELO
+
+Smart Link log. In the ELO Smart Link interface in the content repository, this function shows
+
+information on other instances that are configured and used with the Data transfer function in the
+
+ELO Connectivity Pack for SAP®. If ELO Connectivity Pack for SAP® – Datatransfer was not
+
+installed on the system, a message may appear in the ELO Smart Link log indicating that the
+
+corresponding script could not be found.
+
+15 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+	Table of contents
+	ELO Smart Link for SAP® ERP installation guide
+	Introduction
+	Basics
+
+	Preparing for installation
+	ELO user – SAP Service
+	Modes of operation
+	Single-Archive – Single-Instance-System
+	Single-Archive – Multi-Instance-System
+	Multi-Archive – Multi-Instance-System
+
+
+	Installation
+	Installing Apache Tomcat
+	Installing additional instances
+	Deploy the '.xml' file
+	SAP Java Connector libraries
+	Start the service
+
+
+	Information
+	Temporary ELO Smart Link directory
+	Log messages
+	RF_erp_sap_conn_service_GetInstanceUrls
+
+
+
+

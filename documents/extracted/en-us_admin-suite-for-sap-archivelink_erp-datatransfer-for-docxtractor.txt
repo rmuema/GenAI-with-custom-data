@@ -1,0 +1,2486 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®) | ERP Datatransfer for ELO DocXtractor
+
+
+ELO Suite for SAP
+
+ArchiveLink® (SAP
+
+NetWeaver® & SAP S/
+
+4HANA®)
+
+ERP Datatransfer for ELO DocXtractor
+
+
+
+3
+
+3
+
+4
+
+5
+
+5
+
+6
+
+10
+
+17
+
+17
+
+18
+
+31
+
+36
+
+37
+
+38
+
+54
+
+54
+
+55
+
+Table of contents
+
+ERP Datatransfer for ELO DocXtractor
+
+Introduction 
+
+Basics 
+
+Getting started
+
+Installing the ELO DocXtractor system 
+
+Installation 
+
+Configuration 
+
+SAP Netweaver® und SAP S/4HANA®
+
+SAP NetWeaver® and SAP S/4HANA® 
+
+Installation and configuration 
+
+Set up events 
+
+Initial startup 
+
+SAP program for automatic sending of queue entries 
+
+Source of SAP data 
+
+Troubleshooting
+
+Overview 
+
+Error messages 
+
+2 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+ERP Datatransfer for ELO DocXtractor
+
+Introduction 
+
+This documentation describes how to install and configure ERP Datatransfer for ELO DocXtractor
+
+from ELO Digital Office GmbH.
+
+This implementation has been tested for the following ELO versions:
+
+ELOprofessional and ELOenterprise version 11.01.000 and higher
+
+ELO DocXtractor 5 SP01 and higher
+
+The ERP Datatransfer for ELO DocXtractor interface enables you to provide changed or new data in
+
+the ERP system (such as order data) to ELO DocXtractor immediately. This makes the planning of
+
+jobs for reading data in the ERP system as well as interval-controlled updates of the entire
+
+database obsolete. The data in the matching server as well as the ELO DocXtractor database are
+
+current on runtime.
+
+• 
+
+• 
+
+3 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Basics 
+
+The use of ERP Datatransfer for ELO DocXtractor requires a corresponding user in the connected
+
+ERP system with the permissions necessary to run and configure the interface. For more detailed
+
+information, refer to the sections for the ERP system in use in this documentation.
+
+An active, configured ELO DocXtractor system with administrator access is also required.
+
+To use ERP Datatransfer for ELO DocXtractor, your computer must also meet the following system
+
+requirements and release statuses of ELO, ELO DocXtractor, and the different ERP systems:
+
+DocXtractor version 5 SP01 and higher
+
+The following SAP versions or higher: 
+
+SAP_BASIS 702 SAPKB70213
+
+SAP_BASIS 730 SAPKB73009
+
+SAP_BASIS 731 SAPKB73106
+
+• 
+
+• 
+
+◦ 
+
+◦ 
+
+◦ 
+
+4 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Getting started
+
+Installing the ELO DocXtractor system 
+
+If using ELO DocXtractor version 5 SP01 to 5 SP03, an additional installation package is provided.
+
+This is a ZIP file that has to be installed on the existing ELO DocXtractor system.
+
+The following document describes the installation and configuration of ERP Datatransfer for
+
+DocXtractor:
+
+Installation
+
+Configuration
+
+• 
+
+• 
+
+5 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Installation 
+
+Installation with ELO DocXtractor up to version 5 SP03 
+
+In versions 5 SP01 to 5 SP03, ERP Datatransfer for ELO DocXtractor is not an integral part of the ELO
+
+DocXtractor installation, so it has to be configured later. The required ERPDatatransfer.zip is
+
+available to this end.
+
+ERPDatatransfer.zip package 
+
+The ERPDatatransfer.zip package contains the following:
+
+ERPDatatransfer.spx library 
+
+This file contains the implementation of the ERP Datatransfer for ELO DocXtractor
+
+logic.
+
+ERPDatatransferTest.spl SPL library 
+
+Library with example calls for ERP Datatransfer for ELO DocXtractor (not required).
+
+ERPDatatransfer.cmd CMD file 
+
+Required to return the error code.
+
+specialConfigsERPDatatransfer.xml XML file 
+
+Contains the configuration entries for ERP Datatransfer for ELO DocXtractor.
+
+shell2Http.exe file 
+
+HTTP server for executing shell commands.
+
+README.md file 
+
+Readme for shell2http.
+
+LICENSE 
+
+shell2http license.
+
+status.html file 
+
+Status page for ERP Datatransfer for ELO DocXtractor.
+
+SlotFunctions.spl file 
+
+Required to initialize the DocXtractor Java interface.
+
+Configuring ERP Datatransfer for ELO DocXtractor 
+
+The instructions described in this section require access to the file system of the server of your ELO
+
+DocXtractor installation.
+
+Extract the ERPDatatransfer.zip folder to the following directory on the ELO DocXtractor
+
+server:
+
+%SF_ROOT_DIR%\System\ERP Datatransfer
+
+Copy or move the following files from the %SF_ROOT_DIR%\System\ERP Datatransfer directory
+
+to the following locations:
+
+ERPDatatransfer.spx
+
+• 
+
+◦ 
+
+• 
+
+◦ 
+
+• 
+
+◦ 
+
+• 
+
+◦ 
+
+• 
+
+◦ 
+
+• 
+
+◦ 
+
+• 
+
+◦ 
+
+• 
+
+◦ 
+
+• 
+
+◦ 
+
+1. 
+
+2. 
+
+◦ 
+
+▪ 
+
+6 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Store the ERPDatatransfer.spx file in the following directory: %SF_ROOT_DIR%
+
+\<Subsystem>\Data\Custom\Databases
+
+ERPDatatransferTest.spl
+
+File the ERPDataTransferTest.spx file, which contains call examples and is not
+
+required for ERP Datatransfer for ELO DocXtractor to work, to the following
+
+directory: %SF_ROOT_DIR%\<Subsystem>\Data\Custom\Databases
+
+SlotFunctions.spl
+
+If the %SF_ROOT_DIR%\<Subsystem>\Data\Custom\Databases directory already
+
+contains a SlotFunction.spl file, insert the contents of the file from the package
+
+into the existing SlotFunctions.spl. If the %SF_ROOT_DIR%
+
+\<Subsystem>\Data\Custom\Databases directory does not contain a 
+
+SlotFunctions.spl, you can copy this file to the directory.
+
+ERPDatatransfer.cmd
+
+File the ERPDataTransfer.cmd file to the following directory: %SF_ROOT_DIR%
+
+\<Subsystem>\Data\Custom\Databases
+
+specialConfigsERPDatatransfer.xml
+
+Store the specialConfigsERPDataTransfer.xml file in the following directory: 
+
+%SF_ROOT_DIR%\<Mandant>\Config
+
+◦ 
+
+▪ 
+
+◦ 
+
+▪ 
+
+◦ 
+
+▪ 
+
+◦ 
+
+▪ 
+
+7 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+In the ELO DocXtractor Configurator, now add a new component under System >Components.
+
+The settings are as follows:
+
+Component name: InvoiceERPDatatransfer
+
+Component type: SPLModule
+
+Application: SFControl.exe
+
+Parameter: -es matchingServiceMain
+
+Port: A free port; the Configurator suggests the next free port
+
+Log level: No log
+
+Subsystem: Invoice (or the subsystem ERP Datatransfer for ELO DocXtractor will be used for)
+
+Check the Activate component box.
+
+3. 
+
+4. 
+
+8 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+ERP Datatransfer for ELO DocXtractor from version 5 SP04 
+
+From ELO DocXtractor version 5 SP04, ERP Datatransfer for ELO DocXtractor will likely be available
+
+as a smartblock. The steps described above no longer have to be performed starting with this
+
+version.
+
+Add two columns to database tables 
+
+If they don't already exist, add the following two columns to the SFI_ORDER_ITEM and 
+
+SFI_VENDOR ELO DocXtractor matching databases:
+
+Column name Data type Allow null values
+
+TIMES Datetime2(3) Yes
+
+MODIFIED Nvarchar(1) Yes
+
+The columns then have to be integrated in the ELO DocXtractor Document Manager.
+
+Open the Document Manager and select Definition -> Matching data….
+
+Navigate to the SFI_ORDER_ITEM and SFI_VENDOR tables and check the TIMES and MODIFIED
+
+columns.
+
+Set data retention to Store.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+9 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Configuration 
+
+Configuring ERP Datatransfer for ELO DocXtractor 
+
+To see the configuration entries for ERP Datatransfer for ELO DocXtractor, the Configurator first has
+
+to reinitialize the subsystem (from a technical point of view, it has to reload the 
+
+specialConfigsERPDatatransfer.xml file). You can either restart the Configurator or switch to another
+
+subsystem and back.
+
+In the Configurator, navigate to the configuration settings for your subsystem. Later, this will
+
+be represented by Invoice.
+
+Within the ELO\ERP Datatransfer configuration entry, set the parameter described below.
+
+Host 
+
+Enter the server IP address or FQDN the web service for ERP Datatransfer for ELO DocXtractor
+
+should run on here. Generally, this is the address of the server ELO DocXtractor is installed on.
+
+OpenJDKPath 
+
+This configuration entry must contain the OpenJDK directory, e.g. %SF_ROOT_DIR%\System\Etc\jdk-15.
+
+Information
+
+This entry will likely no longer be necessary as soon as ERP Datatransfer for ELO
+
+DocXtractor becomes a smartblock.
+
+Password 
+
+Create a password here that the ERP system will then use to authenticate with the ERP
+
+Datatransfer for ELO DocXtractor interface.
+
+1. 
+
+2. 
+
+10 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Port 
+
+The port for the ERP Datatransfer for ELO DocXtractor web service.
+
+Information
+
+You may have to enable ports in the network explicitly. If you have connection problems,
+
+contact your network administrator. This port is self-defined; do not confuse it with the port
+
+of the added ELO DocXtractor component.
+
+PrimaryKeyColumns 
+
+This configuration entry is required if ERP Datatransfer for ELO DocXtractor has to generate a
+
+primary key for the data sets before making an entry to the ELO DocXtractor matching data.
+
+Enter the table name and the column in the following convention: Table|Column. For additional
+
+tables and columns, use a semicolon as a separator. If an entry is specified for a table, a new data
+
+set is inserted in the specified column of the value max+1 during the Insert action.
+
+Example: Invoice 
+
+With a standard ELO DocXtractor Invoice installation, a combination of company code and vendor
+
+represent the unique key for the vendor. If you want to provide all bank accounts per vendor to ELO
+
+DocXtractor, this would result in a primary key violation. To be able to save all bank accounts, we
+
+add the column VEPK to the SFIVENDOR* table in this case. This additional column is also added to
+
+the Unique Index of the table and the matching server configuration. As the values for this column
+
+don't come from the ERP system, ERP Datatransfer for ELO DocXtractor generates a unique key.*
+
+The value for the configuration entry for the case above would then be: SFI_VENDOR|VE_PK.
+
+Information
+
+You also need to consider the settings in DocXtractor: Make the VE_PK column known as the
+
+primary key to the MatchingServer in the DocXtractor Document Manager.
+
+ReloadTables 
+
+In this configuration entry, you can define which tables or views the matching server should reload
+
+when changes are made to data in a specific table. The value of the configuration entry is a list of
+
+values separated by semicolons.
+
+For the Invoice case in which order data requires a reload of the order view after changes to item
+
+data, the value looks like this:
+
+<Table>|<Table or View 1>¶<Table or View 2>¶...<Table or View n>
+
+11 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+SaveDataDir (optional) 
+
+If this configuration entry has been set, ERP Datatransfer for ELO DocXtractor saves the data
+
+transferred from the ERP system for debugging in the directory specified in the configuration entry.
+
+Separator 
+
+The defined column separator the data is transferred with.
+
+User 
+
+This user name is used for authentication between the ERP system (e.g. an SAP system) and the
+
+ERP Datatransfer for ELO DocXtractor interface.
+
+Information
+
+The user does not have to be a system-specific ERP user. However, the user has to be
+
+entered in the ERP system configuration for authentication/connection. You will find this
+
+configuration taking connecting to an SAP system as an example in the section Installation
+
+and configuration: Configuring a destination.
+
+WriteLogFile 
+
+Specifies whether a log file should be written per import when importing data.
+
+Please note
+
+Writing log files results in significant decreases in performance. We recommend only writing
+
+logs if there is a specific reason to do so.
+
+Updating the system 
+
+Once you have set up ERP Datatransfer for ELO DocXtractor as described above, you have to 
+
+refresh the clients and refresh the subsystem in the Coordinator. ERP Datatransfer for ELO
+
+DocXtractor will then be visible in the Coordinator as follows.
+
+SFI_ORDER_ITEM|SFI_ORDER
+
+1. 
+
+12 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Alternative: Instead of updating the client and the subsystem, you can also restart the
+
+CoordinatorKernel service.
+
+ERP Datatransfer for ELO DocXtractor 
+
+Available functions 
+
+ERP Datatransfer for ELO DocXtractor requires basic authentication with user and password for all
+
+calls.
+
+\status 
+
+The ERP Datatransfer for ELO DocXtractor status page can be queried with http_get.
+
+\lastError 
+
+The last error including date and time can be queried with http_get.
+
+\insert 
+
+The data sets can be entered to the matching database via the matching server with http_post.
+
+Example http_post body:
+
+-----------------------------9051914041544843365972754266
+
+Content-Disposition: form-data; name="uplfile"; filename="uplfile.txt"
+
+Content-Type: text/plain
+
+TABLE¶SFI_VENDOR
+
+COLUMNS¶VE_RECIPIENT_NO¶VE_VENDOR_NO¶VE_NAME¶VE_STREET¶VE_ZIPCODE¶VE_CITY¶...
+
+1000¶1341905464315¶ELO Academy¶Tübinger Straße 43¶70669¶Stuttgart¶...
+
+1000¶1334314986436¶Lightning Computers¶Tübinger Straße 150¶70191¶Stuttgart¶...
+
+13 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+\insertDB 
+
+The body of http_post has an identical structure to that of \insert. The difference is that the data
+
+isn't transferred to the database via the matching server, but directly via ODBC. After Insert, the
+
+data is loaded to the matching server database.
+
+\update 
+
+The data sets sent with http_post update the data in the matching server and matching database.
+
+Example http_post body:
+
+\delete 
+
+The data sets sent with http_post are removed from the matching server and the matching
+
+database.
+
+Example http_post body:
+
+-----------------------------9051914041544843365972754266--
+
+-----------------------------9051914041544843365972754266
+
+Content-Disposition: form-data; name="uplfile"; filename="uplfile.txt"
+
+Content-Type: text/plain
+
+TABLE¶SFI_VENDOR
+
+COLUMNS¶VE_RECIPIENT_NO¶VE_VENDOR_NO¶VE_NAME¶VE_STREET¶VE_ZIPCODE¶VE_CITY¶...
+
+FILTER¶VE_RECIPIENT_NO¶VE_VENDOR_NO
+
+1000¶1341905464315¶ELO Academy¶Heilbronner Straße 150¶70178¶Stuttgart¶...
+
+-----------------------------9051914041544843365972754266--
+
+-----------------------------9051914041544843365972754266
+
+Content-Disposition: form-data; name="uplfile"; filename="uplfile.txt"
+
+Content-Type: text/plain
+
+TABLE¶SFI_VENDOR
+
+14 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+\deleteAll 
+
+\deleteAll deletes all data sets from a matching database table.
+
+Example http_post body:
+
+Structure of the http_post body 
+
+Keyword Description (1) (2) (3) (4)
+
+TABLE The name of the database table that is to be updated. x x x x
+
+COLUMNS Column name of the tables affected by update. x x x
+
+FILTER Table column names used to select the relevant data sets. x x
+
+Keyword used in
+
+\Insert or \InsertDB
+
+\Update
+
+\Delete
+
+\DeleteAll
+
+Performance 
+
+Performance measurements were taken during development of ERP Datatransfer for ELO
+
+DocXtractor. These were carried out under the following conditions:
+
+COLUMNS¶VE_RECIPIENT_NO¶VE_VENDOR_NO
+
+FILTER¶VE_RECIPIENT_NO¶VE_VENDOR_NO
+
+1000¶1341905464315
+
+-----------------------------9051914041544843365972754266--
+
+-----------------------------9051914041544843365972754266
+
+Content-Disposition: form-data; name="uplfile"; filename="uplfile.txt"
+
+Content-Type: text/plain
+
+TABLE¶SFI_VENDOR
+
+-----------------------------9051914041544843365972754266--
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+• 
+
+15 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Notebook with i7
+
+24 GB of RAM
+
+Windows 10
+
+ELO DocXtractor 4.3 SP09
+
+SQL Server Express 2014
+
+Modification of table SFI_VENDOR with complete data sets (that is, including bank data, tax
+
+information, telephone and fax number, e-mail)
+
+When inserting new data sets with \insert, the data sets transferred with http_post can be entered
+
+to the matching database via the matching server. The advantage of this is that the data is
+
+available to the ELO DocXtractor system right away without reloading. However, each time a data
+
+set is inserted, the matching server index is optimized. As a result, you can only insert approx. 10
+
+data sets per second. This is especially important to remember when initially filling the matching
+
+database.
+
+Besides \insert, ERP Datatransfer for ELO DocXtractor also provides an \insertDB function. As the
+
+data is written directly to the database, the matching server index does not have to be optimized
+
+after every Insert. Measurements have shown that you can insert approximately 350-400 data sets
+
+per second in the matching database in this way.
+
+We therefore do not recommend transferring more than
+
+2,000 data sets per \insert call (corresponding to approx. 3-4 minutes) and
+
+100,000 data sets per \insertDB call (corresponding to approx. 3-4 minutes).
+
+In any case, the values should be adapted to the actual performance of the specific system.
+
+Please note
+
+If you use an ELO DocXtractor version lower than 5.0 SP01, do not submit more than 100,000
+
+data sets per call. This kind of call would very likely fail and cause a communication error in
+
+SAP. Use the filter function or an Insert per company code.
+
+In both cases, make sure that the web service call does not result in a timeout when the call is
+
+performed within the ERP system.
+
+Note regarding the SFI_ORDER_ITEM table 
+
+The performance difference between \insert and \insertDB isn't as significant with the 
+
+SFI_ORDER_ITEM table. The \insert function is much faster, as no key columns are defined for the
+
+table in the matching server, making entries to the matching server easier.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+16 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+SAP Netweaver® und SAP S/4HANA®
+
+SAP NetWeaver® and SAP S/4HANA®
+
+This chapter explains how to connect ERP Datatransfer for ELO DocXtractor to SAP NetWeaver®
+
+and SAP S/4HANA® systems.
+
+Information
+
+Using ERP Datatransfer for ELO DocXtractor requires outgoing HTTP communication
+
+capabilities. You can check this within the SAP system in the SMICM transaction under Goto –
+
+Parameters – Display and then under icm/server_port. http protocol must contain an entry.
+
+The SAP system must also be able to reach the ELO server and the ELO DocXtractor system.
+
+Process description 
+
+To supply ELO DocXtractor with the required data, such as order data or vendor data, a trigger is
+
+required within the SAP system to initiate data transmission to ELO DocXtractor. Within SAP, you
+
+can use the event linkage function for this. For example, changing or creating orders within the SAP
+
+system results in a triggering event, which you can use as a starting point for programs. If you
+
+change and save an order, the CHANGED event results in the new data set being sent to ERP
+
+Datatransfer for ELO DocXtractor.
+
+This documentation covers the following topics and more:
+
+Installation and configuration
+
+Set up events
+
+Initial startup
+
+SAP program for automatic sending of queue entries
+
+Source of SAP data
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+17 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Installation and configuration 
+
+SAP transport 
+
+You will find all the required programs and functions in the SAP transport provided on the ELO
+
+SupportWeb. Inform your customer or the SAP partner about the SAP transport to be installed and
+
+provide it to them.
+
+Information
+
+Inform your customers or SAP partner of the following:
+
+The standard SAP transport routes must be used.
+
+All developments and functions within the transport in ELO were developed in a
+
+separate SAP namespace, called /ELO/.
+
+You may have to enable the Ignore Invalid Component Version option when importing the
+
+SAP transport.
+
+It is also possible that you will encounter warnings when importing the transport due to
+
+different release statuses (return code 8), which can be ignored.
+
+Once the SAP transport has been imported successfully into the SAP system, the other required
+
+steps can be performed.
+
+Check workflow customizing 
+
+You need to check that the workflow customizing is correctly configured.
+
+Fig.: Transaction SWU3 – Check RFC destination
+
+• 
+
+• 
+
+1. 
+
+18 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Firstly, use transaction SWU3 to check whether a user is stored for the RFC destination 
+
+WORKFLOW_LOCAL_<client>.
+
+If a customizing has not been entered for the menu item Configure RFC Destination, you need
+
+to configure this first
+
+Fig.: Transaction SWU3 – Check background user
+
+If you click the icon highlighted here or press F7, you can find out which user has been
+
+entered for the workflow destination.
+
+Configuring permissions 
+
+The events in SAP are carried out by the WF-BATCH user as standard. If this user does not have full
+
+access, for example via the profile SAP_ALL, a role with the following rights has to be set up and
+
+assigned to the event user:
+
+Permissions for event user
+
+Permissions object Field name Value
+
+S_RFC RFC_TYPE FUGR
+
+S_RFC RFC_NAME /ELO/DOCX
+
+S_RFC ACTVT 16
+
+If you want to transfer all values from the SAP system to ELO DocXtractor initially with a user, this
+
+user will need rights to execute the /ELO/DOCX_SETTINGS transaction.
+
+Permissions for ERP data transfer for ELO DocXtractor interface users
+
+2. 
+
+19 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Permissions object Field name Value
+
+S_TCODE TCD /ELO/DOCX_SETTINGS
+
+Configuring a destination 
+
+To ensure access from the SAP system to the ELO DocXtractor system, you will have to configure
+
+an HTTP connection to an external server in transaction SM59.
+
+Fig.: Connection information
+
+Enter the connection data from the ELO DocXtractor configuration, such as Host and Port,
+
+which you configured in sections Configuring ERP Datatransfer for ELO DocXtractor: Host and 
+
+Port.
+
+1. 
+
+20 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Fig.: Logon
+
+Use the Basic Authentication method in Logon & Security and enter the logon information
+
+that you defined in the sections Configuring ERP Datatransfer for ELO DocXtractor: Password
+
+and Configuring ERP Datatransfer for ELO DocXtractor: User in the ELO DocXtractor
+
+configuration as the User and Password.
+
+Information
+
+If you want to populate the system with a very large volume of data initially, we
+
+recommend manually increasing the timeout temporarily for this process if you don't use
+
+the transmission type InsertDB. Switch to the Special options tab and select Set timeout.
+
+Enter a value in seconds. We recommend temporarily entering a value of 600 seconds.
+
+Interface configuration 
+
+If the SAP transports have been imported to the target system, you can call the transaction /
+
+__ELO/DOCX_SETTINGS.
+
+2. 
+
+1. 
+
+21 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Fig.: Configuration in the SAP system, overview
+
+The ERP Datatransfer for ELO DocXtractor configuration interface opens. The following
+
+sections explain the configuration options.
+
+Please note
+
+If you want to make changes to the configuration, you will have to switch to change mode
+
+by clicking Display/Change or the F6 key.
+
+Data provider per business object 
+
+Fig.: Configuring a data provider per business object
+
+The data provider is responsible for data retrieval and can initially be populated with the
+
+configuration for the default values. Make sure to manually set the destination name depending on
+
+the destination you configured.
+
+Example: Changing a purchase order (BUS2012)
+
+The class /ELO/CL_DOCX_GET_ORDERS is applied in the CHANGED event in the SAP business
+
+object BUS2012 for data determination. Access takes place via the DOCX_CONNECT destination
+
+and the data is sent to ERP Datatransfer for ELO DocXtractor. The interface enters the data in
+
+the matching server and matching database.
+
+The data provider configuration also allows you to customize data retrieval for your customer-
+
+specific requirements.
+
+• 
+
+22 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+The following describes the setting parameters:
+
+Object category: Set to BO (business object) by default, to define instances of BOR (business
+
+object repository) object types.
+
+Object type: Enter the SAP business object the additional settings apply to here.
+
+Event: This setting depends on the object types you selected and defines which event the
+
+class set below will call.
+
+Class/interface: Name of the class to be executed during the event. The class /ELO/
+
+CL_DOCX_GET_VENDORS is provided for the vendor data as well as the class /ELO/
+
+CL_DOCX_GET_ORDERS for the order data. If you create your own class, you will have to integrate
+
+the /ELO/IF_DOCX_GETDATA interface.
+
+Destination name: Enter the name of the destination you configured in the section 
+
+Installation and configuration: Configuring a destination.
+
+Selection criteria 
+
+In the configuration interface for the selection criteria, you can configure restrictions for data
+
+determination to consider when executing an event.
+
+You can use the selection criteria to narrow down the results to a specific company code, for
+
+example.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+23 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Fig.: Configuring the selection criteria
+
+The following provides an overview of the three configuration areas.
+
+General: The values that can be set here are universal and apply for determining vendor data and
+
+order data.
+
+Company code (multiple selection possible)
+
+Vendor (multiple selection possible)
+
+Business partner (multiple selection possible)
+
+• 
+
+• 
+
+• 
+
+24 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Vendor data: In this area, you can select the vendor data. You can also increase the volume of data
+
+output, for example.
+
+The following settings are possible:
+
+Vendor name (multiple selection possible)
+
+Account group (multiple selection possible)
+
+Business partner role (multiple selection possible) 
+
+Including blocked vendors
+
+One bank account
+
+All bank accounts
+
+One VAT ID no.
+
+All VAT ID no.
+
+DocX vendor data table
+
+Please note
+
+If you select All bank accounts and/or All VAT ID numbers, you will have to make some
+
+changes to the ELO DocXtractor table. These changes are explained based on the Invoice
+
+example in the section Configuring ERP Datatransfer for ELO DocXtractor:
+
+PrimaryKeyColumns.
+
+Order data: In this area, you can select the order data.
+
+The following settings are possible:
+
+Purchasing document type (multiple selection possible)
+
+Purchasing document (multiple selection possible)
+
+Partner role
+
+Number of days retroactively 
+
+Including orders used up
+
+Including planned incidental costs
+
+Without goods receipt
+
+Material master record price
+
+DocX order data table
+
+Please note
+
+If you enable the Including planned incidental costs option, you may have to make changes
+
+to the database. This applies to the SFI_ORDER_ITEM table and the ORI_POS_NO column.
+
+Generally, this is a five-figure amount. If you include the planned incidental costs, the
+
+condition is attached to the position. The result is that the column ORI_POS_NO has to be
+
+increased to 10 digits in the database.
+
+• 
+
+• 
+
+• 
+
+◦ 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+• 
+
+25 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Header definitions 
+
+Fig.: Configuring the header definitions
+
+By configuring header definitions, you can configure the mapping between fields determined from
+
+the data and fields from the ELO DocXtractor table. The table definition is structured as follows:
+
+Type: Defines the type that the field matching belongs to. Type O (orders), V (vendors), and P
+
+(partners) fields are available as standard.
+
+Sort order: By entering a numeric sequence, you can define the order that the columns of the
+
+table should be output in. This allows you to control the order in which the columns in the
+
+ALV grid (ALV = SAP List Viewer) are shown in the Transfer data option. This setting does not
+
+affect database population and is only intended for better visualization.
+
+ELO DocXtractor field name: In this table column, enter the field name of the ELO DocXtractor
+
+table you want to transfer the component contents to.
+
+Component: Enter the component field name in these fields. In this case, the component is a
+
+separate table that contains the determined data from the SAP system. You will find more
+
+information about field mapping in the section Source of SAP data: Vendor data.
+
+Filter: This flag is used for updates and as a filter. For example, you can set the columns for
+
+the company code and vendor number in the vendor data, then the system will determine all
+
+data sets where these two values match in case of changes.
+
+Output: Check this box if you want to transfer the data set to ELO DocXtractor.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+26 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Transfer data 
+
+Fig.: Configuration – Transfer data
+
+With the Transfer data function, you can display the determined data applying the set selection
+
+criteria and transfer it to a destination. This function can help you perform tests when configuring
+
+ERP Datatransfer for ELO DocXtractor.
+
+You also have the option to initially populate the matching server and the matching database with
+
+order and vendor information with this function. See the Initial startup chapter for more details.
+
+The following configurations are available:
+
+Data provider: Select which data the data provider should determine and send to the defined
+
+destination. You can choose order data, vendor data, or your own class. If you use your own class,
+
+you have to maintain it. The section Installation and configuration: Data provider per BO describes
+
+how to maintain custom classes.
+
+Data selection: With the All entries parameter, you can display or transmit the result unfiltered.
+
+This is similar to a selection on the database with *. However, if you select Restrict to object ID, the
+
+selection is restricted to this input. The ObjectID always depends on the SAP business object. This
+
+27 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+means that you select the vendor number (lfa1-lifnr) for SAP business object LFA1 and the
+
+document number/order number (ekbe-ebeln) for SAP business object BUS2012.
+
+Information
+
+Initial population of the matching server and matching database with all the data from the
+
+SAP system may take several minutes. If a communication error is returned, the connection
+
+may have timed out. This does not mean that data transfer has failed. In the ELO
+
+DocXtractor logs, check whether all data has been transferred properly. The communication
+
+error message can be avoided in this case by increasing the destination timeout. You will
+
+find all the necessary information in the section Installation and configuration: Configuring a
+
+destination. Another option for populating the database is using the InsertDB transmission
+
+type.
+
+Transmission type: Five options are available. In every case, the first step results in data being
+
+displayed in an ALV grid within the SAP system. In this grid, data is selected and the corresponding
+
+command is run on the selection.
+
+Do not transfer, only show: All data is displayed with the set selection criteria. No additional
+
+steps are possible.
+
+Update: Selected entries are updated in the matching server and matching database. An
+
+update results in all entries for the vendor or order being deleted and entered again.
+
+Delete: All selected entries are deleted in the matching server and matching database.
+
+Insert (small data volumes): Enters all selected data sets in the matching database via the
+
+matching server. This variant is used to transfer small data volumes, as the matching server
+
+index is optimized each time a data set is inserted. Refer to the section ERP Datatransfer for
+
+ELO DocXtractor: performance for more information.
+
+InsertDB (large data volumes): The selected data sets are entered directly to the matching
+
+database. The matching server index is then optimized. Refer to the section ERP Datatransfer
+
+for ELO DocXtractor: performance for more information.
+
+Queue entries 
+
+Fig.: Configuration - Queue entries
+
+All transfers with errors or unsuccessful transfers that SAP has sent to ERP Datatransfer for ELO
+
+DocXtractor are listed in an ALV grid.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+28 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Fig.: Configuration – Transfer data from queue again
+
+The Transfer data button or the F7 key allows you to run through the selected queue entry again.
+
+To delete a queue entry, select the lines and then click the recycle bin icon or press the F9 key.
+
+Fig.: Configuration – Queue entry
+
+To refresh the view of the queue, click the button to the left of the Transfer data icon or press the F5
+
+key. If you close the queue entry view and open it again, the data will also be refreshed.
+
+Fig.: Configuration – Queue entry: Show data
+
+Using the Show Data function, you can also show all contents sent in the failed attempt. You can
+
+then save the data set to your local system as a file.
+
+The View history function gives you an overview of the transfer attempts for this queue entry and
+
+the corresponding error messages.
+
+The chapter SAP program for automatic sending of queue entries explains how to automatically re-
+
+send failed queue entries
+
+29 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Administration 
+
+Fig.: Configuration – Administration – Reset tables
+
+In the administration area, you can reset the tables to their original state on delivery and enable or
+
+disable business partner logic. After enabling business partner logic, the logic in the Transfer data
+
+area (see Installation and configuration: Transfer data) can be selected in the data provider. This is
+
+called Vendor data (BP).
+
+Please note
+
+Resetting the tables deletes all custom settings for ERP Datatransfer for ELO DocXtractor
+
+within the SAP configuration. If you change the business partner logic, we recommend
+
+resetting the tables after. The header definitions are then completed for the changed logic.
+
+Information 
+
+The Information area contains copyright information and the product version. If you submit a
+
+support case, always name the product version.
+
+30 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Set up events 
+
+Events are needed for each changed or created vendor and each changed and created order. These
+
+events forward the object ID of the changed/created object to the data providers set up in the
+
+section Installation and configuration: Data provider per business object.
+
+Add event linkage 
+
+Adding event linkages requires permission to the SWETYPV transaction. All entries are added as
+
+they are defined in the section Installation and configuration: Data provider per business object.
+
+Fig.: Add event linkage
+
+Click the New Entries function.
+
+Please note
+
+Fig.: Configuring a data provider per business object
+
+The following steps have to be taken for each entry from the data provider per
+
+business object. The same image as from the section Installation and configuration:
+
+Data provider per business object applies here.
+
+1. 
+
+31 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Fig.: Event linkage details
+
+Make the following settings:
+
+Object category: BOR object type
+
+Object type: The value can be found in the object types; see the screenshot from
+
+section Installation and configuration: Data provider per business object.
+
+Event: The value from the screenshot named above is also used here.
+
+Receiver type: FM (function module)
+
+Receiver call: Function module
+
+Receiver function module (first): Two function modules are provided, /ELO/
+
+DX_TRANSFER_CHANGE_EVENT and /ELO/DX_TRANSFER_CREATE_EVENT. Select the function
+
+module from the event here. By default, this means that all events that are not called 
+
+CREATED are assigned the function module /ELO/DX_TRANSFER_CHANGE_EVENT. CREATED
+
+events are assigned the function module /ELO/DX_TRANSFER_CREATE_EVENT.
+
+Event delivery: Using tRFC (default)
+
+2. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+32 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Linkage enabled: Box checked
+
+Behavior upon error feedback: Do not change linkage
+
+Receiver status: No errors
+
+Click the icon to save or press CTRL+S.
+
+Go a step back with the arrow icon or press the F3 key to add entries (as defined in the
+
+section Installation and configuration: Data provider per business object).
+
+Information
+
+Depending on the SAP release version, configured events may not occur. In this case, the
+
+configuration will not have any negative effects on your SAP system.
+
+Enable event linkage for incoming goods 
+
+To enable events resulting due to incoming goods, configure your SAP system based on Note 
+
+1614466 on the SAP Support Portal. Check the SAP system for the steps named in the note.
+
+Check change document events 
+
+To check change document events, you will need access to the transaction SWEC. This transaction
+
+is necessary as SAP systems do not trigger events when changing or adding vendors as standard.
+
+This makes two entries necessary. Ideally, these entries will already exist thanks to the transport,
+
+so check this first.
+
+Fig.: Check whether events already exist
+
+Information
+
+Your SAP system may be configured to trigger an event more than once. A CHANGED type
+
+event triggered multiple times causes the entry database to be updated multiple times,
+
+which may possibly result in minor performance restrictions. But if a CREATED type event is
+
+called multiple types, error messages will be written to the queue entries from the section 
+
+Installation and configuration: Queue entries due to duplicates. If this is the case, check
+
+which event is unnecessary and remove the relevant entry.
+
+If these two entries already exist, you can skip the next steps.
+
+Add change document events 
+
+If neither of these entries exist, you will have to add them.
+
+◦ 
+
+◦ 
+
+3. 
+
+4. 
+
+33 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Fig.: Add event to the change document
+
+Click the New Entries button.
+
+Fig.: Event for vendor "On Change"
+
+Complete the fields as follows:
+
+Change document object: KRED
+
+Object category: BOR object type
+
+Object type: /ELO/VEN
+
+Event: CHANGED
+
+Trigger event: Select On Change
+
+Click the Save button or press CTRL+S.
+
+Click the New Entries button again.
+
+1. 
+
+2. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+3. 
+
+4. 
+
+34 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Fig.: Event for vendor "On Create"
+
+Complete the fields as follows:
+
+Change document object: KRED
+
+Object category: BOR object type
+
+Object type: LFA1
+
+Event: CREATED
+
+Trigger event: Select On Create
+
+Click the Save button or press CTRL+S.
+
+5. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+6. 
+
+35 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Initial startup 
+
+The data transfer process is explained in the section Installation and configuration: Transfer data. If
+
+using the system for the first time, data control via events only will not be enough. The matching
+
+server database has to be populated with all data sets once.
+
+Go to the Transfer data menu for this reason.
+
+Under Data provider, select Order data.
+
+Under Data selection, select All entries.
+
+Use InsertDB as the transmission type and check the Clear DocX table box.
+
+Click Run or press the F8 key.
+
+Now, all data is gathered and displayed. Depending on the data volume, this can take several
+
+minutes.
+
+Fig.: Initial database population
+
+Click the Select all button followed by the Transfer data button.
+
+The transfer process can take much longer than the previous data determination process
+
+within the SAP system. For more information about a possible timeout, refer to the section 
+
+Installation and configuration: Configuring a destination.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+6. 
+
+36 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+SAP program for automatic sending of queue entries 
+
+One part of the scope of delivery is the SAP program /ELO/DOCX_QUEUE. This program allows you
+
+to re-send failed transfers within the queue entries of the administration area from the chapter 
+
+Installation and configuration: Queue entries with a specified time. This program can also be
+
+configured as a job in SAP.
+
+The program has two transfer parameters.
+
+Consider entries to: Enter a date from the past here. All queue entries from today to the
+
+entered date are considered. If you leave the field blank, the program will consider all entries
+
+up to seven days in the past.
+
+Maximum failed attempts: This value determines how often a queue entry can fail during
+
+transfer before it is skipped.
+
+• 
+
+• 
+
+37 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Source of SAP data 
+
+This chapter describes what tables and fields the SAP system retrieves the vendor and order data
+
+from.
+
+Vendor data 
+
+Overview of tables 
+
+The following tables are used in the SAP system to read vendor data:
+
+Table Description
+
+ADR6 E-mail addresses (Business Address Services)
+
+BNKA Bank master record
+
+LFA1 Vendor master (general part)
+
+LFB1 Vendor master (company code)
+
+LFBK Vendor master (bank details)
+
+T001 Company codes
+
+T005 Countries
+
+TIBAN IBAN
+
+Field mapping 
+
+The following table shows the relationship between SAP database fields and the ELO DocXtractor
+
+database fields in the SFI_VENDOR table.
+
+SAP field DocXtractor field Description
+
+LFA1-LIFNR VE_VENDOR_NO Vendor account number
+
+LFB1-LNRZE VE_CENTRAL_NO HQ account number
+
+LFB1-BUKRS VE_RECIPIENT_NO Company code
+
+LFA1-NAME1 VE_NAME Name
+
+LFA1-NAME2 VE_NAME2 Name 2
+
+LFA1-STRAS VE_STREET Street address
+
+LFA1-PSTLZ VE_ZIPCODE Postal code
+
+LFA1-PFACH* VE_STREET Post office box (used if no street is entered)
+
+LFA1-PSTL2* VE_ZIPCODE
+Postal code of the post office box (used if no street is
+
+entered)
+
+LFA1-ORT01 VE_CITY City
+
+LFA1-LAND1 VE_COUNTRY Country code
+
+LFBK-BANKN VE_ACCOUNT_NO Account number
+
+BNKA-BANKA VE_BANK Bank
+
+38 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+SAP field DocXtractor field Description
+
+LFBK-BANKL VE_BANK_NO Bank code
+
+LFBK-BVTYP VE_BANK_ID Partner bank type
+
+BNKA-SWIFT VE_SWIFT_BIC Swift BIC
+
+TIBAN-IBAN VE_IBAN IBAN
+
+LFB1-ZTERM VE_ZTERM Payment terms key
+
+LFA1-STCEG VE_VAT_ID_NO VAT ID
+
+LFA1-STENR VE_TAX_ID_NO_DE Tax number
+
+LFA1-STCD2 VE_TAX_ID_NO Tax number 2
+
+LFA1-TELF1 VE_TELEFONE_NO Phone number
+
+LFA1-TELFX VE_FAX_NO Fax number
+
+LFB1-BUSAB VE_CLERK_ID Employee HQ
+
+LFA1-BBBNR VE_ILN ILN (international location number)
+
+LFB1-AKONT VE_RECONC_ACCOUNT Control account in general ledger accounting
+
+LFA1-VBUND VE_PARTNER_ID Partner
+
+ADR7-
+
+SMTP_ADDR
+VE_EMAIL E-mail address
+
+Fields in SAP transaction 
+
+The following transaction images were taken with SAP client version 750. The transactions
+
+belonging to the images are XK02 and XK03.
+
+39 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Fig.: Vendor address
+
+40 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Fig.: Vendor control
+
+41 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Fig.: Bank details for vendor 1
+
+Fig.: Bank details for vendor 2
+
+42 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Fig.: Accounting for vendor 1
+
+Fig.: Accounting for vendor 2
+
+43 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Fig.: Accounting correspondence
+
+Business partners 
+
+Overview of tables 
+
+The following tables are used in SAP to read order data:
+
+Table Description
+
+BUT000 BP: General data
+
+LFA1 Vendor master (general part)
+
+LFB1 Vendor master (company code)
+
+LFBK Vendor master (bank details)
+
+T001 Company codes
+
+T005 Countries
+
+TIBAN IBAN
+
+Field mapping 
+
+The following table shows the relationship between SAP database fields and the ELO DocXtractor
+
+database fields in the SFI_VENDOR table.
+
+SAP field DocXtractor field Description
+
+BUT000-PARTNER VE_VENDOR_NO
+Vendor (or reference to
+
+vendor)
+
+44 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+SAP field DocXtractor field Description
+
+LFB1-LNRZE VE_CENTRAL_NO HQ account number
+
+LFB1-BUKRS VE_RECIPIENT_NO Company code
+
+For person: ADRP-NAME_TEXT VE_NAME Full name
+
+For organization: BUT000-NAME_ORG1, 2, 3,
+
+4 (depending on the length)
+
+VE_NAME Full name
+
+BUT000-NAME_ORG2, 3, 4 (depending on the
+
+length)
+VE_NAME2 Name 2
+
+ADRC-STREET + ADRC-HOUSE_NUM1 VE_STREET Street address
+
+ADRC-PO_BOX (if ADRC_STREET is empty) VE_STREET Street address
+
+ADRC-POST_CODE2 VE_ZIPCODE Postal code
+
+ADRC-CITY1 or PO_BOX_LOC VE_CITY City
+
+ADRC-COUNTRY or PO_BOX_CTY VE_COUNTRY Country
+
+BUT0BK-BKVID VE_BANK_ID Partner bank type
+
+BUT0BK-BANKN VE_ACCOUNT_NO Account number
+
+BUT0BK-BANKL VE_BANK_NO Bank code
+
+BNKA-SWIFT VE_SWIFT_BIC Swift BIC
+
+TIBAN-IBAN VE_IBAN IBAN
+
+LFB1-ZTERM VE_ZTERM Payment terms key
+
+DFKKBPTAXNUM-TAXNUM (Variable with
+
+TAXTYPE)
+VE_VAT_ID_NO VAT ID
+
+DFKKBPTAXNUM-TAXNUM (Variable with
+
+TAXTYPE)
+VE_TAX_ID_NO_DE Tax number
+
+ADRC-TEL_NUMBER VE_TELEFONE_NO Telephone number
+
+ADRC-FAX_NUMBER VE_FAX_NO Fax number
+
+LFB1-BUSAB VE_CLERK_ID Employee
+
+BUT000-LOCATION1 VE_ILN
+(International location
+
+number)
+
+LFB1-AKONT VE_RECONC_ACCOUNT
+Control account in general
+
+ledger accounting
+
+BP001-VBUND VE_PARTNER_ID Partner
+
+ADR7-SMTP_ADDR VE_EMAIL E-mail address
+
+Fields in SAP client 
+
+The following images were taken with SAP client version 750. The transaction in the images is BP.
+
+45 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Fig.: Business partner vendor header data
+
+46 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Fig.: Business partner address
+
+47 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Fig.: Business partner individual data: identification
+
+Fig.: Business partner organization: identification
+
+48 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Fig.: Business partner control
+
+Fig.: Business partner payment transactions
+
+Fig.: Business partner vendor: account management
+
+Fig.: Business partner vendor: payment transactions
+
+49 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Fig.: Business partner vendor: correspondence
+
+Order data 
+
+Overview of tables 
+
+The following tables are used in the SAP system to read order data:
+
+Table Description
+
+EINA Purchasing info record – general data
+
+EINE Purchasing info record – purchase organization data
+
+EKBE Purchasing document history
+
+EKKO Purchasing document header
+
+EKPA Partner roles in purchasing
+
+EKPO Purchasing document item
+
+KONV Conditions (transactional data)
+
+LFA1 Vendor master (general part)
+
+T685A Conditions: Types: price element additional data
+
+WYT3 Partner roles
+
+Field mapping 
+
+The following table shows the relationship between SAP database fields and the ELO DocXtractor
+
+database fields in the SFI_ORDER_ITEM table.
+
+SAP field DocXtractor field Description
+
+EKPO-BUKRS RE_RECIPIENT_NO Company code
+
+50 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+SAP field DocXtractor field Description
+
+EKKO-LIFNR (if blank, then EKPA-
+
+LIFN2 or WYT3-LIFN2)
+VE_VENDOR_NO Vendor (or reference to vendor)
+
+EKPO-WERKS ORI_PLANT Plant
+
+EKKO-ZTERM OR_TOP_NO Payment terms
+
+EKPO-EBELN OR_ORDER_NO Purchasing document
+
+EKPO-EBELP + '-KONV-KSCHL' ORI_POS_NO Position (optional: - condition type)
+
+EKPO-MATNR ORI_ARTICLE_NO Material
+
+EKPO-TXZ01 ORI_DESCRIPTION Short text
+
+EKPO-MENGE (calculated
+
+internally)
+ORI_QUANTITY Order quantity
+
+EINE-NETPR ORI_SINGLE_NET_PRICE Net price
+
+KONV-KWERT (or calculated from
+
+the EKBE-WRBTR entries)
+ORI_TOTAL_NET_PRICE
+
+Condition value (or calculated from
+
+the amount)
+
+EKPO-PEINH ORI_PUNIT Price unit
+
+EKBE-XBLNR ORI_DELIVERY_NO Reference
+
+IS_DELIVERY ORI_IS_DELIVERY
+Flag whether or not entries in the
+
+EKBE table exist (1 or 0)
+
+EKBE-BWART ORI_WART Movement type
+
+EKBE-BLDAT ORI_DELIVERY_DATE Document date
+
+EKBE-BUDAT ORI_POSTING_DATE Posting date
+
+EKBE-BELNR ORI_MATERIAL_DOC_NO Material document
+
+EKBE-LFGJA ORI_MATERIAL_DOC_YEAR Business year reference document
+
+EKBE-BUZEI ORI_MATERIAL_ITEM Item in the material document
+
+EKPO-PSTYP ORI_CON_FLAG
+Item type in the purchasing
+
+document
+
+EKPO-BPUMZ ORI_BPUMZ
+Counter for converting BPRME into
+
+BME
+
+EKPO-BPUMN ORI_BPUMN
+Denominator for converting BPRME
+
+into BME
+
+Fields in SAP transaction 
+
+The following transaction images were taken with SAP client version 750. The transaction in the
+
+images is ME23N.
+
+51 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Fig.: Order 1
+
+Fig.: Order 2
+
+Fig.: Order 3
+
+Fig.: Order 4
+
+1. 
+
+52 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Navigate to the material document by clicking the material document number, as shown in
+
+the figure Order 4.
+
+Fig.: 'Material document' for order data
+
+The Material document area appears.
+
+53 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Troubleshooting
+
+Overview 
+
+The following documentation describes error messages:
+
+DocX error: Error processing data record(s) in line(s) 0, 1, …, n
+
+DocX error: Error in update: Database index VEVENDORNO, VERECIPIENTNO for table
+
+SFI_VENDOR is missing. Partial index match is required.
+
+SAP event trace: Consumer started correctly/name or password is not correct
+
+• 
+
+• 
+
+• 
+
+54 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Error messages 
+
+DocX error: Error processing data record(s) in line(s) 0, 1, …, n 
+
+This error message describes which line numbers failed during transfer. For more exact information
+
+regarding the error, refer to the DocXtractor log in SFControl Services.
+
+Open the SFL log file with the DocXtractor Log Viewer.
+
+Open the branch for Call importMatchingData and then Call importMatchingDataInt under
+
+that. The exact description is thrown for each line here.
+
+Fig.: Error message for 'line 1'
+
+Open the branch Call insertDataRecord and then the branch via Error caught.
+
+Fig.: Exact cause of the error
+
+You will find the exact cause of the error for the line in red here. Generally, the error repeats itself
+
+for all other entries.
+
+DocX error: Error in update: Database index VE_VENDOR_NO,
+
+VE_RECIPIENT_NO for table SFI_VENDOR is missing. Partial index match is
+
+required. 
+
+This error can be fixed by disabling the index entry check.
+
+1. 
+
+2. 
+
+3. 
+
+55 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Fig.: Disable index check
+
+Open the DocXtractor configurator and navigate to Subsystem > System > Configuration.
+
+In the configuration area, open smartFIX > DBServerInterface and set the parameter 
+
+CheckDatabaseIndices to the value 0.
+
+1. 
+
+2. 
+
+56 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+SAP event trace: Consumer started correctly/name or password is not
+
+correct 
+
+Fig.: Event trace
+
+You can this error by checking the following entries:
+
+57 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Fig.: RFC – User and password
+
+Which user is stored in the RFC destination?
+
+Does this user exist and was the correct password entered?
+
+• 
+
+• 
+
+58 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Fig.: Workflow customizing
+
+Is the workflow customizing correctly configured? See Check workflow customizing• 
+
+59 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+	Table of contents
+	ERP Datatransfer for ELO DocXtractor
+	Introduction
+	Basics
+
+	Getting started
+	Installing the ELO DocXtractor system
+	Installation
+	Installation with ELO DocXtractor up to version 5 SP03
+	ERPDatatransfer.zip package
+
+	Configuring ERP Datatransfer for ELO DocXtractor
+	ERP Datatransfer for ELO DocXtractor from version 5 SP04
+	Add two columns to database tables
+
+	Configuration
+	Configuring ERP Datatransfer for ELO DocXtractor
+	Host
+	OpenJDKPath
+	Password
+	Port
+	PrimaryKeyColumns
+	Example: Invoice
+
+	ReloadTables
+	SaveDataDir (optional)
+	Separator
+	User
+	WriteLogFile
+
+	Updating the system
+	ERP Datatransfer for ELO DocXtractor
+	Available functions
+	\status
+	\lastError
+	\insert
+	\insertDB
+	\update
+	\delete
+	\deleteAll
+
+	Structure of the http_post body
+	Performance
+	Note regarding the SFI_ORDER_ITEM table
+
+
+
+
+	SAP Netweaver® und SAP S/4HANA®
+	SAP NetWeaver® and SAP S/4HANA®
+	Process description
+
+	Installation and configuration
+	SAP transport
+	Check workflow customizing
+	Configuring permissions
+	Configuring a destination
+	Interface configuration
+	Data provider per business object
+	Selection criteria
+	Header definitions
+	Transfer data
+	Queue entries
+	Administration
+	Information
+
+
+	Set up events
+	Add event linkage
+	Enable event linkage for incoming goods
+	Check change document events
+	Add change document events
+
+	Initial startup
+	SAP program for automatic sending of queue entries
+	Source of SAP data
+	Vendor data
+	Overview of tables
+	Field mapping
+	Fields in SAP transaction
+
+	Business partners
+	Overview of tables
+	Field mapping
+	Fields in SAP client
+
+	Order data
+	Overview of tables
+	Field mapping
+	Fields in SAP transaction
+
+
+
+	Troubleshooting
+	Overview
+	Error messages
+	DocX error: Error processing data record(s) in line(s) 0, 1, …, n
+	DocX error: Error in update: Database index VE_VENDOR_NO, VE_RECIPIENT_NO for table SFI_VENDOR is missing. Partial index match is required.
+	SAP event trace: Consumer started correctly/name or password is not correct
+
+
+

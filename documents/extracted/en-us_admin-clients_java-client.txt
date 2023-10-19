@@ -1,0 +1,7481 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Client administration | ELO Java Client
+
+
+Client administration
+
+ELO Java Client
+
+
+
+4
+
+4
+
+5
+
+23
+
+28
+
+77
+
+81
+
+88
+
+90
+
+91
+
+91
+
+94
+
+100
+
+109
+
+111
+
+116
+
+116
+
+117
+
+118
+
+118
+
+121
+
+123
+
+126
+
+126
+
+128
+
+132
+
+134
+
+136
+
+136
+
+137
+
+140
+
+140
+
+141
+
+142
+
+Table of contents
+
+ELO Java Client administration
+
+Introduction 
+
+Installation 
+
+Logon 
+
+Configuration 
+
+Collaboration 
+
+Translation 
+
+Change storage location for user data 
+
+Connection with Microsoft 365 
+
+ELO Barcode
+
+Getting started 
+
+Basics 
+
+Configuration 
+
+Barcode recognition in the ELO Java Client 
+
+Barcode types 
+
+ELO SANE scan
+
+Introduction 
+
+Installation and configuration 
+
+ELO Macros (HTTP)
+
+Installation 
+
+Configuration 
+
+Functions 
+
+Dynamic folders
+
+What are dynamic folders? 
+
+Create dynamic folders 
+
+Additional notes 
+
+Usage examples 
+
+elodms links
+
+Introduction 
+
+Use 
+
+OpenOffice preview
+
+Introduction 
+
+Windows 
+
+Linux (OpenSuse) 
+
+2 Client administration
+
+
+
+143
+
+143
+
+144
+
+146
+
+146
+
+147
+
+149
+
+Platforms
+
+Basics 
+
+Platforms and modules 
+
+File formats
+
+Introduction 
+
+ELO Java Client 
+
+ELO Web Client 
+
+3 Client administration
+
+
+
+ELO Java Client administration
+
+Introduction 
+
+Target audience 
+
+This manual is aimed at administrative users tasked with installing and configuring the ELO Java
+
+Client. For more information on using the ELO Java Client, refer to the ELO Java Client user
+
+documentation.
+
+Use 
+
+The ELO Java Client, also referred to as client in the following, enables you to file, search, and find
+
+documents. In addition, you can use the client to create workflows and reminders, and to display
+
+documents.
+
+Operating system 
+
+In this manual, the functions and examples are displayed based on a Microsoft Windows operating
+
+system.
+
+The ELO Java Client can also be used on other operating systems provided a corresponding Java
+
+environment is available for the operating system.
+
+4 Client administration
+
+https://docs.elo.com/user/elo-java-client/en-us/elo-java-client/
+https://docs.elo.com/user/elo-java-client/en-us/elo-java-client/
+
+
+Installation 
+
+This chapter contains information on installing the ELO Java Client.
+
+Installation with ISO file 
+
+Requirements 
+
+You will find a list of the system requirements for the ELO Java Client in the ELO system
+
+requirements documentation.
+
+You need Windows administrator rights on the local computer to install the ELO Java Client.
+
+There are different ways to install the ELO Java Client. The following method describes how to
+
+install ELO from the ISO file.
+
+Click ELO Java Client under Clients in the navigation menu on the left.1. 
+
+5 Client administration
+
+https://docs.elo.com/ops/requirements/en-us/overview/clients.html#elo-java-client-23
+https://docs.elo.com/ops/requirements/en-us/overview/clients.html#elo-java-client-23
+https://docs.elo.com/ops/requirements/en-us/overview/clients.html#elo-java-client-23
+
+
+The ELO Java Client page opens.
+
+Click ELO Java Client Windows (64-bit).
+
+Optional: If the Windows User Account Control window appears, confirm with Yes.
+
+The ELO Java Client Setup dialog box appears.
+
+Choose the language for the installation in the drop-down menu and click OK.
+
+Information
+
+The language you select only applies to the language used during the installation. The
+
+user can select the language of the ELO Java Client interface in the logon dialog box.
+
+2. 
+
+3. 
+
+6 Client administration
+
+
+
+The ELO Java Client Setup dialog box appears.
+
+Click Next to continue.
+
+The Product Features page appears.
+
+4. 
+
+7 Client administration
+
+
+
+Optional: Select which additional components you want to install.
+
+The following components are available:
+
+ELO Dropzone: ELO Dropzone allows users to drag and drop documents to ELO using
+
+customizable tiles.
+
+ELO Print&Archive: ELO Print&Archive enables users to transfer documents via a virtual
+
+printer from a third-party program to ELO.
+
+Please note
+
+ELO Print&Archive is no longer being developed. It is nevertheless compatible with the
+
+current versions of the ELO Java Client.
+
+Information
+
+You will find additional information about these components in the documentation for ELO
+
+Dropzone and ELO Print&Archive.
+
+Click Next to continue.
+
+The Destination Folder screen appears.
+
+Optional: Click Change to change the suggested target folder and choose a different
+
+installation directory.
+
+◦ 
+
+◦ 
+
+1. 
+
+2. 
+
+8 Client administration
+
+https://docs.elo.com/admin/config/en-us/elo-automation-services/filing-via-elo-dropzone/#eloas-file-with-elo-dropzone-tiles
+https://docs.elo.com/admin/config/en-us/elo-automation-services/filing-via-elo-dropzone/#eloas-file-with-elo-dropzone-tiles
+https://docs.elo.com/admin/config/en-us/elo-automation-services/filing-via-elo-dropzone/#eloas-file-with-elo-dropzone-tiles
+https://supportweb.elo.com/en-us/elo-ecm-suite-12/client-modules/elo-printarchive.html
+https://supportweb.elo.com/en-us/elo-ecm-suite-12/client-modules/elo-printarchive.html
+
+
+Click Next to continue.
+
+The Ready to install ELO Java Client screen opens.
+
+Click Install.
+
+The installation starts.
+
+A message appears when the installation is completed.
+
+Click Finish to complete the installation.
+
+The ELO Java Client is installed.
+
+Configure ELO Indexserver 
+
+The ELO Java Client needs to connect to an ELO Indexserver to access a repository. When you run
+
+the client for the first time, there is no ELO Indexserver connection registered and the ELO
+
+Indexserver dialog box appears.
+
+Information
+
+The ELO Indexserver dialog box is also displayed when you remove all existing ELO
+
+Indexserver connections, since at least one connection must be entered.
+
+Start the client.
+
+3. 
+
+4. 
+
+1. 
+
+9 Client administration
+
+
+
+The ELO Indexserver dialog box appears.
+
+Enter a name for the first profile in the Profile name field.
+
+The name is displayed during logon and is used as the name in ELO link files.
+
+This is why you should enter the same name for all computers. The repository name is
+
+normally used here.
+
+Enter the ELO Indexserver URL.
+
+URL example:
+
+Information
+
+You can find the ELO Indexserver URL in the ELO Application Server Manager. Open the
+
+ELO Application Server Manager in your browser. Select the ELO Indexserver you want
+
+to use from the list of applications. You will find the corresponding repository name on
+
+the left.
+
+You can also use HTTPS if the server is configured accordingly.
+
+If the URL you entered was found, the color of the Indexserver URL field turns to green.
+
+2. 
+
+3. 
+
+http://<server name>:<port>/ix-<repository name>/ix
+
+10 Client administration
+
+
+
+Go to the Create new profile section to learn how to add additional repositories or to edit an
+
+existing connection.
+
+Optional: Logging 
+
+The ELO Java Client logger is set up via the configuration. You can configure a special logger in the
+
+registry for a more detailed log output. In this case, the logger settings in the configuration of the
+
+ELO Java Client are inactive and are not used.
+
+Start the Windows Registry Editor (regedit).
+
+Open the following directory:
+
+Create the logger entry by selecting New > String value from the context menu.
+
+Enter logger as the name for the new string.
+
+Enter the path to the file with the logger configuration.
+
+Information
+
+The installation directory of the ELO Java Client contains a predefined log4j1.xml file.
+
+Important
+
+You need to specify the storage location of the log file in the log4j1.xml file in the ELO
+
+Java Client directory.
+
+If you need a log output before setting up the logger, start the EloClient.bat batch file stored
+
+in the ELO Java Client installation directory.
+
+1. 
+
+2. 
+
+HKEY_CURRENT_USER\Software\JavaSoft\Prefs\ELO Digital Office\eloenterprise
+
+3. 
+
+4. 
+
+5. 
+
+6. 
+
+11 Client administration
+
+
+
+ELO Java Client with additional components 
+
+If you select the Installation Program for ELO Java Client (Windows) with Additional Components
+
+menu item, the Make AIO Installer Structure program opens. By default, the program selects a
+
+directory shared as ELO JC AIO Installer on the local computer. If you attempt to start copying files
+
+and the directory does not exist, you will get an error message.
+
+Select a directory on the local computer or network.
+
+Click Start Copy to copy the files.
+
+After all files have been copied successfully, you will see the status message Copying
+
+finished.
+
+Click End and navigate to this directory in a file browser.
+
+You will see several files and folders in this directory that allow you to customize the installer
+
+for the ELO Java Client. Immediately after copying the files, you will see an .EXE file that
+
+starts with EloJC.
+
+1. 
+
+2. 
+
+3. 
+
+12 Client administration
+
+
+
+Run the EXE file.
+
+The ELO ECM Suite Client Installation window opens.
+
+This installs the ELO Java Client along with all available optional components by default.
+
+Information
+
+The default entries for installation directory, profile name, and ELO Indexserver URL are just
+
+examples of valid entries and usually need to be adjusted for your specific requirements.
+
+Although you can select or clear all options in this window, you can also modify the default settings
+
+by changing the name and parameters of the .EXE file. The latter option is particularly useful for
+
+network rollouts. The following is a list of possible installation options.
+
+13 Client administration
+
+
+
+Installation directory 
+
+The ELO Java Client is installed to this directory when you run the program on a local computer. You
+
+can change the default directory by specifying INSTALLDIR="<path>" as the command line
+
+parameter when you run the file.
+
+Profile name 
+
+This is the name of the profile that the user sees when logging on to the repository with the ELO
+
+Java Client. You can enter any name here, but it is recommended to specify a name that helps the
+
+user identify the repository they are about to use.
+
+Define the profile name by entering a text string to the space between the last underscore and the
+
+.EXE in the file name.
+
+ELO Indexserver URL 
+
+This is the URL to the ELO Indexserver for your repository. Change the default URL by altering the
+
+file name from ...http_localhost_9090_elo... to ...<http(s)>_<server name>_<port>_<repository
+
+name>.
+
+Select what you want to install: The ELO OCR service performs text recognition on image files,
+
+usually from the ELO Intray. The TIFF and PDF printer options install printer drivers that allow
+
+documents to be printed from or to ELO in each of the respective output formats. To select or
+
+remove each of these features from the AIO installer by default, change the .EXE in the part after
+
+the first underscore and add or remove J (Java Client), C (OCR service), T (TIFF printer), or P (PDF
+
+printer).
+
+Select the programs you want to link to ELO with the macro: In this area, define which programs in
+
+Windows you want to install an ELO add-in to. The add-in provides you with additional in-program
+
+buttons that send documents directly to the ELO repository or Intray. To change the defaults,
+
+change the .EXE file name in the same part as above and add or remove W (Microsoft Word macro), 
+
+E (Microsoft Excel macro), I (Microsoft PowerPoint macro), and O (Microsoft Outlook macro).
+
+Configuration with file name 
+
+You can configure the AIO program by renaming the installation file. This offers several options for a
+
+rollout installation with predefined values.
+
+Please note Refer to the _Readme.txt_ file for instructions on configuration with
+
+the file name. This file explains the various options that are available and the
+
+correct structure of the file name.
+
+14 Client administration
+
+
+
+Example 
+
+The order of the flags selected for the all-in-one installer does not matter.
+
+Example: The file name ...DWCJPE... selects the same options as ...JWDCEP....
+
+The file name must have the following format:
+
+<prefix>_<language>_<flags>_<http(s)>_<server name or IP>_<port>_<repository name>_<profile
+
+name>.exe
+
+15 Client administration
+
+
+
+If you make an error in the file name, you will see an error message. If you click OK, the installer
+
+will still open, allowing you to perform a manual installation.
+
+Terminal server operation 
+
+It is also possible to run the ELO Java Client in a terminal server environment.
+
+Memory 
+
+Each instance of the Java Client is assigned 1 GB of RAM by default. This may require excessive
+
+amounts of system RAM in terminal server environments. It is possible to reduce this value to 500
+
+MB in most environments without drawbacks.
+
+To do so, open the Windows Registry and search for ELOJavaClientw.exe.
+
+The registry key where this is stored also contains the parameter -Xmx1000m.
+
+Change this value to -Xmx500m.
+
+Please note
+
+Do not change the memory settings for the ELO Java Client without first testing performance
+
+with different document types in the actual repository. Reducing this value to less than 500
+
+MB is not recommended.
+
+macOS 
+
+If you are installing the ELO Java Client on macOS, you need to consider the following information.
+
+Please note
+
+In rare cases, the macOS Gatekeeper prevents the execution of the ELO Java Client or
+
+functions such as PDF conversion even if a signature is valid. Apple sets a quarantine flag on
+
+the app, which can be removed with the following command:
+
+1. 
+
+2. 
+
+sudo xattr -r -d com.apple.quarantine /Applications/ELOClient/ELOClient.app
+
+16 Client administration
+
+
+
+Java Runtime Environment 
+
+The ELO Java Client for macOS includes a Java Runtime Environment package. This means you
+
+don't need to install the Java Runtime Environment separately.
+
+Installation 
+
+The installation files are provided as a disk image file (DMG). If you downloaded the installation
+
+package from the ELO SupportWeb, the DMG file comes in a ZIP file. If you have already copied the 
+
+InstallELOClient DMG file to your Mac, continue reading from the Start installation section.
+
+ZIP file 
+
+Download the latest version of the ZIP file for macOS.
+
+Extract the ZIP file to your Mac.
+
+The InstallELOClient DMG file is now available.
+
+Start installation 
+
+You can now proceed with the installation.
+
+Double-click to open the DMG file.
+
+The DMG file is executed. The InstallELOClient finder window appears.
+
+Drag the ELOClient folder to the Applications folder.
+
+1. 
+
+2. 
+
+1. 
+
+2. 
+
+17 Client administration
+
+
+
+Information
+
+A confirmation dialog appears if there is an update. Click Replace to confirm that you want
+
+to overwrite existing files.
+
+Installation starts. When installation is completed, the ELOClient folder is located in the Program
+
+files directory.
+
+Start the ELO Java Client 
+
+Open the ELOClient folder.
+
+Double-click ELOClient.app to start the ELO Java Client.
+
+The ELO Indexserver dialog box appears. If you have already entered an ELO Indexserver, the
+
+logon dialog box appears immediately.
+
+The ELO Java Client needs to connect to an ELO Indexserver to access a repository. Learn how to
+
+establish this connection in the Configure ELO Indexserver section.
+
+Logging 
+
+If you want to use parameters when you start the ELO Java Client, you can do this via the terminal.
+
+Execute the following command to see which parameters you can use:
+
+1. 
+
+2. 
+
+1. 
+
+18 Client administration
+
+
+
+To run the ELO Java Client with the desired parameters, adjust the command as required.
+
+Example:
+
+Linux 
+
+If you want to install the ELO Java Client on a Linux system, you need to consider the following
+
+information.
+
+Install Java 
+
+If you are using Linux, there are two different methods for installing the required Java components.
+
+Select one of the following methods.
+
+Install the latest version of Oracle JDK. OR
+
+Install the latest versions of OpenJDK and OpenJFX.
+
+Check Java installation 
+
+To check if Java already is installed, proceed as follows:
+
+Start a terminal.
+
+Enter the following command:
+
+java -version
+
+Check whether the Java version is identical to or higher than the one listed in the version
+
+history.
+
+Install the ELO client 
+
+The installation package for Linux comes in a compressed TAR repository (TAR.GZ format).
+
+Download the latest installation package for Linux.
+
+/Applications/ELOClient/ELOClient.app/Contents/MacOS/ELOClient -h
+
+2. 
+
+/Applications/ELOClient/ELOClient.app/Contents/MacOS/ELOClient -logging DEBUG
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+3. 
+
+1. 
+
+19 Client administration
+
+
+
+Extract the directory to your Linux computer.
+
+Copy the folder ELOclient in the directory on your Linux computer.
+
+This is the installation directory of the ELO Java Client that the client is run from.
+
+Start the ELO Java Client 
+
+In Linux, the ELO Java Client is started with the ELOclient.sh shell script.
+
+Open the ELOClient folder.
+
+Double-click to open the ELOClient.sh file.
+
+Alternative: Start the shell script with the following terminal command:
+
+./ELOclient.sh
+
+2. 
+
+3. 
+
+1. 
+
+2. 
+
+20 Client administration
+
+
+
+Information
+
+If you do not have permission to run the command, run the command sudo ./
+
+ELOclient.sh. You will be asked for the user's password.
+
+The ELO Indexserver dialog box appears. If you have already entered an ELO Indexserver, the
+
+logon dialog box appears immediately.
+
+The ELO Java Client needs to connect to an ELO Indexserver to access a repository. Learn how to
+
+establish this connection in the Configure ELO Indexserver section.
+
+Profile 
+
+The name of the server connection is the same as the profile for the repository. The name is
+
+displayed during logon under the available repositories and is used as the name in ELO link files.
+
+This is why the same name must be entered for all computers. The repository name is normally
+
+used here.
+
+Logging 
+
+If you want to use parameters when you start the ELO Java Client, you can do this via the terminal.
+
+Execute the following command in the installation directory of the ELO Java Client to see
+
+which parameters you can use:
+
+./ELOclient.sh -h
+
+To run the ELO Java Client with the desired parameters, adjust the command as required.
+
+1. 
+
+2. 
+
+21 Client administration
+
+
+
+Example:
+
+./ELOclient.sh -logging DEBUG
+
+22 Client administration
+
+
+
+Logon 
+
+This chapter describes options for logging on to ELO and setting up different logon profiles.
+
+Single sign-on 
+
+Single sign-on (SSO) enables the user to log on to the computer once and use all applications
+
+without having to log on again.
+
+Due to security issues, single sign-on is not available to system administrators.
+
+If single sign-on is not available, the logon dialog box appears and you can log on with your user
+
+ID.
+
+Requirements 
+
+The following requirements must be met before you can use single sign-on:
+
+The ELO Java Client must be installed
+
+A Windows user must be created
+
+Windows users must have administrator rights
+
+Choose from the following options to set up single sign-on:
+
+Registry entry in Windows
+
+Start parameters in Linux
+
+SSO with SPNEGO
+
+SSO with NTLM
+
+Registry entry in Windows 
+
+Open the Registry Editor.
+
+Open the following path:
+
+HKEY_CURRENT_USER\Software\JavaSoft\Prefs\ELO Digital Office\eloenterprise
+
+Set up a new issinglesignon entry with the value true.
+
+Restart your computer.
+
+Information
+
+If SSO fails, create a new entry httpFactory with the value ASF.
+
+SSO in Linux 
+
+Enable SSO in the client with EloClient.sh-ssoON.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+1. 
+
+2. 
+
+3. 
+
+23 Client administration
+
+
+
+Please note
+
+You must have configured the Indexserver in advance. For more information, refer to the
+
+section ELO Indexserver SSO, SPNEGO configuration in the Optimization documentation.
+
+SSO with SPNEGO and NTLM 
+
+To configure SSO with SPNEGO or NTLM, refer to the section ELO Indexserver SSO in the 
+
+Optimization documentation.
+
+Create new profile 
+
+Repositories are managed in the Profiles dialog box. The following section describes how to set up
+
+a new profile.
+
+Start the client.
+
+The logon dialog box appears.
+
+Press the keyboard shortcut CTRL+P.
+
+The Profiles dialog box appears. The existing profiles are displayed.
+
+Click New.
+
+1. 
+
+2. 
+
+3. 
+
+24 Client administration
+
+https://docs.elo.com/ops/onprem/en-us/optimization/indexserver-sso/spnego-configuration.html
+https://docs.elo.com/ops/onprem/en-us/optimization/indexserver-sso/spnego-configuration.html
+https://docs.elo.com/ops/onprem/en-us/optimization/indexserver-sso/
+https://docs.elo.com/ops/onprem/en-us/optimization/indexserver-sso/
+
+
+Click the Profile name field and enter a name for the new profile.
+
+Click the Indexserver URL field and enter the Indexserver URL of the new repository.
+
+You must use the following format:
+
+Information
+
+The ELO Indexserver URL of a repository can be determined via the ELO Application
+
+Server Manager.
+
+If a connection to the Indexserver is established, the Indexserver URL field turns green.
+
+Optional: Enter a second ELO Indexserver URL to the Alternative Indexserver URL field. ELO
+
+automatically connects to this URL if a connection cannot be established to the first URL.
+
+Click OK to save the settings and close the dialog box.
+
+Result
+
+You can select the newly registered repository via the Repository drop-down menu in the logon
+
+dialog box. Show logon options must be enabled for this to work.
+
+4. 
+
+5. 
+
+http(s)://<server name>:<port>/ix-<repository name>/ix
+
+6. 
+
+25 Client administration
+
+
+
+Information
+
+The new repository is now also stored as an entry in the Windows registry under 
+
+HKEY_CURRENT_USER\Software\Javasoft\Prefs\ELO Digital Office\eloenterprise. In Linux
+
+and macOS, you will find the ELO Java Client profiles in the home/
+
+<username>/.java/.userPrefs/elo digital office/eloenterprise/prefs.xml file. The
+
+numbers at the end of the entries are incremented automatically. They correspond to the
+
+number of existing repositories.
+
+Registry entries for the ELO Java Client 
+
+Create a string named archive1 and a string value of the ELO Indexserver URL with the forward
+
+slashes (/) replaced by backslashes(\). The value could read:
+
+Next, create a second string named name1 and enter the name of the profile into the field. Capital
+
+letters must have a forward slash, e.g. /E/L/O repository. There are additional rules for special
+
+characters. If you need them in the repository name, create a profile in the ELO Java Client and
+
+check the result in the registry.
+
+You can add profiles in the same way: repository2/name2, repository3/name3, and so on. You can
+
+make the following additional entries:
+
+Name
+
+(string)
+Value
+
+language
+en, de, fr, etc. Determines the default language of the Java Client at logon. If you
+
+enter an invalid language code, the fallback language English is used.
+
+lastlogin User name shown by default in the logon window.
+
+lastselected The name of the profile selected by default in the logon window.
+
+serno
+This registry entry is displayed at the bottom left of the logon window. It will be
+
+overwritten by the value from the Indexserver at next logon.
+
+Windows 
+
+You can configure the server settings for your users by making an entry to the Windows Registry.
+
+Open the Registry Editor and navigate to the following key:
+
+HKEY_CURRENT_USER\Software\JavaSoft\Prefs\ELO Digital Office\eloenterprise
+
+Linux 
+
+In Linux, the ELO Java Client profiles are stored in the following file:
+
+home/<username>/.java/.userPrefs/elo digital office/eloenterprise/prefs.xml
+
+http:\\localhost:9090\ixelo\ix.
+
+26 Client administration
+
+
+
+macOS 
+
+The local Java Client settings are stored in the following files (same as for the Windows registry):
+
+User nodes: ~/Library/Preferences/com.apple.java.util.prefs.plist
+
+System nodes:/Library/Preferences/com.apple.java.util.prefs.plist
+
+We recommend using XCode to edit these files.
+
+Information
+
+After editing, you need to reboot the system so that the changed files are used.
+
+Alternative: Instead of restarting, you can also end any Java application. Then restart the 
+
+prefs system with the following command: killall cfprefsd
+
+• 
+
+• 
+
+27 Client administration
+
+
+
+Configuration 
+
+This chapter describes the configuration options in the ELO Java Client.
+
+Overview 
+
+Use the Configuration dialog box to change the local user settings. You can define many personal
+
+settings yourself; your system administrator will perform all other settings.
+
+To open the Configuration dialog box, click your user name on the ribbon and select Configuration
+
+from the user menu.
+
+Areas 
+
+The Configuration dialog box consists of the following areas:
+
+Display
+
+Color scheme
+
+Dialog boxes
+
+• 
+
+• 
+
+• 
+
+• 
+
+28 Client administration
+
+
+
+Metadata
+
+Document preview
+
+Quick access to functions
+
+Annotations
+
+Advanced settings
+
+Technical presets
+
+Manage functions
+
+On the left side, you can see which areas you can make settings for. If you click the name of an
+
+area, a list with the settings of the area opens. The current settings are displayed on the right-hand
+
+side of the dialog box.
+
+To change a setting, select the setting in the list on the left-hand side and then change the setting
+
+in the display area on the right. Click OK to confirm the changes.
+
+Select user: Select a user or option group via the Select user button to assign the user or option
+
+group specific settings in the configuration.
+
+Levels concept in the configuration 
+
+There are different levels in the configuration: User, option group, global, default. In the Set by
+
+column, you can see the level at which settings have been made. This column appears if you make
+
+settings for another user or group.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+29 Client administration
+
+
+
+If the settings are configured differently at two or more levels (conflicting settings), the following
+
+hierarchy applies:
+
+Level Description Hierarchy
+
+User
+Settings that a user has made or that an
+
+administrator has made on a user's behalf.
+
+The settings for all other levels can
+
+be overridden at the User level.
+
+Option
+
+group
+
+Settings that an administrator has made on behalf
+
+of an option group. Members of the option group
+
+are assigned these settings.
+
+The settings for the levels Global and
+
+Default can be overridden at the 
+
+Option group level.
+
+Global
+Settings that an administrator has made for all
+
+users (the Everyone group).
+
+The settings for the Default level can
+
+be overridden at the Global level.
+
+Default The default settings in the ELO Java Client.
+
+The Default level applies if no
+
+settings have been made at any of
+
+the other levels.
+
+30 Client administration
+
+
+
+Please note
+
+Option groups cannot be used to transfer permissions.
+
+Override settings 
+
+The administrator can modify and override settings at all levels.
+
+For example, to delete the settings for a user, click the X icon in the Set by column.
+
+Information
+
+The user can override these settings again.
+
+General functions 
+
+Transfer settings to other users (arrow icon): Transfer the settings you made to one or multiple
+
+users or an option group.
+
+Save the settings of the configuration as a file (disk icon): This option saves the settings of the
+
+configuration as an INI file.
+
+Load existing settings for the configuration (folder icon): Load the settings from an INI file.
+
+Delete settings (X icon): Click here to delete all settings you made for an option group or other
+
+users. This restores the default settings.
+
+31 Client administration
+
+
+
+Search configuration 
+
+Click in the Search configuration field.
+
+Enter a search term, e.g. "OCR".
+
+Click the Start search button (magnifying glass icon).
+
+The corresponding settings are displayed on the right side of the dialog box.
+
+Delete the search term with the Reset search button. The Display area appears.
+
+Display 
+
+The Display area of the Configuration dialog box contains the settings for the following topics:
+
+General
+
+Layout options
+
+Font
+
+Search
+
+Lists and tables
+
+1. 
+
+2. 
+
+3. 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+32 Client administration
+
+
+
+Task list display options
+
+ 
+
+General 
+
+Feedback message duration in seconds: For actions without displaying a confirmation window, a
+
+notification is displayed in the top area of the program window. Use this option to set how long the
+
+notification is shown in seconds.
+
+Always show split bar: If this option is enabled, the split bar is always displayed. If the option is
+
+disabled, the split bar is only displayed if a margin note exists.
+
+Keep entries on the Clipboard after logging off: This setting enables you to save the contents of the
+
+Clipboard when closing the program.
+
+Default language: Change the language of the client in the drop-down menu.
+
+Layout options 
+
+There are two layout options for the repository:
+
+Tree only: The tree and the document are displayed next to the buttons for the work areas.• 
+
+• 
+
+33 Client administration
+
+
+
+Tree and table: In addition to the tree view, a table is displayed between the tree and
+
+document in a table that shows the contents of the element selected in the tree.
+
+Font 
+
+Font size: Define the font size for the ELO Java Client user interface here.
+
+Information
+
+The ELO Java Client restarts automatically when you change the font size.
+
+Search 
+
+Storage duration of the search entries in the iSearch: Choose an option for the storage duration of
+
+the search results.
+
+New search view for every metadata search: Select this option if you do not want to overwrite an
+
+existing search view when starting a search. A separate search view is created for each new
+
+search.
+
+Search results context: Choose whether to display the Hits column or the Results text column in the
+
+search result list. To improve search performance, select the Disable option.
+
+Number of synonyms: Use the spin box to set the maximum number of synonyms to be displayed.
+
+To disable synonyms, select the value "0".
+
+Maximum number of search results per page: Define in this area how many search results are
+
+displayed per page. The higher the number of search results per page, the longer the search takes.
+
+If the number of search results exceeds the defined number, you can access the other search
+
+results via the arrow buttons below the table with the search results.
+
+Number of search suggestions per field: This setting applies to the filters in the Search work area.
+
+Specify the maximum number of suggestions that can be loaded for each filter.
+
+Minimum value: 51
+
+Maximum value: 10000
+
+Information
+
+If the value is too low, users may not get any suitable suggestions for some search queries.
+
+• 
+
+• 
+
+34 Client administration
+
+
+
+Number of index columns for the metadata in the tasks and search results tables: Search results
+
+and tasks are shown in table form. The table columns correspond to the fields from the metadata.
+
+In this area, you specify how many fields from the metadata you want to display.
+
+Lists and tables 
+
+Show version in the tree view: Select whether and what version information to show in the tree
+
+after the short name.
+
+Show document date in the tree view: If you enable this option, the document date is shown in
+
+front of the short name.
+
+Show folder date in the tree view: If you enable this option, the folder date is shown in front of the
+
+short name.
+
+Show contents of priority fields in the tree view: If you enable this option, the contents of the fields
+
+marked as priority fields are displayed after the short name in the tree view. You will find the setting
+
+for priority fields in the ELO Administration Console under System settings > Field templates >
+
+Properties > Field with high priority.
+
+Show version information in additional columns: Select this option to show additional information
+
+on the entries. This includes the editor of the last version, the version comment, the version date,
+
+and the version size.
+
+Number of priority fields in the table columns: Define the maximum number of columns with high
+
+priority that may be displayed in tree view. A column with high priority is used to display a field of
+
+a metadata form. You will find the setting for priority fields in the ELO Administration Console under
+
+System settings > Field templates > Properties > Field with high priority.
+
+35 Client administration
+
+
+
+Information
+
+Having a large number columns will mean it takes longer to load the view.
+
+Maximum size of thumbnails in pixels: Define the maximum size of the thumbnails in this area.
+
+Enter the length of the longest side in pixels. The size of the thumbnails can also be changed with
+
+the zoom function.
+
+Task list display options 
+
+Refresh interval for the list in minutes: Specify how often you want the task list to be refreshed by
+
+entering a value to the field Refresh interval for the list in minutes. If the tasks list is not updated
+
+automatically, enter 0.
+
+Show tasks due in the following number of days: The task list in the Tasks work area contains an
+
+overview of all due tasks. Use this option to specify in how many days a task must be due for it to
+
+be displayed in the task list. For example, if you enter 10 days, all tasks that are due in the next 10
+
+days will be displayed. Tasks that are only due in 20 days are not displayed.
+
+Maximum number of tasks displayed: With this option, you specify the maximum number of tasks
+
+that are displayed in the task list of the Tasks work area.
+
+Information
+
+This setting only applies to the number of displayed tasks and not to the total number of
+
+tasks in the repository.
+
+List of recently used entries 
+
+With the default settings, the list of recently used entries only shows documents that you have
+
+performed specific actions on (such as checking in and out). You have the option to include recently
+
+stored documents or new folders in this list as well as documents or folders that you selected for a
+
+specific duration.
+
+Maximum number of documents in the "Most recently used" list: Use this option to define the
+
+maximum number of recently used documents that are shown. You will find the overview of
+
+recently used documents in the My ELO work area.
+
+Include stored documents and folders: 
+
+If you select this option, recently stored documents and new folders are included in the "Most
+
+recently used" list.
+
+Save selected entries after the set period: 
+
+If you select this option, selected entries are included in the "Most recently used" list after a set
+
+duration of between 10 and 60 seconds even if they have not been checked out and checked in
+
+again.
+
+36 Client administration
+
+
+
+Information
+
+To ensure that your changes are applied, you should close and restart the ELO Java Client.
+
+Color scheme 
+
+The Color scheme area of the Configuration dialog box contains the following settings:
+
+Color scheme
+
+Color mode
+
+ 
+
+The following settings are located in the Color scheme area of the Configuration dialog box.
+
+Color scheme 
+
+Choose the color scheme for the ELO Java Client program interface in this area.
+
+• 
+
+• 
+
+37 Client administration
+
+
+
+Color mode 
+
+You can change the display mode via the preview images. You can choose between Default, Dark, 
+
+High contrast, light and High contrast, dark.
+
+Information
+
+The ELO Java Client restarts automatically when you change the color scheme.
+
+Dialog boxes 
+
+The Dialog boxes area of the Configuration dialog box contains the following settings:
+
+General
+
+Version comment
+
+Notifications
+
+Annotations when sending as PDF
+
+Inherit permissions when moving entries
+
+Drag-and-drop
+
+Duplicate check
+
+Load new version
+
+Check in
+
+Delete reference
+
+Multiple entries as link
+
+Print separator pages
+
+Delete from the Clipboard
+
+Delete from the search
+
+Logon dialog box
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+38 Client administration
+
+
+
+ 
+
+General 
+
+Show documents in tree view in dialog boxes: If this option is selected, the documents are
+
+displayed in tree view in dialog boxes such as Filing, Move elements or Reference.
+
+Ask for confirmation when the following number of documents are opened simultaneously: If you
+
+open or edit many documents at the same time, it can take a while for them to load in the client.
+
+Use this option to specify how many documents you can open or edit at the same time.
+
+Always show buttons in dialog boxes in this order: Use this option to define whether the OK button
+
+or the Cancel button always appears first in the dialog boxes.
+
+Version comment 
+
+Dialog box for entering a version comment: Select an option for displaying the version dialog box.
+
+39 Client administration
+
+
+
+Notifications 
+
+Show message when postponing a workflow: If you select this option, you will be notified that the
+
+postponed workflows will be hidden in the task list.
+
+Show message if retention period was set: If you select this option, a notification window is
+
+displayed when closing the Metadata dialog box. The message only appears if you have entered a
+
+retention period on the Options tab. In this case, you will be notified that you cannot delete a
+
+document with a retention period before the deadline has expired.
+
+Show message if metadata does not contain a personal identifier: If this option is enabled, a
+
+message is displayed when closing the Metadata dialog box if the fields Personal identifier and 
+
+Deletion period are empty.
+
+Show message when setting the document status to "Non-modifiable": Define whether you want to
+
+display a message when setting the Non-modifiable document status.
+
+Show message when deleting files in the Intray: Documents in the Intray are not yet in the
+
+repository. When you delete documents in the Intray, the documents (and metadata) are removed
+
+and cannot be restored. Select this option to show a message when deleting Intray documents. You
+
+will be asked to confirm the deletion process.
+
+Show message in the "Metadata" dialog box when changing metadata forms: If you select this
+
+option, a message is displayed when you assign the entry a different metadata form in the 
+
+Metadata dialog box. The message only appears if a field that you already edited does not exist in
+
+the new metadata form.
+
+Show message when removing your own read or write permissions: Specify whether to display a
+
+message when a user wants to revoke their own read or write permissions.
+
+Show message when overwriting existing metadata with serial filing: Specify whether to display a
+
+message when overwriting existing metadata with serial metadata.
+
+Show message when searching for multiple terms in different areas of iSearch: Specify whether to
+
+display a message when you perform a search with multiple terms in multiple areas (full text,
+
+metadata, and feed). When you perform a search with multiple terms, only results containing all
+
+the search terms are found.
+
+Show restart required message when activating/deactivating a substitution: Specify whether you
+
+want a message to be displayed when you activate or deactivate a substitution. Changes to
+
+substitutions do not take effect until you restart the client.
+
+Annotations when sending as PDF 
+
+In this area, you specify how annotations on a document are handled when creating and sending a
+
+PDF file.
+
+Please note
+
+40 Client administration
+
+
+
+When you create a PDF, margin notes on the split bar are not embedded. The embedded
+
+annotations can no longer be edited.
+
+Confirm via dialog box: A dialog box opens. In this dialog box, you can choose how to
+
+proceed with the annotations.
+
+Do not embed annotations: The annotations will not be embedded in the PDF.
+
+Embed annotations in the PDF file: The annotations will be embedded into the PDF during
+
+conversion.
+
+Inherit permissions when moving entries 
+
+Behavior for differing permissions when moving documents: In this area, specify what to do with
+
+permissions when moving an entry in the repository. Choose from the following options:
+
+Confirm via dialog box: A dialog box opens. In this dialog box, you can choose how to
+
+proceed with permissions when moving entries.
+
+Keep previous permissions unchanged: The moved entries retain the previous permission
+
+settings.
+
+Replace with the permissions of the target folder: The moved entries inherit the permission
+
+settings of the target folder.
+
+Replace permissions inherited from the previous folder, keep individual permissions: The
+
+moved entries inherit the permission settings from the target folder. Any additional
+
+permission settings will be retained.
+
+Drag-and-drop 
+
+Behavior when dragging and dropping within the repository: Here is where you specify the settings
+
+for moving documents in the Repository work area using drag-and-drop.
+
+Choose from the following options:
+
+Confirm via dialog box: A dialog box opens. In the dialog box, you can determine what ELO
+
+should do in each case.
+
+Move: Moves the selected entries without confirmation.
+
+Reference: Creates references without confirmation.
+
+Behavior when dragging a file to a document in ELO: This is where you specify the settings for
+
+dragging an external document onto a document that already exists in ELO.
+
+Choose from the following options:
+
+Confirm via dialog box: A dialog box opens. In the dialog box, you can determine what ELO
+
+should do in each case.
+
+File as a new version of the document: This creates a new version of the document.
+
+Attach to front: The file is attached to the front of the document you have dragged it to.
+
+Attach to back: The file is attached to the end of the document you have dragged it to.
+
+File as a new document in the repository: The document is filed to the repository as a new
+
+document.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+41 Client administration
+
+
+
+File as a new document with the same metadata: The document is filed to the repository as a
+
+new document. The new document is filed with the same metadata as the document that you
+
+drag the file to.
+
+Information
+
+If you have selected the File as a new version of the document option, you cannot drag and
+
+drop onto a checked-out or deleted document.
+
+Confirm via dialog box if you want to cancel metadata entry when filing multiple documents: If this
+
+option is enabled, a dialog box will appear if you cancel the metadata entry asking whether you
+
+want to file the documents with the default metadata. If the option is not enabled, the action is
+
+aborted without asking you for confirmation.
+
+Duplicate check 
+
+Behavior when filing a duplicate: When filing documents, the client recognizes whether the
+
+document already exists in the repository. This is where you specify what to do with duplicates.
+
+Choose from the following options:
+
+Confirm via dialog box: A dialog box opens. In the dialog box, you can determine what ELO
+
+should do in each case.
+
+Reference: This automatically creates a reference.
+
+File again: The document is stored in duplicate.
+
+Load new version 
+
+Behavior with an identical new document version: This option refers to the Load new version
+
+function on the Document tab > Versions.
+
+This determines how the program behaves when an identical document is loaded as a new
+
+document version using the Load new version function.
+
+Choose from the following options:
+
+Confirm via dialog box: A dialog box opens. In the dialog box, you can determine what ELO
+
+should do in each case.
+
+Cancel loading the new version: A new version is not created.
+
+File as new version anyway: Creates a new version with identical content.
+
+Check in 
+
+Behavior when checking in an unmodified document: This option refers to the Check in function on
+
+the Document tab.
+
+Choose from the following options:
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+42 Client administration
+
+
+
+Confirm via dialog box: A dialog box opens. In the dialog box, you can determine what ELO
+
+should do in each case.
+
+Cancel editing and restore original version: A new version is not created.
+
+File as new version anyway: Creates a new version with identical content.
+
+Delete reference 
+
+Behavior when deleting a reference: Use this option to specify whether you want a dialog box to
+
+appear before deleting a reference and what ELO should do if the dialog box is deactivated.
+
+Choose from the following options:
+
+Confirm via dialog box: A dialog box opens. In the dialog box, you can determine what ELO
+
+should do in each case.
+
+Delete reference only: If this option is enabled, a dialog box will not appear. Only the
+
+reference will be deleted. The original document will not be deleted.
+
+Delete original and reference: If this option is enabled, a dialog box will not appear. The
+
+reference and the original document will be deleted.
+
+Multiple entries as link 
+
+Behavior when creating a link when multiple entries are selected: Use this setting to define the
+
+program behavior when sending multiple entries as an ELO link.
+
+Choose from the following options:
+
+Confirm via dialog box: A dialog box opens. In the dialog box, you can determine what ELO
+
+should do in each case.
+
+Create one ELO link for each entry: This option creates an ELO link for each entry sent.
+
+Create one ELO link for all entries: This option creates one ELO link for all entries sent.
+
+Print separator pages 
+
+Behavior when printing a separator page: Define in this area which type of separator page will be
+
+printed.
+
+Separator pages are needed for the Join pages function, for example. To print a separator page
+
+pattern, switch to the Intray work area. Open the Scan profiles dialog box and click the Print
+
+separator page button.
+
+Choose from the following options:
+
+Confirm via dialog box: A dialog box opens. In the dialog box, you can determine what ELO
+
+should do in each case.
+
+Print separator page with horizontal bar: This option prints separator pages with a horizontal
+
+bar..
+
+Print separator page with vertical bar: This option prints separator pages with a vertical bar.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+43 Client administration
+
+
+
+Delete from the Clipboard 
+
+Behavior when deleting from the Clipboard: When you select this option, a message appears when
+
+you delete an entry from the Clipboard. The message explains the difference between the Delete
+
+and Remove from Clipboard functions.
+
+Choose from the following options:
+
+Confirm via dialog box: A dialog box opens. In the dialog box, you can determine what ELO
+
+should do in each case.
+
+Remove from Clipboard: Entries deleted from the Clipboard are removed from the Clipboard
+
+but not from the repository.
+
+Delete in repository: Entries deleted from the Clipboard are removed from the Clipboard AND
+
+the repository.
+
+Delete from the search 
+
+Behavior when deleting in the search: This option enables you to specify how the program behaves
+
+when you delete a document in the Search work area.
+
+Choose from the following options:
+
+Confirm via dialog box: A dialog box opens. In the dialog box, you can determine what ELO
+
+should do in each case.
+
+Remove from search results: The selected entries are removed from the search results but
+
+not from the repository.
+
+Delete in repository: The selected entries are removed from the search results AND the
+
+repository.
+
+Logon dialog box 
+
+Show logon dialog box when closing the program: When this option is selected, the logon dialog
+
+box is displayed when closing the program.
+
+Show dialog box for selecting functional roles during logon: If this option is enabled, users with a
+
+functional role will see the Enable role dialog box when they log on.
+
+Functional roles are designed to assign users different sets of rights and permissions for different
+
+tasks. For example, if a user has to perform administrative tasks that require special rights and/or
+
+authorizations, that user can enable the role Team leader. Once the task is completed, the user can
+
+disable the role again.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+44 Client administration
+
+
+
+Functional roles are created as groups in the ELO Administration Console. You need to enable the 
+
+Functional role option for the respective group. Members of the respective groups are assigned this
+
+functional role. If the role is enabled, the rights and permissions of the respective group are also
+
+enabled.
+
+Metadata 
+
+The Metadata area of the Configuration dialog box contains the settings for the following topics:
+
+General
+
+Show metadata
+
+Default settings for metadata
+
+Metadata form for different file types
+
+• 
+
+• 
+
+• 
+
+• 
+
+45 Client administration
+
+
+
+ 
+
+General 
+
+Use default keyword list for fields: Select this option to use a default keyword list (global) for fields
+
+without a separate keyword list.
+
+Sort keyword lists alphabetically: Select this option to sort keyword lists alphabetically.
+
+Automatically activate keyword list filter: When this option is enabled, the keyword list is filtered
+
+automatically based on the characters entered when assigning metadata.
+
+Show "Metadata" dialog box on filing if a metadata form has not been assigned: Select this option
+
+to open the Metadata dialog box when filing a new document. The dialog box only appears if the
+
+document has not been assigned a metadata form. If the option is disabled, the document is
+
+automatically filed with the default metadata form for new documents. The file name is used as
+
+the short name.
+
+46 Client administration
+
+
+
+Show metadata 
+
+Show extra text in the metadata preview: Enable this option to display the text entered on the 
+
+Extra text tab of the Metadata dialog box in the metadata preview.
+
+Default settings for metadata 
+
+Form for new folders: Specify which metadata form to use for new folders.
+
+Form for new documents: Specify which metadata form to use for new documents.
+
+Form for the metadata search: Select the metadata form that is used by default for the metadata
+
+search.
+
+Metadata form for different file types 
+
+In this area, you can link file extensions to metadata forms. The file extension is recognized when
+
+you file a document. The associated metadata form is set by default. When filing without
+
+metadata, the linked metadata form is used automatically.
+
+By default, the .js and .vbs file extensions are linked to the ELOScripts metadata form and the .eml
+
+and .msg file extensions are linked to the E-mail metadata form.
+
+Information
+
+It is not possible to remove the predefined file extensions eml, js, msg, vbs for individual
+
+users or option groups.
+
+Use default: Click the Use default button to restore the original settings in this area.
+
+New: Click the New button to add a new row for linking the file type and the metadata form. Enter a
+
+file extension and select a metadata form.
+
+X: Click one of the buttons with an X icon to delete the corresponding row.
+
+Document preview 
+
+The Document preview area of the Configuration dialog box contains the settings for the following
+
+topics:
+
+General
+
+E-mail
+
+Preview configuration for different file types
+
+Preview plug-ins
+
+• 
+
+• 
+
+• 
+
+• 
+
+47 Client administration
+
+
+
+ 
+
+General 
+
+Maximum document size for the viewer pane in MB: Specify the maximum number of megabytes
+
+(MB) a document can have in the preview. If a document exceeds the specified size, a message will
+
+be displayed instead of the preview. The value 0 disables the preview.
+
+Show OCR terms in the document: Select this option to highlight the words in the document
+
+recognized by OCR. As soon as you point to a word, the word is highlighted. If the Metadata dialog
+
+box is open, you can click a word to add it to the metadata.
+
+Click to transfer OCR term to form: Transfer words recognized by OCR to the currently open form
+
+with a click.
+
+Page between documents: Selecting the Page between documents option allows you to jump to the
+
+next document when you reach the end of the original document in the viewer pane.
+
+Increment version number during PDF conversion: A new version of the document is created during
+
+PDF conversion. If the option Increment version number during PDF conversion is enabled, the
+
+48 Client administration
+
+
+
+document version is incremented during PDF conversion. Otherwise, the previous version number
+
+is retained.
+
+File type for preview documents: This setting refers to the Create document preview function does
+
+not affect the automatic preview within the ELO Java Client. Specify whether to display preview
+
+documents in TIFF or PDF format.
+
+Information
+
+The Create document preview function allows you to convert a document as a preview
+
+document to PDF or TIFF format. You will find the function Create preview document on the
+
+ribbon in the ELO Java Client under Document > Convert.
+
+Please note
+
+Depending on the selected format, the correct ELO printer (ELO TIFF Printer or ELO PDF
+
+Printer) must be installed. Both ELO printers are installed when you install the ELO Java
+
+Client with the AIO installer.
+
+Use internal browser preview for HTML documents: If this option is enabled, HTML documents are
+
+displayed with the internal browser instead of the embedded Internet Explorer.
+
+Information
+
+The internal browser is recommended for high resolution monitors.
+
+E-mail 
+
+Use internal browser preview for e-mails: If this option is enabled, e-mails are displayed with the
+
+internal browser instead of the embedded Internet Explorer.
+
+Information
+
+The internal browser is recommended for high resolution monitors.
+
+Suppress images from the Internet within the e-mail preview: If this option is selected, images in e-
+
+mails that are downloaded from the Internet will not be downloaded. The images cannot be
+
+displayed in this case. However, embedded images in e-mails will be displayed.
+
+Double-click to open files in an e-mail attachment: In this field, you can enter the file extensions
+
+that you want to open by double-clicking. For all other file extensions, a dialog box for saving the e-
+
+mail attachment opens.
+
+49 Client administration
+
+
+
+Information
+
+You can enter multiple file extensions. You need to separate the entries with periods.
+
+Certificates for decrypting e-mails: This option allows you to specify where ELO should import the
+
+certificates for decrypting e-mails from.
+
+Use Windows certificate store: If you are using ELO on a Microsoft Windows system, you can
+
+use the certificates supplied by Microsoft Windows.
+
+Use certificate store from specified path: If you are not using ELO on a Microsoft Windows
+
+system, or if you do not want to use the certificates supplied by Microsoft Windows for other
+
+reasons, you need to select this option. In addition, you must specify where you want to store
+
+the certificates in the Path field. 
+
+Preview configuration for different file types 
+
+In this area, you specify which type of preview to use for different file extensions. If no preview
+
+method is defined for a file extension, the browser preview is used.
+
+Use default: Click the Use default button to restore the original settings in this area.
+
+New: Click the New button to add a new row for linking the file type and the preview method. Enter
+
+a file extension and select a preview method.
+
+Confirm: When displaying this file type, ELO will ask every time whether you want to open the file
+
+with the default viewer.
+
+X: Click one of the buttons with an X icon to delete the corresponding row.
+
+Choose from the following options for configuring the preview:
+
+ActiveX plug-in preview: This preview type now supports viewer plugins from the ELO
+
+Windows Client.
+
+Apple OS X preview: Viewer for displaying files on the macOS operating system
+
+Image preview: Viewer for JPG, BMP, and TIFF that can be used to place annotations on
+
+documents.
+
+Browser preview: Preview in the standard browser.
+
+DXL preview: Viewer for documents from IBM Notes in .dxl format
+
+EML e-mail preview: Viewer for IBM Notes e-mails in .eml format.
+
+Windows Media Player preview: Preview for audio and video files based on JavaFX
+
+MSG e-mail preview: Viewer for Microsoft Outlook e-mails in .msg format
+
+Windows Media Player preview (Windows): Preview in Windows for audio and video files.
+
+MS Office preview (Windows): Recommended viewer for Microsoft Office documents newer
+
+than 2001. Also suitable for Apache OpenOffice documents (ODT)
+
+OpenOffice preview: Viewer for Apache OpenOffice documents. Requires Apache OpenOffice
+
+and additional module to be installed.
+
+PDF preview: Viewer for PDF documents that enables users to place annotations on
+
+documents. As an alternative, use Internet Explorer with the Acrobat Reader plug-in (the
+
+annotations on the document are not shown)
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+50 Client administration
+
+
+
+Text preview: Viewer for text files; allows two font types, adjustable font size, and automatic
+
+line breaks
+
+Show preview document: With this setting, preview documents created previously are shown
+
+instead of the original documents.
+
+ZIP preview: Viewer for ZIP archives, shows file content as a tree; files can be shown or filed
+
+via the context menu
+
+Preview plug-ins 
+
+In this area, you can link file extensions to preview plug-ins.
+
+New: Click the New button to add a new row for linking the file type and the preview plug-in. Enter
+
+a file extension and the corresponding OLE object ID.
+
+Please note
+
+For the plug-ins to work, the ActiveX plug-in preview method must be set for the respective
+
+file extensions (Preview configuration for different file types area). If a preview method was
+
+not selected, the ActiveX plug-in preview method is set automatically.
+
+X: Click one of the buttons with an X icon to delete the corresponding row.
+
+• 
+
+• 
+
+51 Client administration
+
+
+
+Quick access to functions 
+
+Available functions and keyboard shortcuts 
+
+In the Available functions and keyboard shortcuts column, select the function that you want to add
+
+to the Favorites tab or a context menu.
+
+Filter: Use the Filter field to filter the Available functions and keyboard shortcuts column. The
+
+column is refreshed as soon as you enter a character.
+
+Reset filters: Click the Reset filters button to delete the current filter term from the Filter field. All
+
+functions are displayed.
+
+Functions on the Favorites tab and in the context menus 
+
+In the column Functions on the Favorites tab and in the context menus, you can see which functions
+
+are already on the Favorites tab or in the selected context menu.
+
+52 Client administration
+
+
+
+Settings for: Use the Settings for drop-down menu to choose whether you want to edit the Favorites
+
+tab or one of the context menus.
+
+The following items are available for selection:
+
+Favorites tab
+
+Entry context menu (context menu for entries in the repository)
+
+Tasks context menu
+
+Intray context menu
+
+Information
+
+Functions only appear in the context menu if they are executable in the given context.
+
+Assign keyboard shortcuts to functions 
+
+You can assign keyboard shortcuts to functions in the Available functions and keyboard shortcuts
+
+column.
+
+Select the function you want to assign a keyboard shortcut to.
+
+The function is now marked as selected.
+
+Enter the desired keyboard shortcut, e.g. CTRL + M.
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+53 Client administration
+
+
+
+Please note
+
+Some keyboard shortcuts are already in use by the operating system or other programs.
+
+This applies in particular to the function keys F1 to F12. You can assign keyboard shortcuts to
+
+the function keys but the commands will not be executed. Keyboard shortcuts at the
+
+operating system level are executed first.
+
+Enter the keyboard shortcut in the field to the right of the function.
+
+Delete keyboard shortcuts 
+
+Select the function with the keyboard shortcut you want to delete.
+
+Press the BACKSPACE key.
+
+The keyboard shortcut is deleted.
+
+Reset keyboard shortcuts 
+
+You have the option to restore all keyboard shortcuts to default values.
+
+Scroll down in the Configuration dialog box.
+
+Click the Use default button below the Available functions and keyboard shortcuts column.
+
+All keyboard shortcuts you assigned are removed.
+
+Keyboard shortcuts as PDF file 
+
+You can save an overview of the keyboard shortcuts as a PDF file.
+
+Scroll down in the Configuration dialog box.
+
+Click the PDF output button.
+
+The PDF output dialog box appears.
+
+Select a storage location in the file system.
+
+Click Save.
+
+A PDF file with all keyboard shortcuts is saved to the selected storage location.
+
+Add function 
+
+Use the Settings for drop-down menu to choose where you want to add a function.
+
+Select the desired function in the Available functions and keyboard shortcuts column.
+
+Click Add function (arrow icon pointing to the right).
+
+1. 
+
+2. 
+
+1. 
+
+2. 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+1. 
+
+2. 
+
+3. 
+
+54 Client administration
+
+
+
+Information
+
+The Separator line function can be added as often as you like. The separator line is
+
+used to group functions and to set them apart from one another.
+
+The function is displayed in the area on the right.
+
+Change order 
+
+You can change the order of the entries on the Favorites tab and in the context menus.
+
+Use the Settings for drop-down menu to choose what you want to edit.
+
+Select the desired function in the Functions on the Favorites tab and in the context menus
+
+column.
+
+Click the Move up button (arrow pointing upwards) to move the selected function up.
+
+Alternative: Click the Move down button (arrow pointing downwards) to move the selected
+
+function down.
+
+Information
+
+You can also move the functions with drag-and-drop.
+
+Remove function 
+
+Use the Settings for drop-down menu to choose what you want to edit.
+
+Select the desired function in the Functions on the Favorites tab and in the context menus
+
+column.
+
+Click Remove function (arrow icon pointing to the left).
+
+Information
+
+You can also add or remove functions by double-clicking them.
+
+Reset functions 
+
+You can also restore the default settings of the Favorites tab or the context menus.
+
+Scroll down in the Configuration dialog box.
+
+Use the Settings for drop-down menu to choose what you want to edit.
+
+Click Use default (below the Functions on the Favorites tab and in the context menus)
+
+column.
+
+1. 
+
+2. 
+
+3. 
+
+1. 
+
+2. 
+
+3. 
+
+1. 
+
+2. 
+
+3. 
+
+55 Client administration
+
+
+
+All functions that you added are removed from the Favorites tab or the selected context
+
+menu.
+
+Annotations 
+
+The settings for the following topics are located in the Annotations area of the Configuration dialog
+
+box.
+
+Sticky notes
+
+Marker width
+
+Horizontal marker
+
+Freehand marker
+
+Rectangle marker
+
+Strikethrough
+
+Redaction
+
+Text notes
+
+ 
+
+Sticky notes 
+
+A sticky note is a colored text field that you can place directly on a document to record information.
+
+There are five different colors available for sticky notes. The default colors are yellow, green, red,
+
+blue, and orange. You can define these colors individually.
+
+You can make the following settings:
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+56 Client administration
+
+
+
+Font: Click Font to open the Font dialog box. You can set the font, font size, font style, font color,
+
+and permissions for each type of sticky note here.
+
+Color: The Color button opens the Select color dialog box. Use the dialog box to change the color of
+
+the respective sticky note.
+
+Permissions: Click Permissions to open the Permissions dialog box. Use the dialog box to define the
+
+permission settings for the respective sticky note type.
+
+Marker width 
+
+The Marker, Freehand marker, and Strikethrough tools are available in three different sizes (widths).
+
+You can define the widths of the markers with the Large marker, Medium marker, and Small marker
+
+fields.
+
+Information
+
+The values are about the same as the point size, depending on the font. For example, if you
+
+enter the value 12, this corresponds approximately to the width of a line in 12-point Arial
+
+font.
+
+Horizontal marker 
+
+You can define five types for the Horizontal marker tool. You can define the colors and permissions
+
+for each type.
+
+Color: The Color button opens the Select color dialog box. Change the color of the respective
+
+marker in the dialog box.
+
+Permissions: Click Permissions to open the Permissions dialog box. Define the permission settings
+
+for the respective marker in the dialog box.
+
+Freehand marker 
+
+You can define five types for the Freehand marker tool. You can define the colors and permissions
+
+for each type.
+
+Color: The Color button opens the Select color dialog box. Change the color of the respective
+
+marker in the dialog box.
+
+Permissions: Click Permissions to open the Permissions dialog box. Define the permission settings
+
+for the respective marker in the dialog box.
+
+Rectangle marker 
+
+You can define five types for the Rectangle marker tool. You can define the colors and permissions
+
+for each type.
+
+57 Client administration
+
+
+
+Color: The Color button opens the Select color dialog box. Change the color of the respective
+
+marker in the dialog box.
+
+Permissions: Click Permissions to open the Permissions dialog box. Define the permission settings
+
+for the respective marker in the dialog box.
+
+Strikethrough 
+
+You can change the settings of the Strikethrough tool.
+
+Color: The Color button opens the Select color dialog box. Change the background color of the 
+
+Strikethrough tool in the dialog box.
+
+Permissions: Click Permissions to open the Permissions dialog box. Define the permissions settings
+
+for the Strikethrough tool in the dialog box.
+
+Redaction configuration 
+
+The Redaction tool can be used to render texts unreadable.
+
+Information
+
+For the Redaction function to be available, some settings must be made in the ELO
+
+database. You can find more detailed information in the documentation ELO Redaction.
+
+Permissions: Click Permissions to open the Permissions dialog box. Define the permission settings
+
+for redacting documents in the dialog box.
+
+Text note configuration 
+
+You can define five types for the Text note tool. You can set the font, font size, font style, font color,
+
+and permissions for each type.
+
+Font: Click Font to open the Font dialog box. You can set the font, font size, font style, font color,
+
+and permissions for each type of text note here.
+
+Permissions: Click Permissions to open the Permissions dialog box. Define the permission settings
+
+for each type of text note in the dialog box.
+
+Advanced settings 
+
+The Advanced settings area of the Configuration dialog box contains the settings for the following
+
+topics:
+
+General
+
+Settings for the Intray work area
+
+Intray folder in the file system
+
+Workflow
+
+My ELO
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+58 Client administration
+
+https://docs.elo.com/ops/onprem/en-us/repository/document-redaction/
+https://docs.elo.com/ops/onprem/en-us/repository/document-redaction/
+
+
+Signature
+
+ 
+
+General 
+
+Drag and drop onto the topmost level of a view: If this setting is selected, the entry is inserted at
+
+the top repository level when dragging and dropping onto a view. If this option is disabled, the entry
+
+is inserted at the location currently selected in the view.
+
+Information
+
+If a document is dragged to a view that only contains a branch of the repository, the
+
+document is filed at the top level of this view.
+
+Always use short name as file name outside of ELO: Select this option to always use the short
+
+name of an entry as the file name. The file name is then used when sending a document by e-mail,
+
+59 Client administration
+
+
+
+for example. If this option is enabled, the File name field is ignored on the Options tab of the
+
+metadata form.
+
+Optimize collaboration between Java Client and DMS Desktop: This option should only be selected
+
+if the ELO Java Client is used together with ELO DMS Desktop. Select this option to avoid slow load
+
+times when opening Microsoft Office documents.
+
+Transfer checked-out documents to the server when logging off: Select this option to save checked
+
+out documents to the server after the user logs off. If the user logs onto another workstation, they
+
+have access to documents that they have checked out.
+
+Checking out a folder: Check out and lock references: This option is for checking out folders. If
+
+there are references in a checked-out folder, these are also stored in the checkout directory. To lock
+
+the references and original files when checking out folders, select the option Checking out a folder:
+
+Check out and lock references.
+
+Please note
+
+If you check out a folder with all the references, you cannot check in the references
+
+separately. Instead, you need to check in the entire folder. In addition, you cannot check in
+
+the original documents that are linked to the references until you have checked in the entire
+
+folder.
+
+Automatically compress e-mail attachments into a ZIP archive: Enter a maximum value here. If the
+
+number of e-mail attachments exceeds this value, the e-mail attachments will be automatically
+
+compressed into a ZIP archive.
+
+Settings for the Intray work area 
+
+Refresh interval for the Intray in minutes: Enter a number greater than zero to the Refresh interval
+
+for the Intray in minutes field if you want the Intray work area to automatically refresh at regular
+
+intervals. The value zero means that the Intray will not automatically refresh.
+
+Refresh Intray when opened: Select this option to automatically refresh the Intray work area every
+
+time you open it. This also updates the monitored folders.
+
+Start OCR (text recognition) in the Intray: Select this option to start text recognition as soon as a
+
+document is filed to the Intray work area. The text content of the document is available when
+
+entering metadata, for example.
+
+Show preview of the scanned pages during the scan process: Select this option to display the
+
+preview of the scanned pages during the scan process.
+
+Automatically file documents assigned a metadata form with existing filing definitions: Select this
+
+option to automatically file documents if you have entered all metadata and the documents have a
+
+valid filing definition. The documents are filed as soon as you close the Metadata dialog box by
+
+clicking OK or Apply and next. You do not need to run the Automatic filing function.
+
+60 Client administration
+
+
+
+Information
+
+You cannot create or edit metadata forms in the ELO Java Client. You need to do this in the
+
+ELO Administration Console. Metadata forms must be created by users with appropriate
+
+administrative rights and permissions.
+
+Automatically convert TIFF files to PDF when filing to ELO: TIFF files are automatically converted
+
+into PDF files when filed to ELO.
+
+Create searchable PDFs: If this option is enabled, TIFF files are sent to OCR during automatic
+
+conversion to create searchable PDFs.
+
+Join pages: Specify which type of separator pages to use for the Join pages function.
+
+The following options are available:
+
+Separator page
+
+Blank page
+
+Delete separator page and blank pages
+
+Triangle to mark the first page 
+
+Save Intray on server when logging off: Select this option to save checked out documents to the 
+
+Intray work area after the user logs off. If the user logs onto another workstation, they have access
+
+to their Intray documents.
+
+Intray folder in the file system 
+
+Include child directories when importing into the Intray: Enable this option to include all child
+
+directories of the specified Intray directories when refreshing the Intray work area.
+
+New: Click the New button to select a folder in the file system to use as the Intray folder.
+
+Information
+
+You can use the variables %USERTEMP% and %APPDATA% in the Intray folder.
+
+Directory: The Directory field shows the path to the designated Intray folder.
+
+X: Click the Remove directory buttons (X icon) to remove the corresponding link to a folder in the
+
+file system.
+
+Workflow 
+
+Default duration for workflow postponement in days: You can defer a workflow for processing later
+
+on. Use this option to define the default settings in days for the Postpone workflow dialog box.
+
+Start workflow in edit mode: Select this option to edit the selected workflow template when starting
+
+a new workflow. If this option is not checked, you only see a list of templates. In this case, you can
+
+open the workflow templates using the Show template button.
+
+• 
+
+• 
+
+• 
+
+• 
+
+61 Client administration
+
+
+
+Show successor node users when forwarding workflows: The name of the successor node will be
+
+displayed in the Forward workflow dialog box in addition to the name of the user/group entered as
+
+the node editor.
+
+Automatically refresh the "Workflow overview": This options allows you to specify whether the list
+
+of workflows in the Workflow overview dialog box is refreshed automatically.
+
+Default name for new workflows: In this area, you specify the default settings for the name of new
+
+workflows. You can change the name when you start the workflow.
+
+Choose from the following options:
+
+Name of workflow template
+
+Short name of entry
+
+Name of workflow template + short name of entry
+
+Short name of entry + name of workflow template 
+
+My ELO 
+
+This is where you define the settings for automatically subscribing to a feed.
+
+Choose from the following options:
+
+When filing a document
+
+When creating a new folder
+
+When checking in a new version
+
+When creating a post or comment
+
+Signature 
+
+Recognize signature files: In the File extensions field, specify which file extensions are to be
+
+recognized as signature files.
+
+Information
+
+You can enter multiple file extensions. You need to separate the entries with periods.
+
+Save signature files: Select this option to save signature files in ELO.
+
+Include signature file when sending documents: Select this option to send the associated signature
+
+file along with a document.
+
+Automatically save the signature verification log as an attachment: Select this option to store the
+
+verification logs of the documents as an attachment.
+
+Check signature on display: Select this option to run the signature check while displaying a signed
+
+document.
+
+Behavior for signing PDF documents: In this area, you specify what to do when signing PDF
+
+documents. Choose from the following options:
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+62 Client administration
+
+
+
+Confirm via dialog box
+
+Embed signature into document
+
+Create separate signature file
+
+Technical presets 
+
+The Technical presets area of the Configuration dialog box contains the settings for the following
+
+topics:
+
+General
+
+Display and refresh
+
+Log file
+
+Date formats
+
+Number formats
+
+Show or hide work areas
+
+Folder for document templates
+
+OCR (text recognition)
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+63 Client administration
+
+
+
+General 
+
+Allow participation in product improvement: Select this option to participate in product
+
+improvement.
+
+Print via ELOprintTool (Windows): Enable this option to print documents with the ELOprintTool.
+
+Use as scan method: Select which scan method to use.
+
+Please note
+
+The ELOscanTool can only be used under Microsoft Windows and requires a 32-bit TWAIN
+
+driver.
+
+Set as fax printer: To send a document as a fax, the document must be sent to a fax printer that
+
+processes the digital data and sends it to the recipient. Use this setting to specify which fax printer
+
+to use.
+
+Barcode serial number: Enter a valid barcode serial number here if you want to use the barcode
+
+function at your workstation.
+
+Information
+
+This setting is only available to administrators with the rights Main administrator and/or Edit
+
+user data.
+
+Please note
+
+Barcode serial numbers are unique to each workstation and may not be used multiple times.
+
+Script event when using a handheld barcode scanner: If the Script event when using a handheld
+
+barcode scanner is enabled, the ELO Java Client sends a corresponding script event as soon as a
+
+handheld barcode scanner is recognized.
+
+Activate script debugger for Eclipse: Select the Activate script debugger for Eclipse option to
+
+activate the script debugger for internal scripts. This will disable the internal script debugger
+
+(CTRL+ALT+D).
+
+Compile and save scripts: If this option is enabled, ELO compiles new scripts initially and then
+
+saves them locally. This improves the performance of the client on start. However, doing so means
+
+that you can no longer call the debugger. Changes to scripts are detected automatically.
+
+Always cache script files: If this option is enabled, script files are always stored in the cache. This
+
+also applies if the Clear document cache on shutdown option is enabled. This improves the
+
+performance of the client on start.
+
+64 Client administration
+
+
+
+Enable HTTP Automation Interface: Selecting the Enable HTTP Automation Interface option allows
+
+you to call scripting functions starting with the prefix http via the HTTP Automation Interface. To do
+
+so, you need to enter the corresponding port number in the Server port field.
+
+The syntax must follow this pattern:
+
+Server port: To call script functions via the HTTP Automation Interface, you need to enter the
+
+corresponding port number in the Port field.
+
+Create a link to the entry in the ELO Web Client when sending an ELO link: If this option is enabled,
+
+a web link to the entry is embedded in the e-mail when sending an ELO link. This web link can also
+
+be used as an ELO link in the ELO Web Client.
+
+Web Client URL: For the additional web link when sending an ELO link to work, you need to enter
+
+the ELO Web Client URL in the Web Client URL field.
+
+Add references to full text database: If this option is enabled, references are included when adding
+
+to the full text database.
+
+Display and refresh 
+
+Cache refresh interval in seconds: Use this option to set the refresh interval of the repository. Work
+
+areas and settings are updated at this interval.
+
+Limit display in large folders: If this option is enabled, the folders entered in the Object IDs field are
+
+not fully loaded during a "Go to" action. Instead, only the respective entry is loaded.
+
+Object IDs: In this field, enter the object IDs of the folders that you do not want to be affected by
+
+the Limit display of large folders option.
+
+Storage duration of thumbnails in the cache: The ELO Java Client stores the created thumbnails to a
+
+local cache. In this area, you specify when to delete the cache. Choose from the following options:
+
+Delete when closing ELO
+
+Delete after 30 days
+
+Never delete
+
+Clear document cache on closing: If the Clear document cache on closing option is enabled, the
+
+temporary file folder will be emptied when you close the ELO Java Client.
+
+Maximum number of documents in the In use work area: In this area, you specify how many
+
+documents can be checked out at the same time. This prevents too many external applications
+
+from being started since this could impact system performance. The default value is 20.
+
+Maximum number of pages in OCR preprocessing: Use the value in the Maximum number of pages
+
+in the OCR preprocessing field to specify the maximum number of pages per document to be
+
+evaluated during OCR preprocessing. The default value is 20.
+
+http://<server>:<port>/script/<script name>/?p1=<parameter value1>&p2=<parameter value2>
+
+• 
+
+• 
+
+• 
+
+65 Client administration
+
+
+
+Start search immediately when clicking a search favorite: The Search favorites function on the 
+
+Search tab enables you to save search favorites and use them repeatedly. Select the Start
+
+immediately when clicking a search favorite option to immediately start the search when clicking a
+
+search favorite. If this option is disabled, the search favorite is added without starting the search.
+
+Information
+
+The sort order of the search results always applies to the currently selected page.
+
+Log file 
+
+The log file contains the automatic protocol of all or certain processes of an application.
+
+You can make the following settings for the log file:
+
+Write log file: Select this option to write a log file.
+
+Open log file: Open the log file for viewing.
+
+Send log file: Attach a log file as a .txt file to an e-mail.
+
+Log file path: Define the storage location for the log file.
+
+Information level: Define how detailed you want the information in the log file to be (default, script
+
+development, debug, or network debug).
+
+Information
+
+You can only make changes to the log file if there is no logger entry in the registry.
+
+Date formats 
+
+Possible date and time formats: Click this link to show the variables for the configuration of the
+
+date and time formats.
+
+Preview: The Preview field shows what the date format would look like with the current settings.
+
+Format for date and time entries: Specify the format for the date and time entries here. The format
+
+used is displayed as an example in the Preview field. The default setting is Use standard Java date
+
+formats.
+
+Please note
+
+If nothing is displayed in the Preview display field, the date entries will not be displayed in
+
+the client either.
+
+66 Client administration
+
+
+
+Date format: If you have selected the User-defined option, you can choose a predefined date
+
+format in the Date format field or generate your own date format from the variables displayed
+
+under Date and time format options.
+
+Time: If you have selected the User-defined option, you can choose a predefined time format in the
+
+Time field or generate your own time format from the variables displayed under Date and time
+
+format options.
+
+Date format that should also be accepted for entries in ELO: If you have selected the User-defined
+
+option, you can select or create an additional date format that is also valid in ELO in the Date
+
+format that should also be accepted for entries in ELO field.
+
+Replace date in tables with "Yesterday", "Today", and "Tomorrow" as required: Select this option to
+
+replace the date with Yesterday, Today, or Tomorrow as appropriate.
+
+First weekday in the calendar: Use the drop-down menu to set the first day of the calendar week in
+
+ELO. The default value is Monday.
+
+Number formats 
+
+Separator for number entries: Specify the separators used for numbers here. The default setting is 
+
+Use standard Java separators.
+
+Thousands separator: If you have selected the User-defined option, you can enter a separator to
+
+mark numbers higher than one thousand in the Thousands separator field.
+
+Decimal separator: If you have selected the User-defined option, you can enter a separator for
+
+numbers with decimal places in the Decimal separator field.
+
+Show or hide work areas 
+
+You can hide or show the Intray, Clipboard, Tasks, In use, and Search work areas with this option.
+
+Folder for document templates 
+
+Path: Define in which folder the document templates will be stored in ELO.
+
+OCR (text recognition) 
+
+OCR recognition: Specify here whether you want to perform OCR in fast or detailed (but slower)
+
+mode.
+
+Filter: Use the Filter field to filter the Available languages column. The column is refreshed as soon
+
+as you enter a character.
+
+Reset filters: Click the Reset filters button to delete the current filter term from the Filter field. All
+
+available languages are displayed.
+
+Available languages: From the list on the left, select the languages for text recognition that will be
+
+used to analyze the documents in ELO.
+
+67 Client administration
+
+
+
+Information
+
+The OCR service and languages are only available if the ELO OCR Service has been
+
+installed. ELO OCR installed when you install the ELO Java Client with the AIO installer.
+
+Selected languages: In the Selected languages column, you can see which languages have been
+
+selected for text recognition.
+
+Manage functions 
+
+Apply ribbon settings 
+
+To transfer the settings and favorites from the ribbon of a user or option group to another, click 
+
+Select user, then select the desired user/option group.
+
+Enable or disable functions 
+
+Enable or disable the functions in the list by clicking the corresponding check boxes. The function is
+
+available if the check box is selected. If the check box is not selected, the corresponding function is
+
+not displayed in the user interface.
+
+68 Client administration
+
+
+
+Please note
+
+Disabling/enabling functions does not remove any permissions associated with the function.
+
+Filter: Use the Filter field to filter the list of functions. The column is refreshed as soon as you enter
+
+a character.
+
+Reset filters: Click this button to delete the current filter term from the Filter field. All functions are
+
+displayed.
+
+PDF output: Create a PDF overview of the functions.
+
+Enable all: All functions are enabled.
+
+Disable all: All functions are disabled.
+
+Information
+
+If you make changes here, the ELO Java Client restarts automatically when you close the 
+
+Configuration dialog box.
+
+Configure favorites for other users 
+
+You can use the Favorites tab on the ribbon to obtain quick access to frequently used functions.
+
+Users can customize this part of the ribbon themselves but administrators can also assign a set of
+
+functions for the users. Follow the steps below.
+
+Open the Configuration dialog box.1. 
+
+69 Client administration
+
+
+
+In the Select user dialog box, select the user or option group for whom you want to add
+
+functions on the Favorites tab.
+
+Select the menu item Quick access to functions.
+
+2. 
+
+3. 
+
+70 Client administration
+
+
+
+Under Functions on the Favorites tab and in the context menus, the default settings for the
+
+Favorites tab are already selected.
+
+Information
+
+In addition to the Favorites tab, you can customize the right-click context menu here.
+
+To add a function to the Favorites tab, select the function in the left column and click Add
+
+function (arrow pointing right).
+
+Information
+
+You can change the order of functions with the arrow buttons to the right of the
+
+column.
+
+4. 
+
+71 Client administration
+
+
+
+Alternative 1: To remove a function from the Favorites tab, select the function in the right
+
+column and click Remove function (arrow pointing left).
+
+Alternative 2: To restore the default functions on the Favorites tab, click Use default (below
+
+the column Functions on the Favorites tab and in the context menus).
+
+Click OK to confirm the changes.
+
+The changes are applied for the selected user or option group.
+
+Information
+
+Users are still able to customize these settings themselves.
+
+Insert separator line 
+
+You can add separator lines to get a better overview of the functions on the Favorites tab. You will
+
+find the Separator line function in the Available functions and keyboard shortcuts column.
+
+Information
+
+The Separator line function can be added as often as you like.
+
+HTML templates for the metadata preview 
+
+The HTML templates are used for configuring how metadata is displayed for a document or folder.
+
+You can define HTML templates for each metadata form. There is also a default template that is
+
+used if a specific template has not been defined for a metadata form.
+
+5. 
+
+72 Client administration
+
+
+
+HTML Templates folder 
+
+Custom HTML templates must be stored in ELO under Administration//HTML Templates.
+
+HTML templates file format 
+
+You must apply the following naming convention: defaultH or defaultV. The file extension is htm.
+
+mask{Nr.}{H|V}.htm
+
+The following applies:
+
+{no.}: Replace this placeholder with the metadata form ID.
+
+{H|V}: Replace this placeholder with H (= horizontal) OR V (= vertical).
+
+Example 
+
+mask3H.htm
+
+Alternative: To edit the default values for all metadata forms, store the defaultH.htm and 
+
+defaultV.htm files in ELO and modify them according to your requirements.
+
+Information
+
+To view changes to the files directly, you must execute the CTRL+ALT+R keyboard shortcut
+
+after saving the respective HTM file. This command reloads the scripts and templates.
+
+• 
+
+• 
+
+73 Client administration
+
+
+
+Variables 
+
+You can use the following variables in the HTML templates. They will be automatically evaluated by
+
+the ELO Java Client.
+
+<!--ELO_T_A-->: Filing date
+
+<!--ELO_T_B-->: Internal file attachment ID
+
+<!--ELO_T_D-->: File date
+
+<!--ELO_T_E-->: Owner
+
+<!--ELO_T_I-->: Document ID
+
+<!--ELO_T_K-->: Short name
+
+<!--ELO_T_M-->: Name of the metadata form
+
+<!--ELO_T_O-->: ELO object ID
+
+<!--ELO_T_T-->: Document type ID
+
+<!--ELO_T_V-->: Retention period
+
+<!--ELO_T_D-->: File date
+
+<!--ELO_T_...-->: Field contents. You must replace the (...) placeholder with the number of the
+
+desired field.
+
+<!--ELO_N_...-->: Name of a field. You must replace the (...) placeholder with the number of the
+
+desired field.
+
+Correct syntax 
+
+To ensure that the contents of variables are displayed correctly, every code block must start with
+
+the following variable:
+
+<!--ELO_B_...-->: You must replace the (...) placeholder with the number of the desired field or the
+
+identifier for one of the variables specified above.
+
+The code block must end with the following variable:
+
+<!--ELO_E_...-->: You must replace the (...) placeholder with the number of the desired field or the
+
+identifier for one of the variables specified above.
+
+Example: Owner 
+
+<!--ELO_B_E--><tr class="odd">
+
+<th class="index"><!--ELO_N_E--></th>
+
+74 Client administration
+
+
+
+Example: Standard variables 
+
+A number of additional variables and information are also available in the ELO Java Client.
+
+These are some examples of additional information that can be displayed:
+
+<!--ELO_N_CurrentVersionName-->: Display name of the Current version field
+
+<!--ELO_T_CurrentVersionName-->: Contents of the Current version field
+
+<td class="index"><!--ELO_T_E-->
+
+</tr><!--ELO_E_E-->
+
+75 Client administration
+
+
+
+<!--ELO_N_CurrentVersionComment-->: Display name of the Comment field
+
+<!--ELO_T_CurrentVersionComment-->: Contents of the Comment field
+
+<!--ELO_N_CurrentVersionOwner-->: Display name of the Editor field
+
+<!--ELO_T_CurrentVersionOwner-->: Contents of the Editor field
+
+<!--ELO_N_CurrentVersionDate-->: Display name of the Version date field
+
+<!--ELO_T_CurrentVersionDate-->: Contents of the Version date field
+
+<!--ELO_T_ArchivingMode-->: Document status (Version control disabled, Version control enabled, or
+
+Non-modifiable)
+
+Information
+
+To temporarily disable an HTML template, change the short name of the template so that it
+
+no longer corresponds to the above format.
+
+76 Client administration
+
+
+
+Collaboration 
+
+This chapter describes how to manage the profile image and profile data for other users.
+
+Change profile image as administrator 
+
+Every ELO user and ELO user group has a profile for the ELO feed. You can upload an image of the
+
+user/group for this profile.
+
+There are two ways to edit the profile image:
+
+In the Administration folder
+
+In the profile
+
+For more information about editing the profile image in the profile, refer to the ELO Java Client user
+
+documentation.
+
+The following describes the method using the Administration folder.
+
+Information
+
+You require the appropriate permissions for this method.
+
+Storage location 
+
+The path of the storage location for profile images is as follows:
+
+Administration // Users // <Folder with corresponding number range> // <user name>/<group
+
+name> // data // elo.profile
+
+Information
+
+The profile image must have the short name userimage. Use PNG, JPG, or GIF image files
+
+with a minimum of 280 x 280 pixels.
+
+Open the folder for the respective user/group (see above).
+
+• 
+
+• 
+
+1. 
+
+77 Client administration
+
+https://docs.elo.com/user/elo-java-client/en-us/elo-java-client/manual/user-menu.html#edit-profile-picture
+https://docs.elo.com/user/elo-java-client/en-us/elo-java-client/manual/user-menu.html#edit-profile-picture
+
+
+Save the image to the elo.profile folder of the respective user/group.
+
+Enter userimage as the short name.
+
+Close the Metadata dialog box with OK.
+
+The profile image is displayed in the feed.
+
+Edit profile data as administrator 
+
+Every ELO user and ELO user group has their own profile. You can add data to this profile.
+
+There are two ways to edit profile data:
+
+In the Administration folder
+
+In the profile
+
+The following describes the method using the Administration folder.
+
+Information
+
+You require the appropriate permissions for this method.
+
+2. 
+
+3. 
+
+1. 
+
+• 
+
+• 
+
+78 Client administration
+
+
+
+Storage location 
+
+The profile data is saved in the metadata of the respective user/group folder. The path to the folder
+
+is as follows:
+
+Administration // Users // <Folder with corresponding number range> // <user name>/<group
+
+name>
+
+Step by step 
+
+Select the folder for the respective user/group.
+
+Open the Metadata dialog box.
+
+The ELO user folder metadata form must be selected.
+
+1. 
+
+2. 
+
+3. 
+
+79 Client administration
+
+
+
+Enter the required information in the fields.
+
+Click OK to close the dialog box.
+
+The information you entered is shown in the user/group profile.
+
+4. 
+
+80 Client administration
+
+
+
+Translation 
+
+This chapter describes options for translating interface texts that are not included in the standard
+
+language package.
+
+Translation files 
+
+ELO provides a number of options for translating texts with the help of translation files. This section
+
+explains how you can do this. 
+
+You can use variables from translation files in:
+
+Names of fields in metadata
+
+Names of forms in metadata
+
+Keyword lists
+
+Node names in workflows
+
+Name when forwarding workflows
+
+In scripts and forms
+
+The translation files are stored as the file type PROPERTIES. The following conditions apply: 
+
+Character encoding: UTF-8
+
+Path in ELO: Administration//Localization//custom
+
+One for each language: A properties file with the corresponding country code (de, en, fr, etc.)
+
+The following example describes how to work with translation files using translated fields in the
+
+metadata. In principle, this method works for the other points listed above.
+
+You will find more information on using translations in workflows and forms in the ELO workflow
+
+documentation.
+
+Example 
+
+In the following example, we use a metadata form named Photo.
+
+Method
+
+Create a text file. You can enter any name for this file. However, you must add an underscore
+
+between the end of the name and the language abbreviation and use the file extension
+
+.properties. In our example, this is:
+
+masksAndFields_en.properties
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+81 Client administration
+
+https://docs.elo.com/admin/config/en-us/workflow/
+https://docs.elo.com/admin/config/en-us/workflow/
+
+
+For each field, enter a variable and the name of the field in the respective language. You must
+
+use the following format:
+
+<prefix>.<variable>=<text>
+
+Prefix: You can choose any prefix you like. However, you should use the same prefix for
+
+one specific purpose.
+
+Variable: You can choose any variable you like. In this example, we use the group name
+
+of the corresponding field to make it easier to map.
+
+Text: The text is displayed as the name of the field. The language should correspond to
+
+the respective language abbreviation.
+
+For each language, create a copy of the first properties file with the corresponding language
+
+abbreviation. Otherwise, the name of the file must match that of the first file. In our example,
+
+this is:
+
+masksAndFields_de.properties
+
+Replace the texts in the corresponding language.
+
+2. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+3. 
+
+4. 
+
+82 Client administration
+
+
+
+Save the files in ELO. Use the following path:
+
+Administration//Localization//custom
+
+Optional: To provide a default language if a language file is not found, save a corresponding
+
+file without the language abbreviation.
+
+Open the ELO Administration Console.
+
+Go to the Field templates area.
+
+Select a field of the selected form.
+
+Enter the variable for the corresponding field in the Translation variable field. The variable
+
+must match the variable in the properties files.
+
+Save the changes.
+
+Repeat steps 8 to 11 for all fields of the form.
+
+5. 
+
+6. 
+
+7. 
+
+8. 
+
+9. 
+
+10. 
+
+11. 
+
+12. 
+
+83 Client administration
+
+
+
+Reload the ELO Indexserver.
+
+Result
+
+The field names are now displayed in the respective language.
+
+Translation table 
+
+You can use the translation table to translate interface texts such as the short names of entries. 
+
+The following instructions are an example that can be applied to other scenarios.
+
+Example 
+
+This example explains how to translate the short names of folders.
+
+Requirement
+
+The respective entries must have been filed with a metadata form in which the Translate short
+
+name option is enabled.
+
+84 Client administration
+
+
+
+The option must have been set globally in the ELO Administration Console under Metadata forms
+
+and fields > Entry options). If you enable the option later, you must set the option manually for
+
+existing entries in the client using the Options tab in the metadata form.
+
+Method
+
+Open the metadata of the folder whose short name you want to translate.
+
+Copy the short name of the folder.
+
+Open the translation table (Organize tab > System > Translation table).
+
+In the translation table, automatically recognized texts are listed in the system language.
+
+Information
+
+You can change the sort order of the table using the table headers. However, you can
+
+only enter new terms if the table has not been sorted manually and there is no
+
+triangle icon next to a column header.
+
+Scroll down until you reach the last entry in the table.
+
+Right-click to open the context menu.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+85 Client administration
+
+
+
+Fig.: Translation table
+
+To insert the copied short name below the last entry, select Paste from the context menu.
+
+Information
+
+It is not always possible to translate merged strings. For example, if you want to
+
+translate the short name January 01, you cannot just enter January in the translation
+
+table. You need to enter the whole string.
+
+Enter the translation you want in the column with the respective language abbreviation.
+
+Click OK.
+
+Result
+
+You have entered a translation for the short name. As soon as you change the language, the
+
+translated texts are displayed.
+
+6. 
+
+7. 
+
+8. 
+
+86 Client administration
+
+
+
+87 Client administration
+
+
+
+Change storage location for user data 
+
+The storage location and structure of the client user data can be configured differently from the
+
+default using the ELO_USER_HOME environment variable. Keep in mind that these should still remain
+
+on a local drive. Fast access to files in temp or doccache are especially important for client
+
+performance.
+
+Since ELO 12.04, the Intray and In use work areas can be stored separately using the variables 
+
+ELO_USER_INTRAY and ELO_USER_CHECKOUT. This ensures that there is significantly less impact on
+
+network path performance, for example.
+
+Configuration 
+
+In order to configure the environment variables, the following items need to be taken into account:
+
+The name of the environment variable must be ELO_USER_HOME, ELO_USER_INTRAY or 
+
+ELO_USER_CHECKOUT.
+
+The variable should always be defined in the user area of the environment variables and not
+
+in the machine area.
+
+The variables must always be written in uppercase.
+
+The variables must begin and end with a % sign.
+
+You should ensure that the resolved file paths do exceed the maximum length allowed in
+
+Windows of 255 characters.
+
+If the environment variable is defined in a different way than by using the interface in
+
+Windows, please ensure that the registry entry is of the type REG_EXPAND_SZ since otherwise it
+
+will not be possible to resolve the corresponding variable.
+
+Information
+
+If the environment variable is defined in a different way than by using the interface in
+
+Windows, please ensure that the registry entry is of the type REG_EXPAND_SZ since otherwise
+
+it will not be possible to resolve the corresponding variable.
+
+Variables 
+
+Variable Result Comment
+
+%APPDATA% C:\Users{Username}\AppData\Roaming
+Windows 7/Vista, the equivalent
+
+will be used in XP
+
+%TEMP%
+C:\Users{Username}
+
+\AppData\Local\Temp
+
+Windows 7/Vista, the equivalent
+
+will be used in XP
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+88 Client administration
+
+
+
+Variable Result Comment
+
+%ELOPROFILENAME%
+Profile name of the currently connected
+
+ELO profile
+Is required
+
+%ELOUSERID% User ID of the user logged on to ELO Is required
+
+%ELOUSERNAME%
+User name of the user currently logged
+
+on to ELO
+Please ensure these are unique
+
+Please note
+
+The variables %ELOPROFILENAME% and %ELOUSERID% are required in the definition. The value 
+
+%APPDATA%\ELO Digital Office\%ELOPROFILENAME%\%ELOUSERID% is recommended as the
+
+default for the environment variable.
+
+Example 
+
+Variable: %APPDATA%\ELO Digital Office GmbH\%ELOPROFILENAME%\%ELOUSERID%\
+
+If Mr. Meyer (Windows user name: Meyer) has connected with the ELO user Administrator (user
+
+ID=0) with the profile DEMOSERVER02, then the environment variable would look like this:
+
+C:\Users\Meier\AppData\Roaming\ELO Digital Office GmbH\DEMOSERVER02\0\
+
+Note: Due to this uniqueness, the user name should not be used for the file paths. If the user name
+
+is changed later, the user will no longer be able to find any files that it checked out. The specific
+
+structure for the ELO Java Client will be created within this folder.
+
+Important note: As soon as the environment variable has been defined, the ELO Java Client will
+
+access the new checkout directory. The old files will no longer be displayed. You must therefore
+
+ensure that all users have checked in their documents before the variables are defined, as
+
+otherwise the files must be manually moved.
+
+89 Client administration
+
+
+
+Connection with Microsoft 365 
+
+'Check out to OneDrive' function 
+
+This function allows the user to check out Microsoft Office documents to Microsoft OneDrive and
+
+edit them there. For the user, this is similar to the previous local check out process. However, the
+
+interface with Microsoft 365 allows for use of Microsoft Office Online and collaborative working.
+
+For information about administrative configuration and deployment of the Check out to OneDrive
+
+function, refer to the Connect to OneDrive documentation.
+
+90 Client administration
+
+https://docs.elo.com/admin/elo-for-microsoft/en-us/connect-to-onedrive/onedrive-checkout.html
+https://docs.elo.com/admin/elo-for-microsoft/en-us/connect-to-onedrive/onedrive-checkout.html
+
+
+ELO Barcode
+
+Getting started 
+
+This section contains information on how to set up ELO Barcode. Follow the links for more detailed
+
+information about the individual steps.
+
+The ELO Barcode module automatically reads barcode information, which makes it easier to file
+
+documents and enter metadata. You will find an overview of the supported barcode types in the 
+
+Table of supported barcode types chapter.
+
+Activate license 
+
+ELO Barcode is automatically installed along with the ELO Java Client. To activate the module, you
+
+need an ELO Barcode serial number.
+
+Log on to the ELO Java Client as administrator.
+
+Please note
+
+Barcode serial numbers are unique to each workstation and may not be used multiple
+
+times.
+
+Enter the barcode serial number in the Technical presets area of the configuration.
+
+1. 
+
+2. 
+
+91 Client administration
+
+
+
+For more information, refer to the Enable barcode recognition chapter.
+
+Configure metadata form for barcode recognition 
+
+Create a metadata form for barcode recognition in the ELO Administration Console under Metadata
+
+forms and fields.
+
+You will find the settings for barcode recognition in the Barcode info part of the metadata form.
+
+Check the Enable barcode recognition box.
+
+The Barcode info field is completed automatically. With the default settings, the entire page
+
+is searched for barcodes (R(0,0,1000,1000)) and all pages of a document (P(0)).
+
+Barcodes are read via instructions. Instructions for targeted processing of barcode
+
+information are defined in the Barcode info input field.
+
+Set your preferences under the options Scan area, Check, Scan and file, and Assign metadata.
+
+Your settings are automatically entered as instructions into the Barcode info input field.
+
+Please note
+
+Only a complete barcode instruction in the metadata form guarantees that barcode
+
+information is read. Each barcode requires one R instruction, one T instruction, and
+
+one or more S instructions.
+
+For more information, refer to the chapter Configuration.
+
+1. 
+
+2. 
+
+92 Client administration
+
+
+
+Start barcode recognition 
+
+In the ELO Java Client, you can start barcode recognition in the Intray work area.
+
+Select the document with the barcode information in the Intray.
+
+On the ribbon, click File > Edit > Barcode recognition.
+
+The barcode is read and the metadata is created. The barcode information is now located in the
+
+assigned fields. To view the metadata, click File > Metadata on the ribbon.
+
+Outlook 
+
+In the second step, you can automatically file the documents if the metadata form has valid index
+
+information.
+
+On the ribbon, click File > Filing > Automatic filing.
+
+Information
+
+If the metadata form does not have a filing definition, you must select the filing location
+
+manually. Use the function File to ELO (available in: Ribbon > File).
+
+For more information, refer to the Barcode recognition in the ELO Java Client chapter.
+
+1. 
+
+2. 
+
+93 Client administration
+
+
+
+Basics 
+
+Barcodes are used to encode characters and numerals. This enables you to uniquely assign
+
+information that the ELO Barcode module can read quickly and reliably, and then use this
+
+information to index documents.
+
+One important aspect in filing documents electronically is assigning them the correct metadata so
+
+that you can access the document without any problems at a later point in time. Errors in manual
+
+entry, such as entering incorrect customer or invoice numbers, result in unsuccessful searches. ELO
+
+Barcode simplifies and speeds up metadata entry and indexing processes.
+
+Overview of functions 
+
+The main functions of ELO Barcode include:
+
+Automatic barcode recognition for scanned documents
+
+Converting barcodes into search terms (indexing)
+
+The barcode is read during filing from the Intray to ELO. The following options are available:
+
+Defining a rectangular area in which the barcode is located (barcode area)
+
+Searching an entire document
+
+You can assign parts of the barcodes to different fields in the metadata form. You can also define
+
+the characters of the barcode as a verification feature. During barcode conversion, ELO turns this
+
+barcode content into searchable attributes (metadata).
+
+• 
+
+• 
+
+• 
+
+• 
+
+94 Client administration
+
+
+
+Factors that affect barcode recognition 
+
+Quality 
+
+Scanners are grid-oriented devices that usually work with 200 to 400 dpi (dots per inch). If a grid-
+
+oriented device scans a symbol without a grid, valuable information is lost. There are many other
+
+factors resulting in additional loss of data or even in data distortion. Poor recognition results can
+
+only be avoided if all the factors are considered to the fullest extent. The following factors must be
+
+taken into account to guarantee reliable barcode recognition:
+
+Barcode type
+
+Resolution (dpi)
+
+Barcode width
+
+Vertical barcode height
+
+Barcode symbol alignment
+
+Quiet zones
+
+Scanner settings
+
+Document quality
+
+Barcode label quality
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+95 Client administration
+
+
+
+Barcode recognition characteristics 
+
+Barcode recognition is primarily used to assign documents metadata. You can automate this
+
+process to prevent any errors from occurring. System performance and data integrity depend on
+
+the reliability of the device for barcode recognition as well as on the image quality. ELO Barcode
+
+uses the best possible scanning algorithms. However, this alone does not automatically ensure a
+
+high rate of recognition. The preceding list therefore explains the individual factors that will help
+
+you achieve reliable barcode recognition.
+
+Information
+
+Distorted or damaged barcodes can cause errors in barcode recognition.
+
+Barcode type 
+
+The structure and design of a barcode symbol frequently lead to poor readability. Barcode type 
+
+Code 39 seems to have the highest tolerance with a marginal corruption of the input data. This is
+
+why we recommend using Code 39.
+
+Resolution in dots per inch (DPI) 
+
+Barcodes can be scanned reliably at a resolution of 200, 300, and 400 dpi. Lower dpi values require
+
+larger barcode symbols to achieve reliable recognition. For good results, we recommend you select
+
+the character density of the barcode symbols according to the values listed below.
+
+Recommended barcode width 
+
+The width of the barcode is one of the most important factors for reliable barcode recognition. The
+
+wider the barcode is, the better the symbol resolution and recognition.
+
+There is no formula to determine the best width for a barcode symbol. The general rule is not to
+
+exceed the following values:
+
+6 characters per inch (one inch = 2.54 cm) at a resolution of 300 dpi
+
+4 characters per inch (one inch = 2.54 cm) at a resolution of 200 dpi
+
+These values include all the characters of a barcode symbol, such as synchronizing, data, start, and
+
+stop characters as well as the optional check digit.
+
+Vertical barcode height 
+
+Theoretically, ELO Barcode is capable of recognizing a barcode that is only one scan line high.
+
+However, in reality the barcode symbols have different alignments, i.e., the barcode does not run
+
+parallel to the vertical and horizontal margins of a document. This is caused, for example, when
+
+barcode labels are applied manually, when the printer is not aligned correctly, or when the scanner
+
+is not aligned properly. Under normal circumstances, ELO Barcode reads the barcode from left to
+
+right.
+
+• 
+
+• 
+
+96 Client administration
+
+
+
+The highest degree of reliability is achieved when the barcode is placed such that one horizontal
+
+scan line comprises the entire barcode symbol from start to stop character. To recognize the left
+
+and right margins of the symbol in a single line, the barcode's vertical size needs to be large
+
+enough to allow for a maximum angle ("angular position").
+
+Barcode symbol alignment 
+
+If a barcode is placed on the document at an angle, this could cause a single scan line to miss
+
+information (from start to stop character) of a barcode. ELO Barcode offers an alignment correction
+
+option for reading barcode symbols placed at an angle. The alignment correction function helps
+
+recover information from barcodes place at an angle. However, using the correction feature has a
+
+definite impact on scanning speed. It can also cause scan errors. This is why we recommend only
+
+using the function as a backup and not in normal operation.
+
+Quiet zones 
+
+Most barcode standards require a "quiet zone" to the left and right of the barcode symbol. In a
+
+bitmap image, this quiet zone should be entirely white. Noise ("dirty" pixels in the image) or text
+
+"shimmering through" and label edges often result in corrupted quiet zones. This can cause errors
+
+in barcode recognition.
+
+A quiet zone at the top or bottom of a barcode symbol must have a height of greater than three
+
+pixels. The quiet zones to the left and right of the barcode symbol must be a minimum of eight
+
+pixels wide.
+
+Scanner settings 
+
+Many scanners feature a contrast setting option. This threshold-value setting determines the shade
+
+of gray when a pixel is no longer interpreted as white but as gray or black. This option allows you
+
+to adjust the scanner to the individual properties of the respective documents.
+
+Changing the threshold value could cause the black areas in the barcode symbols to appear wider
+
+or narrower than they really are. This process is also called "distortion". The barcode symbols may
+
+become illegible even if they look perfectly acceptable to the human eye.
+
+Barcode quality 
+
+Keep the following in mind when placing barcode labels:
+
+The width of the labels should allow for quite zones around the barcode.
+
+The barcode resolution and display should be sufficiently dimensioned.
+
+The printing resolution should be 300 dpi or higher.
+
+Labels printed with matrix printers are not permitted.
+
+Label printers with ink ribbons are problematic.
+
+The glue must be of high enough quality to prevent the labels from rolling up or peeling off.
+
+The label paper must be thick enough to avoid "shimmering through" of text that is covered
+
+by the label.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+97 Client administration
+
+
+
+Enable barcode recognition 
+
+Requirement
+
+ELO Barcode is automatically installed along with the ELO Java Client. To activate the module, you
+
+need an ELO Barcode serial number.
+
+Please note
+
+Barcode serial numbers are unique to each workstation and may not be used multiple times.
+
+Information
+
+The input field for the ELO Barcode serial number is only visible to administrators.
+
+Method
+
+Open the ELO Java Client.
+
+Press F12 to open the configuration.
+
+Enter the ELO Barcode serial number in the Technical presets area.
+
+Click OK to save your entry.
+
+Result
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+98 Client administration
+
+
+
+Barcode recognition is activated.
+
+99 Client administration
+
+
+
+Configuration 
+
+The ELO Barcode interface works on two levels. The first level is contained entirely within ELO and
+
+is responsible for the recognition of the barcodes and the distribution of the recognized text to the
+
+fields of the metadata form. This is usually sufficient for most applications.
+
+If additional processing steps are required, a program can be run via the Microsoft VB-Scripting
+
+Host interface, where these steps can be performed.
+
+Configure metadata form 
+
+To process barcode documents with the ELO Java Client, you have to define a metadata form for
+
+capturing barcode information in the ELO Administration Console.
+
+Go to Metadata forms and fields in the ELO Administration Console.
+
+Select the metadata form for barcode documents from the list.
+
+In our example, this is the Barcode metadata form.
+
+Optional: Create a new metadata form for barcode documents.
+
+Click the Barcode info area to edit the barcode data.
+
+1. 
+
+2. 
+
+3. 
+
+100 Client administration
+
+
+
+Barcode info input field 
+
+Brief overview 
+
+Check the Enable barcode recognition box.
+
+The Barcode info field is completed automatically. With the default settings, the entire page
+
+is searched for barcodes (R(0,0,1000,1000)) and all pages of a document (P(0)).
+
+Barcodes are read via instructions. Instructions for targeted processing of barcode
+
+information are defined in the Barcode info input field.
+
+Set your preferences under the options Scan area, Check, Scan and file, and Assign metadata.
+
+Your settings are automatically entered as instructions into the Barcode info input field. 
+
+Please note
+
+Only a complete barcode instruction in the metadata form guarantees that barcode
+
+information is read. Each barcode requires one R instruction, one T instruction, and
+
+one or more S instructions.
+
+Each entry group – referred to as R group in the following – is preceded by an R instruction.
+
+This instruction determines the area scanned for barcodes. This instruction may be followed
+
+by an L instruction, which can check minimum and maximum input lengths. This is followed
+
+by a T instruction that determines the barcode type and how barcode-free pages are handled.
+
+V instructions can then check certain barcode positions for fixed characters that you have
+
+defined previously. A sequence of S instructions determines how the barcode is broken down
+
+1. 
+
+2. 
+
+101 Client administration
+
+
+
+and assigned to the fields in the metadata form. The P instruction defines which page of a
+
+document is scanned for barcodes. Another R group can follow after this.
+
+Information
+
+Group names must not be used multiple times in the metadata form.
+
+The instructions are explained in detail in the following.
+
+R instruction 
+
+With the R instruction, you define the area on a page where the barcode information is located.
+
+Determine which area of the page is scanned for barcodes.
+
+Syntax: R(<left>,<top>,<width>,<height)
+
+The four coordinates of the R instruction define the checked area in per-thousandths of the total
+
+scan area. An entry of form R(100,200,300,400) defines the area from the left = 2.1 cm, top = 6 cm,
+
+width = 6.3 cm and height = 12 cm on an A4 page (21*30 cm). Only this zone is scanned for
+
+barcodes. If you want to check the entire input area, you can select the entire area by entering 
+
+R(0,0,1000,1000).
+
+Information
+
+If you need multiple barcode areas on a page, add additional new R parameters to the 
+
+Barcode info field.
+
+L instruction 
+
+Use the L instruction to check the minimum and maximum length of a barcode.
+
+Syntax: L(<minimum>, <maximum)
+
+Barcodes usually have a fixed length (e.g., a 6-digit document number) per document. When you
+
+limit the allowed area (such as L(6,6)) here, you can avoid incorrect recognition caused by
+
+incomplete or other barcodes.
+
+T instruction 
+
+The T instruction defines the barcode type.
+
+Syntax: T(<type)
+
+Use the T instruction to define which barcode types you want the program to recognize. The value
+
+is binary and entered as a hexadecimal value. The following options are available:
+
+Codabar 1 (0x1)
+
+Code 128 2 (0x2)
+
+102 Client administration
+
+
+
+Code 39 4 (0x4)
+
+I 2 of 5 8 (0x8)
+
+EAN 13 16 (0x10)
+
+EAN 8 32 (0x20)
+
+UPC A 64 (0x40)
+
+UPC E 128 (0x80)
+
+Data Matrix 2048
+
+QR code 512
+
+PDF 417 536870912
+
+GS1 Databar 1073741824
+
+You can create any combination by adding the corresponding values (e.g., for Code 128 and Code
+
+39 = 2 + 4 = 6).
+
+Pages with no barcode: There are also pseudo-types with values 4096 and 8192 (0x1000 and
+
+0x2000). Type 4096 (0x1000) defines what to do with pages without barcode. If this type is not set,
+
+the page is ignored by the barcode manager. If this type is set, a barcode-free page is appended to
+
+the previous page that has a recognized barcode (for multi-page documents).
+
+Consecutive pages: Type 8192 (0x2000) decides what happens with consecutive pages that have
+
+identical barcodes. With this type, such pages are summarized automatically. If this type is not
+
+used, all pages remain independent documents. These pseudo-types are only recognized in the first
+
+R group and are then valid for all the forms used in a barcode process. You cannot use types 4096
+
+and 8192 at the same time. Either use type 4096 (collating pages without barcodes), type 8192
+
+(collating pages with identical barcodes), or none at all.
+
+Add blank pages 4096 (0x1000)
+
+Add identical pages 8192 (0x2000)
+
+Create checksum 16384 (0x4000)
+
+Scan direction: Last, a T instruction defines the scan direction of the barcode. If you do not use any
+
+special settings, the default setting is left to right. In addition, you can use any combination of the
+
+four options:
+
+Left to right 65536 (0x10000)
+
+Right to left 131072 (0x20000)
+
+Bottom to top 262144 (0x40000)
+
+Top to bottom 524288 (0x80000)
+
+V instruction 
+
+You can use certain characters for validating barcodes with the V instruction.
+
+Syntax: V(<pos>='<character>') 
+
+103 Client administration
+
+
+
+You can check certain barcode positions for fixed characters using the V instruction. If you scan
+
+delivery notes, and your barcode consists of a delivery note ID ("DE" in the first two positions) and
+
+a delivery note number, you can avoid incorrect scans using the V(1='L') V(2='F') control. Within
+
+an R group, you can define as many V instructions as required. Note that apostrophes (') must be
+
+placed in front of and behind the check character.
+
+S instruction 
+
+The S instruction assigns barcode information to a field in the metadata form. The group name of
+
+the field is used for the assignment. Multiple S instructions can be used.
+
+Syntax:
+
+S(<group name field>=<Startpos>,<number)
+
+The barcode is assigned to the fields using one or multiple S instructions. The S instruction defines
+
+which part of the barcode is transferred to which field (<group name of the field) via <startpos>
+
+and <number>. The group name of the field provides you with every field that has been assigned a
+
+group name in the current metadata form definition. 
+
+Information
+
+Group names specified in the metadata form must be unique. Group names must not be
+
+used multiple times in the barcode metadata form.
+
+If you fill a metadata form with multiple S instructions, these entries are saved without a separator
+
+directly one after another. If you have entered an ISO date (YYYYMMDD) in the barcode and want to
+
+transfer it to ELO, you must first change it to ELO format (DD.MM.YYYY or short DDMMYYYY). You
+
+can enter S(DLDATE=7,2) S(DLDATE=5,2) S(DLDATE=1,4). This is assuming that the date field is
+
+assigned to the first 8 characters of the barcode and that it will be entered into the DLDATE field.
+
+P instruction 
+
+The P instruction defines which page of a document is scanned for barcodes.
+
+Syntax: P (<number of pages)
+
+Information
+
+To scan all pages of a document for barcodes, enter P (0) as the P instruction.
+
+Example 
+
+R(0,0,1000,1000)T(1610685183)S(BAR1=1,50)S(BAR2=1,18)P(0)
+
+For the above example, the following information is evaluated and assigned:
+
+• 
+
+104 Client administration
+
+
+
+The R instruction defines the zone on a page where the barcodes are located. The entire page
+
+is marked.
+
+The HEX value of the T instruction is 1610685183. This value corresponds to the binary value
+
+1100000000000010001101011111111. This is how the barcode types are defined that should
+
+be evaluated in the document.
+
+The two S instructions determine that two barcodes are applied to the fields with the
+
+corresponding group name.
+
+The P instruction defines that all pages of the document are scanned for barcodes.
+
+Scan area 
+
+Page only 
+
+Determine what page of a document should be scanned for a barcode. 
+
+To search all pages, enter the value 0. A P instruction based on your entry is automatically created
+
+in the Barcode info field.
+
+Scan direction 
+
+You can determine the scan direction of a barcode during recognition.
+
+The default is Left to right. This means if you do not use any special settings, barcode recognition
+
+always scans from left to right. 
+
+Check 
+
+Minimum/maximum length 
+
+To filter out unknown barcodes, you can define a minimum and maximum length. 
+
+Barcodes usually have a fixed length (e.g., a 6-digit document number) per document. If you limit
+
+the allowed area here, you can prevent detection of unwanted or incomplete barcodes.
+
+• 
+
+• 
+
+• 
+
+105 Client administration
+
+
+
+Barcode types 
+
+Select the barcodes in the Barcode types list that are used on the documents with barcode
+
+information. 
+
+Information
+
+You will find more information on the different barcodes in the Barcode types chapter.
+
+Select all barcode types used in this way. You can enable all types with the Select all option.
+
+Information
+
+If you restrict the possible barcode types to a small number, this increases the processing
+
+speed and reduces the error rate when recognizing the barcodes.
+
+Editing settings 
+
+Checksum: Use this option to determine whether the checksum should be evaluated for a barcode.
+
+When you deactivate the option, the checksum of the barcode is ignored. The checksum is returned
+
+when you enable this option. This option only works with barcodes that have a "built in" checksum,
+
+such as Code 128.
+
+Narrow quiet zone: Barcodes need free space around the barcode so it can be recognized. When
+
+you enable this option, a border of 10 pixels is entered, otherwise the quiet zone is 10% of the
+
+image resolution. 
+
+106 Client administration
+
+
+
+Scan and file 
+
+Filing settings 
+
+Ignore non-compliant barcodes: Exclude barcodes of the same type from the check. Documents
+
+with multiple pages are read even more precisely to guarantee correct joining in ELO. 
+
+You need to activate this option to exclude third-party barcodes.
+
+Add page without barcode to the previous page: Determine what will happen with barcode-free
+
+pages within a document with barcode information.
+
+This option adds a barcode-free page to the last page with a recognized barcode. If this option is
+
+disabled, ELO Barcode will ignore pages without a barcode.
+
+Join pages with identical barcodes: Determine what happens to consecutive pages with identical
+
+barcodes. If this option is enabled, pages with identical barcodes are joined automatically. If this
+
+option is disabled, all the pages remain as separate documents.
+
+Image enhancements 
+
+There are several options available to improve the quality of the scanned barcode. 
+
+Despeckle: Removes scan noise. 
+
+Median: Removes image noise in high-resolution scans. 
+
+Oversampling: Improves the image quality in low-resolution scans. 
+
+Noise reduction 
+
+Noise reduction removes characters that are probably not part of the barcode. If the value is too
+
+large, parts of the barcode may be removed. A typical value is 10. 
+
+107 Client administration
+
+
+
+Assign metadata 
+
+Information 
+
+The recognized barcode can be distributed over multiple metadata fields. Assign fields here. 
+
+Information
+
+Assign fields using an S instruction. The group name of the field is used for assignment. For
+
+more detailed information on S instructions, refer to the Barcode info input field section.
+
+Step by step 
+
+On the left, click the arrow to expand the assignment options.
+
+Select a field you created under Fields.
+
+In the Assignment area, define what section of the barcode is applied to which field.
+
+The selected section is assigned to the selected field during filing.
+
+Click Apply.
+
+The field assignment is shown as an S instruction.
+
+Finish defining the metadata form by clicking Save.
+
+Result 
+
+You have defined all barcode parameters. The barcode instructions are now in the Barcode info
+
+field.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+108 Client administration
+
+
+
+Barcode recognition in the ELO Java Client 
+
+In the ELO Java Client, you can start barcode recognition in the Intray work area.
+
+Method 
+
+Switch to the Intray work area.
+
+Select the document with the barcode information in the Intray. You can also select multiple
+
+documents by holding down the CTRL key.
+
+Fig.: Barcode recognition in the ELO Java Client
+
+On the ribbon, click File > Edit > Barcode recognition.
+
+Information
+
+If barcode recognition has been enabled in multiple metadata forms in the ELO
+
+Administration Console, a dialog box for selecting the form appears.
+
+Result 
+
+The barcode is read and the metadata is created. The barcode information is now located in the
+
+assigned fields. To view the metadata, click File > Metadata on the ribbon.
+
+Outlook 
+
+In the second step, you can automatically file the documents if the metadata form has valid index
+
+information.
+
+1. 
+
+2. 
+
+3. 
+
+109 Client administration
+
+
+
+In the ribbon, click File > Filing > Automatic filing.
+
+Information
+
+If the metadata form does not have a filing definition, you must select the filing location
+
+manually. Use the function File to ELO (available in: Ribbon > File).
+
+110 Client administration
+
+
+
+Barcode types 
+
+This chapter contains detailed explanations on some of the supported barcode types. We do not
+
+guarantee that this information is complete.
+
+EAN 13/EAN 8 
+
+EAN is the abbreviation for: European Article Numbering.
+
+Basic structure of an EAN barcode 
+
+Two-digit country code + five-digit manufacturer + five-digit product no. + 1 check digit (for
+
+EAN13).
+
+The EAN barcode can only describe the numbers 0-9. Each character has 11 times the module
+
+width. This barcode type basically provides ten different, defined sizes. EAN is used, for instance, in
+
+supermarkets because their data collection is extremely labor-intensive due to the large number of
+
+articles per customer.
+
+The European Article Number is printed on the packaging material of the product encoded as
+
+barcode. Normally, an article number consists of 13 digits. However, an additional eight-digit short
+
+symbol was created for smaller articles (EAN 8).
+
+The first two digits of an EAN 13 code identify the country of origin (country code). Numbers 40-43
+
+stand for Germany. The next five digits identify the product's manufacturer. The next five digits
+
+comprise the individual article number and classify the manufacturer’s product. This number is
+
+assigned directly by the manufacturer. The final digit is the check digit and is determined by
+
+calculating. EANs are assigned by GS1 Germany GmbH (www.gs1-germany.de).
+
+Code 39 
+
+This barcode is an alphanumeric code whose character set comprises the digits 0 to 9, 26 upper-
+
+case letters (A-Z), a space character as well as several special characters ($ – + / . % ,). In the
+
+following example, a barcode created with Code 39, contains the word "CODE 39:
+
+111 Client administration
+
+
+
+Every character consists of nine elements (five lines and four gaps). Of these nine elements, three
+
+are wide and six are narrow. This feature allows for a self-test of Code 39. There is a gap between
+
+the individual characters for separation purposes. The advantage of this code is the large character
+
+set. Character combinations allow additional character representations. The drawbacks are the low
+
+information density (8 mm) and the low error tolerance.
+
+Interleaved 2 of 5 (Code 25 Interleaved) 
+
+This code is a variation of the original Code 25 which also has a character set of only digits 0 to 9.
+
+The objective is to save space by representing coded digits in pairs. Code 25 Interleaved has no
+
+integrated check digit. Each digit is represented by five symbols (two wide and three narrow ones).
+
+The first character consists of lines, the second of gaps, the third of lines, then the fourth of gaps,
+
+etc.
+
+112 Client administration
+
+
+
+Code 25 Interleaved offers, similarly to Code 39, advantages such as self-testing as well as high
+
+information density and the therefore resulting low storage requirement. The low tolerance and
+
+representation of the usable symbols in pairs could be considered as a drawback. The start and
+
+stop characters contain only two symbols, which may lead to incorrect or partial recognition
+
+because only an even number of characters can be represented.
+
+If an uneven number of characters is required, you have to place a zero in front of the code (123
+
+becomes 0123) or add a check digit.
+
+UPC A 
+
+UPC (Universal Product Code) A is the 12-digit standard version of the UPC code. It is similar to the
+
+EAN code and is also referred to as UPC 12. The UPC is a numeric code that can display the digits
+
+0-9. Each symbol contains two bars and two gaps.
+
+The first digit of the UPC A shows the contents of the code:
+
+0: Normal, standard UPC code
+
+1: Reserved (possibly for later use)
+
+2: Products charged by weight. The barcode is created in the store to price a product.
+
+3: National Drug Code (NDC) and National Health Related Items Code (HRI)
+
+4: UPC code that can be used without formatting restrictions.
+
+5: Coupon
+
+6: Normal, standard UPC code
+
+7: Normal, standard UPC Codex
+
+8: Reserved for later use
+
+9: Reserved for later use
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+113 Client administration
+
+
+
+The second to sixth digits of the UPC identify the manufacturer of the product (UPC ID number).
+
+This number is assigned by GS1 US Inc. (www.gs1us.org). Digits seven to eleven of the UPC
+
+comprise the individual part number and classify the manufacturer’s product. The last digit (twelve)
+
+is the check digit which is determined by calculation.
+
+UPC E 
+
+The UPC E is a numeric code that can display the digits 0-9. A UPC E has eight digits. The first digit
+
+is the system identifier and is always set to "0". The eight digit is the check digit.
+
+The coded digits are written in plain text below the code.
+
+114 Client administration
+
+
+
+Table of supported barcode types 
+
+The table shows an overview of the barcode types supported by ELO.
+
+Barcode
+
+type
+
+Numeric
+
+characters
+
+(numbers)
+
+Alphabetic
+
+characters (letter)
+
+Special
+
+characters
+
+Length
+
+(+check
+
+digit)
+
+Check
+
+digit
+
+EAN - 13 0-9 - - 12+1 Optional
+
+EAN - 8 0-9 - - 7+1 Optional
+
+UPC A
+
+(GTIN 12)
+0-9 - - 11+1 Always
+
+UPC E 0-9 - - 6+1 Always
+
+Code 39 0-9 - - No limit Optional
+
+Code 128 All ASCII characters All ASCII characters
+All ASCII
+
+characters
+No limit Always
+
+Code I 2 of
+
+5
+0-9 - -
+
+No limit (even
+
+numbers)
+Optional
+
+Codabar 0-9
+a, b, c, d (Must be the
+
+first or last digit)
+-.$:+/ No limit Optional
+
+Data Matrix 0-9 A-Z, a-z Yes No limit -
+
+QR code 0-9 A-Z, a-z Yes No limit -
+
+PDF417 0-9 A-Z, a-z Yes - Yes
+
+GS1
+
+DataBar
+0-9 A-Z, a-z Yes - -
+
+115 Client administration
+
+
+
+ELO SANE scan
+
+Introduction 
+
+This documentation describes how to set up scan functionality with the ELO Java Client in Linux.
+
+The SANE interface enables you to scan documents in the ELO Java Client when using Linux. See
+
+the SANE project page for additional information on SANE.
+
+Information
+
+macOS
+
+The SANE interface is no longer supported in macOS. You can use JSON scan instead. To scan
+
+with JSON scan, change the scan method in the configuration. You do not need to install
+
+anything else. You will find more information on how to configure the scan method in this
+
+documentation under Configuration > Technical presets > General.
+
+116 Client administration
+
+http://www.sane-project.org/
+http://www.sane-project.org/
+
+
+Installation and configuration 
+
+Installation of SANE backends 
+
+The basic requirement to scan in macOS and Linux is the installation of the SANE backends
+
+package. The installation can be verified by entering scanimage –L in the command line. You should
+
+then see a list of the available scanners.
+
+Linux 
+
+In Linux, SANE backends can be installed using the appropriate package manager. Consult the
+
+documentation for your Linux distribution for more information on this point.
+
+Configuration in the ELO Java Client 
+
+In the configuration dialog box, SANE must be selected as the scan method in the Technical presets
+
+> General area.
+
+Notes 
+
+Some options in the scan profiles may not work with certain scanner models.
+
+Scanning after preview is not available with SANE.
+
+Only the connected scanners are shown under Select scanner instead of all installed
+
+scanners.
+
+• 
+
+• 
+
+• 
+
+117 Client administration
+
+
+
+ELO Macros (HTTP)
+
+Installation 
+
+This documentation describes how to install and set up the ELO Macros using the ELO Java Client
+
+HTTP Automation Interface.
+
+The ELO Macros integrate several functions of the ELO Java Client into external programs. The
+
+following external programs are supported:
+
+Microsoft Windows Explorer
+
+Microsoft Word
+
+Microsoft Excel
+
+Microsoft PowerPoint
+
+Microsoft Outlook
+
+Microsoft Internet Explorer
+
+Mozilla Firefox
+
+Google Chrome
+
+Installation can only be performed by users with administrator rights.
+
+Enable HTTP Automation Interface 
+
+To use the ELO Macros, the HTTP Automation Interface must be enabled.
+
+Please note The following settings must be made for all users using the ELO
+
+Macros.
+
+You will find the setting in the ELO Java Client configuration under Technical presets > General.
+
+You also have to assign a free server port that the HTTP Automation Interface can use to
+
+communicate the with the ELO Macros.
+
+The server port 0 is set by default. As a result, ELO automatically identifies and assigns a free port.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+118 Client administration
+
+
+
+Set up the ELO Macros 
+
+To install the ELO Macros, start the setup installer on the ELO master.
+
+You will find the setup under the menu item ELO Macros in ELO Macros for the ELO Java Client.
+
+Please note
+
+To install the ELO Macros in a terminal server environment, you must use the setup.exe file.
+
+Installation in Microsoft Windows 
+
+To install the ELO Macros in Microsoft Windows, click ELO Macros Java Client and follow the
+
+instructions in the wizard.
+
+119 Client administration
+
+
+
+Installation in macOS 
+
+Download the setup zip file from the ELO SupportWeb. Install the macros with the file Install ELO
+
+Macros for Mac.pkg. You can uninstall the macros with Uninstall ELO Macros for Mac.app.
+
+Information
+
+For technical reasons, you have to click the Install for me only menu item under Select a
+
+Destination, even though it already appears to be selected.
+
+Install script 
+
+The ELO Macros also require the script file OfficeMacro.eloinst as an additional component. This file
+
+has to be installed in the ELO repository.
+
+You will find the OfficeMacro.eloinst script file in the ELO Macros installation directory.
+
+You will find the macros script under Communication between Office applications and ELO on the 
+
+ELO add-on modules – installation overview page.
+
+To install the file, log on to the ELO Java Client as administrator and drag and drop the file to the
+
+ELO Java Client.
+
+120 Client administration
+
+http://www.forum.elo.com/script/eloinst-en.html
+http://www.forum.elo.com/script/eloinst-en.html
+
+
+Configuration 
+
+After installing the ELO Macros, you have to configure them.
+
+Please note
+
+The ELO Java Client must be running to configure the ELO Macros.
+
+Start one of the programs you installed the ELO Macros for.
+
+Open the ELO > Configuration tab.
+
+Please note
+
+At least one document must be open.
+
+121 Client administration
+
+
+
+The Configuration dialog box opens in the ELO Java Client.
+
+You can make settings for yourself or, as a user with administrative rights, click Select user to
+
+make settings for another user or option group. You cannot select multiple users or option groups.
+
+For a more detailed explanation of the settings, refer to the dialog box help feature.
+
+Please note
+
+Depending on the operating system, not all functions may be available.
+
+122 Client administration
+
+
+
+Functions 
+
+The following sections describe where you can find the ELO Macros functions and provides an
+
+overview.
+
+Information
+
+Depending on the external program and configuration, some functions may not be available.
+
+Call functions 
+
+The location of the functions varies depending on the operating system.
+
+Microsoft Windows 
+
+In Microsoft Windows, you will find the functions on the extra ELO tab in Microsoft Office programs.
+
+macOS 
+
+In macOS, you will find the functions on the menu bar at the top edge of the screen. After the ELO
+
+Macros are installed, a scroll icon appears in the menu bar. The scroll icon opens a drop-down menu
+
+containing the ELO Macros functions.
+
+IBM Notes 
+
+In IBM Notes, you will find the functions in the File to ELO area.
+
+Overview of functions 
+
+The ELO Macros provide the following functions.
+
+Information
+
+Depending on the operating system, the names and icons for the functions may differ.
+
+ELO Transfer 
+
+The ELO Transfer function files documents to ELO. You can set the filing location for the document in
+
+the File new document dialog box. Click New folder to create a new folder for the document.
+
+Depending on the configuration, you must enter metadata for the document.
+
+E-mails that contain attachments with special characters in the name can be filed as separate
+
+documents.
+
+123 Client administration
+
+
+
+Automatically file to ELO 
+
+The Automatically file to ELO function is intended for e-mails. This function allows you to
+
+automatically file documents to ELO. To file e-mails automatically, you have to set the Filing target
+
+for sent e-mails and Filing target for received e-mails paths in the ELO Macros configuration.
+
+Transfer to ELO Intray 
+
+The Transfer to ELO Intray button files documents to the ELO Intray. In the ELO Intray, you can edit
+
+the metadata and file the documents to the ELO repository.
+
+124 Client administration
+
+
+
+ELO search 
+
+The ELO search function opens the Search work area in the ELO Java Client. The ELO Macros
+
+automatically transfer available metadata to the ELO search field. Clicking Start search begins the
+
+search.
+
+Configuration 
+
+The Configuration function is where you configure the ELO Macros (see also chapter Configuration).
+
+125 Client administration
+
+
+
+Dynamic folders
+
+What are dynamic folders? 
+
+Dynamic folders are folders in ELO whose contents are generated dynamically. In principle, these
+
+show the results of a search. This search is performed using a specific SQL query. You can use
+
+different search criteria (e.g. specific metadata). Every time something changes in ELO that is
+
+relevant to the query, the contents of the dynamic folder change as well.
+
+Please note
+
+If you want to create dynamic folders, always test them first in a small test repository. An
+
+incorrectly worded command can generate hits in the range of (total number of documents)
+
+* (total number of fields for all documents). A test repository may result in several thousand
+
+hits, while the hits in a productive repository could quickly reach into the millions.
+
+Please note
+
+If you want to use a dynamic folder in a live repository, you should give some thought to
+
+performance. If the folder will be accessed on a regular basis, you need to make sure that
+
+access does not trigger any full table scans. To ensure this, you should analyze the SQL
+
+statement (e.g. in SQL Server Management Studio).
+
+Dynamic folders in the ELO Java Client 
+
+The ELO Java Client provides the option to save a search query as a dynamic folder.
+
+You will find this function under Search > Result > Dynamic folder. This documentation does not go
+
+into detail on the function. You will find more information in the ELO Java Client documentation.
+
+126 Client administration
+
+https://docs.elo.com/user/elo-java-client/en-us/elo-java-client/manual/search-tab.html#dynamic-folder
+https://docs.elo.com/user/elo-java-client/en-us/elo-java-client/manual/search-tab.html#dynamic-folder
+
+
+Dynamic folders in the ELO Web Client 
+
+The ELO Web Client also provides the option to save a search request as a dynamic folder.
+
+You will find this function under Search > Result > Dynamic folder. This documentation does not go
+
+into detail on the function. You will find more information in the ELO Web Client documentation.
+
+Please note
+
+Queries may vary depending on the database system. So you may have to make
+
+adjustments to the change examples shown here.
+
+127 Client administration
+
+https://docs.elo.com/user/elo-web-client/en-us/elo-web-client/manual/search-tab.html#dynamic-folder
+https://docs.elo.com/user/elo-web-client/en-us/elo-web-client/manual/search-tab.html#dynamic-folder
+
+
+Create dynamic folders 
+
+A dynamic folder is created by making a specific entry to a folder's extra text tab. This text must
+
+be placed at the very beginning of the field and no other text can be entered there. To prevent the
+
+folder definition from being changed by mistake, only administrators should have write access to
+
+the folder. Other users can be given read access to it. This restriction also helps you avoid child
+
+entries being manually stored in the folder, since they would not be displayed.
+
+!+[command] 
+
+The !+ command is replaced at runtime with the SQL statement SELECT * FROM for the database
+
+table dbo.objects. You can define the WHERE part of the query following the !+ command.
+
+128 Client administration
+
+
+
+Make sure you restrict your WHERE clause to the desired object types (assuming that they are not
+
+defined by the other search restrictions anyway). You should also exclude deleted entries, which are
+
+all entries with an objstatus not equal to 0.
+
+Query multiple tables 
+
+You can add other tables besides the objects table to the query. To do so, enter the other tables
+
+following a comma.
+
+Example 1 
+
+In this example, the query is restricted to the EMail metadata form (here: objmask = 2). The query
+
+also only searches for documents that have a specific name (here: Sorglos) in the From field (group
+
+name: ELOOUTL1).
+
+Example 2 
+
+The following example runs a query that sorts the entries by two different fields. This means the 
+
+objkeys table must be read twice.
+
+!+ , objkeys WHERE objid = parentid
+
+AND objmask = 2
+
+AND (okeyname LIKE 'ELOOUTL1' AND okeydata LIKE '%sorglos')
+
+129 Client administration
+
+
+
+An explanation of the individual lines of code:
+
+The table objkeys is entered twice under the names ok1 and ok2. Remember to insert the leading
+
+comma, otherwise you will get a syntax error at the SQL level and the target folder will remain
+
+empty.
+
+The objects base database table is linked to the two tables with the unique key objid.
+
+We want to read two specific fields, rather than any two fields (the internal field numbers *0 *and 1
+
+correspond to the first and second fields in the form).
+
+You only want to find documents with form type 5 that contain the value p1 in the first field.
+
+The documents are then sorted by the second field. All identical entries are sorted by the first field.
+
+Please note
+
+The example searches for the contents of any field that start with p1, i. e. that a result is
+
+also generated if p1 occurs in a hidden field. However, the user will not see the
+
+corresponding field. In a production system, you should give the field a specific name.
+
+Please note
+
+The objid=parentid part of the query is required in any case. This connects the basic data
+
+table with the fields table. If you leave it out, you will get a long list of hits with entries that
+
+are wrong.
+
+!?[command] 
+
+A registered function must follow the !? command. The registered function must return a collection
+
+of IDs or GUIDs that correspond to a repository entry. You can learn what a registered function is
+
+and how to create them in the documentation Adding functionality with registered functions.
+
+Example of a dynamic folder:
+
+The script file could look like this:
+
+!+ , objkeys ok1, objkeys ok2 WHERE
+
+objid=ok1.parentid AND objid=ok2.parentid AND
+
+ok1.okeyno=0 AND ok2.okeyno=1 AND
+
+objtype=254 AND objmask=5 AND
+
+ok1.okeydata LIKE 'p1%'
+
+ORDER BY ok2.okeydata, ok1.okeydata
+
+!?RF_getSordIdsForDynamicWhere
+
+130 Client administration
+
+https://docs.elo.com/dev/programming/en-us/elo-indexserver-programming-guide/added-functionality-with-registered-functions/
+https://docs.elo.com/dev/programming/en-us/elo-indexserver-programming-guide/added-functionality-with-registered-functions/
+
+
+!=[command] 
+
+You can pass a saved search to the != command. However, the folder should be created
+
+automatically instead of manually. In the ELO Java Client, you can create a dynamic folder
+
+following a search via Ribbon > Search > Result > Dynamic folder.
+
+To create a dynamic folder in your own IX application, you need to perform a search first. You will
+
+find the corresponding text in the field FindResult.dynamicFolder, which is provided through the IX
+
+interface.
+
+For example:
+
+Obsolete commands 
+
+The commands !! and *!** are obsolete and are no longer supported in current ELO versions.
+
+function RF_getSordIdsForDynamicWhere(ec, args) {
+
+  log.info("RF_getSordIdsForDynamicWhere(")
+
+  var sord = args[0]
+
+  log.info("sord=" + sord)
+
+  var folderId = parseInt(args[1])
+
+  log.info("folderId=" + folderId)
+
+  var db = new Packages.de.elo.ix.jscript.DBConnection()
+
+  var ret = db.query(
+
+    "select objectid from relation where parentid=? order by objectid desc",
+
+    folderId
+
+  )
+
+  log.info(")RF_getSordIdsForDynamicWhere" + ret)
+
+  return ret
+
+}
+
+FindResult fr = ixConnection.ix().findFirstSords(…);
+
+ixConnection.ix().findClose(fr.getSearchId());
+
+Sord sord = ixConnection.ix().checkoutSord(…);
+
+sord.setDesc(fr.getDynamicFolder());
+
+ixConnection.ix().checkinSord(sord, …);
+
+131 Client administration
+
+
+
+Additional notes 
+
+Performance 
+
+A search is initiated every time a dynamic folder is opened. With small databases (<50,000
+
+entries), you do not need to give any consideration to performance, as the SQL server optimizes all
+
+problems away here.
+
+As soon as the database becomes larger, though, a badly formed search query will instantly
+
+generate a massive load on the database. This will result in lowered performance for all clients.
+
+You need to take the following into account:
+
+Is an appropriate index available for the selection criterion? If not, can one be created? If the
+
+answer to both of these questions is no, you should probably avoid using dynamic folders. A full
+
+table scan can take over a half an hour on a large database.
+
+Does the SQL server use an index at all? Sometimes, the optimizer has a very different idea of how
+
+to process the query than the administrator. If the SQL server selects an unfavorable index, it may
+
+lead to long response times.
+
+Does the list of search results stay within reasonable limits? If you create a statement that collects
+
+all documents filed within a month, this might work on a test system. However, if you want to view
+
+50,000 documents in a single folder on a production system, this will lead to poor results.
+
+Available columns 
+
+The following columns are available in the base data:
+
+Column name Contents
+
+objtype Entry type, top-level folder=1, 2nd level=2… folders=253, document=254
+
+objshort Short name
+
+objidate Filing date in numeric format (number of minutes since Dec. 31, 1899)
+
+objxdate Document date in numeric format
+
+objkind Color
+
+objmask Document type
+
+objuser Document creator
+
+objstatus 0: not deleted, all other values indicate deleted entries
+
+objdeldate Expiration date in numeric format
+
+The objkeys table contains the following entries:
+
+Column
+
+name
+Contents
+
+parentid Internal unique ELO entry number, connected to objid in the objects base table.
+
+132 Client administration
+
+
+
+Column
+
+name
+Contents
+
+okeyno
+Number of the field, starting with 0. There are a number of hidden fields starting
+
+with index field 50.
+
+okeyname
+Group name of the field. If you want to search independent of document type, use
+
+the group name instead of the field number for selection.
+
+okeydata Content of the field
+
+okeyudata Content of the field in uppercase (Oracle databases only)
+
+Specific to Oracle SQL 
+
+There are a number of aspects specific to Oracle SQL databases that you will need to take into
+
+account. Otherwise, you will get incomplete search results or syntax errors.
+
+Oracle SQL distinguishes between upper and lowercase letters. If you search for "ELO" and the
+
+database contains "Elo", Oracle will not find the entry. The okeyudata field enables you to search in
+
+metadata fields.
+
+The repository name must be placed before the table names. Both parts are separated with a
+
+period.
+
+Example 
+
+In Oracle SQL databases, you need to enter okeydata ok1 as repository1.okeydata ok1 in the query.
+
+133 Client administration
+
+
+
+Usage examples 
+
+Please note
+
+Queries may vary depending on the database system. So you may have to make
+
+adjustments to the following examples.
+
+Show documents added to the repository in the last 30 days 
+
+Enter the following SQL query to the extra text field of the folder that you want to configure as a
+
+dynamic folder.
+
+The individual components of the query:
+
+objtype>=254: Restricts the query to documents
+
+objstatus=0: Restricts the query to documents that are not deleted
+
+DATEADD(mi, objidate, '18991230'): Searches for the filing date (objidate) in minutes (mi)
+
+since the reference date (December 30, 1899).
+
+Information
+
+The ISO date was selected here to avoid possible conversion problems. In English-language
+
+installations, MM/DD/YYYY usually works as well.
+
+>=: The operators restrict the search to documents with a filing date later than or equal to
+
+the current date minus 30 days.
+
+DATEADD(day, -30, SYSUTCDATETIME()): Here the system date is read out in UTC format
+
+(SYSUTCDATETIME()) in days (day). 30 days are then subtracted from that.
+
+Information
+
+The SYSUTCDATETIME function was not available until SQL Server 2005. If you are using an
+
+earlier version of the software, use the function GETDATE().
+
+Other usage examples 
+
+Task Entry to Extra text tab
+
+All documents that use the Basic Entry metadata
+
+form. The list of results is sorted in descending order
+
+(DESC) by the document date (objxdate).
+
+!+ WHERE objmask=0 AND objtype>=254 AND
+
+objstatus=0 ORDER BY objxdate DESC
+
+!+ WHERE objtype>=254 AND objstatus=0 AND DATEADD(mi, objidate, '18991230') >= DATEADD(day, -30, SYSUTCDATE
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+134 Client administration
+
+file:///builds/documentation/admin/clients/.temp/export/usage-examples.md
+
+
+Task Entry to Extra text tab
+
+All folders with the Basic Entry metadata form,
+
+sorted descending by document date
+
+!+ WHERE objmask=0 AND objtype<254 AND
+
+objstatus=0 ORDER BY objxdate DESC
+
+All objects with a specific color (objkind)
+!+ WHERE objkind = 12 ORDER BY objxdate
+
+DESC
+
+Documents with a specific document path with a
+
+filing date within a specific time frame A-B (in
+
+minutes since December 30, 1899).
+
+!+ WHERE objpath =3 AND objidate BETWEEN
+
+60587305 AND 60587308
+
+All objects with "invoice" in the short name !+ WHERE objshort LIKE '%invoice%'
+
+All documents with "ELO" and "xc" in the short name
+
+(sorted descending by filing date)
+
+!+ WHERE objtype>=254 AND objshort LIKE
+
+'%ELO%' AND objshort LIKE '%xc%' AND
+
+objstatus=0 ORDER BY objidate DESC
+
+Warning: All objects with access by "Everyone" – this
+
+dynamic folder should ideally always be empty.
+!+ WHERE objacl='75PYJA' AND objstatus=0
+
+Show all checked out/locked folders and documents
+
+(sorted by editor)
+
+!+ WHERE (objlock <> - 1) ORDER BY
+
+objuser
+
+Search the entire contents of the chaos folder in ELO,
+
+e. g. you can add the contents of the chaos folder to
+
+a search view and transfer the documents to the
+
+repository.
+
+!+ WHERE objparent = 0
+
+135 Client administration
+
+
+
+elodms links
+
+Introduction 
+
+elodms links are URLs that take you straight to a destination in the ELO Java Client. This
+
+documentation describes the various formats available for these links and how to use them.
+
+elodms links are available in the ELO Java Client starting with version 9.01. They can be used as
+
+standard URLs in scripts and websites, or as part of custom ECD files (ELO links). When the ELO
+
+Java Client is installed, links starting with elodms:// are automatically associated with 
+
+EloActivateJC.exe.
+
+Information
+
+elodms links do not work in Linux or Mac macOS versions of the program.
+
+elodms links can be used to open the following destinations:
+
+GUID of an entry in ELO
+
+Page of a document with a specific annotation in ELO
+
+Specific page of a document in ELO
+
+Specific workflow and/or workflow node in ELO
+
+An ELO Java Client import package (a separate ELO automatic script installation
+
+documentation is available for this)
+
+The elodms links described in the following sections are constructed as URLs that are opened from
+
+an HTML document. If you wish to use an elodms link in an ECD file, first create a text file in UTF-8
+
+format with the following contents:
+
+Save the file with the extension *.ECD.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+EP
+
+WTOPU
+
+U<elodms link>
+
+136 Client administration
+
+https://docs.elo.com/dev/programming/en-us/elo-automatic-script-installation/
+https://docs.elo.com/dev/programming/en-us/elo-automatic-script-installation/
+
+
+Use 
+
+elodms GUID links 
+
+This section describes how to create elodms links to jump to an entry in the current repository. The
+
+basic syntax is as follows:
+
+elodms://<ELO GUID>
+
+You can find an entry's GUID on the Options tab of the metadata form.
+
+Enter the GUID enclosed in parentheses, such as:
+
+elodms://(C1128681-C328-DE51-C99E-FA463C6C6911)
+
+An entry's GUID can be called in the internal scripting with the following:
+
+elodms links with annotation number 
+
+An elodms:// GUID link can be constructed with an instruction to jump to the page number of a
+
+specific annotation. The basic syntax is as follows:
+
+elodms://<ELO GUID>@A<annotation ID>
+
+var item = … // arbitrary code to select an ArchiveElement
+
+var sord = item.sord;
+
+var guid = sord.guid;
+
+…
+
+137 Client administration
+
+
+
+The easiest way to get this information is to right-click an annotation and select Remember
+
+position from the context menu. This copies the name of the document and the annotation's
+
+position to the system clipboard. Delete the part of the string before elodms:// to get the required
+
+link.
+
+elodms links with page number 
+
+elodms:// GUID links can also be instructed to jump to a document page. The basic syntax is as
+
+follows:
+
+elodms://<ELO GUID>@P<Page number>
+
+In this case, the numbering starts at 1. If an invalid page number is specified, the link automatically
+
+goes to the first page of the document.
+
+elodms object ID links 
+
+The ELO object ID can also be used instead of the GUID:
+
+elodms://<ELO object ID>
+
+If the object ID is used, it is not possible to set anchors for annotations and page numbers.
+
+elodms workflow links 
+
+elodms links with wf at the start jump automatically to a specific workflow in the client. The basic
+
+syntax is as follows:
+
+elodms://wf/<workflow ID (int)>/<node ID (int)>
+
+138 Client administration
+
+
+
+If the node ID is 0 or missing, the link attempts to go to the first available (unprocessed) node in
+
+the workflow.
+
+The ELO Java Client does not display the workflow ID or node ID using built-in functions. These
+
+values can be retrieved using either the ELO Java Client script GotoId or by using the following the
+
+following (sample) code:
+
+Script installer URLs 
+
+Script installer URLs are used to install/import scripts as used on install.myelo.net. The basic
+
+syntax is as follows:
+
+elodms://im/<URL>
+
+The URL is encoded in Base64.
+
+You require administrator rights for the call. The call triggers a query in the client.
+
+var item = … // random code to select a TaskElement
+
+var workflow = item.task.wfNode;
+
+var workflowId = workflow.flowId;
+
+var workflowNodeId = workflow.nodeId;
+
+...
+
+139 Client administration
+
+
+
+OpenOffice preview
+
+Introduction 
+
+The following chapters explains the procedure in Windows and Linux.
+
+You need to integrate a number of OpenOffice/LibreOffice libraries for the OpenOffice preview to
+
+function in the ELO Java Client.
+
+Information
+
+The OpenOffice preview requires an Apache OpenOffice or LibreOffice version compatible
+
+with the Java version used in the ELO Java Client.
+
+Integration in Apple macOS is not currently supported by OpenOffice/LibreOffice.
+
+140 Client administration
+
+
+
+Windows 
+
+The following steps are required with Microsoft Windows:
+
+Set environment variables 
+
+For OpenOffice 
+
+UNO_PATH=C:\Program Files (x86)\OpenOffice 4\program
+
+For LibreOffice 
+
+UNO_PATH=C:\Program Files (x86)\LibreOffice 4\program
+
+Modify the 'EloClient.bat' file (only up to ELO Java Client 9.02.xxx) 
+
+Notes 
+
+The following changes may no longer be made when using ELO Java Client version 9.03.000 and
+
+higher.
+
+Up to ELO Java Client 9.02.xxx, the OpenOffice preview can only be used in Microsoft Windows if
+
+the ELO Java Client is started using EloClient.bat.
+
+For OpenOffice 
+
+cd /D %~dp0
+
+java -Xms200m -Xmx1000m -classpath EloClient.jar;lib/*;"C:\Program Files (x86)\OpenOffice
+
+4\program\classes\officebean.jar";"C:\Program Files (x86)\OpenOffice
+
+4\program\classes\unoil.jar";"C:\Program Files (x86)\OpenOffice
+
+4\program\classes\juh.jar";"C:\Program Files (x86)\OpenOffice 4\program\classes\ridl.jar"
+
+de.elo.client.main.Start %*
+
+For LibreOffice 
+
+cd /D %~dp0
+
+java -Xms200m -Xmx1000m -classpath EloClient.jar;lib/*;"C:\Program Files (x86)\LibreOffice
+
+4\program\classes\officebean.jar";"C:\Program Files (x86)\LibreOffice
+
+4\program\classes\unoil.jar";"C:\Program Files (x86)\LibreOffice 4\URE\java\juh.jar";" C:
+
+\Program Files (x86)\LibreOffice 4\URE\java\ridl.jar" de.elo.client.main.Start %*
+
+141 Client administration
+
+
+
+Linux (OpenSuse) 
+
+The following steps are required for Linux (OpenSuse):
+
+Set environment variables 
+
+For OpenOffice 
+
+UNO_PATH=/opt/openoffice4/program
+
+For LibreOffice 
+
+UNO_PATH=/usr/lib64/libreoffice/program
+
+Modify the 'EloClient.sh' file (only up to ELO Java Client 9.02.xxx) 
+
+Notes 
+
+The following changes may no longer be made when using ELO Java Client version 9.03.000 and
+
+higher.
+
+For OpenOffice 
+
+java -Xms200m -Xmx1000m -classpath
+
+/opt/openoffice4/program/classes/officebean.jar:/opt/openoffice4/program/classes/unoil.jar:/
+
+opt/openoffice4/program/classes/juh.jar:/opt/openoffice4/program/classes/
+
+ridl.jar:EloClient.jar:lib/* -Dlog4j.properties de.elo.client.main.Start
+
+For LibreOffice 
+
+java -Xms200m -Xmx1000m -classpath
+
+/usr/lib64/libreoffice/program/classes/officebean.jar:/usr/lib64/libreoffice/program/
+
+classes/unoil.jar:/usr/lib64/libreoffice/URE/java/juh.jar:/usr/lib64/libreoffice/URE/java/
+
+ridl.jar:EloClient.jar:lib/* -Dlog4j.properties de.elo.client.main.Start
+
+142 Client administration
+
+
+
+Platforms
+
+Basics 
+
+This documentation provides an overview of the operating systems and other platforms supported
+
+by the ELO Java Client. The functional limitations and differences between the platforms are also
+
+mentioned, as are the ELO add-on modules required for some functions.
+
+Installation and rights 
+
+Microsoft Windows 
+
+Installing the client via MSI package requires, administrator rights to the computer. In later
+
+operation, only normal user rights are required.
+
+System requirements 
+
+Required 
+
+You will find a list of the system requirements for the ELO Java Client in the ELO system
+
+requirements documentation.
+
+Recommended 
+
+2 GB of RAM
+
+Dual core processor
+
+OpenJDK uses its own memory management system. The ELO Java Client is configured to allow it
+
+to use up to 1 GB of RAM. This is a fixed upper limit which can be reached temporarily when
+
+working with large image files. During normal operation, usually only 200-300 MB of RAM will be in
+
+use.
+
+• 
+
+• 
+
+143 Client administration
+
+https://docs.elo.com/ops/requirements/en-us/overview/clients.html#elo-java-client-23
+https://docs.elo.com/ops/requirements/en-us/overview/clients.html#elo-java-client-23
+https://docs.elo.com/ops/requirements/en-us/overview/clients.html#elo-java-client-23
+
+
+Platforms and modules 
+
+The following tables provide an overview of the functions that are still limited on supported
+
+platforms. Another column specifies whether an additional ELO module is required for the function.
+
+The restrictions for the operating system and the module add up.
+
+Client functions 
+
+The following table lists only the functions that differ between platforms. All other client functions
+
+exist on all platforms without requiring additional modules.
+
+Function Windows macOS Linux Module
+
+Send ✔ ✔ ✖
+
+Send as link ✔ ✔ ✖
+
+Send as PDF ✔ ✔ ✖ ELO PDF Printer
+
+Scan ✔ ✔ ✖
+
+Multipage scan ✔ ✖ ✖
+
+Select scanner ✔ ✔ ✖
+
+Scan profiles ✔ ✔ ✖
+
+Create signature ✔ ✖ ✖ SignLive
+
+Check signature ✔ ✖ ✖ SignLive
+
+Barcode recognition ✔ ✖ ✖
+
+OCR ✔ ✖ ✖ ELO OCR
+
+Create preview document ✔ ✖ ✖ ELO TIFF Printer
+
+TIFF conversion ✔ ✖ ✖ ELO TIFF Printer
+
+PDF conversion ✔ ✔ ✖ ELO PDF Printer (only in Windows)
+
+Microsoft Office integration ✔ ✔ ✖ ELO macros Java Client
+
+Internal scripting ✔ ✔ ✔
+
+COM interface ✔ ✖ ✖
+
+ECD activator ✔ ✔ ✖
+
+Document preview 
+
+To display documents in the client preview, different classes are available. These can be configured
+
+for various file formats. Some of these preview classes are permanently implemented in the client,
+
+while others use external programs, such as a browser or an Office application, for embedded
+
+display.
+
+Many other file formats can be displayed via the browser preview (or Microsoft Internet Explorer
+
+preview) if a corresponding plug-in is installed in the browser.
+
+144 Client administration
+
+
+
+Preview Windows macOS Linux Module
+
+PDF, MSG, EML, TXT ✔ ✔ ✔
+
+JPEG, GIF, TIFF ✔ ✔ ✔
+
+EMF, WMF, MMF ✔ ✔ ✔
+
+Browser ✔ ✔ ✔
+
+Internet Explorer ✔ ✖ ✖ Microsoft Internet Explorer
+
+OpenOffice ✔ ✖ ✔ OpenOffice/LibreOffice
+
+Microsoft Office ✔ ✔ ✖ Microsoft Office
+
+145 Client administration
+
+
+
+File formats
+
+Introduction 
+
+This documentation gives an overview of the file formats supported by the viewer in the ELO
+
+clients. It also explains functional limitations and differences between the ELO clients, as well as
+
+requirements and additional software.
+
+The following chapters explains the procedure in the ELO Java Client and ELO Web Client.
+
+146 Client administration
+
+
+
+ELO Java Client 
+
+The ELO Java Client assigns file formats to different previews in order to show these file formats in
+
+the viewer.
+
+The ELO Java Client viewer supports the following formats:
+
+Browser preview: 
+
+HTML, HTM, MHT
+
+Internet Explorer ActiveX Plug-ins (only Windows, e. g. PDF with Acrobat Reader)
+
+MSG/EML with HTML display
+
+Text preview 
+
+JS, TXT, LOG, text formats
+
+EML e-mail preview, MSG e-mail preview 
+
+MSG/EML without HTML display
+
+OpenOffice preview (up to ELO 11, if Libre/Open Office is installed) 
+
+Office formats depending on the installed Office Suite components
+
+MS Office preview (Windows, with Microsoft Office version 2007 and higher, and with the
+
+components matching the formats) 
+
+DOC, DOCX, DOCM, DOT, DOTX, XLS, XLSM, XLSX, XLT, XLTX, PPT, PPTX, POT, POTX,
+
+VSD, VST, VSS, ODT, ODS, ODP, RTF
+
+Microsoft Office web preview (with ELOimo) 
+
+Office formats, PDF depending on the installed ELOimo components
+
+Windows Media Player preview (Windows) 
+
+Various A/V formats
+
+Media player preview 
+
+MP3, MP4, WAV
+
+PDF preview 
+
+PDF
+
+Image preview 
+
+BMP, PNG, JPG, GIF (with animations), ICO, SVG, TIFF, PSD, MMF, WMF
+
+PNM, HDR, PCX, IFF, PICT, SGI, TGA, ICNS, CUR
+
+ZIP preview 
+
+ZIP
+
+Information on configuring the viewer in the ELO Java Client 
+
+The image preview also supports less well-known formats; Java ImageIO plug-ins can be installed
+
+as necessary.
+
+The browser preview supports additional formats if corresponding plug-ins have been installed in
+
+Internet Explorer.
+
+When Open Office has been installed and integrated, the Open Office preview supports the majority
+
+of Office formats.
+
+• 
+
+◦ 
+
+◦ 
+
+◦ 
+
+• 
+
+◦ 
+
+• 
+
+◦ 
+
+• 
+
+◦ 
+
+• 
+
+◦ 
+
+• 
+
+◦ 
+
+• 
+
+◦ 
+
+• 
+
+◦ 
+
+• 
+
+◦ 
+
+• 
+
+◦ 
+
+◦ 
+
+• 
+
+◦ 
+
+147 Client administration
+
+
+
+The ActiveX plug-in preview supports the ELO plug-ins also used in the ELO Windows Client – these
+
+just have to be configured.
+
+The Apple OSX preview represents an alternative to the Microsoft Internet Explorer-based browser
+
+preview; no detailed list of supported formats is available.
+
+Selecting Show preview document forces the system to display a preview document instead of the
+
+document. The configuration appropriate for the preview document then applies (PDF, TIFF).
+
+148 Client administration
+
+
+
+ELO Web Client 
+
+The ELO Web Client assigns file formats to different previews in order to show these file formats in
+
+the viewer.
+
+The ELO Web Client viewer supports the following formats:
+
+BMP
+
+EML
+
+GIF
+
+ICO (web preview only)
+
+JPG
+
+MSG
+
+PDF
+
+PNG
+
+TIFF
+
+TXT (unformatted text formats)
+
+The individual file formats can be assigned to different previews in the configuration.
+
+Image preview: The graphic formats are shown via the ELO Indexserver.
+
+Web preview: With the web preview, the file to be shown is embedded in an IFRAME element. The
+
+display options of the current browser are used.
+
+Microsoft Office documents: Microsoft Office documents can be viewed using Microsoft Web Apps or
+
+the ELO Interface for Microsoft Office Online Server (ELOimo), provided that a corresponding
+
+Microsoft Office Online Server is available.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+149 Client administration
+
+
+	Table of contents
+	ELO Java Client administration
+	Introduction
+	Target audience
+	Use
+	Operating system
+
+	Installation
+	Installation with ISO file
+	Requirements
+	Configure ELO Indexserver
+	Optional: Logging
+
+	ELO Java Client with additional components
+	Installation directory
+	Profile name
+	ELO Indexserver URL
+	Configuration with file name
+	Example
+
+	Terminal server operation
+	Memory
+
+	macOS
+	Java Runtime Environment
+	Installation
+	ZIP file
+	Start installation
+	Start the ELO Java Client
+	Logging
+
+	Linux
+	Install Java
+	Check Java installation
+	Install the ELO client
+	Start the ELO Java Client
+	Profile
+
+	Logging
+
+
+	Logon
+	Single sign-on
+	Requirements
+	Registry entry in Windows
+	SSO in Linux
+	SSO with SPNEGO and NTLM
+
+	Create new profile
+	Registry entries for the ELO Java Client
+	Windows
+	Linux
+	macOS
+
+
+	Configuration
+	Overview
+	Areas
+	Levels concept in the configuration
+	Override settings
+	General functions
+	Search configuration
+	Display
+	General
+	Layout options
+	Font
+	Search
+	Lists and tables
+	Task list display options
+	List of recently used entries
+
+	Color scheme
+	Color scheme
+	Color mode
+
+	Dialog boxes
+	General
+	Version comment
+	Notifications
+	Annotations when sending as PDF
+	Inherit permissions when moving entries
+	Drag-and-drop
+	Duplicate check
+	Load new version
+	Check in
+	Delete reference
+	Multiple entries as link
+	Print separator pages
+	Delete from the Clipboard
+	Delete from the search
+	Logon dialog box
+
+	Metadata
+	General
+	Show metadata
+	Default settings for metadata
+	Metadata form for different file types
+
+	Document preview
+	General
+	E-mail
+	Preview configuration for different file types
+	Preview plug-ins
+
+	Quick access to functions
+	Available functions and keyboard shortcuts
+	Functions on the Favorites tab and in the context menus
+	Assign keyboard shortcuts to functions
+	Delete keyboard shortcuts
+	Reset keyboard shortcuts
+	Keyboard shortcuts as PDF file
+	Add function
+	Change order
+	Remove function
+	Reset functions
+
+	Annotations
+	Sticky notes
+	Marker width
+	Horizontal marker
+	Freehand marker
+	Rectangle marker
+	Strikethrough
+	Redaction configuration
+	Text note configuration
+
+	Advanced settings
+	General
+	Settings for the Intray work area
+	Intray folder in the file system
+	Workflow
+	My ELO
+	Signature
+
+	Technical presets
+	General
+	Display and refresh
+	Log file
+	Date formats
+	Number formats
+	Show or hide work areas
+	Folder for document templates
+	OCR (text recognition)
+
+	Manage functions
+	Apply ribbon settings
+	Enable or disable functions
+	Configure favorites for other users
+	Insert separator line
+	HTML templates for the metadata preview
+	HTML Templates folder
+	HTML templates file format
+	Example
+	Variables
+	Correct syntax
+
+	Example: Owner
+	Example: Standard variables
+
+	Collaboration
+	Change profile image as administrator
+	Storage location
+
+	Edit profile data as administrator
+	Storage location
+	Step by step
+
+
+	Translation
+	Translation files
+	Example
+
+	Translation table
+	Example
+
+
+	Change storage location for user data
+	Configuration
+	Variables
+	Example
+
+	Connection with Microsoft 365
+	'Check out to OneDrive' function
+
+
+	ELO Barcode
+	Getting started
+	Activate license
+	Configure metadata form for barcode recognition
+	Start barcode recognition
+	Outlook
+
+
+	Basics
+	Overview of functions
+	Factors that affect barcode recognition
+	Quality
+	Barcode recognition characteristics
+	Barcode type
+	Resolution in dots per inch (DPI)
+	Recommended barcode width
+	Vertical barcode height
+	Barcode symbol alignment
+	Quiet zones
+	Scanner settings
+	Barcode quality
+
+	Enable barcode recognition
+
+	Configuration
+	Configure metadata form
+	Barcode info input field
+	Brief overview
+	R instruction
+	L instruction
+	T instruction
+	V instruction
+	S instruction
+	P instruction
+	Example
+
+	Scan area
+	Page only
+	Scan direction
+
+	Check
+	Minimum/maximum length
+	Barcode types
+	Editing settings
+
+	Scan and file
+	Filing settings
+	Image enhancements
+	Noise reduction
+
+	Assign metadata
+	Information
+	Step by step
+	Result
+
+
+	Barcode recognition in the ELO Java Client
+	Method
+	Result
+	Outlook
+
+	Barcode types
+	EAN 13/EAN 8
+	Basic structure of an EAN barcode
+
+	Code 39
+	Interleaved 2 of 5 (Code 25 Interleaved)
+	UPC A
+	UPC E
+	Table of supported barcode types
+
+
+	ELO SANE scan
+	Introduction
+	Installation and configuration
+	Installation of SANE backends
+	Linux
+
+	Configuration in the ELO Java Client
+	Notes
+
+
+	ELO Macros (HTTP)
+	Installation
+	Enable HTTP Automation Interface
+	Set up the ELO Macros
+	Installation in Microsoft Windows
+	Installation in macOS
+
+	Install script
+
+	Configuration
+	Functions
+	Call functions
+	Microsoft Windows
+	macOS
+	IBM Notes
+
+	Overview of functions
+	ELO Transfer
+	Automatically file to ELO
+	Transfer to ELO Intray
+	ELO search
+	Configuration
+
+
+
+	Dynamic folders
+	What are dynamic folders?
+	Dynamic folders in the ELO Java Client
+	Dynamic folders in the ELO Web Client
+
+	Create dynamic folders
+	!+[command]
+	Query multiple tables
+	Example 1
+	Example 2
+
+	!?[command]
+	!=[command]
+	Obsolete commands
+
+	Additional notes
+	Performance
+	Available columns
+	Specific to Oracle SQL
+	Example
+
+
+	Usage examples
+	Show documents added to the repository in the last 30 days
+	Other usage examples
+
+
+	elodms links
+	Introduction
+	Use
+	elodms GUID links
+	elodms links with annotation number
+	elodms links with page number
+
+	elodms object ID links
+	elodms workflow links
+	Script installer URLs
+
+
+	OpenOffice preview
+	Introduction
+	Windows
+	Set environment variables
+	For OpenOffice
+	For LibreOffice
+
+	Modify the 'EloClient.bat' file (only up to ELO Java Client 9.02.xxx)
+	Notes
+	For OpenOffice
+	For LibreOffice
+
+
+	Linux (OpenSuse)
+	Set environment variables
+	For OpenOffice
+	For LibreOffice
+
+	Modify the 'EloClient.sh' file (only up to ELO Java Client 9.02.xxx)
+	Notes
+	For OpenOffice
+	For LibreOffice
+
+
+
+	Platforms
+	Basics
+	Installation and rights
+	Microsoft Windows
+
+	System requirements
+	Required
+	Recommended
+
+
+	Platforms and modules
+	Client functions
+	Document preview
+
+
+	File formats
+	Introduction
+	ELO Java Client
+	Information on configuring the viewer in the ELO Java Client
+
+	ELO Web Client
+
+

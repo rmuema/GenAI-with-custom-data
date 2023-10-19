@@ -1,0 +1,466 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO for Microsoft | ELO Bot for Microsoft Teams
+
+
+ELO for Microsoft
+
+ELO Bot for Microsoft Teams
+
+
+
+3
+
+3
+
+4
+
+7
+
+10
+
+Table of contents
+
+null
+
+Requirements 
+
+Installation 
+
+Configuration 
+
+Use 
+
+2 ELO for Microsoft
+
+
+
+null
+
+Requirements 
+
+The following requirements apply for the installation and use of the ELO Bot for Microsoft Teams.
+
+App registration in Microsoft Azure 
+
+To install the ELO Bot for Microsoft Teams, you need to register the app in Microsoft Azure.
+
+You can read how to do this under Initial app registration in Microsoft Azure.
+
+ELOauth 
+
+Another requirement for using the ELO Bot for Microsoft Teams is the ELOauth plug-in.
+
+The ELO Bot for Microsoft Teams requires a configuration named "azure_oauth" in the ELOauth plug-
+
+in, which allows the Microsoft Teams user to sign in to ELO.
+
+If you want to use a name other than "azure_oauth", you need to modify it in the appsettings.json
+
+file in the ELO Bot installation folder.
+
+ELOauth is automatically rolled out with the installation of the ELO Bot from the ELO Server Setup.
+
+You can get detailed information about ELOauth in the documentation ELOauth Plug-in.
+
+As with the ELO Bot, ELOauth is registered as a Microsoft Azure service in the ELO Administration
+
+Console. You will find more information on registering a service in the ELO Azure Administration
+
+documentation.
+
+3 ELO for Microsoft
+
+https://docs.elo.com/admin/config/en-us/azure-administration/initial-app-registration.html
+https://docs.elo.com/admin/config/en-us/azure-administration/initial-app-registration.html
+https://docs.elo.com/ops/indexserver/en-us/eloauth/introduction.html#process
+https://docs.elo.com/ops/indexserver/en-us/eloauth/introduction.html#process
+https://docs.elo.com/admin/config/en-us/azure-administration/services.html
+https://docs.elo.com/admin/config/en-us/azure-administration/services.html
+
+
+Installation 
+
+The ELO Bot for Microsoft Teams is installed via the ELO Application Manager from the ELO Server
+
+Setup. The ELO Bot is not installed by default and must be installed separately.
+
+The ELO Bot is registered and run as a Linux/Windows service. It is a self-contained package, which
+
+means that .NET runtime is included.
+
+Prior to installation, you need to register the ELO Bot for Microsoft Teams as an app in Microsoft
+
+Azure. You can read how to do this under Initial app registration in Microsoft Azure.
+
+To install the ELO Bot, you will have to register the ELO Bot as a service in the ELO Azure
+
+Administration. To learn how to register a service in the ELO Azure Administration, refer to the
+
+documentation ELO Azure Administration.
+
+Deploying the ELO Bot in Microsoft Teams 
+
+When registering the ELO Bot as a service in the ELO Azure Administration, a manifest file is
+
+provided. Download this manifest file and deploy it to the ELO Bot in Microsoft Teams. You require
+
+administrator rights to deploy the bot to Microsoft Teams.
+
+You deploy the ELO Bot in Microsoft Teams as an app on the Apps tab.
+
+Method
+
+Click the Manage apps button.1. 
+
+4 ELO for Microsoft
+
+https://docs.elo.com/admin/config/en-us/azure-administration/initial-app-registration.html
+https://docs.elo.com/admin/config/en-us/azure-administration/initial-app-registration.html
+https://docs.elo.com/admin/config/en-us/azure-administration/services.html
+https://docs.elo.com/admin/config/en-us/azure-administration/services.html
+
+
+The Manage apps dialog box opens.
+
+Click Upload app.2. 
+
+5 ELO for Microsoft
+
+
+
+The Upload app dialog box appears.
+
+Click Upload custom app.
+
+Select the downloaded ELO Bot manifest file.
+
+Result
+
+Once selected, the ELO Bot is deployed to Microsoft Teams where the app can be added.
+
+Please note
+
+Important: If any of the data associated with the ELO Bot changes, e.g. the bot base URL,
+
+you need to go through the deployment process again. In this case, you need to delete the
+
+deployment first. On the dashboard, click the action Delete deployment. First you need to
+
+manually delete the ELO Bot app in Microsoft Teams. A new ELO Bot manifest file is provided
+
+after deployment. Use this manifest file to deploy the ELO Bot to Microsoft Teams again.
+
+Refer to the chapter Configuration to learn how to set up the ELO Bot for Microsoft Teams.
+
+3. 
+
+4. 
+
+6 ELO for Microsoft
+
+
+
+Configuration 
+
+In order to use ELO Bot for Microsoft Teams, you first need to add the app to Microsoft Teams.
+
+Go to Apps > Upload custom apps, and upload the manifest (ZIP file). If the manifest is loaded
+
+correctly, the app will appear. Select the app and click Add.
+
+One you have added the app, you need to restart Microsoft Teams.
+
+You can start chatting with the bot by typing hi, hello, or menu. The ELO Bot responses are created
+
+using adaptive cards.
+
+Once you have integrated the ELO Bot for Microsoft Teams, you will need to authenticate again in
+
+Microsoft Azure the first time you interact with the bot. Start the chat with hi, hello, or menu. You
+
+will see a button for authenticating in Microsoft Azure on the adaptive card. Click this button to go
+
+through the authentication process.
+
+For authentication to work, you need to link the corresponding users in the ELO Administration
+
+Console to the e-mail account for Microsoft Azure.
+
+To interact with the ELO Bot, you must explicitly add the bot to a team. To add the bot to a team,
+
+click the button Apps > Open > Drop-down arrow > Select a team.
+
+7 ELO for Microsoft
+
+
+
+You can make additional configurations in the appsettings.json file. This file is stored in the
+
+installation folder.
+
+For example, in appsettings.json, you can configure the number of results to be displayed.
+
+If you want to use a repository in the ELO Bot, the proxy server of this ELO instance must know the
+
+ELO Bot. You need to add the /bot/=<IP address of bot> entry to the corresponding 
+
+de.elo.ix.plugin.proxy.properties file.
+
+The Microsoft Teams user must authenticate with SSO to obtain access to the context-free functions
+
+of ELO Business Solutions in Microsoft Teams. In the ELO Bot, switch to the Business Solutions tab.
+
+If you are not already authenticated, SSO authentication is performed when you switch tabs. Once
+
+you have done this, you can access the functions on the tab as well as in other areas of Microsoft
+
+Teams.
+
+The same applies for ELO Flows. However, in the current version, only the ELO Flows triggers are
+
+supported and not the ELO Flows web apps.
+
+Information
+
+8 ELO for Microsoft
+
+
+
+ELO Flows and the ELO Business Solutions can only be displayed if the corresponding IX
+
+server can be accessed.
+
+9 ELO for Microsoft
+
+
+
+Use 
+
+The ELO Bot for Microsoft Teams connects Microsoft Teams to your ELO repository.
+
+Search 
+
+You can perform a search in your ELO repository from within Microsoft Teams. You have two options:
+
+Search on the search bar
+
+Start search in a chat
+
+Search on the search bar 
+
+Use the search bar in Microsoft Teams to perform a search in your ELO repository.
+
+Method
+
+Type @ELO in the search bar.
+
+The ELO Bot suggests the following options: Search, Solutions, Flows.
+
+Click the option Search.
+
+Enter a search term in the search bar.
+
+Information
+
+The search only searches the Short name field.
+
+Result
+
+The results are displayed in a list.
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+3. 
+
+10 ELO for Microsoft
+
+
+
+Outlook
+
+You can choose from two options next to the short name of the results:
+
+Place results on clipboard: You can place the results on the clipboard. You can paste the
+
+clipboard contents into Microsoft Teams messages and send them.
+
+Show results in ELO Web Client: You can view the results in the ELO Web Client.
+
+Start search in a chat 
+
+You can perform a search in your ELO repository from within a Microsoft Teams chat. You have two
+
+options:
+
+Start a search using the input line
+
+Start a search using the ELO Bot icon
+
+Start a search using the input line
+
+Method
+
+Type @ELO in the text field.
+
+The ELO Bot suggests the following options: Search, Solutions, Flows.
+
+Click the option Search.
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+3. 
+
+11 ELO for Microsoft
+
+
+
+Enter a search term in the search bar.
+
+Result
+
+The search result is pasted into the message box. You can send the message in the usual way.
+
+Start a search using the ELO Bot icon
+
+There is a button for the ELO Bot below the text field.
+
+The search result is pasted into the message box. You can send the message in the usual way.
+
+Share documents in Microsoft Teams 
+
+The ELO Bot enables you to share documents stored in ELO in a chat.
+
+Use the search to find the document and send it. The chapter Search explains how to start a search.
+
+12 ELO for Microsoft
+
+
+
+The ELO Bot uses adaptive cards to share documents.
+
+Clicking the Open in ELO Web Client button takes you to the document in ELO.
+
+Notifications of new ELO tasks 
+
+The ELO Bot for Microsoft Teams notifies you when you have a new task in ELO.
+
+Clicking the Open in ELO Web Client button takes you to the task in ELO.
+
+Pin ELO Bot 
+
+Use the menu (three dots) to pin the ELO Bot to Microsoft Teams.
+
+Method
+
+Click the menu (three dots) on the left in Microsoft Teams.
+
+This opens a selection of apps.
+
+Right-click the ELO Bot icon.
+
+Select Pin in the context menu.
+
+Result
+
+The ELO Bot icon is pinned to the navigation bar on the left in Microsoft Teams where you also have
+
+things like Chat and Teams.
+
+1. 
+
+2. 
+
+3. 
+
+13 ELO for Microsoft
+
+
+
+Call ELO Business Solutions 
+
+You can call object-independent functions with the ELO Bot. Object-independent functions are
+
+actions that can be performed without selecting an entry in the repository, e.g. Create new contact.
+
+To call ELO Business Solutions functions, type @ELO in the search bar or the text field.
+
+Call ELO Flows 
+
+You can call ELO Flows functions with the ELO Bot. ELO Flows allows you to map and initiate
+
+processes, such as submitting a request for leave. To call ELO Flows, type @ELO in the search bar or
+
+the text field.
+
+14 ELO for Microsoft
+
+
+	Table of contents
+	null
+	Requirements
+	App registration in Microsoft Azure
+	ELOauth
+
+	Installation
+	Deploying the ELO Bot in Microsoft Teams
+
+	Configuration
+	Use
+	Search
+	Search on the search bar
+	Start search in a chat
+
+	Share documents in Microsoft Teams
+	Notifications of new ELO tasks
+	Pin ELO Bot
+	Call ELO Business Solutions
+	Call ELO Flows
+
+
+

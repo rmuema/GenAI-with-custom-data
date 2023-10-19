@@ -1,0 +1,1246 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Business Solution ELO Contract | Business Solution ELO Contract 1.07
+
+
+Business Solution ELO
+
+Contract
+
+Business Solution ELO Contract 1.07
+
+
+
+3
+
+4
+
+9
+
+13
+
+20
+
+25
+
+32
+
+Table of contents
+
+Introduction 
+
+Basics 
+
+Create contract 
+
+Contract processes 
+
+Create contract documents 
+
+Overviews 
+
+Contact management 
+
+2 Business Solution ELO Contract
+
+
+
+Introduction 
+
+Structure of the documentation 
+
+The goal of this documentation is to explain all functions of Business Solution ELO Contract
+
+together with ELO Contact.
+
+Basics 
+
+The Basics chapter explains the basics of the ELO Contract program interface.
+
+Possible actions 
+
+The remaining chapters address possible actions using ELO Contract.
+
+Target audience 
+
+This documentation is addressed to Business Solution ELO Contract users. Separate documentation
+
+is available for administrators on the ELO SupportWeb.
+
+The scope of functions presented in this documentation may differ greatly from those in your
+
+client.
+
+If you do not find functions described in this documentation in your client, you do not have
+
+permission to perform the action.
+
+3 Business Solution ELO Contract
+
+
+
+Basics 
+
+ELO Business Solution Contract lets you manage and monitor incoming and outgoing contracts
+
+throughout their entire lifecycle.
+
+Fig.: Contract lifecycle
+
+Business Solution ELO Contract replicates the contract lifecycle in a company from creating a
+
+contract to contract negotiations, contract conclusion, and termination of a contract.
+
+You can also add documents to the contracts.
+
+A dashboard helps you to visualize contract phases, and reports provide an overview, helping you
+
+to plan the next steps.
+
+General note 
+
+ELO Contract works with the following clients:
+
+ELO Web Client
+
+ELO Java Client
+
+ELO Desktop Client
+
+Information
+
+In this documentation, we use screenshots from the ELO Web Client.
+
+• 
+
+• 
+
+• 
+
+4 Business Solution ELO Contract
+
+https://docs.elo.com/user/elo-web-client/en-us/elo-web-client/
+https://docs.elo.com/user/elo-web-client/en-us/elo-web-client/
+https://docs.elo.com/user/elo-java-client/en-us/elo-java-client/
+https://docs.elo.com/user/elo-java-client/en-us/elo-java-client/
+https://docs.elo.com/user/elo-desktop-client/en-us/elo-desktop-client/
+https://docs.elo.com/user/elo-desktop-client/en-us/elo-desktop-client/
+
+
+Requirements 
+
+Your administrator must have configured ELO Contract for you.
+
+Program interface 
+
+Fig.: Business Solution ELO Contract program interface
+
+You will find ELO Contract functions in the following areas:
+
+1 'Contracts' and 'New contract' tiles in the tile navigation area
+
+You can access the contract monitoring dashboard by clicking the Contracts tile.
+
+The New contact and New company tiles are used for contact management.
+
+2 'Contract' group on the 'New' tab
+
+The Contact tab is where you manage contacts.
+
+Fig.: 'Contract' tab
+
+3 'Contract' tab
+
+When you select an existing contract, the Contract tab opens.
+
+You can access most contract management functions on this tab.
+
+5 Business Solution ELO Contract
+
+
+
+Repository 
+
+The structure and appearance of the repository depend greatly on your specific configuration. The
+
+default state is described here.
+
+Fig.: Contract management in the repository
+
+Contracts are filed to // Contract management // Contracts // [Contract type].
+
+You will also find references to contracts in dynamic folders. You can use these folders to search for
+
+specific contracts, such as by status.
+
+Contract types 
+
+All contracts must be based on a contract type. Depending on the contract type, information is
+
+automatically entered when filing a contract.
+
+If you don't have to select the contract type when creating a contract, this means that only one
+
+contract type has been configured, which is then selected automatically.
+
+6 Business Solution ELO Contract
+
+
+
+Contracts 
+
+Fig.: Contract file form
+
+Each contract file that is created contains a form.
+
+This form contains the relevant information from the contract as well as its current status.
+
+During the contract lifecycle, the form is edited or supplemented with information by the users
+
+involved in the process. The status changes automatically.
+
+A contract can have the following statuses:
+
+D – Draft
+
+I – Approval initiated
+
+A – Approved
+
+N – In negotiation
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+7 Business Solution ELO Contract
+
+
+
+S – Concluded
+
+T – Terminated
+
+C – Canceled
+
+Contracts can be created without a term, with a limited term, and with an unlimited term.
+
+• 
+
+• 
+
+8 Business Solution ELO Contract
+
+
+
+Create contract 
+
+Information
+
+You can create new contracts or existing ones in ELO.
+
+When creating a contract, you can enter new contact data in the contact list as needed.
+
+Method
+
+On the New tab, click New contract.
+
+Fig.: 'Select contract' dialog box
+
+Optional: If multiple contract types have been created, you first have to choose a contract
+
+type. By selecting a contract type, relevant information is automatically entered in the
+
+contract file.
+
+1. 
+
+9 Business Solution ELO Contract
+
+
+
+Fig.: 'Create contract' dialog box
+
+Complete the fields in the Create contract dialog box as required.
+
+You will find the input fields to create a contract on four tabs.
+
+Depending on the contract type, master data may already be filled out. You will recognize such data
+
+by the gray background. You can change the entries in the Relation, Risk classification, and Status
+
+fields using the drop-down menus.
+
+Mandatory fields are marked with a red asterisk. Combined mandatory fields are marked with a
+
+blue asterisk. One of the two fields must be completed.
+
+Fields with a pencil icon contain keyword lists. When you enter a value in the respective field,
+
+matching list entries appear.
+
+2. 
+
+10 Business Solution ELO Contract
+
+
+
+Contract number: The contract number is generated automatically as soon as you have created the
+
+contract.
+
+Create contact: If this is a new contact you want to create, enable the Create new contacts option
+
+on the Contract partner tab.
+
+Result
+
+Fig.: New contract in the repository
+
+A new contract is created with child folders.
+
+Outlook
+
+You can file record objects related to the contract in the corresponding child folders.
+
+Please note
+
+When filing documents related to a contract, make sure to use the Contract document
+
+metadata form. This is the only way to inherit information relevant for searches.
+
+• 
+
+• 
+
+11 Business Solution ELO Contract
+
+
+
+Depending on the status of the contract, you can perform actions described in the Contract
+
+processes chapter.
+
+Using the functions described in the Create contract documents chapter, you can
+
+automatically create documents with information from the contract.
+
+If you have added a new contact, the new contact data will be available in a keyword list
+
+when creating new contracts.
+
+• 
+
+• 
+
+12 Business Solution ELO Contract
+
+
+
+Contract processes 
+
+After creating a contract in ELO, you can map the following processes in ELO:
+
+Initiate approval
+
+Negotiate contract
+
+Conclude contract
+
+Cancel negotiation
+
+Initiate termination
+
+These individual processes do not have to be performed as an overall process, meaning that less
+
+complex contracts can be completed without any steps.
+
+Initiate approval 
+
+Information
+
+You can initiate the approval process for a contract. Approval can be initiated during any phase.
+
+During approval, all involved parties can make changes to the contract.
+
+Method
+
+Select the contract you want to initiate the approval process for.
+
+On the Contract tab, click Initiate approval.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+13 Business Solution ELO Contract
+
+
+
+Fig.: 'Initiate approval' dialog box
+
+In the Initiate approval dialog box, complete the fields as required.
+
+Check steps: Enter the check steps. To prevent users from being able to skip a check step, check
+
+the box next to Mandatory. As a result, the subsequent check steps cannot be ignored.
+
+Result
+
+Fig.: Contract file in the repository
+
+An approval workflow is started and is sent to the specified approver(s).
+
+When the approval workflow is still pending, the contract has the status I – Approval initiated. After
+
+the approval workflow is completed, the contract has the status A – Approved. The contract file is
+
+shown in a yellow font.
+
+Issue approval 
+
+Information
+
+If you have received a contract for approval, it will appear in your Tasks work area.
+
+Method
+
+In the Tasks work area, select the workflow with the contract you are supposed to approve.
+
+Click Accept workflow to process the form.
+
+Check the contract you are supposed to approve and enter a comment in the input field for
+
+the next editors.
+
+Optional: Enter an additional check step as needed.
+
+3. 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+14 Business Solution ELO Contract
+
+
+
+Click Approve.
+
+Result
+
+The workflow is forwarded to the next check step/the responsible department.
+
+Negotiate contract 
+
+Information
+
+You can initiate negotiations for a contract.
+
+Method
+
+Select the contract you want to initiate the negotiation process for.
+
+On the Contract tab, click Negotiate contract.
+
+Result
+
+The status of the contract changes to N – In negotiation.
+
+An automatic feed post is created.
+
+Conclude contract 
+
+Information
+
+You can conclude a contract. To search for active and inactive contracts, valid contracts have to be
+
+marked as concluded.
+
+Method
+
+Select the contract you want to conclude.
+
+On the Contract tab, click Conclude contract.
+
+1. 
+
+2. 
+
+1. 
+
+2. 
+
+15 Business Solution ELO Contract
+
+
+
+Fig.: 'Conclude contract' dialog box
+
+In the Conclude contract dialog box, complete the fields on the Contract conclusion tab as
+
+required.
+
+The fields on the Data, Term, Contract partner, and Cash flow tabs are already completed.
+
+Result
+
+3. 
+
+16 Business Solution ELO Contract
+
+
+
+Fig.: Contract file in the repository
+
+The status of the contract changes to S – Concluded. The contract file is shown in a green font.
+
+Cancel negotiation 
+
+Information
+
+You can cancel negotiations for a contract.
+
+Method
+
+Select the contract you want to cancel the negotiation process for.
+
+On the Contract tab, click Cancel negotiation.
+
+Result
+
+The status of the contract changes to C – Canceled.
+
+An automatic feed post is created.
+
+Initiate termination 
+
+Information
+
+You can terminate a contract. Once a contract is completed, it has to be terminated to signalize the
+
+end of the contract in ELO. Before concluding the contract, use the Cancel negotiation function.
+
+Method
+
+Select the contract you want to terminate.
+
+1. 
+
+2. 
+
+1. 
+
+2. 
+
+17 Business Solution ELO Contract
+
+
+
+On the Contract tab, click Initiate termination.
+
+Fig.: 'Initiate termination' dialog box
+
+In the Initiate termination dialog box, complete the fields as required.
+
+Check steps: Enter the check steps. To prevent users from being able to skip a check step, check
+
+the box next to Mandatory. As a result, the subsequent check steps cannot be ignored.
+
+Result
+
+A termination workflow is started and is sent to the specified approver.
+
+Outlook
+
+During the termination process, the contract maintains its existing status. Once the contract is
+
+terminated, the contract status changes to T – Terminated.
+
+Terminate contract 
+
+Information
+
+If you have received a contract for termination, it will appear in your Tasks work area.
+
+Method
+
+In the Tasks work area, select the workflow with the contract you are supposed to terminate.
+
+3. 
+
+1. 
+
+18 Business Solution ELO Contract
+
+
+
+Optional: Click Accept workflow to process the form.
+
+Check the contract you are supposed to terminate and enter a comment in the input field.
+
+Optional: Enter an additional check step as needed.
+
+Click Accept.
+
+Result
+
+The status of the contract changes to T – Terminated.
+
+A feed post is created with the comment you entered.
+
+2. 
+
+3. 
+
+19 Business Solution ELO Contract
+
+
+
+Create contract documents 
+
+You can automatically create documents related to contracts.
+
+This chapter addresses the following functions:
+
+Create document
+
+Update document
+
+Create cover sheet
+
+Create label
+
+Create document 
+
+Information
+
+You can automatically create a document with the data from a contract. Use document templates
+
+for this. Document templates contain placeholders that are automatically replaced with the
+
+information from the contract.
+
+Requirement
+
+At least one document template must be available.
+
+Method
+
+Select the folder for the contract you want to generate a document for.
+
+On the Contract tab, click Create document.
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+20 Business Solution ELO Contract
+
+
+
+Fig.: 'Select template' dialog box
+
+In the Select template dialog box, select a document template and confirm your selection
+
+with OK.
+
+Fig.: 'Create new document' dialog box
+
+In the Create new document dialog box, you can change the name of the document and the
+
+responsible user.
+
+The fields on the Additional information tab contain the contract information and cannot be
+
+changed.
+
+Click OK.
+
+Result
+
+The document is added to the selected folder and opened.
+
+Outlook
+
+You can edit the document and print it for use.
+
+If any contract information changes, you can apply changes using the Update document
+
+function. The Update document function has no effect on subsequent changes to the
+
+document. It only updates the information automatically transferred from the form.
+
+3. 
+
+4. 
+
+5. 
+
+• 
+
+• 
+
+21 Business Solution ELO Contract
+
+
+
+Update document 
+
+Information
+
+For example, if contract data changes after a document has been generated using the Create
+
+document function, you can update the document. As a result, you do not have to create a new
+
+document or make manual changes to an existing one.
+
+The Update document function has no effect on subsequent changes to the document. It only
+
+updates the information automatically transferred from the form.
+
+Method
+
+Select the document you want to update.
+
+On the Contract tab, click Update document.
+
+Result
+
+Old information and blank spaces in the document are replaced with new information from the
+
+contract.
+
+Create cover sheet 
+
+Information
+
+Use this function to create a cover sheet for the selected contract.
+
+Method
+
+Select the contract you want to create a cover sheet for.
+
+On the Contract tab, click Create cover sheet.
+
+Result
+
+1. 
+
+2. 
+
+1. 
+
+2. 
+
+22 Business Solution ELO Contract
+
+
+
+Fig.: Cover sheet
+
+The cover sheet is saved to the file.
+
+Outlook
+
+23 Business Solution ELO Contract
+
+
+
+The cover sheet contains information on the contract as well as a QR code. If you print the cover
+
+sheet and store it in a physical file, you can scan the QR code with a mobile device to go straight to
+
+the digital file.
+
+Create label 
+
+Information
+
+Use this function to create a label for the selected contract file.
+
+Method
+
+Select the contract you want to create a label for.
+
+On the Contract tab, click Create label.
+
+Result
+
+Fig.: Label with QR code
+
+The label is filed to the contract file.
+
+Outlook
+
+The label contains information on the contract as well as a QR code. If you print the label
+
+using a label printer and store it in a physical file, you can scan the QR code with a mobile
+
+device to go straight to the digital file.
+
+If you want to use the Print document function in the ELO Java Client, you will have to set the
+
+label printer as the default printer in Windows. 
+
+You can also select the label printer as the default printer for faxes in the ELO Java Client
+
+configuration and print using the Fax document function.
+
+1. 
+
+2. 
+
+• 
+
+• 
+
+• 
+
+24 Business Solution ELO Contract
+
+
+
+Overviews 
+
+Reports and dashboards help give you an overview of your contracts.
+
+Reports 
+
+Information
+
+You can create reports to analyze contracts. A report is filed to your repository as an Excel table.
+
+When you create a report, it is only visible to you.
+
+Reports are based on templates. These templates filter the contracts based on specified criteria.
+
+The following reports are available:
+
+Contract report: This report type creates a report with the values within the selected folder.
+
+Cash flow: This report type creates a report with the cash flows for all contracts. 
+
+Method
+
+Select the folder you want to create a report for.
+
+Information
+
+The contracts do not have to be located directly below the selected folder. But the more
+
+child folders there are, the more time it will take to create the report.
+
+On the New tab, click Contract > Create contract report or Contract > Create cash flow.
+
+Optional: Select a report template. If only one report template has been created, it is selected
+
+automatically.
+
+Result: Contracts
+
+Fig.: Reports in the repository
+
+The document with the contract overview opens and is created under Reports by default.
+
+• 
+
+• 
+
+1. 
+
+1. 
+
+25 Business Solution ELO Contract
+
+
+
+By default, the report contains the Table1 and Data tabs.
+
+Under Table1, you will find a visualization of the selected contracts. With a pivot table, you can
+
+customize the report and use it for calculations.
+
+Under Data, you will find a list of selected contracts with the information preset in the report
+
+template.
+
+Result: Cash flow
+
+The document with the contract overview opens and is created under Reports by default.
+
+By default, the report contains the Data tab. You will find a list of the cash flows here.
+
+Dashboard 
+
+The dashboard provides an overview of all filed contracts.
+
+You can reach the dashboard by clicking the Contracts tile in the My ELO area.
+
+The dashboard remembers your settings. When you close then open the dashboard again, it
+
+remembers and displays your most recent view.
+
+Fig.: Dashboard in the table view
+
+The dashboard is divided into the following areas:
+
+1 Database: In the dashboard header, use the drop-down menu (arrow icon) to select a database. A
+
+dashboard database is a list of contracts that is loaded for evaluation.
+
+Information
+
+26 Business Solution ELO Contract
+
+
+
+If there is only one database, this database is selected permanently and no drop-down
+
+menu is available.
+
+2 Table/Timeline/Calendar: You can choose between three dashboard views: Table, Timeline, and 
+
+Calendar.
+
+3 Search: In addition to text values, you can also search for deadlines and amounts. All data that
+
+you can select as column values in the table view serves as the basis.
+
+4 Status: The dashboard header contains a button for each contract status. If a button is active, all
+
+contracts with the corresponding status are shown in the dashboard viewer pane.
+
+5 Concluded contracts: If concluded contracts exist in the database, a bar appears with the statuses
+
+of the concluded contract. Entered contract deadlines serve as the basis.
+
+6 Viewer pane: In the dashboard viewer pane, you will see a list of contracts. This list changes
+
+depending on the filter criteria applied.
+
+Table 
+
+Fig.: Table view
+
+Clicking an entry shows a preview of the entry. Double-clicking an entry brings you to the
+
+repository.
+
+Customize the table view using the drop-down menus.
+
+27 Business Solution ELO Contract
+
+
+
+Fig.: Customizing the table view
+
+The drop-down menus in the column headings contain the following functions:
+
+Sort ascending
+
+Sort descending
+
+Remove sorting: This option appears if you have sorted the column.
+
+Alternative: You can sort the column by clicking the column heading. Clicking once sorts in
+
+ascending order. Clicking a second time sorts the items in descending order. Clicking a third time
+
+clears sorting.
+
+Hide column
+
+Group: The content of a column is joined into groups. The number of contracts in each group
+
+is shown in brackets. Click the plus icon before the group to expand it and view all contained
+
+contracts. The minus icon minimizes it again. Clicking the plus icon in the header expands all
+
+groups.
+
+Information
+
+You can combine multiple groups. You can specify a hierarchy with the order in which you
+
+select the columns.
+
+Ungroup: This option appears if you have grouped items. Click Reset grouping to discard the
+
+group.
+
+Agg: Total (only for number fields and when another column is grouped): The total of the
+
+group is shown.
+
+Agg: Minimum (only for number fields and when another column is grouped): The lowest
+
+value of the group is shown.
+
+Agg: Maximum (only for number fields and when another column is grouped): The highest
+
+value of the group is shown.
+
+Agg: Average (only for number fields and when another column is grouped): The average of
+
+the group is shown.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+28 Business Solution ELO Contract
+
+
+
+Fig.: Overview of all columns
+
+Menu: You can show hidden columns.
+
+Timeline 
+
+Fig.: Timeline view
+
+The timeline view visualizes the duration of contracts with color bars.
+
+If the beginning or end of the duration is outside of the time frame shown, this is indicated by an
+
+arrow at the beginning or end of the bar.
+
+You can recognize the contract status by the color.
+
+Green: Active contract• 
+
+• 
+
+29 Business Solution ELO Contract
+
+
+
+Yellow: Termination deadline coming up
+
+Red: Contract expiring
+
+Green-expiring: Contract with extension
+
+The current day is marked with a vertical blue line.
+
+Calendar 
+
+Fig.: 'Year', 'Month', and 'Day' buttons
+
+The calendar offers three options: Year, Month, and Day.
+
+Reminders, termination deadlines, and contract end dates are shown in all views.
+
+Information
+
+Only contracts with deadlines are shown in the calendar view.
+
+Fig.: Annual view
+
+Year: The annual view shows the number of contract deadlines each month. For more detailed
+
+information on a month, click the month.
+
+• 
+
+• 
+
+30 Business Solution ELO Contract
+
+
+
+Fig.: Month view
+
+Month: The month view shows the number of contract deadlines each day. For more detailed
+
+information on a day, click the day.
+
+To preview a contract, click the contract.
+
+Fig.: Day view
+
+Day: The day view lists the contracts for the selected day. It works in the same way as the table
+
+view.
+
+31 Business Solution ELO Contract
+
+
+
+Contact management 
+
+You can save companies and contacts to speed up the process of creating new contracts. If you
+
+select a contact when creating a contract, the data stored for this contact is automatically entered
+
+in the correct fields.
+
+When creating a contract, you can save the contact you have entered or use the following functions
+
+on the Contact tab:
+
+New contact list
+
+New company
+
+New contact
+
+Create overview of contacts 
+
+To get an overview of your contacts, use the Create overview of contacts function. The overview of
+
+contacts is filed as a PDF document at the selected position.
+
+Create contact label 
+
+When you select a contact from your contact list, the Contact tab opens containing the Create
+
+contact label function.
+
+This function creates a contact label that is stored in the contact's folder.
+
+The label contains information on the contact as well as a QR code. If you print the label using a
+
+label printer and store it in a physical folder, you can scan the QR code with a mobile end device to
+
+go straight to the digital folder.
+
+If you want to use the Print document function in the ELO Java Client, you will have to set the label
+
+printer as the default printer in Windows.
+
+You can also select the label printer as the default printer for faxes in the ELO Java Client
+
+configuration and print using the Fax document function.
+
+• 
+
+• 
+
+• 
+
+32 Business Solution ELO Contract
+
+
+	Table of contents
+	Introduction
+	Structure of the documentation
+	Basics
+	Possible actions
+
+	Target audience
+
+	Basics
+	General note
+	Requirements
+	Program interface
+	Repository
+	Contract types
+	Contracts
+
+
+	Create contract
+	Contract processes
+	Initiate approval
+	Issue approval
+	Negotiate contract
+	Conclude contract
+	Cancel negotiation
+	Initiate termination
+	Terminate contract
+
+	Create contract documents
+	Create document
+	Update document
+	Create cover sheet
+	Create label
+
+	Overviews
+	Reports
+	Dashboard
+	Table
+	Timeline
+	Calendar
+
+
+	Contact management
+	Create overview of contacts
+	Create contact label
+
+
+

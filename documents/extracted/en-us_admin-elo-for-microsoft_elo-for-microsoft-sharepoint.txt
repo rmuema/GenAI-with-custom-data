@@ -1,0 +1,737 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO for Microsoft | ELO for Microsoft SharePoint
+
+
+ELO for Microsoft
+
+ELO for Microsoft SharePoint
+
+
+
+3
+
+3
+
+4
+
+6
+
+7
+
+10
+
+18
+
+20
+
+21
+
+26
+
+Table of contents
+
+ELO for Microsoft SharePoint
+
+Introduction and requirements 
+
+Installation 
+
+Authentication 
+
+Settings 
+
+Jobs 
+
+SharePoint customizations 
+
+Result in ELO 
+
+ELO Integration Client 
+
+Logs 
+
+2 ELO for Microsoft
+
+
+
+ELO for Microsoft SharePoint
+
+Introduction and requirements 
+
+ELO for Microsoft SharePoint (ELOsp) enables you to archive documents from Microsoft SharePoint
+
+libraries to ELO. You complete this task using jobs, which you create in the configuration interface.
+
+A job allows you to connect a SharePoint library to a folder in ELO. In the process, you can transfer
+
+information from the SharePoint columns to the metadata in ELO. You can also set filters, such as if
+
+you only want to archive documents that are older than a certain age.
+
+The jobs can be processed at scheduled intervals or manually. A document is only archived once
+
+and no other versions are transferred. It is only possible to archive from SharePoint to ELO.
+
+The ELO Integration Client enables you to view folders and documents from ELO in SharePoint. ELO
+
+for Microsoft SharePoint simplifies the configuration and provides web parts for Microsoft SharePoint
+
+2019 and Microsoft SharePoint Online.
+
+ELO for Microsoft SharePoint is a Windows service and can be installed on a Windows server
+
+independently of Microsoft SharePoint and the ELO Indexserver. Microsoft .NET Framework 4.7.2
+
+must be installed.
+
+ELO for Microsoft SharePoint supports the ELO Indexserver version 12 and higher.
+
+ELO for Microsoft SharePoint is compatible with both SharePoint On-Premises version 2013 and
+
+higher (Service Pack 1) and Office 365 (SharePoint Online). SharePoint 2019 must be configured for
+
+apps.
+
+The configuration interface works with most browsers, including the latest versions of Google
+
+Chrome, Mozilla Firefox, Microsoft Edge, and Apple Safari.
+
+App registration in Azure
+
+If you are using SharePoint Online, you must have an app registration for ELOsp. This app
+
+registration requires the following rights:
+
+Microsoft Graph: 
+
+User.Read (Delegated)
+
+SharePoint: 
+
+Sites.FullControl.All (Application)
+
+The client ID (also called app ID) obtained through the app registration, as well as the tenant ID, is
+
+subsequently required for the SharePoint connection in ELOsp.
+
+• 
+
+◦ 
+
+• 
+
+◦ 
+
+3 ELO for Microsoft
+
+
+
+Installation 
+
+To begin installation, extract the contents of the installation package to an empty directory.
+
+In the file "appsettings.json", you can set the HTTP binding component, which is the URL for
+
+accessing the configuration interface. To do so, change the value
+
+"urls": "http://localhost:5000"
+
+The file "appsettings.json" is automatically created at startup if it does not exist. You can test ELO
+
+for Microsoft SharePoint with the command
+
+ELOsp.exe –console
+
+To use SSL, you must have a valid certificate that is registered for the port. For example
+
+netsh http add sslcert ipport=0.0.0.0:5000 certhash=e9fafc58a98e3d5ddc0ab971eff53e5a82136255
+
+appid="{9432ee86-c21b-4eb8-bd89-f670fbf44931}"
+
+"certhash" is the fingerprint of the certificate and "appid" is any GUID. For more information, see:
+
+https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/how-to-configure-a-port-
+
+with-an-ssl-certificate
+
+As a Windows service, you can register ELO for Microsoft SharePoint in Windows PowerShell using
+
+the following command:
+
+New-Service -Name "ELO SharePoint" -BinaryPathName E:\Publish\ELOsp\ELOsp.exe
+
+Start the service with:
+
+Start-Service -Name "ELO SharePoint"
+
+Check the installation of the service and make sure that you select Automatic as the startup type.
+
+4 ELO for Microsoft
+
+https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate
+https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate
+https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate
+
+
+5 ELO for Microsoft
+
+
+
+Authentication 
+
+You can access the interface through the URL or URLs that you configured as the HTTP binding
+
+component. When the page is requested, you are asked to log on to an ELO Indexserver, which you
+
+can do with any administration account.
+
+6 ELO for Microsoft
+
+
+
+Settings 
+
+After you have logged on, you need to specify an administrative account for authentication with the
+
+ELO Indexserver. ELO for Microsoft SharePoint connects to the ELO server with this account. It can
+
+be the same server used to log on to ELO for Microsoft SharePoint. We recommend that you create
+
+a dedicated account for this.
+
+You must also specify a name for the configuration or select an existing configuration. These are
+
+stored on the ELO server in the directory //Administration//ELOsp in a folder with the specified
+
+name. Only one configuration is valid for each ELOsp instance. All settings that are not in the file
+
+"appsettings.json" are stored in the instance. Keep in mind that you must confirm a new entry with
+
+the Enter key.
+
+Configurations can only be deleted if they are currently not connected to the instance. To delete the
+
+active configuration, you must first disconnect it using the Disconnect button.
+
+Next, you configure the SharePoint connection. The account used to log on should have
+
+administrative rights to all site collections that are to be archived. The URL can be any site
+
+collection on the SharePoint server.
+
+7 ELO for Microsoft
+
+
+
+To support authentication via app ID and certificate, you can check or uncheck the SharePoint
+
+Online (Office 365) box in the form.
+
+Specify the service URL in the General area for interactive archiving and possible future features.
+
+This is usually the same URL as the one used to access the configuration interface. ELOsp
+
+extensions of the SharePoint interface address the ELOsp service through the service URL.
+
+8 ELO for Microsoft
+
+
+
+You can also define the settings for the ELO Integration Client here. Single sign-on must be enabled.
+
+For SharePoint Online, you also need to specify the configuration ID for ELOauth. Refer to the ELO
+
+Integration Client chapter for more information.
+
+9 ELO for Microsoft
+
+
+
+Jobs 
+
+This chapter explains how to configure and manage jobs in ELO for Microsoft SharePoint.
+
+Job configuration 
+
+You can now start to configure the individual jobs. You can access the Job Configuration via the
+
+overview page of ELO for Microsoft SharePoint.
+
+Required settings 
+
+Click the New button to configure a job.
+
+The following screenshot illustrates an example of a job configuration.
+
+10 ELO for Microsoft
+
+
+
+The name must be unique and as self-explanatory as possible so that the job can be found quickly
+
+on the start page.
+
+The path in ELO should be an empty directory. ELO for Microsoft SharePoint will create the directory
+
+if it doesn't exist.
+
+You can select the URL of the site collections from a drop-down menu. It is possible that the site
+
+collection you want is not displayed. This may be because the SharePoint search has not been
+
+configured or has not been executed. Click the X to enter a different URL and press Enter to confirm.
+
+11 ELO for Microsoft
+
+
+
+You also need to select the URL you want from the web pages and then the document library.
+
+At the end of the archiving job, you can choose between three options:
+
+Archived documents are replaced by an ELO link and denoted with an ELO icon in a new
+
+column.
+
+Archived documents are only denoted with an ELO icon in a new column.
+
+Archived documents are deleted.
+
+In execution mode, you can choose between a manual or scheduled start. If you select Timer, you
+
+will see additional options for scheduling the execution interval. The minimum interval is currently
+
+one hour.
+
+To ensure that the configuration is valid, you also need to select the metadata form that is used to
+
+store documents and folders.
+
+Deploy SharePoint customizations 
+
+To ensure that archived documents are marked as such and to improve the visual experience, you
+
+need to do some customizations in the website collection. The web part for the ELO Integration
+
+Client is also installed here. If this has not been done for the web site collection or library, a red
+
+warning icon is displayed. Click Deploy to open the dialog box.
+
+To ensure there are no errors, all steps must be completed successfully (see following screenshot).
+
+1. 
+
+2. 
+
+3. 
+
+12 ELO for Microsoft
+
+
+
+The type and number of steps can vary slightly depending on the SharePoint version. If the job is
+
+successful, you will see the following green message.
+
+You can use the Rerun button to execute the job again, such as to enable interactive archiving.
+
+Metadata mapping 
+
+The default fields of the metadata form are completed automatically. For the other fields, you can
+
+select the appropriate SharePoint columns. It is always possible to convert into an ELO text field,
+
+and conversion is available for some combinations of ELO and SharePoint types.
+
+When you enter text, the columns are filtered, searching the title, internal name, and type. If a
+
+SharePoint type cannot be converted to the metadata field type, a message appears.
+
+13 ELO for Microsoft
+
+
+
+Filters 
+
+It is also possible to specify up to three filters to restrict the selection of documents to be archived.
+
+The filters are linked with AND. This means that only the documents that meet all filter criteria are
+
+archived.
+
+14 ELO for Microsoft
+
+
+
+There are two types of filters available:
+
+CAML:
+
+This filter represents a subset of the SharePoint query language CAML. For more information,
+
+especially about the operators, go to:
+
+https://docs.microsoft.com/en-us/sharepoint/dev/schema/query-schema
+
+RegEx:
+
+This creates a filter with regular expressions (RegEx). You can get an editor here, for example:
+
+https://regex101.com
+
+You can use the button What If to perform a test run. No documents are archived in the test run;
+
+you only see the results.
+
+15 ELO for Microsoft
+
+https://docs.microsoft.com/en-us/sharepoint/dev/schema/query-schema
+https://docs.microsoft.com/en-us/sharepoint/dev/schema/query-schema
+https://regex101.com/
+https://regex101.com/
+
+
+Additional marking 
+
+You can use the additional marking option to specify a value that is written to the specified field
+
+when archiving is complete.
+
+As shown in the figure, this can be used to change the content type, for example.
+
+Since it is possible to write any value to the selected column, this can lead to loss of data under
+
+certain circumstances. You should test the configuration first on a test system.
+
+Job administration 
+
+The start page shows a list of the configured jobs. If you enabled processing at scheduled intervals,
+
+the next execution time is shown. While a job is running, the corresponding buttons are disabled.
+
+Under Progress in the header area of ELO for Microsoft SharePoint, you can view the current job
+
+status and the results of past jobs.
+
+16 ELO for Microsoft
+
+
+
+17 ELO for Microsoft
+
+
+
+SharePoint customizations 
+
+This chapter addresses customizations in ELO for Microsoft SharePoint.
+
+Structural customizations 
+
+ELO for Microsoft SharePoint creates site columns and a content type. They contain information
+
+about archiving and enable you to view content in the SharePoint interface. You must not change
+
+these under any circumstances.
+
+App 
+
+Starting with Microsoft SharePoint 2019, an app is installed and enabled for the site collections for
+
+which a job exists.
+
+List view 
+
+In Link and Mark only mode, an ELO icon appears for archived documents in the additional Web
+
+Client column. This is automatically added to the view. The icon contains a link to the document in
+
+the ELO Web Client. Due to restrictions in SharePoint Online, ELOsp customizations are not made in
+
+the standard view. The document icons are white and the link to the ELO Web Client is a text.
+
+You can also display the columns of ELO for Microsoft SharePoint in a list view, if required.
+
+In Link mode, the document is replaced by an ELO link. This allows users to open the document
+
+from other clients.
+
+The standard SharePoint view looks like this:
+
+18 ELO for Microsoft
+
+
+
+The modern SharePoint view looks like this:
+
+19 ELO for Microsoft
+
+
+
+Result in ELO 
+
+After successful archiving, the documents are stored in ELO with the configured metadata.
+
+20 ELO for Microsoft
+
+
+
+ELO Integration Client 
+
+This chapter addresses the ELO Integration Client in ELO for Microsoft SharePoint.
+
+Function 
+
+The ELO Integration Client is a root entry from the ELO repository depending on the parameters and
+
+configuration. A document view component is used. If the root entry is a folder, users can navigate
+
+within this folder and view all child entries of the folder.
+
+A number of ELO functions are available for the current entry depending on the configuration. Users
+
+can search for entries from the repository (including outside of the root entry) to create a reference
+
+to individual search results within the root entry.
+
+For more information, refer to the documentation for the ELO Integration Client.
+
+Configuration 
+
+The Integration Client area in the header of ELO for Microsoft SharePoint guides you through the
+
+installation.
+
+In the first step, the requirements are checked.
+
+If a configuration for the ELO Integration Client has not yet been stored in the repository, you can
+
+create a default configuration in the second step using the Create Configuration button. You will find
+
+more information about the configuration file in the documentation for the ELO Integration Client.
+
+21 ELO for Microsoft
+
+
+
+In the next step, you can test the client. After you have logged on, you should see the following
+
+screen, and there should not be any warning messages.
+
+Single sign-on 
+
+There are two options for single sign-on (SSO) with the ELO Integration Client: LDAP with Active
+
+Directory and OAuth/OpenID Connect with Azure AD. These require correct configuration in ELO and,
+
+if necessary, in the browser (Windows authentication) or Azure AD.
+
+ELOsp only supports embedding of the ELO Integration Client in SharePoint with the correct
+
+parameters. Firstly, with the wizard that generates the HTML code, and secondly with the web part
+
+available starting with SharePoint 2019.
+
+SharePoint server (On-Premises) 
+
+For single sign-on to work, Active Directory must be used as the ID provider for the SharePoint
+
+server. You need to configure the ELO LDAP interface and import the users. For more information,
+
+see the ELO Indexserver LDAP Interface documentation.
+
+22 ELO for Microsoft
+
+
+
+SharePoint Online 
+
+To enable automatic authentication when using SharePoint Online, you must install the "ELOauth"
+
+module. You can get information about this in the documentation "ELOauth Plugin". You also need
+
+to create a configuration for the connection to Azure AD.
+
+Enter the name of the configuration in the general settings of ELOsp; azure is used as an example
+
+here. The userProperty determines the user mapping in Azure AD and ELO. In this example, it is the
+
+user's surname, which is then mapped to the name of the ELO user. Enter the other values for 
+
+de.elo.ix.plugin.auth.json as follows:
+
+You need to register a new app for the SharePoint Online tenant in Azure AD. Under App 
+
+registrations, click New registration. Select Single tenant and enter the redirect URL using the
+
+following structure:
+
+{
+
+"azure": {
+
+"api": "azure",
+
+"userProperty": "surname",
+
+"appKey": "",
+
+"appSecret": "",
+
+"azureTenant": ""
+
+}
+
+}
+
+https://<server_name(domain)>;/ix-<repository>;/plugin/de.elo.ix.plugin.auth/oauth20cb/
+
+23 ELO for Microsoft
+
+
+
+Copy the Application (client) ID and the Directory (tenant) ID from the overview page of the new
+
+registration and enter them to the ELOauth configuration.
+
+Under Certificates & secrets, generate a new key with New client secret. Select a name and
+
+runtime according to your requirements. Enter the key as the value for appSecret.
+
+Integration with Microsoft SharePoint 
+
+Web part in SharePoint 2019 and SharePoint Online 
+
+Starting with SharePoint 2019, ELO for Microsoft SharePoint provides a web part for embedding the
+
+ELO Integration Client. Please refer to the Microsoft documentation for information about the
+
+functionality of web parts.
+
+The editor part offers some basic settings. The default settings use the values stored by ELO for
+
+Microsoft SharePoint in the site collection. You should only change the URL of the ELO Indexserver
+
+in exceptions.
+
+Entering a GUID enables you to restrict navigation to a single folder or display a single document.
+
+24 ELO for Microsoft
+
+
+
+Code adaptation in Microsoft SharePoint 2013 and 2016 
+
+The fourth step creates an HTML fragment that you can integrate into Microsoft SharePoint in
+
+different ways. The easiest way is to use the Embed Code method as shown in the figure. You can
+
+modify the parameters in SharePoint 2019 as well as in the SharePoint Online code.
+
+25 ELO for Microsoft
+
+
+
+Logs 
+
+You can change the log file directory in the settings under the Log tab. You can also set the log level
+
+to obtain more or less detailed information.
+
+Under Log in the header area of ELO for Microsoft SharePoint, you can see an overview of the
+
+current log messages. You can change the log level with the drop-down menu.
+
+To render other options visible, click the icon with the toolbox.
+
+To view a menu with additional filter options, move the cursor over the column headers.
+
+26 ELO for Microsoft
+
+
+
+The top level of the log directory contains the log files with the previously configured log level. A
+
+new file is created when a new day begins.
+
+The Worker directory contains JSON files with the result of the job execution.
+
+The log messages are stored temporarily in the CLEF folder for viewing in the browser.
+
+To save disk space, we recommend that you enable Windows folder compression.
+
+27 ELO for Microsoft
+
+
+
+28 ELO for Microsoft
+
+
+	Table of contents
+	ELO for Microsoft SharePoint
+	Introduction and requirements
+	Installation
+	Authentication
+	Settings
+	Jobs
+	Job configuration
+	Required settings
+	Deploy SharePoint customizations
+	Metadata mapping
+	Filters
+	Additional marking
+
+	Job administration
+
+	SharePoint customizations
+	Structural customizations
+	App
+	List view
+
+
+	Result in ELO
+	ELO Integration Client
+	Function
+	Configuration
+	Single sign-on
+	SharePoint server (On-Premises)
+	SharePoint Online
+
+	Integration with Microsoft SharePoint
+	Web part in SharePoint 2019 and SharePoint Online
+	Code adaptation in Microsoft SharePoint 2013 and 2016
+
+
+
+	Logs
+
+

@@ -1,0 +1,1064 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Configuration and administration | System administration
+
+
+Configuration and
+
+administration
+
+System administration
+
+
+
+3
+
+3
+
+5
+
+10
+
+12
+
+12
+
+14
+
+16
+
+18
+
+18
+
+22
+
+24
+
+Table of contents
+
+General system settings
+
+Repository properties 
+
+Administration folder 
+
+Font colors 
+
+Folders and documents
+
+Entry types 
+
+Encryption keys 
+
+Delete and remove 
+
+Stamps
+
+'Stamps' menu item 
+
+Add a text stamp 
+
+Add a new image stamp 
+
+2 Configuration and administration
+
+
+
+General system settings
+
+Repository properties 
+
+Fig.: 'Repository properties' menu item
+
+Display name: The display name is used in different places. For example, as the name of the top
+
+repository level. Similarly, it is used as the name of the main tile for the Repository work area in
+
+the clients.
+
+Please note
+
+Altering the display name does not change the actual name of the repository.
+
+Fig.: Display name of the main repository tile in the client
+
+Information
+
+Changes to the display name do not take effect until you restart the client.
+
+With the default settings, the name of the repository that was assigned in the setup is used.
+
+Please note
+
+3 Configuration and administration
+
+
+
+The repository ID (previously: repository name) is not set via the Display name. These
+
+settings are made in the ELO Replication module.
+
+4 Configuration and administration
+
+
+
+Administration folder 
+
+The Administration folder area contains information about the Administration folder. The GUIDs of
+
+the child folders are shown here.
+
+Information
+
+Custom installations, such as for projects with ELO Business Solutions, can differ from the
+
+structures described here. If required, references to the various child folders in the
+
+Administration folder should also refer to additional information sources.
+
+Fig.: 'Administration folder' menu item
+
+Information
+
+You may require the GUIDs to perform automatic tasks and manage the folders in scripts.
+
+Reset filter: Click the Reset filter button to restore the default settings for the Administration folder.
+
+Child folders 
+
+Various program and system settings and special user documents are stored in the child folders of
+
+the Administration folder. The child folders and their functions are explained below.
+
+5 Configuration and administration
+
+
+
+Information
+
+The folders in ELO depend on the modules installed and the available licenses. It is possible
+
+that certain folders will not exist in the repository and that other folders, which are not
+
+described here, will exist as a result of project-specific settings.
+
+Sord type icons 
+
+Contains the icons for the entry types in ELO in different formats. There is one child folder for each
+
+format. The following formats are available:
+
+BMP
+
+ICO
+
+JPG
+
+PNG 
+
+Administration 
+
+The parent folder for all folders listed here.
+
+Replication Base 
+
+Starting point for replication assuming that this has been defined in the replication settings. Other
+
+settings are possible. You can find more information in the ELO Replication manual.
+
+Java Client Scripting Base 
+
+Scripts for the ELO Java Client are stored in this folder.
+
+IndexServer Scripting Base 
+
+Scripts for the ELO Indexserver are stored in this folder. It contains the following child folders:
+
+_ALL: File Indexserver scripts to be executed by all available ELO Indexservers to the _ALL
+
+folder.
+
+<Server 1>: Indexserver scripts to be executed by a specific server only can be filed to the
+
+folder bearing the name of the respective server.
+
+<Server n>: Additional Indexserver scripts for the respective ELO Indexserver.
+
+Synchronize Search Indexer: Configuration of Elasticsearch.
+
+ELO Background Images 
+
+COLD background images for viewing COLD documents in MMF format.
+
+HTML Templates 
+
+Templates for displaying metadata (HTML format)
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+6 Configuration and administration
+
+
+
+Webclient Scripting Base 
+
+Scripts and associated files for the ELO Web Client are located in this folder. It is the filing location
+
+for scripts that are read and executed by the ELO Web Client when the program is started.
+
+Information
+
+The business partner or customer needs to transfer files to this folder manually via one of
+
+the clients.
+
+You can find additional information on ELO Web Client scripts in the ELO Web Client manual.
+
+ELOxc Base 
+
+The folder ELOxc Base contains the configuration settings for ELOxc EWS.
+
+Users 
+
+The Users folder contains the child folders for the users.
+
+There is one folder per user, which is created via a path according to the following convention:
+
+Users\<number range>\<User>
+
+Each user folder contains the following child folders:
+
+Data: This folder contains the user's profile data and (if available) the user's default index.
+
+Personal area: Personal documents are filed here.
+
+Inbox: Alternative to Intray. Unlike the Intray, documents added to the full text database are
+
+version-controlled, and archived.
+
+Dropzone 
+
+The settings for ELO Dropzone are stored in the Dropzone folder. It contains the following child
+
+folders:
+
+Global: All global tiles are stored in this folder. These tiles are available for all users. The
+
+administrator can create multiple child folders and assign permissions in ELO so that
+
+different user groups can see them.
+
+Store: The tile definitions for the tile collection are saved to this folder (ELO Java Client only).
+
+The area folders are added below the Store folder. As in the Global folder, the administrator
+
+can define here which tile collections are visible to which user groups.
+
+User.<User-ID>: The personal tile definitions of each user are saved to this folder. In
+
+addition, the configuration is saved in the extra text of the user folder. 
+
+Localization 
+
+Translation files are stored in the Localization folder. It contains the following child folders:
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+7 Configuration and administration
+
+
+
+custom: Localization of scripts
+
+system: Localization (e.g. of form elements) using properties files. 
+
+Fulltext Configuration 
+
+This folder is used for the configuration of the ELO Fulltext module. It contains the following child
+
+folders:
+
+Re-Index Error: This folder contains documents that caused errors during a re-index.
+
+Thesaurus: This folder contains the configuration files for the thesaurus and thesaurus files
+
+for the individual languages.
+
+Update Errors: This folder contains documents that caused errors while updating the index.
+
+ELOapps 
+
+The ELOapps folder is where the configuration and database for the ELO apps are stored. It contains
+
+the following child folders:
+
+AccountRecovery: This folder is intended for cases where a user has forgotten their password
+
+or a user wants to register again. You can also define workflows for cases like these. The
+
+objects used for these workflows are stored in the AccountRecovery folder.
+
+Apps: This folder contains archived and installed ELO apps. These are created using the App
+
+Manager or can be installed when repositories are imported.
+
+ClientInfos: This folder contains data objects (ClientInfo objects) that describe when a
+
+website is to be displayed in the client. These are created using the App Manager.
+
+Configuration: The global configuration (in the extra text) is stored in this folder. It contains
+
+configuration files (JSON format), which can be read out for individual apps.
+
+Icons: This folder contains ICO image files. Depending on the naming convention, these are
+
+available in the apps or can be read as a tile image in the ELO Web Client.
+
+Modules: This folder contains archived and installed ELO modules. The ELO modules are
+
+created using the App Manager or can be installed when repositories are imported.
+
+Workflow icons 
+
+This folder contains the icons for workflows.
+
+ELOwf Base 
+
+This folder is used for storing the database and the configuration for ELOwf (forms and feed). It
+
+contains the following child folders:
+
+Classes: The CSS style files for displaying forms are stored in the extra text of the Classes
+
+folder. Users should also store their own CSS files in the Classes folder. These files are
+
+available in the form editor.
+
+Configuration: The extra text of the Configuration folder contains configuration data (folder
+
+paths, main language, etc.) for ELOwf. The Configuration folder also contains the document
+
+framework that serves as a basic structure for forms.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+8 Configuration and administration
+
+
+
+Feed\Script Locales: Information on localizing the feed for automatic script posts. You need to
+
+transfer files to this folder manually via one of the clients.
+
+Forms: The Forms folder contains all form templates.
+
+Forms Custom: The Forms Custom folder is for the ELO Business Solutions. This is where you
+
+store copies of ELO Business Solution (partial) forms that share the same name. You can then
+
+edit the copies. This way, your custom settings will be retained in the copies when you
+
+update the ELO Business Solution. If there are forms or partial forms in the Forms Custom
+
+folder, ELO always uses the settings for the copies instead of those for the original forms.
+
+Images: You need to file image documents that are used in files in the Images folder.
+
+References are allowed.
+
+Preview: [from 10.01] The folder is used for previewing forms. This folder must be empty and
+
+should not be modified.
+
+Webapp: You can store additional script and HTML documents for forms in the Webapp folder.
+
+These are files that can be embedded in forms. You need to transfer files to this folder
+
+manually via one of the clients.
+
+ELOas Base 
+
+The ELOas Base folder contains the scripts and libraries for ELO Automation Services.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+9 Configuration and administration
+
+
+
+Font colors 
+
+The colors used to display entries are defined in the Font colors area. You can assign a separate
+
+color for each document and folder type.
+
+Fig.: 'Font colors' menu item
+
+The Font colors area contains the following sections:
+
+1 List of colors
+
+2 Color settings
+
+These are explained below.
+
+1 List of colors 
+
+The List of colors area contains all the font colors that are available for the corresponding
+
+repository. Select a color to view or edit the corresponding settings.
+
+Search for: You can search the list using the Search for field.
+
+Add (green plus icon): Click the Add button to create a new font color.
+
+Reload data from server (yellow circle arrow icon): Click the Reload data from server button to
+
+reload the List of colors area.
+
+2 Color settings 
+
+In the Color settings area, you can edit the settings of the selected font color.
+
+Name: You can edit the name of the font color in the Name field.
+
+ID: The ID is assigned automatically by ELO.
+
+• 
+
+• 
+
+10 Configuration and administration
+
+
+
+Color values: The Color values area contains different options for editing the color.
+
+a) manual selection using the color field and color slider
+
+b) exact selection using RGB and HSB values
+
+c) exact selection using hexadecimal values
+
+• 
+
+• 
+
+• 
+
+11 Configuration and administration
+
+file:///builds/documentation/admin/config/.temp/export/font-colors.md
+
+
+Folders and documents
+
+Entry types 
+
+By assigning entry types, you can see what type of entry you are dealing with at a glance. The
+
+icons that are used for this purpose can be customized.
+
+Fig.: 'Entry types' menu item
+
+Download icon set as ZIP file: Click the link Download icon set as ZIP file to download the settings
+
+and icons for the object types as a ZIP file. The settings are stored in the file sordTypes.xml. The
+
+individual icons are available in ICO format.
+
+Information
+
+Icons must exist in ICO file format. ICO files contain several different images that the
+
+system uses depending on the required resolution and color depth. The individual images
+
+must be saved in PNG format. The standard resolution for ELO applications is 16x16 pixels.
+
+Upload edited ZIP file: Click the link Upload edited ZIP file to upload new settings and icons for the
+
+object types as a ZIP file. The modified settings and icons are available after you edit them.
+
+12 Configuration and administration
+
+
+
+Icons and definitions for folders
+
+The Icons and definitions for folders area is where you define the icons for different levels and
+
+folder types in ELO.
+
+Icons and definitions for documents 
+
+Fig.: Entry types for documents
+
+When filing documents, the document type is recognized automatically based on the file extension.
+
+To assign the icons used to the respective object types, enter the desired file extensions to the
+
+respective field in the File extension column.
+
+13 Configuration and administration
+
+
+
+Encryption keys 
+
+The encryption keys used in ELO are managed in the Encryption keys area. Documents encrypted
+
+with these keys are encrypted and assigned a password.
+
+Fig.: 'Encryption keys' menu item
+
+Please note
+
+The Key function is no longer used. For compatibility reasons with earlier versions, there can
+
+still be keys in the repository but you will no longer be able to view them in the ELO
+
+Administration Console. You now control access to documents with permissions and
+
+encryption keys.
+
+Add encryption key (green plus icon): Use the Add encryption key button to add a new encryption
+
+key.
+
+Reload data from server (yellow circle arrow icon): Click the Reload data from server button to
+
+refresh the list of encryption keys.
+
+Print information for encryption keys (printer icon): Click the Print information for encryption keys
+
+button to print an overview of the encryption keys.
+
+Name: Each encryption key can be assigned a name.
+
+Old password: If you want to change the password of the encryption key, you need to enter the
+
+previous password in the Old password field.
+
+New password: Enter the new password for the encryption key here.
+
+Confirm new password: Confirm the new password for the encryption key.
+
+14 Configuration and administration
+
+
+
+System user: If a service account (e.g. ELO Service) needs access to an encryption key, enter the
+
+option group that the corresponding service account is a member of in the System user field.
+
+Old password: If you want to change the password of the service account, you need to enter the
+
+previous password in the Old password field.
+
+New password: Enter the new password for the service account here.
+
+Confirm new password: Confirm the new password for the service account.
+
+Information on encryption keys
+
+Warning
+
+A document's encrypted status cannot be reversed! Once a document has been assigned an
+
+encryption key, it is protected by a password and an encryption algorithm.
+
+Documents with encryption keys
+
+are encrypted using a proprietary algorithm and can only be viewed with the ELO Viewer.
+
+can only be viewed at the system level using the ELO Viewer.
+
+remain encrypted. The encryption process is irreversible. 
+
+• 
+
+• 
+
+• 
+
+15 Configuration and administration
+
+
+
+Delete and remove 
+
+The Delete and remove area contains the settings for deleting and removing documents from the
+
+repository.
+
+Fig.: 'Delete and remove' menu item
+
+Delete permanently 
+
+In the Delete permanently area, you can permanently delete entries, document versions, and file
+
+attachments that are marked for deletion (Delete function) from ELO and the database.
+
+Warning
+
+These entries cannot be restored!
+
+Remove deleted entries: To permanently remove all deleted folders and documents from ELO,
+
+enable the Remove deleted entries check box.
+
+Remove deleted document versions and attachment versions: To permanently remove all deleted
+
+document versions and file attachments, enable the Remove deleted document versions and
+
+attachment versions check box.
+
+Deletion date until: In the Deletion date until field, you specify up to which date the objects should
+
+be deleted. The date on which the objects were deleted counts.
+
+Delete permanently: Click the Delete permanently button to start the deletion process with the
+
+selected settings.
+
+16 Configuration and administration
+
+
+
+Delete entries whose retention period has expired 
+
+In the Delete entries whose retention period has expired area, you can permanently delete
+
+documents that have been assigned a lifetime or a retention period. Specify whether you want to
+
+delete Documents only or Documents and folders.
+
+Delete entries whose retention period has expired: Click the Delete entries whose retention period
+
+has expired button to start the deletion process with the selected settings.
+
+17 Configuration and administration
+
+
+
+Stamps
+
+'Stamps' menu item 
+
+Description: You can use stamps on documents in ELO just as you would on paper documents. In
+
+the Stamps area, you can create new stamps, or edit and delete existing stamps.
+
+Fig.: 'Stamps' menu item
+
+The stamps are available to users in the viewer pane in the ELO Java Client.
+
+The Stamps area contains the following sections:
+
+1 Settings for
+
+2 List of stamps
+
+3 Stamp settings
+
+4 Stamp permissions
+
+These are explained below.
+
+1 Settings for 
+
+In Settings for, you can see who you are editing the stamp settings for.
+
+Select user: Click the Select user button to open the Select user or group dialog box. In the Select
+
+user or group dialog box, you can select the user or option group that you want to edit the stamp
+
+settings for.
+
+Please note
+
+Stamps created in the client are only available to the respective user.
+
+• 
+
+• 
+
+• 
+
+• 
+
+18 Configuration and administration
+
+
+
+To edit the stamp settings for all users (global), select the Everyone group in the ELO
+
+Administration Console.
+
+2 List of stamps 
+
+Under List of stamps, you see all the stamps available to the selected user/option group, as well as
+
+the buttons for creating and deleting stamps.
+
+Fig.: 'Search for' field and buttons for creating/deleting stamps
+
+Search for: You can search the list using the Search for field.
+
+Add a text stamp (green plus icon combined with text icon): Click the Add a text stamp button to
+
+create a new text stamp. For more information, see the example Add a new text stamp.
+
+Add an image stamp (green plus icon combined with image icon): Click the Add an image stamp
+
+button to create a new image stamp. For more information, see the example Add a new image
+
+stamp.
+
+Delete (red X icon): Click the Delete button to delete the selected stamp.
+
+Reload data from server (yellow circle arrow icon): Click the Reload data from server button to
+
+reload the List of stamps area.
+
+3 Stamp settings 
+
+Under Stamp settings, you see the settings of the selected stamp. The stamp settings are edited in
+
+these fields. For more information, see the following examples.
+
+19 Configuration and administration
+
+
+
+4 Stamp permissions 
+
+Fig.: 'Stamp permissions' menu item
+
+In the Stamp permissions area, you can edit the permissions settings that will apply if the stamp is
+
+used.
+
+Please note
+
+The configured permissions only apply to the applied stamp in the ELO system. Permissions
+
+do not control which users may use the respective stamp.
+
+Add user or group: In the Add user or group field, you can add users or groups to the list User or
+
+group with permissions.
+
+Search for: You can search the list User or group with permissions using the Search for field.
+
+User or group with permissions: In the list User or group with permissions, you can see the
+
+permissions that users and groups have when using the stamp.
+
+The following permissions are available:
+
+View (R): The user/group can see the applied stamp.
+
+Change (W): The user/group can change the size of the stamp.
+
+Delete (D): The user/group can delete the stamp.
+
+Move (E): The user/group can move the stamp around within the document.
+
+Set permissions (P): The user/group can change the permissions on the stamp. The user/
+
+group also requires the user right Edit permissions.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+20 Configuration and administration
+
+
+
+AND group: Use the AND group button to connect two or more groups. In this case, the assigned
+
+permissions only apply to users who are members of all groups connected as AND groups.
+
+Owner rights: Click the Owner rights button to grant permissions to the user who created the
+
+stamp.
+
+Members of the group: Under Members of the group, you can see all users who are a member of
+
+the selected group.
+
+21 Configuration and administration
+
+
+
+Add a text stamp 
+
+Click the Add a text stamp button.
+
+Fig.: New text stamp
+
+The New stamp area opens.
+
+Enter the name of the new text stamp to the Name field.
+
+Enter the text to the Text input field that will appear as stamped text on the document.
+
+A preview of the stamp will appear in the Preview field. The preview is refreshed
+
+automatically every time you make a change.
+
+1. 
+
+2. 
+
+3. 
+
+22 Configuration and administration
+
+
+
+Please note
+
+New stamps can also be created in the ELO Java Client. These stamps, however, are
+
+only available to the respective user.
+
+Optional 1: Add placeholders if required.
+
+Date: Click the Date button to insert a placeholder for the current date (%x) at the
+
+selected position.
+
+Time: Click the Time button to insert a placeholder for the current time (%X) at the
+
+selected position.
+
+User: Click the User button to insert a placeholder for the user who created the stamp
+
+(%u) at the selected position.
+
+Line break: Click the Line break button to insert a placeholder for a line break (<br/>) at
+
+the selected position.
+
+Fig.: Example of a text stamp
+
+Optional 2: In the Font area, you can change the settings for the font type, font size, font
+
+color, and stamp format.
+
+Optional 3: You can edit the permissions on the stamp in the Stamp permissions area.
+
+Once you have made all settings, click Save.
+
+The new stamp is shown in the overview of available stamps on the left-hand side.
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+4. 
+
+23 Configuration and administration
+
+
+
+Add a new image stamp 
+
+Click the Add an image stamp button.
+
+Fig.: New image stamp
+
+The New stamp area opens.
+
+Enter the name of the new image stamp to the Name field.
+
+Click Select file.
+
+The Windows dialog box for selecting a file from the system appears.
+
+Select the desired image file.
+
+Information
+
+The file formats PNG, JPG, GIF, and BMP are allowed.
+
+The maximum file size is 1000 KB.
+
+Fig.: Example of an image stamp
+
+The selected image appears in the Preview field.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+24 Configuration and administration
+
+
+
+Optional: You can edit the permissions on the stamp in the Stamp permissions area.
+
+Once you have made all settings, click Save.
+
+The new stamp is shown in the overview of available stamps on the left-hand side.
+
+5. 
+
+25 Configuration and administration
+
+
+	Table of contents
+	General system settings
+	Repository properties
+	Administration folder
+	Child folders
+	Sord type icons
+	Administration
+	Replication Base
+	Java Client Scripting Base
+	IndexServer Scripting Base
+	ELO Background Images
+	HTML Templates
+	Webclient Scripting Base
+	ELOxc Base
+	Users
+	Dropzone
+	Localization
+	Fulltext Configuration
+	ELOapps
+	Workflow icons
+	ELOwf Base
+	ELOas Base
+
+	Font colors
+	1 List of colors
+	2 Color settings
+
+
+	Folders and documents
+	Entry types
+	Icons and definitions for folders
+	Icons and definitions for documents
+
+	Encryption keys
+	Delete and remove
+	Delete permanently
+	Delete entries whose retention period has expired
+
+
+	Stamps
+	'Stamps' menu item
+	1 Settings for
+	2 List of stamps
+	3 Stamp settings
+	4 Stamp permissions
+
+	Add a text stamp
+	Add a new image stamp
+
+

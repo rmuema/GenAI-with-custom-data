@@ -1,0 +1,493 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO for Microsoft | Connect to OneDrive
+
+
+ELO for Microsoft
+
+Connect to OneDrive
+
+
+
+3
+
+3
+
+Table of contents
+
+Connect to OneDrive
+
+Check out to OneDrive 
+
+2 ELO for Microsoft
+
+
+
+Connect to OneDrive
+
+Check out to OneDrive 
+
+The function Check out to OneDrive allows the user to check out Microsoft Office documents to
+
+Microsoft OneDrive and edit them there. For the user, this is similar to the previous local check out
+
+process. What's new is that the interface with Microsoft 365 allows for use of Microsoft Office
+
+Online and collaborative working.
+
+You can find more information about using the function in the client in the user documentation:
+
+ELO Java Client
+
+ELO Web Client
+
+ELO Desktop Client
+
+Requirements 
+
+General technical requirements 
+
+ELO Server Setup version 21.3 and higher
+
+Connection to Microsoft 365 with modern authentication (OAuth 2.0)
+
+App registration in Microsoft Azure of an app for ELO for Microsoft 365
+
+Activated ELOauth plug-in for ELO Indexserver (ELOix)
+
+Activated O365sync plug-in for ELO Indexserver
+
+Please note
+
+The Check out to OneDrive function can only be used with the OAuth authentication method,
+
+as Microsoft OneDrive requires an OAuth2 token. The SAML method cannot be used for the 
+
+Check out to OneDrive function.
+
+For more information on the ELOauth plug-in and the OAuth 2.0 authentication method, refer to the 
+
+ELOauth Plug-in documentation.
+
+Requirements for user authentication 
+
+All users require a Microsoft work or school account with Microsoft OneDrive for Business.
+
+All users must be configured with their Microsoft work or school account in the ELO
+
+Administration Console and logged on to the corresponding ELO client.
+
+Register new app in Microsoft Azure 
+
+To connect to Microsoft 365 with modern authentication (OAuth 2.0), you need a new app in your
+
+Microsoft Azure environment. You will learn how to do this and what to consider during
+
+configuration in the following.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+3 ELO for Microsoft
+
+https://docs.elo.com/user/elo-java-client/en-us/elo-java-client/manual/document-tab.html#check-out-to-onedrive
+https://docs.elo.com/user/elo-java-client/en-us/elo-java-client/manual/document-tab.html#check-out-to-onedrive
+https://docs.elo.com/user/elo-web-client/en-us/elo-web-client/document-tab.html#check-out-to-onedrive
+https://docs.elo.com/user/elo-web-client/en-us/elo-web-client/document-tab.html#check-out-to-onedrive
+https://docs.elo.com/user/elo-desktop-client/de-de/elo-desktop-client/document-group.html#nach-onedrive-auschecken
+https://docs.elo.com/user/elo-desktop-client/de-de/elo-desktop-client/document-group.html#nach-onedrive-auschecken
+https://docs.elo.com/ops/indexserver/en-us/eloauth/existing-implementations.html#oauth2
+https://docs.elo.com/ops/indexserver/en-us/eloauth/existing-implementations.html#oauth2
+https://docs.elo.com/ops/indexserver/en-us/eloauth/introduction.html
+https://docs.elo.com/ops/indexserver/en-us/eloauth/introduction.html
+
+
+For more information on app registration, refer to the Microsoft documentation Register app or web
+
+API.
+
+Sign in to the Microsoft Azure Portal at the following address: https://portal.azure.com/.
+
+Select Azure Active Directory.
+
+Select App registrations > New registration tab.
+
+1. 
+
+2. 
+
+3. 
+
+4 ELO for Microsoft
+
+https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app#register-an-application
+https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app#register-an-application
+https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app#register-an-application
+https://portal.azure.com/
+https://portal.azure.com/
+
+
+The Register an application window opens.
+
+Enter a name of your choice as the display name for the application. In this example, the
+
+application is called ELOforMS365.
+
+Under Supported account types, select the option Accounts in this organizational directory
+
+only ….
+
+4. 
+
+5. 
+
+5 ELO for Microsoft
+
+
+
+The new app is now registered as an application and listed in the Microsoft Azure overview.
+
+Configure API permissions 
+
+In this section, you will learn which API permissions are required and how to grant them.
+
+In the overview, select the newly registered app.
+
+The overview window for your newly registered app opens.
+
+Select the item API permissions in the sidebar.
+
+1. 
+
+2. 
+
+6 ELO for Microsoft
+
+
+
+Select Add a permission > Microsoft APIs tab > Microsoft Graph.
+
+Select Delegated permissions in Microsoft Graph.
+
+Add the following permissions:
+
+Files.ReadWrite
+
+Files.ReadWrite.AppFolder
+
+openid
+
+User.Read
+
+Select Grant admin consent for … and click Yes to confirm.
+
+Once admin consent is granted, the status in the API permissions overview changes to 
+
+Granted for ....
+
+3. 
+
+4. 
+
+5. 
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+7 ELO for Microsoft
+
+
+
+Configure platform 
+
+Select Authentication in the sidebar.
+
+Under Platform configurations, click Add > Web.
+
+Enter a redirect URI. Example:
+
+Enter a URL for front-channel logout. Example:
+
+Click Configure to save your entries.
+
+Configure client secrets 
+
+Select Certificates & secrets in the sidebar.
+
+Select the Client secrets tab.
+
+Click New client secret.
+
+The Add a client secret window opens.
+
+Enter a name for the client secret in the Description field and click Add.
+
+1. 
+
+2. 
+
+3. 
+
+https://<ELO>:<port>/ix-<repository>/plugin/de.elo.ix.plugin.auth/logincb/
+
+1. 
+
+https://<ELO>:<port>/ix-<repository>/plugin/de.elo.ix.plugin.auth/logoutcb/
+
+1. 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+8 ELO for Microsoft
+
+
+
+The newly created client secret is now configured for your app.
+
+Please note
+
+Write down the value of the secret immediately after you create it. This value is no longer
+
+shown in its entirety when you open the overview of secrets at a later point in time.
+
+You will need this value to configure the ELOauth plug-in (see the section Configure ELOauth
+
+plug-in).
+
+Configure plug-ins 
+
+Logging on ELO with a Microsoft account requires two plug-ins for ELOix:
+
+auth-plugin-<version number>.jar
+
+o365sync-plugin-<version number>.jar
+
+The ELO Server Setup installs these plug-ins to the directory \<ELO>\prog\webapps\ix-plugins.
+
+To update these plug-ins, proceed as follows:
+
+Download the plug-ins from the ELO SupportWeb.
+
+Open the \<ELO>\prog\serversetup2\repository folder.
+
+Store the files auth-plugin-<version number>.jar and o365sync-plugin-<version number>.jar
+
+in this folder.
+
+Switch to the \<ELO>\prog\serversetup2 folder.
+
+Run the setup.bat file.
+
+Configure ELOauth plug-in 
+
+The connection between ELO and the Microsoft Azure app is established via the 
+
+de.elo.ix.plugin.auth.json file. You will learn how to configure this file in the following.
+
+Open the \<ELO>\config\ix-<repository>\ELO-SRV01-1 folder.
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+1. 
+
+2. 
+
+9 ELO for Microsoft
+
+
+
+Create the file de.elo.ix.plugin.auth.json.
+
+Alternative: If the file already exists, open it.
+
+Add the details of your newly registered app to the file.
+
+The following example shows a possible configuration of the JSON file:
+
+For more information on configuring the plug-in, refer to the ELOauth plug-in – existing
+
+implementations documentation.
+
+Save the file and restart the ELO Indexserver.
+
+Connect to ELO clients 
+
+To enable logon via Microsoft 365, you will have to set up authentication via the ELOauth plug-in in
+
+the ELO clients.
+
+ELO Java Client and ELO Desktop Client 
+
+Create a new profile in the ELO client.
+
+In this profile, configure a URL following this pattern:
+
+3. 
+
+{
+
+  "<App name or config ID>": {
+
+    "mapping": "mail",
+
+    "api": "azure",
+
+    "appKey": "<App ID>",
+
+    "appSecret": "<Value of the client secret>",
+
+    "azureTenant": "<Directory ID>",
+
+    "fixedCallbackUrl": "https://<ELO>:<port>/"
+
+  }
+
+}
+
+1. 
+
+1. 
+
+2. 
+
+https://<ELO>:<port>/ix-<repository>/plugin/de.elo.ix.plugin.auth/login/?clientUrl=native&configId=<app nam
+
+10 ELO for Microsoft
+
+https://docs.elo.com/ops/indexserver/en-us/eloauth/existing-implementations.html#azure
+https://docs.elo.com/ops/indexserver/en-us/eloauth/existing-implementations.html#azure
+https://docs.elo.com/ops/indexserver/en-us/eloauth/existing-implementations.html#azure
+
+
+When this profile is selected, the fields for the user name and password are no longer shown in the
+
+ELO client logon dialog box. Users click Log on and then log on with their Microsoft account data in
+
+a new dialog box.
+
+ELO Web Client 
+
+Open the ELO Web Client status page.
+
+Click the Change settings link.
+
+The ELO Web Client settings page appears.
+
+Select the option useELOauth from the drop-down menu.
+
+In the Value field, enter the name for your registered app, which is also configured in the 
+
+de.elo.ix.plugin.auth.json file.
+
+Select Save.
+
+When users open the ELO Web Client, they will automatically be redirected to the Microsoft logon
+
+page. There, they log on with their Microsoft account data.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+11 ELO for Microsoft
+
+
+	Table of contents
+	Connect to OneDrive
+	Check out to OneDrive
+	Requirements
+	General technical requirements
+	Requirements for user authentication
+
+	Register new app in Microsoft Azure
+	Configure API permissions
+	Configure platform
+	Configure client secrets
+
+	Configure plug-ins
+	Configure ELOauth plug-in
+
+	Connect to ELO clients
+	ELO Java Client and ELO Desktop Client
+	ELO Web Client
+
+
+
+

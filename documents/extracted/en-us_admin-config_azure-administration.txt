@@ -1,0 +1,590 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Configuration and administration | ELO Azure Administration
+
+
+Configuration and
+
+administration
+
+ELO Azure Administration
+
+
+
+3
+
+3
+
+4
+
+10
+
+13
+
+Table of contents
+
+ELO Azure administration
+
+Requirements 
+
+Initial app registration in Microsoft Azure 
+
+Authentication 
+
+Services 
+
+2 Configuration and administration
+
+
+
+ELO Azure administration
+
+Requirements 
+
+To start ELO Azure Administration, the following requirements must be met:
+
+The ELO Azure Administration service is installed and started. This module is installed using
+
+the ELO Server Setup. 
+
+You will find more information in the ELO server documentation under ELO server >
+
+Installation > ELO Server Setup
+
+You have access to a Microsoft Azure environment and the corresponding administrator
+
+account. 
+
+For more information, refer to the Microsoft documentation.
+
+An app for ELO Azure Administration is registered in Microsoft Azure. 
+
+Refer to the section Initial app registration in Microsoft Azure for more information.
+
+You are using an account with main administrator rights in ELO.
+
+• 
+
+◦ 
+
+• 
+
+◦ 
+
+• 
+
+◦ 
+
+• 
+
+3 Configuration and administration
+
+https://docs.elo.com/ops/onprem/en-us/installation/setup/
+https://docs.elo.com/ops/onprem/en-us/installation/setup/
+https://docs.elo.com/ops/onprem/en-us/installation/setup/
+https://learn.microsoft.com/en-us/azure/?product=popular
+https://learn.microsoft.com/en-us/azure/?product=popular
+
+
+Initial app registration in Microsoft Azure 
+
+For ELO Azure Administration to connect to Microsoft Azure, you will have to register the app in
+
+Microsoft Azure first.
+
+Please note
+
+This documentation does not cover basic configuration of a Microsoft Azure environment or
+
+subscriptions, both of which are required for this.
+
+Log on to Microsoft Azure as an administrator.
+
+Open the Azure Active Directory service.
+
+Go to App registrations.
+
+1. 
+
+2. 
+
+3. 
+
+4 Configuration and administration
+
+
+
+Select New registration.
+
+The Register an application page opens.
+
+Enter a name for the app. You can choose any name you like.
+
+Example: ELO Azure Administration
+
+Under Supported account types, select Accounts in any organizational account and personal
+
+Microsoft accounts (Any Azure AD directory – Multitenant) and personal Microsoft accounts
+
+(e.g. Skype, Xbox).
+
+Select Register.
+
+The app is registered in Microsoft Azure.
+
+Authentication settings 
+
+Once registration is complete, you have to configure some settings for app authentication.
+
+In Microsoft Azure, go to Authentication.
+
+Select Add platform.
+
+The Configure platform area appears.
+
+4. 
+
+5. 
+
+6. 
+
+7. 
+
+1. 
+
+2. 
+
+3. 
+
+5 Configuration and administration
+
+
+
+Select Single-page web application.
+
+The Configure single-page web application area opens.
+
+In the Add a Redirect URI field, enter a URL as follows:
+
+https://<Server>:<Port>/ix-<Repository>/plugin/de.elo.ix.plugin.proxy/
+
+azadministrations/auth-end/blank.html
+
+Example:
+
+https://desktop-8luhtiv:9093/ix-EXTEN/plugin/de.elo.ix.plugin.proxy/azadministrations/
+
+auth-end/blank.html
+
+Information
+
+The URL must match the path to ELO Azure Administration in the respective ELO
+
+environment.
+
+Enable the following settings:
+
+Access tokens (used for implicit flows)
+
+ID tokens (used for implicit and hybrid flows)
+
+Save the settings with Configure.
+
+The authentication settings are now configured.
+
+API permissions 
+
+The app for ELO Azure Administration requires several permissions.
+
+4. 
+
+5. 
+
+◦ 
+
+◦ 
+
+6. 
+
+6 Configuration and administration
+
+
+
+Open the API permissions area.
+
+Select Add permissions.
+
+The Request API permissions area opens.
+
+Add the following delegated permissions:
+
+Azure Service Management:
+
+user_impersonation
+
+Microsoft Graph:
+
+Application.ReadWrite.All
+
+Directory.ReadWrite.All
+
+RoleManagement.ReadWrite.Directory
+
+User.Read
+
+User.ReadWrite.All
+
+1. 
+
+2. 
+
+3. 
+
+◦ 
+
+▪ 
+
+◦ 
+
+▪ 
+
+▪ 
+
+▪ 
+
+▪ 
+
+▪
+
+4. 
+
+7 Configuration and administration
+
+
+
+Select Grant admin consent for <tenant>.
+
+The Confirm admin consent dialog box opens.
+
+Click Yes to confirm.
+
+The permissions are added.
+
+Configuring the service 
+
+Once the app has been set up in Azure, you now have to update the configuration of ELO Azure
+
+Administration in the ELO system.
+
+In Microsoft Azure, open the overview for the app you created above.
+
+Copy the values of the following fields:
+
+Display name
+
+Application ID (client)
+
+On the server machine running ELO, open the following directory:
+
+<ELO>\servers\ELO-Azure-Administration
+
+Information
+
+The placeholder <ELO> stands for the ELO installation directory.
+
+Open the appsettings.json file in a suitable editor.
+
+You will find the following entries in the header area of the file:
+
+5. 
+
+1. 
+
+2. 
+
+◦ 
+
+◦ 
+
+3. 
+
+4. 
+
+8 Configuration and administration
+
+
+
+Insert the copied values into the JSON file.
+
+Example:
+
+Save the file.
+
+Restart the ELO Azure Administration service.
+
+Service configuration is now complete. You can now authenticate with Microsoft Azure via
+
+ELO Azure Administration.
+
+  "AppsManagementDashboard": {
+
+    "MicrosoftAppId": "",
+
+    "MicrosoftAppName": ""
+
+  },   
+
+5. 
+
+  "AppsManagementDashboard": {
+
+    "MicrosoftAppId": "cc810f16-0766-49d9-a6b6-b1c8e3286cb4",
+
+    "MicrosoftAppName": "ELO Azure Administration"
+
+  },
+
+6. 
+
+7. 
+
+9 Configuration and administration
+
+
+
+Authentication 
+
+When starting ELO Azure Administration for the first time, you will have to log on with the Azure
+
+administrator account.
+
+Open the ELO Administration Console.
+
+Log on with an account with main administrator rights.
+
+Open the ELO Azure Administration area.
+
+Select Log on.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+10 Configuration and administration
+
+
+
+The Logon dialog box opens.
+
+Please note
+
+This pop-up dialog box may be blocked by your browser. If this is the case, disable
+
+your pop-up blocker for the logon URL.
+
+Enter the e-mail address for the administrative account in Microsoft Azure.
+
+Select Next.
+
+The Enter password dialog box appears.
+
+Enter the password for the administrative account in Microsoft Azure.
+
+5. 
+
+6. 
+
+7. 
+
+8. 
+
+11 Configuration and administration
+
+
+
+Select Log on.
+
+The system attempts to log on.
+
+Verify logon via a method of your choice (Microsoft Authenticator app or by phone)
+
+ELO Azure Administration is now connected to Microsoft Azure. You can now create services.
+
+9. 
+
+12 Configuration and administration
+
+
+
+Services 
+
+After successful logon, you can create services for Microsoft Azure apps via ELO Azure
+
+Administration.
+
+Create service 
+
+Open ELO Azure Administration.
+
+Select New service.
+
+The New service dialog box appears. The following services are available:
+
+ELOauth: The ELOauth ELO Indexserver plug-in authenticates against an external
+
+system. You will find more information in the ELO Indexserver documentation under 
+
+Plug-ins > ELOauth.
+
+ELO Bot: The ELO Bot for Microsoft Teams connects Microsoft Teams to the ELO
+
+repository. Refer to the ELO Bot for Microsoft Teams documentation for more
+
+information.
+
+Select a service.
+
+1. 
+
+2. 
+
+◦ 
+
+◦ 
+
+3. 
+
+13 Configuration and administration
+
+https://docs.elo.com/ops/indexserver/en-us/eloauth/
+https://docs.elo.com/ops/indexserver/en-us/eloauth/
+https://docs.elo.com/admin/elo-for-microsoft/en-us/elo-bot-for-microsoft-teams/
+https://docs.elo.com/admin/elo-for-microsoft/en-us/elo-bot-for-microsoft-teams/
+
+
+Information
+
+This documentation uses the ELO Bot services as an example. The configuration
+
+interface may vary depending on which service is selected.
+
+In ELO Azure Administration, the service is shown as Not registered.
+
+Select the service.
+
+The configuration interface for the service opens.
+
+Enter the data required to register the service. Grayed out fields are completed automatically.
+
+You will find more information in the following documents:
+
+For ELO Bot: ELO Bot for Microsoft Teams documentation under ELO for Microsoft > ELO
+
+Bot for Microsoft Teams
+
+For ELOauth: ELO Indexserver documentation under Plug-ins > ELOauth
+
+Once you have entered the required data, select Deploy and register.
+
+4. 
+
+5. 
+
+◦ 
+
+◦ 
+
+6. 
+
+14 Configuration and administration
+
+https://docs.elo.com/admin/elo-for-microsoft/en-us/elo-bot-for-microsoft-teams/
+https://docs.elo.com/admin/elo-for-microsoft/en-us/elo-bot-for-microsoft-teams/
+https://docs.elo.com/admin/elo-for-microsoft/en-us/elo-bot-for-microsoft-teams/
+https://docs.elo.com/ops/indexserver/en-us/eloauth/
+https://docs.elo.com/ops/indexserver/en-us/eloauth/
+
+
+The service is registered as an app in Microsoft Azure. In ELO Azure Administration, the
+
+services are shown as Registered. You can now use the services.
+
+Remove service 
+
+You can remove services via ELO Azure Administration and unregister them in ELO as well as
+
+Microsoft Azure.
+
+Select the service you want to remove.
+
+The configuration interface for the service opens.
+
+Select Remove service.
+
+Please note
+
+1. 
+
+2. 
+
+15 Configuration and administration
+
+
+
+The service is deleted without any further confirmation.
+
+The service is removed. ELO Azure Administration also automatically removes the service in
+
+Microsoft Azure.
+
+16 Configuration and administration
+
+
+	Table of contents
+	ELO Azure administration
+	Requirements
+	Initial app registration in Microsoft Azure
+	Authentication settings
+	API permissions
+	Configuring the service
+
+	Authentication
+	Services
+	Create service
+	Remove service
+
+
+

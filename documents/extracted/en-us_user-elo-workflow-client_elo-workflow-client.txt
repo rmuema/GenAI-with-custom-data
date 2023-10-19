@@ -1,0 +1,972 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO Workflow Client | ELO Workflow Client
+
+
+ELO Workflow Client
+
+ELO Workflow Client
+
+
+
+3
+
+4
+
+21
+
+27
+
+Table of contents
+
+Introduction 
+
+Basics 
+
+Functions 
+
+Tips and tricks 
+
+2 ELO Workflow Client
+
+
+
+Introduction 
+
+Structure 
+
+The goal of this user manual is to explain the functions of the ELO Workflow Client.
+
+Introduction 
+
+The first chapter contains the copyright notices, as well as general information about using the
+
+manual and an overview of the chapter content.
+
+Basics 
+
+This chapter explains the basics of the ELO Workflow Client. Read this chapter to acquire basic
+
+knowledge of the program.
+
+Functions 
+
+This chapter contains examples to quickly familiarize you with the most important user-controlled
+
+actions. Read this chapter to acquire basic knowledge of the program.
+
+Tips and tricks 
+
+This chapter contains useful tips for using the ELO Workflow Client. Use this chapter for reference.
+
+3 ELO Workflow Client
+
+
+
+Basics 
+
+The ELO Workflow Client is an ELO client for approving workflows.
+
+Tasks appear in your task list. You can see which tasks have been escalated, the priority level, and
+
+other important data. You can edit tasks for different entry types. For example, if a task is part of a
+
+folder entry, you can navigate the folder hierarchy. The ELO Workflow Client allows you to process
+
+form-based tasks.
+
+This chapter covers the following topics:
+
+Installation
+
+Program interface
+
+Installation 
+
+The ELO Workflow Client installs automatically with your license. The ELO Workflow Client does not
+
+have to be installed separately.
+
+Access to the ELO Workflow Client works through a URL. You can create a desktop shortcut to the
+
+URL or bookmark it in your browser. The URL is provided by your administrator.
+
+Start ELO Workflow Client 
+
+To start the ELO Workflow Client, enter the URL in your browser.
+
+• 
+
+• 
+
+4 ELO Workflow Client
+
+
+
+Enter your logon credentials. If you have been given a temporary password to log on with, change
+
+it during the first session using the Change password function.
+
+Information
+
+If you have forgotten your password, contact your system administrator.
+
+If functional roles have been defined for you, you can enable or disable them here.
+
+If you disable your functional roles, all access and user rights associated with the role cannot be
+
+used during the session. This makes it easier to navigate the program and allows you to focus on
+
+tasks beyond the scope of the role.
+
+5 ELO Workflow Client
+
+
+
+Program interface 
+
+The program interface of the ELO Workflow Client comprises the following areas:
+
+1 Task list
+
+2 Ribbon
+
+3 User menu
+
+4 Views (Form/Entry)
+
+5 Views (Document/Full text)
+
+6 Feed
+
+7 Viewer pane
+
+Program interface in detail 
+
+This chapter explains the different areas of the program interface. When the documentation refers
+
+to an entry, it is referring to either a document or a folder.
+
+6 ELO Workflow Client
+
+
+
+Task list 
+
+The task list contains all workflows. You will see all workflows you are involved in. If you set a
+
+check mark in Group tasks, you also see the workflows assigned to a group that you are a member
+
+of.
+
+You can recognize a group task by the gray box containing the name of the group to the left of the
+
+workflow name.
+
+You can recognize a new task by the blue vertical bar to the left of the task and the bold title.
+
+A task contains the following information:
+
+Workflow title
+
+Entry title
+
+Workflow creation date
+
+In addition, icons underline the following aspects:
+
+Entry type, e.g. Word or PDF document, an e-mail, or a scanned document
+
+Workflow priority, e.g. A, B, or C
+
+An escalated workflow is denoted with a red icon with a white exclamation mark and a due
+
+date 
+
+Ribbon 
+
+You can access all the functions you need to process your workflows on the ribbon.
+
+These functions are:
+
+Refresh
+
+Forward workflow
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+7 ELO Workflow Client
+
+
+
+Accept workflow
+
+Delegate workflow
+
+Return workflow
+
+Save as
+
+User menu 
+
+You can log off or change your password in the user menu.
+
+Views (Form/Entry) 
+
+You can switch between the views with the Form and Entry buttons. If you select a form task, the
+
+form is displayed in the viewer pane. To switch to the entry, select the Entry button.
+
+Views (Document/Full text) 
+
+You can switch between the views with the Document and Full text buttons. If you select an entry,
+
+the document is displayed in the viewer pane. To switch to the full text view, select the Full text
+
+button.
+
+Feed 
+
+The feed allows you to communicate with your colleagues about the task and the corresponding
+
+entry in the ELO Workflow Client.
+
+This is where you get all important information relating to your workflow entry. The feed contains
+
+the following message types:
+
+Posts written by you or another user
+
+Comments on a post
+
+Polls
+
+Events, e.g. when a new version of a document is filed or changes are made to the working
+
+version
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+8 ELO Workflow Client
+
+
+
+Information
+
+With form-based tasks, the feed is only displayed if you selected the Entry button in the top
+
+right corner. If you selected the Form view, the form and other actions are displayed in the
+
+viewer pane.
+
+1 Create post: Use the Create a post field to write one or more posts related to an entry in your task
+
+list. To submit a post, use the Create button or the keyboard shortcut CTRL+ENTER.
+
+Information
+
+9 ELO Workflow Client
+
+
+
+You cannot delete posts you have submitted.
+
+New posts are marked with a green dot in front of the author's name.
+
+Format the text in posts and comments with the following syntax:
+
+Bold: Place an asterisk (*) at the beginning and end of the text section you want to highlight.
+
+Enter: I would like to stress this again.
+
+Result in the feed: I would like to stress this again.
+
+Information
+
+If you want the asterisk to appear as a character in the text, enter a backslash before the
+
+asterisk.
+
+2 Search feed: Use the Search feed button to search the feed for posts, users, or hashtags related
+
+to the respective entry.
+
+3 Subscribe to feed: Click the Subscribe button to subscribe to a feed for an entry.
+
+Please note
+
+Your subscription to a feed related to a specific workflow is limited to the period in which the
+
+workflow is assigned to you. Once you have forwarded the workflow, you will no longer see
+
+the feed you subscribed to.
+
+4 Show filter options: Click the Show filter button to view filter options. You can filter the feed posts
+
+of the respective entry by users or post types. You can also see which filters are active when the
+
+filter options are hidden. Hide or show the filter options by clicking the button again.
+
+• 
+
+• 
+
+10 ELO Workflow Client
+
+
+
+You can negate the filters. All filters are applied in is mode. Click the word is to the right of the filter
+
+category to switch to is not mode.
+
+5 Show metadata: Click the Show metadata button to view the metadata of the respective entry.
+
+The type of entry is not relevant.
+
+In addition to the form, you see other information, such as the invoice number, customer number,
+
+and order date of invoices.
+
+6 Create poll: Use the speech bubble icon to create polls. Enter the question and any number of
+
+possible answers in the input fields. You can also specify how long the poll should stay open and
+
+make additional configurations by ticking the appropriate check boxes under Show additional
+
+options.
+
+7 Edit post: Use the pencil icon to edit a post you have already created.
+
+After you have edited a post or comment, you can view the feed history. Click the edited button
+
+that appears below your post.
+
+11 ELO Workflow Client
+
+
+
+Changes to the post are indicated by a green dot in front of the name of the user who created or
+
+modified the post.
+
+8 Enter comment: Click the Comment button to comment on your own posts or other users' posts.
+
+The comment function has additional functions:
+
+1 Mention user: Click the Mention user button to tag other users in your post. Alternatively, you can
+
+enter the @ symbol using the keyboard.
+
+12 ELO Workflow Client
+
+
+
+2 Reference entry: With the Reference entry button, you can link to other posts in your post. 
+
+Alternatively, you can enter the > symbol using the keyboard.
+
+Information
+
+You can only reference an entry if the task contains a folder.
+
+13 ELO Workflow Client
+
+
+
+Please note
+
+You can create a reference and see references created by other users but you are not able to
+
+access them. If you click on a reference, the following error message appears.
+
+14 ELO Workflow Client
+
+
+
+3 Insert hashtag: Use the Insert hashtag button to add one or more hashtags to your post. 
+
+Alternatively, you can enter the # symbol using the keyboard.
+
+4 Restrict visibility: Use the Restrict visibility button to restrict the post to specific groups. The
+
+visibility settings for a comment are bound to the visibility settings for the commented post, which
+
+is why you are unable to change the visibility settings for comments.
+
+Additional information is displayed in the area above the input field.
+
+XY is editing the entry: This tells you that another user with access to the repository is editing the
+
+entry.
+
+15 ELO Workflow Client
+
+
+
+Information
+
+You will not get any notifications in the ELO Workflow Client if entries that are part of a
+
+workflow in your task list are being edited. This information is only displayed if another user
+
+with access to the repository is currently editing the entry.
+
+Viewer pane 
+
+In the viewer pane, you will see the entry associated with the selected workflow.
+
+16 ELO Workflow Client
+
+
+
+Image section
+
+You can adjust the image section in the viewer pane with the three buttons at the bottom.
+
+17 ELO Workflow Client
+
+
+
+The following options are available for adjusting the image in the viewer pane:
+
+Zoom to 100%
+
+Fit image width to the frame
+
+Fit image size to the frame 
+
+Folder navigation
+
+If a workflow in your task list is part of a folder entry, you can navigate the folder hierarchy. In this
+
+case, you see the folder structure instead of the viewer pane. Click the respective entry to navigate
+
+through the folder structure. To return to a previous level, use the list of individual levels above the
+
+title of the document in the viewer pane. Click to go to the respective level.
+
+Save as
+
+If you select a task with a Word or Excel document from your task list, the following message
+
+appears in the viewer pane:
+
+The program suggests Save as here. Click the button. The document is downloaded and can be
+
+opened in read-only mode.
+
+• 
+
+• 
+
+• 
+
+18 ELO Workflow Client
+
+
+
+Information
+
+If the task is part of a folder entry and you navigated to the document in this folder, the
+
+saved document may differ from the selected task.
+
+Please note
+
+If you download and edit a document, the changes in the workflow document are NOT
+
+visible in the ELO Workflow Client or to your colleagues. You CANNOT upload the modified
+
+document back into the ELO Workflow Client.
+
+The following error message may appear when you select a workflow from your task list:
+
+Select the Save as button on the ribbon. The document is downloaded and you can open it in read-
+
+only mode.
+
+Text view
+
+If you have workflows with entries with the file extension .txt, there are additional buttons in the
+
+viewer pane. These buttons are in the bottom part of the viewer pane instead of the buttons for the
+
+image section.
+
+You can choose between two options:
+
+• 
+
+19 ELO Workflow Client
+
+
+
+Large text
+
+Small text• 
+
+20 ELO Workflow Client
+
+
+
+Functions 
+
+This chapter explains the different functions of the ELO Workflow Client in detail. You are guided
+
+through the most important steps.
+
+Accept workflow 
+
+To edit a workflow in the ELO Workflow Client, you must first accept the task. This prevents multiple
+
+users from being able to work on the same workflow at the same time.
+
+Information
+
+The task has to be a group task.
+
+Click on the workflow in your task list.
+
+On the ribbon, select Accept workflow.
+
+The lock is removed and you can edit the task.
+
+Once you have accepted the task, it is removed from the task list of the other members of the
+
+group. You can use the Return workflow function to undo this action.
+
+If the Accept workflow button is grayed out, this can be for one of the following reasons:
+
+The workflow is not a group task.
+
+You have already accepted the workflow.
+
+Delegate workflow 
+
+This function enables you to delegate the workflow to another user/group.
+
+Click on the workflow in your task list.
+
+1. 
+
+2. 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+21 ELO Workflow Client
+
+
+
+On the ribbon, select Delegate workflow.
+
+In the dialog box, enter a recipient for the workflow.
+
+The selected person/group is displayed in the dialog box. You can cancel your selection with X and
+
+select a new person/group.
+
+Information
+
+You can only select one user/group.
+
+Optional: You can change the default name according to your requirements.
+
+You can optionally check the box next to Notify after processing the node. In this case, you will be
+
+notified as soon as the person whom the workflow was delegated to has processed the workflow.
+
+Once you have delegated the workflow, the task is removed from your task list.
+
+Information
+
+In the case of a group task, you do NOT have to accept the workflow first.
+
+Forward workflow 
+
+When you have completed the workflow step, you can pass it on to the next user.
+
+Click on the workflow in your task list.
+
+3. 
+
+1. 
+
+2. 
+
+22 ELO Workflow Client
+
+
+
+On the ribbon, select Forward workflow.
+
+Select one of the radio buttons Approve or Reject.
+
+Once you have forwarded the workflow, the task is removed from your task list.
+
+Information
+
+In the case of a group task, you have to accept the workflow first.
+
+If the Forward workflow button is grayed out, this can be for one of the following reasons:
+
+The workflow is a group task. In this case, you must accept the workflow first.
+
+The workflow is a form task. In this case, forward the workflow by clicking one of the buttons
+
+on the form in the viewer pane.
+
+Return workflow 
+
+This function enables you to return a group task that you have already accepted to the group.
+
+Click on the workflow in your task list.
+
+On the ribbon, select Return workflow.
+
+3. 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+23 ELO Workflow Client
+
+
+
+Information
+
+After you return the workflow, it shows up as a new task in your list because you are a
+
+member of the group that you returned the workflow to.
+
+If the Return workflow button is grayed out, this can be for one of the following reasons:
+
+The workflow is not a group task.
+
+You have not accepted the group task.
+
+Form task 
+
+You want to edit a form-based task and forward the workflow using the form.
+
+Select the task from your task list.
+
+The form is shown in the viewer pane.
+
+Edit the form.
+
+To forward the workflow, use the buttons below Next processing step.
+
+Information
+
+A form-based task can contain a completed form.
+
+The workflow is forwarded to the next user and is removed from the task list.
+
+If you cannot edit the form, this can be for the following reason:
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+3. 
+
+• 
+
+24 ELO Workflow Client
+
+
+
+You received the workflow as part of a group so you have to accept it before you can forward
+
+it.
+
+Optional: You can save the task and form to the cache and edit it later on. You can also print the
+
+form.
+
+Unsaved changes 
+
+If you close the form without saving it, the following dialog box appears:
+
+Select one of the radio buttons Continue editing or Discard changes.
+
+Change password 
+
+You want to change your password.
+
+Click the user menu [your name].
+
+Select Change password.
+
+1. 
+
+2. 
+
+25 ELO Workflow Client
+
+
+
+Complete the fields of the dialog box.
+
+If you have forgotten your password, notify your system administrator.
+
+3. 
+
+26 ELO Workflow Client
+
+
+
+Tips and tricks 
+
+This chapter covers tips and tricks for using the ELO Workflow Client.
+
+Refresh 
+
+New tasks will show up in your list of tasks if you refresh the list. Do this regularly to make sure
+
+you don't miss any new tasks.
+
+Information
+
+When you do a refresh, ELO jumps to the top entry in the task list.
+
+Views (Form/Entry) 
+
+You can switch between the views with the Form and Entry buttons.
+
+Views (Document/Full text) 
+
+You can switch between the views with the Document and Full text buttons.
+
+Viewer pane 
+
+If a document cannot be displayed in the viewer pane, you can save the document on your
+
+computer and open it there.
+
+Please note
+
+If you download and edit a document, the changes in the workflow document are NOT
+
+visible in the ELO Workflow Client or to your colleagues. You CANNOT upload the modified
+
+document back into the ELO Workflow Client.
+
+Escalated workflow 
+
+It is possible to set a time limit for tasks. If this time limit is reached before you complete the
+
+workflow step, the task is escalated. You can see what time limit was set by the due date in the
+
+task list. An overdue workflow features a red icon with a white exclamation mark in your task list.
+
+Information
+
+If the escalated workflow is a group task, you can hide it by removing the check mark.
+
+27 ELO Workflow Client
+
+
+
+Feed 
+
+With form-based tasks, the feed is only displayed if you selected the Entry button in the top right
+
+corner. If you selected the Form view button, the form and other actions are displayed in the viewer
+
+pane.
+
+You can recognize a new post by a green dot in front of the name of the author.
+
+The feed is an important communication tool. You can see in the feed whether changes have been
+
+made to the entry or if another user with access to the repository is editing the entry.
+
+Please note
+
+You do not receive any notifications. To see this information, you need to check the feed of
+
+the respective workflow from your task list.
+
+You can create a reference and see references created by other users in a post or comment.
+
+Information
+
+You cannot access the references in posts or comments.
+
+You can subscribe to the feed for an entry in a workflow.
+
+Please note
+
+Your subscription to a feed related to a specific entry is limited to the period in which the
+
+workflow is assigned to you. Once you have forwarded the workflow, you will no longer see
+
+the feed you subscribed to.
+
+Form task 
+
+A form task can contain a form that you can edit yourself or one that is already completed.
+
+Be sure to save the changes in the form associated with a form-based task. You will get a reminder
+
+when you close the form.
+
+You need to forward form tasks with the buttons in the viewer pane, not with the Forward workflow
+
+button on the ribbon.
+
+Group tasks 
+
+Make sure that you enable the check mark for group tasks so that you see all workflows in your
+
+task list.
+
+28 ELO Workflow Client
+
+
+
+Inactive buttons 
+
+Not all buttons are active at the same time. Make sure that the following requirements are met:
+
+Accept workflow: The workflow must be a group task.
+
+Forward workflow: In the case of a group task, you have to accept the workflow first. With a form
+
+task, forward the workflow by clicking one of the buttons on the form in the viewer pane.
+
+Return workflow: The workflow must be a group task that you have already accepted.
+
+Folder as part of a workflow 
+
+If a folder is part of a workflow in your task list, you can navigate between the individual levels in
+
+this folder as normal.
+
+To return to a previous level, use the list of individual levels above the viewer pane. The levels are
+
+separated by slashes. Click to select a level.
+
+29 ELO Workflow Client
+
+
+	Table of contents
+	Introduction
+	Structure
+	Introduction
+	Basics
+	Functions
+	Tips and tricks
+
+
+	Basics
+	Installation
+	Start ELO Workflow Client
+	Program interface
+	Program interface in detail
+	Task list
+	Ribbon
+	User menu
+	Views (Form/Entry)
+	Views (Document/Full text)
+	Feed
+	Viewer pane
+
+
+	Functions
+	Accept workflow
+	Delegate workflow
+	Forward workflow
+	Return workflow
+	Form task
+	Unsaved changes
+
+	Change password
+
+	Tips and tricks
+	Refresh
+	Views (Form/Entry)
+	Views (Document/Full text)
+	Viewer pane
+	Escalated workflow
+	Feed
+	Form task
+	Group tasks
+	Inactive buttons
+	Folder as part of a workflow
+
+
+

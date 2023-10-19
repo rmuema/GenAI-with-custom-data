@@ -1,0 +1,226 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO packages | Other topics
+
+
+ELO packages
+
+Other topics
+
+
+
+3
+
+3
+
+4
+
+8
+
+8
+
+Table of contents
+
+Font colors
+
+Introduction 
+
+Change font color 
+
+Translations
+
+Overview 
+
+2 ELO packages
+
+
+
+Font colors
+
+Introduction 
+
+You can use the options on the Font colors tab to define the color scheme for displaying document
+
+entries in your ELO package. You can also enable selection of the color in the client.
+
+The Font colors area contains the following sections:
+
+Color list
+
+Color
+
+Below, you will learn how to define new font colors and add them to the color list of your ELO
+
+package.
+
+1. 
+
+2. 
+
+3 ELO packages
+
+
+
+Change font color 
+
+In the menu area of the ELO Administration Console, click the package you want to edit.
+
+The package opens.
+
+Click Font colors.
+
+The Font colors tab opens.
+
+1. 
+
+2. 
+
+4 ELO packages
+
+
+
+Click Add font color.
+
+The Color dialog box opens.
+
+Enter a technical name in the Identifier field.
+
+Information
+
+Only uppercase letters are possible.
+
+3. 
+
+4. 
+
+5 ELO packages
+
+
+
+Enter a translation variable into the Translation variable field.5. 
+
+6 ELO packages
+
+
+
+Optional: Enable color selection in the client is enabled by default. Clear the option to not
+
+offer this color for selection in the client.
+
+Information
+
+Option 1: Select one of the available translation variables from the drop-down menu.
+
+The Name field is completed automatically.
+
+Option 2: Generate a new translation variable via direct input. Then, enter a name in
+
+the Name field and click the Save icon at the end of the field. The name is assigned to
+
+the translation variable and stored in the translation variable database.
+
+Click or enter a hexadecimal value to select the desired color.
+
+Information
+
+The selected color requires a sufficient contrast value. If this is not the case, a
+
+warning message appears.
+
+Click Apply.
+
+The font color is created.
+
+6. 
+
+7. 
+
+7 ELO packages
+
+
+
+Translations
+
+Overview 
+
+Under the Translations menu item, you can export translation data as a ZIP file or import it as
+
+properties files.
+
+Imported translation data is stored in the translation table.
+
+Use translation variables 
+
+For items like metadata forms, fields, and spaces which are visible for the user in the client, you
+
+can select, create, and save corresponding translation texts. The translation text will be saved for
+
+the currently active display language of the ELO Administration Console.
+
+The following describes the process using an example of a metadata form. The same process can
+
+be applied for all places in the packages where translation variables can be used:
+
+Enter a translation variable into the Translation variable field.1. 
+
+8 ELO packages
+
+
+
+Alternative: Select an existing translation variable with the List button (list icon).
+
+Enter the display text of the translation variable into the Name field.
+
+Click Save (floppy disk icon).
+
+The content of the Name field will be saved as the display text of the translation variable.
+
+Here, the currently selected display language applies.
+
+2. 
+
+3. 
+
+9 ELO packages
+
+
+	Table of contents
+	Font colors
+	Introduction
+	Change font color
+
+	Translations
+	Overview
+	Use translation variables
+
+
+

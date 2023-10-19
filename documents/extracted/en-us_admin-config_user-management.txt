@@ -1,0 +1,3519 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Configuration and administration | User administration
+
+
+Configuration and
+
+administration
+
+User administration
+
+
+
+4
+
+4
+
+6
+
+7
+
+13
+
+13
+
+15
+
+16
+
+22
+
+22
+
+23
+
+24
+
+25
+
+26
+
+26
+
+27
+
+37
+
+38
+
+39
+
+42
+
+42
+
+43
+
+44
+
+45
+
+46
+
+47
+
+48
+
+50
+
+51
+
+52
+
+53
+
+54
+
+54
+
+55
+
+63
+
+Table of contents
+
+User
+
+Overview 
+
+Create user 
+
+Configuration 
+
+Groups
+
+Overview 
+
+Create group 
+
+Configuration 
+
+Other configurations
+
+Introduction 
+
+Password rules 
+
+Block access 
+
+Organizational units 
+
+Rights in ELO
+
+Introduction 
+
+User rights 
+
+Inheriting rights 
+
+Assign permissions in ELO Spaces 
+
+Configuration 
+
+Permissions in ELO
+
+Introduction 
+
+Documents 
+
+Folders 
+
+Margin notes 
+
+Annotations 
+
+Stamps 
+
+Metadata forms 
+
+Workflow templates 
+
+Workflows 
+
+ELO Spaces 
+
+Other permissions 
+
+Concept for assigning rights and permissions
+
+Introduction 
+
+Assigning user rights 
+
+Groups and permissions concept 
+
+2 Configuration and administration
+
+
+
+69
+
+69
+
+70
+
+77
+
+81
+
+LDAP
+
+Introduction 
+
+LDAP interface configuration 
+
+LDAP import 
+
+Enable LDAP authentication 
+
+3 Configuration and administration
+
+
+
+User
+
+Overview 
+
+Everyone who uses ELO needs a corresponding ELO account. These accounts are created,
+
+configured, and managed in the User manager.
+
+Open the user manager in the ELO Administration Console via (System settings > User manager).
+
+The User manager offers the following actions:
+
+1 Create user
+
+2 Perform search
+
+3 Define filter
+
+4 Copy user: All configurations are applied, with the exception of the Name, E-mail address, 
+
+Password, and Windows user fields.
+
+5 Perform configuration: Via the Basic settings, Group membership, and User rights tabs
+
+6Delete user
+
+Delete user 
+
+Please note
+
+4 Configuration and administration
+
+
+
+When you delete a user, they are deleted permanently.
+
+Do not delete any users that have already been used in ELO. This can lead to inconsistencies. In
+
+this case, it is better to change the basic settings of the user instead of deleting the user:
+
+Enable Lock account
+
+Disable Allow interactive logon
+
+Disable Visible in user lists
+
+The user can no longer log on to ELO and is not visible to other users. They now only exist in the
+
+background in ELO. Their previous actions, for example feed posts or entries in the document
+
+versions, are still visible in ELO.
+
+1. 
+
+2. 
+
+3. 
+
+5 Configuration and administration
+
+
+
+Create user 
+
+To create a user, proceed as follows:
+
+Open the ELO Administration Console.
+
+Open the user manager (System settings > User manager).
+
+Select New user.
+
+The User screen opens.
+
+Configure the new user. Navigate to the Basic settings, Group membership, and User rights
+
+tabs to do so.
+
+For more information, refer to the Configuration chapter.
+
+Once you are finished with configuration, select Save user to save.
+
+You created a new user.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+6 Configuration and administration
+
+
+
+Configuration 
+
+Define basic settings 
+
+In the Basic settings area, you define the settings for User information, Properties, and additional 
+
+Information.
+
+User information 
+
+Name: Mandatory field. This can be changed later.
+
+E-mail address: Displayed in the user profile in the client and can be used in workflows,
+
+forms, and scripts.
+
+Password: Mandatory field. This can be changed later.
+
+Windows user: Enter the Windows user name if required, e.g. if you are using SSO. This
+
+information can be used in workflows, forms, and scripts.
+
+Administrator: The name of the account used to create the new user is automatically
+
+entered. This can be changed later. Determines who can edit the master data of the user.
+
+Supervisor: Can be used in workflows, forms, and scripts. If this field is left blank, the content
+
+of the Name field is used.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+7 Configuration and administration
+
+
+
+Use: 
+
+Lock account: If this option is enabled, this user will no longer be able to log on to the
+
+system. The user account is locked out of the system completely. However, this does
+
+not mean that locked user accounts are no longer visible in the system. If you want
+
+these accounts to be hidden, you need to disable the option Visible in user lists.
+
+Visible in user lists: If this option is enabled, the user will show up in dialog boxes in
+
+the ELO client. If the option is disabled, the user profile still exists in ELO, but users
+
+without administrator privileges are unable to select them in dialog boxes.
+
+Information
+
+The users in an organizational unit only see the users within their own
+
+organizational unit.
+
+Users without this basic setting configured can still occur as field values in tables and
+
+lists. For example, as in the "Filed by" option for documents, or as a field value in a
+
+user field.
+
+In the ELO Administration Console, users with the rights Main administrator and Edit
+
+user data can see users who are otherwise not Visible in user lists. This also applies to
+
+administration tasks, such as configuration, workflows, substitutions, in the client.
+
+Interactive logon allowed: This option enables the user to log on to the ELO client.
+
+Please note
+
+This setting cannot be checked by the server. It is not considered a lock and can
+
+be bypassed.
+
+◦ 
+
+◦ 
+
+◦ 
+
+8 Configuration and administration
+
+
+
+Properties 
+
+Action: Codes entered here have an effect on the password.
+
+Examples:
+
+EX20233105: The password expires on May 31, 2023, after which it has to be
+
+renewed.
+
+PWf: The user must change the password set by the administrator when they log
+
+on for the first time.
+
+PWf: The user can change the password set by the administrator when they log
+
+on for the first time.
+
+Property 1-5: Information can be evaluated using scripts.
+
+Organizational unit: You will find more information under Other configurations >
+
+Organizational units.
+
+• 
+
+◦ 
+
+▪ 
+
+▪ 
+
+▪ 
+
+• 
+
+• 
+
+9 Configuration and administration
+
+
+
+Information 
+
+Last recorded logon: Is updated automatically.
+
+Last changed on: Is updated automatically.
+
+GUID: Each user is automatically assigned a GUID. The GUID can be used to address the user
+
+in other functions.
+
+Define group membership 
+
+In the Group membership area, you can add the user to one or more groups.
+
+• 
+
+• 
+
+• 
+
+10 Configuration and administration
+
+
+
+With the Copy group membership from field, you can inherit the group memberships from another
+
+user or group. Group memberships can also be added manually. Users are always members of the 
+
+Everyone group.
+
+Information
+
+If you type a space in an input field, the entire list of available users and groups will be
+
+displayed.
+
+Assign user rights 
+
+In the User rights area, you can configure rights for users.
+
+11 Configuration and administration
+
+
+
+1 Copy user rights from: Inherit the user rights from another user or a group
+
+2 User rights: You will find more information under Rights in ELO > User rights.
+
+Information
+
+Ideally, all rights are inherited by the users through their membership in groups. This
+
+simplifies administration and prevents users from having rights they don't need.
+
+12 Configuration and administration
+
+
+
+Groups
+
+Overview 
+
+Groups can be used to manage permissions and basic settings in ELO. Groups are also used in
+
+workflows and for substitution rules.
+
+Open the group manager in the ELO Administration Console via System settings > Group manager.
+
+The Group manager offers the following actions:
+
+1 Create group
+
+2 Perform search
+
+3 Define filter
+
+4 Copy group: All configurations are applied, with the exception of the Name and E-mail address
+
+fields.
+
+5 Perform configuration: Via the Basic settings, Group membership, and User rights tabs
+
+6 Delete group
+
+Delete group 
+
+Please note
+
+When you delete a group, it is deleted permanently.
+
+13 Configuration and administration
+
+
+
+Do not delete any groups that have already been used in ELO. This can lead to inconsistencies. In
+
+this case, it is better to change the basic settings of the group instead of deleting the group:
+
+Disable Visible in user lists
+
+The group now only exists in the background in ELO. The rights assigned via the group are
+
+maintained and previous actions with this group, such as participation in workflows, are still visible
+
+in ELO.
+
+• 
+
+14 Configuration and administration
+
+
+
+Create group 
+
+To create a group, proceed as follows:
+
+Open the ELO Administration Console.
+
+Open the group manager (System settings > Group manager).
+
+Select New group.
+
+The Group area opens.
+
+Configure the new group. Navigate to the Basic settings, Group membership, and User rights
+
+tabs to do so.
+
+For more information, refer to the Configuration chapter.
+
+Once you are finished with configuration, select Save group to save it.
+
+You have created a new group.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+15 Configuration and administration
+
+
+
+Configuration 
+
+Define basic settings 
+
+In the Basic settings area, you define the Group information, Properties, and additional Information.
+
+Group information 
+
+Name: Mandatory field. This can be changed later.
+
+E-mail address: Displayed in the user profile in the client and can be used in workflows,
+
+forms, and scripts.
+
+Administrator: The name of the account used to create the new group is automatically
+
+entered. This can be changed later. Determines who can edit the master data of the group.
+
+Supervisor: Can be used in workflows, forms, and scripts. If this field is left blank, the content
+
+of the Name field is used.
+
+Use:
+
+Visible in user lists: If this option is enabled, the group will show up in dialog boxes in
+
+the ELO client. If the option is disabled, the group still exists in ELO, but users without
+
+administrator privileges are unable to select them in dialog boxes.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+◦ 
+
+◦ 
+
+16 Configuration and administration
+
+
+
+Option group: Option groups are defined for the purpose of assigning specific 
+
+ProfileOpts. Only these groups show up in dialog boxes where settings are made for
+
+other ELO accounts.
+
+For more information on option groups, refer to Option groups.
+
+Substitution allowed: You can control how rights are distributed via the substitution
+
+module. For groups that have the substitution right, rights can be transferred to
+
+substitutes.
+
+Functional role: If this option is enabled, members of this group are asked during logon
+
+whether they want to assume the functional role for the current session. This allows
+
+users to decide whether they want to use ELO in a specific role. 
+
+This option makes sense if a user has to perform different tasks in ELO that require
+
+different permissions and rights.
+
+Properties 
+
+Property 1-5: Information can be evaluated using scripts.
+
+Organizational unit: You will find more information under Other configurations >
+
+Organizational units.
+
+◦ 
+
+◦ 
+
+• 
+
+• 
+
+17 Configuration and administration
+
+
+
+Information 
+
+Last changed on: Is updated automatically.
+
+GUID: Each group is automatically assigned a GUID. The GUID can be used to address the
+
+group in other functions.
+
+Option groups 
+
+User-specific options are generally assigned to a user. However, group options are applied if there
+
+are no user-specific options. If these have not been defined, then the settings for the Everyone
+
+group are applied. If settings have not been defined for this group, there is also an ELO default
+
+value (company default setting).
+
+These groups allow you to control who has access to specific functions.
+
+• 
+
+• 
+
+18 Configuration and administration
+
+
+
+You can define which users can execute ELO functions from the context menu, or only from the
+
+ribbon buttons, or both at once, and can even block access to parts of the software. It is also
+
+possible to control scripts and script functions as well as icons for each option group.
+
+This is practical for ELO workstations with special areas of responsibility, in order to improve
+
+usability and to prevent incorrect usage.
+
+Please note
+
+An ELO user should only be a member of one option group. Memberships in multiple option
+
+groups can result in conflicting settings.
+
+Define group membership 
+
+In the Group membership area, you can assign members to the group and define the group
+
+membership in existing groups.
+
+1 Members: Add existing users or groups as members
+
+2 Group membership: With the Copy group membership from field, you can inherit existing group
+
+memberships from other groups or users. Group memberships can also be added manually. The 
+
+Everyone group is entered by default.
+
+Information
+
+19 Configuration and administration
+
+
+
+Groups can be incorporated into other groups. This allows you to implement complex
+
+combinations of rights settings and permissions concepts.
+
+Information
+
+If you type a space in an input field, the entire list of available users and groups will be
+
+displayed.
+
+Assign user rights 
+
+Under User rights, you assign the rights associated with the group membership.
+
+20 Configuration and administration
+
+
+
+1 Copy user rights from: Inherit the user rights from another group or user
+
+2 User rights: You will find more information under Rights in ELO > User rights.
+
+21 Configuration and administration
+
+
+
+Other configurations
+
+Introduction 
+
+Additional configurations for the user manager:
+
+Set password rules
+
+Block access
+
+Organizational units
+
+• 
+
+• 
+
+• 
+
+22 Configuration and administration
+
+
+
+Password rules 
+
+In the Password rules area (Maintenance > Password rules), you define the password security
+
+settings.
+
+Days valid: Define the number of days that passwords are valid.
+
+Min. length: Define the minimum length for passwords in ELO.
+
+Information
+
+The more characters and special characters are used, the more secure the password is. You
+
+can define which characters must be used in the password.
+
+23 Configuration and administration
+
+
+
+Block access 
+
+Under Block access (Others > Block access), you can restrict access to ELO based on membership
+
+of a selected group.
+
+Access for group: ELO suggests possible groups as soon as you start typing in this field. Select a
+
+group and click Save to confirm your selection. The respective repository can then only be
+
+accessed by members of this group.
+
+Please note
+
+Users with the user right Main administrator are always able to log on to ELO. Users who are
+
+already logged on can continue to use ELO until they log off.
+
+Information
+
+To grant all users access to the repository, use the Everyone group.
+
+24 Configuration and administration
+
+
+
+Organizational units 
+
+Open the organizational units in the ELO Administration Console under System settings >
+
+Organizational units.
+
+Organizational units provide a way to classify users.
+
+The users in an organizational unit only see the users within their own organizational unit.
+
+This can be useful at big companies, e.g. if the branches in different countries do not work together
+
+directly. A user or a group can only belong to one organizational unit. Membership to an
+
+organizational unit can be inherited through groups.
+
+Information
+
+The same user should not be a member of different organizational units. Example: Three
+
+different organizational units should not all contain the user Admin.
+
+25 Configuration and administration
+
+
+
+Rights in ELO
+
+Introduction 
+
+In ELO, individual users and groups can be assigned user rights. These tools enable the
+
+administrator to control who has the authority to perform specific actions in ELO. Assigning these
+
+rights ensures that only users with the corresponding rights may make settings and changes.
+
+The inheritance of rights makes it easier to assign and manage rights.
+
+There are additional configurations that can be made based on certain rights.
+
+26 Configuration and administration
+
+
+
+User rights 
+
+You can manage user rights in the user and group configurations.
+
+Information
+
+Ideally, you should use groups to assign rights. This simplifies administration and prevents
+
+users from having rights they don't need.
+
+User manager rights 
+
+Main administrator (FLAG_ADMIN) 
+
+Administrator privileges are required to make global settings.
+
+For example, a user with the right Edit user data and the additional right Main administrator can
+
+administer all users instead of just those who that user is set as administrator of. Users with the
+
+right Main administrator can still see all users, even those who are not Visible in user lists.
+
+The right Main administrator allows you to change the permissions of the top repository level: To
+
+change the permissions and options of the top level, you need to open the Set permissions dialog
+
+box, which you can only do if you have the right Main administrator. To modify the permissions,
+
+however, you also need the Edit permissions right.
+
+The Main administrator right enables you to:
+
+Delete entries permanently, even if you do not have the rights Delete folders, Delete
+
+documents, Delete versions, and Delete non-modifiable documents.
+
+A main administrator can remove a lock on any entry made by any user.
+
+Assign substitutes for other users
+
+• 
+
+• 
+
+• 
+
+• 
+
+27 Configuration and administration
+
+
+
+Manage views and preview profiles, even for other users
+
+Delete metadata forms
+
+Log on in administration mode or when repositories are locked
+
+You will find more information under Rights in ELO > Configuration > Necessary rights for the ELO
+
+Administration Console.
+
+Edit user data (FLAG_SUBADMIN) 
+
+This option gives the user the right to create and manage other users. However, new users can only
+
+be conferred the same (or fewer) rights as the user who created them.
+
+This right is required if a user is registered as an administrator for other users. Only a user with this
+
+right can administer user rights. User data can only be viewed and edited by the administrator of
+
+the respective user. It is also possible to assign administrator privileges to a group. In this case, all
+
+members of this group with the right Edit user data can administer this user or group. Only users
+
+with Main administrator and Edit user data rights can see and administer all users. You can only
+
+assign groups in which the user is a member or is administrator of. You can only edit your own user
+
+data if you have the right Main administrator or you are set as an administrator in the user
+
+manager.
+
+With this right, it is possible to set substitution rules for other users that you are an administrator
+
+of, even if they are not Visible in user lists.
+
+Change password (FLAG_CHANGEPW) 
+
+This right enables a user to change their own password for logging on to the system.
+
+SAP administrator (FLAG_SAPADMIN) 
+
+This right is required for enabling the link between the ELO Suite and SAP using ELO Suite for SAP
+
+ArchiveLink® and allows you to manage the metadata form associated with the interface to SAP.
+
+The metadata form for SAP-administered documents can be viewed by every user but can only be
+
+edited by users with this right.
+
+DMS Desktop user, no workflows (FLAG2_IS_DMS_DESKTOP_USER) 
+
+If this option is enabled, the user does not have access to workflow functions.
+
+Ad hoc workflow
+
+Extend workflow deadline
+
+Workflow overview
+
+Hand off workflow
+
+Accept workflow
+
+Show workflow
+
+Delegate workflow
+
+Start workflow
+
+Forward workflow
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+28 Configuration and administration
+
+
+
+Return workflow
+
+Postpone workflow
+
+Workflows for this entry
+
+Edit workflow templates
+
+Cancel postponement
+
+Please note
+
+This right is not technically a "right," but rather a restriction that supersedes all other rights
+
+associated with workflows. A user with this right is unable to use the functions and roles
+
+associated with workflows, irrespective of whether the individual rights are set or inherited
+
+by a user or not. The user is also unable to edit any workflow tasks that are assigned to
+
+them. This is because the ELO DMS Desktop does not include workflow functions. 
+
+ELO Desktop Client Plus user (FLAG2_DESKTOP_CLIENT_PLUS) 
+
+This right runs the ELO Desktop Client in advanced mode, with some task functionalities and the
+
+full client view mode.
+
+Please note
+
+This is not technically a right, but limits what functions are available to the user.
+
+ELOxc Client user, e-mails only (FLAG2_LIMITED_CLIENT) 
+
+This right opens the ELO Client for Microsoft Outlook in ELOxc for Microsoft EWS mode, and is
+
+restricted to the file formats (EML, MSG, and VCF) that can be opened by Microsoft Outlook. No
+
+other formats are available to the user.
+
+Please note
+
+This is not technically a right, but limits what functions are available to the user.
+
+• 
+
+• 
+
+• 
+
+• 
+
+29 Configuration and administration
+
+
+
+Folder/document permissions 
+
+Edit folders (FLAG_EDITSTRUCTURE) 
+
+This option permits a user to edit the structure of folders or create new folders.
+
+Edit documents (FLAG_EDITDOCS) 
+
+This right enables users to edit documents. This includes the functions:
+
+Load new versions
+
+Check files in and out
+
+Insert files
+
+Documents from templates
+
+Add and delete attachments
+
+Add to full text database
+
+Delete from full text database
+
+Create signature
+
+Users are only able to edit document metadata if they have the corresponding right. Otherwise, the
+
+user can only open the metadata in read-only mode.
+
+Edit permissions (FLAG_EDITACL) 
+
+This right allows users to change the permissions to entries (documents and folders) in ELO.
+
+Information
+
+In order to be able to modify the permissions to entries, you need the right Edit folders or 
+
+Edit documents. You also need the Set permissions (P) permission for each individual entry.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+30 Configuration and administration
+
+
+
+Users have the option to configure the rights when filing entries in the client, since they have full
+
+rights to the file. The user right applies to subsequent editing of permissions.
+
+It does not apply to the permission settings in the ELO Administration Console or the ELO Java
+
+Client configuration. If users can edit the stamp, metadata forms, etc., they can also edit their
+
+permissions without this user right being checked.
+
+View all entries, ignore permissions (FLAG_IGNOREACL) 
+
+This right means that the user can view all documents and folders, even if the user does not have
+
+access to them. It revokes all existing object permissions. Users with this right have full access
+
+permissions to all ELO entries.
+
+The only way to protect documents from users who possess this user right is to encrypt them.
+
+Import permission (FLAG_IMPORT) 
+
+This right allows users to import a data set into the repository. All data available in the data set will
+
+be imported — object permissions are ignored. The user performing the action therefore also
+
+imports data that they do not have permissions to. This data will not be visible to the user.
+
+Export permission (FLAG_EXPORT) 
+
+This right enables the user to create a data set for export. The user can only export entries and
+
+documents that they have the corresponding permissions to.
+
+Folder/document options 
+
+Information
+
+31 Configuration and administration
+
+
+
+The rights in this group (except Change document path) only apply if the right Edit folders or
+
+Edit documents also exists.
+
+Change metadata form after filing (FLAG_CHANGEMASK) 
+
+This right allows the user to assign a different metadata form to a document already filed to the
+
+repository. Please note that doing this may cause metadata to be lost. This is only possible if the
+
+user also has the right Edit folders or Edit documents, depending on the entry.
+
+Edit keyword lists (FLAG_EDITSWL) 
+
+This right enables the user to add, change, and delete entries to the keyword list. The user is able
+
+to add, change, and delete entries. If the user does not have this right, they will not be able to edit
+
+the keyword lists in the ELO Administration Console, even if they have the right Edit metadata
+
+forms and fields.
+
+This is only possible if the user also has the right Edit folders or Edit documents, depending on the
+
+entry.
+
+Edit retention period (FLAG_EDITDUEDATE) 
+
+This right enables the user to set and extend the retention period for documents. If the user does
+
+not have this right, the corresponding field in the "Metadata" dialog box is disabled.
+
+This is only possible if the user also has the right Edit folders or Edit documents, depending on the
+
+entry.
+
+Change document status (FLAG_CHANGEREV) 
+
+This right enables the user to set the document status on the Options tab in the Metadata dialog
+
+box.
+
+Version control disabled
+
+Version control enabled
+
+Non-modifiable
+
+This is only possible if the user also has the right Edit documents.
+
+Change document paths (FLAG_CHANGEPATH) 
+
+This right gives users access to the selection list for the document path in the document options
+
+and enables them to change the path for a specific document. This is only possible when entering
+
+metadata in the Intray. If a document has already been filed, this selection list is permanently
+
+deactivated. If this is the case, you can only move documents to a different path using the Move
+
+document files function if you have main administrator rights.
+
+This right does not allow users to create new document paths or change their definition. Editing,
+
+creating, and assigning document paths requires main administrator rights.
+
+• 
+
+• 
+
+• 
+
+32 Configuration and administration
+
+
+
+Author for approval documents (FLAG_AUTHOR) 
+
+This right allows the user to select or deselect the Approval document check box and edit approval
+
+documents. The author is able to continue editing previous versions of a document. When users
+
+check out documents, they are able to select all document versions. When documents are checked
+
+in, the old working version is retained. The working version (= approved version) can only be
+
+changed by authors for approval documents.
+
+This is only possible if the user also has the right Edit documents.
+
+Show "Additional information" tab (FLAG2_SHOW_EXTRA_INFO) 
+
+This right determines whether a user is able to see the Additional information tab in the Metadata
+
+dialog box.
+
+This is only possible if the user also has the right Edit folders or Edit documents, depending on the
+
+entry.
+
+Deletion rights 
+
+Delete folders (FLAG_DELSTRUC) 
+
+This right determines whether a user is able to delete folders.
+
+Delete documents (FLAG_DELDOC) 
+
+This right determines whether a user is able to delete documents.
+
+33 Configuration and administration
+
+
+
+Delete non-modifiable documents (FLAG_DELREADONLY) 
+
+This right enables the user to delete documents that have been filed with the status Non-modifiable
+
+or have been awarded this status at some point.
+
+This is only possible if the user has the right Delete documents.
+
+Delete versions (FLAG_DELVERSION) 
+
+This right allows the user to delete individual versions from a document's version history.
+
+In the ELO Java Client, the user can see the deleted versions of a document in the Document
+
+versions dialog box if the Show deleted entries function is enabled.
+
+Workflow rights 
+
+Manage workflows (FLAG_EDITWF) 
+
+This right enables users to:
+
+Create workflow templates and forms
+
+Cancel active workflows before they are completed
+
+Delete completed and canceled workflows permanently
+
+Edit successor nodes
+
+Start workflows (FLAG_STARTWF) 
+
+This right allows a user to start workflows. This applies for the following functions:
+
+Ad hoc workflow
+
+Workflow overview
+
+Start workflow
+
+Workflows for this entry
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+34 Configuration and administration
+
+
+
+The user also requires this right to start workflows when filing entries with a metadata form that is
+
+linked to a workflow. If the user does not have this right, the user may file documents with this
+
+metadata form but cannot start a workflow.
+
+Without this right, the user will not be able to use the Workflow overview and the Workflows for this
+
+entry functions on the ribbon of the ELO client. These functions provide the user with an overview
+
+of all workflows that they are involved in either directly or indirectly (through group membership).
+
+Extend workflow rights (FLAG2_EXTEND_WORKFLOW_RIGHTS) 
+
+Users with this right have temporary read access to the entry assigned to the active workflow
+
+node. The document can only be viewed in the Tasks work area, and only as long as the document
+
+is assigned to the user or a group that the user is a member of. If this right is set, the user is given
+
+temporary read rights to the entry assigned to a workflow. In addition, an entry in the database
+
+table ProfileOpts gives the user the option to control whether temporary or permanent permissions
+
+are to be assigned.
+
+This right cannot replace other user rights, even those that are temporary. The right applies to
+
+documents and folders, but not to metadata forms.
+
+View workflows for all users (FLAG2_WF_CONTROLLER) 
+
+This right allows the users to see all workflows that are active and not just those workflows that the
+
+user is participating in.
+
+Rights for system settings 
+
+Edit master data (FLAG_EDITCONFIG) 
+
+This right gives the user access to entry types (icons and names of folders and documents), font
+
+colors, and stamps.
+
+35 Configuration and administration
+
+
+
+Edit scan profiles (FLAG_EDITSCAN) 
+
+When this option is enabled, the user can change the settings for the scanner parameters and scan
+
+profiles. If the user also has Main administrator privileges, they are also able to manage and edit
+
+global scan profiles and the scan parameters for other users.
+
+Use debugger (FLAG_EDITSCRIPT) 
+
+If you have this right, you can open the JavaScript debugger in the ELO Java Client with the
+
+keyboard command Ctrl+Alt+D.
+
+Information
+
+Scripts are managed like documents in ELO. To edit scripts, you need the corresponding
+
+permissions.
+
+Edit metadata forms and fields (FLAG_EDITMASK) 
+
+This right enables the user to create new metadata forms and modify existing ones.
+
+If you need to edit the keyword lists in the metadata forms, then you also need the right Edit
+
+keyword lists.
+
+Assign replication sets (FLAG_EDITREPL) 
+
+You require this right for assigning data to replication sets in the repository. Replication sets are
+
+needed by ELO Replication to determine data quantities.
+
+36 Configuration and administration
+
+
+
+Inheriting rights 
+
+There are two check boxes in front of the user rights. The left check box refers to the user's
+
+personal permissions. The check box to the right shows the rights a user takes on by belonging to a
+
+group. If you move the mouse over the right check box, a tooltip appears telling you which groups
+
+the right was inherited from.
+
+Information
+
+It is recommended to assign the rights via group inheritance and by directly assigning the
+
+rights to the individual users.
+
+37 Configuration and administration
+
+
+
+Assign permissions in ELO Spaces 
+
+The rights for the teamspaces and workspaces in ELO are determined based on the assigned roles.
+
+Teamspace 
+
+You can assign the following special teamspace rights to a role:
+
+Edit roles: Edit and create roles in the teamspace, regardless of whether the teamspace itself
+
+may be edited.
+
+Edit teamspace: Make changes to a teamspace. They can also change the roles assigned to
+
+members in the teamspace and add new members.
+
+Delete teamspace: Can only be enabled if Edit teamspace is also enabled.
+
+For more information on the roles in the teamspace, refer to the ELO teamspaces documentation.
+
+Workspace 
+
+You can assign the following special workspace rights to a role:
+
+Edit workspace: Make changes to a workspace. They can also change the roles assigned to
+
+members in the workspace and add new members.
+
+Edit roles: Edit and create roles in the workspace. Can only be enabled if Edit workspace is
+
+also enabled.
+
+Delete workspace: Can only be enabled if Edit workspace is also enabled.
+
+For more information on the roles in the workspace, refer to the ELO workspaces documentation.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+38 Configuration and administration
+
+https://docs.elo.com/admin/packages/en-us/teamspaces/configure-template.html#define-roles
+https://docs.elo.com/admin/packages/en-us/teamspaces/configure-template.html#define-roles
+https://docs.elo.com/admin/packages/en-us/workspaces/configure-template.html#define-roles
+https://docs.elo.com/admin/packages/en-us/workspaces/configure-template.html#define-roles
+
+
+Configuration 
+
+Necessary rights for the ELO Administration Console 
+
+System settings 
+
+Administration
+
+areas
+Rights
+
+User
+
+administration
+Edit user data, main administrator
+
+A user with the right Main administrator can administer ALL users instead of
+
+just those who that user is set as administrator of.
+
+Organizational
+
+units
+Main administrator
+
+As an administrator of a user (with the right Edit user data), this user can be
+
+assigned to an existing organizational unit. The Main administrator has access
+
+to the Organizational units section.
+
+Metadata forms Edit metadata forms and fields
+
+The Edit keyword lists right is also required to be able to edit the contained
+
+keyword lists, as well as the Main administrator right to delete metadata
+
+forms or save their data as a table later on.
+
+Field templates Edit metadata forms
+
+Keyword lists Edit keyword lists
+
+Entry types Edit master data
+
+Document paths Main administrator
+
+Default document
+
+paths
+Main administrator
+
+Encryption keys Main administrator
+
+ELO online help
+
+URL
+Main administrator
+
+Stamps Edit master data
+
+ELO Forms
+
+Services URL
+Main administrator
+
+ELO Analytics URL
+
+Repository
+
+properties
+Main administrator
+
+Font colors Edit master data
+
+39 Configuration and administration
+
+
+
+Maintenance 
+
+Administration areas Rights
+
+Administration mode Main administrator
+
+Report options Main administrator
+
+Delete report entries Main administrator
+
+Delete and remove Main administrator
+
+Backup tasks Main administrator
+
+Password rules Main administrator
+
+Move document files Main administrator
+
+Server modules 
+
+Administration areas Rights
+
+ELO Automation
+
+Services
+Main administrator
+
+Backup profiles Main administrator
+
+Full text service Main administrator
+
+Create password Main administrator
+
+ELO Transport Main administrator
+
+Configuration files Main administrator
+
+Form designer Manage workflows
+
+ELOxc
+Not checked in the ELO Administration Console. The check is performed
+
+in ELOxc.
+
+System information 
+
+Administration areas Rights
+
+Administration folder Main administrator
+
+Server information Main administrator
+
+Users in system Main administrator
+
+Statistics Main administrator
+
+License overview Main administrator
+
+License report Main administrator
+
+Log files Main administrator
+
+Monitoring Main administrator
+
+Test checksums Main administrator
+
+40 Configuration and administration
+
+
+
+Others 
+
+Administration areas Rights
+
+LDAP Import Main administrator
+
+Block access Main administrator
+
+Document encryption 
+
+ELO systems provide a method to encrypt documents. These documents are encrypted at the
+
+operating system level and can only be opened with a password, ensuring that documents are
+
+safeguarded against unauthorized access, even when performing data backups.
+
+In addition to the ACL authorization settings in ELO, you can encrypt documents that contain
+
+confidential or sensitive information. This also protects documents from being viewed by
+
+administrators at the operating system level.
+
+Starting with ELO version 12, documents are encrypted with AES-256 (Advanced Encryption
+
+Standard), a symmetric encryption method that uses block encryption. There are now more than 16
+
+encryption keys. Encryption and decryption take place on the server side.
+
+Documents that have already been encrypted remain in the old encryption mode. Both encryption
+
+methods are listed in the database and run simultaneously in a compatibility mode.
+
+It is only possible to encrypt a document with ELO functions when it is filed to the ELO repository.
+
+Documents in the Intray are always stored in unencrypted format until they are moved to the
+
+repository. ELO functions are not designed to encrypt documents already in ELO, because as soon
+
+as documents are filed to the repository, the documents may be distributed in unencrypted form to
+
+a backup path, revision-controlled media, and various backup systems.
+
+Encryption can only be configured by users with the Main administrator right. A user who knows the
+
+encryption key and the corresponding password is able to implement encryption. An encryption key
+
+is therefore not necessarily bound to a single person – it can also be used for groups.
+
+Documents encrypted with AES-256 can be added to the full text database. To do this, you need to
+
+create a system user that can access the encrypted documents. You can, but do not have to, add
+
+encrypted documents to the full text database.
+
+The encryption keys are not to be confused with the keys concept that was discontinued starting
+
+with version 10.
+
+You will find more information on encryption under Configuration and administration > System
+
+administration > Folders and documents > Encryption keys.
+
+41 Configuration and administration
+
+
+
+Permissions in ELO
+
+Introduction 
+
+In ELO, it is possible to assign permissions to individual entries and objects to further refine the
+
+settings for user access to system information.
+
+This includes the following permissions:
+
+R (Read)
+
+W (Write)
+
+D (Delete)
+
+E (Edit)
+
+L (List)
+
+P (Permissions)
+
+Assigning these permissions prevents unauthorized parties from accessing information.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+42 Configuration and administration
+
+
+
+Documents 
+
+Permission Name Permission
+
+R (Read) View (R)
+View document and metadata, see permissions,
+
+add notes
+
+W (Write) Change metadata (W)
+Edit metadata, change the date when checking in
+
+a new version
+
+D (Delete) Delete (D) Mark document as deleted
+
+E (Edit) Edit (E)
+Modify document file, check out, check in, load
+
+new version, change working version
+
+L (List)
+Does not affect documents in
+
+the ELO Java Client
+
+P
+
+(Permissions)
+Set permissions (P) Change permissions
+
+43 Configuration and administration
+
+
+
+Folders 
+
+Permission Name Permission
+
+R (Read) View (R)
+View folders in tree view, add margin
+
+notes
+
+W (Write) Change metadata (W) Edit metadata
+
+D (Delete) Delete (D)
+
+Mark folder as deleted (only if you are
+
+able to delete child folders or if the folder
+
+is empty)
+
+E (Edit)
+
+Does not affect folders but
+
+important for inheriting
+
+rights to the documents
+
+within folders
+
+Although the Edit right enables users to
+
+check folders out as well as the
+
+documents within folders at the first
+
+level below the folder, this right is not
+
+checked for folders.
+
+L (List) Edit list
+
+Edit folder contents: Insert, move, copy,
+
+or remove documents. Insert or delete
+
+reference.
+
+P (Permissions) 
+
+<Permissions>
+Set permissions (P) Change permissions
+
+44 Configuration and administration
+
+
+
+Margin notes 
+
+There are three different types of margin notes.
+
+General margin note 
+
+General margin notes can be created, edited, or deleted by every user that can view the entry. If
+
+the user only has the Read right to the document, they can only delete general margin notes that
+
+they have created themselves.
+
+Personal margin note 
+
+Users that have read access to the entry can create, edit, or delete these types of margin notes. No
+
+other users can see these margin notes.
+
+Permanent margin note 
+
+Any user who can view the entry can also see the permanent margin notes attached to it but
+
+cannot alter or delete them.
+
+45 Configuration and administration
+
+
+
+Annotations 
+
+There are annotations with and without text.
+
+Annotations with text include sticky notes, text notes, and stamps. Annotations without text
+
+include freehand marker, rectangle marker, horizontal marker and strikethrough, the redaction tool,
+
+and image stamps.
+
+Permission Name Permission
+
+R (Read) View (R) View annotations on a document
+
+W (Write) Change (W)
+
+Annotations with text: Edit and format text, remember position,
+
+insert position marker (not for stamps), change size; Annotations
+
+without text: Modify properties (color, line width)
+
+D (Delete) Delete (D) Delete
+
+E (Edit) Move (E) Change the position of annotations on a document
+
+L (List)
+Does not affect
+
+annotations
+
+P
+
+(Permissions)
+
+Set permissions
+
+(P)
+Change permissions
+
+Information
+
+The only difference between annotations with and without text in terms of permissions is
+
+the W (Write) permission.
+
+46 Configuration and administration
+
+
+
+Stamps 
+
+In this section, we will look at stamps as a tool and their function as an applied stamp.
+
+'Stamps' tool 
+
+Stamps are defined for a specific user, option group, or globally using ProfileOpts. This sets the
+
+defined stamp in the list of available stamps for the corresponding users. If there are no stamps
+
+available to the user (either user-specific or group stamps), this user cannot use the stamps tool.
+
+The user is also unable to create their own stamps in the ELO Java Client.
+
+Applied stamp 
+
+Permission Name Permission
+
+R (Read) View (R) View applied stamps on a document
+
+W (Write) Change (W) Change size of text stamps, remember position
+
+D (Delete) Delete (D) Delete applied stamps
+
+E (Edit) Move (E) Change position on document
+
+L (List) Does not affect stamps
+
+P (Permissions) Set permissions (P) Change permissions
+
+47 Configuration and administration
+
+
+
+Metadata forms 
+
+You can only set the permissions for metadata forms in the ELO Administration Console.
+
+Permission Name Permission
+
+R (Read)
+View
+
+metadata (R)
+
+View metadata form in the list in the Metadata dialog box, view
+
+metadata in read-only mode. The metadata form can be selected, but
+
+you can only enter the metadata and exit the dialog box with Save if
+
+you have the W right.
+
+W (Write)
+
+Change
+
+metadata
+
+(W)
+
+File entries and enter metadata (also when filing initial version). If
+
+you do not have the W right for the metadata form, you cannot
+
+change the metadata of the entries. Even if you have the W right for
+
+the entry, the dialog box opens in read-only mode. To change the
+
+metadata of an entry filed with the form, you need the W right to the
+
+entry as well.
+
+D (Delete)
+Delete form
+
+(D)
+
+This right was checked in the ELO Windows Client and still exists for
+
+historical reasons. Currently, it is not checked. The Main administrator
+
+right is checked to be able to delete metadata forms in the ELO
+
+Administration Console.
+
+E (Edit) Edit form (E)
+This right was checked in the ELO Windows Client and still exists for
+
+historical reasons. Currently, it is not checked.
+
+L (List)
+
+Does not
+
+affect
+
+metadata
+
+forms
+
+P
+
+(Permissions)
+
+Does not
+
+affect
+
+metadata
+
+forms
+
+Fields 
+
+In the Display mode field settings, you need to define whether you want to be able to enter data
+
+manually (Normal access), or whether you want the index fields to be read-only (Read-only), or
+
+whether you want them to be hidden from view (Hidden).
+
+This is a parent property. You can set more detailed permissions for normal access at the
+
+permissions level.
+
+48 Configuration and administration
+
+
+
+Permission Name Permission
+
+R (Read) View (R)
+View the field, reciprocal action with display mode settings
+
+(Normal access/Read-only/Hidden)
+
+W (Write) Write (W)
+Enter data to the field, reciprocal action with display mode settings
+
+(Normal access/Read-only/Hidden)
+
+D (Delete)
+Does not affect
+
+fields
+
+E (Edit)
+Does not affect
+
+fields
+
+L (List)
+Does not affect
+
+fields
+
+P
+
+(Permissions)
+
+Does not affect
+
+fields
+
+49 Configuration and administration
+
+
+
+Workflow templates 
+
+Permission Name Permission
+
+R (Read) View (R) View, start workflow with template
+
+W (Write) Change (W)
+Edit template, create new version of the
+
+template
+
+D (Delete) Delete (D) Delete template
+
+E (Edit)
+Does not affect workflow
+
+templates
+
+L (List)
+Does not affect workflow
+
+templates
+
+P
+
+(Permissions)
+Set permissions (P) Change permissions
+
+50 Configuration and administration
+
+
+
+Workflows 
+
+Starting with ELO 11, you can set access rights to individual workflows as a process. When
+
+designing a workflow template, if you do not want to assign any permissions, the default setting
+
+for workflow access up to ELO 10 applies: Users with the right View workflows for all users can see
+
+the workflow (R right). Users with the right Manage workflows can see, change, permanently
+
+remove, and end the workflow (R W D E rights). The L right does not have any effect on workflows.
+
+If there are no permissions configured for a workflow, the system behaves as follows:
+
+Users with the right Manage workflows (FLAG_EDITWF) are assigned R W D E L
+
+Users with the right View workflows for all users (FLAG2_WF_CONTROLLER) are assigned R
+
+The following is checked with permissions:
+
+View workflow (R) requires either the View (R) access right or the View workflows for all
+
+users (FLAG2_WF_CONTROLLER) user right, or the user must be entered to an active
+
+workflow node.
+
+Edit workflow (W) requires the Write (W) and Manage workflows (FLAG_EDITWF) access
+
+rights.
+
+Delete workflow (D) requires the Delete (D) and Manage workflows (FLAG_EDITWF) access
+
+rights.
+
+End workflow (E) requires the Edit and Manage workflows (FLAG_EDITWF) access rights. 
+
+Permission Name Permission
+
+R (Read) View workflow (R) View workflow (as a process)
+
+W (Write) Change workflow after start (W) Change workflow after start
+
+D (Delete) Delete workflow permanently (D) Delete workflow permanently
+
+E (Edit) End workflow (E)
+
+L (List) Does not affect workflows
+
+P (Permissions) Set permissions (P) Change permissions
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+51 Configuration and administration
+
+
+
+ELO Spaces 
+
+The permissions for the contents of teamspaces and workspaces in ELO are determined based on
+
+the assigned roles.
+
+You can assign the following default permissions for contents in teamspaces and workspaces to a
+
+role:
+
+Permission Name Permission
+
+R (Read) View (R) View entry
+
+W (Write)
+Change metadata
+
+(W)
+Edit entry metadata
+
+D (Delete) Delete (D) Delete entry
+
+E (Edit)
+Edit (E) (only
+
+documents)
+
+Edit selected entry, i.e. change working version and load new
+
+version
+
+L (List)
+Edit list (L) (only
+
+folders)
+
+Change contents of the folder, e.g. create documents in this
+
+folder, move or remove documents from the folder
+
+P
+
+(Permissions)
+
+Set permissions
+
+(P)
+Change permissions for the selected folder
+
+The current permissions only take effect if the user has the corresponding user rights.
+
+You can also set authorization options for entries that were created in a teamspace or workspace.
+
+For more information, refer to the ELO Java Client documentation.
+
+52 Configuration and administration
+
+https://docs.elo.com/user/elo-java-client/en-us/elo-java-client/manual/organize-tab.html#authorization-for-entries-in-spaces
+https://docs.elo.com/user/elo-java-client/en-us/elo-java-client/manual/organize-tab.html#authorization-for-entries-in-spaces
+
+
+Other permissions 
+
+For historical reasons, the following uses both the terms parent rights and owner rights, though
+
+these are also permissions.
+
+Parent rights 
+
+The parent rights are the permissions that are inherited from an element. Child entries in a folder
+
+can either be folders or documents. Child entries in a document can either be attachments or notes.
+
+Example: The permissions to a document only apply for a group and Everyone has permissions to
+
+the notes in the document. In this case, the rights to the document take precedence, so not 
+
+Everyone will be able to see the note, but only those who also have read permission to the
+
+document.
+
+If a user has permissions to a document but does not have permissions to the document filing path,
+
+the document will show up in the results list following a search query or if a link is created.
+
+Owner Owner rights 
+
+The owner rights are a placeholder for the user that
+
+creates a folder
+
+filed a document
+
+places a stamp or any other annotation on a document.
+
+started a workflow
+
+Everyone 
+
+Ideally, there should be very few entries in the ELO repository that Everyone has full access to.
+
+You can check whether your repository contains such an object by having your administrator set up
+
+a dynamic folder in which all objects are displayed that permit full access to the Everyone group.
+
+To do so, create a folder with the following line on the Extra text tab:
+
+Please note
+
+The Everyone group needs read permissions to personal folders so that services can access
+
+them. If read permission for Everyone is removed, other users can no longer see the profile
+
+page of this user, for example.
+
+• 
+
+• 
+
+• 
+
+• 
+
+!+ objects where objacl='75PYJA' and objstatus=0
+
+53 Configuration and administration
+
+
+
+Concept for assigning rights and
+
+permissions
+
+Introduction 
+
+The following concept for assigning rights and permissions is merely a recommendation.
+
+The ability to assign rights to individual users and/or groups is a standard feature of ELO. In
+
+addition to this standard feature, users can also assign permissions to folders and documents. The
+
+objective is to assign users as many permissions as necessary but as few as possible to give them
+
+access to documents and data.
+
+You can assign rights at the user level but in most cases, this is not very effective. It makes more
+
+sense to organize users with the same rights into groups and to assign permissions based on these
+
+groups. The users are then assigned to these groups.
+
+This document presents a logical structure for the permissions groups. The intention is to keep the
+
+structure as simple as possible so that it can be implemented in ELO without any problems.
+
+The permissions in the ELO repository should correspond to the tasks of the users in the company.
+
+The following should be taken into consideration:
+
+What tasks do the employees have within the company?
+
+In what departments do the employees work?
+
+What information and documents do the employees need to complete their tasks within the
+
+company?
+
+• 
+
+• 
+
+• 
+
+54 Configuration and administration
+
+
+
+Assigning user rights 
+
+In response to the first question of what tasks the employee has in the company, we can assign
+
+user rights. Depending on what the data and documents in the ELO repository will be used for, you
+
+can assign user rights via different groups. In our example of a rights concept, we distinguish
+
+between five different groups of user rights.
+
+ELO view users 
+
+These users may "only" view folders and documents, apply annotations and notes, or write feed
+
+posts. They cannot make changes to the metadata, edit, or change the document in any way. These
+
+users can perform searches in the repository but do not enter content or file items themselves.
+
+55 Configuration and administration
+
+
+
+The role group ELO_ViewUsers (minimal rights) can have the following right:
+
+Change password
+
+ELO standard users 
+
+ELO standard users have extended rights permitting them to edit documents and metadata.
+
+Depending on their rights, these users can change or delete documents and folders, change, print,
+
+and export metadata, and start and edit workflows.
+
+• 
+
+56 Configuration and administration
+
+
+
+Typical tasks for these users are to file new documents to the ELO repository and/or to edit them.
+
+The role group ELO_StandardUsers (basic rights for editing documents) can have the following
+
+rights:
+
+ELO Desktop Client Plus user
+
+Edit documents
+
+Delete documents
+
+Start workflows
+
+Extend workflow rights
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+57 Configuration and administration
+
+
+
+ELO power users 
+
+These users are authorized to do more technical and administrative tasks in ELO. Typically, they
+
+edit the folder structure in ELO and its permissions concept. They implement the repository
+
+structure with static or dynamic folders, or with default indexes that can be used by other users.
+
+They can edit documents as well as document options or change the expiration date and document
+
+status. They can delete non-modifiable documents and versions. They can check the status of
+
+workflows they are not involved in.
+
+58 Configuration and administration
+
+
+
+The role group ELO_PowerUsers (extended rights including editing the folder structure) can have
+
+the following rights:
+
+Edit folders
+
+Delete folders
+
+Edit permissions
+
+Edit keyword lists
+
+Edit retention period
+
+Author for approval documents
+
+Delete versions
+
+View all workflows from all users (check)
+
+Delete non-modifiable documents
+
+Change document editing status
+
+ELO area administrators 
+
+These users can manage repository settings for the users they administer as well as their
+
+substitutes. They act as administrators for their own departments, are familiar with internal
+
+processes, and create the required workflow templates. They know what data has to be entered
+
+when filing documents and define the required metadata forms and keyword lists. They can create
+
+stamps and edit font colors.
+
+ELO area administrators are not responsible for editing and working with documents, but for
+
+structure, processes, and keeping the repository in order. They also perform monitoring tasks.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+59 Configuration and administration
+
+
+
+The role group ELO_AreaAdministrators (settings in the repository) can have the following rights:
+
+Import permission
+
+Export permission
+
+Edit metadata forms and fields
+
+Edit keyword lists
+
+Change metadata form after filing
+
+Edit master data
+
+Manage workflows
+
+Edit user data (only for users they administer)
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+60 Configuration and administration
+
+
+
+Edit scan profiles
+
+ELO administrators 
+
+These users can manage settings in the configuration, as well as scan profiles, substitutes, and
+
+user data for all other users. They can manage organizational units, assign replication sets, remove
+
+locks, manage and move document files in the document system, back them up, or delete them
+
+permanently.
+
+ELO administrators do not work with folders or documents in the repository, but instead generally
+
+perform administrative tasks only.
+
+61 Configuration and administration
+
+
+
+62 Configuration and administration
+
+
+
+Groups and permissions concept 
+
+It makes sense to combine functions and permissions into groups.
+
+To assign different areas in the repository different permissions, we recommend creating specific
+
+area groups. The example below illustrates how you can assign rights via groups and AND groups.
+
+Assigning rights via groups 
+
+Company XYZ has HR, Production, and Logistics departments. The repository provides different
+
+permissions that can be assigned to the different departments.
+
+Membership in the different departments also controls permissions to the documents in the
+
+repository. In our example, users from the HR department can access all documents in the HR area,
+
+while users from production have access to the Production area and users from logistics have
+
+access to the Logistics area. The user groups are created according to the company departments
+
+for this reason.
+
+The groups assigned via user rights, also referred to as role groups, are combined with the groups
+
+corresponding to department membership.
+
+User rights should always be linked to groups and not to individual users. This allows you to track,
+
+monitor, and manage assigned rights.
+
+The role group or ELO_StandardUsers user rights group in our company has the following
+
+employees:
+
+The HR department has the following employees. They are granted exclusive access to documents
+
+in the HR area.
+
+63 Configuration and administration
+
+
+
+AND groups 
+
+The following figure illustrates a scenario for assigning permissions within the HR department.
+
+Now, we can set permissions to documents and folders in the HR area using an AND group:
+
+Members of both the HR and ELO_StandardUsers groups have permissions.
+
+This allows you to give all HR employees view permissions to documents from the HR department,
+
+for example.
+
+64 Configuration and administration
+
+
+
+To ensure that only the ELO_StandardUsers in the HR group are given full access to these
+
+documents, we will create an AND group. An AND group contains the overlap from the selected
+
+groups.
+
+65 Configuration and administration
+
+
+
+In this example, the members of the AND group have full access to this document. ELO shows what
+
+employees are members of this group in the example.
+
+66 Configuration and administration
+
+
+
+Assigning permissions via metadata forms 
+
+To ensure that the HR documents can only be edited by authorized users, we recommend defining
+
+permissions using the metadata form and not for individual entries in the repository.
+
+67 Configuration and administration
+
+
+
+68 Configuration and administration
+
+
+
+LDAP
+
+Introduction 
+
+The Lightweight Directory Access Protocol (LDAP) enables you to import users and groups from an
+
+Active Directory (AD) into the ELO system. This is done with LDAP import.
+
+You need to set up and configure the connection between LDAP and the ELO LDAP interface for the 
+
+LDAP import to work.
+
+In addition, LDAP authentication must be enabled to allow users to log on to ELO with the data
+
+stored in the Active Directory.
+
+You will find the menu items in the ELO Administration Console under LDAP.
+
+The user administration in the LDAP directory is managed in a tree structure. In this concept, a
+
+unique name within the LDAP directory, known as the distinguished name (DN), is used as a unique
+
+key for each user. An example of a DN is cn=John Smith,ou=people,dc=comy,dc=org. The DN in this
+
+case is composed of three parts: the common name (CN), the organizational unit (OU), and the 
+
+domain component (DC). The combination of OU/DC is used to reference different branches within the
+
+LDAP tree structure. The DC addresses the top level below the LDAP directory root node. This
+
+usually represents the Internet domain of the company. The schema data is also located directly
+
+under the root node. The possible attributes are already specified in the LDAP schema, and the
+
+corresponding values for these properties are saved in the LDAP entry that is resolved through the
+
+DN.
+
+Please note
+
+Do not use a ; (semicolon) in group and user names in the Active Directory.
+
+69 Configuration and administration
+
+
+
+LDAP interface configuration 
+
+The menu item LDAP interface configuration in the ELO Administration Console is where you edit
+
+the connection settings, user import settings, and attribute assignment settings of the configuration
+
+file ldap.json. The file ldap.json is stored in the repository under the following path:
+
+Administration//IndexServer Scripting Base//_ALL//ldap.json
+
+Information
+
+Path changes are possible in the following cases:
+
+If you want to make a special configuration for an ELO Indexserver, copy the file to the
+
+directory of the respective ELO Indexserver and make changes to the file there.
+
+If you'd like to make different configurations for different ELO Indexservers, you will
+
+need a separate file for each ELO Indexserver.
+
+The configuration only applies to a single repository. If you edit the configuration in the ELO
+
+Administration Console, you need to restart the ELO Indexserver of the repository. If there are
+
+multiple ELO Indexservers, you need to restart all of them.
+
+Please note
+
+You should not use LDAP to authenticate the ELO Service account (or the service account
+
+used). This allows the server-side ELO applications to run independently of the LDAP
+
+configuration. Disabling the LDAP connection can cause the ELO applications to no longer
+
+start. In this case, you will not be able to enable the LDAP connection in the ELO
+
+Administration Console.
+
+Administrator accounts should not be authenticated via LDAP either.
+
+You can make settings for multiple domains.
+
+• 
+
+• 
+
+70 Configuration and administration
+
+
+
+Under Domain selection, you see a list of available domains.
+
+Add (green plus icon): Add settings for a domain
+
+Delete (red X icon): Delete the settings of a domain
+
+Reload data from server (yellow circle arrow icon): Reload the Domain selection area
+
+Information
+
+In case of connection problems, the ELO Indexserver log file can be set to debug. This makes
+
+troubleshooting easier.
+
+Connection settings 
+
+Domain name: Specify the DNS name or IP address of the domain here. The setting is used if the 
+
+userPrincipalName is derived from the sAMAccountName.
+
+LDAP URL The entries in the LDAP URL field determine the TCP connection to the LDAP server.
+
+LDAP authentication account: SSO requires a technical account to search LDAP for the user name
+
+transferred by the SSO mechanism (usually sAMAccountName). Enter a userPrincipalName.
+
+Please note
+
+The account must have sufficient rights to read the user attributes and group memberships.
+
+71 Configuration and administration
+
+
+
+Please note
+
+When using Kerberos: Disconnect the Kerberos account and the LDAP authentication
+
+account. The Kerberos account does not have to be created in ELO.
+
+LDAP password: In the LDAP password field, you can enter the unencrypted password of the LDAP
+
+authentication account. The ELO Indexserver stores the password encrypted on restart.
+
+Connection timeout in seconds: The LDAP interface terminates the connection to the LDAP server
+
+after this number of seconds. It then attempts to establish a connection with the next server in the
+
+list.
+
+Search timeout in seconds: When searching for users or groups, this timeout value is passed to the
+
+LDAP server.
+
+User import 
+
+72 Configuration and administration
+
+
+
+DN for person search: Use this field to specify which branches of the LDAP directory to search for
+
+users.
+
+Please note
+
+The list must not be empty.
+
+Don't enter too many branches either. The more branches, the more imprecise the search.
+
+Search filter for persons: You can use this filter to restrict the search for users.
+
+Search filter for e-mails: The first time the user authenticates with an e-mail address, this filter is
+
+used to search for the user in the LDAP directory.
+
+Required group membership: With this setting, you can use the common name to restrict
+
+authentication to users who are members of a certain group in the LDAP directory.
+
+DN for group search: In this field, you specify which branches of the LDAP directory the groups that
+
+are eligible for synchronization must be in. If the list is empty, all groups of the user are included in
+
+group synchronization.
+
+Search filter for groups: You can use this filter to restrict the search for groups of a user.
+
+Maximum nesting depth: This field can be used to specify the depth of group nesting. This refers to
+
+the collection of user groups for group synchronization.
+
+73 Configuration and administration
+
+
+
+Attribute assignment 
+
+Domain prefix: The domain prefix is required if multiple domains are configured and the 
+
+sAMAccountName is saved as the Windows attribute for the ELO user.
+
+There must be a separator at the end of the domain prefix. This separates the prefix from the user
+
+name. Ideally, you should use a backslash.
+
+Information
+
+If you are using SSO, the domain prefix must match the NetBIOS domain name.
+
+You will find the corresponding domain prefix for SSO in the USERDOMAIN environment variable on the
+
+client computer. For SSO with domain prefix, you need to set the option "ntlm.domainUserFormat"
+
+in the ELO Indexserver config.xml file. If you set the option sAMAccountName in the User
+
+authentication via field and specify a domain prefix, the Windows user contains the account name
+
+with the domain prefix in front.
+
+Example:
+
+sAMAccountName = fritzfrei
+
+Domain prefix = ELO\
+
+Windows user = ELO\fritzfrei
+
+• 
+
+• 
+
+• 
+
+74 Configuration and administration
+
+
+
+Placeholder for ELO user names: The ELO user name can be made up of different LDAP user
+
+attributes. You can specify a format expression with placeholders. Enclose the placeholders in $
+
+signs. They must also correspond to the LDAP attribute names.
+
+User authentication via: In the drop-down menu User authentication via, you can specify whether
+
+you want to set the sAMAccountName, the userPrincipalName, or the UID as the Windows user attribute
+
+(see ELO user manager).
+
+Please note
+
+The setting selected in the User authentication via field must match the settings in the 
+
+Search filter for persons field (User import tab). Pay attention to capitalization.
+
+Any umlauts should also be identical between the Active Directory and ELO user names.
+
+The ELO Administration Console checks LDAP for the following four attributes. The ELO
+
+Administration Console uses the first attribute set for the name.
+
+Information
+
+Some environments require a custom configuration. This field enables you to enter any
+
+values.
+
+Supervisor attribute name: In this field, you specify which attribute is used to determine the
+
+supervisor of the ELO user. This is usually the attribute $manager$.
+
+Please note
+
+The supervisor must already exist in ELO.
+
+ELO administrator of this user: In the field ELO administrator of this user, you can specify which ELO
+
+user to set as administrator for users created via the LDAP interface. You can enter the ID, GUID, or
+
+ELO user name.
+
+Save attributes in ELO: In this field, you specify which attributes are to be transferred from LDAP to
+
+ELO.
+
+To add an attribute, enter the name of the attribute in the field. Next, click Add ( green plus icon).
+
+To remove an attribute, click the X icon next to it in the list of attributes.
+
+LdapServerFactory.CONST.USERINFO.DISPLAY_NAME,
+
+LdapServerFactory.CONST.USERINFO.CN,
+
+LdapServerFactory.CONST.USERINFO.SAM_ACCOUNT_NAME
+
+LdapServerFactory.CONST.USERINFO.DISTINGUISHED_NAME
+
+75 Configuration and administration
+
+
+
+Information
+
+Mandatory attributes cannot be deleted. In this case, the X icon is grayed out.
+
+76 Configuration and administration
+
+
+
+LDAP import 
+
+With LDAP import, you can import users and groups from an Active Directory (AD) into the ELO
+
+system.
+
+Select server: The ELO Administration Console attempts to find possible LDAP servers
+
+automatically. If this field is blank, no server will be found in the domain. This may be the
+
+case with a VPN connection, for instance.
+
+Server: Enter the server for the LDAP connection here. You can also enter the IP address, port,
+
+or protocol here.
+
+BNF: server ::=[ldap|ldaps]://[servername|IP address]:port
+
+• 
+
+• 
+
+77 Configuration and administration
+
+
+
+Please note
+
+Use an encrypted connection, in this case LDAP via SSL (LDAPS).
+
+Domain user and password: The authentication data consists of a name and password.
+
+Ignore certificate validation: The certificate validation can be ignored if needed.
+
+Base DN and LDAP organizational unit: These entries are used to select the correct branch of
+
+the LDAP directory.
+
+Filter templates and filter text: Some LDAP filter expressions are already provided in the list
+
+and applied to the filter text so that they can be edited.
+
+Mapping script: This setting allows you to edit the data as JavaScript code.
+
+For more information, see the next section The mapping script.
+
+Reset mapping: Deletes the text from the mapping script field.
+
+Update existing users or groups: If the name can be resolved to an existing entry, this entry
+
+is only processed again if this setting is enabled.
+
+Please note
+
+LDAP groups are only read and used when users log on.
+
+Create groups in ELO that exist in LDAP: Creates groups that do not yet exist in ELO.
+
+Start search: Performs a search and shows the results.
+
+Results list: Shows the list of the entries that will be imported. All valid entries are also
+
+selected. If invalid data is detected during the check, they will not be selected, and a note
+
+about the problem is shown in a tooltip.
+
+The mapping script 
+
+Default LDAP attributes are automatically mapped to ELO attributes. To allow more flexible
+
+customization, JavaScript code can be entered in the input field. This is embedded in a code frame
+
+and is performed on every data set in the LDAP search.
+
+The ELO Indexserver has a data structure for the users and groups: the UserInfo object. This is
+
+described in detail in the ELO Indexserver technical documentation. It can be accessed in the
+
+mapping script using the variable name elo.
+
+Default mapping 
+
+elo.type 
+
+Based on the LDAP ObjectClass=person
+
+If the class exists, a user is created; otherwise a group is created.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+◦ 
+
+◦ 
+
+• 
+
+78 Configuration and administration
+
+
+
+elo.name 
+
+Based on the LDAP attributes displayName, cn, sAMAccountName, and distinguishedName.
+
+The first LDAP attribute found is used as the name.
+
+elo.userProps[UserInfoC.PROP_NAME_OS] 
+
+The value of the sAMAccountName LDAP attribute is applied.
+
+elo.userProps[UserInfoC.PROP_NAME_EMAIL] 
+
+The value of the LDAP attribute mail is applied.
+
+elo.superiorId 
+
+The LDAP attribute manager is evaluated.
+
+If the manager attribute refers to an existing ELO user, the ID of this user is applied as the
+
+supervisor.
+
+elo.id 
+
+If the name refers to a valid ELO user, this ID is applied as the user ID. Otherwise -1
+
+creates a new user.
+
+JavaScript code frame 
+
+At the debug log level, the generated script is output to the log file.
+
+If the ELO Administration Console is started using Java 8, the Rhino compatibility mode is included.
+
+◦ 
+
+◦ 
+
+• 
+
+◦ 
+
+• 
+
+◦ 
+
+• 
+
+◦ 
+
+• 
+
+• 
+
+◦ 
+
+// rhino compatible modus on java 8 (nashorn)
+
+load('nashorn:mozilla_compat.js')
+
+// editable basic javascript mapping function Version 1.0
+
+importPackage(Packages.de.elo.ix.client)
+
+importClass(Packages.de.elo.ldap.LdapImportException)
+
+function extractDN(v){
+
+try{
+
+var vv=v.substring(3,v.indexOf('=', 3))
+
+return vv.substring(0,vv.lastIndexOf(','))
+
+}
+
+catch(e){}
+
+}
+
+function map(ixc, elo, ldap, userNames){
+
+%% The text from the interface for the mapping script field is output here. %%
+
+}
+
+public interface LdapImportMapping {
+
+  public void map( IXConnection ixc, UserInfo userInfo,
+
+                   Attributes attributes,
+
+                   Map<String, UserName> userNames );
+
+}
+
+de.elo.ix.client. de.elo.ix.client.
+
+javax.naming.directory.
+
+de.elo.ix.client.
+
+79 Configuration and administration
+
+
+
+The JavaScript frame is accessed via the LdapImportMapping Java interface. In the map, the ELO
+
+name in lowercase is used as the key to the UserName object.
+
+Examples 
+
+A data set can be excluded by setting elo.id=0.
+
+Since JavaScript code can be used, it is also possible to view outputs for testing using the
+
+error reporting mechanism.
+
+or also
+
+A short example shows how to exclude items while checking the mail attribute and set the
+
+display name for the remaining users.
+
+• 
+
+if (elo.name.startsWith('_')){
+
+elo.id=0
+
+}
+
+• 
+
+throw ldap.get('mail').getClass()
+
+throw userNames['administrator'].id
+
+• 
+
+var emailRegex = /^[\w._-]+[+]?[\w._-]+@[\w.-]+\.[a-zA-Z]{2,6}$/
+
+var lMail = ldap.get('mail')
+
+if (lMail){
+
+    lMail = lMail.get()
+
+    if(emailRegex.test(lMail)){
+
+        elo.name += ' ('+lMail.split('@').pop()+')'
+
+        // valid e-mail -> customize the display name.
+
+    }
+
+}else{
+
+    elo.id=0
+
+    // invalid e-mail -> exclude
+
+}
+
+80 Configuration and administration
+
+
+
+Enable LDAP authentication 
+
+LDAP authentication is disabled/LDAP authentication is enabled: Use this toggle to enable or
+
+disable LDAP authentication.
+
+Create new users automatically: If the option Create new users automatically is enabled, a new
+
+user is automatically created in ELO after logon.
+
+Information
+
+Initial authentication, i.e. the user does not exist in ELO yet, must take place with one of the
+
+following values:
+
+sAMAccountName, userPrincipalName, or mail for Active Directory
+
+UID or mail for OpenLDAP
+
+Assign group: If the Assign group option is enabled, users are automatically assigned to the
+
+corresponding LDAP groups. For this to work, the groups must be created in ELO and the names
+
+must match the names of the groups in LDAP.
+
+Please note
+
+LDAP groups are only read and used when users log on.
+
+• 
+
+• 
+
+81 Configuration and administration
+
+
+
+ELO user for internal authentication: In this field, you can specify which ELO users/groups should not
+
+authenticate with LDAP. These users/groups can log on to ELO directly.
+
+82 Configuration and administration
+
+
+	Table of contents
+	User
+	Overview
+	Delete user
+
+	Create user
+	Configuration
+	Define basic settings
+	User information
+	Properties
+	Information
+
+	Define group membership
+	Assign user rights
+
+
+	Groups
+	Overview
+	Delete group
+
+	Create group
+	Configuration
+	Define basic settings
+	Group information
+	Properties
+	Information
+	Option groups
+
+	Define group membership
+	Assign user rights
+
+
+	Other configurations
+	Introduction
+	Password rules
+	Block access
+	Organizational units
+
+	Rights in ELO
+	Introduction
+	User rights
+	User manager rights
+	Main administrator (FLAG_ADMIN)
+	Edit user data (FLAG_SUBADMIN)
+	Change password (FLAG_CHANGEPW)
+	SAP administrator (FLAG_SAPADMIN)
+	DMS Desktop user, no workflows (FLAG2_IS_DMS_DESKTOP_USER)
+	ELO Desktop Client Plus user (FLAG2_DESKTOP_CLIENT_PLUS)
+	ELOxc Client user, e-mails only (FLAG2_LIMITED_CLIENT)
+
+	Folder/document permissions
+	Edit folders (FLAG_EDITSTRUCTURE)
+	Edit documents (FLAG_EDITDOCS)
+	Edit permissions (FLAG_EDITACL)
+	View all entries, ignore permissions (FLAG_IGNOREACL)
+	Import permission (FLAG_IMPORT)
+	Export permission (FLAG_EXPORT)
+
+	Folder/document options
+	Change metadata form after filing (FLAG_CHANGEMASK)
+	Edit keyword lists (FLAG_EDITSWL)
+	Edit retention period (FLAG_EDITDUEDATE)
+	Change document status (FLAG_CHANGEREV)
+	Change document paths (FLAG_CHANGEPATH)
+	Author for approval documents (FLAG_AUTHOR)
+	Show "Additional information" tab (FLAG2_SHOW_EXTRA_INFO)
+
+	Deletion rights
+	Delete folders (FLAG_DELSTRUC)
+	Delete documents (FLAG_DELDOC)
+	Delete non-modifiable documents (FLAG_DELREADONLY)
+	Delete versions (FLAG_DELVERSION)
+
+	Workflow rights
+	Manage workflows (FLAG_EDITWF)
+	Start workflows (FLAG_STARTWF)
+	Extend workflow rights (FLAG2_EXTEND_WORKFLOW_RIGHTS)
+	View workflows for all users (FLAG2_WF_CONTROLLER)
+
+	Rights for system settings
+	Edit master data (FLAG_EDITCONFIG)
+	Edit scan profiles (FLAG_EDITSCAN)
+	Use debugger (FLAG_EDITSCRIPT)
+	Edit metadata forms and fields (FLAG_EDITMASK)
+	Assign replication sets (FLAG_EDITREPL)
+
+
+	Inheriting rights
+	Assign permissions in ELO Spaces
+	Teamspace
+	Workspace
+
+	Configuration
+	Necessary rights for the ELO Administration Console
+	System settings
+	Maintenance
+	Server modules
+	System information
+	Others
+
+	Document encryption
+
+
+	Permissions in ELO
+	Introduction
+	Documents
+	Folders
+	Margin notes
+	General margin note
+	Personal margin note
+	Permanent margin note
+
+	Annotations
+	Stamps
+	'Stamps' tool
+	Applied stamp
+
+	Metadata forms
+	Fields
+
+	Workflow templates
+	Workflows
+	ELO Spaces
+	Other permissions
+	Parent rights
+	Owner Owner rights
+	Everyone
+
+
+	Concept for assigning rights and permissions
+	Introduction
+	Assigning user rights
+	ELO view users
+	ELO standard users
+	ELO power users
+	ELO area administrators
+	ELO administrators
+
+	Groups and permissions concept
+	Assigning rights via groups
+	AND groups
+	Assigning permissions via metadata forms
+
+
+	LDAP
+	Introduction
+	LDAP interface configuration
+	Connection settings
+	User import
+	Attribute assignment
+
+	LDAP import
+	The mapping script
+	Default mapping
+
+	JavaScript code frame
+	Examples
+
+	Enable LDAP authentication
+
+

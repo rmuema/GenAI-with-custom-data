@@ -1,0 +1,1673 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO Teamroom | ELO Teamroom
+
+
+ELO Teamroom
+
+ELO Teamroom
+
+
+
+3
+
+6
+
+10
+
+15
+
+27
+
+33
+
+35
+
+39
+
+43
+
+Table of contents
+
+Basics 
+
+Program interface 
+
+Navigation and use 
+
+Important components 
+
+Important actions in detail 
+
+User menu [your name] 
+
+'Documents' tab 
+
+'Members' tab 
+
+'Teamroom' tab 
+
+2 ELO Teamroom
+
+
+
+Basics 
+
+What is ELO Teamroom? 
+
+ELO Teamroom acts as a platform for collaboration across teams. It enables multiple parties to
+
+collaborate even if not all members have access to the initiator's main repository. This could be
+
+different companies, such as associations in the construction sector, but it can also be relevant
+
+within the company if different departments have their own repositories. A lean ELO Teamroom
+
+Client that runs in a web browser also provides all users with basic functions such as searching,
+
+filing, and showing entries.
+
+Target audience 
+
+This manual is addressed to ELO Teamroom users. Separate documentation is available for
+
+administrators.
+
+The scope of functions presented in this documentation may differ greatly from those in your
+
+client.
+
+If you do not find functions described in this documentation in your client, you do not have
+
+permission to perform the action.
+
+Getting started 
+
+If you have no previous experience with ELO Teamroom or any other ELO client, the following
+
+chapters are a good place to start:
+
+Important actions in detail: This chapter introduces you to some important features with
+
+detailed step-by-step instructions and explanations. With the help of these instructions, you
+
+will learn basic actions in the ELO client, which can be applied to most other functions.
+
+Program interface, Navigation and use, Important components: These chapters explain the
+
+interface and how to use ELO in general. They cover individual topics at a more advanced
+
+level.
+
+Structure of the documentation 
+
+The goal of this documentation is to explain the functions of ELO Teamroom.
+
+Basics
+
+The first chapter contains general information about using the documentation and an overview of
+
+the chapter contents.
+
+Program interface
+
+This chapter contains an introduction to the ELO Teamroom program interface.
+
+Navigation and use
+
+• 
+
+• 
+
+3 ELO Teamroom
+
+
+
+This chapter provides information about the general use of ELO Teamroom.
+
+Important components
+
+This chapter contains a description of important components of ELO Teamroom.
+
+Important actions in detail
+
+This chapter provides descriptions of some important actions with instructions and explanations.
+
+Functions
+
+The remaining chapters cover the functions that are not described in the Important actions in detail
+
+chapter.
+
+Which chapter(s) should I read if I... 
+
+want to create a teamroom? 
+
+New teamroom
+
+want to join a teamroom? 
+
+Join teamroom
+
+want to add members? 
+
+Invite external users
+
+Add user
+
+want to create entries? 
+
+New entry
+
+Insert file
+
+Drag-and-drop
+
+want to update entries? 
+
+Load new version
+
+Drag-and-drop
+
+Edit in Microsoft Office
+
+want to structure the teamroom? 
+
+Move
+
+Delete
+
+Start ELO Teamroom 
+
+To start ELO Teamroom, enter the URL in your browser.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+4 ELO Teamroom
+
+
+
+Enter your logon credentials. If you have been given a temporary password to log on with, change
+
+it during the first session using the Change password function.
+
+Information
+
+If you have forgotten your password, contact your system administrator.
+
+If you have been invited to join an ELO Teamroom, you can set your own password. To learn how to
+
+join a teamroom, refer to the Join a teamroom chapter.
+
+5 ELO Teamroom
+
+
+
+Program interface 
+
+This chapter contains basic information on the ELO Teamroom interface. It is meant to help you find
+
+your way around the client.
+
+The ELO Teamroom program interface is divided into the following areas:
+
+1 'My ELO' button: This button takes you to the My ELO home screen.
+
+2 Ribbon: On the ribbon, you will find the functions available to you in the teamroom. The ribbon
+
+with the functions only appears in the respective teamroom.
+
+3 User menu [your name]: In the user menu, you will find various functions mainly for your
+
+personal settings.
+
+4 News: This area helps you to keep track of developments in ELO.
+
+5 Tile navigation: The tile navigation takes you to ELO Teamroom.
+
+6 ELO Teamroom
+
+
+
+'My ELO' work area 
+
+The My ELO work area is the home screen. The tiles here provide access to the teamrooms you
+
+created or are participating in.
+
+'My ELO' button 
+
+Click the My ELO button to open the 'My ELO' work area.
+
+Here, you will find your news and the tile navigation.
+
+Ribbon 
+
+You can launch functions from the ribbon.
+
+The ribbon provides access to most functions in ELO.
+
+Information
+
+The ribbon is only available when you are in a teamroom and not on the My ELO screen.
+
+7 ELO Teamroom
+
+
+
+Tabs: The ribbon is organized into tabs. The tabs are only shown if the tab functions can be used
+
+(contextual tabs).
+
+The contextual tabs are:
+
+Documents
+
+Members
+
+Functions: The functions are arranged logically by relation. The most important functions are
+
+pinned to the ribbon. If a function is grayed out, you cannot use it at your current position in ELO.
+
+Some functions only appear after you have selected an entry.
+
+Search teamroom: You can search for entries in the teamroom using the search field. If you click an
+
+entry in the list of results, it is shown in the preview pane.
+
+User menu [your name] 
+
+User menu [your name]
+
+Clicking the User menu [your name] button opens a drop-down menu. This menu takes you to
+
+areas where you can configure settings for your user account. You can also log off at the end of your
+
+session here.
+
+You can find explanations on each of these functions in the chapter User menu [your name].
+
+News 
+
+The News area helps you keep track of changes in ELO.
+
+You will see feed posts from different entries here. Some examples include feeds you have
+
+subscribed to or in which you have been mentioned by another user. You will also see a hashtag
+
+cloud.
+
+Information
+
+Most functions in the My ELO work area are feed functions. For more information, refer to
+
+the chapter Feed.
+
+• 
+
+• 
+
+8 ELO Teamroom
+
+
+
+Tile navigation 
+
+The tile navigation contains all the available teamrooms. Use the tiles to go to the respective
+
+teamroom and access the contents.
+
+9 ELO Teamroom
+
+
+
+Navigation and use 
+
+This chapter provides information about the general use of ELO Teamroom. You can find information
+
+on specific actions in the chapters about the actions or the tabs.
+
+How do I use a function? 
+
+Contextual functions: Functions can only be selected if they can be used in the current context.
+
+Otherwise, they are grayed out or are not displayed at all. Most functions are contextual.
+
+To use them, you must establish a reference to a folder or document by selecting it. Once you have
+
+selected the entry, click the function. In most cases, this opens a dialog box or another control
+
+element with instructions on how to proceed.
+
+Non-contextual function: Some functions are not contextual and can be used at any time. These
+
+functions are not related to selected entries. Refresh is an example of a non-contextual function.
+
+How do I select multiple entries? 
+
+You can select multiple folders or documents at once to execute a function on all selected entries.
+
+You can only select multiple entries in the viewer pane.
+
+Method
+
+Select entries by clicking on the light gray check mark to the left of the icon of the entry.
+
+On the ribbon, click the function you want to use, e.g. Move.
+
+Drag-and-drop 
+
+You can also execute some functions on the ribbon using a drag-and-drop action.
+
+Insert file 
+
+Go to the teamroom that you want to upload a file to.
+
+1. 
+
+2. 
+
+1. 
+
+10 ELO Teamroom
+
+
+
+Click the document in your file system that you want to file and drag it to the client.
+
+The Insert file dialog box opens.
+
+Select a template.
+
+2. 
+
+3. 
+
+11 ELO Teamroom
+
+
+
+Change the name if required. The name of the document is automatically used as the short
+
+name.
+
+Optional: Enter a comment in the Comment field.
+
+Click Save.
+
+Result
+
+The file was uploaded to the teamroom.
+
+Load new version 
+
+Click the document in ELO Teamroom you want to upload a new version of.
+
+4. 
+
+5. 
+
+1. 
+
+12 ELO Teamroom
+
+
+
+Click the document in your file system that you want to file and drag it to the client.
+
+The Load new version dialog box appears.
+
+Optional: Enter a comment in the Comment field.
+
+Click Save.
+
+Result
+
+2. 
+
+3. 
+
+13 ELO Teamroom
+
+
+
+The new version was stored in your teamroom.
+
+14 ELO Teamroom
+
+
+
+Important components 
+
+This chapter introduces important ELO Teamroom components. It contains information about the
+
+viewer pane, forms, and the ELO feed.
+
+Information
+
+You can only work with gen. 1 metadata in ELO Teamroom.
+
+Viewer pane 
+
+In the viewer pane, you will see the contents of the most recently selected entry (folder or
+
+document).
+
+Each entry is made up of three elements:
+
+Content
+
+Form
+
+Feed
+
+Content and form are shown on the left, while the feed is always located on the right.
+
+You can switch between the content view and the form view using the tabs.
+
+Form 
+
+You can display a form for the selected entry (folder or document). To do so, use the button to the
+
+right above the feed.
+
+• 
+
+• 
+
+• 
+
+15 ELO Teamroom
+
+
+
+You can change the short name of the entry or enter additional information here.
+
+Save your entries with the Save button.
+
+Feed 
+
+You will find automatically generated information on the entry in the feed and can discuss the entry
+
+with other users here.
+
+When you subscribe to a feed for an entry, any new posts in the feed are shown on your My ELO
+
+home screen.
+
+If you tag users with @, the post will also appear in the feed on their My ELO home screen even if
+
+they have not subscribed to the feed.
+
+The following message types are shown in the feed:
+
+• 
+
+16 ELO Teamroom
+
+
+
+Posts (written by a user)
+
+Comments (on a post)
+
+Polls
+
+Events (e.g. when a new version of a document is filed or changes are made to the working
+
+version)
+
+Create post 
+
+Use the Create a post field to comment on the respective entry in a feed. Click Create to post the
+
+comment.
+
+Alternative: Press CTRL+ENTER to submit a post.
+
+The text in posts, polls, and comments can be formatted as follows:
+
+Bold: To format a part of the text in bold type, place an asterisk (*) at the beginning and end of the
+
+text section. I would like to emphasize this *again*. will appear in the ELO feed as follows: "I
+
+would like to emphasize this again."
+
+Information
+
+If you want the asterisk to appear as a character in the text, enter a backslash before the
+
+asterisk.
+
+Create poll 
+
+If you click the Create poll button, fields for creating a poll with multiple answer options appear.
+
+• 
+
+• 
+
+• 
+
+17 ELO Teamroom
+
+
+
+Poll duration: With this field, you can specify how long you want the poll to remain open. You can
+
+select a value from the drop-down menu or manually enter how many days you want the poll to
+
+remain open. For example, if you enter 4, the poll will remain open for four days.
+
+Show additional settings: Clicking this button opens an area with additional settings. You can define
+
+whether you want to offer the user multiple options to select from, whether you want the member's
+
+user name to be visible in the poll result, and whether you want members to be able to add further
+
+answer options.
+
+Click Create to start the poll.
+
+Click the pencil icon to edit a poll that has already started. You can edit the poll as long as no one
+
+has taken part yet.
+
+Click the X icon to delete a poll that has already started. You cannot undo this.
+
+Mention 
+
+18 ELO Teamroom
+
+
+
+Use the Mention button (@ symbol) to address a feed post to another ELO user or group. The users
+
+mentioned then see the corresponding feed post in the My ELO work area.
+
+Alternative: As soon as you type an @ character, ELO automatically recognizes that you want to
+
+insert a mention.
+
+Reference 
+
+Use the Reference button (document icon with arrow) to link a feed post with an entry in ELO
+
+Teamroom. Click the reference to go straight to the respective entry.
+
+You can select the entry that you want to refer to in the Reference dialog box.
+
+Alternative: As soon as you type a > character, ELO automatically recognizes that you want to
+
+insert a reference.
+
+Alternative: Select the entry you want to reference and then press CTRL+C. Click the feed post you
+
+want to insert the reference into and press CTRL+V. This requires the current ELOwf version.
+
+Hashtag 
+
+Use the Hashtag button (# symbol) to add hashtags to a post. You can subscribe to hashtags. You
+
+can also filter the My ELO work area by hashtags.
+
+Alternative: As soon as you type a # character, ELO automatically recognizes that you want to
+
+insert a hashtag. The hashtag drop-down menu opens.
+
+19 ELO Teamroom
+
+
+
+Subscribe to hashtag 
+
+Method
+
+Click a hashtag to subscribe to it.
+
+The discussion page for the selected hashtag appears.
+
+Click the Subscribe button.
+
+Result
+
+You have subscribed to the hashtag. All posts that are marked with the corresponding hashtag
+
+appear in the My ELO work area.
+
+Visibility 
+
+Use the Visibility button (eye icon) to restrict who can read the post.
+
+Search feed 
+
+1. 
+
+2. 
+
+20 ELO Teamroom
+
+
+
+Use the Search feed button (magnifying glass icon) to search within the currently selected feed.
+
+When the search term is found, the feed is narrowed down to the corresponding posts. The matches
+
+are highlighted. Start the search by clicking Search. Click Reset search to exit the results list and
+
+return to the full feed.
+
+Subscribe to feed 
+
+Use the Subscribe button (antenna icon) to subscribe to the feed. All feeds you have subscribed to
+
+are listed in the My ELO work area. Once a post is added to one of these feeds, you also see the
+
+post in the My ELO work area.
+
+Automatically subscribe to feed 
+
+ELO provides you with the option to automatically subscribe to feeds.
+
+You can enable the automatic feed subscription option under My ELO > Settings.
+
+Show filter options 
+
+21 ELO Teamroom
+
+
+
+The Show filter options button opens a window with filters for the corresponding feed. You can use
+
+these filters to restrict the feed to posts that match the respective filter. To close the selection, click
+
+the button again.
+
+You can also see when filters are active, even when filter options are hidden.
+
+Enter comment 
+
+You can enter comments on any post. The procedure for adding a comment is almost identical to
+
+creating a post. However, the visibility settings for a comment are bound to the visibility settings
+
+for the commented post, which is why you are unable to change the visibility settings for
+
+comments.
+
+Edit post 
+
+Click the Edit button (pencil icon) to edit posts and comments.
+
+22 ELO Teamroom
+
+
+
+Feed history 
+
+Edited entries are marked as edited below the entry. To open the editing history, click edited.
+
+Settings 
+
+Click Settings to change settings related to the feed.
+
+Show current hashtags 
+
+23 ELO Teamroom
+
+
+
+If the preview pane in My ELO is not large enough to show hashtag information, the Show current
+
+hashtags button will appear.
+
+If you click the Show current hashtags button, hashtag information is displayed above the
+
+subscribed feed.
+
+Hashtag cloud 
+
+Hashtags that have been used in recent weeks are shown in a hashtag cloud. If you click a hashtag,
+
+you will see all feed items that contain that hashtag, provided you have the required permissions.
+
+Show filter options 
+
+If the preview pane in My ELO is not large enough to show the filters, the Show filter options button
+
+will appear.
+
+Click Show filter options to display the filters above the subscribed feed.
+
+To hide the filters, click Hide filter options.
+
+Filters in 'My ELO' 
+
+Various filter categories are available. The majority is self-explanatory.
+
+Post type The Post type is filter option lets you filter the My ELO area by the type of post. There are
+
+two basic types:
+
+• 
+
+24 ELO Teamroom
+
+
+
+Automatically created posts (e.g. working version changed)
+
+Posts created by users (e.g. user posts)
+
+Apply filters 
+
+To apply a filter, click the corresponding filter in the list.
+
+Negate filters 
+
+In the default settings, all filters are applied in is mode.
+
+The mode can be switched to is not in all categories apart from New since. Click the word is next to
+
+the name of the filter category.
+
+Reset filters 
+
+To reset all filters, click the Reset filters button (arrow icon).
+
+Mark as important 
+
+The Mark as important button (flag icon) lets you pin a post to the My ELO work area. The post
+
+remains in My ELO even if it is more than one month old. You can recognize posts that are marked
+
+as important by the red flag icon.
+
+• 
+
+25 ELO Teamroom
+
+
+
+Delete marker 
+
+Delete the marker you added to a post with the Delete marker button (red flag icon). As soon as the
+
+post is more than a month old, it will no longer be displayed in the My ELO work area.
+
+Hide post 
+
+You can hide a post in the My ELO work area by clicking the Remove from My ELO button.
+
+Information
+
+The Remove from my ELO function only hides posts in the My ELO area. The entries are not
+
+deleted.
+
+After you have hidden a post, you can restore it by clicking the Undo button.
+
+Information
+
+With the default settings, the Undo button disappears after five seconds. You can edit this
+
+option under Number of seconds to display the "Undo" button before it disappears. This
+
+option is in My ELO > Settings > My ELO settings.
+
+26 ELO Teamroom
+
+
+
+Important actions in detail 
+
+New teamroom 
+
+Before you can use a teamroom, you need to create one first.
+
+Please note
+
+You need corresponding rights to create a teamroom. A teamroom can only be created from
+
+a main repository.
+
+Method
+
+Open the ELO Java Client.
+
+Click the New teamroom tile.
+
+Alternative: On the ribbon, click New > Self-service > New teamroom.
+
+1. 
+
+2. 
+
+3. 
+
+27 ELO Teamroom
+
+
+
+In the New teamroom dialog box, enter a name for the teamroom.
+
+Optional: Enter a description.
+
+Click OK.
+
+Result
+
+The workflow for approving the teamroom you created has been triggered.
+
+As soon as the teamroom is approved by the person authorized to do so in your company, you can
+
+access the teamroom.
+
+Outlook
+
+You can add entries to the teamroom. The ELO Teamroom Client offers different functions for this.
+
+You can add entries from the main repository to the teamroom.
+
+Join teamroom 
+
+You can join a teamroom as a guest or member. You will have different rights in the teamroom
+
+depending on your role.
+
+If you have been invited to join a teamroom, you will receive an e-mail.
+
+This e-mail contains your logon credentials. The link takes you to the dialog box for logging on to
+
+ELO Teamroom.
+
+Method
+
+Open the e-mail in your e-mail program.
+
+Click the Log on to teamroom link.
+
+The dialog box for logging on to ELO Teamroom opens in your browser.
+
+Enter the logon credentials provided in the e-mail.
+
+4. 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+28 ELO Teamroom
+
+
+
+Enter a password.
+
+Click Log on.
+
+Result
+
+You have joined an ELO Teamroom.
+
+New entry 
+
+You can add an entry to a teamroom. There are several templates in ELO Teamroom for this
+
+purpose.
+
+Method
+
+Go to the teamroom that you want to create a new entry in.
+
+One the ribbon, click the New entry function.
+
+The following templates are available in the New entry dialog box:
+
+New customer
+
+New folder
+
+Memo
+
+Word template
+
+Select a template, e.g. Word template.
+
+5. 
+
+1. 
+
+2. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+3. 
+
+29 ELO Teamroom
+
+
+
+In the Enter name dialog box, enter a name in the field provided.
+
+Click Save.
+
+Confirm that the website is allowed to open the link.
+
+Click Open link.
+
+Result
+
+The entry is created in the teamroom. The Word file opens and you can start editing the document.
+
+Outlook
+
+You do not have to check the document back in. Once you save the Word document, the changes
+
+are saved in ELO.
+
+Insert file 
+
+You can upload a from your file system to a teamroom. There are several templates in ELO
+
+Teamroom for this purpose.
+
+Alternative
+
+Drag-and-drop
+
+Method
+
+Go to the teamroom that you want to upload a file to.
+
+On the ribbon, click the Insert file function.
+
+4. 
+
+5. 
+
+6. 
+
+7. 
+
+1. 
+
+2. 
+
+30 ELO Teamroom
+
+
+
+The following templates are available in the Insert file dialog box:
+
+Photo
+
+Text document
+
+Select a template, e.g. Text documents.
+
+Click the Select file button.
+
+Alternative: Drag the file from your file system and drop it on the Insert file: Text documents
+
+dialog box.
+
+◦
+
+◦ 
+
+3. 
+
+4. 
+
+5. 
+
+31 ELO Teamroom
+
+
+
+Select the file from the file system.
+
+Change the name if required. The name of the selected document is automatically used as
+
+the short name.
+
+Optional: Enter a comment in the Comment field.
+
+Click Save.
+
+Result
+
+The file was uploaded to the teamroom.
+
+6. 
+
+7. 
+
+32 ELO Teamroom
+
+
+
+User menu [your name] 
+
+User menu [your name]
+
+Change password 
+
+Available in: User menu [your name] > Change password
+
+You can change your password as often as you want.
+
+To change your password, you need your old password.
+
+If your new password is rejected, it does not meet the minimum password requirements at your
+
+company.
+
+If you have forgotten your password, notify your system administrator.
+
+About 
+
+Available in: User menu [your name] > About
+
+This is where you will find information about the version of your program. It can be useful to know
+
+the exact version when errors occur in your program.
+
+Edit profile 
+
+Available in: User menu [your name] > Edit profile
+
+33 ELO Teamroom
+
+
+
+You can enter information about your position and contact details in your profile.
+
+You can also upload a profile picture.
+
+Information
+
+Use PNG, JPG, or GIF image files with a minimum of 280 x 280 pixels. If ELO is unable to
+
+process the format or the size of the selected image, a message will appear at the bottom
+
+of the dialog box.
+
+Your profile is visible to other users when they click your name or profile picture in the feed.
+
+Log off 
+
+Available in: User menu [your name] > Log off
+
+This where you log off from the client.
+
+34 ELO Teamroom
+
+
+
+'Documents' tab 
+
+Refresh 
+
+The Refresh function refreshes your view. The data is read from the repository again.
+
+New entry 
+
+The New entry function creates a new entry (folder or document) in the teamroom.
+
+For information on how to use this function, refer to the chapter New entry.
+
+Insert file 
+
+The Insert file function allows you to upload a file from your file system to a teamroom.
+
+For information on how to use this function, refer to the chapter Insert file.
+
+Save as 
+
+With the Save as function, you can save the selected document to your file system. A window for
+
+selecting the location in the file system opens.
+
+Load new version 
+
+The Load new version function loads a document from your file system and stores it as a new
+
+version of the selected document in the teamroom.
+
+Alternative
+
+Drag-and-drop
+
+Method
+
+Select the document you want to upload a new version of.
+
+On the ribbon, click the function Load new version.
+
+1. 
+
+2. 
+
+35 ELO Teamroom
+
+
+
+The Load new version dialog box appears.
+
+Click the Select file button.
+
+Alternative: Drag the file from your file system and drop it on the Load new version dialog
+
+box.
+
+Select a file from the file system.
+
+Click Save.
+
+Result
+
+The version you filed is the new working version.
+
+Edit in Microsoft Office 
+
+This function allows you to edit Microsoft Office documents.
+
+Method
+
+Select the document you want to edit.
+
+On the ribbon, click the function Edit in Microsoft Office.
+
+Information
+
+Microsoft Office 2010 with Service Pack 1 is required at minimum.
+
+Confirm that the website is allowed to open the link.
+
+Click Open link.
+
+3. 
+
+4. 
+
+5. 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+36 ELO Teamroom
+
+
+
+Result
+
+The Microsoft Office document opens.
+
+Outlook
+
+You do not have to check the document back in. Once you save the Microsoft Office document, the
+
+changes are saved in ELO.
+
+Move 
+
+Use this function to move folders or documents within the teamroom.
+
+Method
+
+Select the entry by clicking on the light gray check mark to the left of the icon of the entry
+
+you want to move.
+
+On the ribbon, click Documents > Move.
+
+The Clipboard dialog box appears.
+
+To select a target folder, click the corresponding folder in the teamroom.
+
+If you selected the wrong folder, you can correct this by clicking the right folder. The other
+
+folder is selected.
+
+In the Clipboard dialog box, click Paste.
+
+Result
+
+You will now find the entry at the selected new position.
+
+Delete entry 
+
+The Delete entry function allows you to delete folders and documents.
+
+Whether you can delete folders or documents depends on your permissions.
+
+Important
+
+This function only assigns entries a deletion marker and does not delete them permanently.
+
+It is not possible to delete an entry permanently in ELO Teamroom. Deleted entries have to
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+37 ELO Teamroom
+
+
+
+be removed from ELO permanently by an administrator. They can be restored until the point
+
+at which they are permanently deleted.
+
+Method
+
+Select the entry by clicking on the light gray check mark to the left of the icon of the entry
+
+you want to delete.
+
+On the ribbon, click Documents > Delete entry.
+
+Result
+
+The entry is no longer shown in ELO. It is assigned a deletion marker until the administrator finally
+
+deletes it.
+
+1. 
+
+2. 
+
+38 ELO Teamroom
+
+
+
+'Members' tab 
+
+On the Members tab, you can invite new members or guests to join the teamroom or remove them
+
+again.
+
+The users have different permissions based on their role. The users can be assigned the following
+
+permissions:
+
+View (R): Users have read access to the entry. They cannot modify the entry.
+
+Change metadata (W): Users can edit the metadata of the entry.
+
+Delete (D): Users can delete the entry.
+
+Edit (E) (documents only): Users can edit the selected entry. This means that they can change
+
+the working version and upload a new version.
+
+Edit list (L) (folders only): Users can change the contents of the folder. For example, you can
+
+create documents in this folder or move or remove documents from the folder.
+
+Change permissions (P): Users can change the permissions for the selected folder.
+
+In ELO Teamroom, the permissions are assigned as follows:
+
+Moderator (R, W, E, D, L, P)
+
+Member (R, W, E, L)
+
+Guest (R)
+
+Invite external users 
+
+The function Invite external users allows you to invite people without access to your ELO system to
+
+join a teamroom.
+
+Method
+
+In the teamroom, navigate to the Members tab.
+
+Click on the function Invite external users.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+39 ELO Teamroom
+
+
+
+In the Invite external users dialog box, enter the e-mail address and user name of the person
+
+you want to invite.
+
+Select a role and associated rights for the new user: Moderator, Member or Guest.
+
+Click Invite user.
+
+Result
+
+The person you are inviting will receive an e-mail containing a link to the teamroom and their user
+
+name.
+
+3. 
+
+4. 
+
+5. 
+
+40 ELO Teamroom
+
+
+
+Search for user 
+
+You can search for specific users in the search bar.
+
+Click on the image of the respective user to see information about them.
+
+Add user 
+
+A moderator can invite users without access to the ELO system to join the teamroom.
+
+The buttons Add moderator, Add member, and Add guest are available for this purpose.
+
+Method
+
+Click one of the buttons, e.g. Add guest.1. 
+
+41 ELO Teamroom
+
+
+
+In the Add guest dialog box, enter the name of the person you want to add in the top field.
+
+Select the person. You can select multiple people.
+
+Click OK to confirm your selection.
+
+Result
+
+The person you are inviting will receive an e-mail containing a link to the teamroom.
+
+2. 
+
+3. 
+
+4. 
+
+42 ELO Teamroom
+
+
+
+'Teamroom' tab 
+
+Information
+
+This tab is only available in the main repository.
+
+Close teamroom 
+
+When you no longer need the teamroom, you can close it again.
+
+Method
+
+In the ELO repository, click on the teamroom that you want to close.
+
+On the ribbon, click Teamroom > Close teamroom.
+
+In the Close teamroom dialog box, specify when you want the teamroom to be closed.
+
+1. 
+
+2. 
+
+3. 
+
+43 ELO Teamroom
+
+
+
+You can enter a date and an exact time.
+
+Information
+
+If you specify the current time, the teamroom will remain open for another two hours.
+
+This enables you to notify users that the teamroom will be closing so that they can
+
+save their data.
+
+Click OK.
+
+Result
+
+The teamroom closes at the specified time.
+
+The data for a closed teamroom still exists in both repositories but it is no longer synchronized.
+
+Please note
+
+You can no longer view the data using the ELO Teamroom Client.
+
+Delete teamroom 
+
+If you have closed a teamroom, you can delete it from the teamroom repository.
+
+Important
+
+The Delete teamroom function deletes the teamroom immediately. The data is removed
+
+from the teamroom repository. The data is only retained in the main repository.
+
+Method
+
+Select the teamroom that you want to delete from the repository.
+
+On the ribbon, click Teamroom > Delete teamroom.
+
+4. 
+
+1. 
+
+2. 
+
+44 ELO Teamroom
+
+
+
+Click OK.
+
+Result
+
+The teamroom is deleted.
+
+3. 
+
+45 ELO Teamroom
+
+
+	Table of contents
+	Basics
+	What is ELO Teamroom?
+	Target audience
+	Getting started
+	Structure of the documentation
+	Which chapter(s) should I read if I...
+	want to create a teamroom?
+	want to join a teamroom?
+	want to add members?
+	want to create entries?
+	want to update entries?
+	want to structure the teamroom?
+
+	Start ELO Teamroom
+
+	Program interface
+	'My ELO' work area
+	'My ELO' button
+	Ribbon
+	User menu [your name]
+	News
+	Tile navigation
+
+	Navigation and use
+	How do I use a function?
+	How do I select multiple entries?
+	Drag-and-drop
+	Insert file
+	Load new version
+
+
+	Important components
+	Viewer pane
+	Form
+	Feed
+	Create post
+	Create poll
+	Mention
+	Reference
+	Hashtag
+	Subscribe to hashtag
+	Visibility
+	Search feed
+	Subscribe to feed
+	Automatically subscribe to feed
+	Show filter options
+	Enter comment
+	Edit post
+	Feed history
+	Settings
+	Show current hashtags
+	Hashtag cloud
+	Show filter options
+	Filters in 'My ELO'
+	Apply filters
+	Negate filters
+	Reset filters
+	Mark as important
+	Delete marker
+	Hide post
+
+
+	Important actions in detail
+	New teamroom
+	Join teamroom
+	New entry
+	Insert file
+
+	User menu [your name]
+	Change password
+	About
+	Edit profile
+	Log off
+
+	'Documents' tab
+	Refresh
+	New entry
+	Insert file
+	Save as
+	Load new version
+	Edit in Microsoft Office
+	Move
+	Delete entry
+
+	'Members' tab
+	Invite external users
+	Search for user
+	Add user
+
+	'Teamroom' tab
+	Close teamroom
+	Delete teamroom
+
+
+

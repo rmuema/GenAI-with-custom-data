@@ -1,0 +1,1847 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Business Solution ELO Visitor | Business Solution ELO Visitor 1.06
+
+
+Business Solution ELO
+
+Visitor
+
+Business Solution ELO Visitor 1.06
+
+
+
+3
+
+3
+
+4
+
+9
+
+26
+
+42
+
+44
+
+49
+
+Table of contents
+
+null
+
+Introduction
+
+Basics
+
+'New' tab
+
+'Visitor' tab
+
+Self-service
+
+Dashboard overview
+
+Contact management
+
+2 Business Solution ELO Visitor
+
+
+
+null
+
+Introduction
+
+Contents of the manual
+
+The goal of this user guide is to explain all functions of Business Solution ELO Visitor.
+
+Basics
+
+The Basics chapter explains the basics of the ELO Visitor program interface.
+
+Possible actions and other elements
+
+The remaining chapters address possible actions and other elements of ELO Visitor.
+
+Target audience
+
+This manual is addressed to Business Solution ELO Visitor users. Separate documentation is
+
+available for administrators on the ELO SupportWeb.
+
+The scope of functions presented in this manual may differ greatly from those in your client.
+
+If you do not find functions described in this manual in your client, you do not have permission to
+
+perform the action.
+
+3 Business Solution ELO Visitor
+
+
+
+Basics
+
+Basic principle
+
+Business Solution ELO Visitor assists you from registering to checking out visitors.
+
+All employees with access to ELO Visitor can pre-register visitors or groups, which are then checked
+
+in at the front desk.
+
+At the front desk, you can also:
+
+Greet visitors with a welcome screen
+
+Create visitor badges with pictures
+
+Have visitors sign documents
+
+ELO Visitor helps you keep an overview of planned, current, and past visits:
+
+Dashboard: The dashboard gives you an overview of all visitors or groups in a table or
+
+calendar format.
+
+Dynamic folders: Once a visitor or group has reached a specific deadline, the relevant file is
+
+automatically moved to the corresponding folder.
+
+Colored visitor files: The color of a visitor file indicates the current status of the visitor.
+
+Visitor lists: You can create lists of visitors who are currently checked in.
+
+General note
+
+ELO Visitor works with the following clients:
+
+ELO Web Client
+
+ELO Java Client
+
+ELO Desktop Client
+
+Information
+
+In this manual, we use screenshots from the ELO Web Client.
+
+Requirements
+
+Your administrator must have configured ELO Visitor for you.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+4 Business Solution ELO Visitor
+
+
+
+Program interface
+
+Fig.: Business Solution ELO Visitor program interface
+
+You will find ELO Visitor functions in the following areas:
+
+1 Visitor group on the New tab
+
+For more information, refer to the chapter 'New' tab.
+
+The Contact group is where you manage contacts. See the Contact management chapter for more
+
+information.
+
+Users can check themselves in and out via the Self-service group. For more information, refer to
+
+the chapter Self-service.
+
+2 The tiles Visitors and groups, Pre-register visitor, New long-term badge, and Create visitor list in
+
+the tile area
+
+The screenshot shows several ELO Visitor tiles in a group. However, this view can vary depending
+
+on your individual configuration.
+
+You will find more tiles in the tile navigation under Hidden tiles.
+
+Fig.: 'Visitor' tab
+
+3 'Visitor' tab
+
+When you select an existing visitor, the Visitor tab opens.
+
+5 Business Solution ELO Visitor
+
+
+
+This tab contains all the functions relevant for individual visitors.
+
+For more information, refer to the chapter 'Visitor' tab.
+
+Repository
+
+The structure and appearance of your Repository work area depend greatly on your specific
+
+configuration. The default state is described here.
+
+A visitor file is created for each visitor.
+
+Visitor files are saved to // Visitor management // Visitors.
+
+Dynamic Folders
+
+Fig.: Dynamic folder in the repository
+
+Dynamic folders sort the visitor files and group folders by deadlines.
+
+Status
+
+6 Business Solution ELO Visitor
+
+
+
+The visitor files and group folders are shown in different colors depending on their status:
+
+Gray: PR – pre-registered
+
+Green: CI – checked in
+
+Blue: CO – checked out
+
+Red: CA – pre-registration canceled
+
+'Visitor' form
+
+Fig.: 'Visitor' form
+
+The Visitor form contains information on the appointment as well as the visitor.
+
+• 
+
+• 
+
+• 
+
+• 
+
+7 Business Solution ELO Visitor
+
+
+
+Information
+
+If you move the cursor over the visitor's picture, it is shown in a larger format.
+
+In addition to the form, the visitor file may contain additional documents related to the visitor, for
+
+example signed documents or a visitor badge.
+
+'Group' form
+
+Fig.: 'Group' form
+
+The Group form contains information on the group appointment as well as a list of the group
+
+members.
+
+Besides the form, the group folder may contain additional documents related to the group, for
+
+example visitor badges or e-mails.
+
+In addition, a visitor file is created for each group member in the group folder upon check-in. These
+
+visitor files have the same structure as those of individual visitors.
+
+8 Business Solution ELO Visitor
+
+
+
+'New' tab
+
+On the New tab, you will find all the functions you can use to pre-register or check in visitors on the
+
+spot in the Visitor group.
+
+You can also create Long-term badges and Visitor lists.
+
+You will learn how to proceed after creating a visitor in the chapter 'Visitor' tab.
+
+Pre-register visitor
+
+Information
+
+You want to register a visitor for an appointment in the future.
+
+Alternative
+
+Register visitor: If the appointment will take place right away, use this function.
+
+Method
+
+On the ribbon, go to the New tab and click Visitor > Pre-register visitor.1. 
+
+9 Business Solution ELO Visitor
+
+
+
+Fig.: 'Visitor' dialog box
+
+The Visitor dialog box contains fields with information on the planned appointment, the location of
+
+the appointment, and the visitor.
+
+Mandatory fields are marked with a red asterisk.
+
+Fields with a pencil icon contain keyword lists. When you enter a value in the respective field,
+
+matching list entries appear.
+
+Fill out the fields accordingly.1. 
+
+10 Business Solution ELO Visitor
+
+
+
+Contact reference: If the visitor is already created as a reference, they have a contact reference
+
+that you can select from the suggestions. Otherwise, the field is left blank.
+
+ELO user name: If the visitor has an ELO user account, enter their name in this field.
+
+Send e-mail invitation: In the Invitation template field, select an appropriate invitation template.
+
+Once you click OK, the e-mail is sent.
+
+Create new contacts: If you select this option, a contact reference is automatically created and the
+
+entered visitor information is saved. The next time you log on, you can access the saved data and
+
+don't have to enter it again.
+
+Click OK.
+
+Result
+
+The file is created in the // Visitor management // Visitors // [Year] // [Month] folder.
+
+The form contains the entered information and can be changed later on.
+
+As the appointment will take place in fewer than 30 days, the file also appears in the folder //
+
+Visitor management // Visitors by deadline // Visitors expected in the next 30 days.
+
+If you checked the Create new contacts box, the contact information is filed to the Visitor contacts
+
+folder, where you can enter additional data.
+
+Outlook
+
+You can correct or update data entered with the Edit pre-registration function.
+
+Before the appointment or on the day of the appointment, you can create a visitor badge.
+
+You can add a visitor picture and request a signature on the day of the visit.
+
+If the visitor cancels, you can cancel their registration.
+
+Otherwise, you can use the Check in visitor function on the day of the appointment.
+
+Pre-register group
+
+Information
+
+You want to register a group for an appointment in the future.
+
+Alternatives
+
+Pre-register company: If you don't want to register each member of the group by name, use this
+
+function.
+
+Register group: If the appointment will take place right away, use this function.
+
+Method
+
+1. 
+
+1. 
+
+11 Business Solution ELO Visitor
+
+
+
+On the ribbon, go to the New tab and click Visitor > Pre-register group.
+
+Fig.: 'Pre-register group' dialog box
+
+The Pre-register group dialog box contains fields with information on the planned appointment, the
+
+location of the appointment, and the group.
+
+Mandatory fields are marked with a red asterisk.
+
+Fields with a pencil icon contain keyword lists. When you enter a value in the respective field,
+
+matching list entries appear.
+
+12 Business Solution ELO Visitor
+
+
+
+Send e-mail invitation: In the Invitation template field, select an appropriate invitation template.
+
+Once you click OK, the e-mail is sent.
+
+Employee responsible: There must be exactly one person responsible. If you do not select a group
+
+member, the first person in the list is automatically selected as the employee responsible.
+
+Checked in: This option is not active in Visitors. The box is automatically checked as soon as you
+
+check the visitors in.
+
+Click OK.
+
+Result
+
+The file is created in the // Visitor management // Visitors // [Year] // [Month] folder.
+
+As the appointment will take place in fewer than 30 days, the file also appears in the folder //
+
+Visitor management // Visitor groups by deadline // Groups expected in the next 30 days.
+
+The Group form contains the entered information. Each member of the group also has their own
+
+form, which you can edit.
+
+Outlook
+
+You can correct or update data entered for the group and group members with the Edit pre-
+
+registration function.
+
+Before the appointment or on the day of the appointment, you can create visitor badges.
+
+You can add visitor pictures and request signatures on the day of the appointment.
+
+If the visitor cancels, you can cancel their registration.
+
+Otherwise, you can use the Check in visitor function on the day of the appointment.
+
+Pre-register company
+
+Information
+
+You want to register a company for an appointment in the future. During registration, you only enter
+
+the number of visitors.
+
+Alternative
+
+Pre-register group: If you want to register each member of the group by name, use this function.
+
+Method
+
+On the ribbon, go to the New tab and click Visitor > Pre-register company.
+
+1. 
+
+1. 
+
+13 Business Solution ELO Visitor
+
+
+
+Fig.: 'Pre-register company' dialog box
+
+The Pre-register company dialog box contains fields with information on the planned appointment,
+
+the location of the appointment, and the group.
+
+Mandatory fields are marked with a red asterisk.
+
+Fields with a pencil icon contain keyword lists. When you enter a value in the respective field,
+
+matching list entries appear.
+
+Fill out the fields accordingly.
+
+Send e-mail invitation: In the Invitation template field, select an appropriate invitation template.
+
+Once you click OK, the e-mail is sent.
+
+Click OK.
+
+Result
+
+The file is created in the // Visitor management // Visitors // [Year] // [Month] folder.
+
+As the appointment will take place in fewer than 30 days, the file also appears in the folder //
+
+Visitor management // Visitor groups by deadline // Groups expected in the next 30 days.
+
+1. 
+
+1. 
+
+14 Business Solution ELO Visitor
+
+
+
+The Company form contains the entered information. Each member of the company also has their
+
+own form, which you can edit.
+
+Outlook
+
+You can correct or update data entered for the company and company members with the Edit pre-
+
+registration function.
+
+Before the appointment or on the day of the appointment, you can create visitor badges.
+
+You can add visitor pictures and request signatures on the day of the appointment.
+
+If the visitor cancels, you can cancel their registration.
+
+Otherwise, you can use the Check in visitor function on the day of the appointment.
+
+Register visitor
+
+Information
+
+You can check in a visitor on the day of an appointment without pre-registering them. At the end of
+
+this process, the visitor is checked in.
+
+Alternatives
+
+Pre-register visitor: If the appointment will take place in the future, use this function.
+
+Method
+
+On the ribbon, go to the New tab and click Visitor > Register visitor.1. 
+
+15 Business Solution ELO Visitor
+
+
+
+Fig.: 'Register visitor' dialog box
+
+In the Register visitor dialog box, you will find the input fields for checking in the visitor on two
+
+tabs.
+
+Mandatory fields are marked with a red asterisk.
+
+Fields with a pencil icon contain keyword lists. When you enter a value in the respective field,
+
+matching list entries appear.
+
+Fill out the fields on the Check in tab accordingly.1. 
+
+16 Business Solution ELO Visitor
+
+
+
+Contact reference: If the visitor is already created as a reference, they have a contact reference
+
+that you can select from the suggestions. Otherwise, the field is left blank.
+
+ELO user name: If the visitor has an ELO user account, enter their name in this field.
+
+Create new contacts: If you select this option, a contact reference is automatically created and the
+
+entered visitor information is saved. The next time you log on, you can access the saved data and
+
+don't have to enter it again.
+
+Take a picture/Select a file: You can take a picture of the visitor using a webcam or select a picture
+
+from your file system.
+
+Document: If you want the visitor to sign a document on arrival, select the document here.
+
+Send to: The document selected under Document is sent to the user account that you select in the 
+
+Send to field. The selected user account should be accessed via a mobile device in order to be able
+
+to have the document signed.
+
+Fig.: 'Register visitor' dialog box, 'Visitor data' tab
+
+Fill out the fields on the Visitor data tab accordingly.
+
+Click OK.
+
+Result
+
+The file is created in the // Visitor management // Visitors // [Year] // [Month] folder.
+
+1. 
+
+2. 
+
+17 Business Solution ELO Visitor
+
+
+
+The form contains the entered information.
+
+The visitor's folder also appears under // Visitor management // Visitors by deadline // Recent
+
+visitors.
+
+The visitor is checked in.
+
+If you checked the Create new contacts box, the contact information is filed to the Visitor contacts
+
+folder, where you can edit it or enter additional data.
+
+Outlook
+
+You can create a visitor badge.
+
+If you requested a document to be signed, you will find it in the Tasks area of the selected ELO user
+
+account. The visitor can complete the questionnaire and/or sign the document using a tablet. The
+
+signed document is saved to their visitor file.
+
+On the day of the appointment, you can check visitors back out using the Check out visitor
+
+function.
+
+Register group
+
+Information
+
+You can check in a group on the day of an appointment without pre-registering them. At the end of
+
+this process, the group is checked in.
+
+Alternative
+
+Pre-register group: If the group appointment will take place in the future, use this function.
+
+Method
+
+On the ribbon, go to the New tab and click Visitor > Register group.1. 
+
+18 Business Solution ELO Visitor
+
+
+
+Fig.: 'Register group' dialog box, 'Check in' tab
+
+In the Register group dialog box, you will find the input fields for checking in the group on two tabs.
+
+Mandatory fields are marked with a red asterisk.
+
+Fields with a pencil icon contain keyword lists. When you enter a value in the respective field,
+
+matching list entries appear.
+
+Fill out the fields on the Check in tab accordingly.
+
+Check in visitor: Before the name of each group member, you will find a check box that is
+
+automatically checked. If a member of the group is running late but has already been added to the
+
+list, you can uncheck this box for now. To check them in later, you can use the Check in visitor
+
+function.
+
+1. 
+
+19 Business Solution ELO Visitor
+
+
+
+Fig.: 'Register group' dialog box, 'Visitor data' tab
+
+Fill out the fields on the Visitor data tab accordingly.
+
+Click OK.
+
+Result
+
+The file is created in the // Visitor management // Visitors // [Year] // [Month] folder.
+
+The form contains the entered information.
+
+The visitor's folder also appears under // Visitor management // Visitor groups by deadline // Recent
+
+groups.
+
+The group is checked in.
+
+Outlook
+
+If you haven't checked a group member in yet, you can do this with the Check in visitor function.
+
+You can add visitor pictures, create visitor badges, and request signatures.
+
+On the day of the appointment, you can check the group back out using the Check out visitor
+
+function.
+
+New long-term badge
+
+Information
+
+1. 
+
+2. 
+
+20 Business Solution ELO Visitor
+
+
+
+A long-term badge is a badge that allows bearers to check in and out using the Self-service
+
+functions in the client or intranet. With the physical badge, visitors can check in and out via a code
+
+scanner.
+
+Method
+
+On the ribbon, go to the New tab and click Visitor > New long-term badge.
+
+Fig.: 'New long-term badge' dialog box, 'Long-term badge data' tab
+
+In the New long-term badge dialog box, you will find the input fields for creating a long-term badge
+
+on two tabs.
+
+Mandatory fields are marked with a red asterisk.
+
+Fields with a pencil icon contain keyword lists. When you enter a value in the respective field,
+
+matching list entries appear.
+
+1. 
+
+1. 
+
+21 Business Solution ELO Visitor
+
+
+
+Fill out the fields on the Long-term badge data tab accordingly.
+
+Contact reference: If the user is already created as a reference, they have a contact reference that
+
+you can select from the suggestions. Otherwise, the field is left blank.
+
+ELO user name: Complete this field so that the user can check in and check out on their client.
+
+Otherwise, they can only check in and out via a scanning device.
+
+Create new contacts: If you select this option, a contact reference is automatically created and the
+
+entered visitor information is saved. The next time you log on, you can access the saved data and
+
+don't have to enter it again.
+
+22 Business Solution ELO Visitor
+
+
+
+Fig.: 'New long-term badge' dialog box, 'Documents' tab
+
+Fill out the fields on the Documents tab accordingly.
+
+Take a picture/Select a file: You can take a picture using a webcam or select a picture from your file
+
+system.
+
+Document: If you want the visitor to sign a document on arrival, select the document here.
+
+1. 
+
+23 Business Solution ELO Visitor
+
+
+
+Send to: The document selected under Document is sent to the user account that you select in this
+
+field. The selected user account should be accessed via a mobile device in order to be able to have
+
+the document signed.
+
+Create badge immediately: You can create a long-term badge when creating the folder.
+
+Alternatively, you can use the Create visitor badge function later. Without the badge, the user can
+
+only use the self-service functions in the client or intranet.
+
+Click OK.
+
+Result
+
+The long-term badge is filed to // Visitor management // Long-term badges.
+
+The form contains the entered information.
+
+The user can now check themself in and out via the self-service functions.
+
+Outlook
+
+If you have disabled the option Create badge immediately, you can create a badge using the 
+
+Create visitor badge function.
+
+Long-term badges can be printed using commercial badge printers with Windows printer drivers.
+
+In the ELO Web Client, you can use the browser print function.
+
+Fig.: 'Print' button
+
+You can also press the Print button.
+
+All long-term badges include a barcode or a QR code. With this code, the bearer of the long-term
+
+badge can check in and out at a scanning device.
+
+1. 
+
+24 Business Solution ELO Visitor
+
+
+
+If you requested a document to be signed, you will find it in the Tasks area of the selected ELO user
+
+account. The visitor can complete the questionnaire and/or sign the document using a tablet. The
+
+signed document is saved to their visitor file.
+
+You can disable the long-term badge using the Deactivate long-term badge function, for example if
+
+the user has lost their long-term badge.
+
+Create visitor list
+
+Information
+
+You can create a list of all visitors checked in or out at any time.
+
+Method
+
+On the ribbon, go to the New tab and click Visitor > Create visitor list.
+
+Fig.: 'Create visitor list' dialog box
+
+In the Create visitor list dialog box, select which visitors the list should include.
+
+Category: Leave this field blank if you want the list to contain all categories of visitors.
+
+Click OK.
+
+Result
+
+The visitor list is filed to // Visitor management // Visitor lists.
+
+1. 
+
+1. 
+
+1. 
+
+25 Business Solution ELO Visitor
+
+
+
+'Visitor' tab
+
+The functions on the Visitor tab apply to a visitor or visitor group. They are only enabled when you
+
+select a visitor folder in the repository.
+
+You will learn how to check visitors in in the chapter 'New' tab.
+
+Create visitor badge
+
+Information
+
+Before the appointment or at the beginning of the appointment, you can create a visitor badge. If
+
+you want to add a picture to the visitor badge, use the Add visitor picture function.
+
+Requirements
+
+The visitor must be registered. They cannot already be checked in.
+
+Method
+
+In the dashboard or repository, select the folder of the visitor you want to create a visitor
+
+badge for.
+
+If you want to create visitor badges for a group, select the group folder. You can also create a visitor
+
+badge for an individual member of a group by selecting this member only.
+
+On the ribbon, go to the Visitor tab and click Create visitor badge.
+
+Result
+
+The visitor badges for a group are filed to the group folder. The visitor badge for an individual
+
+visitor is filed to their folder.
+
+Outlook
+
+Visitor badges can be printed using commercial badge printers with Windows printer drivers.
+
+In the ELO Web Client, you can use the browser print function.
+
+1. 
+
+1. 
+
+26 Business Solution ELO Visitor
+
+
+
+Fig.: 'Print' button
+
+You can also press the Print button.
+
+All visitor badges include a barcode or a QR code. You can use this code to check visitors in or out
+
+using a scanner device. Depending on the administrative settings, visitors can also complete these
+
+tasks themselves. This is especially practical for appointments spanning multiple days.
+
+Add visitor picture
+
+Information
+
+After registering a visitor, you can upload a picture from the file system, or take a picture with the
+
+webcam during check-in.
+
+Method
+
+In the dashboard or repository, select the file of the visitor whose visitor photo you want to
+
+capture.
+
+For groups, you have to use the individual visitor files. Go straight to the file of the person you want
+
+to take a picture for, then repeat the entire process for each visitor.
+
+1. 
+
+1. 
+
+27 Business Solution ELO Visitor
+
+
+
+On the ribbon, go to the Visitor tab and click Add visitor picture.
+
+Fig.: 'Add visitor picture' dialog box
+
+In the Add visitor picture dialog box, a live preview appears right in the dialog box if a webcam is
+
+connected.
+
+Take a picture/Select a file: You can take a picture of the visitor using a webcam or select a picture
+
+from your file system.
+
+Click OK.
+
+Result
+
+The picture is saved to the visitor's file.
+
+Outlook
+
+1. 
+
+28 Business Solution ELO Visitor
+
+
+
+The picture is automatically used when creating a visitor badge using the Create visitor badge
+
+function.
+
+Request signature
+
+Information
+
+You can request signatures from visitors. During check-in, visitors can complete a questionnaire
+
+and/or provide a signature using a mobile device.
+
+Requirements
+
+A document has been created for signing.
+
+Method
+
+In the dashboard or repository, select the file of the visitor you want to have sign a
+
+document. This can be an individual visitor or a member of a group, but not an entire group.
+
+On the ribbon, go to the Visitor tab and click Request signature.
+
+Fig.: 'Request signature' dialog box
+
+In the Request signature dialog box, select the document you want the visitor to sign.
+
+Send to: The document selected under Document is sent to the user account that you select in this
+
+field. The selected user account should be accessed via a mobile device in order to be able to have
+
+the document signed.
+
+Click OK.
+
+Result
+
+1. 
+
+2. 
+
+1. 
+
+1. 
+
+29 Business Solution ELO Visitor
+
+
+
+The document is sent to the ELO user account that you selected under Send to.
+
+Outlook
+
+The visitor can complete the questionnaire and/or sign the document using a tablet. The signed
+
+document is saved to their visitor file.
+
+Cancel registration
+
+Information
+
+You can cancel registration for pre-registered visitors as long as they haven't been checked in. You
+
+can cancel registration for individual visitors, entire groups, or individual group members.
+
+Method
+
+In the dashboard or repository, select the file of the visitor whose pre-registration you want
+
+to cancel.
+
+If you want to cancel an entire group, select the group folder. If you want to cancel a member of a
+
+group, select the folder of the group member.
+
+On the Visitor tab, click Cancel registration.
+
+1. 
+
+1. 
+
+30 Business Solution ELO Visitor
+
+
+
+Fig.: 'Cancel registration' dialog box
+
+In the Cancel registration dialog box, enter a reason for cancellation.
+
+Click OK.
+
+Result
+
+The pre-registration is canceled.
+
+Check in visitor
+
+Information
+
+On the day of the visit, you check the visitor in. You can check in individual visitors, an entire group
+
+or company, or individual members of a group.
+
+1. 
+
+2. 
+
+31 Business Solution ELO Visitor
+
+
+
+Alternatives
+
+Register visitor: If you want to check in a visitor who hasn't already been registered, use this
+
+function.
+
+Register group: If you want to check in a group that hasn't already been registered, use this
+
+function.
+
+Requirements
+
+The visitor has to be registered for the day. If you use the function for a visitor that is not registered
+
+for the day, a copy of the visitor file is created for the current day.
+
+Method
+
+In the dashboard or repository, select the file of the visitor you want to check in.
+
+If you want to check in an entire group, select the group folder. Even if you don't want to check in
+
+all group members, select the folder. You can exclude individual group members.
+
+On the ribbon, go to the Visitor tab and click Check in visitor.
+
+The dialog boxes differ depending on whether you are checking in a visitor or a group. For this
+
+reason, they are described separately in the following.
+
+1. 
+
+1. 
+
+32 Business Solution ELO Visitor
+
+
+
+Check in visitor
+
+Fig.: 'Check in visitor' dialog box, 'Check in' tab
+
+In the Check in visitor dialog box, the Visitor data tab is already filled with the data from pre-
+
+registration.
+
+Information
+
+If visitors appear too far in advance for their pre-registered appointment, the information
+
+under Appointment data will not be applied. ELO assumes that this is a separate
+
+appointment. Check-in is treated as registration.
+
+The arrival time is automatically completed on the Check in tab.
+
+Fill out the fields on the Check in tab accordingly.1. 
+
+33 Business Solution ELO Visitor
+
+
+
+Take a picture/Select a file: You can take a picture of the visitor using a webcam or select a picture
+
+from your file system.
+
+Document: If you want the visitor to sign a document on arrival, select the document here.
+
+Send to: The document selected under Document is sent to the user account that you select in this
+
+field. The selected user account should be accessed via a mobile device in order to be able to have
+
+the document signed.
+
+Fig.: 'Check in visitor' dialog box, 'Visitor data' tab
+
+The information on the Visitor data tab was entered during pre-registration. You can edit it if
+
+necessary.
+
+Click OK.
+
+Result
+
+1. 
+
+34 Business Solution ELO Visitor
+
+
+
+The visitor is checked in.
+
+Outlook
+
+You can create a visitor badge.
+
+If you requested a document to be signed, you will find it in the Tasks area of the selected ELO user
+
+account. The visitor can complete the questionnaire and/or sign the document using a tablet. The
+
+signed document is saved to their visitor file.
+
+On the day of the appointment, you can check the visitor back out using the Check out visitor
+
+function.
+
+Check in group
+
+Fig.: 'Check in visitor' dialog box, 'Check in' tab
+
+35 Business Solution ELO Visitor
+
+
+
+In the Check in visitor dialog box, the Visitor data tab is already filled with the data from pre-
+
+registration. You can edit it if necessary.
+
+Information
+
+If visitors appear too far in advance for their pre-registered appointment, the information
+
+under Appointment data will not be applied. ELO assumes that this is a separate
+
+appointment. Check-in is treated as registration.
+
+Check in visitor: Before the name of each group member, you will find a check box that is
+
+automatically checked. If you don't want to check in a member of the group yet, you can uncheck
+
+this box for now. To check them in later, use the Check in visitor function.
+
+Checked in: This option is not active in Visitors. The box is automatically checked as soon as you
+
+check the visitors in.
+
+Result
+
+The group members are checked in.
+
+If not all members of the groups are present, the group folder remains grayed out.
+
+Information
+
+The status of the entire group does not change to CI – checked in until all members have
+
+been checked in.
+
+Outlook
+
+To check in additional group members, select the group again and then click Check in visitor.
+
+You can create a visitor badge for all members of a group at once.
+
+You can add a visitor picture and request a signature for individual group members.
+
+If individual group members did not show up after all, you can cancel their registration.
+
+At the end of the visit, use the Check out visitor function.
+
+Check out visitor
+
+Information
+
+At the end of the appointment, you check visitors back out.
+
+Alternative
+
+Visitors with visitor badges can check themselves out using a scanning device.
+
+Method
+
+1. 
+
+36 Business Solution ELO Visitor
+
+
+
+In the dashboard or repository, select the folder of the visitor you want to check out.
+
+If you want to check out an entire group, select the group folder. Even if you don't want to check
+
+out all group members, select the folder. You can exclude individual group members.
+
+On the ribbon, go to the Visitor tab and click Check out visitor.
+
+The dialog boxes differ depending on whether you are checking out a visitor or a group. For this
+
+reason, they are described separately in the following.
+
+Check out visitor
+
+Fig.: 'Check out visitor' dialog box
+
+In the Check out visitor dialog box, the time of departure is entered automatically.
+
+Click OK.
+
+Result
+
+The visitor is checked out.
+
+Outlook
+
+Visitors who have checked out can be checked back in at a later time.
+
+1. 
+
+1. 
+
+37 Business Solution ELO Visitor
+
+
+
+Check out group
+
+Fig.: 'Check out visitor' dialog box
+
+In the Check out visitor dialog box, the time of departure is entered automatically.
+
+Check out visitor: Before the name of each group member, you will find a check box that is
+
+automatically checked. If you don't want to check out a member of the group yet, you can uncheck
+
+this box for now. To check them out later, use the Check out visitor function.
+
+Click OK.
+
+Result
+
+The group is checked out.
+
+1. 
+
+38 Business Solution ELO Visitor
+
+
+
+Information
+
+The group is not checked out until all members of the group have been checked out. Before
+
+this, only individual members of the group are checked out. If the group does not check out
+
+together, repeat this process until the entire group has been checked out.
+
+Outlook
+
+Visitors who have checked out can be checked back in at a later time.
+
+Edit pre-registration
+
+Information
+
+After registration and before check-in, you can edit the visitor data via the Edit registration
+
+function.
+
+Alternative
+
+You can also edit the data via the form in the group or visitor folder.
+
+Method
+
+In the dashboard or repository, select the folder of the visitor whose pre-registration you
+
+want to edit.
+
+If you want to edit an entire group, select the group folder. If you want to edit a member of a group,
+
+select the folder of the group member.
+
+On the ribbon, go to the Visitor tab and click Edit registration.
+
+In the Edit registration dialog box, you can edit all fields.
+
+Click Save changes.
+
+Result
+
+The changes are applied.
+
+Outlook
+
+You can edit a pre-registration as many times as you'd like until the visitor has been checked in.
+
+Deactivate long-term badge
+
+Information
+
+You can deactivate long-term badges you have access to. This is recommended if the visitor badge
+
+has been lost, for example.
+
+Method
+
+1. 
+
+1. 
+
+1. 
+
+1. 
+
+39 Business Solution ELO Visitor
+
+
+
+In the dashboard or repository, select the folder of the long-term badge you want to
+
+deactivate.
+
+Alternative: Select any visitor folder.
+
+On the ribbon, go to the Visitor tab and click Deactivate long-term badge.
+
+Fig.: 'Select long-term badge' dialog box
+
+Optional: If you haven't selected the relevant long-term badge, select it in the Select long-term
+
+badge dialog box.
+
+1. 
+
+40 Business Solution ELO Visitor
+
+
+
+Fig.: 'Deactivate long-term badge' dialog box
+
+In the Deactivate long-term badge dialog box, enter a reason for deactivating the badge.
+
+Click OK.
+
+Result
+
+The long-term badge is deactivated. If the bearer of the long-term badge attempts to check in
+
+using the Self check-in function or at the front desk, they will get an error message indicating that
+
+check-in is not possible.
+
+Outlook
+
+It is not enough to create a new badge using the Create visitor badge function after deactivation, as
+
+this badge would have the same code as the one you just deactivated. Use the New long-term
+
+badge function instead.
+
+1. 
+
+2. 
+
+41 Business Solution ELO Visitor
+
+
+
+Self-service
+
+All employees with an ELO user account and long-term badge can check themselves in and out via
+
+the Self-service group.
+
+Self check-in
+
+Information
+
+If a long-term badge has been created for you, you can check yourself in. You are then marked as
+
+present when an overview of present visitors is created.
+
+Alternative
+
+Scan your visitor badge if your company has set up a code scanner.
+
+Method
+
+On the ribbon, go to the New tab and click Self-service > Self check-in.
+
+Fig.: 'Self check-in' dialog box
+
+The time of arrival is automatically entered in the Self check-in dialog box.
+
+1. 
+
+1. 
+
+42 Business Solution ELO Visitor
+
+
+
+Click OK.
+
+Result
+
+You are checked in.
+
+Outlook
+
+When you leave the building, check out with the Self check-out function.
+
+Self check-out
+
+Information
+
+After you have entered the building and checked in using the Self check-in function or by scanning
+
+your long-term badge, you have to check back out when you leave the building.
+
+Alternative
+
+Scan your visitor badge if your company has set up a code scanner.
+
+Method
+
+On the ribbon, go to the New tab and click Self-service > Self check-out.
+
+Fig.: 'Self check-out' dialog box
+
+The time of departure is automatically entered in the Self check-out dialog box.
+
+Click OK.
+
+Result
+
+You are checked out.
+
+1. 
+
+1. 
+
+43 Business Solution ELO Visitor
+
+
+
+Dashboard overview
+
+The dashboard provides an overview of all visitor files, group folders, and their statuses.
+
+You can reach the dashboard by clicking the Visitors and groups tile in the My ELO area.
+
+The dashboard remembers your settings. When you exit then open the dashboard again, it
+
+remembers and displays your most recent view.
+
+Fig.: Dashboard in the table view
+
+The dashboard is divided into the following areas:
+
+1 Database: In the dashboard header, use the drop-down menu (arrow icon) to select a database. A
+
+dashboard database is a list of visitor files and/or group folders that is loaded for evaluation.
+
+Information
+
+If there is only one database, this database is selected permanently and no drop-down
+
+menu is available.
+
+2 Table/Calendar: You can choose between two dashboard views: Table and Calendar.
+
+3 Search: In addition to text values, you can also search for number values. All data that you can
+
+select as column values in the position view serves as the basis.
+
+Information
+
+If you'd like to search for index fields that are not listed on the dashboard, use the general
+
+ELO search.
+
+4 Visitors/Groups: You can either view visitors or groups.
+
+44 Business Solution ELO Visitor
+
+
+
+Information
+
+When checking in a group, the group members are created as individual visitors. The
+
+individual group members are therefore shown when you select the visitor view. If you
+
+choose the group view, the groups are only shown with the person responsible.
+
+5 Status: The dashboard header contains a button for each visitor status. If a button is active, all
+
+visitors with the corresponding status are shown in the dashboard viewer pane.
+
+6 Viewer pane: In the dashboard viewer pane, you will see a list of visitor files or group folders.
+
+This list changes depending on the filter criteria applied.
+
+Minimized view
+
+Fig.: Dashboard in minimized view
+
+The dashboard automatically adjusts to the size of the browser window. Here, you see the view
+
+with a narrower width, where you can view either Key figures or Visitor.
+
+1 Menu: You can hide and show the Key figures and Visitor as well as the free text search via the
+
+menu.
+
+2 Key figures: Choose Key figures to view or change the status of the displayed visitors or groups.
+
+3 Visitor: Select Visitor to show the visitors either in a table or calendar.
+
+45 Business Solution ELO Visitor
+
+
+
+Table
+
+Fig.: Table view
+
+Clicking an entry shows its preview. Double-clicking an entry brings you to the repository.
+
+Customize the table view using the drop-down menus.
+
+Fig.: Customizing the table view
+
+The drop-down menus in the column headings contain the following functions:
+
+Sort ascending
+
+Sort descending
+
+Remove sorting: This option appears if you have sorted the column.
+
+Alternative: You can sort the column by clicking the column heading. Clicking once sorts in
+
+ascending order. Clicking a second time sorts in descending order. Clicking a third time clears
+
+sorting.
+
+Hide column: The selected column is no longer shown in the table view.
+
+Group: The content of a column is joined into groups. The number of visitor files in each
+
+group is shown in brackets. Click the plus icon before the group to expand it and view all
+
+contained visitor files. The minus icon minimizes it again. Clicking the plus icon in the header
+
+expands all groups.
+
+Information
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+46 Business Solution ELO Visitor
+
+
+
+You can combine multiple groups. You can specify a hierarchy with the order in which you
+
+select the columns.
+
+Ungroup: This option appears if you have grouped items. Click Ungroup to discard the group.
+
+Fig.: Overview of all columns
+
+Menu: You can show hidden columns. Clicking the Reset grouping button resets all groups.
+
+Calendar
+
+Fig.: 'Year', 'Month', and 'Day' buttons
+
+The calendar offers three options: Year, Month, and Day.
+
+Data from the visitor file is shown in all views.
+
+• 
+
+47 Business Solution ELO Visitor
+
+
+
+Fig.: Annual view
+
+Year: The annual view shows the number of appointments each month. For more detailed
+
+information on a month, click the month.
+
+Fig.: Month view
+
+Month: The month view shows the number of appointments each day. For more detailed
+
+information on a day, click the day.
+
+To preview a visitor file, click the date.
+
+Fig.: Day view
+
+Day: The day view lists the appointments for the selected day. It works in the same way as the
+
+table view.
+
+48 Business Solution ELO Visitor
+
+
+
+Contact management
+
+You can save companies and contacts to speed up the process of creating new visitors. If you select
+
+a contact when creating a visitor, the data stored for this contact is automatically entered to the
+
+correct fields.
+
+When creating a visitor, you can save the contact you have entered or use the following functions
+
+on the ribbon via New > Contacts:
+
+New contact list
+
+New company
+
+New contact
+
+Create overview of contacts
+
+To get an overview of your contacts, use the Create overview of contacts function.
+
+Create contact label
+
+Use the Create contact label function to create a label with QR code for the selected contact.
+
+The label is filed to the contact folder.
+
+The label contains information on the contact as well as a QR code. If you print the label using a
+
+label printer and file it to a physical folder, mobile end devices will take you straight to the digital
+
+folder by scanning the QR code.
+
+If you want to use the Print document function in the ELO Java Client, you will have to set the label
+
+printer as the default printer in Windows.
+
+You can also select the label printer as the default printer for faxes in the ELO Java Client
+
+configuration and print using the Fax document function.
+
+• 
+
+• 
+
+• 
+
+49 Business Solution ELO Visitor
+
+
+	Table of contents
+	null
+	Introduction
+	Contents of the manual
+	Basics
+	Possible actions and other elements
+
+	Target audience
+
+	Basics
+	Basic principle
+	General note
+	Requirements
+	Program interface
+	Repository
+
+	'New' tab
+	Pre-register visitor
+	Pre-register group
+	Pre-register company
+	Register visitor
+	Register group
+	New long-term badge
+	Create visitor list
+
+	'Visitor' tab
+	Create visitor badge
+	Add visitor picture
+	Request signature
+	Cancel registration
+	Check in visitor
+	Check in visitor
+	Check in group
+
+	Check out visitor
+	Check out visitor
+	Check out group
+
+	Edit pre-registration
+	Deactivate long-term badge
+
+	Self-service
+	Self check-in
+	Self check-out
+
+	Dashboard overview
+	Minimized view
+	Table
+	Calendar
+
+	Contact management
+	Create overview of contacts
+	Create contact label
+
+
+

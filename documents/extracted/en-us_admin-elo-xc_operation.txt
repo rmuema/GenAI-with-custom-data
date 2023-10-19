@@ -1,0 +1,1107 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO XC | Operation
+
+
+ELO XC
+
+Operation
+
+
+
+3
+
+3
+
+13
+
+21
+
+Table of contents
+
+Operation
+
+ELO XC Manager 
+
+Instance overview 
+
+Tools 
+
+2 ELO XC
+
+
+
+Operation
+
+ELO XC Manager 
+
+Overview 
+
+ELO XC Manager is a browser-based interface that is integrated into ELO XC. To access the
+
+interface, the service must be running. It provides functions for managing and configuring the
+
+service and contains these areas:
+
+Logon screen: This screen is where you can log on as an ELO user.
+
+Menu: The ribbon contains status indicators and additional functions.
+
+Instance overview: This page contains an overview of all instances that are registered for the
+
+selected Indexserver.
+
+Instance configuration: This page contains the configuration of a single instance.
+
+Miscellaneous: This includes different tools, additional functions and/or notifications. 
+
+The display texts and icons in the manager often have tooltips. If you move the cursor over a text
+
+or icon and remain there, the information will appear. Configuration parameters always feature a
+
+tooltip.
+
+Many ELO XC functions that you can access in the Manager trigger complex actions and can
+
+therefore take a few moments. The Manager indicates the execution status of the function.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+3 ELO XC
+
+
+
+Many areas of the interface are first displayed in a minimized view during a Manager session.
+
+These areas feature vertical arrow icons that enable you to show or hide the options.
+
+Authentication 
+
+An Indexserver needs to be available so that you can log on to ELO XC Manager. If instances have
+
+already been registered, you can double-click to view a list of the Indexservers already in use. The
+
+ELO user account must have main administrator permissions.
+
+Menu 
+
+4 ELO XC
+
+
+
+1 Home: Navigation on the instance overview page
+
+2 ELO XC version number
+
+3 Server type (values: PROD, TEST, DEV)
+
+4 Indexserver you are connected to
+
+5 Version number of the Indexserver you are connected to
+
+6 Service notification: All service notifications
+
+7 Tools drop-down menu: Access to various functions
+
+8 User drop-down menu: Log out and help options
+
+Service notifications 
+
+Function calls in the manager are usually acknowledged with status messages that you can view in
+
+the list of service notifications. These notifications are only kept for a certain time if they have
+
+been displayed at least once.
+
+5 ELO XC
+
+
+
+Green: If there are new success notifications, the counter is green.
+
+Yellow: If there are notifications with at least one new warning, the counter is yellow.
+
+Red: If the list contains at least one error notification, the counter is red. If all notifications have
+
+been displayed at least once, the counter will not be shown with a color.
+
+'User' drop-down menu 
+
+Documentation: Opens this documentation (ELO Docs).
+
+About ELO XC: Displays additional information about the product.
+
+Log off: Ends the current session.
+
+6 ELO XC
+
+
+
+'Tools' drop-down menu 
+
+The Tools drop-down menu provides access to various functions. You will find more information
+
+about these in the Tools and help section.
+
+Instance overview 
+
+The instance overview is the home screen in ELO XC Manager. This is where you will find all
+
+registered Indexserver instances. To switch Indexservers, you have to end the current session and
+
+log on to ELO XC Manager again.
+
+7 ELO XC
+
+
+
+The registered instances are shown in a list.
+
+1 Register instance: Add an instance to ELOxc.xml.
+
+2 Unique name of the instance
+
+3 Status of the instance
+
+4 Edit registration: Edit the ELO user and password.
+
+5 Delete registration: Removes the registration from ELOxc.xml.
+
+6 Start processing: Activates the instance and starts processing according to the configuration.
+
+7 Processing statistics: Displays the processing statistics of the instance.
+
+8 Edit configuration: Opens the instance configuration.
+
+9 Publish configuration: Activates the working version of the service configuration.
+
+Instance configuration 
+
+1 Configuration functions: Functions for the entire instance configuration.
+
+2 Tree functions: Functions for action trees
+
+3 Tree view/Form view: Functions for displaying the tree/form
+
+8 ELO XC
+
+
+
+4 Form functions: Functions for form parameters
+
+5 Configuration structure: Tree view area
+
+6 Parameters: Form view area
+
+All processing parameters of an instance are defined in the instance configuration.
+
+The instance configuration is divided into two areas. The left side contains the tree view structure.
+
+All configuration nodes of the instance are displayed here. When you select a node, you see the
+
+corresponding paramaters in the form view on the right.
+
+Configuration functions 
+
+1 Validation: The current instance configuration is checked for plausibility errors.
+
+2 Load service configuration: If no mailbox catalog has been loaded once the configuration page
+
+opens, this function is also executed once.
+
+3 Load master data: The master data of the ELO repository (e.g. users, metadata forms, encryption
+
+keys) are reloaded.
+
+4 Load mailbox catalog: The mailbox catalog is reloaded with the current connection parameters.
+
+5 Mailbox usage: The usage of catalog mailboxes in the current configuration is displayed in a
+
+separate dialog box. You can also assign mailboxes to list templates here.
+
+6 Mailbox registrations: This is where you can manage mailboxes statically configured by mailbox
+
+owners and save them to the configuration.
+
+9 ELO XC
+
+
+
+Configuration structure 
+
+1 Configuration level: Instance: Configuration node of the current instance
+
+2 Configuration level: Templates: Configuration nodes of the current templates
+
+3 Configuration level: Action trees: Configuration node of the action trees
+
+4 Configuration level: Actions: Configuration nodes of the actions
+
+10 ELO XC
+
+
+
+Tree functions 
+
+Functions
+
+1 Add action tree: You can add action trees when
+
+you select an instance node. 
+
+2 Delete: The current configuration is deleted. 
+
+3 Copy: The current configuration node is copied
+
+to the clipboard. 
+
+4 Insert copy: The configuration node on the
+
+clipboard is pasted at the selected position.
+
+1 Add template: When you select the template
+
+node, you can add individual templates.
+
+2 Delete
+
+3 Copy
+
+4 Insert copy
+
+1 Add action: You can add actions when you select
+
+an action tree or an action. 
+
+2 Delete
+
+3 Copy
+
+4 Insert copy
+
+5 Move action tree forward: The selected action
+
+tree is moved forward by one position.
+
+6 Move action tree back: The selected action tree
+
+is moved back by one position.
+
+11 ELO XC
+
+
+
+Functions
+
+1 Add action
+
+2 Delete
+
+3 Copy
+
+4 Insert copy
+
+5 Invert action logic: The execution condition of
+
+the current action is inverted. If it is true, it
+
+changes to false, and vice versa.
+
+Some tree functions depend on the selected node type, while others apply universally for all nodes.
+
+Form functions 
+
+1 Save: Changes to parameters are saved.
+
+2 Undo: Changes to parameters are reversed.
+
+3 Parameter help: Displays the parameter help for the current configuration type.
+
+Display functions 
+
+1 Expand configuration nodes :The nodes below the selected node are displayed.
+
+2 Collapse configuration nodes :The nodes below the selected node are hidden.
+
+3 Expand tree view: Widens the view of the configuration.
+
+4 Expand form view: Widens the view of the form.
+
+5 Expand form level: Displays another form level.
+
+6 Collapse form level: Hides the lowest form level.
+
+12 ELO XC
+
+
+
+Instance overview 
+
+Register instance 
+
+To register a new instance, you need to run the Register new instance function in the instance
+
+overview.
+
+A dialog box opens where you must first enter the ELO account and a unique name for the instance.
+
+When you click Register, your entries are transferred to the ELOxc.xml file. A success message is
+
+displayed in the dialog box.
+
+If you select Finish at this point of the registration, you will get an empty instance configuration
+
+that you have to configure before it can be used.
+
+If you continue by clicking Next, you can create a standard, fully configured and executable
+
+instance in the following steps. First, you need to select a catalog type:
+
+• 
+
+13 ELO XC
+
+
+
+For on-premises Exchange servers, choose the ldap type.
+
+If you want to process mailboxes in the Microsoft Cloud, you need m365.
+
+You must run a catalog test for the connection parameters to be accepted. You will see a
+
+corresponding message if it is successful.
+
+• 
+
+14 ELO XC
+
+
+
+You can now enter a mailbox of the catalog to run an EWS test.
+
+If the EWS test is successful, you will get a corresponding message.
+
+Click Next to specify details of the instance configuration.
+
+15 ELO XC
+
+
+
+ 
+
+Scheduled: Instances are always scheduled. Include a scheduled pause in processing if required.
+
+Create mailbox lists: When you create mailbox lists, all cataloged mailboxes are included in list
+
+templates and assigned to action trees.
+
+Standard archiving: With the Standard archiving option, a simple action tree for processing user
+
+mailboxes is created.
+
+Standard deletion: The Standard deletion option allows you to create an action tree for deleting
+
+stored messages.
+
+Journal archiving, journal deletion: Action trees for processing journal mailboxes can be generated
+
+in the same way as for the Standard archiving/Standard deletion option.
+
+Archiving age, deletion age: The Archiving age and Deletion age options determine the minimum
+
+age of messages so that they can be selected respectively by the Archive and Delete action trees.
+
+Select Finish to generate the configuration.
+
+Afterwards, the newly registered instance appears in the overview.
+
+The instance state is automatically Load error for newly created instances. This means that the
+
+service configuration could not be loaded because the new instance configuration is in the
+
+workspace and must be published before it can be put into operation.
+
+16 ELO XC
+
+
+
+Publish configuration 
+
+If there are differences between the service configuration and the working version in the manager,
+
+the instance state is marked as unpublished.
+
+To activate a working version, it must be published. If the instance was started, you need to stop it
+
+before you can publish the configuration. You cannot change the configuration of a service once it is
+
+running.
+
+Publish allows you to commit the working version to the service. Once it is successfully published,
+
+the unpublished status tag disappears.
+
+Change registration 
+
+With the ELO logon option, you can change the account used for registration at any time. However,
+
+keep in mind that the account must always be one that has main administrator privileges.
+
+Delete registration 
+
+If you no longer need an instance, you can use Delete to remove the registry entry from ELOxc.xml.
+
+Before this process is completed, you must confirm the deletion.
+
+Start/stop instance 
+
+17 ELO XC
+
+
+
+You can manually start a stopped instance. Click the instance stopped button.
+
+Depending on the selected mailbox catalog, the instance can take a few moments to start. A
+
+started instance in wait mode is marked with the started status.
+
+A started instance that is currently executing a job is marked with the processing status.
+
+If you click the button when the instance is started, the instance will be stopped at the next
+
+possible time. This process may take a few moments depending on the current instance activity.
+
+You can view the processing status of an active instance (processing state) at any time. Open the
+
+processing statistics with this button:
+
+Processing statistics 
+
+The processing statistics are divided into two parts. The first part can be opened as a short
+
+overview below each instance.
+
+The values are valid as long as an instance is active. They are displayed as cumulative values. The
+
+current values are determined from the job that is currently running. At the end of the job, they are
+
+added to the total values.
+
+The total statistics are stored as a collection of documents in the ELO repository under //
+
+Administration//XC Base//STATS//<instance name> and are updated by each job.
+
+By clicking on Overall statistics, you can view the recorded values. The values recorded for jobs are
+
+grouped into days, months, and years. Completed units are always grouped into the next larger
+
+unit. The jobs of a single day are grouped into daily statistics. When all daily statistics in a month
+
+are completed (because a new month has started), these daily statistics are grouped into monthly
+
+statistics. When a new year starts, all monthly statistics are combined into the annual statistics of
+
+18 ELO XC
+
+
+
+the previous year. In the figure, this relationship is shown in the second and third columns of the
+
+area header.
+
+If you expand an area, you will get the values grouped by action trees.
+
+1 Period covered – Day, month, year
+
+2 Period as calendar value
+
+3 Total duration of jobs in the period
+
+4 Average data transfer rate to ELO repository
+
+5 Number of jobs in the period
+
+6 Mailboxes or * for all
+
+7 Number of items selected
+
+8 Number of folders processed
+
+9 Number of processing errors
+
+10 Number of deleted items
+
+11 Number of archived items
+
+12 Volume archived
+
+13 Wildcard as name for all action trees
+
+14 Name of an action tree
+
+19 ELO XC
+
+
+
+If you expand the action tree area, you will get the statistical values for each mailbox. The total
+
+statistics of the action tree are marked with * in the first line.
+
+20 ELO XC
+
+
+
+Tools 
+
+The ELO XC Manager tools are a collection of useful functions to help you configure and manage
+
+instances. They can be accessed from the tools menu.
+
+Service settings 
+
+You can change the values of the ELOxc.xml in the Service settings dialog box.
+
+Information
+
+In most cases, you will need to restart ELO XC for the changes to take effect.
+
+21 ELO XC
+
+
+
+HTTPS port, Host name: Host name and HTTPS port determine the base URL of ELO XC.
+
+Log directory, Log age, Log detail: Log directory, Log age, and Log detail determine the log
+
+settings.
+
+Certificate or PFX file path/PFX password: Certificate or PFX file path/PFX password configure
+
+the SSL certificate of the internal ELO XC web host.
+
+Stop timeout, Stop repeats: Stop timeout and Stop repeats can be changed if the service does
+
+not respond on stop attempts.
+
+Maximum number of HTTP connections, Maximum HTTP idle time [ms], Reuse HTTP ports: 
+
+Maximum number of HTTP connections, Maximum HTTP idle time (milliseconds) and Reuse
+
+HTTP ports define the behavior of ELO XC when using web requests (e.g. IX, EWS). This
+
+mainly affects the use of system resources. The higher the number and idle time of the
+
+connections are, the longer it takes to free up system resources. It only makes sense to
+
+utilize a high amount of resources if the ports are also being reused (reducing overhead on
+
+initialization). The default settings should deliver stable, efficient results in most
+
+environments.
+
+GC age [s]: GC age (seconds) specifies the maximum wait time before ELO XC frees up
+
+orphaned memory segments (garbage collection).
+
+Mailbox registrations: Mailbox registrations can optionally be used if mailbox owners want to
+
+independently configure mailbox data for the list of static connections.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+22 ELO XC
+
+
+
+Language, Tree node height, Maximum idle time [s], Service notifications including
+
+processing errors, HTML tooltips: These parameters affect various aspects of ELO XC
+
+Manager.
+
+License usage 
+
+Licenses are used when messages from a mailbox/SMTP address are stored in the ELO repository.
+
+The total number of all licenses used is known as license usage.
+
+You can use filters to narrow down long lists. The filter is a regex search pattern.
+
+The program records for each ID/mailbox address when the license was first used and when it was
+
+used last. If no new messages are stored for a longer period, a date on which the license can be
+
+freed up may be displayed.
+
+Log analysis 
+
+This tool allows you to summarize and subsequently evaluate ELO XC logs. The results are written
+
+to the _Summaries child folder of the log directory.
+
+Start date, End date: Start date and End date determine the time frame of the summary. It
+
+only takes includes log outputs with timestamps in this interval. Since all log times are in
+
+UTC, both search parameters must also be entered accordingly.
+
+Threshold: The threshold can be used as an optional restriction for values greater than 0 to
+
+only extract lines whose duration is higher than the entered number of milliseconds.
+
+Instance: The Instance parameter can be used for values other than * to restrict the summary
+
+to the logs of a specific instance.
+
+Create: This function calls the separate ELOxcLS.exe program, which processes the currently
+
+available logs based on the selected parameters. This process depends on the number of log
+
+files and the specified time interval so it may take some time.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+23 ELO XC
+
+
+
+Reload: The Reload option reloads the available summaries in _Summaries and displays
+
+them.
+
+You can open this area to view the package contents.
+
+Download viewer: To view the summary details, you need to use the log viewer and install it
+
+locally. The Download viewer option downloads a package which can be extracted to any
+
+directory and started with ELOxcLV.exe. You may be required to install NET6. This window
+
+opens:
+
+• 
+
+24 ELO XC
+
+
+
+In order to be able to view the summaries, the directory of the summaries must be entered
+
+into the parameter directory. Afterwards, the available summaries appear under Summaries.
+
+Service log type, Instance log type, Job log type: Service, Instance, and Job log type are
+
+additional filters for specific log types.
+
+Start at and End at: Start at and End at can be used to define the analysis period.
+
+Log level: Log level is the type of log message.
+
+Framework: The Framework option can be enabled to view Kestrel messages.
+
+Scope: The log scope is an internal designation and helps to locate the log message. If you
+
+do not want to filter by a specific scope, you can leave the field blank.
+
+Log message: The log message contains information about the current execution position. If
+
+you do not want to filter by a term in the log messages, you can leave the field blank.
+
+Stop: Logs of bulk jobs can grow to several MB in size. In such cases, it can take a while for
+
+the information to load. You can cancel these operations with Stop.
+
+Filter: By clicking Filter, all log lines with the specified filter settings are displayed. Examples
+
+with and without filters:
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+25 ELO XC
+
+
+
+Parameter help 
+
+ELO XC Manager provides tooltips for most places in the interface.
+
+26 ELO XC
+
+
+
+For example, if you move the mouse pointer over the Catalog type parameter name in the instance
+
+configuration, you will see the corresponding tooltip for this parameter. This view corresponds to
+
+the default settings of the browser.
+
+You can have the tooltips displayed as HTML instead. Open the Service settings dialog box in the
+
+tools menu and check the HTML tooltips box.
+
+This option improves the readability of tooltips.
+
+However, the HTML view of tooltips requires additional internal JavaScript calls between the
+
+browser and ELO XC, which may also prove to be a disadvantage depending on the browser.
+
+27 ELO XC
+
+
+
+You get all tooltips of the current parameters directly above the form view.
+
+Clicking the button opens the parameter help in a new browser tab.
+
+You get the full, structured description of the instance configuration fragment (technical name: 
+
+InstanceDef). In addition, the associated XML schemas of the fragment are displayed after the
+
+parameter descriptions. The technical names of parameters are marked blue.
+
+28 ELO XC
+
+
+
+Suppose that you don't remember where to find a parameter but only know that it had something
+
+to do with the term mailbox. In this case, you can search the tooltips using the Parameter help
+
+function in the tools menu.
+
+Open the Parameter help dialog box, enter mailbox, and click search.
+
+You get a list of all occurrences of the term mailbox.
+
+You decide to use the fragment CommitDef and want to read the corresponding parameter help.
+
+Click the question mark icon at the beginning of the line.
+
+The parameter help page opens again in a new browser tab.
+
+Each occurrence of the term mailbox is highlighted.
+
+Connection test 
+
+The connection test is the tool you should use to test the connection parameters of an instance if
+
+creating an ldap or m365 catalog automatically.
+
+29 ELO XC
+
+
+
+1 Connection parameters: The top part of the dialog box contains the connection parameters that
+
+are used for both the mailbox catalog and the EWS connection.
+
+2 Catalog test options
+
+3 EWS test options
+
+Clicking on the Catalog test or EWS test button displays the respective results. A list of found
+
+mailboxes is returned for the catalog tests and the connection log is displayed for the EWS tests.
+
+If you open this tool while configuring the instance for ldap or m365, it is initialized with the current
+
+parameters. You can apply changes to the configuration by clicking Save.
+
+30 ELO XC
+
+
+
+IMAP test 
+
+Similar to the test for automatic catalogs, the IMAP test enables you to check whether ELO XC can
+
+connect to an IMAP mailbox.
+
+If you open this tool from a corresponding instance configuration, it is initialized with the available
+
+parameters. After the test is completed, you can apply customized parameters to the instance
+
+configuration with Save.
+
+Please note
+
+Only the first entry from the list of static connections is tested.
+
+31 ELO XC
+
+
+
+Properties 
+
+The Properties tool helps you to find properties for processing messages. If you don't enter a name,
+
+all properties are displayed. However, you will usually search for specific terms and ranges.
+
+If you want to include senders in the metadata, you can search for sender.
+
+The returned list of defined Exchange properties is too large and contains irrelevant properties (see 
+
+Basics > Properties chapter).
+
+32 ELO XC
+
+
+
+The relevant properties are defined by ELO XC and are located at the end of the list of hits.
+
+Restricting the property range would show the hits immediately.
+
+When you are using property editors, it is possible that only MAPI names are available, which are
+
+not automatically recognized by ELO XC.
+
+33 ELO XC
+
+
+
+Regex 
+
+1 Matching pattern
+
+2 Replacement
+
+3 XML-compatible view of search and replace patterns
+
+4 Options
+
+5 Example with comment
+
+6 Text entry
+
+7 Result after replacement
+
+8 Results of the search
+
+34 ELO XC
+
+
+
+Classes 
+
+The Classes tool displays the set of supported message classes. The class filters enable you to
+
+search for specific classes. If you leave this field empty, all available classes are displayed.
+
+Mailbox usage 
+
+The current mailbox usage is displayed in a dialog box. For this to work, the mailbox catalog must
+
+have been loaded at least once in the active instance configuration. This is done with the Load
+
+mailbox catalog function or automatically while validating the configuration.
+
+35 ELO XC
+
+
+
+You can also use wildcards as display filters. If you want to see all mailboxes used in an action tree
+
+that has archive in the name, for example, you can use the Archive parameter.
+
+36 ELO XC
+
+
+
+Displayed mailboxes can also be added to a mailbox template.
+
+Static mailbox registration 
+
+Manually created mailbox catalogs are static since the associated connection data is not
+
+automatically determined and is therefore unchangeable. This also means that access credentials
+
+must be entered manually, which is acceptable for functional mailboxes such as a premium
+
+journal. As soon as personal mailboxes have to be configured statically, security-relevant data can
+
+be compromised, since mailbox owners are usually not the people who manage ELO XC.
+
+In this section, we will show you how mailbox owners can enter the connection details for their own
+
+mailboxes in ELO XC.
+
+This function is optionally enabled with a service parameter. You can use the service settings in the
+
+tools menu for this.
+
+Alternatively, you can set the StaticBoxReg property to true in the ConfServiceDef part of the 
+
+ELOxc.xml file. If this option is changed, you need to restart ELO XC for the changes to take effect.
+
+Mailbox owners can use the function via the URL http://xc-host.domain:port/statreg.
+
+SMTP address: The email address mailbox owners enter as the SMTP address.
+
+Authentication: The authentication name is authentication.
+
+Key: The password is key.
+
+As soon as you click Register, ELO XC transfers the connection data to the ELOxcBoxReg.xml file in
+
+the installation directory.
+
+• 
+
+• 
+
+• 
+
+37 ELO XC
+
+
+
+In our example we use two instances, one for a local Exchange server, and one for an IMAP server.
+
+Once we have registered both mailboxes, their entries can be found in ELOxcBoxReg.xml.
+
+The ELO XC administrator can now transfer this connection data to an instance configuration.
+
+We now transfer the local mailbox to the local Exchange server instance.
+
+38 ELO XC
+
+
+
+Click Apply to transfer the connection data to the list of static mailboxes.
+
+Next, switch to the IMAP server instance and open the mailbox registrations window again.
+
+Now you can select the IMAP mailbox and transfer it to the list of static connections.
+
+The local mailbox is still listed in the mailbox registrations even though already transferred the
+
+data. This is because you have the option to repeat the process for any number of instances. If you
+
+are sure that you no longer need the data, you can delete the entry.
+
+Information
+
+The registration process can be repeated for an SMTP address at any time. ELO XC
+
+recognizes the registered connections by address and updates authentication names or
+
+passwords in both the ELOxcBoxReg.xml file and the instance configuration as required.
+
+39 ELO XC
+
+
+	Table of contents
+	Operation
+	ELO XC Manager
+	Overview
+	Authentication
+	Menu
+	Service notifications
+	'User' drop-down menu
+	'Tools' drop-down menu
+
+	Instance overview
+	Instance configuration
+	Configuration functions
+	Configuration structure
+	Tree functions
+	Form functions
+	Display functions
+
+
+	Instance overview
+	Register instance
+	Publish configuration
+	Change registration
+	Delete registration
+	Start/stop instance
+	Processing statistics
+
+	Tools
+	Service settings
+	License usage
+	Log analysis
+	Parameter help
+	Connection test
+	IMAP test
+	Properties
+	Regex
+	Classes
+	Mailbox usage
+	Static mailbox registration
+
+
+

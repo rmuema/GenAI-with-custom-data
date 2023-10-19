@@ -1,0 +1,1821 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Configuration and administration | ELO Replication
+
+
+Configuration and
+
+administration
+
+ELO Replication
+
+
+
+3
+
+3
+
+10
+
+14
+
+16
+
+43
+
+Table of contents
+
+ELO Replication
+
+Getting started 
+
+Basics 
+
+Installation 
+
+Configuration 
+
+Monitoring 
+
+2 Configuration and administration
+
+
+
+ELO Replication
+
+Getting started 
+
+You will find an overview of configuring ELO Replication at two locations here. Follow the links for
+
+more detailed information about the individual steps.
+
+Overview: Configuring replication at two locations 
+
+To configure ELO Replication at at least two locations, perform the following steps:
+
+1. Install at location 1 and location 2.
+
+Install ELO Replication at both locations using the ELO Server Setup on the Applications tab.
+
+2. Configure location 1.
+
+Open your browser and go to the ELO Application Server overview page.
+
+To open the configuration, click /rp.
+
+Log on to ELO Replication with the Apache Tomcat user data.
+
+Choose a location name.
+
+Once you have set your location, draft mode opens.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+3 Configuration and administration
+
+
+
+You can enter the settings for all participating locations from your location.
+
+To add a new location, click the plus icon and then anywhere in the viewer pane.
+
+To add a new connection between two locations, place the mouse on a location. The
+
+connection icon appears. Press and hold down the mouse button and drag the connection to
+
+another location.
+
+To show the setting options, click a location.
+
+The location settings appear on the left.
+
+5. 
+
+6. 
+
+7. 
+
+4 Configuration and administration
+
+
+
+Fill out the fields accordingly.
+
+Click the plus icon in the Repositories area to add a repository. A replication set is
+
+automatically created for each repository, which you can assign to an entry in the ELO Java
+
+Client or the ELO Web Client.
+
+Under Scheduler for automatic transfer, define when to export data from the repository.
+
+Please note
+
+The specified interval time refers to the local time of the respective server. All servers
+
+hosting repositories involved in replication must be in sync in terms of time for the
+
+comparison via timestamp to work.
+
+Please note
+
+The scheduler calculates in hours. For example, if you enter a time from 8:00 a.m. to
+
+6:00 p.m., replication begins at 8:00 a.m. and ends at 6:59 p.m.
+
+8. 
+
+9. 
+
+10. 
+
+5 Configuration and administration
+
+
+
+In the drop-down menu you will find the preconfigured intervals Default and Import only, as
+
+well as all intervals you have created. To create new intervals or change existing ones, click
+
+the pencil icon.
+
+The Scheduler for automatic transfer menu opens. Clicking the plus icon adds a new
+
+schedule. Clicking the eraser icon deletes a schedule.
+
+The input options Simple and Expert are available for the scheduler for automatic transfer.
+
+With the input option Simple, you can choose from default intervals and customize them.
+
+With the input option Expert, you can control the scheduler for automatic transfer more
+
+precisely using variables.
+
+3. Publish replication at location 1.
+
+Once you are finished making settings, you can enable replication. In draft mode, click Publish.
+
+Please note
+
+During initial configuration, you will have to publish the configuration at all participating
+
+locations.
+
+4. Send configuration file to location 2.
+
+A configuration file with your settings is created automatically for each location. Download the
+
+configuration file by clicking Download configuration on the overview page. Send the configuration
+
+file to the relevant location. There, the administrator logs on to ELO Replication and uploads the
+
+configuration file.
+
+6 Configuration and administration
+
+
+
+5. Insert configuration file at location 2.
+
+Open the configuration via the ELO Application Server overview page and log on to ELO
+
+Replication using the Apache Tomcat user data.
+
+Information
+
+You do not have to enter a location name. The location name from the configuration
+
+file is automatically applied.
+
+Insert the configuration file.
+
+Confirm the location.
+
+1. 
+
+2. 
+
+3. 
+
+7 Configuration and administration
+
+
+
+The settings are applied.
+
+6. Publish replication at location 2.
+
+To enable replication, in draft mode, click Publish.
+
+7. Assign replication sets at location 1 and/or location 2.
+
+Once you have published the replication at the participating locations, you have to assign the
+
+individual entries replication sets. Each replication set stands for one repository. The replication set
+
+is a characteristic that you assign to individual repositories in order to replicate them in another
+
+repository. The individual entries to be replicated are selected in the ELO Java Client or ELO Web
+
+Client using the Assign replication sets function.
+
+8 Configuration and administration
+
+
+
+You will find the Assign replication sets functions in Ribbon > Organize > Properties.
+
+Please note
+
+You should log which entries you assign which replication sets.
+
+Please note
+
+Replication sets are inherited upward to parent folders in the repository structure. To prevent
+
+inheritance, select the Start point for replication option in the Metadata dialog box of the
+
+entry you want to replicate. In the ELO Java Client, this function is only available for folders.
+
+You will find more information in the chapter Replication set inheritance.
+
+Result 
+
+Once you have performed the steps above, the entries are replicated according to your settings in
+
+the configuration.
+
+9 Configuration and administration
+
+
+
+Basics 
+
+In the following chapter, you will learn how data synchronization and data transfer work.
+
+Functionality 
+
+ELO Replication compares entries between multiple repositories. The relevant repositories can be
+
+installed at different locations. ELO Replication transfers the data to the relevant repositories. This
+
+means the repositories do not necessarily have to be available to one another.
+
+ELO Replication is a web app based on Java that is installed on an Apache Tomcat.
+
+Replication set 
+
+The replication set is a characteristic that you assign to individual repositories in order to replicate
+
+them in another repository. Create locations and add repositories in the web-based configuration.
+
+Using the ELO Indexserver URL, specify which repositories data is replicated from. A replication set
+
+is created automatically in the configuration when you add a new repository. Each replication set
+
+stands for one repository. The individual entries (folders, documents) to be replicated are selected
+
+in the ELO Java Client or ELO Web Client using the "Assign replication sets" function. With this
+
+function, you select the repository you want to export the entries to. This means you select a
+
+repository the entries are replicated to.
+
+Data synchronization 
+
+ELO Replication captures, distributes, and transfers changes to the relevant repositories. An
+
+extension to the ELO Indexserver creates a synchronization data set with the changes to a
+
+repository. The format of this data set is a compressed stream of JSON objects from the ELO
+
+Indexserver API. The data in this stream is selected in the ELO Indexserver based on its
+
+synchronization status. The following options are available:
+
+Entries without a replication set: Entries that you do not want to synchronize are not assigned a
+
+replication set. A replication set determines which other repositories the entry is synchronized with.
+
+Entries without a replication set are not added to the synchronization data set.
+
+Entries with a new replication set: Entries that you want to synchronize are assigned new
+
+replication sets. The information from the entries is added to the synchronization data set. All the
+
+entry information is only sent to the repositories assigned the new replication set. If entries have
+
+already been assigned replication sets, their repositories are simply informed that the entries are
+
+now replicated with additional repositories.
+
+The ELO Indexserver assigns replicated entries the tstampsync field when creating the
+
+synchronization data set in the database. The tstampsync field contains the value from the
+
+corresponding tstamp field at the time the data was read from the database. In the synchronization
+
+data set, the tstampsync contains the value it had when the database was read. This difference
+
+plays an important role when importing the data set.
+
+10 Configuration and administration
+
+
+
+Information
+
+The name of the tstampsync field varies depending on the table.
+
+Entries changed since the last synchronization: The entries were changed since the last
+
+synchronization. To recognize a change, the tstamp and tstampsync fields are compared. In case of
+
+changes, the ELO Indexserver automatically sets the tstamp field to the current time in UTC
+
+(Coordinated Universal Time).
+
+Entries unchanged since the last synchronization: The entries were not changed since the last
+
+synchronization. For unchanged entries, the values in the tstamp and tstampsync fields are
+
+identical. Unchanged entries are not added to the synchronization data set.
+
+Data transfer 
+
+The synchronization data set is created by the ELO Indexserver. ELO Replication initiates its
+
+creation based on a configured schedule. The synchronization data set is streamed by the ELO
+
+Replication to the other locations, and from there it is streamed to the ELO Replication of the other
+
+repositories so it can be imported. During streaming, the data set is processed between the ELO
+
+Replication instances. Only the data required is sent at the target is sent.
+
+To compensate for instabilities during transmission, ELO Replication caches the data sets. If
+
+disconnected, ELO Replication re-attempts to send the data set once a minute. The data set is
+
+transferred all over again, regardless of when the previous transfer was interrupted.
+
+The SSHD library from the Apache MINA project is used for data transfer. The method with public
+
+and private keys is used exclusively for authentication. The keys are automatically generated for
+
+each location when configuring ELO Replication.
+
+Information
+
+You can add additional options for transferring data by creating and integrating plug-ins.
+
+The ELO Indexserver imports the synchronization data set into the target repository. The following
+
+options are available:
+
+Entry does not exist in repository: The GUID is used to check whether an entry already exists in the
+
+repository. If the entry does not exist in the repository, it is imported.
+
+Entry already exists in the repository and has not changed since the last synchronization: The
+
+values in the tstampsync fields of the synchronization data set and repository entries are identical.
+
+The entry is imported into the repository. The entry in the repository is overwritten with the values
+
+from the synchronization data set.
+
+Entry already exists in the repository and has competing changes: The values in the tstamp fields
+
+of the synchronization data set and repository entries do not match. If an entry has been changed
+
+in multiple repositories, the latest change is applied. If the latest change comes from the target
+
+11 Configuration and administration
+
+
+
+repository, the entry in the synchronization data set is ignored. Otherwise, the values of the entry
+
+in the repository would be replaced with the values in the synchronization data set.
+
+In rare cases, the values in the tstampsync fields may differ. This occurs when a synchronization
+
+data set is created in the local repository before the synchronization data set of the other
+
+repository has been read and the entry is changed in both repositories. The latest change is applied
+
+in this case as well.
+
+What data is replicated? 
+
+The following data is synchronized during replication:
+
+Folders
+
+Documents
+
+Sticky notes
+
+Relations
+
+Workflows
+
+Workflow templates
+
+Map data
+
+Feed
+
+Master data: users and groups (via owners and ACLs), metadata forms, aspects, colors,
+
+replication sets
+
+Master data is resolved recursively. For example, if a user is listed in the ACL of a folder, this user's
+
+groups are also included in the synchronization data set.
+
+How is master data replicated? 
+
+During data export, the ELO Indexserver checks which master data belongs to a SORD.
+
+Only users that a SORD explicitly refers to are replicated. If you want to replicate a specific user,
+
+this user has to be referenced by a SORD, e.g. via permissions (Metadata > Permissions) or Owner
+
+rights (Create folder, File document, Apply stamp/annotation, Start workflow).
+
+Please note
+
+If a user is replicated, the groups the user belongs to are also replicated (without the
+
+individual members).
+
+If a group is replicated, for example because it has permission to a SORD, the individual
+
+group members are not replicated.
+
+If a metadata form is replicated, a time stamp is set in the masktstampsync field of the docmasks
+
+table in the database. Metadata forms that have already been replicated are added to the
+
+synchronization data set if changes have been made to the forms.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+12 Configuration and administration
+
+
+
+How are workflows replicated? 
+
+The following section describes the behavior starting with ELO Indexserver version 21.03.
+
+With the default settings, a workflow can only run in one repository. During data export, the
+
+workflow is assigned a flag indicating which repository it is running in. In the target repository, the
+
+workflow is displayed after replication but it will not continue. You cannot start, edit, or delete the
+
+workflow in the target repository.
+
+To use the workflow in the target repository as well, the flag needs to be changed during export.
+
+This is done with a server transfer node, which is added in the workflow designer. If a server
+
+transfer node is set, the workflows stops at this node. Once the data has been transferred through
+
+replication, the workflow continues in the target repository. The entire workflow including all
+
+subworkflows is always replicated.
+
+Please note
+
+The server transfer can only take place in a main workflow, not in a subworkflow. If you want
+
+to start a subworkflow at location B, the server transfer must take place in the main
+
+workflow at location A. If a group is replicated, for example because it has permission to a
+
+SORD, the individual group members are not replicated.
+
+A subworkflow should only run at one location. You should not start a subworkflow at
+
+location A and continue it at location B, as conflicts that cannot be resolved automatically
+
+can occur if the main workflow and subworkflow are running in different repositories at the
+
+same time.
+
+13 Configuration and administration
+
+
+
+Installation 
+
+This chapter explains how to install ELO Replication.
+
+Requirements 
+
+The following requirement must be met for installation:
+
+All servers hosting repositories involved in replication must be in sync in terms of time for the
+
+comparison via timestamp to work.
+
+Please note
+
+The same version of ELO Replication and the ELO Indexserver should be installed at all
+
+locations.
+
+Step by step 
+
+Attention
+
+Replication sets and their assignments in the repository that were created in a version older
+
+than ELO Replication 12 will be deleted when migrating to ELO Replication 21. Before
+
+performing a migration, create an overview of replication sets and their assignments so you
+
+can reconfigure them in version 21.
+
+Information 
+
+Install ELO Replication using the ELO Server Setup on the Applications tab.
+
+Step by step 
+
+Start the ELO Server Setup.
+
+On the Applications tab, click Add ELO Replication.
+
+Select an ELO server you want to install the module to.
+
+Follow the instructions of the ELO Server Setup to complete installation.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+14 Configuration and administration
+
+
+
+Result 
+
+You have installed ELO Replication.
+
+To open the ELO Replication configuration, open your browser and go to the ELO Application Server
+
+overview page. For more information, refer to the chapter Configuration.
+
+Please note
+
+If you perform an update of the ELO Server Setup to move the ELO Replication module to
+
+another Apache Tomcat server, files from the data folder in the directory <ELO>\data\rp\
+
+<Tomcat of replication site> are not transferred. To ensure that there are no files missing in
+
+the target repository, all files from the old data folder must be moved to the data folder in
+
+the new Tomcat directory.
+
+You need to stop the Apache Tomcat server before you move the files. After restarting the
+
+Tomcat, the configuration is loaded.
+
+If you make changes to the Tomcat, such as adding a new host or changing the ports, you
+
+need to publish the respective configurations in the ELO Replication menu again.
+
+15 Configuration and administration
+
+
+
+Configuration 
+
+Create locations and add repositories in the web-based configuration. Using the ELO Indexserver
+
+URL, specify which repositories data is replicated from. A replication set is created automatically in
+
+the configuration when you add a new repository. Each replication set stands for one repository. The
+
+replication set is a characteristic that you assign to individual repositories in order to replicate
+
+them in another repository. The individual entries (folders, documents) to be replicated are selected
+
+in the ELO Java Client or ELO Web Client using the "Assign replication sets" function. With this
+
+function, you select the repository you want to export the entries to. This means you select a
+
+repository the entries are replicated to.
+
+Attention
+
+Replication sets and their assignments in the repository that were created in a version older
+
+than ELO Replication 12 will be deleted when migrating to ELO Replication 21. Before
+
+performing a migration, create an overview of replication sets and their assignments so you
+
+can reconfigure them in version 21.
+
+To configure ELO Replication for the first time, log on at any location and configure the settings as
+
+desired. These settings are saved in a configuration file. You can send the configuration file to other
+
+locations. This means you only have to configure replication manually at one location.
+
+Overview 
+
+To configure ELO Replication at at least two locations, perform the following steps. For more
+
+information on the individual steps, refer to the chapters Installation and the following sections.
+
+Install at location 1 and location 2.
+
+Configure location 1.
+
+Publish replication at location 1.
+
+Send configuration file to location 2.
+
+Insert configuration file at location 2.
+
+Publish replication at location 2.
+
+Assign replication sets at location 1 and/or location 2.
+
+Information
+
+Once you have performed steps 1 - 7, you can manually start an export from the local
+
+repository for test purposes. The export starts immediately, regardless of the configured
+
+schedule. Click Start export on the ELO Replication overview page.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+6. 
+
+7. 
+
+16 Configuration and administration
+
+
+
+Initial logon 
+
+Information 
+
+Once you have installed ELO Replication, you can set up a replication network in the configuration.
+
+The first time you log on to ELO Replication, proceed as follows:
+
+Step by step 
+
+Open your browser and go to the ELO Application Server overview page.
+
+To open the configuration, click /rp.
+
+Log on to ELO Replication with the Apache Tomcat user data.
+
+1. 
+
+2. 
+
+3. 
+
+17 Configuration and administration
+
+
+
+The first time you log on, you will have to set a location name. If you already have a
+
+configuration file for ELO Replication, you can select it here.
+
+Information
+
+For more detailed information on inserting a configuration file, refer to the chapter Create/
+
+insert a configuration for other locations.
+
+Result 
+
+Once you have set your location, draft mode opens. Here, you can configure and edit a new
+
+replication as well as publish drafts.
+
+Next step 
+
+To show the setting options, click the location.
+
+4. 
+
+18 Configuration and administration
+
+
+
+Information
+
+For more detailed information on setting up a replication network, refer to the additional
+
+sections in the chapter Configuration.
+
+Draft mode (overview) 
+
+In draft mode, you can configure and edit a new replication as well as publish drafts.
+
+Please note
+
+Bi-directional replication is possible between two locations. Serial replication between
+
+multiple locations in a loop is not possible.
+
+1 Viewer pane: Here, you will see the locations and connections in the replication network. Your
+
+local location is marked with a pin icon. The location currently selected that you are changing the
+
+settings for is shown in yellow.
+
+2 Back: If you don't want to publish a draft yet or want to continue editing it at a later point in time,
+
+exit draft mode by clicking the back arrow. The draft is saved. You return to the overview page.
+
+3 Selection: If this button is enabled, you can select a location with the mouse in the viewer pane
+
+and move it. A dialog box appears on the right for each selected location where you can enter the
+
+data for the location.
+
+19 Configuration and administration
+
+
+
+4 New location/new connection: If this button is enabled, you can add new locations and
+
+connections.
+
+To add a new connection, click anywhere in the viewer pane.
+
+Before you add a connection, you need to set up an interface in the location settings. For more
+
+information, refer to the Location settings chapter. To add a new connection, place the mouse on a
+
+location. The connection icon appears. Press and hold down the left mouse button and drag the
+
+connection to another location.
+
+5 Delete: If this button is enabled, you can delete locations and connections.
+
+6 Scheduler for automatic transfer: This button opens the scheduler for automatic transfer. For
+
+more information, refer to the Scheduler for automatic transfer chapter.
+
+7 Location settings: If you click a location in the viewer pane, the setting options for the location
+
+appear here. Your entries are saved automatically as soon as you leave an input field. For more
+
+information on these settings, refer to the chapters Location settings and Scheduler for automatic
+
+transfer.
+
+8 Status: You will find the version number and status information here.
+
+9 Language: Set the display language here You can choose between German and English.
+
+10 Log off: Click this button to log off of ELO Replication.
+
+11 Publish: To enable a replication, click Publish. For more information, refer to the chapter Publish
+
+replication.
+
+12 Discard: To delete a draft or discard your changes, click Discard.
+
+Location settings 
+
+Overview 
+
+In the configuration, you can add locations. A dialog box appears for each location where you can
+
+enter the data for the location. Your entries are saved automatically as soon as you leave an input
+
+field.
+
+You can enter the configuration settings for all participating locations from your location. A
+
+configuration file with your settings is created automatically for each location. Download the
+
+configuration file by clicking Download configuration on the overview page. Send the configuration
+
+file to the relevant location. There, the administrator logs on to ELO Replication and uploads the
+
+configuration file. You can find more information in the section Create/insert a configuration for
+
+other locations.
+
+20 Configuration and administration
+
+
+
+Name: Enter the name of the location.
+
+Interfaces 
+
+Click the plus icon to add an interface.
+
+Schema: Select SSH or BundleExchange.
+
+Once you have made a selection, a rectangle appears over the location in the viewer pane. You can
+
+move the rectangle with the mouse to connect two locations. To add a new connection, enable the 
+
+New connection button and place the mouse on a location. The connection icon appears. Press and
+
+hold down the left mouse button and drag the connection to a rectangle of another location. You can
+
+only connect interfaces of the same schema. You can only place one rectangle per schema for a
+
+single location. This rectangle can be used to add connections to multiple locations. To delete a
+
+rectangle, enable the Delete button and click on the rectangle.
+
+SSH schema
+
+IP address or server name: Enter the IP address or the name of the server ELO Replication is
+
+installed on.
+
+21 Configuration and administration
+
+
+
+Port: Enter the port for establishing the connection.
+
+Information
+
+Note your firewall settings. The port must be enabled for ELO Replication.
+
+BundleExchange schema
+
+BundleExchange enables data transmission between locations that do not share a network
+
+connection. In the configuration, specify a source folder and a target folder for file transfer. Enter
+
+the full folder path, e.g. C:\Replication\Target. ELO Replication writes files to the target folder in
+
+rBundle format for transferring to other locations. The target folder is monitored by ELO Replication.
+
+All rBundle files in this folder are processed as incoming file transfers. Data is transferred between
+
+the source and target folders using a third-party application that you must install yourself.
+
+Information
+
+You can add additional options for transferring data by creating and integrating plug-ins and
+
+by selecting them from the drop-down menu.
+
+Repositories 
+
+Click the plus icon to add repositories. A replication set is automatically created for each
+
+repository, which you can assign to an entry in the ELO Java Client or the ELO Web Client.
+
+22 Configuration and administration
+
+
+
+Name: Enter the name of the repository.
+
+Indexserver URL: Enter the URL to the ELO Indexserver.
+
+Scheduler for automatic transfer: Define when to export data from the repository. In the drop-down
+
+menu you will find the preconfigured intervals Default and No automatic export, as well as all
+
+intervals you have created. To create new intervals or change existing ones, click the pencil icon.
+
+For detailed information, refer to the Scheduler for automatic transfer chapter.
+
+Information
+
+The scheduler for automatic data transfer allows you to control the export of data. If you do
+
+not want to export data from the selected repository, select the No automatic import
+
+schedule. In this case, there is no scheduled data export from the repository; instead, data
+
+will only be automatically imported into the repository. If necessary, you can trigger data
+
+export manually.
+
+Scheduler for automatic transfer 
+
+The scheduler for automatic transfer allows you to define when to export data from the repository.
+
+In the drop-down menu you will find the preconfigured intervals Default and No automatic export,
+
+as well as all intervals you have created.
+
+23 Configuration and administration
+
+
+
+Please note
+
+The specified interval time refers to the local time of the respective server. All servers
+
+hosting repositories involved in replication must be in sync in terms of time for the
+
+comparison via timestamp to work.
+
+Please note
+
+The scheduler calculates in hours. For example, if you enter a time from 8:00 a.m. to 6:00
+
+p.m., replication begins at 8:00 a.m. and ends at 6:59 p.m.
+
+'Default' interval 
+
+In the Default interval, data is exported from the repository: every 60 minutes, from 8 a.m. to 6
+
+p.m., from Monday to Friday.
+
+'No automatic export' interval 
+
+The scheduler for automatic data transfer allows you to control the export of data. If you do not
+
+want to export data from the selected repository, select the No automatic import schedule. In this
+
+case, there is no scheduled data export from the repository; instead, data will only be
+
+automatically imported into the repository. If necessary, you can trigger data export manually.
+
+'Scheduler for automatic transfer' menu 
+
+To create new intervals or change existing ones, click the pencil icon.
+
+24 Configuration and administration
+
+
+
+The Scheduler for automatic transfer menu opens. Clicking the plus icon adds a new schedule.
+
+Clicking the eraser icon deletes a schedule.
+
+The input options Simple and Expert are available for the scheduler for automatic transfer. With the
+
+input option Simple, you can choose from default intervals and customize them. With the input
+
+option Expert, you can control the scheduler for automatic transfer more precisely using variables.
+
+Only one of the two options can be enabled. To use the expert input option, go to the Expert tab and
+
+check the Use expert mode box.
+
+'Simple' input option 
+
+Add a new schedule with the plus icon.
+
+In the Repeat every field, set an interval for exporting data.
+
+In the fields Limit from … to …, you specify during which hours replication should take place. In the
+
+example above, replication takes place in the morning at 8:00, 8:15, 8:30, and 8:45.
+
+In the fields Between ... and ..., set the days of the week to repeat replication.
+
+'Expert' input option 
+
+With the input option Expert, you can control the scheduler for automatic transfer more precisely
+
+using variables.
+
+Add a new schedule with the plus icon.
+
+25 Configuration and administration
+
+
+
+Syntax 
+
+Field Input
+
+Minute 0-59
+
+Hour 0-23
+
+Day of the month 1-31
+
+Weekday 1-7 (1 is Sunday)
+
+Month 1-12
+
+Please note
+
+You can set the days in two fields: Day of the month or Weekday. To avoid competing
+
+entries, set the days in either the Day of the month or Weekday field. In the other field, enter
+
+the variable ?. The field with the variable ? is not run.
+
+Variables 
+
+Variable Meaning
+
+* Always run (every...)
+
+*/n Run every n
+
+n,x,y Run at/on n, x, and y
+
+n-x Run from n to x (x included)
+
+? Field is not run; only applies to Day of the month and Weekday
+
+The following presents two examples of expert scheduling:
+
+Example 1 
+
+In this example, replication takes place:
+
+Every 15 minutes
+
+From 6:00 a.m. to 8:45 p.m.
+
+From Sunday to Thursday
+
+Every month
+
+The field Day of the month is not evaluated as it contains the variable ?.
+
+• 
+
+• 
+
+• 
+
+• 
+
+26 Configuration and administration
+
+
+
+Example 2 
+
+In this example, replication takes place:
+
+In minute 0 and 30
+
+From 8 a.m.
+
+From the 1st to the 10th day of the month
+
+In February
+
+The field Weekday is not evaluated as it contains the variable ?.
+
+Time display of the next data export 
+
+After creating the schedule and publishing the replication, you can see when the time of the next
+
+data export is scheduled in the overview page of each location.
+
+Publish replication 
+
+To enable a replication, you have to publish your draft. In draft mode, click Publish.
+
+Please note
+
+During initial configuration, you will have to publish the replication at all participating
+
+locations. In case of later changes, you only have to publish the new draft at one location.
+
+The changes are automatically applied to all locations.
+
+• 
+
+• 
+
+• 
+
+• 
+
+27 Configuration and administration
+
+
+
+If you add a new location for an active replication, you will have to upload the configuration
+
+file at the new location and publish the replication there.
+
+Please note
+
+You cannot publish a draft until you have completed all entries. You can check this with the
+
+status message that is displayed at the bottom of the window.
+
+Changes: Correct:
+
+Your entries are complete. You can publish the draft.
+
+Changes: Incomplete: You still need to make entries. An error message is displayed in the
+
+corresponding section and you can click the Navigate to error button to go straight to the
+
+incomplete input field.
+
+28 Configuration and administration
+
+
+
+Create/insert a configuration for other locations
+
+Information 
+
+You can enter the configuration settings for all participating locations from your location. A
+
+configuration file with your settings is created automatically for each location. Download the
+
+configuration file by clicking Download configuration on the overview page. Send the configuration
+
+file to the relevant location. There, the administrator logs on to ELO Replication and uploads the
+
+configuration file.
+
+Please note
+
+During initial configuration, you will have to upload a configuration file at all locations. In
+
+case of later changes, you only have to publish the new draft at one location. The changes
+
+are automatically applied to all locations. For more information, refer to the chapter Edit
+
+configuration.
+
+If you add a new location for an active replication, you will have to upload the configuration file at
+
+the new location and publish the replication there.
+
+Location 1: Download configuration file 
+
+Requirement: You have completed location configuration and published the replication at location 1.
+
+On the overview page, click an external location you have already configured.1. 
+
+29 Configuration and administration
+
+
+
+Click the Load configuration button.
+
+The configuration is downloaded as a JSON file. The location name is used as the file name.
+
+Send the configuration file to the administrator at the other location.
+
+Location 2: Upload configuration file 
+
+Log on to ELO Replication with the Apache Tomcat user data.
+
+Information
+
+You do not have to enter a location name. The location name from the configuration
+
+file is automatically applied.
+
+Insert the configuration file.
+
+Confirm the location.
+
+2. 
+
+3. 
+
+1. 
+
+2. 
+
+3. 
+
+30 Configuration and administration
+
+
+
+Once you have confirmed the configuration file, draft mode opens. You will see the locations
+
+in the replication network. The settings from the configuration file were applied.
+
+To enable the replication for your location, click Publish.
+
+Result 
+
+The replication sets are created. The SSH port is started.
+
+Next step 
+
+Once you have published the replication at the participating locations, you have to assign the
+
+individual entries replication sets. This means you determine what entries are replicated and
+
+where. For more detailed information, refer to the chapters Assign replication sets and Replication
+
+set inheritance.
+
+Replication set inheritance 
+
+Replication sets are automatically created in the configuration when you add a new repository. Each
+
+replication set stands for one repository. The replication set is a characteristic that you assign to
+
+individual repositories in order to replicate them in another repository. The individual entries
+
+(folders, documents) to be replicated are selected in the ELO Java Client or ELO Web Client using
+
+the Assign replication sets function.
+
+Information
+
+4. 
+
+31 Configuration and administration
+
+
+
+You only have to assign replication sets at one location. The assigned replication sets are
+
+also configured at the other locations through replication.
+
+Default: Inheritance to parent folder 
+
+Replication sets are inherited upward to parent folders in the repository structure.
+
+Example: If you assign the folder C including its child entries a replication set, the entries marked
+
+in yellow are replicated. The replication set is inherited to the parent folders.
+
+'Start point for replication' option 
+
+To prevent the replication sets from being inherited to the parent folders, select the Start point for
+
+replication option in the Metadata dialog box of the entry you want to replicate. The Start point for
+
+replication option allows you to replicate parts of repositories that are not filed to identical
+
+repository structures.
+
+Please note
+
+In the ELO Java Client, this function is only available for folders.
+
+Please note
+
+32 Configuration and administration
+
+
+
+Enable the Start point for replication option before assigning the entry a replication set.
+
+Example: You have enabled the Start point for replication option for the C folder. If you then assign
+
+the C folder including its child entries a replicated sets, only the folder C and its child entries are
+
+replicated (marked yellow). The replication set is not inherited to the parent folders.
+
+33 Configuration and administration
+
+
+
+During the next replication process, the C folder is filed to the following path in the target
+
+repository: // Administration // Replication Base. From there, the administrator moves the folder to
+
+the desired location in the target repository. This only has to be performed during the initial
+
+replication process. The replication remembers the repository structure.
+
+Assign replication sets 
+
+Information 
+
+Replication sets are automatically created in the configuration when you add a new repository. Each
+
+replication set stands for one repository. The replication set is a characteristic that you assign to
+
+individual repositories in order to replicate them in another repository. The individual entries
+
+(folders, documents) to be replicated are selected in the ELO Java Client or ELO Web Client using
+
+the Assign replication sets function. This means you select a repository the entries are replicated
+
+to. The name of a replication set in the ELO client is made up of the location name and the name of
+
+the repository.
+
+Information
+
+The following uses screenshots of the ELO Java Client.
+
+Information
+
+34 Configuration and administration
+
+
+
+You only have to assign replication sets at one location. The assigned replication sets are
+
+configured at the other locations through replication.
+
+You will find the Assign replication sets functions in Ribbon > Organize > Properties.
+
+Requirements 
+
+You need the right Assign replication sets. This right is enabled in the ELO Administration Console.
+
+Please note
+
+You should log which entries you assign which replication sets.
+
+Please note
+
+Documents with the status Version control disabled cannot be replicated. You will find the
+
+document status at Ribbon > Organize > Metadata > 'Options' tab.
+
+Step by step 
+
+In the ELO client, select the entry you want to assign a replication set to.
+
+On the ribbon, click Organize > Properties > Assign replication sets.
+
+The Assign replication sets dialog box opens.
+
+1. 
+
+2. 
+
+3. 
+
+35 Configuration and administration
+
+
+
+Click Add.
+
+The Add replication set dialog box opens.
+
+You will see all the replication sets defined in the configuration. The name of the replication
+
+set is made up of the location name and the name of the repository.
+
+Information
+
+The local replication set, that is the replication set where the entries are located, is
+
+assigned automatically. You do not have to add it manually.
+
+Select one or more replication sets and confirm with OK.4. 
+
+36 Configuration and administration
+
+
+
+The replication sets appear in the Assign replication sets dialog box.
+
+Please note
+
+Replication sets are inherited upward to parent folders in the repository structure. To
+
+prevent inheritance, select the Start point for replication option in the Metadata dialog
+
+box of the entry you want to replicate. In the ELO Java Client, this function is only
+
+available for folders. You will find more information in the chapter Replication set
+
+inheritance.
+
+The following options are available:
+
+Including child entries: If this option is enabled, the replication set is also assigned to the
+
+child entries of the selected entry.
+
+Set: All the listed replication sets are assigned to the entry.
+
+Differences: This option should only be used in combination with the Include child entries
+
+option. Differences: If you removed replication sets from the list and/or added replication
+
+sets to the list, this change is passed on to the entries. Replication sets from the list that
+
+were not changed are not passed on. The replication sets of the entries that were not
+
+changed are retained.
+
+37 Configuration and administration
+
+
+
+In the example above, a folder and its child folders have different replication sets. The Assign
+
+replication sets dialog box opens for the folder. The Include child entries option is enabled.
+
+The Blue, Orange, and Pink replication sets are already assigned to the folder. The Green
+
+replication set is added. The Differences option is selected. The Green replication set is
+
+added to the list again. This change is passed on to the folder and its child folders.
+
+Replication sets from the list that were not changed are not passed on. The Blue, Orange, and
+
+Pink replication sets are not assigned again. This means the child folder is not assigned the 
+
+Pink replication set. The replication sets of the entries that were not changed are retained.
+
+Folders and child folders retain their original replication sets and are additionally assigned
+
+the Green replication set.
+
+Cut: The replication sets are assigned to the entry. The replication sets that are not within
+
+this intersection are removed. This option should only be used in combination with the 
+
+Include child entries option. Use the Cut option if, for example, it is unclear due to the set 
+
+Start point for replication which replication sets are assigned to the child entries and you only
+
+want to inherit the replication sets selected in the dialog box. In contrast to the Set option,
+
+with the Cut option you cannot assign any new replication sets. With the Cut function, you
+
+can delete replication sets from child entries that are not contained in the parent entry.
+
+38 Configuration and administration
+
+
+
+In the example above, a folder and its child folders have different replication sets. The Assign
+
+replication sets dialog box opens for the folder. The Include child entries option is enabled.
+
+The Blue, Orange, Pink, and Yellow replication sets are already assigned to the folder. The 
+
+Orange replication set is deleted. The Cut option is selected. The replication sets are
+
+assigned. The replication sets that do not overlap between the initial status and the
+
+reassignment are removed. Only the Orange replication set is removed from the folder. With
+
+the child folder, the Orange, Green, and Yellow replication sets do not overlap between the
+
+initial status and the reassignment. For this reason, the child folder is not assigned the Yellow
+
+replication set. The Orange and Green replication sets are removed from the child folder.
+
+Make the desired changes to the settings and confirm with OK.
+
+Result 
+
+You have assigned the selected replication sets. During the next replication process, the selected
+
+entry will be replicated.
+
+Outlook 
+
+You can check the transfer status on the ELO Replication overview page.
+
+5. 
+
+39 Configuration and administration
+
+
+
+On the overview page, click a location. The transfer overview opens on the right. You will recognize
+
+a replication based on the repository icon in the Type column. Successful transfer is indicated by
+
+two check marks in the Status column. For more information, refer to the chapter Monitoring.
+
+Edit configuration 
+
+Information 
+
+You can edit the configuration of a published replication. During editing, the replication remains
+
+active. To apply your changes to the published replication, click Publish in draft mode.
+
+Information
+
+If you publish a new draft, the changes are automatically applied to all locations. You do not
+
+have to update the configuration manually at the different locations.
+
+If you add a new location, you will have to upload the configuration file at the new location and
+
+publish the replication there. You can find more information in the section Create/insert a
+
+configuration for other locations.
+
+40 Configuration and administration
+
+
+
+Step by step 
+
+On the overview page, click Edit draft.
+
+Draft mode opens.
+
+For more detailed information on the configuration settings, refer to the Draft mode
+
+(overview), Location settings, and Scheduler for automatic transfer chapters.
+
+Make the desired changes. Your changes are saved automatically as soon as you leave an
+
+input field.
+
+To end editing, you have the following options:
+
+Publish changes: To apply your changes to the published replication, click Publish.
+
+Discard changes: To delete your changes, click Discard. The published replication is not
+
+changed.
+
+Save draft: If you don't want to publish the new draft yet or want to continue editing it
+
+at a later point in time, exit draft mode by clicking the back arrow or log off. Your draft
+
+is saved automatically. The published replication is not changed. To continue editing,
+
+click Edit draft on the overview page.
+
+Result 
+
+You have edited the replication.
+
+Outlook 
+
+If you've published a new draft, the changes are automatically transferred to all locations. You can
+
+check the transfer status on the ELO Replication overview page.
+
+1. 
+
+2. 
+
+3. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+41 Configuration and administration
+
+
+
+On the overview page, click a location. The transfer overview opens on the right. You will recognize
+
+that a new draft is being transferred based on the gear icon in the Type column. Successful transfer
+
+is indicated by two check marks in the Status column. For more information, refer to the chapter 
+
+Monitoring.
+
+42 Configuration and administration
+
+
+
+Monitoring 
+
+You can monitor an active replication using the transfer overview. To open the transfer overview,
+
+click a location on the overview page.
+
+You can manually start an export from the local repository for test purposes. The export starts
+
+immediately, regardless of the configured schedule. Click the Start export (1) button.
+
+In the transfer overview, you see a list of the jobs. Click an entry to open the detailed view.
+
+The following job types are shown in the transfer overview:
+
+Replication: You will recognize a replication job based on the repository icon (2).
+
+Configuration: If you have changed the configuration of an active replication and want to
+
+publish your changes, the changes are automatically transferred to all locations. You will
+
+recognize the transfer of a new configuration based on the gear icons (3).
+
+The following statuses are shown in the transfer overview:
+
+• 
+
+• 
+
+43 Configuration and administration
+
+
+
+Handling errors 
+
+The following section describes the behavior starting with ELO Indexserver version 21.03.
+
+Error when exporting from the Indexserver: If an error occurs while exporting an item, e.g. because
+
+a document was deleted in the document path, a SORD linking to the item that caused the error is
+
+created in the repository under Administration > Replication Base. The error message is displayed
+
+under Metadata > Extra text.
+
+Errors that prevent an import (to hub or Indexserver): These are errors such as a corrupt replication
+
+package, an unavailable location/Indexserver, or the transfer was aborted. You can recognize errors
+
+like these by the exclamation mark in the Status column of the transfer overview. Click an entry to
+
+open the detailed view. A question mark is displayed next to the status. Click on the question mark
+
+icon to download an error message in JSON format. ELO Replication attempts to send the data set
+
+once every minute. The data set is transferred all over again, regardless of when the previous
+
+transfer was interrupted.
+
+44 Configuration and administration
+
+
+
+Errors that prevent an import of individual items (to Indexserver): These are errors such as if the
+
+item dependency is not found, or an item violates rulesets (name too long, user GUID already
+
+assigned). In this case, ELO Replication does not attempt to transfer the data again. The import is
+
+completed and the error is logged. A log icon appears in the Details column of the transfer
+
+overview. Use this icon to open the transfer protocol that lists the errors.
+
+After clicking the protocol icon, the information of the transfer protocol is displayed in the program
+
+interface.
+
+45 Configuration and administration
+
+
+
+46 Configuration and administration
+
+
+	Table of contents
+	ELO Replication
+	Getting started
+	Overview: Configuring replication at two locations
+	Result
+
+	Basics
+	Functionality
+	Replication set
+	Data synchronization
+	Data transfer
+	What data is replicated?
+	How is master data replicated?
+	How are workflows replicated?
+
+
+
+	Installation
+	Requirements
+	Step by step
+	Information
+	Step by step
+	Result
+
+
+	Configuration
+	Overview
+	Initial logon
+	Information
+	Step by step
+	Result
+	Next step
+
+	Draft mode (overview)
+	Location settings
+	Overview
+	Interfaces
+	Repositories
+
+	Scheduler for automatic transfer
+	'Default' interval
+	'No automatic export' interval
+	'Scheduler for automatic transfer' menu
+	'Simple' input option
+	'Expert' input option
+	Syntax
+	Variables
+	Example 1
+	Example 2
+	Time display of the next data export
+
+	Publish replication
+	Create/insert a configuration for other locations
+	Information
+	Location 1: Download configuration file
+	Location 2: Upload configuration file
+	Result
+	Next step
+
+	Replication set inheritance
+	Default: Inheritance to parent folder
+	'Start point for replication' option
+
+	Assign replication sets
+	Information
+	Requirements
+	Step by step
+	Result
+	Outlook
+
+	Edit configuration
+	Information
+	Step by step
+	Result
+	Outlook
+
+
+	Monitoring
+	Handling errors
+
+
+

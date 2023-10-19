@@ -1,0 +1,2538 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO SAND | Installation and operation
+
+
+ELO SAND
+
+Installation and operation
+
+
+
+3
+
+3
+
+5
+
+34
+
+34
+
+47
+
+50
+
+56
+
+62
+
+Table of contents
+
+Installation
+
+Requirements
+
+Installation
+
+Configuration and operation
+
+Archiving tasks
+
+Status page of the servlet
+
+Configuring e-mail journaling and archiving e-mail messages from the e-mail journal
+
+Troubleshooting
+
+Status changes to the servlet in the profile database
+
+2 ELO SAND
+
+
+
+Installation
+
+Requirements
+
+SAND requires:
+
+IBM Domino R8.5.2 or higher
+
+ELO server components (ELOam, ELOdm, ELOix) version 2011 or higher, or version 9.0 if the
+
+ELO Java Client is used for configuration. Additional ELO Fulltext components may also be
+
+necessary.
+
+32-bit systems: Tomcat/ELO server, or Domino server with http task and the ELONotesSBIX
+
+servlet installed on a Tomcat/ELO server.
+
+64-bit systems: 32 or 64-bit Tomcat/ELO server, or Domino server with http task and the 
+
+ELONotesSBIX servlet installed on a 64-bit Tomcat/ELO server.
+
+Please note
+
+On older 64-bit systems (Domino versions lower than R9.0.1 FP4), you cannot run
+
+SAND on a 64-bit Tomcat. This is because the nlsxbe.dll that is required for running
+
+the Java commands in C/C++ code are only available for 32-bit systems. You cannot
+
+copy the nlsxbe.dll file from the Domino directory to the IBM Notes directory either.
+
+For EML conversion on 64-bit systems: 32-bit Tomcat/ELO server, or IBM Domino R9.0 or
+
+higher with http task and the "ELONotesSBIX" servlet installed on a 64-bit Tomcat/ELO server.
+
+Starting with IBM Domino R9.0.1 FP4, a 64-bit Tomcat/ELO server is also possible. To
+
+configure EML conversion, the profile database version must be 8.02.036 or higher.
+
+For PDF conversion (as well as for DXL conversion with PDF preview): Domino server with
+
+accessible http task
+
+For PDF/A conversion: Ghostscript 8.70 (32-bit version) and "ELO PDF to PDF/A converter"
+
+PDF conversion on 64-bit systems with installed Notes Traveler: SAND cannot run on Domino.
+
+Instead, it must be installed on a Tomcat or ELO server (because jaxen-1.1.1.jar and xml-
+
+apis.jar need to be removed from SAND, and PDF conversion is not possible afterwards)
+
+To display DXL documents: ELO Java Client, ELO Notes Client (as a Notes Client plug-in), or
+
+ELO Windows Client 7 (changes to the e-mail template must be permitted in this case).
+
+Installed Notes Client on the SAND server in order to configure ELO Windows Client 7 or ELO
+
+Java Client.
+
+Please note
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+3 ELO SAND
+
+
+
+The Notes Client must have been installed in single-user mode; with multi-user
+
+installations, SAND cannot establish sessions on the Domino server.
+
+User-defined archiving: adjustments to the mail template must be permitted.
+
+Multiple ELO repositories: a profile database version 9.00.040 or higher.
+
+• 
+
+• 
+
+4 ELO SAND
+
+
+
+Installation
+
+SAND consists of three parts that have to be installed. First is the SAND servlet itself, which must
+
+be installed on the Tomcat server. The second step consists of installing and configuring the Notes
+
+ELO profile database. Third, a number of ELO scripts must be installed.
+
+Servlet installation
+
+Before you can install the servlet on Tomcat, you will have to make some preparations as
+
+described in the following.
+
+Preparing the servlet installation
+
+First, you must configure several files for the servlet on Tomcat and then the PDF converter.
+
+The 'nlsxbe.dll' file
+
+SAND uses the nlsxbe.dll file from Notes or Domino. You may have to enter the path for this DLL to
+
+the Path environment variables. Running SAND on a 32-bit Tomcat requires the (32-bit) nlsxbe.dll
+
+from the Notes directory. When installing SAND on a 64-bit Tomcat, the (64-bit) nlsxbe.dll from the
+
+Domino directory is used instead.
+
+5 ELO SAND
+
+
+
+Fig.: Path for 'nlsxbe.dll'
+
+If both directory paths are already entered to your path variables, ensure that the correct path to
+
+IBM Notes (IBM Domino) is entered first. You may need to restart your computer if you make
+
+changes to the Path environment variables.
+
+Context files
+
+Configure the archiving servlet in the profile database. The context file config.xml only contains
+
+information on how the servlet finds the profile database. More precisely, it contains the name of
+
+the Domino server, the path name of the profile database, the user name of the Notes user (if
+
+applicable), the Notes password, and a few other user-specific computer settings. The directory of
+
+6 ELO SAND
+
+
+
+the context files also contains the configuration file of the Tomcat logger (log4j.properties or 
+
+logback.xml).
+
+Look for the ELOenterprise or ELOprofessional configuration directory, such as c:
+
+\ELOenterprise\config.
+
+Create a subdirectory called EloNotesSB, then copy the provided context file, config.xml, and the
+
+logging configuration file log4j.properties or logback.xml into it (for explanations on logging as well
+
+as information about which configuration file is used for logging, refer to the "Logging configuration
+
+with Logback or Log4j" section below).
+
+Example:
+
+Fig.: Context files
+
+config.xml configuration
+
+Edit the config.xml file and enter the name of the Domino server, as well as the file path of the
+
+profile database (relative to the data directory of the Domino server). If you do not enter the name
+
+of the Domino server, the system will attempt to locate the Domino server using the local mail file.
+
+On a 32-bit Tomcat, the system logs on with the user whose ID is entered to KeyFilename in the 
+
+notes.ini file saved on the computer. You will then only need to enter the Notes password for this
+
+user.
+
+Important
+
+Entries in LOCALNOTESUSER cause errors on a 32-bit Tomcat. Enter an empty string here.
+
+7 ELO SAND
+
+
+
+However, on a 64-bit Tomcat, you must complete the LOCALNOTESUSER field!
+
+On a 64-bit Tomcat, you have to enter the user SAND will log in as on Domino under
+
+LOCALNOTESUSER.
+
+Fig.: config.xml on a 64-bit system
+
+Additional parameters in config.xml:
+
+PDFACONVERTER: the PDF/A converter
+
+(Default: <program directory>\pdfaconverter\\pdf2pdfa.exe).
+
+ELOatTimerLookupInterval: time interval in seconds in which SAND checks whether a task
+
+should be running (default: 60 seconds).
+
+STARTBROWSERFREQ: time interval in seconds in which the status page is refreshed before
+
+the actual refresh interval is read from the profile database (default: 10 seconds).
+
+THRESHOLD: determines the behavior when threshold values for databases are exceeded.
+
+Threshold = 1: Continue
+
+Threshold = 2: Continue, but do not perform any changes to e-mails (default)
+
+Threshold = 0: Cancel archiving of the affected database
+
+CHANGEMAILS: determines whether e-mails can be changed during archiving (CHANGEMAILS
+
+= 1 means they can; CHANGEMAILS = 0 means they cannot). Default: 1.
+
+DEBUGDB: enables debugging for certain databases, even if debugging is turned off for
+
+individual e-mails in the profile database. Example:
+
+DEBUGDB=(mail\administ.nsf;mail\srenz.nsf)
+
+NOTESEXCWAIT: determines the time to wait (in seconds) after a Notes error to determine
+
+whether this is an actual error or the Domino server http task has simply shut down (default:
+
+4 seconds).
+
+• 
+
+◦ 
+
+• 
+
+• 
+
+• 
+
+◦ 
+
+◦ 
+
+◦ 
+
+• 
+
+• 
+
+◦ 
+
+• 
+
+• 
+
+8 ELO SAND
+
+
+
+PDFCONVERTERSTOPBHV: determines the behavior of SAND when PDF converter stops. The
+
+following values are possible: PDFCONVERTERSTOPBHV = 1 (error) or
+
+PDFCONVERTERSTOPBHV = 0 (archiving performed in ASCII format). (Default: 0).
+
+ECDLINK: Defines whether ELO links are set as ECD links (ECDLINK=1), or as ELO buttons
+
+(which are configured in the profile database; ECDLINK=0). ECDLINK=1 is set by default.
+
+USECLUSTER: If set to "1", the Notes databases in the Domino server cluster are searched
+
+(profile database and mail databases). USECLUSTER=0 is the default setting.
+
+ARCHIVELN8EMLNOTMIMEASTEXT: If set to "1" and SAND is running on a Domino version
+
+earlier than R9 (EML conversion, or more precisely MIME conversion could cause the Domino
+
+server to crash), the e-mails will instead be archived in text format when otherwise MIME
+
+conversion would be necessary.
+
+INFOTEXT_LANG: Language of the information text placed before the ELO link. SAND then
+
+searches for the information text to be inserted that ends in this name token, e.g.
+
+INFOTEXT_BODYREMOVED_EN if English ("EN") is set, or INFOTEXT_BODYREMOVED_CZ if
+
+Czech ("CZ") is set.
+
+If INFOTEXT_LANG is not configured (or empty), the information texts are inserted in all
+
+language versions configured in the config.xml file. For example, if
+
+INFOTEXT_BODYREMOVED_EN and INFOTEXT_BODYREMOVED_CZ are configured, information
+
+texts are inserted in both languages.
+
+If no information texts are configured, default texts are inserted in the system language.
+
+INFOTEXT_BODYREMOVED_BOLD: Here, you can specify whether the information texts
+
+indicating that the e-mail body had been removed is shown in bold ("TRUE") or not ("FALSE")
+
+(default: "TRUE").
+
+INFOTEXT_BODYREMOVED_FONTSIZE: Here, you can specify the font size for information
+
+texts indicating that the e-mail body has been removed (default: 12).
+
+INFOTEXT_BODYREMOVED_EN: Here, you can enter the information text in English indicating
+
+that the e-mail body has been removed and replaced by a link (default: "The document has
+
+been shortened during the archiving process. You will find the original document in the
+
+repository under this link:").
+
+INFOTEXT_BODYREMOVED_URL_EN: Here, you can enter the information text in English
+
+indicating that the e-mail body has been removed and a URL inserted in addition to the ELO
+
+link (default "Or in Web Client using the following URL:"). If you do not want to insert an
+
+information text before the URL, you have to configure a space here, as otherwise default
+
+texts will be inserted.
+
+INFOTEXT_ATTREMOVED_BOLD: Here, you can specify whether the information texts
+
+indicating removed attachments are shown in bold ("TRUE") or not ("FALSE) (default:
+
+"FALSE"):
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+9 ELO SAND
+
+
+
+INFOTEXT_ATTREMOVED_FONTSIZE: Here, you can specify the font size for information texts
+
+indicating that attachments have been removed (default: 10).
+
+INFOTEXT_ATTREMOVED_EN: Information text for the link to deleted attachments.
+
+INFOTEXT_ATTREMOVEDLIST_EN: Information text as a header in the list of deleted
+
+attachments. If you do not want to insert a header, you have to configure a space here, as
+
+otherwise a default text will be inserted.
+
+You can also configure any other language. Simply enter a token for the language under
+
+INFOTEXT_LANG and name the tags for the text for removed bodies/additional URLS for
+
+deleted attachments.
+
+Example: For German information texts, enter "DE" under INFOTEXT_LANG and create the
+
+entries "INFOTEXT_BODYREMOVED_DE" and "INFOTEXT*BODYREMOVED_URL_DE" or
+
+"INFOTEXT_ATTREMOVED_DE" and "INFOTEXT_ATTREMOVEDLIST_DE".
+
+Logging configuration with Logback or Log4j
+
+Here, we have to differentiate between different cases. SAND uses the "Logback" framework to
+
+create log files when SAND is running as version 20 and as a Tomcat servlet. Otherwise, meaning
+
+with SAND versions earlier than 20, or if SAND is running in a Domino servlet container, "Log4j" is
+
+used as before (see separate documentation on installing SAND on Domino).
+
+Attention
+
+SAND versions earlier than 20 and SAND running on Domino use log4j; SAND running on
+
+Tomcat with ELO versions 20 and higher uses Logback. In the first case, configure 
+
+log4j.properties, otherwise logback.xml.
+
+Logging with Log4j:
+
+Once you have copied log4j.properties to the EloNotesSB directory, edit this file and enter the
+
+correct path to the Tomcat log files, e.g.
+
+C:/Program Files/Apache Software Foundation/Tomcat 8.0/logs/EloNotesSB.log
+
+• 
+
+• 
+
+• 
+
+10 ELO SAND
+
+
+
+Fig.: log4j.properties
+
+Logging with Logback:
+
+Copy the logback.xml file to the EloNotesSB directory and edit the file. Enter the correct path to the
+
+Tomcat log files, e.g.
+
+C:/Program Files/Apache Software Foundation/Tomcat 8.0/logs/EloNotesSB.log
+
+11 ELO SAND
+
+
+
+Fig.: logback.xml
+
+EloNotesSB.xml:
+
+Finally, search for the conf\Catalina\localhost path on the Tomcat server (e.g.:
+
+C:\Program Files\Apache Software Foundation\Tomcat\conf\Catalina\localhost)
+
+and copy the available EloNotesSB.xml file to this directory.
+
+Fig.: conf\Catalina\localhost
+
+Edit EloNotesSB.xml and update the path for webappconfigdir. Enter the path to the directory
+
+containing the EloNotesSB context file here.
+
+Fig.: EloNotesSB.xml
+
+12 ELO SAND
+
+
+
+Http task
+
+If you want to archive in PDF format, please ensure that the Domino http task is running on port 80
+
+on the Domino server. If not, start the task.
+
+If the task uses a different port, this must be configured in the profile database under Opt.
+
+Serverarchiv (options server archiving) as Default Http Portnumber. If the task is not visible in this
+
+view, start the task using the button on the right of the toolbar.
+
+Fig.: Starting the http task
+
+The http server should now be running.
+
+13 ELO SAND
+
+
+
+Fig.: Http task in the Domino Administrator task overview
+
+If a separate PDF conversion database is defined in the profile database under serverbase options,
+
+the port number of this HTTP task is automatically retrieved from the server address book. In
+
+future versions, the port number will also be queried if no PDF conversion database is registered. If
+
+this special PDF conversion database is stored on another Domino server, the http task must then
+
+be started on that server.
+
+Converting to PDF/A
+
+If you wish to archive in PDF/A format, you must first install Ghostscript 8.70 (32-bit version). You
+
+can download Ghostscript from the Internet, or use the package provided with SAND.
+
+Next, you must install the ELO "PDF to PDF/A converter". This software is not provided with the
+
+SAND package, but it can be ordered from ELO separately.
+
+The PDF/A converter is installed to the Program Files directory by default. Check the Program Files
+
+environment variable, create a subdirectory titled pdfaconverter, and copy the PDF/A converter files
+
+Pdf2Pdfa.exe and DoPdfA.exe into this directory.
+
+Important: If you are using a 32-bit version of Tomcat on a 64-bit operating system, the 
+
+ProgramFiles environment variable may reference the 64-bit directory (c:\Program Files), while the 
+
+ProgramFiles variable in the 32-bit version of Tomcat refers to the program directory in the 32-bit
+
+program files directory (c:\Program Files (x86)).
+
+14 ELO SAND
+
+
+
+If you do not want to install the PDF/A converter to your program directory, you can also install it to
+
+any other directory. Simply make a corresponding entry in the config.xml file. You must enter a new
+
+line for the PDFACONVERTER key, for example:
+
+By default, e-mail messages are only archived in PDF format. If you want to file e-mail messages
+
+in PDF/A format, you have to configure this in Options Serverarchiv (server archiving options) in the
+
+profile database.
+
+Servlet installation
+
+Copy the provided EloNotesSB.war file to the Tomcat server's webapps directory (such as c:
+
+\Program Files\Apache Software Foundation\Tomcat \webapps). Wait for the Tomcat server to
+
+configure the EloNotesSB servlet. You may need to stop and restart Tomcat.
+
+Starting with version 20, the Notes.jar file can no longer be provided for licensing reasons. After you
+
+have installed Notes on your computer, this file is available on your computer, however, and you
+
+simply have to enter the file in the catalina.properties (in the Tomcat or ELO Server conf directory)
+
+under "shared.loader".
+
+The Notes.jar requires the geronimo-corba_3.0_spec-1.1.jar (which is installed with the SAND
+
+servlet). This file also has to be loaded with the Notes.jar file by the Shared Loader, as otherwise
+
+Notes.jar will not be able to find the file. So, under "shared.loader" in the catalina.properties, link
+
+these two files, e.g.
+
+shared.loader="E:\\Program Files\\HCL\\Domino\\jvm\\lib\\ext\\Notes.jar","C:\\elo\\servers\\ELO-
+
+DESKTOP-UUH4S35-2\\webapps\\EloNotesSB\\WEB-INF\\lib\\geronimo-corba_3.0_spec-1.1.jar"
+
+Restart Tomcat.
+
+By making this entry under "shared.loader", the servlet can be started separately later without
+
+having to restart the entire Tomcat server or ELO Server.
+
+Alternatively, you can also copy the Notes.jar from the "…\HCL\Domino\jvm\lib\ext"-directory (or ..
+
+\HCL\Notes\…) to the "…\webapps\EloNotesSB\WEB-INF\lib" SAND directory in the Tomcat.
+
+Disadvantage: It is not possible to restart SAND separately; the entire Tomcat server or ELO Server
+
+has to be restarted.
+
+Servlet configuration in the Notes Client
+
+The servlet is actually configured in the Notes Client, more specifically, in the profile database.
+
+Licenses are not checked during configuration in the profile database, but rather only when the
+
+archiving tasks are run. Archiving tasks can be managed without entering the administrator to the
+
+profile database user management system.
+
+<entry key="PDFACONVERTER">c:\servlets\pdfaconverter\pdf2pdfa.exe</entry>
+
+15 ELO SAND
+
+
+
+File installation
+
+First, copy the files
+
+commons-codec*.jar,
+
+commons-httpclient.jar
+
+commons-logging.jar
+
+EloNotesSBRescan.jar
+
+to the Notes Client directory:
+
+..\jvm\lib\ext (e.g.: c:\Program Files (x86)\IBM\ \Notes\jvm\lib\ext)
+
+You can find these files in the installation package for the ELO IBM Notes interface in the Jar folder
+
+(that is, in the supplied ZIP file, e.g. ELO IBMNotesInterfaceVersion10.01.000.002.zip). Afterwards,
+
+you need to restart your IBM Notes Client (these files are needed for informing the SAND servlet
+
+that there are new or changed filing tasks in the profile database or ones that require deletion).
+
+If you want to archive e-mails in NSF format, you must also install the EloNSFTe.nsf database,
+
+which is also a part of the package, on your Domino server. Use the Notes Client to do so.
+
+Installing the profile database
+
+First, install the new profile database, then update any existing profile databases. You will find the
+
+profile database in the "Databases and Templates" folder in the installation package for the ELO
+
+IBM Notes interface.
+
+Installing 'ELOProfil.nsf'
+
+Copy the ELO profile database from the installation package to a temporary directory.
+
+If needed, create an ELO32 directory on the Domino server under data
+
+Open the temporary profile database
+
+Copy the temporary profile database in Notes to the Domino server, path name 
+
+EL32\ELOProfil.nsf and disable the Access control list check box.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+16 ELO SAND
+
+
+
+Fig.: Copying the profile database
+
+You may also choose a different directory relative to the Domino data directory, but then you have
+
+to adjust the notes.ini accordingly by the environment variable
+
+If the profile database is on a different Domino server than the server you are logged on to, you
+
+need to make sure that the profile database is searched on "your" Domino server. For this, set the
+
+environment variable "$ELO_SERVER" to the server of the profile database in the notes.ini (such as
+
+$ELO_SERVER=ds-srv-02/contoso). The "MailServer" default environment variable is evaluated
+
+when "$ELO_SERVER" has not been set and the profile database cannot be found.
+
+Updating an older profile database version
+
+You should initially always test the software with a temporary version. You can update the old
+
+profile database (or a copy thereof) via a template (profile database export and import are no
+
+longer supported).
+
+Updating the profile database with a template
+
+"$ELO_DB", e.g. $ELO_DB=ELOProfil.nsf.
+
+1. 
+
+17 ELO SAND
+
+
+
+Copy the new profile database, for example, to the temp directory on your PC.
+
+Open the profile database in Notes.
+
+In the Notes Client, copy the profile database to the Domino server and rename it as a
+
+template, therefore with the extension ".ntf" instead of ".nsf".
+
+Open the properties of the profile database template and enter a template name, such as
+
+"ELOProfile".
+
+As stated above, you should first test this with a copy. Copy the old profile database to the
+
+Domino server with a new name, such as "ELOProfile802034.nsf" (with design and
+
+documents).
+
+Assign the test database the profile database template.
+
+Change the default profile database in the notes.ini file as described above.
+
+Close and open the Notes Client.
+
+Open the new test profile database and call up the ProfildbUpdate action. Choose the current
+
+version of the profile database that is to be updated anyway. For versions before 5.00.088,
+
+choose 5.00.088 anyway; for versions higher than 8.00.030, select ">Version 8.00.030".
+
+Fig.: Updating the profile database
+
+If you only see the SAND version of the profile database, but have licenses for client
+
+archiving (the association groups are not displayed, for example), you need to reassign the
+
+licenses.
+
+Test the profile database.
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+6. 
+
+7. 
+
+8. 
+
+9. 
+
+10. 
+
+11. 
+
+18 ELO SAND
+
+
+
+Setting the test profile database as the current profile database
+
+If you want to continue to work with the default path of the profile database, in the Notes client,
+
+copy the new tested database to the Domino server under the name "ELO32\ELOProfil.nsf", which is
+
+the default name.
+
+Delete the $ELO_DB entry in the notes.ini file of the test user (now, close and reopen the Notes
+
+Client).
+
+Configuring the profile database
+
+The following describes the process for configuring the profile database as is relevant for SAND.
+
+"Options"
+
+Open the new profile database
+
+Set the options
+
+Fig.: Options in the profile database
+
+Information on the "ELO version" field: Enter which ELO client is running on the computer on which
+
+you would like to configure the profile database here.
+
+Information on the 'ELO AM ident.' field: If you want to manage multiple ELO repositories in this
+
+profile database with the same name, you need to enter "yes" in this field. This adds the ELO
+
+Access Manager URL to the repository name, making the repository name unique in the profile
+
+database. This field must be set BEFORE other settings are performed in the profile database.
+
+19 ELO SAND
+
+
+
+Information on the "Field length check" field: When "on" (default) is set, a length check is
+
+performed when entering metadata; if necessary, the texts are shortened to the maximum length
+
+permitted by the ELO Indexserver.
+
+Please note
+
+If the field length check is not performed, database errors may result during filing, namely
+
+when maximum field lengths are exceeded.
+
+Information on the "Set extra text" field: When "on" (default) is set, the text content of the e-mails
+
+is entered to the metadata under Extra text.
+
+Information on the "Mark as ELO e-mail" field: When "on" (default) is set, the SORD type for Note e-
+
+mails is set to "261" (e-mail).
+
+Information on the "Internet address" field: When "on" (default) is set, addresses are not saved as
+
+Notes addresses, but as Internet addresses when entering metadata. This requires an Internet
+
+address to be specified for individuals in the address database. Otherwise, SAND attempts to build
+
+an Internet address using the abbreviated name and the domain from the address book.
+
+20 ELO SAND
+
+
+
+Setting Notes options
+
+Fig.: Notes options in the profile database
+
+Enter the address book server and persons to be notified.
+
+21 ELO SAND
+
+
+
+Importing license data
+
+Fig.: License data in the profile database
+
+You may be requested to open the profile database again. Depending on the license, you will then
+
+only see the entries relevant for the application (for server archiving, you will not see any
+
+association groups, for example).
+
+Statistics for company licenses
+
+Starting with version 12, statistics can be created for archived Notes databases with a company
+
+license.
+
+22 ELO SAND
+
+
+
+Fig.: License log settings in the profile database
+
+This feature has to be activated in the ELO license information in the profile database: Select 
+
+Write license log: on to create the log
+
+Select Write license log: off to disable logging.
+
+To delete previous logs, click Delete license log.
+
+Restart the SAND servlet for the settings to take effect.
+
+Fig.: License log view
+
+The log is shown in the SANDLicenseReports view, where the individual logs are categorized by
+
+year, month, and day. The Notes database, the start time, and the number of archived documents
+
+are logged.
+
+The view is only visible in the Notes Designer.
+
+• 
+
+• 
+
+• 
+
+23 ELO SAND
+
+
+
+Creating filing circles
+
+The filing path consists of fixed filing circle names and the dynamic filing path name set during
+
+filing.
+
+Fig.: Creating filing circles
+
+First, create filing circles.
+
+Creating filing paths
+
+Then, create filing paths:
+
+24 ELO SAND
+
+
+
+Fig.: Creating filing paths
+
+The parameters here mean:
+
+%%: The access control list (ACL) is set after this marker.
+
+%U: Notes user name (common name, “Alfred/Server”, name of the owner of the e-mail
+
+database)
+
+%u: ELO user name (“Alfred Candelone”, the ELO name of the owner of the e-mail database)
+
+%A: Notes user name (abbreviated name, "Alfred", the shortened name of the owner of the
+
+e-mail database)
+
+%d: Day (01 to 31)
+
+%m: Month (01 to 12)
+
+%M: Month (Jan to Dec)
+
+%y: Year (2018)
+
+%f: Notes view name (e.g. "($Inbox)")
+
+%F: Notes view name translated (e.g. "Inbox")
+
+%s: Sender
+
+%r: Recipient
+
+%S: For inbox: sender; otherwise: recipient
+
+%a: Database name
+
+%|: Separator symbol
+
+%o: Structure archiving folder
+
+%e: E-mail address of the inbox owner
+
+{…}: Notes field name/field formula
+
+Please note
+
+In the editor for Notes field names/field formulas, the button for listing possible Notes fields
+
+is only available if the e-mail database of the current Notes user contains at least one e-
+
+mail.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+25 ELO SAND
+
+
+
+Please note
+
+The tokens %f and %F are subject to restrictions, which are described chapter 'Notes doc'
+
+tab in the comments on the From view/folder field, especially the "($All)" view.
+
+Create metadata forms
+
+Automatic entry of metadata is based on the configuration of the metadata forms. E-mail metadata
+
+forms and attachment metadata forms have to be configured where you can then assign Notes
+
+field names and ELO field names. Next, you have to set a metadata form to be used by SAND when
+
+creating ELO folders.
+
+Fig.: Creating metadata forms
+
+The following forms must be created:
+
+a) E-mail forms for archiving Notes e-mails
+
+26 ELO SAND
+
+
+
+Fig.: Assigning field names in an e-mail keywording form
+
+b) Attachment forms for archiving Notes attachments
+
+c) Folder form for entering metadata for new ELO folders (only fill in ELO form name)
+
+Possible Notes field names for e-mail and attachment forms
+
+SUBJECT
+
+SENDTO (possibly select Column index so that recipient lists are entered to the metadata)
+
+FROM
+
+COPYTO
+
+Special cases for Notes fields:
+
+<ATTNAME> File name of the attachment, only available in the attachment form
+
+<UID> Universal Document ID (Notes)
+
+>TEXT< Fixed text
+
+Setting up repository options
+
+Configurations specific to an ELO repository are made in the profile database repository options.
+
+Here, the SAND section is relevant.
+
+Serverbase URL: In the SAND section, enter the URL for the SAND server to Serverbase URL
+
+so that the profile database can sync with the servlet.
+
+Please note
+
+Starting with version 12, the URL parameter "?__cmd__=restart" has to be added to
+
+the SAND URL in the repository options.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+27 ELO SAND
+
+
+
+Example:
+
+http://localhost:8094/EloNotesSB/EloNotesServerbase?__cmd__=restart
+
+Here, "restart" is important, not "status"!
+
+SBIX-URL: If you want to run SAND as a Domino servlet (not as a Tomcat servlet), enter the
+
+URL for the repository-specific SBIX servlet in the SBIX-URL field. If the field is not filled out,
+
+the SBIX-URL is read from the server archiving options, section Indexserver options, 
+
+EloNotesSBIX URL field (see Configuration in the server archiving options). For more
+
+information on configuring SAND as a Domino servlet, refer to the ELO Domino for SAND
+
+Quick Start Guide documentation.
+
+Indexserver URL/computer name/language/country/user name/password: Enter the login
+
+information for the repository-specific Indexserver here. If the field is not filled out, the
+
+corresponding value is read from the server archiving options, section Indexserver options
+
+(see Configuration in the server archiving options).
+
+Link URL: Enter a URL to be added to Notes e-mails as an ELO link after filing (if configured in
+
+the filing tasks). This requires the ELO DocLink solution to be installed as well.
+
+Please note
+
+The Link URL option requires the ELO DocLink solution to be installed as well.
+
+Set ACL: In the Set ACL field, you can enter a Notes user name. This user must also be
+
+registered as an ELO user. If rights assignment ("%%") has been configured in the filing paths,
+
+this user is assigned access rights to the new ELO folder if the database to be archived is not
+
+a user e-mail database and the owner of this database is not registered as an ELO user in the
+
+profile database user manager.
+
+Autom. login: Here, you can set whether single sign-on should be allowed in ELO for every
+
+individual repository (only ELO Windows Client, requirement: ELO is configured accordingly).
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+28 ELO SAND
+
+
+
+Fig.: Serverbase URL from version 12 in the repository options
+
+Link button
+
+SAND can be configured to remove the content of the filed e-mails and replace it with a link button
+
+following archiving. ELO links are used by default. However, it is also possible (not recommended)
+
+to use definable links in this section.
+
+Please note
+
+Only use ELO links if the body and attachments are to be deleted from the filed e-mails
+
+following archiving.
+
+Create user
+
+To compare Notes and ELO names, you can create user profiles. This is necessary if, when archiving
+
+mailboxes, the mailbox owner in ELO is to be assigned rights to the filed documents (if this is not
+
+possible, access rights are assigned to a standard ELO user – see Set ACL in the repository options),
+
+29 ELO SAND
+
+
+
+or ELO folders are to be created with the user's ELO name as the folder name. You can either import
+
+individual ELO users or all ELO users to the profile database. You can also import Notes user groups
+
+from the address database to the profile database. In the user manager, you can add or remove
+
+license keys.
+
+Importing ELO users
+
+Fig.: Adding a user
+
+Please take the following into account:
+
+The Notes Name field must be filled out (the button makes suggestions by comparing the ELO-NT
+
+names, first and last names, and ELO e-mail names)
+
+You can display all users in the Users not in ELO view who have not received an ELO name.
+
+The DXL import folder field: When using the ELO Windows Client, e-mails filed in DXL format are
+
+imported back into Notes into this folder. The field is irrelevant for the ELO plug-in or ELO Java
+
+Client.
+
+Notes user groups import
+
+You can configure the check of Notes and ELO names to import Notes user groups in the profile
+
+database. Notes environment variables are used for this. The Notes shortname is compared to the
+
+a) (normal) ELO name when the environment variable $ELO_ELOVglName is set to "ELONAME"
+
+(default)
+
+b) ELO NT names when this variable is set to "ELONTNAME"
+
+c) OUTLOOK names when they are set to "OUTLOOKNAME".
+
+Since the Notes short name could consist of multiple parts, you can also use the variable 
+
+ELO_NotesVglNameMode to define which part should be used for the comparison:
+
+the comparing name component is entered (such as "1")
+
+if it is set to "A", all parts of the name are compared until a correlation has been found
+
+30 ELO SAND
+
+
+
+if it is not set, the first part of the name is used as a comparison criterion
+
+Configuration in the server archiving options
+
+General servlet configuration (not repository-specific) is performed in the profile database under the
+
+server archiving options.
+
+Fig.: Server filing options (excerpt)
+
+Open Options Server Archiving and enter the URL of the Indexserver, as well as the name of the
+
+administrator and the corresponding password. Below you will find explanations for important
+
+fields and some fields that are often unclear to users.
+
+"Servlet options" section:
+
+• 
+
+31 ELO SAND
+
+
+
+Include folder references: Here, enter whether to use the hidden Notes views $FolderInfo and 
+
+$FolderRefInfo (default: yes) when filing documents in a folder to improve performance. This
+
+requires the FolderReferencesEnabled property in the respective Notes database to be set to
+
+true. For more information on how this property can be set, refer to the IBM Notes
+
+documentation.
+
+Include view formula: Here, you can enter whether the Notes view search formula should be
+
+used (default: yes) when searching for documents in a Notes view.
+
+"HCL Notes options" section:
+
+For simple PDF conversion, go to the Options IBM Notes section and enter the name and
+
+password of a Notes user whose corresponding ACL allows it to be used for PDF conversion.
+
+The password will be encrypted automatically.
+
+"Indexserver options" section:
+
+Here, enter the ELO Indexserver logon information (only if you would like to configure one
+
+single ELO repository or one ELO Indexserver in this profile database).
+
+If you want to run SAND as a Domino servlet (not as a Tomcat servlet), enter the SBIX servlet
+
+URL to the EloNotesSBIX-URL field (only if you would like to configure one single ELO
+
+repository or one ELO Indexserver in this profile database). For more information on
+
+configuring SAND as a Domino servlet, refer to the ELO Domino for SAND Quick Start Guide
+
+documentation.
+
+Please note
+
+If you would like to configure multiple repositories or ELO Indexservers in this profile
+
+database, you have to set up repository options for each repository and enter the ELOix
+
+logon information or EloNotesSBIX-URL there (see section Setting up repository options)
+
+"Document options" section:
+
+Timeout field: In this field, you can enter time limits for PDF conversion of individual
+
+documents. When this time is exceeded, SAND continues by converting the next document
+
+(default: 60 seconds).
+
+"DXL options" section:
+
+Full text field: Here, you can configure whether any e-mail attachments should be filed along
+
+with the DXL file when filing in XML format ("DXL") so they can be found by the ELO full text.
+
+"Rendering options" section:
+
+Database and Metadata form fields: If you do not want Notes documents to be converted on
+
+the server on which the profile database is running, or if you want to use a different
+
+database, you can also enter a different server or database (a so-called "imaging database")
+
+that is part of this package. It must be copied to a Domino server. This could be because the
+
+http task (required for PDF conversion) does not run on the current Domino server for security
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+32 ELO SAND
+
+
+
+reasons, or that the PDF converter may send confirmations of receipt when the original e-
+
+mails are converted, or non-western European characters were found during EML conversion.
+
+You can also enter a different form to be used for PDF or EML conversion. This is useful if you
+
+want to archive Notes documents without forms. Before PDF conversion, e-mails are copied
+
+to this database. Before EML conversion, they are rendered. For EML conversion, you can also
+
+specify in what cases e-mails should be rendered in the database before conversion in the
+
+corresponding section (see below). If you have specified a form here, make sure the form
+
+also exists in the e-mail databases in which the documents may be opened again.
+
+"PDF options" section:
+
+The Page size field is only relevant for filing in PDF format.
+
+"EML options" section:
+
+The Render before conversion allows you to configure in what cases documents are rendered
+
+to the imaging database before conversion: always, never, or only in case of error.
+
+• 
+
+• 
+
+33 ELO SAND
+
+
+
+Configuration and operation
+
+Archiving tasks
+
+Archiving tasks are defined in the profile database. Start the profile database and open the
+
+archiving tasks.
+
+Defining archiving tasks
+
+Create an archiving task by clicking Archiving task > Add.
+
+You will see a form with several tabs.
+
+'Task' tab
+
+Fig.: Archiving tasks
+
+On the first tab, Task, enter the name of the task and comments.
+
+34 ELO SAND
+
+
+
+'Notes DB' tab
+
+Fig.: Archiving tasks: Notes database selection
+
+On the second tab, Notes DB, you will configure which databases will be archived.
+
+Select From mail databases. All users are listed here who were entered to the user manager of the
+
+profile database. Alternatively, select From database for non-e-mail databases. Select From
+
+database groups if you do not see all users you configured in the profile database (the length of
+
+Notes fields is limited, so it may occur that not all users can be listed). You can see how these
+
+groups are defined below.
+
+If you select the databases with From databases, you must assign the ACLs using the Check Lic.
+
+button. If you have a site license, this does not apply.
+
+Select the databases for which you need a license and then click OK. The licenses are added.
+
+Proceed as follows to remove licenses: To exit the screen, click Cancel.
+
+Fig.: Licenses in archiving tasks
+
+Please note
+
+35 ELO SAND
+
+
+
+To exit the license manager, click Cancel.
+
+'Notes doc.' tab
+
+Fig.: Archiving tasks: Notes document selection
+
+On the third tab, Notes doc., define which documents you want to archive. This means that you can
+
+configure Notes forms, Notes views, and folders.
+
+Comments on the 'From view/folder' field:
+
+In this field, you can specify either folders/views whose content you want to archive or wildcards.
+
+Take the following special cases into account:
+
+Wildcard "*": The "*" is then replaced with all folders and views (exception: the "($All)" view).
+
+In the Except field, you can specify folders/views you do not want to archive. Please note that
+
+there are a great deal of views in a Notes database by default.
+
+"($All)" view: All documents in this database are archived (restricted by additional archiving
+
+criteria in this archiving task).
+
+Please note
+
+Notes can only determine the folder in which a document is located if it is found via a
+
+search for a folder/view; when searching via the "($All)" view, Notes cannot determine
+
+the folder in which a file was located and thus, the Notes folder structures (with the
+
+path name token "%f" or "%F") cannot be created in ELO if the "($All)" view is
+
+specified here.
+
+• 
+
+• 
+
+• 
+
+36 ELO SAND
+
+
+
+Replicating Notes folder structures in ELO with $ELO_PersonalFolders: Enter this variable if
+
+you want to archive all personal folders. At runtime, SAND will replace the variable with all
+
+personal folders that exist at the time to replicate the Notes folder structure in ELO (if the
+
+filing path is configured with the tokens %f or %F).
+
+Example: This task would archive all personal folders, the inbox, and the Sent folder to
+
+folders of the same name in ELO (that may have to be created):
+
+Fig.: Archiving tasks: Personal folders
+
+The following image shows the filing path configuration for replicating the Notes folders with
+
+the token %F:
+
+Fig.: Archiving tasks, configuring the filing path for folder replication
+
+You can also complete additional Notes field values as archive criteria. To do so, click Field
+
+criteria. In this example, all e-mails with a "Posted Date" earlier than May 12, 2018 will be
+
+archived.
+
+In the Search formula field, you can enter a search formula in the Notes formula language
+
+directly. This is combined by default with the other search criteria (metadata form, field
+
+contents, full text search, and other attributes) with an "OR". If the search formula starts with
+
+an "&", the search formula is combined with the other search criteria with an "AND". If it
+
+starts with a "|", it uses "OR".
+
+37 ELO SAND
+
+
+
+In the Other Attributes field, in the future you will see some preconfigured criteria that are not
+
+Notes document fields. Currently, you can check the maximum or minimum size of an e-mail
+
+message.
+
+Fig.: Archiving tasks: document size
+
+If you click Task is user-defined, users themselves will be able to select which documents are
+
+selected for archiving. This means that you can select folders and documents in your
+
+mailboxes - see below.
+
+38 ELO SAND
+
+
+
+'Target in ELO' tab
+
+Fig.: Archiving tasks: Filing types
+
+On the fourth tab, Target in ELO, enter the ELO repository and ELO folder to which the converted
+
+documents should be moved, and how they are to be converted. The drop-down menu lists the
+
+repositories with configured metadata forms (see Create metadata forms). You can enter a fixed
+
+filing target by clicking To folder. The filing path can also be created dynamically by selecting a 
+
+filing circle and a filing path. Also select the metadata form that should be used by ELO. You must
+
+configure filing circles, filing paths, and metadata forms in the profile database.
+
+Please note
+
+The 'To folder' field is only shown if you have selected the following values in the drop-down
+
+lists for the Filing circle and Filing path fields:
+
+"-----------------------------------------------------------------------------"
+
+Some notes on filing types: XML&PDF means that documents will be archived in DXL (Domino XML)
+
+format with a PDF preview document. The NSF filing type requires the EloNSFTe.nsf database
+
+installed on the Domino server. The only rework filing type means that documents have already
+
+been archived and should only be moved, or that they will remain as empty containers. For the EML
+
+39 ELO SAND
+
+
+
+filing type, it is not possible to additionally file the main document in PDF format. However, you
+
+can separately file the attachments.
+
+If you do not want to check whether documents have already been archived, set "Re-archive" to
+
+"Re-archive document".
+
+'After archiving' tab
+
+Fig.: Archiving task: After archiving
+
+On the fifth tab, After archiving, you can define what happens to the documents after they have
+
+been filed.
+
+Note on the After archiving field: Possible values include different settings for removing the content
+
+of a document, some with the option (Insert ELO URL): In the remaining stub, you will find an ELO
+
+URL that can be used by the ELO DocLink solution (which has to be installed additionally). This
+
+means that the archived document is displayed in ELO when you click the URL. This URL is pre-
+
+configured in the profile database in the Link URL field of the archive options. In these cases, you
+
+can also archive the shortened document as a PDF document.
+
+Please note
+
+The option …(Insert ELO URL) requires the ELO DocLink solution to be installed as well. If the
+
+content of the documents should be deleted after filing, you should use the options that
+
+insert an ELO link.
+
+40 ELO SAND
+
+
+
+Fig.: Archiving task: archiving a shortened document additionally as PDF
+
+'Scheduling' tab
+
+Fig.: Archiving task: scheduling
+
+On the Scheduling tab, you can define when the archiving will begin.
+
+'Log' tab
+
+Fig. : Archiving task: logging
+
+On the seventh tab, Logging, the administrator can configure logging features.
+
+The error log will be sent to the user entered to the profile database under Notes Options as
+
+administrator to be notified. Error logs can also be found in the profile database in the SAND Logs
+
+area. A (limited) number of documents that cannot be archived will be linked with the error log. The
+
+number of documents can be restricted by entering a value to the Max. Number of Document Links
+
+field (entering -1 means entries will not be restricted).
+
+41 ELO SAND
+
+
+
+In addition, you can set here whether the archiving process of every document should be logged in
+
+the servlet log file, which is configured in logging configuration file log4j.properties or logback.xml,
+
+e.g. EloNotesSB.log. By default, only the start and end sequences of the archiving tasks are logged,
+
+even if "debug" has been entered to log4j.properties file.
+
+Confirm your settings by clicking OK. The definition dialog box then closes.
+
+The archiving task will attempt to inform the SAND servlet of any changes, such as new, changed,
+
+or deleted archiving tasks. If the update to the servlet is unsuccessful, for example because the
+
+SAND servlet was not started, you will be notified. In this case, click Rescan Notes on the servlet
+
+status page, or wait until the servlet periodically rescans the profile database.
+
+User-defined archiving tasks ("Backup")
+
+As already mentioned, it is possible to allow the user to define which folders and documents should
+
+be filed. For this purpose, define a special archiving task: fill out all tabs, except for the Notes doc.
+
+tab, as described previously. On the third tab, Notes DB, select the entry Task is user-defined. If you
+
+select this entry, all other fields on this tab will be hidden, as they are no longer needed.
+
+Fig. : Archiving: definition user-defined
+
+The Notes user will then define which documents will be archived within that user's e-mail
+
+database. There are additional buttons in ELO folders and work areas for this purpose.
+
+Fig.: Archiving: user has selected "Backup" documents
+
+To select a folder, select a document and then click Folder backup. The software will inspect the
+
+folder in which the selected document is located, then list the folder as "to be archived". Individual
+
+documents to be archived will then be assigned a special marker in the profile database, which is
+
+configured in the profile database in the AT Mark field of the options.
+
+42 ELO SAND
+
+
+
+Operations on archiving tasks
+
+After definition, the status of the task is active - see overview in the profile database.
+
+Fig.: Archiving tasks overview
+
+The most recent run, next run, and number of archived documents are shown there.
+
+All operations performed on archiving tasks must be performed in the profile database. During the
+
+next scan of the profile database, the servlet receives the information about the next important
+
+steps, such as starting, stopping, or continuing a task.
+
+As described above, the scan is initiated after each change related to archiving. If you are not sure
+
+whether the servlet has been informed of all changes, you can click Servlet sync. This restarts the
+
+synchronization between the servlet and the profile database.
+
+SAND database groups
+
+Fig.: Database groups
+
+43 ELO SAND
+
+
+
+As explained above, you can enter "Database groups" to the archiving tasks if you do not want to
+
+edit the databases individually in the archiving tasks. These groups are also defined in the profile
+
+database. You can add, edit, or remove database groups under SAND Database Groups.
+
+You can not only import individual databases but also import/add entire Notes user group
+
+databases. The difference between "import" and "add" is that with the "import" function, the users
+
+from the Notes group are imported to the database group, while the "add" function simply adds the
+
+group name of the database group; the group is then resolved at SAND runtime. You can move
+
+databases into other groups, or copy, rename, and remove groups. If you want to enter e-mail
+
+databases for users who have already been entered to the profile database in the user
+
+administration, you can do so directly in the user administration.
+
+If you do not have a SAND site license, all databases in the database groups must be assigned a
+
+license key (exception: the license check for "added" Notes groups is performed at SAND runtime).
+
+Fig.: Database groups: edit license key
+
+License keys can either be assigned to all databases of a group, or to individual databases. You can
+
+also unassign keys. This process is synchronized with the user administration in the profile
+
+database. This means that you will see the license keys in the user administration that you have
+
+assigned here, and vice versa. As mentioned, the license check for "added" Notes groups is
+
+performed at SAND runtime, which is why licenses cannot be assigned to such groups.
+
+44 ELO SAND
+
+
+
+SAND log documents
+
+Fig.: SAND log documents
+
+As already mentioned, you can find SAND log files in the profile database in the SAND Logs section.
+
+They can be sorted by year, month, and date. You can define whether logs should only be created
+
+when errors occur, or if SAND should always create log files.
+
+Avoiding replication
+
+Sometimes when using SAND, e-mail databases are replicated between Domino servers during
+
+archiving. SAND sets a marker for the archived documents, which after further processing can lead
+
+to a "backwards replication", causing deleted documents to show up again in their owners'
+
+mailboxes. In order to avoid this, the parameter CHANGEMAILS=0 can be set in the configuration files,
+
+i.e. either in config.xml or servlets.properties (if SAND is running in the Domino servlet container).
+
+In this case, the archived e-mail messages will not be changed, allowing replication to be avoided.
+
+Additional requirements for this are:
+
+Archiving is performed in PDF format in the imaging.nsf database.
+
+Shorten body cannot be selected as option following archiving.
+
+Archiving cannot be User-defined.
+
+No specific folders or views may be selected for archiving ("*" must be entered in the From
+
+view/folder field).
+
+These requirements are checked when CHANGEMAILS is set to 0. If they are not fulfilled, the task is
+
+not started and the status is set to Error. An error message is also written to the log file.
+
+• 
+
+• 
+
+• 
+
+• 
+
+45 ELO SAND
+
+
+
+Fig.: SANDLastArchived view in the profile database
+
+If the requirements are fulfilled, SAND sorts the documents of each database by date and Note ID
+
+before archiving, then makes a note of the last archived document per corresponding database in
+
+the SANDLastArchived view in the profile database, which in turn is created automatically. If you
+
+want to archive the documents again later, you must delete the corresponding database from this
+
+view. To do so, open the profile database, click View > Go to..., and select the SANDLastArchived
+
+view. Select the line with the affected database and delete it.
+
+46 ELO SAND
+
+
+
+Status page of the servlet
+
+The status of the servlet will be displayed on a status page in the browser. Enter this URL (of
+
+course, update the server name and port number as needed):
+
+http://localhost:8094/EloNotesSB/EloNotesServerbase?__cmd__=status
+
+Fig.: Status display
+
+This SAND version runs starting with ELO Indexserver version 11. The major release number of the
+
+ELO Indexserver is thus shown as the major release number. However, as it is only available after
+
+authenticating with the ELO Indexserver, a default value is initially shown as the major release
+
+number when starting the SAND servlet ("20"). After the first archiving run, the version number
+
+displayed is updated, e.g. "12.00.003.000" or "20.00.000.000" (the version history is kept
+
+separately for each main release, resulting in different version numbers).
+
+47 ELO SAND
+
+
+
+The following is displayed on the status page: the most recent and next planned scan of the profile
+
+database, the number of started tasks, the number of documents archived up to this point, the
+
+number of non-archived documents, and the number of documents that have been archived with
+
+additional information.
+
+The most recently processed archiving task is shown, as well as the most recently archived Notes
+
+database.
+
+All archiving tasks from the profile database are listed with their current status in the "Archiving
+
+Tasks" section. However, you cannot (yet) start or stop individual tasks in the status display; you
+
+are instead linked to the profile database.
+
+If you have not given archiving tasks a name, the Note ID for the task is shown instead.
+
+The status display automatically refreshes the document counter, the current archiving task, and
+
+the most recently archived Notes database at an interval of a few seconds.
+
+The archiving task list is synchronized between the profile database and servlet periodically and
+
+whenever changes are made to the profile database. On the status page, this scan can also be
+
+started manually by clicking Rescan Notes: The servlet scans the list of archiving tasks in the
+
+profile database and starts/stops internal servlet processing of the archiving tasks. You can refresh
+
+the display alone (meaning without processing archiving tasks) by clicking Refresh.
+
+By clicking Edit and entering the Tomcat user name and password, you can change the servlet
+
+debug level:
+
+48 ELO SAND
+
+
+
+Fig.: Changing the debug level on the status page
+
+49 ELO SAND
+
+
+
+Configuring e-mail journaling and archiving e-mail
+
+messages from the e-mail journal
+
+If you want to archive e-mail messages BEFORE they are received by their recipients, use "Mail
+
+Journaling". First, set up e-mail journaling, then configure a corresponding archiving task in the
+
+profile database.
+
+E-mail journaling setup
+
+Step 1: In the Domino Administrator, on the Configuration tab, go to Server > Configurations and
+
+add a configuration document. On the Basics tab, click Use these settings as the default settings
+
+for all servers. Save the document.
+
+Fig.: E-mail journaling: server configuration
+
+Step 2: Open the configuration document again. Go to Router/SMTP > Restrictions and Controls >
+
+Rules and create a new rule like the one in the following example:
+
+50 ELO SAND
+
+
+
+Fig.: E-mail journaling: rule creation
+
+In the drop-down list under Specify Conditions, click all documents then Add.
+
+51 ELO SAND
+
+
+
+Fig.: E-mail journaling: Rule creation for all documents
+
+In the drop-down list under Specify Actions, select journal this message (default) and click Add
+
+Action.
+
+The rule should then look as follows:
+
+52 ELO SAND
+
+
+
+Fig.: Journaling rules
+
+Click OK to close the rule.
+
+Step 3: Go to Router/SMTP > Advanced > Journaling and enter the same values to the fields as in
+
+the following example. Please note that, in the fields to be left out of the encryption, the Body field
+
+must be included, as well as the fields that need to be completed with metadata or that are to be
+
+used as the names of ELO folders (such as SendTo and Subject).
+
+Please note
+
+If you choose EML as the archiving format, the e-mails are archived encrypted from the
+
+journaling database. Enter the Domino server name to the Encrypt on behalf of user field.
+
+53 ELO SAND
+
+
+
+Fig.: E-mail journaling: router settings
+
+Step 4: Save and close the configuration document. You may need to restart the Domino server.
+
+Configuring journaling archiving tasks
+
+In the profile database, you must add a corresponding archiving task. The following tabs must be
+
+filled out here: the journaling database (mailjrn.nsf on the server), view ($All), the Reply, and Notes
+
+forms, the filing circle, and the filing path.
+
+54 ELO SAND
+
+
+
+Fig.: E-mail journaling: Definition of archiving tasks
+
+In this example, e-mail messages are archived in the ELO folder titled Journaling. Here a separate
+
+folder is created for each user, with subfolders for the date.
+
+Note
+
+For security reasons, the journaling database mailjrn.nsf is "hidden" by default and is not
+
+shown in the dialog box for opening the database; you have to enter the database name
+
+manually.
+
+55 ELO SAND
+
+
+
+Troubleshooting
+
+Information about troubleshooting:
+
+Make sure that the correct nlsxbe.dll is in use.
+
+If the error message "inotes is not licensed for this browser version" appears: in the notes.ini
+
+file (in the Domino directory, not the Notes directory; restart the Domino server afterwards),
+
+set the environment variable iNoteswaDefaultUI to webmail (inotes_wa_DefaultUI=webmail).
+
+Alternative solution: In the profile database, under Server archiving options > EML/PDF
+
+options, set the database to that with the provided imagein.nsf and set (wMemo) as the
+
+form. Then restart the Domino server.
+
+For the error message "Disk I/O Error": in the Domino Administrator, give the user defined in
+
+the config.xml file the right to sign or run unrestricted methods and operations.
+
+If the Tomcat server aborts while the servlet is starting: Check whether the correct libraries
+
+are in use, especially notes.jar. If necessary, replace the existing notes.jar with the notes.jar
+
+from the local Notes directory.
+
+If you cannot connect to the Indexserver using the servlet, and the Indexserver log file
+
+produces serialization errors, check the versions of EloixClient.jar and javautils.jar in the 
+
+webapps\lib directory of EloNotesSB. These files are provided with the Indexserver (in older
+
+versions, in EloixClient.zip). Copy both files (replacing old ones as needed) to the webapps\lib
+
+directory of EloNotesSB. Restart the Indexserver and EloNotesSB.
+
+If starting/stopping/etc. archiving tasks in the profile database is not synchronized with the
+
+servlet, the cause may be that a secure connection is entered to the archive options in the
+
+profile database in the Serverbase URL field. Enter http instead of https here.
+
+If the metadata is not saved or folder names are not created in ELO when using journaling,
+
+make sure that the fields in the Notes document profiles and the document bodies are shared
+
+as not encrypted.
+
+When archiving in PDF format, if no e-mails are archived and the log file contains error
+
+messages with Upload failed in them, and/or when archiving in XML&PDF format the e-mails
+
+appear to be archived in XML format, but no preview can be displayed in ELO (meaning that
+
+the PDF preview file is empty), the cause may be that the server archiving options under IBM
+
+Notes Options do not contain a correct user name or password. Another possible source of
+
+errors could be that the jaxen*.nsf or xml-apis.jar files could not be found in the servlet JAR
+
+libraries.
+
+Error message: "Multiple clients can only access the address database if you open all clients
+
+on the Domino server" (or when running the SAND servlet, either the Notes Client cannot be
+
+opened, or the profile database only lists partial forms instead of the usual menu): both the
+
+Notes Client and SAND access the local address book names.nsf.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+56 ELO SAND
+
+
+
+Solution: SAND and Notes Client must access the address book in different ways: SAND must
+
+access a copy of the address book and the Notes Client must access the original.
+
+Create a copy of the address database (give it a name like namesSAND.nsf).
+
+Copy the notes.ini for Notes, then give the copy a name such as notesClient.ini.
+
+Add the following line to the (original) notes.ini (that SAND will access): 
+
+NAMES=namesSAND.nsf.
+
+Add the following line to notesClient.ini: NAMES=names.nsf.
+
+Make sure that the Notes Client is started with notesClient.ini: Open the Link tab in the
+
+properties of the link to the Notes Client on your computer's Desktop and enter the
+
+new notesClient.ini as the Target, such as the following:
+
+(with the quote marks, and possibly for the Notes Designer and Notes Administrator as
+
+well).
+
+When you create the new notesClient.ini, you must make sure that the Notes Client
+
+has the necessary rights to write to this file (otherwise, you will be unable to start the
+
+Notes Client).
+
+After modifying, creating, or deleting archiving tasks in the profile database, the following
+
+message appears.
+
+Fig.: Error message while rescanning the profile database
+
+At this point, the profile database tries to inform the SAND servlet about changes. In
+
+addition to the instructions in the error message, check whether you have copied the
+
+following jar files that are required for synchronization from the Jar directory, which is
+
+provided along with the profile database, to the following directory of your Notes
+
+Client:
+
+..\jvm\lib\ext
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+"c:\Program Files (x86)\IBM\Notes\notes.exe" "=c:\Program Files (x86)\IBM\Notes\notesClient.ini"
+
+◦ 
+
+• 
+
+◦ 
+
+57 ELO SAND
+
+
+
+(e.g.:c:\Program Files (x86)\IBM\Notes\jvm\lib\ext)
+
+commons-codec*.jar
+
+commons-httpclient.jar
+
+commons-logging.jar
+
+EloNotesSBRescan.jar
+
+Afterwards, you need to restart your IBM Notes Client.
+
+Starting with version 12, ad the following URL parameter to the serverbase URL in the
+
+profile database repository options: ?__cmd__=restart.
+
+Alternatively, you can click Rescan Notes (for the profile database) on the SAND status
+
+page. The automatic rescan function runs (can be set) every five hours.
+
+After making changes to/creating/deleting archiving entries in the profile database, no more
+
+messages will appear, including error messages in the Notes client status bar, however the
+
+servlet does not sync with the profile database: Check the serverbase URL in the profile data
+
+base repository options. ?__cmd__=status may have been added as a URL parameter and not
+
+?__cmd__=restart. Replace status with restart (SAND 12 and higher).
+
+When archiving in EML format, the following errors occur in the log file: "NotesException:
+
+Conversion To MIME Failed", "HTMLAPI Problem converting to HTML". The Notes user entered
+
+in the SAND config.xml file or the Notes client user on the computer on which SAND is
+
+running may not have the rights required for MIME conversion.
+
+If SAND is unable to access databases on other Domino servers, a connection document may
+
+be missing (in the Notes address book/Advanced/Connections).
+
+Another possible error: SAND server access is not configured for the server document of the
+
+server to be accessed. On the second server, open the Domino Administrator, open Server >
+
+Current Server Document > Security, then enter the SAND server (or a group the SAND server
+
+belongs to) to Trusted servers.
+
+▪ 
+
+▪ 
+
+▪ 
+
+▪ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+• 
+
+• 
+
+• 
+
+58 ELO SAND
+
+
+
+Fig.: Trusted server configuration
+
+• 
+
+59 ELO SAND
+
+
+
+The SAND servlet does not start with the error message "NotesException: When running on a
+
+server, you must have UNRESTRICTED access in order to set environment variables or get
+
+system variables"
+
+Open the Domino Administrator, open Server > Current Server Document > Security,
+
+and enter the SAND user to the Sign or run unrestricted methods and operations field.
+
+Next, restart the Domino server. Example:
+
+Fig.: Setting "Unrestricted Methods and Operations"
+
+SAND won't start, and the log file contains the following message: "Cannot create session
+
+with password".
+
+Check whether the Notes Client was installed in multi-user mode. SAND requires an
+
+installation in single-user mode. You may have to install the Notes Client again in
+
+single-user mode.
+
+SAND won't start, and the log file contains the following messages: "Cannot create session
+
+with password" and "NotesException: CS_WRITE_DISABLE_IMPLICIT_SCHEDULING":
+
+You are likely working on a 64-bit system and have probably only entered a password
+
+to config.xml, and no users. Add a notes user, e.g. <entry
+
+key="LOCALNOTESUSER">Administrator</entry>. Restart the servlet.
+
+On Notes version 10 and higher, you cannot import license files and receive the error
+
+message "This function is only available starting with Lotus Notes version 5": this is a bug.
+
+Update to SAND version 11.00.001.002, 12.00.003.000, or 20.00.000.000.
+
+SAND does not start, instead showing the error message that the class
+
+"org\omg\CORBA\UserException" could not be found. In this case, this is because the
+
+geronimo-corba_3.0_spec-1.1.jar that Notes.jar requires cannot be found. In this case, copy
+
+the Notes.jar from the Domino\jvm\lib\ext directory to the SAND servlet lib directory, e.g. "C:
+
+\elo\servers\ELO-DESKTOP-UUH4S35-2\webapps\EloNotesSB\WEB-INF\lib", and remove the
+
+Notes.jar and the geronimo-corba_3.0_spec-1.1.jar in the catalina.properties (in the Tomcat
+
+◦ 
+
+• 
+
+◦ 
+
+• 
+
+◦ 
+
+• 
+
+• 
+
+60 ELO SAND
+
+
+
+server/ELO Server directory) from the list of files loaded by the shared loader. Restart the
+
+Tomcat server/the ELO Server.
+
+61 ELO SAND
+
+
+
+Status changes to the servlet in the profile database
+
+The following status modifications of archiving tasks will be shown in the overview in the profile
+
+database:
+
+Task status after being added (but not started by the servlet): "active"
+
+After new scan and servlet started: "started"
+
+After completion of the task: "finished" for a one-time task. For tasks with periodic intervals
+
+between runs, "started" will remain.
+
+After entering the command to stop a task (but not stopped by the servlet): "Stop"
+
+After another scan and stop of the servlet: "stopped"
+
+After entering the command to restart a task (but not restarted by the servlet): "Restart"
+
+After a rescan and restart of the servlet: "started"
+
+After entering the command to continue a task (but not resumed by the servlet): "waiting for
+
+Resume"
+
+After a rescan and resume by the servlet: "started"
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+62 ELO SAND
+
+
+	Table of contents
+	Installation
+	Requirements
+	Installation
+	Servlet installation
+	Preparing the servlet installation
+	The 'nlsxbe.dll' file
+	Context files
+
+	config.xml configuration
+	Logging configuration with Logback or Log4j
+	Logging with Log4j:
+	Logging with Logback:
+	EloNotesSB.xml:
+	Http task
+	Converting to PDF/A
+
+	Servlet installation
+
+	Servlet configuration in the Notes Client
+	File installation
+	Installing the profile database
+	Installing 'ELOProfil.nsf'
+	Updating an older profile database version
+	Updating the profile database with a template
+	Setting the test profile database as the current profile database
+
+	Configuring the profile database
+	"Options"
+	Setting Notes options
+	Importing license data
+	Statistics for company licenses
+	Creating filing circles
+	Creating filing paths
+	Create metadata forms
+	Setting up repository options
+	Link button
+	Create user
+	Configuration in the server archiving options
+
+
+
+
+	Configuration and operation
+	Archiving tasks
+	Defining archiving tasks
+	'Task' tab
+	'Notes DB' tab
+	'Notes doc.' tab
+	'Target in ELO' tab
+	'After archiving' tab
+	'Scheduling' tab
+	'Log' tab
+
+	User-defined archiving tasks ("Backup")
+	Operations on archiving tasks
+	SAND database groups
+	SAND log documents
+	Avoiding replication
+
+	Status page of the servlet
+	Configuring e-mail journaling and archiving e-mail messages from the e-mail journal
+	E-mail journaling setup
+	Configuring journaling archiving tasks
+
+	Troubleshooting
+	Status changes to the servlet in the profile database
+
+

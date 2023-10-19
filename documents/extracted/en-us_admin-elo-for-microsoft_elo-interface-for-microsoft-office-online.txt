@@ -1,0 +1,372 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO for Microsoft | ELO Interface for Microsoft Office Online
+
+
+ELO for Microsoft
+
+ELO Interface for Microsoft Office Online
+
+
+
+3
+
+3
+
+4
+
+5
+
+6
+
+8
+
+10
+
+11
+
+Table of contents
+
+ELO Interface for Microsoft Office Online
+
+Introduction 
+
+Installation of Microsoft Office Online Server 
+
+Installation of ELOimo 
+
+Configuration 
+
+HTTPS/certificates 
+
+Functions 
+
+FAQ 
+
+2 ELO for Microsoft
+
+
+
+ELO Interface for Microsoft Office Online
+
+Introduction 
+
+Please note
+
+To use ELOimo, you need a Microsoft Office Online Server. Microsoft Office Online Server
+
+must be self-hosted. It cannot connect to Microsoft Office 365.
+
+ELOimo acts as an interface between the Microsoft Office Online Server (using the WOPI protocol)
+
+and the ELO Indexserver. Ensure that the firewalls are properly configured so that Microsoft Office
+
+Online Server and the ELO Indexserver can access each other.
+
+3 ELO for Microsoft
+
+
+
+Installation of Microsoft Office Online Server 
+
+You will find the installation instructions here: https://docs.microsoft.com/de-de/officeonlineserver/
+
+deploy-office-online-server.
+
+When configuring in a test environment, we recommend configuring two zones: "internal-http" and
+
+"external-https" so that both the HTTP URL and the HTTPS URL are available for testing purposes.
+
+You can check if Microsoft Office Online Server is properly installed/configured by going to the
+
+following page: http(s)://<server-url>/hosting/discovery. You should see the following there:
+
+In a production environment, we recommend installing Microsoft Office Online Server on a separate
+
+server. However, for testing purposes it is also possible to run everything on the same server.
+
+4 ELO for Microsoft
+
+https://docs.microsoft.com/en-us/officeonlineserver/deploy-office-online-server
+https://docs.microsoft.com/en-us/officeonlineserver/deploy-office-online-server
+https://docs.microsoft.com/en-us/officeonlineserver/deploy-office-online-server
+
+
+Installation of ELOimo 
+
+ELOimo is independent from the ELO Indexserver, meaning that you only need to install one
+
+ELOimo module for multiple ELO Indexserver instances. The ELOix proxy plug-ins can redirect to
+
+ELOimo. This setting is configured automatically during the ELO server installation.
+
+To install ELOimo, go to the Applications tab of the setup. Click the button Add ELO Interface for
+
+Microsoft Office Online.
+
+5 ELO for Microsoft
+
+
+
+Configuration 
+
+Please note
+
+If you make any changes to the configuration, you will need to reload the web app.
+
+Configuration file 
+
+A configuration file might look like this:
+
+# Indicates where the "discovery URL" of the Office Online Server is
+
+discoveryUrl = http://oo.ex16.local/hosting/discovery
+
+# Possible values depending on HTTP/HTTPS and your Office Online configuration:
+
+# - internal-http
+
+# - external-https
+
+zone = internal-http
+
+# The favored view in the Office Online Server
+
+# Possible values are:
+
+# - "embedview": an embedded view with minimal options
+
+# - "view": has a Microsoft toolbar included
+
+viewType = embedview
+
+# ELO Clients only select the language.
+
+# However, different countries (using the same language) might use different formats (for example "." or ",
+
+# For some Office Apps, such as Microsoft Excel, you have to define the full locale.
+
+# Locales for "de-DE", "en-US", and "fr-FR" are predefined but can be overridden this way.
+
+locales.en = en-UK
+
+# This collaborative user is used to check in documents edited in collaborative sessions.
+
+# It should exist in every ELO Indexserver using this module and have the same password.
+
+# It also checks in "temporary save" documents if the user's session was abruptly terminated.
+
+collabUsername = ELO Service
+
+collabPassword = cleartext-or-elo-encrypted
+
+# The "public" URL for this module.
+
+# Especially useful if behind a proxy.
+
+selfUrl = http://localhost:8080
+
+# Path where documents are stored temporarily
+
+dataPath = ./temp
+
+6 ELO for Microsoft
+
+
+
+Check configuration 
+
+You can check whether the configuration is correct on the following pages:
+
+http(s)://<elo-server>/imo/status
+
+http(s)://<elo-server>/ix-<repository>/plugin/de.elo.ix.plugin.proxy/imo/status
+
+Both URLs should take you to the same status page. If the second link returns an "HTTP Status 404"
+
+error, make sure that the file "<elo>/config/ix-…/…/de.elo.ix.plugin.proxy.properties" contains an
+
+entry like this:
+
+/imo/=http\://…/imo/
+
+Keep in mind that the URL ends with /imo/ and not /imo-<repository-name>.
+
+# Deprecated
+
+#defaultIxUrl = http://localhost:9090/ix-ELO/ix
+
+1. 
+
+2. 
+
+7 ELO for Microsoft
+
+
+
+HTTPS/certificates 
+
+If the ELO Web Client is configured with HTTPS, the configured zone must also be ...-https.
+
+Otherwise, it will not be displayed in the ELO Web Client for security reasons.
+
+The ELO server does not use the Windows Certificate Store but instead uses its own. If you use a
+
+self-signed certificate with Microsoft Office Online Server, you should share this certificate with the
+
+ELO server. This is also the case if both are on the same server.
+
+To upload a trustworthy certificate to the ELO server, we recommend you use the following tool: 
+
+https://keystore-explorer.org/.
+
+There is no password for the store. Leave the field blank.
+
+8 ELO for Microsoft
+
+https://keystore-explorer.org/
+https://keystore-explorer.org/
+
+
+Import the Microsoft Office Online Server certificate into the cacerts file under …
+
+\ELO\java\lib\security.
+
+Save the changes.
+
+9 ELO for Microsoft
+
+
+
+Functions 
+
+The ELOimo module enables users to access a Microsoft Office Online Server from ELO. In the ELO
+
+Java Client, you can view Microsoft Office documents as a web preview. In the ELO Web Client, you
+
+can open Microsoft Office documents within your browser and edit them alone or in collaboration
+
+with other users.
+
+You will find these functions in the ELO Web Client under Ribbon > Document.
+
+Edit in Office: This function enables you to open Microsoft Office documents directly in Microsoft
+
+Office.
+
+Information
+
+Microsoft 2010 with Service Pack 1 is required at minimum.
+
+A new version is created automatically in ELO when you save the Microsoft Office document. This
+
+way, you do not need to upload the document after you are done editing it.
+
+Edit online: This function allows you to open and edit Microsoft Office documents online. The
+
+document is opened in a new browser tab. While the user is editing the document, it is marked as
+
+checked out. Once you close the tab containing the document, the changes are saved.
+
+Collaborate: This function allows you to open Microsoft Office documents online and work on them
+
+with other users. The document is opened in a new browser tab. While the user is editing the
+
+document, it is marked as checked out. If multiple users are editing the document, the user ELO
+
+Service is shown as the editor. Once you close the tab containing the document, the changes are
+
+saved.
+
+10 ELO for Microsoft
+
+
+
+FAQ 
+
+When/how are changes to documents saved?
+
+Temporary files are stored by the ELOimo web app. Once all users have finished editing the
+
+document and closed the browser tab, the document will be filed as a new version.
+
+If multiple users have edited the document, the special collaborative user configured as 
+
+collabUsername will be used to save the new version.
+
+Is Microsoft OneNote supported?
+
+Microsoft OneNote is not supported as it requires additional protocols beyond the scope of this
+
+module.
+
+Is Microsoft Visio supported?
+
+Microsoft Visio is not included as part of the Microsoft Office Online Server and is only available in
+
+Microsoft Office 365.
+
+Why can't I see/edit some Word/Excel files properly?
+
+Since 2018, Microsoft's on-premises Office Online Server is only being maintained and is no longer
+
+under development. Older and newer Word documents may contain features that are not supported
+
+by the on-premises Office Online Server, which means they have to be edited in other ways.
+
+Why is the document not checked in immediately after editing?
+
+Since the start of 2020, fundamental changes to browser behavior mean that they no longer trigger
+
+an event when a page is closed. As a result, the system does not know when exactly the document
+
+should be checked in again. This is why the document is checked in after one or two minutes of
+
+inactivity.
+
+11 ELO for Microsoft
+
+
+	Table of contents
+	ELO Interface for Microsoft Office Online
+	Introduction
+	Installation of Microsoft Office Online Server
+	Installation of ELOimo
+	Configuration
+	Configuration file
+	Check configuration
+
+	HTTPS/certificates
+	Functions
+	FAQ
+
+

@@ -1,0 +1,876 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO packages | Introduction
+
+
+ELO packages
+
+Introduction
+
+
+
+3
+
+3
+
+5
+
+7
+
+8
+
+9
+
+11
+
+14
+
+15
+
+Table of contents
+
+Overview
+
+The concept 
+
+First steps 
+
+Define goals and usage context 
+
+Plan groups and permissions 
+
+Plan aspects and fields 
+
+Plan metadata forms 
+
+Planning automation 
+
+Plan spaces 
+
+2 ELO packages
+
+
+
+Overview
+
+The concept 
+
+Packages allow you to create and edit related configurations. A package contains all the
+
+configurations required for a purpose.
+
+The levels concept allows you to manage and update customizations separately from the default
+
+configuration.
+
+ELO packages make it easier to transmit data from one system to another.
+
+3 ELO packages
+
+
+
+Metadata forms and aspects 
+
+Metadata are an essential part of the packages. They are represented by metadata forms and
+
+aspects.
+
+Metadata forms allow you to classify ELO objects by different types. Metadata forms are the
+
+framework that hold the aspects and fields together.
+
+Metadata forms are made up of aspects. Aspects represent the basic properties of an object in ELO.
+
+Aspects are divided into fields that contain the actual metadata and can link to other metadata
+
+forms.
+
+4 ELO packages
+
+
+
+First steps 
+
+To ensure that your packages are successfully implemented, it helps to consider certain things
+
+before you start creating them.
+
+The following steps provide a guide.
+
+Define goals and usage context
+
+What do you primarily want to map?
+
+What is the package called?
+
+What is the usage context of the package?
+
+Transfer/deployment of an ELO Business Solution
+
+Basic solution
+
+Customer-side modifications
+
+Basis for transferring ELO from the partner to the customer
+
+Basis for staging transfer: development system, test system, production system
+
+Should the package be made available in multiple languages?
+
+Plan groups and permissions
+
+Which people in the system are stakeholders in the package?
+
+Who is allowed to/must access what?
+
+Are there external stakeholders?
+
+Which roles are in place?
+
+Plan aspects and fields
+
+Which aspects are required?
+
+Which aspects are required in different contexts?
+
+Which aspects are required multiple times in one metadata form?
+
+Do the aspect views need to different depending on the context?
+
+Which fields do the aspects require?
+
+Which data types do the fields require?
+
+Which keyword lists are required?
+
+Plan metadata forms
+
+In which metadata forms can you meaningfully group aspects?
+
+Are there metadata forms that can be derived from other ones?
+
+What dependencies with other metadata forms are there?
+
+Which views for metadata forms are required?
+
+Planning automation
+
+Where does automation make sense?
+
+1. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+▪ 
+
+▪ 
+
+▪ 
+
+▪ 
+
+▪ 
+
+◦ 
+
+2. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+3. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+4. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+5. 
+
+◦ 
+
+◦ 
+
+5 ELO packages
+
+
+
+Which ELO modules can be used for automation?
+
+Plan spaces
+
+Are spaces needed for entire teams?
+
+Will the package be used for collaboration across teams?
+
+Which data aggregations are required?
+
+Which role needs which data?
+
+6. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+6 ELO packages
+
+
+
+Define goals and usage context 
+
+Which data needs to be mapped depends largely on the requirements of the respective project and
+
+should be discussed with the customer. You may find at this point that one package does not cover
+
+the whole scenario.
+
+Example: Student administration 
+
+This documentation explains how to implement a system for student administration in ELO.
+
+Information
+
+Of course, the documentation cannot cover all aspects of student administration, so some
+
+aspects are only addressed superficially.
+
+The package in this example is intended to accomplish the following:
+
+Enter students with different characteristics.
+
+Assign students to faculties, departments, courses, and exams.
+
+The usage context is the completely new development of a basic solution.
+
+Since students from abroad can also enroll at the university, the solution should also be
+
+localized into English.
+
+• 
+
+• 
+
+• 
+
+• 
+
+7 ELO packages
+
+
+
+Plan groups and permissions 
+
+Depending on the project, different users are involved. Whether they are people from the same
+
+team, the same company, or external stakeholders has a significant influence in terms of planning
+
+the packages and the associated rights and permissions.
+
+You also need to determine which roles are required so that you can plan the rights concept.
+
+Example: Student administration 
+
+In our example, the following groups of people can be identified:
+
+Student administration 
+
+Head: Has the role of Administrator. Can see, create, edit, and delete all objects.
+
+Employees: Have the role of Employee. Can see, create, and edit all objects.
+
+Teaching staff 
+
+Dean: Has the role of Faculty management. Can see, create, edit, and delete all objects
+
+belonging to their own faculty.
+
+Lecturers: Have the role of Lecturer. Can see and edit all objects belonging to their own
+
+faculty.
+
+Students: Have the role of Student. Can only see and edit their own objects.
+
+All persons are part of the system.
+
+Based on this information, we can create the following groups:
+
+Administrative management
+
+Administrative staff
+
+Faculty management
+
+Lecturers
+
+Students
+
+You can learn how to create groups for a package under Groups.
+
+You can configure additional steps when planning the spaces and the corresponding roles.
+
+• 
+
+◦ 
+
+◦ 
+
+• 
+
+◦ 
+
+◦ 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+8 ELO packages
+
+
+
+Plan aspects and fields 
+
+The objectives, the usage context, and the users in the package already provide initial indications
+
+of what the structure should be like.
+
+Analyze which data the users need for their roles. This will enable you to define the aspects and
+
+fields. You may also recognize possible dependencies with other data sets, and where there are
+
+similar data sets.
+
+Example: Student administration 
+
+Administrative staff are the main users in the student administration system, but they focus
+
+primarily on the students.
+
+For example, the following are some of the aspects that could be defined for students:
+
+Person
+
+Addresses
+
+Contact details
+
+Faculty
+
+Subjects
+
+Courses
+
+Semester
+
+Status
+
+Tickets
+
+Fees
+
+You can learn how to create these aspects in ELO under Metadata > Aspects > Create aspects.
+
+Since aspects are composed of fields, the next step would be to plan the fields and their data types.
+
+Here are some examples of possible aspects and fields:
+
+Aspect Fields Type Occurrence
+
+Person First name Text in general
+
+Last name Text in general
+
+Gender Selection list
+
+Birthday Date
+
+Nationality Selection list
+
+Address Street Text in general
+
+House number Text in general
+
+Postal code Integer
+
+City Text in general
+
+Country Selection list
+
+Phone Telephone number type Selection list Multiple times
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+9 ELO packages
+
+
+
+Aspect Fields Type Occurrence
+
+Phone number Integer
+
+E-mail E-mail address type Selection list Multiple times
+
+E-mail address E-mail address
+
+Affiliation Faculty Relation Multiple times
+
+Course Relation
+
+Course Relation
+
+…
+
+You can use this kind of table to keep a record of the fields and field types you have defined.
+
+However, the table is just one method to help you plan. You should use the method that best suits
+
+your project.
+
+To learn how to create fields and get more information on field types, see Metadata > Aspects >
+
+Add fields.
+
+The table shows that the Selection list type is suitable for many fields, for example, if the number
+
+of possible entries must be limited, and/or the values are required for other automated processes.
+
+You can learn how to create, edit, and manage keyword lists under Metadata > Keyword lists.
+
+You can derive other important points from the student aspects. For example, information about
+
+faculties, subjects, courses, and exams is essential. We recommend using relations for this. These
+
+allow you to establish relationships with other data sets.
+
+You can find more information about relations in the documentation Configuration and
+
+administration > Metadata forms and fields > Create field templates > Field types and under 
+
+Configuration and administration > Metadata forms and fields > Metadata forms > Use.
+
+You may have already recognized that certain aspects are used in different contexts, and that
+
+different views are required. Given that each aspect requires at least one view, the creation of
+
+views is an important part of the planning process.
+
+For more information on creating views, see Metadata > Aspects > Create view for aspect.
+
+10 ELO packages
+
+https://docs.elo.com/admin/config/en-us/metadata-forms-and-fields/field-types.html
+https://docs.elo.com/admin/config/en-us/metadata-forms-and-fields/field-types.html
+https://docs.elo.com/admin/config/en-us/metadata-forms-and-fields/field-types.html
+https://docs.elo.com/admin/config/en-us/metadata-forms-and-fields/creating-a-metadataform.html#ELODOC-524AF056365B4EA6B53F3BC380423442
+https://docs.elo.com/admin/config/en-us/metadata-forms-and-fields/creating-a-metadataform.html#ELODOC-524AF056365B4EA6B53F3BC380423442
+
+
+Plan metadata forms 
+
+Metadata forms are used to group aspects and fields in a way that enables you to classify objects
+
+in the ELO system. Once you have defined the aspects and fields, it is easy to create the metadata
+
+forms.
+
+We recommend that you conduct an analysis and record the results so that you can identify and
+
+document possible dependencies between metadata forms and/or metadata forms and fields. This
+
+makes it easier to plan which metadata forms are based on other information.
+
+It also allows you to see which aspects need to be used multiple times in a metadata form.
+
+Inheritance and relations are important concepts. Inheritance enables you to apply aspects to other
+
+metadata forms so that you only have to create them once. With relations, you can map whole
+
+data sets to fields in other metadata forms.
+
+Depending on the user groups and roles as well as the different applications, you should also think
+
+about what uses you will have for the metadata forms and which views you will need.
+
+You will find more information on creating, editing, and managing metadata forms under Metadata
+
+> Metadata forms.
+
+Example: Student administration 
+
+In our example, we can derive the following metadata forms based on the information collected:
+
+Students
+
+Faculties
+
+Subjects
+
+Classes 
+
+Lab
+
+Lecture
+
+Seminar
+
+Tutorial
+
+…
+
+You could create a simplified overview of the metadata form in tables in the following way:
+
+Students 
+
+Metadata form Usage Inheritance Aspects
+
+Students Folder, documents, relation No Person
+
+Addresses
+
+Phone
+
+E-mail
+
+Faculty
+
+• 
+
+• 
+
+• 
+
+• 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+• 
+
+11 ELO packages
+
+
+
+Metadata form Usage Inheritance Aspects
+
+Courses
+
+Semester
+
+Status
+
+Tickets
+
+Fees
+
+Faculty 
+
+Metadata form Usage Inheritance Aspects
+
+Faculty Folder, relation Basic data (title, building)
+
+Person (management)
+
+Person (deputy)
+
+Subject 
+
+Metadata form Usage Inheritance Aspects
+
+Subject Folder, relation Basic data (title, building)
+
+Person (management)
+
+Person (deputy)
+
+Course 
+
+Metadata form Usage Inheritance Aspects
+
+Course Folder, relation For multiple subtypes Basic data (title, description)
+
+Person (instructor)
+
+Room
+
+Schedule
+
+The Course metadata form acts as a parent category for all courses. Multiple metadata forms (for
+
+example Lab, Lecture, and Seminar) inherit all their settings from this metadata form.
+
+12 ELO packages
+
+
+
+These subtypes are used for new entries in the workspace. The Course metadata form can be used
+
+for filters but is not used as a metadata form for entries.
+
+13 ELO packages
+
+
+
+Planning automation 
+
+Where does automation make sense?
+
+Which ELO modules can be used for automation?
+
+During planning, you can consider which processes are common for the department/team and how
+
+they can be simplified. ELO offers different options for automating processes, either completely or
+
+in part.
+
+ELO Flows: ELO Flows presents a new customization platform for ELO. It is intended to help
+
+non-experts to create flows and offer ELO Business Partners a new platform for developing
+
+custom modules for use in these flows. For more information, refer to Configuration and
+
+administration > Processes and automation > ELO Flows
+
+ELO workflows: ELO workflows can map complex company processes. For more information,
+
+refer to Configuration and administration > Processes and automation > ELO workflows
+
+ELO Automation Services: ELO Automation Services are used to automate tasks within ELO.
+
+Rule sets are used for this purpose. For more information, refer to Configuration and
+
+administration > Processes and automation > ELO Automation Services
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+14 ELO packages
+
+https://docs.elo.com/admin/config/en-us/elo-flows/
+https://docs.elo.com/admin/config/en-us/elo-flows/
+https://docs.elo.com/admin/config/en-us/elo-flows/
+https://docs.elo.com/admin/config/en-us/workflow/
+https://docs.elo.com/admin/config/en-us/workflow/
+https://docs.elo.com/admin/config/en-us/elo-automation-services/
+https://docs.elo.com/admin/config/en-us/elo-automation-services/
+https://docs.elo.com/admin/config/en-us/elo-automation-services/
+
+
+Plan spaces 
+
+Are spaces needed for entire teams?
+
+Will the package be used for collaboration across teams?
+
+Which data aggregations are required?
+
+Which role needs which data?
+
+ELO Teamspaces 
+
+ELO Teamspaces is intended for collaboration in groups made up of different divisions,
+
+departments, or teams.
+
+In ELO Teamspaces, you can share information with members of the teamspace and edit it.
+
+In our example, this could be a group that meets to plan classes and coordinate session dates and
+
+rooms. Participants come from different faculties and departments.
+
+To create and work with a teamspace, you will find more detailed information on the following
+
+pages:
+
+Create templates for ELO Teamspaces
+
+Working with ELO Teamspaces in the ELO Java Client
+
+Working with ELO Teamspaces in the ELO Web Client
+
+ELO Workspaces 
+
+A workspace is suitable as a work environment for a group of users working on the same topic.
+
+All information for the work group is collected and processed in the workspace.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+15 ELO packages
+
+https://docs.elo.com/user/elo-java-client/en-us/elo-java-client/manual/teamspaces.html
+https://docs.elo.com/user/elo-java-client/en-us/elo-java-client/manual/teamspaces.html
+https://docs.elo.com/user/elo-web-client/en-us/elo-web-client/teamspaces.html
+https://docs.elo.com/user/elo-web-client/en-us/elo-web-client/teamspaces.html
+
+
+In our example, one possible workspace is one for the Student Administration department. There,
+
+department members create new students, manage existing students, and view overviews and
+
+charts related to the students.
+
+To create and work with a workspace, you will find more detailed information on the following
+
+pages:
+
+Create types for ELO Workspaces
+
+Working with ELO Workspaces in the ELO Java Client
+
+Working with ELO Workspaces in the ELO Web Client
+
+• 
+
+• 
+
+• 
+
+16 ELO packages
+
+https://docs.elo.com/user/elo-java-client/en-us/elo-java-client/manual/workspaces.html
+https://docs.elo.com/user/elo-java-client/en-us/elo-java-client/manual/workspaces.html
+https://docs.elo.com/user/elo-web-client/en-us/elo-web-client/workspaces.html
+https://docs.elo.com/user/elo-web-client/en-us/elo-web-client/workspaces.html
+
+	Table of contents
+	Overview
+	The concept
+	Metadata forms and aspects
+
+	First steps
+	Define goals and usage context
+	Example: Student administration
+
+	Plan groups and permissions
+	Example: Student administration
+
+	Plan aspects and fields
+	Example: Student administration
+
+	Plan metadata forms
+	Example: Student administration
+	Students
+	Faculty
+	Subject
+	Course
+
+
+	Planning automation
+	Plan spaces
+	ELO Teamspaces
+	ELO Workspaces
+
+
+

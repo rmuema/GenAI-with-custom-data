@@ -1,0 +1,1599 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Configuration and administration | Metadata forms and fields
+
+
+Configuration and
+
+administration
+
+Metadata forms and fields
+
+
+
+3
+
+3
+
+4
+
+4
+
+8
+
+11
+
+11
+
+16
+
+24
+
+24
+
+27
+
+27
+
+30
+
+34
+
+Table of contents
+
+Getting started
+
+Things to consider ahead of time 
+
+Create field templates
+
+Field templates 
+
+Field types 
+
+Metadata forms
+
+Create metadata form 
+
+Add fields 
+
+Keyword lists
+
+Keyword lists 
+
+Filing definition
+
+Basic information on filing definition syntax 
+
+Filing to multiple folders 
+
+Filing definition by longest match 
+
+2 Configuration and administration
+
+
+
+Getting started
+
+Things to consider ahead of time 
+
+The following approach is recommended:
+
+Which metadata forms do you need?
+
+Which fields and settings do you want the metadata forms to have?
+
+Which fields do you want to use in multiple metadata forms?
+
+First, create all the field templates.
+
+Next, create the metadata forms.
+
+Add the fields to the metadata forms.
+
+Information
+
+You need to create the field templates required for the metadata forms before you create
+
+the metadata form. You can use field templates in different metadata forms.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+6. 
+
+3 Configuration and administration
+
+
+
+Create field templates
+
+Field templates 
+
+You can define templates for fields in the Field templates area. These templates can be used to
+
+create metadata forms in the Metadata forms and fields area.
+
+General 
+
+Field group: Define a unique group name here.
+
+Please note
+
+The group names must be valid identifiers in JavaScript, as some ELO modules use the
+
+group names as JavaScript variables. Use the following list as a guideline.
+
+Maximum 40 characters
+
+Uppercase letters only
+
+No spaces
+
+No special characters
+
+No umlauts
+
+No "ß"
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+4 Configuration and administration
+
+
+
+No dashes
+
+No numbers at the beginning of the name
+
+No reserved words in JavaScript
+
+Name: Define a name for the field.
+
+Translation variable: The Translation variable field is required if you need the contents of the Name
+
+field in multiple languages. Enter the corresponding key in the respective properties file.
+
+Display mode: The following options enable you to specify the access and visibility settings for the
+
+field.
+
+Normal access: The field is visible and can be edited by users.
+
+Read-only: The field is visible but cannot be edited by users. The contents can be transferred
+
+to the field automatically.
+
+Hidden: The field is hidden. The field can be used to store data that the user does not need to
+
+see, for example. 
+
+Input 
+
+Data type: Define the data type of the field here.
+
+Information
+
+For more information on field types, refer to the chapter Field types.
+
+Relation: Relation field types are used to link a field with the metadata of another entry.
+
+The following conditions must be met before you can transfer metadata to a Relation field type:
+
+There must be at least one metadata form assigned the usage Relation.
+
+The required metadata forms must be entered in the Relation field in the field template.
+
+Please note
+
+You must create the metadata form and assign it the usage Relation before you create the
+
+corresponding fields.
+
+Minimum length: Set the minimum number of characters that need to be entered in a field.
+
+Maximum length: Define the maximum number of characters that can be entered in a field.
+
+Regular expression: You can use regular expressions to validate the data that was entered in a field.
+
+Please note
+
+An error in the expression can cause problems when entering data. Check that the regular
+
+expressions you use work properly.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+5 Configuration and administration
+
+
+
+Mandatory field: Use this option to define whether you want a field to be mandatory.
+
+List existing field values (F7 search): Press the F7 key when entering metadata for a document or
+
+folder to show a list of previous entries made in the field.
+
+External data: In this field, you can specify which data should be imported from the document
+
+metadata (such as Exif JPG data) or from the full text information and applied to the fields
+
+automatically.
+
+To read Exif data from a JPG file, you must enter the exact identifier of the variable in the External
+
+data field.
+
+You could use Image.Resolution or FILESIZE, for example.
+
+Please note
+
+The names may vary by manufacturer. To determine the Exif identifiers, read the Exif data
+
+with a script (see script example in the publication 99 script examples) or use an external
+
+program.
+
+Default value: Define the default value for the field here.
+
+Tooltip: Create a tooltip for the field. This could contain information about the required format for
+
+entering data, for example.
+
+Translation variable: The Translation variable field is required if you need the contents of the Tooltip
+
+field in multiple languages. Enter the corresponding key in the respective properties file.
+
+Properties 
+
+Field with high priority: If you enable the option Field with high priority, the information in the fields
+
+will be displayed after the file name in the tree view.
+
+Show field when checking in: The field is displayed when checking in. You can still enter metadata
+
+information at this point.
+
+Pass on to child entries: This option enables child entries to use entries in this field. The fields must
+
+have the same group name for this to work.
+
+Allow input inheritance from parent element: This option enables you to pass on inheritable entries
+
+from the parent field. The fields must have the same group name for this to work.
+
+Automatically add * before search term: Adds the placeholder * before the query text when using
+
+this metadata form to search in ELO. This defines a search as ending with.
+
+Automatically add * after search term: Adds the placeholder * after the query text when using this
+
+metadata form to search in ELO. This defines a search as beginning with. Example: If you enter 15
+
+to this field, the search returns all documents with the entry 15 at the start of the field (ELO
+
+searches for 15*).
+
+6 Configuration and administration
+
+
+
+Disable tokenization: When this option is enabled, the contents of the short name are not split into
+
+tokens and the entire character string in the field is written to the full text database.
+
+Exclude from iSearch: The contents of this field are excluded from ELO iSearch and the contents are
+
+not added to the full text database.
+
+Keyword list 
+
+The Edit keyword list link takes you to the page where you can edit the keyword list.
+
+Entry only allowed with keyword list: Select this option to only allow entries to this field from
+
+keyword lists when entering metadata. This enables you to structure your metadata and helps
+
+prevent manual errors. You can create an individual keyword list for each field (group name). Do the
+
+same for each input field, i.e. create a keyword list for each field of a metadata form. This ensures
+
+that your metadata is standardized.
+
+Translated keyword list: The keyword list is taken into account when using the automatic
+
+translation function. Please note that the terms in the keyword list must be translated manually in
+
+the translation table for automatic translations to occur in the client program.
+
+Dynamic keyword list: A dynamic keyword list can only be integrated with the help of scripts. For
+
+more information, refer to the ELO Indexserver programming guide documentation, Dynamic
+
+keyword lists section.
+
+Field permissions 
+
+This is where you define the permissions to the field.
+
+AND group: Use this button to group users or user groups.
+
+Overview of metadata forms 
+
+In the Overview of metadata forms area, you can see which metadata forms the field template is
+
+being used in.
+
+Save: Click Save to confirm new settings or changes to the metadata form.
+
+Cancel: Click Cancel to discard any changes or new entries for a field template. Changes are not
+
+saved.
+
+7 Configuration and administration
+
+https://docs.elo.com/dev/programming/en-us/elo-indexserver-programming-guide/dynamic-keyword-lists/elowf.html#use-from-metadata-form-definition-as-in-other-clients
+https://docs.elo.com/dev/programming/en-us/elo-indexserver-programming-guide/dynamic-keyword-lists/elowf.html#use-from-metadata-form-definition-as-in-other-clients
+https://docs.elo.com/dev/programming/en-us/elo-indexserver-programming-guide/dynamic-keyword-lists/elowf.html#use-from-metadata-form-definition-as-in-other-clients
+
+
+Field types 
+
+ELO provides different types of fields. You should select the appropriate field type depending on the
+
+application and your requirements.
+
+To select this type of field in the ELO Administration Console, go to Field templates > Input > Data
+
+type.
+
+The following field types are available:
+
+Text: In Text field types, you can enter any characters.
+
+File reference: Import a file reference from the file reference generator.
+
+Date: In Date field types, the user can select a date from an integrated calendar.
+
+Please note
+
+The field type Date is only provided for compatibility reasons. Please use the ISO date field
+
+type instead.
+
+ISO date: In ISO date field types, the user can select a date from an integrated calendar. The date is
+
+saved in ISO format (YYYYMMDD).
+
+List entry: In the List entry field type, the user must store a hierarchical keyword list in a text file.
+
+The user selects keywords from this list when entering metadata.
+
+Please note
+
+The List entry field type is available for compatibility reasons. In newer ELO client versions,
+
+this field type is treated the same as the Text field type.
+
+8 Configuration and administration
+
+
+
+Number: In Number type fields, you can only enter numbers and number separators. If you enter
+
+any other characters in this field, a warning message will appear.
+
+Numeric fixed width: You can only enter numbers and number separators to a Numeric fixed width
+
+field type. If you enter any other characters in this field, a warning message will appear. If you see
+
+this message, correct your entry. You must enter a value greater than zero to the Maximum length
+
+field to define the width.
+
+Numeric fixed width, 1, 2, 4, or 6 decimal places: In the field type Numeric fixed width, x decimal
+
+places, you can only enter numbers and corresponding number separators. You must enter a value
+
+greater than zero to the Maximum length field to define the width.
+
+If you enter a number when assigning metadata, it will be automatically be completed according to
+
+the following convention:
+
+Number without decimal point: ELO will automatically add a decimal point and the selected
+
+number of decimal places (always zeros). This always adds zeros.
+
+Number with decimal point: ELO will add zeros after the last decimal until the required
+
+number of decimal places has been reached.
+
+Please note
+
+Using the type Numeric fixed width, 1, 2, 4, or 6 decimal places and configuring a setting in
+
+the Maximum length field at the same time can result in conflicts.
+
+In such cases, at least the following must be taken into account for the setting in the 
+
+Maximum length field:
+
+Places before the point
+
+The point
+
+The defined number of decimal places
+
+If you expect multiple characters before the point, you will have to select a larger value for
+
+the Maximum length field.
+
+Example 1 
+
+The setting Numeric, fixed width, 2 decimal places is selected. If the user enters the value "1" in
+
+the field, ELO will change it to 1.00.
+
+Example 2 
+
+The setting Numeric, fixed width, 4 decimal places is selected. If the user enters the value "4.2" in
+
+the field, ELO will change it to 4.2000.
+
+This ensures that entries always have the same number of decimal places.
+
+Thesaurus: The Thesaurus field type provides word groups in a field which the user can select from
+
+a menu in a dialog box. The dialog box is opened by right-clicking the corresponding field.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+9 Configuration and administration
+
+
+
+User field: You can right-click fields of the type User to open a list of all active users and groups in
+
+ELO.
+
+Relation: Relation field types are used to link a field with the metadata of another entry.
+
+The following conditions must be met before you can transfer metadata to a Relation field type:
+
+There must be at least one metadata form assigned the usage Relation.
+
+The required metadata forms must be entered in the Relation field in the field template.
+
+Please note
+
+You must create the metadata form and assign it the usage Relation before you create the
+
+corresponding fields.
+
+• 
+
+• 
+
+10 Configuration and administration
+
+
+
+Metadata forms
+
+Create metadata form 
+
+Please note
+
+When configuring metadata forms, the number of forms used should not reach double-digits.
+
+A separate search index is built for each metadata form. A large number of metadata forms
+
+therefore requires a large amount of RAM and hard disk space for the ELO iSearch.
+
+This applies for first generation and second generation metadata forms.
+
+Click the Add keyword button (green plus icon).
+
+The New metadata form dialog box opens.
+
+Enter a name for the metadata form in the Name field.
+
+1. 
+
+1. 
+
+11 Configuration and administration
+
+
+
+Enter all other information for the metadata form in the New metadata form dialog box.
+
+Information
+
+Read the following information for notes on the corresponding fields and options.
+
+Click Save to save the metadata form.
+
+1. 
+
+1. 
+
+12 Configuration and administration
+
+
+
+Basic data 
+
+Name: Enter the name of the metadata form here.
+
+Translation variable: This field can be used to define a variable which can be used for customizing
+
+the program with scripts or for translations, e.g. the name of the metadata form.
+
+Last change: In this field, you can see when the metadata form was modified last.
+
+ID: Identification number of the metadata form. This is automatically assigned by the system.
+
+GUID: This field contains the GUID of the metadata form, which is allocated by the system.
+
+Save data as a table: Click the Save data as a table function if you do not want to save the data of
+
+the entries filed with this metadata form in the usual database structure (objkeys table). The
+
+entries are saved to a flat database table instead. This database table has one column per index
+
+value and one row per document. This may be required in specific cases to optimize search
+
+performance.
+
+Important
+
+You cannot convert data back to the usual database structure. Check carefully if this setting
+
+is necessary in your case. You will find more information under ELO server- installation and
+
+operation > Optimization > ELO metadata table.
+
+13 Configuration and administration
+
+https://docs.elo.com/ops/onprem/en-us/optimization/metadata-tables/
+https://docs.elo.com/ops/onprem/en-us/optimization/metadata-tables/
+https://docs.elo.com/ops/onprem/en-us/optimization/metadata-tables/
+
+
+Use 
+
+Folders: If you enable this option, the metadata form can be used to enter metadata for folders.
+
+Documents: If you enable this option, the metadata form can be used to file documents.
+
+Search: Select this option to use the metadata form for searches.
+
+Relation: If this option is enabled, you can establish a link between the metadata form and Relation
+
+type fields. With Relation type fields, you can only select metadata forms in which this option is
+
+enabled.
+
+Relation fields establish a connection to the corresponding relational metadata forms. Relation
+
+fields can be used to display the priority fields of the associated metadata form as a keyword list.
+
+You can recognize relation fields by the chain icon.
+
+14 Configuration and administration
+
+
+
+Information
+
+Double-click to transfer an entry from the keyword list to the field. Only the short name is
+
+copied into the field. You can sort the keyword list using the columns.
+
+Restriction 
+
+Usage determined by parent element: If the option Usage determined by parent element is
+
+enabled, then this metadata form is only available if you file or create a child entry in a folder that
+
+is restricted to this metadata form.
+
+See the option Restrict selection of metadata forms for child entries.
+
+Restrict selection of metadata forms for child entries: Enter which metadata forms may be used for
+
+the child entries here.
+
+Enter the metadata form you want to use to the Enter name of metadata form field. ELO suggests
+
+possible metadata forms as you type.
+
+Click a suggestion to add the respective metadata form to the list. To remove the metadata form
+
+from the list, click the X icon to the right.
+
+15 Configuration and administration
+
+
+
+Add fields 
+
+A preview of the metadata form is displayed in the left pane. You can modify the metadata forms
+
+by moving the fields. You can move fields and the names of fields using the mouse.
+
+Information
+
+Before you use the fields in the Metadata forms and fields area, you need to define the
+
+templates for the fields in the Field templates area. Before you start creating fields, you
+
+should have finalized all the settings for the metadata forms.
+
+Move fields
+
+Click the field you want to move.
+
+Position the cursor on the field.
+
+The cursor turns into a cross with four arrows.
+
+Click and hold down the left mouse button.
+
+Drag the field to where you want it on the metadata form.
+
+Release the mouse button.
+
+The field is now at the correct position on the metadata form.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+16 Configuration and administration
+
+
+
+Information
+
+Move field names in the same way.
+
+Create fields
+
+Select the required tab on the metadata form.
+
+Please note
+
+You can use up to 200 fields on each metadata form. When numbering fields, it is
+
+important to note that 51 to 60 are hidden fields reserved for scripts.
+
+Optional: Create a new tab by clicking the Add tab button to the right of the metadata form
+
+preview.
+
+Click the Add field button at the bottom to add a new field to the metadata form.
+
+This creates a new field marked New.
+
+You can edit the settings for the fields in the Field properties area on the right-hand side.
+
+Enter the required information for the new field.
+
+Information
+
+Refer to the following explanations of the field properties for the settings.
+
+Field properties 
+
+Field group: Select a group name from the list of available field templates in the Field group field.
+
+You can use the group name to search multiple metadata forms, assuming they all use the same
+
+1. 
+
+2. 
+
+3. 
+
+17 Configuration and administration
+
+
+
+field template. You can also use the group name to provide the user with a keyword list for multiple
+
+metadata forms.
+
+Please note
+
+You can only use a field group once for each metadata form.
+
+Information
+
+Some field settings are in the Fields templates section.
+
+Name: Enter the name of the field here.
+
+Translation variable (name): If you want to provide the name of the field in multiple languages,
+
+enter a corresponding variable name here. There must be a properties file for those languages
+
+containing this variable.
+
+Display mode: Define the status of the field here. The Normal access option means the field is
+
+unrestricted and can be edited by users. If the Read-only option is checked, you cannot enter
+
+anything in the field. However, you can enter information in the field using a script, for example. If
+
+the option Hidden is checked, the field is not displayed. It is still possible to enter information using
+
+a script.
+
+Tooltip: You can enter text to this field to be displayed as a tooltip whenever the user moves the
+
+cursor over the field.
+
+Translation variable (tooltip): If you want to provide the tooltip in multiple languages, enter a
+
+corresponding variable name here. There must be a properties file for those languages containing
+
+this variable.
+
+Field with high priority: If you enable the option Field with high priority under Metadata forms and
+
+fields, the information from the fields will be displayed after the file name in the tree view.
+
+Show field when checking in: The field is displayed when checking in. You can still enter metadata
+
+information at this point.
+
+Mandatory field: Specify whether you want a field to be mandatory here. You should define this
+
+setting in the options for field templates.
+
+Pass on to child entries: If the option Pass on to child entries is enabled, metadata information can
+
+be passed on to child entries.
+
+Allow input inheritance from parent element: If the Allow input inheritance from parent element
+
+option is enabled, entries assigned this metadata form can inherit metadata from parent entries.
+
+Default value: If you want a field to be automatically assigned a specific value, enter the
+
+corresponding value to the Default value field.
+
+18 Configuration and administration
+
+
+
+Positioning 
+
+Edit the exact position of the field in the Positioning area. To help you, turn on the grid in the
+
+preview (Turn grid on/off button).
+
+Information
+
+If you want to see any changes you make here in preview mode, you need to save the
+
+metadata form.
+
+Tab: Use the drop-down menu to select the tab you want the field to be displayed on.
+
+Label column: This value specifies the horizontal starting position of the field name.
+
+Label row: This value specifies the vertical starting position of the field name.
+
+Input column: This value specifies the horizontal starting position of the field.
+
+Input row: This value specifies the vertical starting position of the field.
+
+Input width: This value specifies the width of the field in columns. If you enter 0, the column width
+
+is automatically adjusted to fit the available space.
+
+Form permissions 
+
+Define the permissions for the metadata form in the Form permissions area.
+
+Add user or group: Search for groups or users in the Add user or group field. ELO suggests possible
+
+users and groups as you type. Click the corresponding suggestion to add a user or a group.
+
+User or group with permissions: You can see the users and groups with permissions to the
+
+metadata form in the User or group with permissions field. Edit the permission settings using the
+
+check boxes next to the User or group with permissions field.
+
+19 Configuration and administration
+
+
+
+AND group: Use the AND group button to connect two or more groups. In this case, the assigned
+
+permissions only apply to users who are members of all groups connected as AND groups.
+
+Owner rights: Use the Owner rights button to add permissions for the user who created the
+
+metadata form.
+
+Members of the group: Under Members of the group, you can see all users who are a member of
+
+the selected group.
+
+Entry options 
+
+Entry type (folder forms only): Define an entry type for folders in the Entry type drop-down menu.
+
+Font color: Color for displaying the document type.
+
+Document status/sorting: Select the document status here that will be applied to documents filed
+
+with this metadata form. Define the sort order for documents filed with the metadata form for
+
+folders.
+
+Document path: Select the document path to be used with the metadata form. The default path is 
+
+basis.
+
+Lifetime: Define the lifetime of a document here. After this period has ended, the document is
+
+removed from ELO. This function is primarily useful for documents that need to be retained for a
+
+certain length of time, such as contracts.
+
+Translate short name: If you enable this option, the short name is added to the translation table.
+
+Enable quick preview for documents in the folder: If you enable this option, the first document in
+
+the folder is displayed in the right-hand program pane instead of a list of contained documents.
+
+20 Configuration and administration
+
+
+
+Encryption key: Select an encryption key here if you wish to encrypt documents filed with this
+
+metadata form. You can also select the No encryption option.
+
+Add to full text database: Select this option to add documents filed with this metadata form to the
+
+full text database. This allows the documents to be found in a full text search.
+
+Approval document: This setting corresponds to the Author for approval documents permission.
+
+Documents with this option can be edited by a user with the Author for approval documents right.
+
+With approval documents, an editor may continue to edit previous versions of a version-controlled
+
+document without other users in the repository being able to see it.
+
+Entry permissions 
+
+Define rights for the documents to be filed here.
+
+Please note
+
+These settings must be matched with the permissions for the metadata form and with the
+
+permissions for the field templates.
+
+Add user or group: Search for groups or users in the Add user or group field. ELO suggests possible
+
+users and groups as you type. Click the corresponding suggestion to add a user or a group.
+
+User or group with permissions: You can see the users and groups with permissions in the User or
+
+group with permissions field. Edit the permission settings using the check boxes next to the User or
+
+group with permissions field.
+
+AND group: Use the AND group button to connect two or more groups. In this case, the assigned
+
+permissions only apply to users who are members of all groups connected as AND groups.
+
+Owner permissions: Use the Owner permissions button to add permissions for the user who created
+
+the entry.
+
+Parent rights: Use the Parent rights button to apply the settings assigned to the parent entry.
+
+Members of the group: Under Members of the group, you can see all users who are a member of
+
+the selected group.
+
+21 Configuration and administration
+
+
+
+Filing rules 
+
+Create filing path automatically: If you select this option, folders will be created automatically if
+
+the path does not already exist when filing documents automatically.
+
+Create reference path automatically: If you select this option, references will be created
+
+automatically if the path does not already exist when filing documents automatically.
+
+Filing definition: You can see the current filing definition in the Filing definition field. Create the filing
+
+definition in the Filing path field. If required, you can create additional paths using the Add
+
+reference path button.
+
+Filing path: In the Filing path field, you can define a rule that will govern how documents are
+
+automatically filed to ELO. This is the path on the file system where documents filed with this
+
+metadata form will be stored.
+
+Example: [¶Invoices¶]+LD(7,4)+[¶]+L1(1,1)
+
+The filing definition can contain fixed or variable components.
+
+Information
+
+For more information on filing definition syntax, refer to the chapter Filing definition and
+
+fields.
+
+Add reference path: In addition to the filing path, you can create additional reference paths. Add
+
+fields for additional paths using the Add reference path button.
+
+Information
+
+To remove a reference path or filing path from the filing definition, click the X icon to the
+
+right of the corresponding field.
+
+Default workflow: Select the workflow that will be started when a document is filed with this
+
+metadata form.
+
+22 Configuration and administration
+
+
+
+Check-in workflow: Select the workflow that will be started when a document is checked in with
+
+this metadata form.
+
+Barcode Info 
+
+Barcode info: This field lists the rules defined using the barcode wizard. Define the barcode rules by
+
+clicking the button next to the display field.
+
+Information
+
+See the ELO Barcode section of the ELO Java Client documentation for more information on
+
+these settings.
+
+Overview of fields 
+
+This contains an overview of the fields assigned to the metadata form. The table also shows you
+
+the field IDs, which you might require for the filing definition.
+
+23 Configuration and administration
+
+https://docs.elo.com/admin/clients/en-us/java-client/elo-barcode/
+https://docs.elo.com/admin/clients/en-us/java-client/elo-barcode/
+
+
+Keyword lists
+
+Keyword lists 
+
+Create new keyword lists and edit existing keyword lists in the Keyword lists area.
+
+The Keyword lists area contains the following sections:
+
+Table of keyword lists
+
+General settings
+
+Keyword list
+
+These are explained below.
+
+Table of keyword lists 
+
+The Table of keyword lists contains all the available keyword lists. Click a keyword list to open it for
+
+editing.
+
+Search for: You can search the list using the Search for field.
+
+Add keyword list (green plus icon): Click the Add keyword list button to create a new keyword list.
+
+Duplicate the selected keyword list (icon with two documents): Click the Duplicate selected
+
+keyword list button to copy the settings of an existing keyword list and transfer them to a new
+
+keyword list.
+
+1. 
+
+2. 
+
+3. 
+
+24 Configuration and administration
+
+
+
+Delete the selected keyword list (red X icon): Click the Delete the selected keyword list button to
+
+remove the selected keyword list.
+
+Reload data from server (yellow circle arrow icon): Click the Reload data from server button to
+
+reload the Keyword lists area.
+
+General settings 
+
+The General settings area contains the following settings:
+
+Field group: Assign a name for the keyword list in the Field group field. Enter the name of the field
+
+template you want to use for the group name.
+
+Import ...: Click the Import ... button to load keyword lists already saved in file format in the ELO
+
+Administration Console. This function supports the file types XML and TXT.
+
+Please note
+
+For technical reasons, an existing keyword list is overwritten when you import a keyword
+
+list. This is why the Import keyword list dialog box opens when you import a keyword list. To
+
+continue, click Import....
+
+Export as XML: Click the Export as XML button to save the selected keyword list as an XML file.
+
+Export as TXT: Click the Export as TXT button to save the selected keyword list as a TXT file.
+
+Save: Click Save to save the keyword list.
+
+Cancel: To discard the last changes you made, click Cancel.
+
+Search for: You can search the keyword list in the Search for field.
+
+Keyword list 
+
+The Keyword list area contains the actual keyword list. You can add or edit keywords here.
+
+Add keyword (plus icon): Use the Add keyword button to add new keywords. Enter the keyword to
+
+the Enter keyword field.
+
+Information
+
+Metadata 2.0 does not recognize keywords which contain a pilcrow symbol (¶). Pilcrow
+
+symbols are used as a separator when multiple values are entered.
+
+Add child entry (folder with plus icon): Click the Add child entry button to add child entries to a
+
+keyword.
+
+Delete the selected keyword list entry and all child entries: (X icon): Click the X icon to delete the
+
+selected keyword. Existing child entries will also be deleted.
+
+25 Configuration and administration
+
+
+
+Delete keyword list completely (list icon with X icon): To delete the complete keyword list, click 
+
+Delete the keyword list completely.
+
+From A to Z, sort ascending (AZ icon): Click the From A to Z, sort ascending button to sort the
+
+keyword list alphabetically in ascending order.
+
+From Z to A, sort descending (ZA icon): Click the From Z to A, sort descending button to sort the
+
+keyword list in reverse alphabetical order.
+
+Enter keyword: Enter new keywords and child entries to the Enter keyword field. If you have
+
+selected a keyword or child entry, the respective name is displayed.
+
+Merge keyword: If the option Merge keyword is enabled, the keyword is merged with the child entry
+
+that the user clicks. The composite value is entered in the field. Field values can therefore be made
+
+up of a keyword and multiple child entries.
+
+Disable keyword: If the Disable keyword option is enabled, the keyword or child entry is only used
+
+for classification purposes, but cannot be selected when entering metadata. For example, the user
+
+can navigate to a child entry using the disabled keyword and select it.
+
+26 Configuration and administration
+
+
+
+Filing definition
+
+Basic information on filing definition syntax 
+
+Use the following structure for a filing definition:
+
+[¶folder1¶folder2¶]+Lx(v,y)+ ...
+
+Information
+
+The pilcrow character ("¶") is used to separate folder levels. The keyboard shortcut for the
+
+pilcrow symbol is ALT + 0182. Alternative: Click the pilcrow symbol to the right of the Filing
+
+path field.
+
+Example 1 
+
+You want to file invoices in an alphabetical folder structure sorted by the first letter of the customer
+
+name. The Sales folder contains the child folder Customers. The Customers folder contains an
+
+alphabetical index.
+
+The metadata form in this example uses the field Customers(L1).
+
+Filing path
+
+Enter the following path in the Filing path field:
+
+[¶Sales¶Customers¶]+L1(1,1)
+
+1. 
+
+27 Configuration and administration
+
+
+
+The contents of the Filing path field are automatically applied to the Filing definition field
+
+when you exit the field.
+
+Information
+
+[ … ]: The square brackets indicate defined folders. These folders must be exactly the
+
+same in ELO so that they can be found. They can be created automatically. To do this,
+
+the Create filing path automatically option must be enabled.
+
+¶: The pilcrow character separates levels.
+
++: The plus character links the fixed part of the filing definition with the variable part.
+
+L1 (1,1): ELO selects the first letter of the Customers field (1,1), i.e. the first letter of
+
+the customer name.
+
+Click Save to save the changes to the metadata form.
+
+Now, if a document with this metadata form is filed using the Automatic filing function, the
+
+filing definition applies.
+
+For example, a document from the customer Smith will be automatically filed to Sales//
+
+Customers//S.
+
+Example 2 
+
+You have created a child folder for each customer within the Sales folder. Each of these child
+
+folders contains additional folders, such as Invoices, Offers, Delivery notes.
+
+The metadata form in this example uses the fields Customers (L1) and Document type (L2).
+
+Enter the following path in the Filing path field:
+
+[¶Sales¶]+L1+[¶]+L2
+
+Information
+
+2. 
+
+1. 
+
+28 Configuration and administration
+
+
+
+The contents of the Filing path field are automatically applied to the Filing definition
+
+field when you exit the field.
+
+[¶Sales¶]: ELO searches the repository for the Sales folder. The second pilcrow
+
+character indicates that a second level must follow.
+
++L1: The name of the child folder must match the contents of the first field
+
+(Customers).
+
++[¶]: ELO searches for another child folder.
+
++L2: The name of the child folder must match the contents of the second field
+
+(Document type).
+
+Click Save to save the changes to the metadata form.
+
+Now, if a document with this metadata form is filed using the Automatic filing function, the
+
+filing definition applies.
+
+For example, an invoice for the customer Johnson is automatically filed to Sales//Johnson//
+
+Invoice.
+
+Fixed fields 
+
+The following variables relate to fields that exist on every metadata form. These variables can also
+
+be used for filing definitions.
+
+LK: Short name
+
+LD: Date
+
+LA: Filing date
+
+2. 
+
+• 
+
+• 
+
+• 
+
+29 Configuration and administration
+
+
+
+Filing to multiple folders 
+
+In ELO, you can file a document to several folders at the same time. However, ELO does not file
+
+multiple copies of the document. Instead, the same document is stored in different folders as
+
+references. If changes are made to a document, the changes also apply to all references to the
+
+document.
+
+Example 
+
+You want to file all orders for a single year to the Orders folder. The Orders folder contains a folder
+
+for each year.
+
+You also want to file the orders as references in the corresponding customer folder.
+
+The metadata form in this example uses the fields Customer (L1) and Order date (L3).
+
+Filing path 
+
+To file documents to the Orders folder, enter the following path in the Filing path field:
+
+[¶Orders¶]+L3(1,4)
+
+The contents of the Filing path field are automatically applied to the Filing definition field
+
+when you exit the field.
+
+Information
+
+[¶Orders¶]: ELO searches for the Orders folder.
+
++L3 (1,4): The field Order date uses the ISO date (YYYY-MM-DD). This means that ELO
+
+needs to read four characters for the year, starting with the first (1,4).
+
+1. 
+
+30 Configuration and administration
+
+
+
+Reference path 
+
+To create a new path, click Add reference path.
+
+The Reference path 1 field appears.
+
+Enter the following path in the Reference path 1 field:
+
+[¶Customers¶]+L1
+
+The contents of the Reference path 1 field are automatically applied to the Filing definition
+
+field and added to the filing path when you exit the field.
+
+Information
+
+1. 
+
+2. 
+
+31 Configuration and administration
+
+
+
+|: If a filing definition contains multiple paths, each path must be separated with a
+
+pipe symbol ("|"). The ELO Administration Console creates the pipe symbol
+
+automatically as soon as you have entered a reference path in a corresponding field.
+
+To create the pipe symbol manually, use the keyboard shortcut: ALT+GR+ <.
+
+[¶Customers¶]: ELO searches for the Customers folder.
+
++L1: The name of the child folder must match the contents of the first field
+
+(Customer).
+
+Information
+
+Once you have created a complete filing definition with multiple paths, you can
+
+enter it to the Filing path field. The ELO Administration Console splits the paths
+
+automatically as soon as it finds a pipe symbol.
+
+Click Save to save the changes to the metadata form.
+
+Now, if a document with this metadata form is filed using the Automatic filing function, the
+
+filing definition applies.
+
+An order for the customer Allimports Inc. from 2020 will be automatically filed to Orders//
+
+2020, and as a reference to the Customers//Allimports Inc. folder.
+
+3. 
+
+32 Configuration and administration
+
+
+
+Information
+
+When using variables in paths, it is recommended that you enable the options Create
+
+filing path automatically and Create reference path automatically.
+
+33 Configuration and administration
+
+
+
+Filing definition by longest match 
+
+Assume you want to file delivery notes from your suppliers with a specific metadata form in
+
+alphabetical order. In addition, you want to distinguish between S, Sm, and St. This allows you to
+
+file suppliers such as Smith, and Stiller separately.
+
+Prepare folders 
+
+Create a Purchasing folder with a Suppliers child folder.
+
+In the Suppliers folder, create a child folder for each letter of the alphabet. Also create folders
+
+named Sm and St.
+
+The metadata form in this example uses the field Suppliers (L1).
+
+Enter the following path in the Filing path field:
+
+[¶Purchasing¶Suppliers¶]+L1(1,1)+[%]+L1(2,2)
+
+The contents of the Filing path field are automatically applied to the Filing definition field
+
+when you exit the field.
+
+Information
+
+1. 
+
+2. 
+
+3. 
+
+34 Configuration and administration
+
+
+
+[¶Purchasing¶Suppliers¶]: ELO searches for the Purchasing folder and the Suppliers
+
+child folder.
+
++L1(1,1): ELO starts by checking the first character of the first field.
+
++[%]: The percent sign instructs ELO to file by the longest match. If it finds a match
+
+for the first character, ELO carries on checking.
+
++L1(2,2): ELO checks two characters from the second character in the first field.
+
+With this filing definition, ELO checks whether a folder exists under the specified path
+
+(Purchasing//Suppliers) that matches the first three characters of the contents of the
+
+first field.
+
+ELO uses the longest match for filing.
+
+Click Save to save the changes to the metadata form.
+
+Now, if a document with this metadata form is filed using the Automatic filing function, the
+
+filing definition applies.
+
+A document for the supplier Sanborn can only be filed to the S folder. A document for the
+
+supplier Smith also has an S at the beginning. However, the match for the Sm folder is
+
+longer, so ELO files the document there.
+
+4. 
+
+35 Configuration and administration
+
+
+	Table of contents
+	Getting started
+	Things to consider ahead of time
+
+	Create field templates
+	Field templates
+	General
+	Input
+	Properties
+	Keyword list
+	Field permissions
+	Overview of metadata forms
+
+	Field types
+	Example 1
+	Example 2
+
+
+	Metadata forms
+	Create metadata form
+	Basic data
+	Use
+	Restriction
+
+	Add fields
+	Field properties
+	Positioning
+	Form permissions
+	Entry options
+	Entry permissions
+	Filing rules
+
+	Barcode Info
+	Overview of fields
+
+
+	Keyword lists
+	Keyword lists
+	Table of keyword lists
+	General settings
+	Keyword list
+
+
+	Filing definition
+	Basic information on filing definition syntax
+	Example 1
+	Filing path
+
+	Example 2
+	Fixed fields
+
+	Filing to multiple folders
+	Example
+	Filing path
+	Reference path
+
+
+	Filing definition by longest match
+	Prepare folders
+
+
+

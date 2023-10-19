@@ -1,0 +1,659 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO server ‒ Installation and operation | Basics
+
+
+ELO server ‒ Installation
+
+and operation
+
+Basics
+
+
+
+3
+
+3
+
+8
+
+Table of contents
+
+ELO server – Getting started
+
+The ELO environment 
+
+ELO server modules 
+
+2 ELO server ‒ Installation and operation
+
+
+
+ELO server – Getting started
+
+The ELO environment 
+
+The image above depicts the ELO servers and ELO clients along with the protocols used to
+
+communicate between them. It helps you to understand the ELO system as a whole.
+
+The four most fundamental components of the Apache Tomcat server engine are the ELO
+
+Indexserver, ELO Access Manager, ELO Document Manager, and ELO iSearch module.
+
+Microserver architecture 
+
+The server components are programmed in Java, which offers a high level of portability.
+
+The microserver architecture makes the system highly scalable.
+
+Servlet implementation permits easy integration with existing systems.
+
+• 
+
+• 
+
+• 
+
+3 ELO server ‒ Installation and operation
+
+
+
+Architecture 
+
+Authentication 
+
+The ELO Access Manager is responsible for the central administration of the user list, the users
+
+currently logged on, the user rights and permissions, and the key lists. Each client and each server
+
+process authenticates to the ELO Access Manager at startup. The ELO Access Manager creates a
+
+ticket to identify the client and communicate with the ELO server processes.
+
+4 ELO server ‒ Installation and operation
+
+
+
+Document storage 
+
+A separate ELO Document Manager is required for each repository. The ELO Document Manager
+
+saves, manages, and delivers each document on request. When using Microsoft SQL Server, a
+
+separate database is created for each repository. When using Oracle, an independent user with the
+
+same name as the repository is created for each separate repository.
+
+The backup service and the EMC Centera interface are also run by the ELO Document Manager,
+
+provided that these additional modules have been purchased.
+
+5 ELO server ‒ Installation and operation
+
+
+
+Scalability 
+
+The ELOenterprise services are scalable. Nearly all of the services can be installed on a single
+
+computer or they can each be installed on dedicated individual computers.
+
+6 ELO server ‒ Installation and operation
+
+
+
+The different services can be installed to custom locations and, with a few exceptions that are
+
+described in the respective chapters, any combination of the services can be installed on different
+
+computers as required and depending upon the actual system requirements.
+
+7 ELO server ‒ Installation and operation
+
+
+
+ELO server modules 
+
+This chapter contains basic information regarding the ELO server modules. Refer to the separate
+
+documentation for more information. You will find the relevant links in the following sections.
+
+ELO Access Manager (ELOam) 
+
+This section contains information about the ELO Access Manager (ELOam).
+
+The ELO Access Manager is an ELO Indexserver plug-in (ELOix). There is no separate WAR file for
+
+ELOam. You can access the status page of ELOam from the ELO Indexserver status page (ELOix
+
+Status Report > Configure Options > AM Status).
+
+One ELO Access Manager may be used to run any number of ELO repositories. All of these
+
+repositories share the same users and certain other settings.
+
+The ELO Access Manager has its own database, by default named eloam.
+
+Information
+
+The ELO Access Manager is an ELO Indexserver plug-in (ELOix). There is no separate WAR
+
+file for ELOam. You can access the status page of ELOam from the ELO Indexserver status
+
+page (ELOix Status Report > Configure Options > AM Status).
+
+ELOam is automatically installed with the ELO Indexserver when you run the ELO Server Setup. The
+
+application is in the directory <ELO>/prog\webapps\ix-plugins\private/.
+
+ELO Document Manager (ELOdm) 
+
+This section contains information about the ELO Document Manager (ELOdm).
+
+You must install at least one ELO Document Manager for each repository. ELOdm manages all
+
+documents, folders, and document metadata (including permissions) within it.
+
+Each ELO Document Manager has its own database, which has the same name as the repository
+
+itself.
+
+Information
+
+The ELO Document Manager is an ELO Indexserver plug-in (ELOix). There is no separate WAR
+
+file for ELOdm. You can access the status page of ELOdm from the ELO Indexserver status
+
+page (ELOix Status Report > Configure Options > DM Status).
+
+ELOdm is automatically installed with the ELO Indexserver when you run the ELO Server Setup. The
+
+application is in the directory <ELO>/prog\webapps\ix-plugins\private/.
+
+8 ELO server ‒ Installation and operation
+
+
+
+Please note
+
+If you use the ELO document redaction function, read the Document redaction section.
+
+ELO Indexserver (ELOix) 
+
+The ELO Indexserver acts as the interface between the ELO repository and most ELO clients. In
+
+addition, the ELO Indexserver provides iSearch functionality to all ELO clients.
+
+Any number of ELO Indexservers may be installed for any number of repositories. You will find
+
+more information under ELO server > Optimization > ELO Indexserver load balancing.
+
+Client applications can connect to the ELO Indexserver either via HTTP or HTTPS via SOAP or a
+
+proprietary Indexserver interface.
+
+For more information, refer to the ELO Indexserver, ELO Indexserver programming guide, and ELO
+
+Indexserver script development documentation.
+
+ELO Automation Services (ELOas) 
+
+ELO Automation Services are used to automate tasks within a repository. ELOas works by
+
+processing any number of rulesets. Rulesets are XML-based instructions for a specific type of action
+
+that are stored within the Administration folder of the repository. You can install any number of
+
+ELOas instances for each repository. The process is described in this chapter.
+
+There are two types of rulesets: interval-controlled rulesets and direct rulesets.
+
+Interval-controlled rulesets are executed automatically in time intervals defined in the ruleset.
+
+They do not require user interaction.
+
+Information
+
+These intervals refer to the time between ruleset starts. If you create a ruleset that takes a
+
+long time to complete, and the interval between ruleset executions is short, this may result
+
+in the rule being executed multiple times at the same time.
+
+Common uses of ELOas include:
+
+Moving entries with certain metadata within the repository
+
+Automatically performing functions in workflows, such as assigning users
+
+Notifying users when specific criteria in the repository are met
+
+Various backup and maintenance tasks
+
+For more information, refer to the ELO Automation Services documentation.
+
+• 
+
+• 
+
+• 
+
+• 
+
+9 ELO server ‒ Installation and operation
+
+
+
+ELO Web Forms Services (ELOwf) 
+
+ELO Web Forms Services is a web application that handles several tasks, including:
+
+ELO workflow form components
+
+ELO apps framework as the basis for: 
+
+ELO Business Solutions apps
+
+ELO Integration Client
+
+ELO Workflow Client
+
+ELO Teamroom Client
+
+Running ELO apps such as: 
+
+ELO Forms 2.0
+
+ELO Workspaces
+
+ELO Teamspaces
+
+ELO Flows activity UI
+
+Refer to the respective documentation for more information on each of these topics.
+
+Run multiple ELOwf instances 
+
+ELOwf allows you to run multiple instances. The URLs of the other instances must be passed to
+
+each ELOwf instance. This is done by inserting a comma-separated list of URLs in the ELOwf 
+
+config.xml file under the entry wfInstances.
+
+For example, the following entry is made in the ELOwf config.xml file on serverA for a scenario with
+
+three instances (serverA, serverB, serverC):
+
+On serverB:
+
+On serverC:
+
+Please note
+
+The URL of the ELOwf instance is entered in the ELO Indexserver proxy plug-in. Each ELOwf
+
+instance then forms a unit with one other ELOix instance. The sessions are distributed
+
+upstream for each unit.
+
+• 
+
+• 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+• 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+<entry key="wfInstances">http://serverB:9090/wf-Repository, http://serverC:9090/wf-Repository 
+
+<entry key="wfInstances">http://serverA:9090/wf-Repository, http://serverC:9090/wf-Repository 
+
+<entry key="wfInstances">http://serverA:9090/wf-Repository, http://serverB:9090/wf-Repository
+
+10 ELO server ‒ Installation and operation
+
+
+
+ELO feed 
+
+The ELO Indexserver plug-in "ELO feed" provides the following pages and information:
+
+The Feed area for the entries
+
+The Feed area in ELO Teamspaces
+
+The My ELO work area with the Current hashtags area
+
+The profile pages and profile images
+
+Refer to the respective documentation for more information on each of these topics.
+
+Information
+
+The following list provides links to the ELO Java Client as an example. The functions are
+
+similar in other clients.
+
+ELO Textreader (ELOtr) 
+
+ELO Textreader extracts text from documents and saves it in text files. After conversion, the
+
+document contents are available to the ELO iSearch module for indexing.
+
+Please note
+
+Starting with ELO 21.4, ELO Textreader (gen. 2) replaces the previous ELO Textreader (ELOtr),
+
+ELO Preview Converter (ELOpreview), and ELO OCR Service (ELOocr).
+
+For more information, refer to the ELO Textreader (gen. 2) documentation.
+
+ELO OCR 
+
+One of the most important aspects of the ELO system is the large range of search functions. The
+
+server-side processes supporting these functions consist of the OCR module, ELO Textreader, and
+
+ELO iSearch.
+
+ELO OCR is an optional module which can be used with the ELO ECM Suite. It is installed
+
+automatically with other ELO server modules.
+
+The ELO OCR Service converts documents into a machine-readable format. This section goes into
+
+detail on this function.
+
+The OCR module runs as a server-based process on the repository server. The stored documents
+
+are automatically indexed at regular intervals for the ELO iSearch database. Since the process runs
+
+on the server, it does not affect the performance of the client applications. Each word within a
+
+document is assigned an index value. The index values are structured in such a way to optimize
+
+search times for each term.
+
+• 
+
+• 
+
+• 
+
+• 
+
+11 ELO server ‒ Installation and operation
+
+
+
+Please note
+
+Starting with ELO 21.4, ELO Textreader (gen. 2) replaces the previous ELO Textreader (ELOtr),
+
+ELO Preview Converter (ELOpreview), and ELO OCR Service (ELOocr).
+
+For more information, refer to the ELO Textreader (gen. 2) documentation.
+
+ELO iSearch 
+
+An ELO iSearch environment is made up of nodes and shards.
+
+Nodes are the individual instances of the iSearch service. Each repository has one node by default.
+
+Multiple nodes may be installed to improve search availability and performance. All iSearch nodes
+
+are usually combined within the same cluster.
+
+Shards are the atomic parts of the iSearch index. There is one shard per repository by default.
+
+Increasing the number of shards across different iSearch nodes should improve indexing
+
+performance.
+
+For more information, refer to the ELO iSearch documentation.
+
+ELO XML Importer (ELOim) 
+
+The ELO XML Importer is an ELO application used to import documents automatically into an ELO
+
+repository based on an XML control file. The ELO XML Importer monitors a specific directory at
+
+regular intervals to start an import process.
+
+For more information, refer to the ELO XML Importer documentation.
+
+ELO Web Client (ELOweb) 
+
+The ELO Web Client allows users to log on to the ELO repository via most common Internet
+
+browsers. For more information on using the ELO Web Client, see the corresponding documentation.
+
+Please note
+
+A separate license is required to use the full ELO Web Client functionality. If you install the
+
+ELO Web Client without purchasing a license, access will be restricted to devices running 
+
+ELO for Mobile Devices.
+
+For more information, refer to the ELO Web Client and ELO Web Client administration
+
+documentation.
+
+12 ELO server ‒ Installation and operation
+
+
+
+Full vs. FMD Web Client 
+
+The ELO Web Client provides two different versions: the web client and the web client for mobile
+
+devices.
+
+If you have purchased a license for the ELO Web Client, you can log on to the ELO repository via
+
+any Internet browser. You may also access the ELO repository via the ELO for Mobile Devices apps
+
+for Android and iOS.
+
+If you have not purchased a license for the ELO Web Client, it will install as an FMD version. This
+
+means that you can log on to the ELO repository via the ELO for Mobile Devices apps, but not via a
+
+browser.
+
+If you install the ELO Web Client and later decide to purchase a full license, you do not need to
+
+reinstall the ELO Web Client server application. Instead, change the ELO server license in the ELO
+
+Server Setup program or in the amoptions table in the ELO Access Manager. Restart the ELO server
+
+after changing the license number.
+
+Status page 
+
+The default URL to the ELO Web Client is:
+
+http://<server name>:<port>/web-<repository name>
+
+Add /status to the end of the URL to go to the ELO Web Client status page: To see the complete
+
+status page, select More information. You have to log on with the administrator account for the ELO
+
+Application Server.
+
+13 ELO server ‒ Installation and operation
+
+
+
+From here, you can access the ELO Web Client settings, the API documentation, and so on.
+
+Information
+
+This status page also indicates whether you have the full version or only the FMD version. If
+
+the license information displays FMD here, you cannot use the ELO Web Client in the
+
+browser.
+
+ELO Administration Console (ELOac) 
+
+The ELO Administration Console allows you to perform administrative tasks, such as setting up and
+
+managing groups, creating metadata forms, ELOas rulesets, and backup settings, or editing client
+
+configurations and so on.
+
+For more information, refer to the ELO Administration Console documentation.
+
+ELO XC 
+
+ELO XC is integrated in the ELO server. You need to install the ELO XC Workspace to use the
+
+functions of this product.
+
+For more information, refer to the ELO XC documentation.
+
+ELO Teamroom (ELOtrm) 
+
+You can install the ELO Teamroom Service application from the ELO Server Setup.
+
+ELO Teamroom (ELOtrm) is designed for collaboration on group projects. An ELO Teamroom
+
+contains parts of the ELO repository and can be used by ELO users as well as external project
+
+members.
+
+For more information, refer to the ELO Teamroom documentation and ELO Teamroom user
+
+documentation
+
+ELO Smart Link (ELOsl) 
+
+You can install the ELO Smart Link application from the ELO Server Setup.
+
+ELO Smart Link (ELOsl) is designed for use with SAP. The interface also includes the previous
+
+functions of ELO Archive Link for SAP.
+
+Information
+
+We recommend installing ELO Smart Link for SAP on a separate ELO Application Server
+
+(Apache Tomcat).
+
+14 ELO server ‒ Installation and operation
+
+
+
+For more information, refer to the ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/
+
+4HANA® documentation under ELO Smart Link for SAP® ERP.
+
+ELO Smart Input (ELOsi) 
+
+You can install the ELO Smart Input application from the ELO Server Setup.
+
+ELO Smart Input analyzes the full text of a document and extracts data from it, such as addresses,
+
+sums, or e-mail addresses. Users receive suggestions for automatically detected data, which they
+
+can apply to the metadata.
+
+For more information, refer to the ELO Smart Input documentation.
+
+ELO Rest Service 
+
+Warning
+
+The ELO REST API Service is DEPRECATED.
+
+The ELO Indexserver has provided a REST interface since ELO 20.
+
+We recommend using the ELO Indexserver client library for programming in Java and .NET.
+
+Other programming platforms can address the ELO Indexserver REST interface.
+
+15 ELO server ‒ Installation and operation
+
+
+	Table of contents
+	ELO server – Getting started
+	The ELO environment
+	Microserver architecture
+	Architecture
+	Authentication
+	Document storage
+	Scalability
+
+
+	ELO server modules
+	ELO Access Manager (ELOam)
+	ELO Document Manager (ELOdm)
+	ELO Indexserver (ELOix)
+	ELO Automation Services (ELOas)
+	ELO Web Forms Services (ELOwf)
+	Run multiple ELOwf instances
+
+	ELO feed
+	ELO Textreader (ELOtr)
+	ELO OCR
+	ELO iSearch
+	ELO XML Importer (ELOim)
+	ELO Web Client (ELOweb)
+	Full vs. FMD Web Client
+	Status page
+
+	ELO Administration Console (ELOac)
+	ELO XC
+	ELO Teamroom (ELOtrm)
+	ELO Smart Link (ELOsl)
+	ELO Smart Input (ELOsi)
+	ELO Rest Service
+
+
+

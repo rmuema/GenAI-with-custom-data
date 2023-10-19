@@ -1,0 +1,7878 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO Desktop Client | ELO Desktop Client
+
+
+ELO Desktop Client
+
+ELO Desktop Client
+
+
+
+3
+
+9
+
+43
+
+48
+
+54
+
+74
+
+127
+
+148
+
+153
+
+160
+
+169
+
+171
+
+194
+
+201
+
+205
+
+207
+
+Table of contents
+
+Basics 
+
+Program interface 
+
+Navigation and use 
+
+Simple operation 
+
+Important components 
+
+Important actions in detail 
+
+User menu [your name] 
+
+Favorites bar 
+
+'New' group 
+
+'View' group 
+
+'Output' group 
+
+'Organize' group 
+
+'Document' group 
+
+'Search' group 
+
+'Tasks' group (only ELO Desktop Client Plus) 
+
+ELO Desktop Client Plus 
+
+2 ELO Desktop Client
+
+
+
+Basics 
+
+What is the ELO Desktop Client? 
+
+As a sidebar, the ELO Desktop Client is always docked to your desktop and monitors the active
+
+window. When it detects a supported application, the client becomes active. Depending on the
+
+application, the ELO Desktop Client offers a wide range of ELO functions. It supports Microsoft
+
+Office applications, Windows Explorer, and the Windows Desktop. You can dock the client on the
+
+left or right side of the desktop.
+
+Target audience 
+
+This document is addressed to ELO Desktop Client users. Administrators can use the ELO Desktop
+
+Client administration manual.
+
+The scope of functions presented in this documentation may differ greatly from those in your
+
+client.
+
+If you do not find functions described in this documentation in your client, you do not have
+
+permission to perform the action.
+
+Getting started 
+
+If you have no previous experience with the ELO Desktop Client or any other ELO client, the
+
+following chapters are a good place to start:
+
+Important actions in detail: This chapter introduces you to some important features with
+
+detailed step-by-step instructions and explanations. With the help of these instructions, you
+
+will learn basic actions in the ELO client, which can be applied to most other functions.
+
+New view: If you initially want to test a function that does not affect other users, this function
+
+is a good choice.
+
+Program interface, Navigation and use, Important components: These chapters explain the
+
+interface and how to use ELO in general. They cover individual topics at a more advanced
+
+level.
+
+Structure of the documentation 
+
+The goal of this documentation is to explain the functions of the ELO Desktop Client. It also
+
+presents ELO Desktop Client Plus and its functions.
+
+Basics
+
+The first chapter contains general information about using the documentation and an overview of
+
+the chapter contents.
+
+Program interface
+
+• 
+
+• 
+
+• 
+
+3 ELO Desktop Client
+
+https://docs.elo.com/admin/clients/en-us/desktop-client/
+https://docs.elo.com/admin/clients/en-us/desktop-client/
+https://docs.elo.com/admin/clients/en-us/desktop-client/
+
+
+This chapter contains an introduction to the ELO Desktop Client program interface and a description
+
+of all work areas.
+
+Navigation and use
+
+This chapter provides information about the general use of the ELO Desktop Client.
+
+Simple operation
+
+This chapter contains information about the accessibility features in the ELO Desktop Client.
+
+Important components
+
+This chapter contains a description of important components of the ELO Desktop Client.
+
+Important actions in detail
+
+This chapter provides descriptions of some important actions with instructions and explanations.
+
+Functions
+
+The remaining chapters cover the functions that are not described in the Important actions in detail
+
+chapter.
+
+ELO Desktop Client Plus
+
+This chapter explains the additional functions in ELO Desktop Client Plus. This requires an
+
+appropriate license.
+
+Which chapter(s) should I read if I... 
+
+want to personalize my client? 
+
+Tile navigation
+
+Tile navigation settings
+
+Group tiles
+
+Folder view
+
+Toolbars
+
+Toolbar
+
+Manage favorites
+
+General settings
+
+Configuration
+
+Personal settings
+
+Edit profile
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+4 ELO Desktop Client
+
+
+
+want to create entries? 
+
+Folders
+
+Create new folder
+
+Documents
+
+File documents
+
+Drag-and-drop
+
+File documents with the 'Desktop' work area
+
+Document from template
+
+Metadata
+
+Metadata
+
+want to update entries? 
+
+Edit documents
+
+Check out and edit document
+
+Check out to OneDrive
+
+Check in document
+
+Load new version
+
+Load new version
+
+Drag-and-drop
+
+want to create tasks? 
+
+Information
+
+The functions for creating tasks are only available in ELO Desktop Client Plus.
+
+Workflows
+
+Start workflow
+
+Reminders
+
+Reminder
+
+want to edit tasks? 
+
+Information
+
+The functions for processing tasks are only available in ELO Desktop Client Plus.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+5 ELO Desktop Client
+
+
+
+Workflows
+
+Edit workflow with a form
+
+Forward workflow
+
+Accept workflow
+
+Return workflow
+
+Delegate workflow
+
+Reminder
+
+Edit reminder
+
+want to keep track of changes in ELO? 
+
+My ELO
+
+'My ELO' button
+
+News
+
+Search
+
+Add search favorite
+
+want to output information from ELO? 
+
+Entries
+
+Send
+
+Send as ELO link
+
+Save as
+
+Print
+
+want to search for entries? 
+
+'Search' work area
+
+Narrowing down a search request
+
+Combined search in ELO and Microsoft Outlook
+
+want to structure the repository area? 
+
+Move
+
+Reference
+
+Drag-and-drop
+
+Copy
+
+Link
+
+Paste
+
+want to file e-mails? 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+6 ELO Desktop Client
+
+
+
+Manual filing
+
+Link folder
+
+Dynamic extension
+
+Starting the ELO Desktop Client 
+
+Connect to ELO via the Logon dialog box.
+
+Method
+
+Enter your ELO user name in the User field.
+
+Enter your ELO password in the Password field.
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+7 ELO Desktop Client
+
+
+
+Information
+
+If you have forgotten your password, contact your system administrator.
+
+Optional: If the Show logon options option is enabled, the logon options are displayed.
+
+Optional: If the Log on with the Windows user option is enabled, the Windows user and
+
+Windows password are entered automatically. SSO (single sign-on) has to be set up in
+
+Windows first.
+
+Optional: If the Save password option is enabled, you are logged in automatically the next
+
+time you start the ELO Desktop Client. You can save the password for each profile. To see
+
+what passwords have been saved, go to the Administration category under Profile
+
+management and click the key icon. You can also remove passwords here.
+
+In the Repository area, you will see the name of the connected ELO repository. A checkmark
+
+next to the profile name indicates that the repository is available.
+
+To connect to the ELO repository, click Connect.
+
+Optional: The first time you log on to the repository, the Functional roles dialog box opens
+
+provided that your user account is assigned to a group.
+
+In this dialog box, you can choose which functional roles you want to enable. You can save
+
+your selection. The dialog box then no longer appears the next time you log on.
+
+The Enable roles function in the User menu allows you to change the roles. You will learn
+
+more about functional roles in the chapter User menu [your name].
+
+Result
+
+A connection has been established with the ELO repository. The ELO Desktop Client tile navigation
+
+opens.
+
+3. 
+
+8 ELO Desktop Client
+
+
+
+Program interface 
+
+This chapter contains information on the ELO Desktop Client interface. It will help you orient
+
+yourself in your client.
+
+The program interface of the ELO Desktop Client is divided into the following areas:
+
+1 Client header: The header indicates the work area you are currently in.
+
+2 User menu [your name]: In the user menu, you will find various functions mainly for your
+
+personal settings.
+
+3 Viewer pane: In the viewer pane, you see news, search results, the tree view, or the tile
+
+navigation, depending on which work area you are in.
+
+9 ELO Desktop Client
+
+
+
+4 Work area toolbar: This toolbar provides access to the tile navigation, as well as to the My ELO, 
+
+Repository, Search, Desktop, In use, and Tasks (only ELO Desktop Client Plus) work areas.
+
+5 Toolbar: This toolbar contains all functions you can use in the respective work area. These vary
+
+depending on the work area.
+
+6 Manage favorites: Click this button to manage your favorites.
+
+7 Favorites bar: This bar contains all functions you have favorited.
+
+What is a work area? 
+
+An ELO client contains different work areas. Each work area is used to complete specific tasks.
+
+Accordingly, not all functions are available in every work area.
+
+The ELO Desktop Client contains the following work areas:
+
+My ELO: In this work area, you will find your news and most recently used entries.
+
+Repository: This area contains all folders and documents that you are authorized to access.
+
+This is also where you create additional folders and documents.
+
+Search: This area is where you search for folders and documents that are stored in the 
+
+Repository work area.
+
+Tasks: If you are assigned tasks, you will find them here. Tasks are always related to entries
+
+(folders or documents) in the Repository work area. The Tasks work area is only available in
+
+ELO Desktop Client Plus.
+
+Desktop: This work area acts as an interface between ELO and Windows. Here, you will see
+
+an overview of entries currently selected at the file system level.
+
+In use: This area shows documents that are in use. Documents are locked for all other users
+
+while they are in the In use work area.
+
+'My ELO' work area 
+
+In the My ELO work area, you will find your news and most recently used entries.
+
+You can open the My ELO work area from the work area toolbar or with the keyboard shortcut CTRL
+
++ 7.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+10 ELO Desktop Client
+
+
+
+1 News/Most recently used: Click these buttons to switch between the News and Most recently
+
+used views. The News area helps you keep track of changes in ELO. You will find your most recently
+
+used entries under Most recently used.
+
+11 ELO Desktop Client
+
+
+
+2 News toolbar: The preview area for the contents in My ELO is limited. On the toolbar, you will find
+
+additional functions that allow you to show more news, such as hashtags, substitutions, workflows,
+
+or filters.
+
+3 Hashtags: Trending hashtags in ELO are listed here. Clicking a hashtag opens the overview for the
+
+selected hashtag, where all posts marked with the hashtag are shown.
+
+4 Workflows: In the Workflows area, you can see all workflows you are involved in. Workflows with
+
+passed deadlines are highlighted in red.
+
+5 Feed: The feed contains posts related to different entries. Some examples include feeds you have
+
+subscribed to or in which you have been mentioned by another user. New feed posts are denoted
+
+with a green dot.
+
+Information
+
+The main functions in the My ELO work area are for the feed. They are described in the
+
+chapter Important components in the section Feed.
+
+News 
+
+The News area helps you keep track of changes in ELO.
+
+You will see feed posts from different entries here. Some examples include feeds you have
+
+subscribed to or in which you have been mentioned by another user. In addition, a hashtag cloud,
+
+escalated workflows, and recently started workflows that are relevant for you are also shown in
+
+this work area.
+
+Most recently used 
+
+The Most recently used area contains a list of entries that you recently viewed or edited.
+
+12 ELO Desktop Client
+
+
+
+Click Pin entry (pin icon) to permanently pin entries to the top of the list.
+
+To remove an entry from the list, click Delete (the X icon).
+
+Information
+
+You can set the maximum number of entries shown in Most recently used in the
+
+configuration (User menu > Configuration > View > List of recently used entries).
+
+News toolbar 
+
+The preview area for contents in My ELO is limited. On the toolbar, you will find the following
+
+functions that allow you to show more news.
+
+Search feed (magnifying glass icon)• 
+
+• 
+
+13 ELO Desktop Client
+
+
+
+Show current hashtags (hashtag symbol)
+
+If you click Show current hashtags, the hashtag information is shown above the feed.
+
+Hashtag cloud
+
+Hashtags that have been used in recent weeks are shown in a hashtag cloud. If you click a
+
+hashtag, you will see all feed items that contain that hashtag, provided you have the
+
+required permissions.
+
+Show substitutions (person icon)
+
+Click Show substitutions (person icon) to see who you are substituting for and who is
+
+currently substituting for you (if a substitution is active).
+
+Show workflows (workflow icon)
+
+If you click Show workflows, the workflow information is shown above the feed. You will see
+
+all workflows you are involved in. Workflows with passed deadlines are highlighted in red.
+
+Escalated workflows
+
+• 
+
+• 
+
+14 ELO Desktop Client
+
+
+
+In the Escalated workflows area, you can see which workflows you are involved in.
+
+Click the name of the workflow to jump to the respective workflow in the Tasks work area.
+
+Show filter options (filter icon)
+
+Settings (gearwheel icon)
+
+'Repository' work area 
+
+In the Repository work area, you can file and manage your documents and data.
+
+You can open the Repository work area from the work area toolbar or with the keyboard shortcut
+
+CTRL + 1.
+
+• 
+
+• 
+
+15 ELO Desktop Client
+
+
+
+You can use the functions in the toolbars to manage the entries.
+
+For a detailed description of the viewer pane, refer to the Important components chapter.
+
+'Search' work area 
+
+In the Search work area, you can search through folders and documents in the Repository work
+
+area.
+
+Different filters are available. For searches you need regularly, you can create search favorites,
+
+which enable fast searches.
+
+You can open the Search work area from the work area toolbar or with the keyboard shortcut CTRL
+
++ 6.
+
+16 ELO Desktop Client
+
+
+
+1 Search field with search options: When you enter a search term, suggestions and synonyms are
+
+shown below the search field. To add search filters, click Search options (filter icon).
+
+2 Dashboards: A button is available in the search results that allows you to launch dashboards after
+
+conducting a search with a metadata form filter. This button is only displayed if dashboards have
+
+been stored for the corresponding metadata form.
+
+17 ELO Desktop Client
+
+
+
+3 Results list: You can either view the results in a table or detailed view (list view). By clicking 
+
+Filter, you can apply filters to narrow down the results in the list. The search field next to the
+
+magnifying glass icon also allows you to narrow down the results.
+
+4 Search views: Search requests are temporarily saved as search views. Clicking the plus symbol
+
+creates a new search view. Search views are deleted when you close the ELO Desktop Client.
+
+The Narrowing down a search request and 'Search' group chapters explain each of the search
+
+elements and how to perform a search.
+
+Search field with search options 
+
+You have the following options:
+
+The Search options button (filter icon) allows you to 
+
+narrow down your search using search filters and
+
+search ranges. To learn how to select a search
+
+request, refer to the Narrowing down a search
+
+request chapter.
+
+Enter one or more search terms into the search
+
+field. You can refer to the Input chapter for more
+
+explanations.
+
+Click the Start search (magnifying glass icon) button
+
+to begin the search.
+
+Click the Reset search button to restore the default
+
+search settings.
+
+Dashboards 
+
+Dashboards are created by the administrator.
+
+18 ELO Desktop Client
+
+
+
+The dashboards allow you to visualize metadata of entries filed with the same metadata form in
+
+different ways. You can use bar charts, line charts, and doughnut charts.
+
+You can view details about dashboards by clicking on them.
+
+Results list 
+
+The Sort, group, and filter button provides different options for organizing the results list.
+
+19 ELO Desktop Client
+
+
+
+You have the following options:
+
+You can view the hits either in list or table
+
+format. The functions of the different views
+
+are explained in the List view and Table view
+
+sections.
+
+You can organize the search results using the 
+
+Sort and Group fields.
+
+Click Add to add filters. Use these filters to
+
+narrow down the results of your search.
+
+Input 
+
+Enter one or more search terms into the search field. While entering a search term, the search-as-
+
+you-type function provides search suggestions in a drop-down menu.
+
+Click the Start search button (magnifying glass icon) to search for the search term.
+
+20 ELO Desktop Client
+
+
+
+Click the Reset search button to restore the default search settings.
+
+AND search: If you enter two terms into the search field, the system will search for entries that
+
+contain both terms.
+
+OR search: If you enter two terms into the search field and separate them with a comma (e.g., 
+
+order, invoice), the system searches for entries that include at least one of the terms.
+
+Exclude term: To exclude a term from your search, enter it in the search field and put a minus sign
+
+in front of the term. For example, a search for -document excludes entries that contain the term 
+
+document. You can combine the negated term with other terms that you do not negate.
+
+Phrase search: To search for multiple related terms, enter the terms in the search field with
+
+quotation marks, e.g., "Dear Sir or Madam". Only entries that contain all the terms in the order
+
+entered will be found.
+
+Narrow down search 
+
+The Search options button provides the following options to narrow down your search:
+
+Search areas
+
+Search filters
+
+Information: To automatically open the search options when performing a new search, check the
+
+box in the configuration under View > Search.
+
+Search areas 
+
+You can limit your search to specific areas.
+
+• 
+
+• 
+
+21 ELO Desktop Client
+
+
+
+Use the Search ranges menu to make your settings.
+
+With the Default search areas settings, only the Microsoft Outlook Inbox is searched. Refer to the 
+
+Manage e-mails section to learn how to perform a combined search in ELO and Microsoft Outlook.
+
+Search filters 
+
+Filters allow you to narrow down your search using metadata, such as the filing date.
+
+22 ELO Desktop Client
+
+
+
+To select a filter, click Search options > Search filters > plus icon in the Search work area. Select
+
+the required filter from the list. After you have selected the filter, specify the filter via the drop-
+
+down menu.
+
+To remove a selected filter, click the X icon.
+
+You can add filters of the same type.
+
+Negate filters
+
+You can apply reverse filters. For example, if you select a user and set the filter to does not contain,
+
+only entries that were not processed by this user are shown. It is not possible to only negate
+
+individual filter specifications.
+
+To negate a selected filter, right-click the filter and then click does not contain.
+
+'Tasks' work area (only ELO Desktop Client Plus) 
+
+In the Tasks work area, you will find a list of your tasks.
+
+You can open the Tasks work area from the work area toolbar or with the keyboard shortcut CTRL +
+
+4.
+
+23 ELO Desktop Client
+
+
+
+To learn how to edit tasks, refer to the Edit workflow section.
+
+For more information about the Tasks work area, refer to the chapter ELO Desktop Client Plus.
+
+'Desktop' work area 
+
+The Desktop work area acts as an interface between ELO and Windows. In this area, you will see an
+
+overview of entries currently selected at the file system level. The client indicates if the document
+
+is filed to the repository. The functions available depend on the status of the document.
+
+You can open the Desktop work area from the work area toolbar or with the keyboard shortcut CTRL
+
++ 8.
+
+24 ELO Desktop Client
+
+
+
+Without ELO connection 
+
+1 General functions: When the Windows Explorer is open, the general functions Connect ELO as a
+
+drive and Disconnect ELO as a drive are offered. To connect a WebDAV network address, click 
+
+Connect ELO as a drive.
+
+Connect ELO as a drive: With the Connect ELO as a drive function, you can integrate the
+
+entire ELO repository into your local file system. You can then access the documents without
+
+logging into the ELO Desktop Client. Additional information, such as the metadata or feed, is
+
+only available after logging on.
+
+Disconnect ELO as a drive: With the Disconnect ELO as a drive function, you can disconnect
+
+the drive connected to the local file system.
+
+• 
+
+• 
+
+25 ELO Desktop Client
+
+
+
+2 Selected entries: Shows the selected entries in the Windows Explorer or Windows Desktop.
+
+Depending on the status of the selected entry, various functions are available: File to repository, 
+
+Replace with ELO link, File as a new version, Go to, and Refresh. A bar before the entry indicates
+
+the status: Filed to ELO (green), in use (yellow), or not filed (gray).
+
+With ELO connection 
+
+The example above shows the Desktop work area with the Windows Explorer open and ELO
+
+integrated in the local file system. Unlike the normal Windows Explorer view described above, the 
+
+toolbar and favorites bar are both available.
+
+Information
+
+The toolbar and favorites bar are also available when clicking an ELO link in the Windows
+
+Explorer or Windows Desktop.
+
+26 ELO Desktop Client
+
+
+
+The short name of the entry is displayed in the viewer pane. The Feed tab contains posts, polls, and
+
+comments on the entry. You can create a feed post or a comment. All fields are shown in list form
+
+on the Metadata tab.
+
+'In use' work area 
+
+The In use work area shows documents that are in use. Documents are locked for all other users
+
+while they are in the In use work area.
+
+You can open the In use work area from the work area toolbar or with the keyboard shortcut CTRL +
+
+5.
+
+In the list of documents checked out for editing, you see the documents currently checked out or
+
+being edited. You can switch between the list view and table view using the two buttons at the top
+
+left. By clicking Filter, you can sort, group, and filter to narrow down the list. The search field next
+
+to the magnifying glass icon also allows you to narrow down the results with its search-as-you-type
+
+function.
+
+27 ELO Desktop Client
+
+
+
+Tile navigation 
+
+The tile navigation is the ELO Desktop Client start screen. Tiles can be used to represent work
+
+areas, views, and ELO apps. Clicking a tile takes you straight to the corresponding area.
+
+You can open the tile navigation from the work area toolbar or with the keyboard shortcut CTRL + 0.
+
+28 ELO Desktop Client
+
+
+
+Search tiles: Enter your search into the search field. While entering a search term, the results are
+
+narrowed down to the appropriate tiles thanks to the search-as-you-type function. The matches are
+
+highlighted in the tiles.
+
+The following tiles appear by default:
+
+Repository
+
+My ELO
+
+Search
+
+Desktop
+
+In use
+
+ELO Desktop Client Plus also has a Tasks tile.
+
+Groups 
+
+By default, the tile navigation area is divided into the groups Repository, Search, Other, and Hidden
+
+tiles.
+
+ELO Desktop Client Plus also has a Tasks group.
+
+Edit via the context menu 
+
+You can edit the groups using the context menu. To open the context menu, right-click the group
+
+name.
+
+Add group: Use the Add group menu item to create your own groups in the tile navigation area.
+
+Rename group: Use the Rename group menu item to change the respective group name. This
+
+function is only available for your own groups. You can also access the Rename group dialog box by
+
+pressing the F2 key.
+
+Delete group: Use the Delete group menu item to delete the respective group. All tiles in the
+
+deleted group are moved to the Hidden tiles group.
+
+Restore default settings: This option enables you to revert changes to tiles and groups in the tile
+
+navigation area and restore the default values. Click the menu item Restore default settings.
+
+The arrow following the group title expands and collapses the group.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+29 ELO Desktop Client
+
+
+
+You can change the order of the tiles and their allocation to groups via drag-and-drop.
+
+Settings 
+
+Each tile has a context menu. Right-click the tile to open the context menu.
+
+You can make the following tile settings within the tile's context menu.
+
+Settings: In the Tile settings dialog box, you can set the color and size of the tile and choose an
+
+icon. Confirm your changes with OK. To discard your changes, click Cancel.
+
+30 ELO Desktop Client
+
+
+
+Shrink tile: Click Shrink tile to cut the size of the tile in half.
+
+Hide: Clicking Hide hides the tile. Hidden tiles are moved to the Hidden tiles group. To restore the
+
+tile, drag it to the target location in the tile navigation.
+
+Client header 
+
+The header is shown in all work areas of the ELO Desktop Client.
+
+The header indicates the work area you are currently in. The left arrow takes you back to the last
+
+work area you were in. You can open the User menu by clicking your profile picture. This menu
+
+takes you to areas where you can configure settings for your user account. You will find the
+
+following here: Configuration, Help, Enable roles (optional), About, Log off, and Close. For more
+
+information, refer to the chapter User menu [your name].
+
+31 ELO Desktop Client
+
+
+
+With the buttons next to the user menu, you can switch between the default view and the lean
+
+view. The desktop adapts to the view dynamically.
+
+An additional button is available in ELO Desktop Client that allows you to open the ELO Desktop
+
+Client in full-screen mode.
+
+You can use the buttons in the lean view to reach the user menu and the work areas, as well as to
+
+switch views.
+
+To expand a work area, click the corresponding button.
+
+32 ELO Desktop Client
+
+
+
+When expanding a work area in the lean view, the desktop does not adapt and may be covered. To
+
+ensure smooth interaction between the desktop and the client, we recommend the default view.
+
+The two arrows collapse the client again.
+
+Toolbars 
+
+Various toolbars are available in the ELO Desktop Client. These toolbars give you access to
+
+functions or work areas.
+
+The following toolbars are available:
+
+Work area toolbar
+
+Toolbar
+
+Favorites bar
+
+Work area toolbar 
+
+The work area toolbar is located at the bottom of the ELO Desktop Client. This toolbar is always
+
+available, no matter which work area you are in.
+
+This toolbar gives you access to the following areas:
+
+Tile navigation
+
+My ELO work area
+
+Repository work area
+
+Search work area
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+33 ELO Desktop Client
+
+
+
+Desktop work area
+
+In use work area
+
+Tasks work area (only ELO Desktop Client Plus)
+
+Toolbar 
+
+The favorites bar is on the left edge of the ELO Desktop Client. This bar is only available in the 
+
+Repository, Search, In use, and Tasks (only ELO Desktop Client Plus) work areas.
+
+This toolbar contains all functions you can use in the respective work area. These vary depending
+
+on the work area.
+
+The toolbar is organized in groups. Some groups are always shown (default groups), while others
+
+only appear when the group functions can be used (contextual groups).
+
+The default groups are:
+
+New
+
+View
+
+Output
+
+Organize
+
+The contextual groups are:
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+34 ELO Desktop Client
+
+
+
+Document: This group appears when you select a document.
+
+Search: This group is only available in the Search work area.
+
+Tasks: This group is only available in the Tasks work area (only ELO Desktop Client Plus).
+
+The functions available depend on your selection. You will see a star icon next to each function.
+
+Clicking this star adds the function to your favorites bar. You can also integrate other buttons to the
+
+toolbar via the ELO App Manager, such as an ELO Business Solution.
+
+Favorites bar 
+
+The favorites bar is on the left edge of the ELO Desktop Client. This bar is only available in the 
+
+Repository, Search, In use, and Tasks (only ELO Desktop Client Plus) work areas.
+
+This bar contains all functions you have favorited. To perform a function, click the button in the
+
+favorites bar. Functions may be grayed out in the bar depending on your selection.
+
+Manage favorites
+
+• 
+
+• 
+
+35 ELO Desktop Client
+
+
+
+The Manage favorites button is below the favorites bar.
+
+Click this button to manage your favorites. All functions of the area are listed here, sorted by
+
+function groups. Select the functions you want to have in your favorites list.
+
+For more information on configuring your favorites bar, refer to the Favorites bar chapter.
+
+User menu [your name] 
+
+User menu [your name]
+
+Clicking the User menu [your name] button opens a drop-down menu. This menu takes you to
+
+areas where you can configure settings for your user account. You can also log off at the end of your
+
+session and close the client.
+
+You can find explanations on each of these buttons in the chapter User menu [your name].
+
+36 ELO Desktop Client
+
+
+
+Profile 
+
+In your profile, you can enter information on your professional background, your contact data, and
+
+upload a profile picture.
+
+Method
+
+To view and edit your user profile, go to the My ELO settings and click the My profile button
+
+(person icon).
+
+1. 
+
+37 ELO Desktop Client
+
+
+
+The User profile dialog box opens.
+
+Click Edit profile picture.2. 
+
+38 ELO Desktop Client
+
+
+
+The dialog box for editing your profile image opens.
+
+Click Select picture.
+
+A Windows dialog box for selecting a file from the system appears.
+
+Information
+
+Use PNG, JPG, or GIF image files with a minimum of size of 280 x 280 pixels.
+
+Select the desired image file.
+
+Click Open.
+
+The file is uploaded.
+
+3. 
+
+4. 
+
+5. 
+
+39 ELO Desktop Client
+
+
+
+The user profile with the selected profile image appears.
+
+To apply the profile image, click Save.
+
+To edit your profile, click Edit data.
+
+6. 
+
+7. 
+
+40 ELO Desktop Client
+
+
+
+The Edit data dialog box opens.
+
+Enter the respective data to the input fields.
+
+Click Save.
+
+Result
+
+The user profile has been updated.
+
+8. 
+
+9. 
+
+41 ELO Desktop Client
+
+
+
+Context menu 
+
+Right-click an entry to open the context menu. Alternatively, use the menu key of a selected entry.
+
+The context menu contains selected functions that you will also find on the ribbon.
+
+The context menu can contain different functions depending on the work area you are in.
+
+'My ELO' button 
+
+Click the My ELO button to open the My ELO work area.
+
+Keyboard shortcut: Use the CTRL + 7 keyboard shortcut to open your My ELO start screen.
+
+This area contains your news and most recently used entries.
+
+If My ELO is highlighted in green, this means you have news in My ELO.
+
+42 ELO Desktop Client
+
+
+
+Navigation and use 
+
+Navigating between work areas 
+
+To switch from one work area to another, you have the following options:
+
+Tile navigation: Click the Tile navigation button in the work area toolbar to switch to the
+
+desired work area via the respective tile. This option is always available.
+
+Work area toolbar: Click the desired work area in the work area toolbar. This option is always
+
+available.
+
+Keyboard shortcuts: There are several keyboard shortcuts in the ELO Desktop Client. With
+
+these keyboard shortcuts, you can open the different work areas or run functions. You will find
+
+the keyboard shortcuts in the Configuration under General > Keyboard shortcuts.
+
+How do I use a function? 
+
+Functions can only be selected if they can be used in the current context. Otherwise, they are
+
+grayed out or are not displayed at all. Most functions are contextual. To use them, you must
+
+establish a reference to an entry (folder or document) by selecting it. Once you have selected the
+
+entry, click the function. In most cases, this opens a dialog box or another control element with
+
+instructions on how to proceed.
+
+There are a few functions that are not contextual and can be used at any time. These functions are
+
+not related to selected entries, such as Refresh.
+
+How do I select multiple entries? 
+
+You can select multiple folders or documents at once to execute a function on all selected entries.
+
+Method
+
+Keep the CTRL key pressed and click all the entries you want to select. If you want to select
+
+all entries or all entries you want to select are related, press the SHIFT key then click the top-
+
+most and bottom-most entry you want to select.
+
+On the toolbar, click the function you want to use, e.g. Send as ELO link.
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+43 ELO Desktop Client
+
+
+
+Drag-and-drop 
+
+You can also execute some functions using a drag-and-drop action.
+
+Insert files/folders 
+
+Method
+
+Open the Repository work area and navigate to the folder where you want to file the file.
+
+Click the file in the file system that you want to file and drag it to the folder where you want
+
+to file it.
+
+The Metadata dialog box opens.
+
+Select a metadata form and enter the metadata.
+
+1. 
+
+2. 
+
+3. 
+
+44 ELO Desktop Client
+
+
+
+Information
+
+For more information on the individual fields, refer to the Metadata section in the 
+
+Important components chapter.
+
+Click OK.
+
+Result
+
+The file is filed to ELO.
+
+Move or reference entry 
+
+Click the entry you want to move and drag it to the target folder holding down the mouse button.
+
+If you want to reference the entry, press the ALT key.
+
+For more information, refer to the 'Reference' function section of the 'Organize' group chapter.
+
+Load new version 
+
+Method
+
+Click the document in your file system you want to file as a new version and drag it to the
+
+document in ELO holding down the mouse button.
+
+4. 
+
+1. 
+
+45 ELO Desktop Client
+
+
+
+Press the ALT key and release the mouse button to file the document as a new version.
+
+The Version comment dialog box appears.
+
+Complete the fields.
+
+Non-deletable version: If you check the box next to this option, this version of the document
+
+cannot be deleted. This does not mean that you cannot file a new version. You simply cannot
+
+delete it from the overview of document versions.
+
+Click OK.
+
+Result
+
+The document is loaded as a new version.
+
+2. 
+
+3. 
+
+4. 
+
+46 ELO Desktop Client
+
+
+
+Keyboard shortcuts 
+
+There are several keyboard shortcuts in the ELO Desktop Client. With these keyboard shortcuts, you
+
+can open the different work areas or run functions.
+
+Refer to the Keyboard shortcuts section in the Simple operation chapter.
+
+47 ELO Desktop Client
+
+
+
+Simple operation 
+
+Compatibility 
+
+The ELO Desktop Client is compatible with NVDA and Windows Narrator screen readers.
+
+Contrast settings 
+
+The contrast settings are adopted from Windows. This means that the colors you set in Windows
+
+contrast mode are also used in the ELO Desktop Client.
+
+The ELO Desktop Client automatically adjusts if a contrast theme is enabled in Windows.
+
+Keyboard shortcuts 
+
+You can operate the ELO Desktop Client using the keyboard. The following tables contain an
+
+overview of the keyboard commands sorted by the areas in which they can be used.
+
+General 
+
+Function Keyboard shortcut Note
+
+Tile navigation CTRL + 0 Configurable
+
+Open Repository work area CTRL + 1 Configurable
+
+Open Search work area CTRL + 6 Configurable
+
+Open My ELO work area CTRL + 7 Configurable
+
+Open Desktop work area CTRL + 8 Configurable
+
+Open In use work area CTRL + 5 Configurable
+
+Open Tasks work area (only ELO Desktop Client Plus) CTRL + 4 Configurable
+
+Help F1 If available.
+
+Minimize the ELO Desktop Client WINDOWS + UP ARROW
+
+Move ELO Desktop Client left WINDOWS + LEFT ARROW
+
+Move ELO Desktop Client right WINDOWS + RIGHT ARROW
+
+Navigate back (1) BACKSPACE
+
+Navigate back (2) ALT + LEFT ARROW
+
+Switch to the next area F6
+
+Switch to the previous area CTRL + F6
+
+Go to CTRL + G
+
+Refresh F5
+
+Metadata F4
+
+48 ELO Desktop Client
+
+
+
+Tile navigation 
+
+Function Keyboard shortcut Note
+
+Launch tile (1) ENTER
+
+Launch tile (2) Spacebar
+
+Rename tile group F2 Focus must be on the tile in the group.
+
+'Repository' work area 
+
+Function
+Keyboard
+
+shortcut
+Note
+
+Open preview Spacebar
+
+Metadata F4
+
+Refresh F5
+
+Open in read-only mode (1) CTRL + O
+
+Open in read-only mode (2) ENTER
+
+Check out and edit ALT + O
+
+Edit document CTRL + E
+
+Check in ALT + I
+
+Create new folder INS
+
+Reference CTRL + R
+
+Copy CTRL + C
+
+Cut CTRL + X
+
+Paste CTRL + V
+
+Print CTRL + P
+
+Delete DEL
+
+Save as CTRL + S
+
+Move entry up ALT + UP ARROW
+
+Move entry down
+ALT + DOWN
+
+ARROW
+
+Create ELO link on drag-and-
+
+drop
+CTRL Hold down CTRL when dropping. Configurable.
+
+Create HTML link on drag-
+
+and-drop
+ALT Hold down CTRL when dropping. Configurable.
+
+Create reference on drag-
+
+and-drop
+ALT
+
+Hold down CTRL when dropping. Only works in
+
+the tree view.
+
+Go to the top-level entry POS1 Focus must be on the tree.
+
+Open folder RIGHT ARROW Focus closed folder.
+
+Close folder LEFT ARROW Focus opened folder.
+
+Go to the first child entry RIGHT ARROW Focus opened folder.
+
+49 ELO Desktop Client
+
+
+
+Function
+Keyboard
+
+shortcut
+Note
+
+Go to the parent folder LEFT ARROW Focus entry.
+
+Shift focus
+CTRL * ARROW
+
+keys
+The selection is not changed.
+
+Change selection CTRL + spacebar
+
+'Search' work area 
+
+Function Keyboard shortcut Note
+
+Start search ENTER Focus search input field.
+
+Go to CTRL + G
+
+Open preview Spacebar
+
+Metadata F4
+
+Refresh F5
+
+Open in read-only mode (1) CTRL + O
+
+Open in read-only mode (2) ENTER Focus result.
+
+Check out and edit ALT + O
+
+Edit document CTRL + E
+
+Check in ALT + I
+
+Create new folder INS
+
+Print CTRL + P
+
+Delete DEL
+
+Copy CTRL + C
+
+Paste CTRL + V Only works for folders.
+
+Save as CTRL + S
+
+Select next search (1) CTRL + TAB
+
+Select next search (2) RIGHT ARROW Focus must be on the Search tab.
+
+Select previous search (1) CTRL + SHIFT + TAB
+
+Select previous search (2) LEFT ARROW Focus must be on the Search tab.
+
+Open new search CTRL + N
+
+Close search (1) CTRL + F4
+
+Close search (2) DEL Focus must be on the Search tab.
+
+Focus search results CTRL + L Search must have been performed.
+
+'Tasks' work area (only ELO Desktop Client Plus) 
+
+Function Keyboard shortcut Note
+
+Go to CTRL + G
+
+Open preview Spacebar
+
+50 ELO Desktop Client
+
+
+
+Function Keyboard shortcut Note
+
+Metadata F4
+
+Refresh F5 Refreshes all tasks.
+
+Open in read-only mode CTRL + O
+
+Forward workflow ENTER
+
+Delete DEL
+
+Save as CTRL + S
+
+Copy CTRL + C
+
+Paste CTRL + V Only works for folders.
+
+'Desktop' work area 
+
+The Desktop work area contains keyboard shortcuts for general and specific functions for the 
+
+Explorer, Word, Excel, PowerPoint, Outlook, and OneNote areas. If you do not see one of these areas
+
+listed here, only general functions apply to that area.
+
+Area Function Keyboard shortcut Note
+
+Explorer Refresh F5
+
+Go to CTRL + G For .ecd and stored files.
+
+Open in read-only mode CTRL + O For .ecd and stored files.
+
+Check in ALT + I For .ecd and stored files.
+
+Check out and edit ALT + O For .ecd and stored files.
+
+Edit document CTRL + E For .ecd and stored files.
+
+Print CTRL + P For .ecd and stored files.
+
+Metadata F4 For .ecd and stored files.
+
+Delete DEL For .ecd and stored files.
+
+Close Windows Explorer preview (1) F6
+
+Close Windows Explorer preview (2) CTRL + F6
+
+Word Check in ALT + I For stored files.
+
+Check out and edit ALT + O For stored files.
+
+Edit document CTRL + E For stored files.
+
+Excel Check in ALT + I For stored files.
+
+Check out and edit ALT + O For stored files.
+
+Edit document CTRL + E For stored files.
+
+PowerPoint Check in ALT + I For stored files.
+
+Check out and edit ALT + O For stored files.
+
+Edit document CTRL + E For stored files.
+
+51 ELO Desktop Client
+
+
+
+'In use' work area 
+
+Function Keyboard shortcut Note
+
+Go to CTRL + G
+
+Open preview Spacebar
+
+Metadata F4
+
+Refresh F5
+
+Save as CTRL + S Saves the edited document.
+
+Edit document (1) ENTER
+
+Edit document (2) CTRL + E
+
+Check in ALT + I
+
+Print CTRL + P
+
+'My ELO' work area 
+
+Area Function Keyboard shortcut Note
+
+Most recently used Go to CTRL + G
+
+Delete from list DEL
+
+Change pinned status CTRL + P
+
+Configuration 
+
+Function Keyboard shortcut Note
+
+Cancel ESC
+
+Undo change CTRL + Z
+
+Restore change CTRL + Y
+
+Save changes CTRL + S Only available for administrators.
+
+Export settings CTRL + E Only available for administrators.
+
+Import settings CTRL + I Only available for administrators.
+
+Dialog boxes 
+
+Area Function
+Keyboard
+
+shortcut
+Note
+
+General Cancel ESC
+
+OK ENTER
+Only works if there are no
+
+errors.
+
+Permissions Focus search field CTRL+F
+
+Add/remove R right R
+Permission must be
+
+focused.
+
+52 ELO Desktop Client
+
+
+
+Area Function
+Keyboard
+
+shortcut
+Note
+
+Add/remove W right W
+Permission must be
+
+focused.
+
+Add/remove D right D
+Permission must be
+
+focused.
+
+Add/remove E right E
+Permission must be
+
+focused.
+
+Add/remove L right L
+Permission must be
+
+focused.
+
+Add/remove P right P
+Permission must be
+
+focused.
+
+Remove selected permission DEL
+Permission must be
+
+focused.
+
+Edit permission/Finish editing ALT + 2
+Permission must be
+
+focused.
+
+Edit permission RIGHT ARROW
+Permission must be
+
+focused.
+
+Finish editing LEFT ARROW
+Permission must be
+
+focused.
+
+Show/hide members of the
+
+selected group
+ALT + 1
+
+Permission must be
+
+focused.
+
+Document versions Open in read-only mode CTRL + O
+
+Mark for deletion DEL
+
+Remove deletion marker INS
+
+Save as CTRL + S
+
+Links Delete link DEL
+
+Go to CTRL + G
+
+Switch to permanent link CTRL + L
+Can only be disabled during
+
+creation.
+
+Report for entry Show options CTRL + O
+
+Save as CSV file CTRL + S
+
+Manage search
+
+favorites
+Mark for deletion DEL
+
+Remove deletion marker INS
+
+Rename search favorite F2
+
+Select entry Focus search input CTRL + F
+
+Start search ENTER
+Search input field must be
+
+focused.
+
+53 ELO Desktop Client
+
+
+
+Important components 
+
+Repository structure 
+
+In the tree, you will see the structure of the repository. Navigate between entries in the repository
+
+here.
+
+You have the following navigation options:
+
+Mouse: Click an entry using the mouse. Clicking the arrow next to the folder expands the
+
+contents of the folder in the tree.
+
+Keyboard: You can navigate up and down the tree using the UP and DOWN arrow keys.
+
+Pressing the right arrow key opens a folder. Pressing the left arrow key closes the folder.
+
+Reference 
+
+• 
+
+• 
+
+54 ELO Desktop Client
+
+
+
+Entries (folders or documents) with an arrow icon are references. By right-clicking the entry, you
+
+can access the original entry or other references by clicking Additional references.
+
+Checked out document 
+
+Documents with a yellow arrow next to the document icon and a name are checked out by the
+
+corresponding user. They can be viewed (Document > Open in read-only mode), but not edited.
+
+Folders 
+
+In the repository structure, your documents are created in folders. If you've selected a folder, you
+
+can view the contents and the child folders in a separate window using the Preview function
+
+(keyboard shortcut: spacebar).
+
+You can change how the folder is displayed and the sort order (1), or browse the folder by short
+
+name (2).
+
+If you want to select multiple entries at once, you can only do this in the repository structure. You
+
+can find more information in the section How do I select multiple entries?.
+
+You have the following options for working with folders:
+
+Create new folder: Create a new folder entry in your ELO repository.
+
+Insert folder: Insert a folder from the file system into the selected folder
+
+Link folder: Link the filing of Outlook items with folders in ELO.
+
+Folder preview: See all child entries of the folder in a table view.
+
+• 
+
+• 
+
+• 
+
+• 
+
+55 ELO Desktop Client
+
+
+
+Document 
+
+If you've selected a document, you can view the contents in a separate window using the Preview
+
+(keyboard shortcut: spacebar) function.
+
+You have the following options for viewing the contents of a document:
+
+Open in read-only mode: Open the document in an external program.
+
+Preview: Open the document in a separate window. Additional functions are available there.
+
+Save as: Save the selected document on your file system and open it in an external program.
+
+Viewer pane 
+
+You can reach the viewer pane via the preview (keyboard shortcut: spacebar). The selected
+
+document is shown there.
+
+• 
+
+• 
+
+• 
+
+56 ELO Desktop Client
+
+
+
+Each entry is made up of three elements: contents (1), feed (2), and metadata.
+
+The contents and metadata are shown on the left, while the feed is always located on the right.
+
+You can switch between the contents, metadata, and full text using the tabs.
+
+Metadata: Depending on the configuration, some parts of the form may appear collapsed
+
+with gen. 2 metadata. To expand a part of the form, click the arrow to the left of the header.
+
+Full text: When you click the Full text button, the selected document appears in full text. This
+
+requires the document to have been added to the full text database. This display lends itself
+
+to searches. A search field allowing you to search the text appears below it. For more
+
+information about the search field on the Full text tab, refer to the Preview section in the 
+
+'View' group chapter.
+
+Show entries 
+
+In the In use and Search work areas, you have two options for displaying entries:
+
+List view
+
+• 
+
+• 
+
+• 
+
+• 
+
+57 ELO Desktop Client
+
+
+
+Table view
+
+The following explains the list and table views based on the In use work area. The views only differ
+
+from the Search work area to a very small extent.
+
+List view 
+
+In the list view of the In Use work area, you will see all of the documents that are currently in use.
+
+The following table explains the components of an entry.
+
+File type This icon indicates the file type.
+
+Short
+
+name
+This is the short name.
+
+Date Here, you see when the document was checked out.
+
+Version
+Here, you find the version number of the document and
+
+when it was filed.
+
+Form
+Here, you see the metadata form used to file the
+
+document.
+
+Table view 
+
+You can also view documents in use in table format.
+
+58 ELO Desktop Client
+
+
+
+Right-click the header of the table view to open the context menu.
+
+Sort A–Z: Sort the selected column alphabetically in ascending order.
+
+Sort Z–A: Sort the selected column alphabetically in descending order.
+
+Group by this field: Creates groups depending on the selected column. If you select a group for the 
+
+Type field, for example, the individual file types are sorted in groups.
+
+Remove grouping: Removes the grouping.
+
+Hide: Hides the selected column.
+
+Column selection: To change the column selection, click Column selection.
+
+59 ELO Desktop Client
+
+
+
+The Change table dialog box opens.
+
+You can add or hide fields in the table view. To add a field, check the box or, alternatively, click 
+
+Show. To deselect a field, uncheck the box or, alternatively, click Hide.
+
+Information
+
+The Short name field is mandatory and cannot be hidden.
+
+Click Up and Down to change the order of the columns.
+
+60 ELO Desktop Client
+
+
+
+You can set the width in pixels for each field. Using the spin box, enter a value in the Selected
+
+column width (in pixels) field.
+
+Filter entries 
+
+In each of the views there are buttons that allow you to switch views, use filters, and search the
+
+entries.
+
+The Filter button allows you to sort the entries in ascending or descending order based on the
+
+metadata. You can also group the entries.
+
+Select the respective name of the table column from the drop-down menus.
+
+61 ELO Desktop Client
+
+
+
+Metadata 
+
+Before you can file documents to ELO or create new folders, you must enter metadata for the
+
+entries. This is done by using metadata forms, which contain corresponding input fields (called 
+
+fields).
+
+The Metadata dialog box is used to enter and edit the metadata. The dialog box usually appears
+
+automatically when you file a document or create a folder.
+
+For more information on metadata, refer to the Metadata section in the 'Organize' group chapter.
+
+62 ELO Desktop Client
+
+
+
+Feed 
+
+ELO offers several features that support collaboration within your company.
+
+The feed is used to share information on an entry in ELO (document or folder) and track changes.
+
+The following message types are shown in the feed:
+
+Posts (written by a user)
+
+Comment (on a post)
+
+Polls
+
+Events (e.g. when a new version of a document is filed or changes are made to the working
+
+version)
+
+Create post 
+
+Use the Create a post field to comment on the respective entry in a feed. Click the input field.
+
+The text in posts, polls, and comments can be formatted with the following syntax:
+
+Bold: To format a part of the text in bold type, place an asterisk (*) at the beginning and end of the
+
+desired text section.
+
+"I would like to stress this *again*." becomes: "I would like to stress this again." in the ELO
+
+feed.
+
+• 
+
+• 
+
+• 
+
+• 
+
+63 ELO Desktop Client
+
+
+
+Information
+
+If you want the asterisk to appear as a character in the text, enter a backslash before the
+
+asterisk. The asterisk does not have a formatting function, but appears instead.
+
+Click Create to post the comment.
+
+Poll 
+
+Clicking the Create poll button opens a new area in the ELO feed in which you can start a user poll.
+
+Enter the title or question of the poll in the first input field (with the placeholder text Ask a
+
+question). Enter the answer options in the next input fields (with the placeholder text Add answer
+
+option). To create an additional answer option, click the Add new answer button. You can select how
+
+long you want the poll to remain open in the Poll duration field.
+
+64 ELO Desktop Client
+
+
+
+Clicking Show more settings opens an area with additional settings. Here, you can you define
+
+whether you want to offer the user multiple options to select from, whether you want the user
+
+name of the participants to be visible in the poll result, and whether you want participants to be
+
+able to add further answer options.
+
+Click Create to start the poll.
+
+Information
+
+Once a user has taken a poll, it can no longer be modified.
+
+Mention 
+
+Use the Mention user button (@ symbol) to address a feed post directly to another ELO user or an
+
+ELO group. The users mentioned then see the corresponding feed post in the My ELO work area.
+
+Keyboard shortcut: As soon as you type an @ character, ELO automatically recognizes that you
+
+want to insert a mention. The Select user dialog box appears.
+
+Reference 
+
+Click the Reference entry button (document icon with arrow) to link a feed post with an entry in
+
+ELO.
+
+Clicking the button opens the Reference dialog box. Select an entry you want to reference here. The
+
+reference jumps directly to the respective entry.
+
+Keyboard shortcut: As soon as you type a > character, ELO automatically recognizes that you want
+
+to insert a reference.
+
+65 ELO Desktop Client
+
+
+
+Hashtag 
+
+Use the Insert hashtag button (# symbol) to add hashtags to a post. You can subscribe to hashtags.
+
+You can also filter the My ELO work area by hashtags.
+
+Keyboard shortcut: As soon as you type a # character, ELO automatically recognizes that you want
+
+to insert a hashtag. The hashtag drop-down menu opens.
+
+Subscribe to hashtag 
+
+If a feed post contains hashtags, you can subscribe to it.
+
+Click on the hashtag.
+
+The discussion page for the selected hashtag appears.
+
+Click the Subscribe button.
+
+You have subscribed to the hashtag. All posts that are marked with the corresponding hashtag
+
+appear in the My ELO work area.
+
+1. 
+
+2. 
+
+66 ELO Desktop Client
+
+
+
+Visibility 
+
+Use the Restrict visibility button (eye icon) to restrict who can read the post.
+
+A drop-down menu with the available group names appears. Enter a group name or choose one
+
+from the list. You can also enter multiple group names and remove them using the X icon.
+
+Your selection is applied. Only the selected groups can view your post.
+
+Optional: You can apply this restriction for future feed posts. Check the box next to Remember
+
+selected visibility. Your visibility settings will be set as the default for new feed posts.
+
+Search feed 
+
+Clicking the Search feed button (magnifying glass icon) opens a search field that allows you to
+
+search within the currently selected feed. Clicking Search feed (magnifying glass icon) or pressing
+
+the ENTER key starts your search. When the searched term is found, the feed is reduced to the
+
+corresponding posts. The matches are highlighted. Click Reset search (X icon) to exit the results list
+
+and return to the full feed.
+
+67 ELO Desktop Client
+
+
+
+Subscribe to feed 
+
+Use the Subscribe button (antenna icon) to subscribe to the feed. All subscribed feeds are
+
+aggregated in the My ELO area. Once a post is added to a subscribed feed, you also see the post in
+
+the My ELO area.
+
+Automatically subscribe to feed 
+
+ELO provides you with the option to automatically subscribe to feeds. The options are located in
+
+the configuration under General. This affects the following events:
+
+When filing a document
+
+When creating a new folder
+
+When checking in a new version
+
+When creating a post or comment
+
+Enable or disable the check boxes to set when to automatically subscribe to the respective feed.
+
+Show filter options 
+
+Click Show filter options (filter icon) to filter the feed by Post author, Post type, Hashtag, and 
+
+Additional filters.
+
+• 
+
+• 
+
+• 
+
+• 
+
+68 ELO Desktop Client
+
+
+
+To apply a filter, click the corresponding filter in the list.
+
+In the default settings, all filters are applied in is mode.
+
+To negate the filter, click is and set it to is not.
+
+The mode can be switched to is not in all categories apart from New since.
+
+New comment 
+
+69 ELO Desktop Client
+
+
+
+You can post comments in any feed. Post a comment by entering text into the input field below the
+
+feed post.
+
+Edit
+
+Click the Edit button (pencil icon) to edit your own feed posts and comments.
+
+Settings 
+
+To open the settings for My ELO, subscribed hashtags, and your polls, click the Settings button (gear
+
+icon).
+
+In the My ELO settings area, you can choose when to automatically subscribe to feeds.
+
+Choose from the following options:
+
+• 
+
+70 ELO Desktop Client
+
+
+
+When filing a document
+
+When creating a new folder
+
+When checking in a new version
+
+When creating a post or comment
+
+In the field below, you can configure how long in seconds the Undo button is shown.
+
+The button below this allows you to clear all posts from My ELO. Posts you have marked as
+
+important will not be deleted.
+
+The settings for My subscribed hashtags are split up into two areas.
+
+Search for hashtag: Select a specific hashtag from the drop-down menu. Clicking a hashtag brings
+
+you to the hashtag overview page, where you can subscribe to it.
+
+Subscribed hashtags: This list shows all hashtags you have subscribed to. The number in
+
+parenthesis following the hashtag indicates how often it has been used in ELO. The last hashtag
+
+you subscribed to is at the top of the list. To unsubscribe, click the checkmark next to the hashtag.
+
+• 
+
+• 
+
+• 
+
+71 ELO Desktop Client
+
+
+
+In the My polls area, you will see an overview of the polls you have initiated. To unsubscribe, click
+
+the checkmark next to the poll.
+
+Status: Different statuses 
+
+Available in: Desktop work area
+
+The ELO Desktop Client recognizes the status of open Microsoft Office documents as well as files in
+
+the Windows Explorer and Windows Desktop. In the Desktop work area, the different statuses are
+
+indicated in the Status area.
+
+'Not filed' status
+
+The Not filed status indicates that the
+
+document has not been filed to ELO.
+
+You can either save the file as a new
+
+document or as a new version of the
+
+document.
+
+'Found in ELO' status
+
+The Found in ELO status indicates that the
+
+document selected at the file system level is
+
+already filed to ELO. You can replace the
+
+selected file with an ELO link, file a new
+
+version of a document, or go to the location
+
+where the entry is filed in ELO.
+
+Please note
+
+If you open the file from the Windows file system, the ELO Desktop Client can no longer
+
+recognize the status due to a lock. In this case, you can either go to the location where the
+
+entry is filed in ELO or replace the file with an ELO link. We recommend checking the
+
+document out in the client to edit it.
+
+72 ELO Desktop Client
+
+
+
+'View' status
+
+The View status indicates that a document
+
+filed in ELO is opened for viewing in an
+
+external program. You can check out and edit
+
+the document or file it as a new version.
+
+Once you have changed and saved the
+
+document in an external program, the status
+
+switches to In use.
+
+'In use' status
+
+The In use status indicates that a document filed to
+
+ELO is currently being edited in a Microsoft Office
+
+program. You can check the document in, file it as a
+
+new version, or discard your changes.
+
+'In use by a web service' status
+
+The In use by a web service status
+
+indicates that a document filed to
+
+ELO is currently being edited in a
+
+Microsoft Office program via a web
+
+service. This requires ELO to be
+
+connected as a drive.
+
+'Status not recognized'
+
+The Status not recognized status indicates
+
+that the Windows user does not have read
+
+access to the document, or that an
+
+application is blocking read access.
+
+73 ELO Desktop Client
+
+
+
+Important actions in detail 
+
+This chapter is especially helpful for new users. It explains how to perform basic actions.
+
+Create new folder 
+
+Before you can file documents, you will need folders in the Repository work area.
+
+The New folder function (or the INS key) creates a new folder entry in ELO.
+
+Alternative
+
+Copy: If a folder with the basic structure you need already exists, you can copy this basic structure
+
+without content.
+
+Method
+
+In the repository, click the folder where you want to create the new folder.
+
+On the toolbar, click New > New folder.
+
+Keyboard shortcut: INS key
+
+1. 
+
+2. 
+
+74 ELO Desktop Client
+
+
+
+The Metadata dialog box opens.
+
+Enter a name for the new folder in the Short name field.
+
+Please note: If the new folder relates to a person, you are required to complete the Personal
+
+identifier and End of deletion period fields in the Options area.
+
+Click OK.
+
+Result
+
+A new folder is created.
+
+Outlook
+
+Like physical folders, you can add contents to folders: You can create additional child folders or file
+
+documents directly to them.
+
+3. 
+
+4. 
+
+75 ELO Desktop Client
+
+
+
+Change folder name: If you want to change the name of a folder, proceed as follows:
+
+Click on the folder.
+
+On the toolbar, click Organize > Metadata.
+
+Change the name in the Short name field and confirm with OK.
+
+Create new view 
+
+With the New view function, you can create a new folder view. The folder view is created as a new
+
+tile in the tile navigation.
+
+A view provides you with quick access to a specific area of the repository. When you create a view,
+
+it is displayed as a tile in the tile navigation.
+
+Alternative
+
+Most recently used: The Most recently used tab in the My ELO work area provides fast access to
+
+your folders. You can pin folders here.
+
+Configuration - Views: In the Views category of the configuration, you can also create new views.
+
+Method
+
+In the Repository work area, select the project folder you want to create a view for.
+
+On the toolbar, click View > New view.
+
+The Create view dialog box appears.
+
+1. 
+
+2. 
+
+3. 
+
+1. 
+
+2. 
+
+76 ELO Desktop Client
+
+
+
+77 ELO Desktop Client
+
+
+
+Configure the tile by selecting a size, color, and icon.
+
+The Name field automatically contains the name of the folder you selected. You can change
+
+this name if you want to use a different one.
+
+Optional: In the bottom area of the dialog box, you can change the selected folder.
+
+Click OK.
+
+Result
+
+A tile is created for the new view under the Repository group in the tile navigation.
+
+Outlook
+
+You can drag and drop a tile to another position.
+
+If you have created multiple views, you have the option to group them. To learn how to create a
+
+group in the tile navigation, refer to the section Groups.
+
+You can edit or delete the view later on. To do so, open the configuration by clicking the User menu
+
+[your name] button. There, navigate to the Views category. You can delete the view by clicking the
+
+X icon or edit it by clicking the pencil icon.
+
+Insert files/folders 
+
+With the Insert files/folders function, you can file a document or folder from the file system to the
+
+selected folder in ELO.
+
+Alternative
+
+4. 
+
+78 ELO Desktop Client
+
+
+
+Drag-and-drop: You can drag documents straight from your file system to a folder in ELO.
+
+Document from template: If you want to create a document from a template, use this function.
+
+Method
+
+Select a folder in the Repository work area where you want to insert a file or folder from the
+
+file system.
+
+On the toolbar, click New > Insert files/folders.
+
+The Insert files/folders dialog box appears.
+
+Select what documents or folders you want to file by checking the corresponding boxes. You
+
+can select multiple users and groups.
+
+Click OK to confirm your selection.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+79 ELO Desktop Client
+
+
+
+The Metadata dialog box opens.
+
+Select a metadata form and enter the metadata. Click OK.
+
+Result
+
+The files or folders are filed to the desired position in ELO.
+
+Outlook
+
+You can modify documents stored in ELO. If the document is version-controlled, a new version of
+
+the document is stored after you have made changes. The old version is retained.
+
+Important functions for working with documents are:
+
+Check out and edit document
+
+Check in
+
+Load new version
+
+Send as ELO link
+
+Start workflow (only ELO Desktop Client Plus)
+
+5. 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+80 ELO Desktop Client
+
+
+
+File a document from the file system to ELO 
+
+In the configuration, configure the system so that filed documents are moved to ELO and an ELO
+
+link is created. Refer to the Configuration section in the User menu [your name] chapter for more
+
+information.
+
+Alternative
+
+Drag-and-drop
+
+Method
+
+In the ELO Desktop Client, switch to the Desktop work area.
+
+Open Microsoft Windows Explorer.
+
+Select a file in the Windows Explorer.
+
+In the Desktop work area, the client recognizes that the document is not filed to the
+
+repository.
+
+In the Desktop work area, click the File button (green arrow) to file the selected document to
+
+ELO.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+81 ELO Desktop Client
+
+
+
+The Repository dialog box opens.
+
+Select the desired target folder.
+
+Click OK.
+
+5. 
+
+6. 
+
+82 ELO Desktop Client
+
+
+
+Another dialog box for Filing appears.
+
+Select either Move to ELO or Move to ELO and create an ELO link.7. 
+
+83 ELO Desktop Client
+
+
+
+The Metadata dialog box opens.
+
+Select a metadata form in the Available forms column.
+
+Complete the fields in the selected metadata form.
+
+Click OK.
+
+Optional: Depending on the setting, the Version comment dialog box may now open. If this is
+
+the case, you can enter the version number and relevant comments. This dialog box can be
+
+enabled or disabled in the configuration.
+
+Result
+
+The file is filed to ELO. If you select the Move to ELO and create an ELO link option, the file is
+
+replaced with an ELO link in the file system.
+
+Outlook
+
+You have two options for filing documents in ELO:
+
+8. 
+
+9. 
+
+10. 
+
+• 
+
+84 ELO Desktop Client
+
+
+
+Filing an Office document that hasn't been saved to the file system
+
+Filing an Office document that has been saved to the file system
+
+Filing an Office document that hasn't been saved to the file system
+
+The example above shows the Desktop work area when a Microsoft Office document is opened and
+
+not yet saved in the file system.
+
+The following filing function is available in the Desktop work area, provided you have a Microsoft
+
+Office document open:
+
+Save in ELO: File the document to ELO. The File to repository dialog box then opens. Select the
+
+desired target folder here.
+
+• 
+
+85 ELO Desktop Client
+
+
+
+Alternative: Create a new folder by clicking the button with the blue plus icon.
+
+After confirming with OK, the document is opened in Microsoft Office in read-only mode.
+
+Filing an Office document that has been saved to the file system
+
+86 ELO Desktop Client
+
+
+
+The image above shows the Desktop work area when a Microsoft Office document is opened and
+
+saved in the file system.
+
+The Desktop work area offers two filing functions for Microsoft Office documents that have not yet
+
+been filed.
+
+Move to ELO: The document is moved to ELO and deleted from the file system. In the Select filing
+
+folder dialog box, select the desired target folder or create a new one.
+
+Move to ELO and create an ELO link: The document is moved to ELO and deleted from the file
+
+system. In the file system, the document is replaced with an ELO link to the entry in ELO. In the 
+
+Select filing folder dialog box, select the desired target folder or create a new one.
+
+Alternative via drag-and-drop 
+
+You can also file a document from your file system to ELO using drag-and-drop.
+
+Dragging and dropping items on the tree opens a context menu with the filing functions. User rights
+
+are also validated in real time.
+
+87 ELO Desktop Client
+
+
+
+If you press and hold the ALT key, the file is saved as a new version.
+
+File Microsoft OneNote items in ELO 
+
+The ELO Desktop Client allows you to file your Microsoft OneNote notebooks to ELO. You can file the
+
+entire notebook in ELO, or just individual items, such as sections or pages. You can synchronize
+
+changes you make later on. Refer to the section Synchronize Microsoft OneNote item in the chapter 
+
+'Organize' group to learn how to synchronize Microsoft OneNote items.
+
+Method
+
+Open Microsoft OneNote with the notebook you want to file to ELO. At the same time, open
+
+the Desktop work area.
+
+1. 
+
+88 ELO Desktop Client
+
+
+
+The following options are available:
+
+Save notebook in ELO: The notebook is saved in ELO as a folder. It will remain
+
+available in OneNote and can be synchronized with ELO.
+
+File notebook as PDF: The notebook will be converted into a PDF document and filed to
+
+ELO.
+
+Select the option Save notebook in ELO.
+
+◦ 
+
+◦
+
+2. 
+
+89 ELO Desktop Client
+
+
+
+The repository structure appears.
+
+Select the folder where you want to file the Microsoft OneNote notebook in ELO. Click OK to
+
+confirm.
+
+3. 
+
+90 ELO Desktop Client
+
+
+
+The Metadata dialog box opens.
+
+Complete the Metadata dialog box with the necessary information.
+
+You can select a metadata form in advance via the configuration. The preferred form is then
+
+completed automatically when filing Microsoft OneNote items. Refer to the Configuration –
+
+Microsoft OneNote section in the User menu [your name] chapter for more information.
+
+Click OK to close the dialog box.
+
+4. 
+
+5. 
+
+91 ELO Desktop Client
+
+
+
+The Metadata dialog box appears for each section and page you've created in the notebook.
+
+With pages, the Version comment dialog box also appears.
+
+Optional: Change the version number in the Version field if necessary.
+
+Optional: Enter a version comment in the Comment field. You can use up to 64 characters.
+
+Check the corresponding boxes if you'd like to prevent the filed version from being deleted or
+
+you want the document date to be updated to the filing date.
+
+Information
+
+In the Dialog boxes area of the configuration, you can stop the dialog box from being
+
+shown.
+
+Click OK.
+
+Result
+
+6. 
+
+92 ELO Desktop Client
+
+
+
+The notebook is filed to ELO with all its contents.
+
+Information
+
+The automatic sort order in ELO always overwrites the sort order in Microsoft OneNote. This
+
+does not apply to section groups. These are always sorted alphabetically in Microsoft
+
+OneNote.
+
+Outlook
+
+All Microsoft OneNote items can be filed separately to ELO based on this.
+
+Please note
+
+Entries in ELO that are located in an invalid position for Microsoft OneNote are ignored. This
+
+includes a section in another section or a page in a section group, for example.
+
+File e-mails 
+
+You can define how the ELO Desktop behaves when filing e-mails from Microsoft Outlook in the 
+
+Configuration under E-mail.
+
+You can organize how items from Microsoft Outlook (e-mails, calendar entries, tasks) are filed in
+
+the Desktop work area.
+
+You have the following options for filing e-mails:
+
+Manual filing
+
+Link folder
+
+Dynamic extension
+
+Drag-and-drop
+
+Manual filing 
+
+Method
+
+Select the e-mails you want to file.
+
+At the same time, open the Desktop work area in the ELO Desktop Client.
+
+For example, you can select the e-mails you want to file in Microsoft Outlook while opening
+
+the Desktop work area.
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+93 ELO Desktop Client
+
+
+
+In the Outlook items area (letter icon) in the Desktop work area, the status indicates whether
+
+the Outlook items are already filed to ELO.
+
+Three functions are available:
+
+Move to ELO: The selected element is filed to ELO based on your configuration.
+
+Go to: Goes to the filing location in ELO if the element is filed to ELO.
+
+Refresh: Refreshes the current view. The data is refreshed.
+
+Select the e-mails you want to file in the Desktop work area.
+
+Select the Move to ELO function.
+
+The filing structure opens.
+
+Select the folder where you want to file the e-mail and confirm with OK.
+
+◦ 
+
+◦ 
+
+◦
+
+3. 
+
+4. 
+
+5. 
+
+94 ELO Desktop Client
+
+
+
+The File Outlook items dialog box opens.
+
+Three options are available:
+
+With attachments in the e-mail: The e-mail is filed together with its attachments as an
+
+entry.
+
+With attachments in the e-mail and separately: The attachments are filed both to the
+
+e-mail and separately in the same folder.
+
+Only attachments: Only the e-mail attachments are filed.
+
+Select one of the options.
+
+The Metadata dialog box opens.
+
+Select a metadata form and enter the metadata. Click OK.
+
+Result
+
+The selected e-mails are filed according to the option selected.
+
+◦ 
+
+◦ 
+
+◦ 
+
+6. 
+
+7. 
+
+95 ELO Desktop Client
+
+
+
+Link folder 
+
+We recommend linking the filing of Outlook items with folders in ELO.
+
+Method
+
+Click the folder icon.
+
+The Outlook folder area contains the following sections:
+
+Selected Outlook folder: The folder selected in Microsoft Outlook.
+
+Linked folders: Click this button to determine where folder elements are filed to ELO.
+
+List of linked folders: All existing links in a list.
+
+To create a new link, click Linked folders.
+
+1. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+2. 
+
+96 ELO Desktop Client
+
+
+
+The Link Outlook folder dialog box opens.
+
+Using the search field above the tree view, you can select a fixed filing path in ELO.
+
+Click OK to save the path you have assigned to the Outlook folder.
+
+Result
+
+You will now see this new link in the List of linked folders.
+
+Dynamic extension 
+
+This dialog box enables you to define dynamic extensions for the filing path.
+
+Method
+
+3. 
+
+4. 
+
+1. 
+
+97 ELO Desktop Client
+
+
+
+Click the New folder level button (folder icon with green plus symbol) to create a new folder
+
+level.
+
+Optional: Click the Delete folder level button (X icon) to delete any folder levels that you have
+
+accidentally created.
+
+Select a variable. You can select from ten variables in the drop-down menu.
+
+Click the green plus icon to add variables for the folder level.
+
+Repeat this process until you have defined all folder levels.
+
+In the preview, you see how the dynamic extension would look with the defined variables.
+
+Click OK to save the dynamic extension.
+
+Result
+
+The folder link is defined and appears in the list of linked folders.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+98 ELO Desktop Client
+
+
+
+The List of linked folders contains all existing links.
+
+Click Go to (yellow arrow icon) to navigate to the filing path in ELO.
+
+Click the Delete button (X icon) to remove the link.
+
+Clicking the Start filing button (green arrow icon) files the items from the Outlook folder to ELO and
+
+creates a child folder structure for filing e-mails.
+
+The status is Filing stopped before initial filing. Under this, you will see the path to the linked
+
+Outlook folder and the filing path in ELO.
+
+After starting filing, the status changes to Filing ended/stopped.
+
+99 ELO Desktop Client
+
+
+
+The log under this indicates which steps have been performed.
+
+File e-mails from Microsoft Outlook folders via drag-and-drop 
+
+You can move the e-mails you've organized in Microsoft Outlook folders to your repository via drag-
+
+and-drop. Not each individual e-mail has to be moved separately. Instead, all e-mails in a Microsoft
+
+Outlook folder can be moved together.
+
+Method
+
+Open the Repository work area and navigate to the folder where you want to file the e-mails.
+
+Click the folder in Microsoft Outlook that you want to file and drag it to the folder where you
+
+want to file the e-mails.
+
+The File Outlook items dialog box opens.
+
+1. 
+
+2. 
+
+100 ELO Desktop Client
+
+
+
+Three options are available:
+
+With attachments in the e-mail: The e-mail is filed together with its attachments as an
+
+entry.
+
+With attachments in the e-mail and separately: The attachments are filed both to the
+
+e-mail and separately in the same folder.
+
+Only attachments: Only the e-mail attachments are filed.
+
+Select one of the options.
+
+The Metadata dialog box opens.
+
+Select a metadata form and enter the metadata. Click OK.
+
+Result
+
+The e-mails from the Microsoft Outlook folder are filed based on the selected functions.
+
+◦
+
+◦ 
+
+◦ 
+
+3. 
+
+4. 
+
+101 ELO Desktop Client
+
+
+
+Manage e-mails 
+
+The ELO Desktop Client helps you manage e-mails. You have the following option for working with
+
+e-mails in the ELO Desktop Client:
+
+Perform a combined search in ELO and Microsoft Outlook.
+
+You can reply to or forward e-mails in the ELO Desktop Client.
+
+File e-mails to ELO from Microsoft Outlook.
+
+Combined search in ELO and Microsoft Outlook 
+
+A combined search for e-mails in the ELO repository and Microsoft Outlook is available in the ELO
+
+Desktop Client.
+
+Method
+
+Open the Search work area.
+
+Click the Search options button (filter icon).
+
+Select the search range.
+
+To be able to search for entries in ELO and Microsoft Outlook, the box next to Microsoft
+
+Outlook and at least one other option (Full text, Metadata, Feed) must be checked.
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+102 ELO Desktop Client
+
+
+
+To only search for e-mails, set the Entry type filter to E-mail.
+
+Click Search.
+
+Result
+
+The search results are displayed.
+
+All entries marked with the Microsoft Outlook symbol are search results from Microsoft Outlook.
+
+Entries without this icon are entries filed to ELO.
+
+5. 
+
+103 ELO Desktop Client
+
+
+
+Reply to and forward e-mails 
+
+You can reply to e-mails right in the ELO Desktop Client without opening Microsoft Outlook by
+
+opening an e-mail with the Preview function. The e-mail can already be filed to ELO or be found
+
+using the combined ELO and Microsoft Outlook search.
+
+These functions connect the ELO Desktop Client to Microsoft Outlook:
+
+Reply, Reply to all, Forward: You are familiar with these functions from Microsoft Outlook. A
+
+Microsoft Outlook window for replying to the e-mail opens and you can process your e-mail
+
+as usual.
+
+Open in Microsoft Outlook: You open the e-mail in Microsoft Outlook and can process it as
+
+usual.
+
+Save in ELO: File the e-mail to ELO.
+
+Filing e-mails from Microsoft Outlook 
+
+You can organize how items from Microsoft Outlook (e-mails, calendar entries, tasks) are filed in
+
+the Desktop work area.
+
+You can move the e-mails you've organized in Microsoft Outlook folders to ELO together.
+
+Refer to the section Filing e-mails to learn how to file Microsoft Outlook items in ELO.
+
+Check out and edit document 
+
+With the Check out and edit function, you can open a selected document in an external program for
+
+editing. Once you have finished editing the document, check it back in (refer to the Check in
+
+document section for more information). A new version of the document is created, which becomes
+
+the new working version. The working version is always the version that you see when you select
+
+the document.
+
+The old version is still retained.
+
+While the document is checked out, it is locked for other users. During this time, other users can
+
+only view the document in read-only mode (Document > Open in ready-only mode). This prevents
+
+a document from being edited by multiple users at the same time, resulting in conflicting versions.
+
+• 
+
+• 
+
+• 
+
+104 ELO Desktop Client
+
+
+
+You can recognize checked out documents by a yellow arrow next to the document icon. The name
+
+of the editor is shown next to this.
+
+Alternative
+
+Check out to OneDrive: Use this function to check out a Microsoft Office document in ELO to
+
+Microsoft OneDrive for editing.
+
+Method
+
+Open the Repository work area.
+
+Open the folder with the document that you would like to edit.
+
+Click the document.
+
+The document is selected.
+
+1. 
+
+2. 
+
+3. 
+
+105 ELO Desktop Client
+
+
+
+To edit the document, click Document > Check out and edit on the toolbar.
+
+Keyboard shortcut: ALT + O
+
+The document is opened for editing in an external program. It is transferred to the In use
+
+work area and cannot be edited by other users.
+
+Information
+
+If you close the document in the external application, it is still checked out.
+
+If you want to cancel the process, still click Close. In the In use work area, select the
+
+document, go to the Document group, and click Discard document changes.
+
+4. 
+
+106 ELO Desktop Client
+
+
+
+In the Desktop work area, you will see that the document is in use.
+
+Edit the document.
+
+Save the document in the external application.
+
+You do not have to check the document back in right away. You can keep it checked out and edit it
+
+later. Use the 'Edit document' function for this.
+
+In addition to the Repository work area, you will also conveniently find the document in your In use
+
+work area as long as you have it checked out.
+
+Result
+
+The document is changed locally but not in ELO.
+
+Outlook
+
+To apply your changes to ELO and save your document as a new version, use the Check in function.
+
+Discard document changes: If you want to discard the changes, use this function.
+
+Check in document 
+
+The Check in function files a checked out, changed document to ELO as a new version.
+
+Alternative
+
+Discard document changes: If you want to discard the changes, use this function.
+
+Method
+
+Select a checked out document in ELO.
+
+5. 
+
+6. 
+
+1. 
+
+107 ELO Desktop Client
+
+
+
+To transfer the document back to the repository, click Document > Check in on the toolbar. 
+
+Alternative: Use the icon with the green arrow at the top left corner.
+
+Keyboard shortcut: ALT + I
+
+Optional: Depending on the setting, the Version comment dialog box may now open. If this is
+
+the case, you can enter the version number and relevant comments. In the Configuration, you
+
+can enable or disable this dialog box in the Dialog boxes area.
+
+2. 
+
+108 ELO Desktop Client
+
+
+
+Optional: Change the version number in the Version field if necessary.
+
+Optional: Enter a version comment in the Comment field. You can use up to 64 characters.
+
+Check the corresponding boxes if you'd like to prevent the filed version from being deleted or
+
+you want the document date to be updated to the filing date.
+
+Click OK.
+
+Result
+
+The document is filed as a new version in ELO. The document is removed from the In use work area
+
+and can be edited by other users.
+
+Outlook
+
+To learn how to revert to an older version, refer to the Document versions chapter.
+
+Narrowing down a search request 
+
+Available in: Search work area
+
+3. 
+
+109 ELO Desktop Client
+
+
+
+You can search for documents and folders. The more information you enter about the entry you are
+
+looking for, the better the result will be.
+
+This section describes an example of a search. You will find descriptions of the interface and all
+
+search options in the chapters 'Search' work area and 'Search' group.
+
+Information
+
+Information: To automatically open the search options when performing a new search, check
+
+the box in the configuration under View > Search.
+
+Example
+
+You want to search for a document. You know
+
+that it is an invoice,
+
+that it was filed as a PDF or Word document,
+
+that the document was filed within a specific period,
+
+what the customer number is,
+
+that it was not filed with the E-mail metadata form.
+
+Method
+
+Enter the search term Invoice in the search field to run a search with ELO iSearch.
+
+While entering a search term, the search-as-you-type function provides search suggestions in
+
+a drop-down menu.
+
+To show the search options, click Search options (filter icon).
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+110 ELO Desktop Client
+
+
+
+The search options open.
+
+Click the Search range field.
+
+The search range drop-down menu opens. This field is set to "Search all areas" by default.
+
+Uncheck Microsoft Outlook to limit your search to the ELO repository.
+
+3. 
+
+4. 
+
+111 ELO Desktop Client
+
+
+
+Refer to the Manage e-mails section to learn how to perform a combined search in ELO and
+
+Microsoft Outlook.
+
+Click on the Search range field again to close the Search range field.
+
+Apply search filters to narrow down your search results.
+
+Click Add (plus icon) to apply a search filter.
+
+5. 
+
+6. 
+
+112 ELO Desktop Client
+
+
+
+A drop-down menu with available search filters appears.
+
+Select the Entry type search filter from the drop-down menu.7. 
+
+113 ELO Desktop Client
+
+
+
+The Entry type search filter appears.
+
+Select the value PDF from the drop-down menu.8. 
+
+114 ELO Desktop Client
+
+
+
+Optional: To remove a filter, click the delete icon.
+
+Information
+
+The number of entries in ELO is shown in parentheses for each individual value.
+
+Click Add (plus icon) again to apply an additional search filter.
+
+Select the value Word from the drop-down menu.
+
+9. 
+
+10. 
+
+115 ELO Desktop Client
+
+
+
+The second value from the drop-down menu is applied.
+
+Information
+
+The following search filters work in the same way: Filed by, Form, Feed, Editor, and 
+
+File size.
+
+Add the Date filter.11. 
+
+116 ELO Desktop Client
+
+
+
+Select the option between from the drop-down menu.12. 
+
+117 ELO Desktop Client
+
+
+
+Click the calendar icon to set a custom period. Clicking the calendar icon opens a calendar. In
+
+the calendars, select the desired dates.
+
+13. 
+
+118 ELO Desktop Client
+
+
+
+The period is narrowed down using the Date search filter.
+
+Information
+
+The Filing date search filter works in the same way.
+
+Apply the Select field search filter.14. 
+
+119 ELO Desktop Client
+
+
+
+In the Select field dialog box, select the Invoice metadata form from the drop-down menu in
+
+the Form field.
+
+Check the box next to the Customer number field and click OK.
+
+The Select field search filter is applied.
+
+Select the desired customer number from the field from the drop-down menu.
+
+15. 
+
+16. 
+
+17. 
+
+120 ELO Desktop Client
+
+
+
+Select the Form search filter with the value E-mail.
+
+Right-click on the Form search filter.
+
+Click on does not contain. This negates the filter.
+
+18. 
+
+19. 
+
+20. 
+
+121 ELO Desktop Client
+
+
+
+To start the search, click the magnifying glass icon.
+
+Keyboard shortcut: ENTER key
+
+Result
+
+This example narrowing down the search with search ranges and search filters is complete.
+
+The results are shown after you enter your search. You can choose between a table view and list
+
+view.
+
+21. 
+
+122 ELO Desktop Client
+
+
+
+Information
+
+The number shown next to the Search options button before the input field indicates how
+
+many search filters are active.
+
+Outlook
+
+In the Search work area, you can use the same functions on entries as in the Repository work area,
+
+for example edit documents, or send entries.
+
+To go to the filing location of the entry, select the entry. On the toolbar, click View > Go to or use
+
+the keyboard shortcut CTRL+ G.
+
+You can set the defined search as a search favorite. The Add search favorite section explains how
+
+to save a search.
+
+To view an entry in the results list, use the Preview function.
+
+Assign control 
+
+With the ELO Desktop Client, you can assign controls from a form in a Microsoft Office template to
+
+a field in the ELO metadata.
+
+To do so, you need to enable the Developer tab in Microsoft Word: Ribbon > File > Options > 
+
+Customize the Ribbon.
+
+123 ELO Desktop Client
+
+
+
+To connect the content of the metadata to the Word form fields, in the Metadata > General in the
+
+configuration, check the box next to Link the content of the controls from Word to the metadata.
+
+Method
+
+Create multiple controls in a document template in Microsoft Word, for example a content
+
+control for selecting the date or a drop-down list content control for the project name.
+
+File the document to ELO and choose the metadata form with the fields you want to link to
+
+controls later on. In our example, we select the Report form with fields Project, Author, 
+
+Meeting date, Location, and Topic.
+
+Select the filed document in ELO, then click Check out and edit in the Document group on the
+
+toolbar.
+
+The document is opened for editing in Microsoft Word.
+
+Switch to the Desktop work area.
+
+In the Word template, select the control you want to assign to a field in the metadata form.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+124 ELO Desktop Client
+
+
+
+On the toolbar, click Assign control in the Organize group.
+
+The Assign field dialog box opens with the name of the metadata form.
+
+Choose the field that you want to assign to the selected control from the drop-down menu. In
+
+our example, we select the Project field.
+
+Optional: Clicking Refresh selection refreshes the selection in Microsoft Word if you have
+
+made any changes in the meantime.
+
+Click OK.
+
+The control has been assigned to a field.
+
+Repeat this step for the other controls in your document template.
+
+Optional: On the toolbar, click Overview of controls in the Organize group to check which
+
+fields are linked.
+
+Result
+
+The controls are now linked to fields in the ELO metadata.
+
+Outlook
+
+6. 
+
+7. 
+
+8. 
+
+9. 
+
+125 ELO Desktop Client
+
+
+
+You can now create a report with the document template by pressing the Document from template
+
+button. When opening the document template, the Metadata dialog box opens. All information
+
+provided within the mapped fields is automatically transferred to the document's form fields.
+
+Once the document has been created and checked back in, the values of the mapped fields are
+
+automatically checked and the content of the metadata form automatically adjusted.
+
+126 ELO Desktop Client
+
+
+
+User menu [your name] 
+
+Configuration 
+
+Available in: User menu [your name] > Configuration
+
+In the Configuration dialog box, you can change the local user settings. You can define many
+
+personal settings yourself; your system administrator will perform all other settings. If necessary,
+
+contact your system administrator if you want to change certain settings and you are unable to do
+
+so via the Configuration dialog box.
+
+The Configuration dialog box consists of multiple categories:
+
+General
+
+View
+
+Color scheme
+
+Views
+
+Dialog boxes
+
+Metadata
+
+Check in
+
+E-mail
+
+Microsoft OneNote
+
+Administration
+
+You can minimize the names of the categories by clicking Categories.
+
+Configuration – top area 
+
+The following functions are available in the upper area of the configuration:
+
+Click the left arrow (keyboard shortcut: CTRL + Z)to undo
+
+your last change. Click the right arrow (keyboard shortcut:
+
+CTRL + Y) to redo the change.
+
+You can use this button to show or hide the "Set by" column.
+
+This shows at what level changes have been made to the
+
+settings.
+
+This button deletes all user settings. The settings for the
+
+next level, such as those for the option group, apply
+
+automatically. For more information about the level concept
+
+in the configuration, refer to the ELO Desktop Client
+
+administration documentation.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+127 ELO Desktop Client
+
+https://docs.elo.com/admin/clients/en-us/desktop-client/configuration.html#making-universal-changes-to-the-configuration
+https://docs.elo.com/admin/clients/en-us/desktop-client/configuration.html#making-universal-changes-to-the-configuration
+https://docs.elo.com/admin/clients/en-us/desktop-client/configuration.html#making-universal-changes-to-the-configuration
+
+
+You can browse the entire configuration settings. While
+
+entering a search term, search results are filtered and
+
+highlighted right away thanks to the search-as-you-type
+
+function. The first area matching the search input appears.
+
+Navigate using the area overview on the left side if the
+
+results are spread across multiple areas. You can make the
+
+desired settings right in the search results.
+
+Configuration – General (1) 
+
+The following settings are available in the upper area of the General category.
+
+Folder for document templates 
+
+Path: Enter the folder for document templates. Select the desired path via the folder icon. The 
+
+Document from template function automatically opens the defined folder.
+
+My ELO 
+
+This is where you define the settings for automatically subscribing to a feed.
+
+You can choose from the following options:
+
+When filing a document
+
+When creating a new folder
+
+When checking in a new version
+
+When creating a post or comment
+
+• 
+
+• 
+
+• 
+
+• 
+
+128 ELO Desktop Client
+
+
+
+Language 
+
+In the Language area, you can change the language of the interface via a drop-down menu. Making
+
+this change requires you to restart the client.
+
+Configuration – General (2) 
+
+The following settings are available in the lower area of the General category.
+
+Accessibility 
+
+In the Accessibility section, you can enable accessibility support features for your ELO Desktop
+
+Client.
+
+Enable accessibility support functions: If you enable this function, the following changes will be
+
+applied in your client.
+
+Dialog boxes open in a separate window
+
+Disabled text boxes can be focused with a tab
+
+The settings are saved for the computer but not for a specific user.
+
+Keyboard shortcuts 
+
+In this area, you can set keyboard shortcuts for several actions. To change the keyboard shortcuts,
+
+click the corresponding line and select the keyboard shortcut you want to change.
+
+• 
+
+• 
+
+• 
+
+129 ELO Desktop Client
+
+
+
+Keyboard shortcut for ELO link with drag-and-drop: Select an entry in ELO and perform a drag-
+
+and-drop action from within ELO. Pressing the set keyboard command at the same time
+
+creates an ELO link.
+
+Keyboard shortcut for ELO link URL with drag-and-drop: Select an entry in ELO and perform a
+
+drag-and-drop action from within ELO. Pressing the set keyboard command at the same time
+
+creates an ELO link URL.
+
+Keyboard shortcut for click & find function: Press the defined keyboard shortcut while double-
+
+clicking a word or number in an external program performs a search for this word or number
+
+in ELO.
+
+Information
+
+You will find fixed keyboard shortcuts in the chapter Simple operation.
+
+Configuration – View (1) 
+
+The following settings are available in the upper View category.
+
+• 
+
+• 
+
+130 ELO Desktop Client
+
+
+
+Copy 
+
+Behavior when copying an entry in a folder with differing permissions: Determine how the ELO
+
+Desktop Client should behave when copying an entry into a folder with different permissions. Two
+
+option fields are available: Keep previous permissions unchanged and Replace with rights of the
+
+target folder.
+
+Tree view 
+
+Show deleted entries until next logoff: To show documents with a deletion marker in ELO, enable
+
+this option. Documents with a deletion marker are shown with their short name in square brackets
+
+and grayed out in ELO. This option remains active until you log off.
+
+List of recently used entries 
+
+Maximum number of entries in the "Recently used" list: Use this spin box to define the maximum
+
+number of recently used documents that are shown. You will find the overview of recently used
+
+documents in the My ELO work area.
+
+Search 
+
+Maximum number of search results loaded: Using the spin box, set the maximum number of search
+
+results that are loaded. A lower value improves search times.
+
+Number of index columns for the metadata in the search results tables: Using the spin box, specify
+
+how many index columns to show in the metadata.
+
+Open the search options automatically for new searches: To show the search options by default in
+
+the Search work area, enable this option.
+
+Document size 
+
+Maximum document size of the preview in MB: Determine the maximum megabyte (MB) size a
+
+document may have to be displayed in the preview. If a document exceeds the defined size, a
+
+notification will be displayed instead of the preview.
+
+131 ELO Desktop Client
+
+
+
+Configuration – View (2) 
+
+The following settings are available in the lower View category.
+
+Preview configuration for various file types 
+
+In this area, you define which type of preview is used for which file extension. If no preview method
+
+is defined for a file extension, the browser preview is used.
+
+Filter: To sort, group, and filter the preview configuration, click Filter.
+
+Browse: The input field with the magnifying glass icon allows you to search the preview
+
+configuration. While entering a search term, the search-as-you-type function narrows down the
+
+results.
+
+Add: To assign a preview method to a new file type, click the plus icon.
+
+This list shows the existing file extension and preview method assignments.
+
+The following preview methods are available from the drop-down menu.
+
+E-mail preview: Viewer for e-mail files. The available buttons allow you to reply to or forward
+
+the e-mail. Your standard e-mail program opens. Metainformation such as the date, sender,
+
+subject, and attachments are shown under the buttons. If the e-mail is in HTML format, a
+
+browser is displayed. If the e-mail is in rich text format (RTF), a text preview is used.
+
+• 
+
+• 
+
+132 ELO Desktop Client
+
+
+
+Multimedia preview: Uses Windows Media Player for preview purposes. The following file
+
+types can be played: MP3, MP4, WMV, WMA, WAV, AVI, MPG, MPEG, MP2, MPA.
+
+Image preview: Viewer for image files. You can adjust the viewer using the viewer bar. If the
+
+document contains annotations, they are shown on an additional tab.
+
+Windows Explorer preview: Viewer that Windows Explorer also uses. In addition to the
+
+existing assignments, all file types can be linked with this preview method. This may require
+
+a separate program that provides the preview functionality.
+
+Text preview: A simple text preview is used as the method.
+
+Browser preview: The preview is shown in a web browser (Chromium). In addition to the
+
+existing assignments, the file types PDF, MP3, MP4, MPEG, PNG, JPEG, BMP, and GIF can also
+
+be linked with this preview method.
+
+Office Online preview: Web preview for Microsoft Office documents. This requires access to a
+
+Microsoft Office Online server.
+
+Confirm: Whenever the file type is displayed, you are prompted to confirm whether the file should
+
+be opened with the assigned preview type.
+
+X: Click X to remove an assignment.
+
+Task list display options (Desktop Client Plus only) 
+
+You can configure the settings for the Tasks work area here.
+
+Information
+
+This configuration option is only available to ELO Desktop Client Plus users.
+
+Maximum number of tasks in the list: Use this spin box to specify the maximum number of tasks
+
+that are displayed in the task list of the Tasks work area.
+
+Maximum number of days in the future: The tasks list in the Tasks area contains an overview of all
+
+tasks that are due. Use this spin box to specify in how many days a task must be due for it to be
+
+displayed in the task list. For example, if you enter the value 10, all tasks that are due in the next
+
+ten days will be displayed. Tasks that are only due in 20 days are not displayed.
+
+Refresh interval in minutes: Use this spin box to specify how often you want the task list to be
+
+refreshed. If the tasks list is not updated automatically, enter 0.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+133 ELO Desktop Client
+
+
+
+Configuration – Color scheme 
+
+You see which color scheme is currently selected under Color scheme.
+
+To select another color scheme, click your preferred color and then confirm with OK.
+
+Configuration – Views 
+
+In the Views category, you can create views for folders in the Repository work area.
+
+A folder view creates a tile that gives you direct access to the folder.
+
+134 ELO Desktop Client
+
+
+
+Method
+
+Click the green plus icon to create a new view.
+
+The Create view dialog box appears.
+
+Enter a name for the view.
+
+Select whether you want to display the view as a small or a large tile.
+
+Choose a color for the view.
+
+Select an icon.
+
+In the Folder area, select the folder from the tree that you want to create a view for. With 
+
+Recently used, you can narrow down the folders to your most recently used folders in ELO.
+
+Click the folder icon to create a new folder.
+
+Click OK.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+6. 
+
+7. 
+
+135 ELO Desktop Client
+
+
+
+Result
+
+The view you created appears in the Views category. You can delete the view by clicking the X icon
+
+or edit it by clicking the pencil icon.
+
+Configuration – Dialog boxes (1) 
+
+The following settings are available in the upper Dialog boxes category.
+
+Duplicate check 
+
+Behavior when filing a duplicate: Determine how the ELO Desktop Client should behave when filing
+
+a duplicate. Three radio buttons are available:
+
+• 
+
+136 ELO Desktop Client
+
+
+
+Confirm via dialog box: A dialog box opens. In this dialog box, you can choose how to
+
+proceed with the duplicate.
+
+Create reference: A reference to the existing document is created at the selected position.
+
+File again: A duplicate is filed to ELO.
+
+Drag-and-drop 
+
+Behavior when dragging and dropping within the 'Repository' work area: Determine how the ELO
+
+Desktop Client should behave when you drag-and-drop entries. Three radio buttons are available:
+
+Confirm via dialog box: The Entry moved to another position dialog box opens. In this dialog
+
+box, you can choose how to proceed with entries moved via drag-and-drop.
+
+Move: The selected entry is removed from its original position and inserted at the new
+
+location.
+
+Reference: The selected entry remains in its current location and is also displayed in the new
+
+location as a reference.
+
+Behavior when dragging a file to a document: Determine how the ELO Desktop Client should
+
+behave when you drag-and-drop a file from the Windows file system onto a document in ELO. Three
+
+radio buttons are available:
+
+Confirm via dialog box: The Drag-and-drop dialog box opens. In this dialog box, you can
+
+choose how to proceed with entries moved from the file system to ELO via drag-and-drop.
+
+File as a new version of the document: This creates a new version of the document you
+
+dropped the file on.
+
+File as a new document: The document is filed as a new document in the same folder.
+
+Version comment 
+
+Dialog box for entering a version comment: Determine whether the dialog box for entering a
+
+version comment should be shown. Three radio buttons are available:
+
+Always show, even when filing a new document: The dialog box for entering a version
+
+comment always opens, even when filing a new document.
+
+Only show when filing a new version: The dialog box is shown when filing a new version, but
+
+not when filing a new document.
+
+Never show: The dialog box for entering a version comment is never shown.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+137 ELO Desktop Client
+
+
+
+Configuration – Dialog boxes (2) 
+
+The following settings are available in the lower Dialog boxes category.
+
+Filing 
+
+Behavior when filing an entry from the "Desktop" work area: Determine how the ELO Desktop
+
+Client should behave when filing an entry from the Desktop work area.
+
+Confirm via dialog box: The File to repository dialog box opens. In this dialog box, you can
+
+choose how to proceed with entries filed from the Desktop work area.
+
+Move to ELO: The file is filed to ELO and deleted from the file system.
+
+Move to ELO and create an ELO link: The file is filed to ELO and replaced with an ELO link in
+
+the file system.
+
+Messages 
+
+Define the messages that will be displayed. To show a message, check the box next to the relevant
+
+option.
+
+• 
+
+• 
+
+• 
+
+• 
+
+138 ELO Desktop Client
+
+
+
+Display message if retention period was set: When a retention period is set, a message in
+
+the metadata indicates that the document can no longer be deleted before the set date.
+
+Display message if metadata does not contain a personal identifier: If no personal identifier
+
+is entered to the metadata, a message appears indicating that the fields Personal identifier
+
+and End of deletion period are empty.
+
+Display message when closing and there are unsaved changes: If you attempt to close the
+
+client and there are unsaved changes, a message is shown indicating that information may
+
+be lost in the process.
+
+Message when searching for multiple terms in different areas of iSearch: This message
+
+appears in the Search work area when performing a search for multiple terms in different
+
+areas. This message indicates that the search will only return entries in an area that contain
+
+all the terms you are looking up.
+
+Multiple entries as an ELO link 
+
+Behavior when creating a link when multiple entries are selected: Determine how the ELO Desktop
+
+Client should behave when you select multiple entries and then perform the Send as ELO Link
+
+function.
+
+Confirm via dialog box: The Create link dialog box opens. In this dialog box, you determine
+
+how the ELO Desktop Client should behave when multiple entries are selected.
+
+Create one ELO link per entry: Creates a separate ELO link for each of the selected entries.
+
+Create an ELO link for all entries: Links all entries within a single file. When the ELO link is
+
+opened, the entries are listed in a search view.
+
+Logon dialog box 
+
+Show dialog box for selecting functional roles during logon: If you check this box, a dialog box
+
+opens when you log on where you can enable your functional roles as needed.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+139 ELO Desktop Client
+
+
+
+Configuration – Metadata 
+
+The following settings are available in the Metadata category.
+
+General 
+
+Show "Metadata" dialog box when filing: The Metadata dialog box is shown when filing an entry.
+
+Link the content of the controls from Word to the metadata: The values of the controls from the
+
+Microsoft Word form fields are applied to the metadata when the document is filed to ELO.
+
+Default settings for metadata forms 
+
+Set the default metadata form for new documents and folders. Click the drop-down menu (arrow
+
+icon) and select a metadata form.
+
+Assign a metadata form to a file type 
+
+Specify whether certain file types should only be used with specific metadata forms. This is useful
+
+for filing unusual file formats, but can also save time for frequently recurring filing.
+
+File extensions: In this field, enter the appropriate file type, such as pdf or docx.
+
+Metadata form: Select a metadata form from the drop-down menu (arrow icon). To confirm your
+
+assignment, click OK.
+
+X: Click X to remove an assignment.
+
+New: Click New to define a new assignment. A new line appears.
+
+140 ELO Desktop Client
+
+
+
+Configuration – Check in 
+
+The following settings are available in the Check in category.
+
+Document date 
+
+Adjust document date (set to today): Enable this option to automatically use the current date as the
+
+date for check-in.
+
+Automatic check-in 
+
+Automatic check-in enabled: Enable this option to allow automatic check-in for different file
+
+formats.
+
+Multiple Office file formats and PDF are available. To add a file format, select the format on the left
+
+and click Add. The file format can be excluded from the list by clicking Remove.
+
+Check-in interval in minutes: Using the spin box, set the interval for automatic check-in.
+
+141 ELO Desktop Client
+
+
+
+Configuration – E-mail 
+
+The following settings are available in the E-mail category.
+
+Filing e-mails 
+
+Define the behavior when filing e-mails. Using the radio buttons, choose between the following
+
+options:
+
+Confirm via a dialog box: During filing, a selection dialog box appears every time.
+
+With attachments: E-mails and attachments are filed together.
+
+The e-mail and the attachments are filed separately to the same folder.
+
+Only the e-mail attachments are filed.
+
+File e-mails in EML format (convert MSG files)
+
+File encrypted e-mails without encryption
+
+Specify what should happen if decryption of encrypted e-mails fails during filing. Using the radio
+
+buttons, choose between the following options:
+
+Confirm via a dialog box: During filing, a selection dialog box appears every time.
+
+Do not file e-mail.
+
+File e-mail encrypted.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+142 ELO Desktop Client
+
+
+
+Prefix for labeling filed e-mails: To label filed e-mails, you can define a prefix here.
+
+Delete e-mail after filing: If you check this box, e-mails are deleted in Microsoft Outlook once they
+
+are filed to ELO.
+
+Attachments 
+
+Icon for e-mails with attachments: Select an icon for e-mails with attachments from the drop-down
+
+menu.
+
+You can optionally select the following options:
+
+Add [A] before the short name of attachments filed to ELO
+
+Add e-mail subject to short name for attachments in ELO
+
+Configuration – Microsoft OneNote 
+
+The following settings are available in the OneNote category.
+
+Metadata 
+
+Default form for OneNote items: Here, you can choose a metadata form from a list that is
+
+automatically selected when you file a OneNote item to ELO.
+
+Filing 
+
+Show "Metadata" dialog box when filing: The Metadata dialog box is shown when filing an entry.
+
+Dialog box for entering a version comment: Determine whether the dialog box for entering a
+
+version comment should be shown. Three radio buttons are available:
+
+• 
+
+• 
+
+• 
+
+143 ELO Desktop Client
+
+
+
+Always show, even when filing a new document: The dialog box for entering a version
+
+comment always opens, even when filing a new document.
+
+Only show when filing a new version: The dialog box is shown when filing a new version, but
+
+not when filing a new document.
+
+Never show: The dialog box for entering a version comment is never shown.
+
+Configuration – Administration (1) 
+
+The following settings are available in the upper Administration category.
+
+Profile management 
+
+The Profile management area lists all available profiles with the name and corresponding URL.
+
+To copy, delete, or edit an existing profile, select the profile.
+
+To create a new profile, click the green plus icon. The Create new profile dialog box opens. Enter the
+
+profile name and the corresponding ELO Indexserver URL. The system verifies whether the ELO
+
+Indexserver is available. If successful, Server available appears in green. To add the profile, click 
+
+OK.
+
+To insert a copied profile from the clipboard, click the insert icon. The name of the profile and the
+
+URL were copied with the following syntax: < profile name>;< logon type>;< URL>. The syntax
+
+distinguishes between two logon types. The U stands for logon with user name, while the S stands
+
+for SSO (Windows user account). If you only have the ELO Indexserver URL on your clipboard, the
+
+profile name is generated based on the URL.
+
+• 
+
+• 
+
+144 ELO Desktop Client
+
+
+
+To see what passwords have been saved for which repositories and users, click the key icon. The 
+
+Passwords dialog box opens. To remove saved passwords, click X and confirm with OK. To remove
+
+all passwords, click Remove all passwords and confirm with OK.
+
+Log on to the last repository automatically when starting the application: Enable this option to
+
+automatically log on to the most recent repository with the same user data when starting the
+
+application.
+
+Checkout directories 
+
+Files have to be taken from the ELO repository to edit them. During editing, they are checked out
+
+and saved as temporary files to a folder in the file system. In the list, you see all available
+
+checkout directories. Use the control to enable/disable each individual checkout directory.
+
+Clicking the folder icon allows you to view the content of the checkout directory on the file system.
+
+Clicking the green plus icon creates a new checkout directory on the file system.
+
+Please note
+
+The checkout directories are cleaned up automatically. All files that are not checked out by
+
+ELO Desktop Client are deleted.
+
+Configuration – Administration (2) 
+
+The following settings are available in the upper Administration category.
+
+145 ELO Desktop Client
+
+
+
+Log file overview 
+
+Log file path: The path to the log file in the file system. To change the path, click the folder icon. A
+
+dialog box opens in which you can choose a new directory for the log files.
+
+Log level: In the drop-down menu, define the log level for the log files. There are four possible
+
+levels which range from no log information at all up to detailed logging.
+
+Log file for the current day: Shows the log file of the current day in an overview. By clicking Filter,
+
+you can sort, group, and filter to narrow down the results. The search field next to the magnifying
+
+glass icon also allows you to narrow down the results with its search-as-you-type function.
+
+To view a line in more detail, select the entry and click the arrow at the end of the line. The origin
+
+and, optionally, the error message are shown here.
+
+There are three buttons below the log file:
+
+Refresh: Refreshes the overview.
+
+Open: In the directory, select the desired log file and confirm with Open. The file appears in
+
+the Log file area.
+
+Send: In the directory, select the desired log file and confirm with Open. An e-mail opens in
+
+your standard e-mail program with the log file attached.
+
+Help 
+
+Available in: User menu [your name] > Help
+
+This takes you to the in-program help for the ELO Desktop Client. If you need information about a
+
+specific dialog box, click the question mark next to the X button in the dialog box.
+
+About 
+
+Available in: User menu [your name] > About
+
+This is where you will find information about the version of your program. It can be useful to have
+
+the exact version when errors occur in your program.
+
+Enable roles 
+
+Available in: User menu [your name] > Enable roles
+
+If you have been assigned to one or more groups, this option allows you to specify whether you
+
+want to enable your role as part of this group.
+
+If you disable your functional roles, all access and user rights associated with the role cannot be
+
+used during the session. This makes it easier to navigate the program and allows you to focus on
+
+tasks beyond the scope of the role.
+
+• 
+
+• 
+
+• 
+
+146 ELO Desktop Client
+
+
+
+Log off 
+
+Available in: User menu [your name] > Log off
+
+This where you log off from the client.
+
+Close 
+
+Available in: User menu [your name] > Close
+
+Close the client with this function.
+
+147 ELO Desktop Client
+
+
+
+Favorites bar 
+
+The favorites bar is on the left edge of the ELO Desktop Client. This bar is only available in the 
+
+Repository, Search, In use, and Tasks (only ELO Desktop Client Plus) work areas.
+
+This bar contains all functions you have favorited. To perform a function, click the button in the
+
+favorites bar. Functions may be grayed out in the bar depending on your selection.
+
+You can customize the favorites bar for the different work areas.
+
+Manage favorites 
+
+With the Manage favorites button, you can tailor your favorites list to your needs. All functions of
+
+the area are listed here, sorted by function groups.
+
+148 ELO Desktop Client
+
+
+
+Add functions 
+
+Method
+
+Click the Manage favorites button.1. 
+
+149 ELO Desktop Client
+
+
+
+150 ELO Desktop Client
+
+
+
+A list of all functions opens, divided into the groups Document, New, View, Output, and 
+
+Organize.
+
+In the Search and Tasks work areas, the contextual group Search or Tasks is also available.
+
+Select a function from the list that you want to place in the favorites bar.
+
+Result
+
+The star is filled in and the function is added to the favorites bar with a matching icon.
+
+Remove functions 
+
+To remove functions from the favorites list, follow these steps:
+
+Method
+
+Click the Manage favorites button.
+
+A list of all functions opens, divided into the groups Document, New, View, Output, and 
+
+Organize.
+
+In the Search and Tasks work areas, the contextual group Search or Tasks is also available.
+
+Select the function from the list that you want to remove from the favorites bar.
+
+Result
+
+The yellow star is removed and the icon for the function disappears from your favorites list.
+
+Optional: If you open the list of functions using the Manage favorites button, the icons for the
+
+functions have a minus symbol. If you click the minus symbol, the function disappears from the
+
+functions bar.
+
+2. 
+
+1. 
+
+2. 
+
+151 ELO Desktop Client
+
+
+
+Clicking Manage favorites saves the changes.
+
+152 ELO Desktop Client
+
+
+
+'New' group 
+
+The following functions are available in the New group.
+
+Information
+
+Not every function in the New group can be used in every work area. In this case, the
+
+relevant function is grayed out.
+
+Start workflow (only ELO Desktop Client Plus) 
+
+Available in: Tasks work area
+
+Using workflows, you can assign other users or user groups tasks.
+
+An integrated escalation management function allows you to track whether the set deadlines are
+
+met once a workflow is started.
+
+You can learn how to start a workflow in the Start workflow section of the ELO Desktop Client Plus
+
+chapter.
+
+Reminder (only ELO Desktop Client Plus) 
+
+Available in: Tasks work area
+
+You can use reminders to remind yourself of entries that you want to edit at a later time.
+
+You can create reminders for folders and for documents. You can create a reminder for multiple
+
+entries within a folder at the same time.
+
+153 ELO Desktop Client
+
+
+
+You can learn how to create reminders in the Reminder section of the ELO Desktop Client Plus
+
+chapter.
+
+New folder 
+
+Available in: Repository work area
+
+The New folder function creates a new folder entry in ELO.
+
+Keyboard shortcut: INS key
+
+In the chapter Important actions in detail, refer to the section Create new folder for more
+
+information.
+
+Document from template 
+
+Available in: Repository work area
+
+The Document from template function creates a new document in ELO from a document template.
+
+154 ELO Desktop Client
+
+
+
+A window opens for selecting a document that will be used as the template for the new document.
+
+Choose a document from the folder defined for document templates in the configuration, then click 
+
+OK. The document is added to the selected folder and opened for editing.
+
+Before making a selection, you can open and view a document template by clicking the button
+
+below.
+
+Insert files/folders 
+
+Available in: Repository work area
+
+With the Insert files/folders function, you can file a document or folder from the file system to the
+
+selected folder in ELO.
+
+155 ELO Desktop Client
+
+
+
+In the chapter Important actions in detail, refer to the section Insert files/folders for more
+
+information.
+
+File as a Word document 
+
+Available in: Desktop work area
+
+With the File as a Word document function, you can convert a Microsoft OneNote item (section or
+
+page) that is already filed to ELO into a Word document and file it as a new document in ELO.
+
+Method
+
+Open both Microsoft OneNote and the Desktop work area at the same time.
+
+On the toolbar, click New > File as a Word document.
+
+1. 
+
+2. 
+
+156 ELO Desktop Client
+
+
+
+The Repository dialog box opens.
+
+Select the folder where you want to file the document and confirm with OK.
+
+The Metadata dialog box opens.
+
+Enter the metadata and click OK.
+
+Result
+
+The Microsoft OneNote item is filed to ELO as a Word document.
+
+File as PDF 
+
+Available in: Desktop work area
+
+With the File as PDF function, you can convert a Microsoft OneNote item (notebook, section, or
+
+page) that is already filed to ELO into a PDF document and file it as a new document in ELO.
+
+Method
+
+3. 
+
+4. 
+
+1. 
+
+157 ELO Desktop Client
+
+
+
+Open both Microsoft OneNote and the Desktop work area at the same time.
+
+On the toolbar, click New > File as PDF.
+
+The Repository dialog box opens.
+
+Select the folder where you want to file the document and confirm with OK.
+
+The Metadata dialog box opens.
+
+Enter the metadata and click OK.
+
+Result
+
+The Microsoft OneNote item is filed to ELO as a PDF document.
+
+Save in ELO 
+
+Available in: Search work area
+
+2. 
+
+3. 
+
+4. 
+
+158 ELO Desktop Client
+
+
+
+With the combined search in ELO and Microsoft Outlook entries that have not yet been filed to ELO
+
+are also shown in the results list in the Search work area.
+
+With the Save in ELO function, you can save these entries in your ELO repository.
+
+159 ELO Desktop Client
+
+
+
+'View' group 
+
+The following functions are available in the View group.
+
+Information
+
+Not every function in the View group can be used in every work area. In this case, the
+
+relevant function is grayed out.
+
+Preview 
+
+You can display the preview for an entry in a separate window. Select the desired entry in the tree
+
+view. The Preview function is available on the toolbar in the View group. Alternatively, you can
+
+open the preview by pressing the spacebar.
+
+Different functions are available in the preview depending on the file type.
+
+In the preview configuration, set the maximum document size for the preview and what preview
+
+methods should be used for which file types. Refer to the Configuration – View (1) section in the 
+
+User menu [your name] chapter for more information.
+
+Preview for a Microsoft Office Online document: In the following example, the Preview function is
+
+used to open a Microsoft Office document in a new window next to the sidebar.
+
+160 ELO Desktop Client
+
+
+
+The Microsoft Office document opens with the Windows Explorer preview method in the Content
+
+view, as configured.
+
+Two options are available in the preview header:
+
+Open in read-only mode: Clicking the eye icon opens the document in the associated
+
+Microsoft Office program.
+
+Preview configuration: Clicking the gear icon opens the Configuration dialog box. In the View
+
+area, you can set the preview configuration for various file types.
+
+Information
+
+If a link exists for an entry, this is indicated in the preview header.
+
+Posts related to an entry are shown on the Feed tab. In the feed, you can comment on posts,
+
+mention colleagues, link posts, and categorize topics using hashtags.
+
+Information
+
+The Feed chapter explains what options are available on this tab.
+
+Clicking the Metadata button switches to the preview.
+
+• 
+
+• 
+
+161 ELO Desktop Client
+
+
+
+The metadata is shown in the Metadata view. Depending on the width of the preview, you can
+
+either expand and collapse the Basic, Extra text, and Options areas or open them as a tab.
+
+If full text information is available for the entry, you can open it by clicking the Full text button.
+
+162 ELO Desktop Client
+
+
+
+Click Print to print the full text.
+
+Click the Save button to save the full text content as an HTML file.
+
+Enter a search term in the search field. Click Down to go to the next match in the full text. Clicking 
+
+Up highlights the previous match.
+
+Folder preview 
+
+In the tree view, select a folder and click Preview.
+
+The folder preview appears. You will see all child entries of the folder in a table view.
+
+By clicking Filter, you can sort, group, and filter to narrow down the list. The search field next to the
+
+magnifying glass icon also allows you to narrow down the results with its search-as-you-type
+
+function.
+
+Right-click the header of the table view to open the context menu.
+
+163 ELO Desktop Client
+
+
+
+Sort A–Z: Sort the selected column alphabetically in ascending order.
+
+Sort Z–A: Sort the selected column alphabetically in descending order.
+
+Group by this field: Creates groups depending on the selected column. If you select a group for the 
+
+Type field, for example, the individual file types are sorted in groups.
+
+Remove grouping: Removes the grouping.
+
+Hide: Hides the selected column.
+
+Column selection: To change the column selection, click Column selection.
+
+164 ELO Desktop Client
+
+
+
+The Change table dialog box opens.
+
+You can add or hide fields in the table view. To add a field, check the box or, alternatively, click 
+
+Show. To deselect a field, uncheck the box or, alternatively, click Hide.
+
+Information
+
+The Short name field is mandatory and cannot be hidden.
+
+Click Up and Down to change the order of the columns.
+
+You can set the width in pixels for each field. Using the spin box, enter a value in the Selected
+
+column width (in pixels) field.
+
+Refresh 
+
+The Refresh function refreshes your view. The data is read from the repository again.
+
+165 ELO Desktop Client
+
+
+
+Keyboard shortcut: F5 key
+
+Link 
+
+In the Link dialog box, you can link the selected entry with other entries or view and edit existing
+
+links.
+
+Method
+
+To link two entries, select the first document in the Repository work area, then select Link
+
+from the context menu.
+
+The Link dialog box opens.
+
+In the repository, select a second document and drag it to the Link window.
+
+1. 
+
+2. 
+
+166 ELO Desktop Client
+
+
+
+Result
+
+The document is shown in the list of links in the Link dialog box. You can add more links in this
+
+same way.
+
+Three links are shown in this view. If more than three links exist, you can access the additional list
+
+entries via the scrollbar.
+
+The following functions are available in the Links dialog box:
+
+Minimize: Clicking the Minimize button minimizes the dialog box to a link icon you can move in the
+
+sidebar. You can also create links by dragging elements to this icon. Click the icon to restore the
+
+original dialog box size.
+
+Maximize: Clicking Maximize enlarges the dialog box to the size of the entire sidebar. In this view,
+
+the list of links takes up quite a bit of space. This helps you get a better overview should more than
+
+three links exist.
+
+Go to: To go to the entry in the repository, select it in the list of links and click the button with the
+
+arrow icon or use the keyboard shortcut CTRL + G.
+
+Remove: To remove a link, select the entry in the list of links and click X (keyboard shortcut: DEL
+
+key). The links to the entries are removed.
+
+Create new entries as permanent links: Enable this option or use the keyboard shortcut CTRL + L to
+
+prevent links added from being removed.
+
+Please note
+
+Inseparable links cannot be deleted.
+
+If a link exists for an entry, this is indicated in the preview header.
+
+167 ELO Desktop Client
+
+
+
+New view 
+
+With the New view function, you can create a new folder view. The folder view is created as a new
+
+tile in the tile navigation.
+
+For more information on the New view function, refer to the Important actions in detail chapter.
+
+Go to 
+
+The Go to function opens the filing location of the selected entry. It is available in the In use, 
+
+Search, Desktop, and Tasks (only ELO Desktop Client Plus) work areas.
+
+Keyboard shortcut: CTRL + G
+
+168 ELO Desktop Client
+
+
+
+'Output' group 
+
+The following functions are available in the Output group.
+
+Information
+
+Not every function in the Output group can be used in every work area. In this case, the
+
+relevant function is grayed out.
+
+Save as 
+
+With the Save as function, you can save the selected document to your file system. A window for
+
+selecting the location in the file system opens.
+
+Keyboard shortcut: CTRL + S
+
+Send 
+
+With the Send function, you can send the selected document via e-mail. A new e-mail opens in
+
+your e-mail program with the document attached.
+
+Send as ELO link 
+
+The Send as ELO Link functions sends a selected entry as an ELO link. A new e-mail opens in your
+
+e-mail program with an ELO link attached. The link leads to the ELO repository. The recipient must
+
+have access to the ELO repository.
+
+169 ELO Desktop Client
+
+
+
+Print 
+
+The Print function prints the selected document. The Windows Print dialog box opens, where you
+
+can configure additional printer settings.
+
+Keyboard shortcut: CTRL + P
+
+170 ELO Desktop Client
+
+
+
+'Organize' group 
+
+The following functions are available in the Organize group.
+
+Information
+
+Not every function in the Organize group can be used in every work area. In this case, the
+
+relevant function is grayed out.
+
+Metadata 
+
+This function allows you to view the metadata for the entry.
+
+If you have permission, you can edit the metadata.
+
+Metadata is data about a folder or a document. It includes information on the entry itself, for
+
+example when it was filed, or its name in the Repository work area. It also includes the permissions
+
+structure for the entry, meaning which users have what access to the entry. The quality of a
+
+repository depends to a great extent on the quality of the metadata. Metadata allows you to
+
+organize documents in a standardized way and file them quickly to ELO. In addition, using
+
+metadata makes it easier to find documents.
+
+A new metadata model was introduced with version ELO 21 in addition to the previous metadata
+
+model. Both models are used in parallel. In the following, these metadata models are referred to as
+
+generation 1 (gen. 1) and generation 2 (gen. 2).
+
+In gen. 2, forms and metadata forms are shown differently in the Metadata dialog box. The
+
+metadata concept will remain the same.
+
+There are three ways to open the Metadata dialog box manually. Select an entry and
+
+• 
+
+171 ELO Desktop Client
+
+
+
+on the toolbar, click Organize > Metadata.
+
+right-click to open the context menu, then click Metadata.
+
+press the keyboard shortcut F4.
+
+To ensure the active application isn't covered up, the dialog box is shown simplified in the sidebar
+
+with all fields in list form.
+
+This section provides information about entering metadata. Click on one of the following links to go
+
+straight to a topic:
+
+Metadata forms
+
+Fields
+
+'Basic' tab
+
+'Extra text' tab
+
+'Options' tab
+
+Metadata forms 
+
+You enter metadata into metadata forms. Metadata forms contain templates that are specifically
+
+created for this document type. All documents of the same type receive the same permission
+
+settings and are filed to ELO based on a fixed pattern.
+
+The view and functions in the metadata forms depend on the metadata model.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+172 ELO Desktop Client
+
+
+
+173 ELO Desktop Client
+
+
+
+The Available forms area lists all the available metadata forms. The list contains either metadata
+
+forms for folders or for documents, depending on the type of entry selected in ELO.
+
+Select a metadata form from the drop-down menu.
+
+Please note
+
+When you change the metadata form, metadata may be lost or incorrectly assigned.
+
+Fields 
+
+The metadata for a document is entered into fields.
+
+The type of field determines the data you need to enter and what you need to consider when doing
+
+so. There are different types of fields, which can be configured differently from metadata form to
+
+metadata form.
+
+Text field: You can enter letters, numbers, and special characters in a text field.
+
+Mandatory field: Fields can be configured as mandatory to complete the metadata entry. A red
+
+asterisk or a red marking indicates that a field is mandatory. If there are any conflicts, a warning
+
+will appear below the field.
+
+Icons 
+
+If a field contains an icon, this means that ELO helps you to enter content in the field.
+
+The following tools are available:
+
+Keyword list
+
+Drop-down menu
+
+Calendar
+
+Time
+
+Relation
+
+Keyword lists 
+
+Keyword lists are used to standardize entries and make it easier to enter metadata.
+
+174 ELO Desktop Client
+
+
+
+There are two types of fields with keyword lists:
+
+You have to select an entry from the keyword list.
+
+You can select an entry from the keyword list or you can type in your own entry.
+
+If you click a field and a keyword list appears, you cannot make entries.
+
+To open the keyword list, click the keyword list icon. Navigate the list using the mouse or arrow
+
+keys.
+
+Relations 
+
+Relation type fields are used to link a field with the metadata of another entry.
+
+Clicking the chain icon opens a list of entries. Select the entry you want to link. Navigate the list
+
+using the mouse or arrow keys.
+
+Clicking the arrow next to the chain icon takes you straight from the metadata of the entry to the
+
+metadata of the linked entry.
+
+Tabs 
+
+The dialog box for entering metadata is divided into tabs. All metadata forms contain the following
+
+tabs:
+
+Form (in gen. 1 metadata forms, this tab is called Basic)
+
+Extra text (only in gen. 1 metadata forms)
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+175 ELO Desktop Client
+
+
+
+Options
+
+'Basic' tab 
+
+Information
+
+In gen. 2 metadata forms, this tab is called Form.
+
+The Basic tab contains at least the following five default fields:
+
+Short name: You can change the display name of the entry in this field.
+
+Document date (gen. 2)/Date (gen. 1): The date can be freely assigned and changed via the
+
+calendar icon. This field automatically contains the date of the last change for new entries and for
+
+changes.
+
+Version (gen. 2)/Current version (gen. 1): Shows the current version.
+
+Filing date: The filing date of the entry or creation date of the folder. The date is automatically set
+
+and cannot be changed.
+
+Editor: The name of the user who last modified the entry. This field cannot be changed.
+
+Additional fields appear depending on the settings in the metadata form.
+
+'Extra text' tab 
+
+Information
+
+This tab only appears in gen. 1 metadata forms.
+
+In this text field, you can enter information that is not covered by the other fields, for example a
+
+more exact description or a comment. The field can also be used for script settings.
+
+'Options' tab 
+
+Personal identifier: If the entry relates to a person, enter information that enables you to identify
+
+the relevant person in this field.
+
+End of deletion period: In the "End of deletion period" field, you specify the date on which the entry
+
+must be deleted at the latest. Select the desired date by clicking the calendar icon.
+
+Please note
+
+If you do not complete the Personal identifier and End of deletion period fields, a dialog box
+
+will appear indicating that no personal identifier has been specified.
+
+176 ELO Desktop Client
+
+
+
+End of retention period: In the "End of retention period" field, you specify a retention period for the
+
+entry. Select the desired date by clicking the calendar icon.
+
+Please note
+
+The retention period must end before the deletion period.
+
+Entry type: The entry type identified by the client is displayed here. If necessary, select another
+
+entry type from the drop-down menu. This setting determines the icon that is displayed in the list
+
+view in ELO.
+
+Font color: Select a font color from the drop-down menu, e.g. to highlight the entry in your filing
+
+structure. The system color is set by default.
+
+Document status: Select the document status from the drop-down menu.
+
+Version control enabled: When the document is changed, the previous versions are saved.
+
+The versions of a document can be restored.
+
+Version control disabled: Only one version of the document is saved. A new version replaces
+
+the previous version. The previous version is deleted and is no longer available.
+
+Important
+
+If you select this option, the previous version is overwritten each time you save. The 
+
+Document > Load new version function overwrites the current version, and does not
+
+create a new one. For this reason, we do not recommend using this option.
+
+Non-modifiable: Neither the document nor the associated metadata can be edited.
+
+Important
+
+The status Non-modifiable cannot be reversed.
+
+Encryption: Encrypt documents to restrict access to them. This option specifies which encryption
+
+key that controls document encryption should be used. Users must have the password for the
+
+encryption key in order to view a document. This field is completed automatically depending on the
+
+selected metadata form and cannot be changed.
+
+Add to full text database: Enable this option to add the document to the full text database. When
+
+this option is enabled, documents are processed for the full text database and can be then found
+
+using the full text search. This requires the document to contain text information.
+
+Object ID and GUID: This option shows the internal ELO entry number. This entry cannot be
+
+changed. The entry ID is required when testing the checksum.
+
+Filed by: The user who filed or entered the metadata for the document is entered here
+
+automatically. This field cannot be changed.
+
+• 
+
+• 
+
+• 
+
+177 ELO Desktop Client
+
+
+
+Permissions 
+
+The Permissions dialog box lists the users and groups that have access rights to the selected entry.
+
+Users with the corresponding rights are able to change the settings.
+
+Add user/group: Add a permission for a user or group from the drop-down menu.
+
+178 ELO Desktop Client
+
+
+
+The permissions settings for the selected user or group appear and can be enabled or disabled. Edit
+
+existing settings for users or groups by clicking the pencil icon (keyboard shortcut: ALT + 2).
+
+The following rights are available:
+
+View (R): Users with View permissions have read access to the selected entry. These users
+
+can view the content of the entry. You can add or remove the R right either by clicking the
+
+check box or pressing the R key on the keyboard.
+
+Change metadata (W): Users with Change metadata permissions can edit the metadata for
+
+the selected entry. You can add or remove the W right either by clicking the check box or
+
+pressing the W key on the keyboard.
+
+Delete (D): Users with Delete permissions can delete the selected entry. You can add or
+
+remove the D right either by clicking the check box or pressing the D key on the keyboard.
+
+Edit (E): Users with Edit permissions can edit the selected entry. You can add or remove the E
+
+right either by clicking the check box or pressing the E key on the keyboard.
+
+Edit lists (L): This permission only applies to folders. Users with the respective permission
+
+can change the content of the folder, e.g. create documents in the folder or move documents
+
+from it. You can add or remove the L right either by clicking the check box or pressing the L
+
+key on the keyboard.
+
+Set permissions (P): A user with the right to Set permissions for an entry in the repository can
+
+change the permissions that other users have to this entry. You can add or remove the P right
+
+either by clicking the check box or pressing the P key on the keyboard.
+
+X: Click X to remove an existing permission (keyboard shortcut: DEL key).
+
+AND group: To create a new group from the overlapping groups, select at least two groups and click
+
+AND group.
+
+Personal Click Personal to assign yourself sole access to the selected entry. All other permissions
+
+will be revoked.
+
+Show group members: To show all members of a group, click the group icon (keyboard shortcut: ALT
+
++ 1).
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+179 ELO Desktop Client
+
+
+
+Report for entry 
+
+With the Report for entry function, you can create a report for the selected entry.
+
+In the Report for entry dialog box, you can choose from the following options to be included when
+
+creating the report.
+
+User: Select one or more users and/or groups from the drop-down menu. Users and groups that are
+
+not selected are not included in the report.
+
+Date: Narrow down the report period by clicking the calendar icon.
+
+Number: Configure the number of entries using the spin box. Only this number is included in the
+
+report (most current).
+
+Actions: Check the actions you want to be included in the report. You can search for a specific
+
+action using the search field.
+
+Click OK to create the report.
+
+180 ELO Desktop Client
+
+
+
+The report for the entry appears in the list view.
+
+You can change the report options by clicking the tool icon. The arrow icon saves the report as a
+
+CSV file. A dialog box for selecting the target path on the file system opens.
+
+You can view the report either in list or table format. Select the view by clicking the corresponding
+
+button. By clicking Filter, you can sort, group, and filter to narrow down the results. The search field
+
+next to the magnifying glass icon also allows you to narrow down the results with its search-as-
+
+you-type function.
+
+Synchronize Microsoft OneNote item 
+
+With the Synchronize OneNote item function, you can synchronize a Microsoft OneNote notebook,
+
+individual sections, or pages saved ini ELO with the changes you've made in Microsoft OneNote.
+
+Refer to the File Microsoft OneNote items to ELO section of the Important actions in detail chapter
+
+to learn how to file Microsoft OneNote items to ELO with the ELO Desktop Client.
+
+181 ELO Desktop Client
+
+
+
+Synchronize section 
+
+In this example, a section "EXTEN orders" is inserted in the "EXTEN notes" notebook containing the
+
+section "EXTEN invoices" and will be synchronized with the items that have already been filed to
+
+ELO.
+
+Method
+
+Open Microsoft OneNote with the changed section and the Desktop work area at the same
+
+time.
+
+In the Desktop work area, navigate to the Section tab.
+
+The section open in Microsoft OneNote is shown in the Desktop work area with a note
+
+indicating that it is in ELO.
+
+On the toolbar, click Organize > Synchronize OneNote item.
+
+Alternative: Click the corresponding icon in the favorites bar.
+
+1. 
+
+2. 
+
+3. 
+
+182 ELO Desktop Client
+
+
+
+The Metadata dialog box opens.
+
+183 ELO Desktop Client
+
+
+
+Complete the Metadata dialog box with the necessary information.
+
+You can select a metadata form in advance via the configuration. The preferred form is then
+
+completed automatically when filing Microsoft OneNote items. Refer to the Configuration –
+
+Microsoft OneNote section in the User menu [your name] chapter for more information.
+
+Click OK to close the dialog box.
+
+If you've edited or created multiple sections and pages, a Metadata dialog box opens for
+
+each section and page. With pages, the Version comment dialog box also appears.
+
+Information
+
+4. 
+
+5. 
+
+184 ELO Desktop Client
+
+
+
+In the Dialog boxes area of the configuration, you can stop the dialog box from being
+
+shown.
+
+The synchronized items are also listed for larger notebooks or in case of changes.
+
+185 ELO Desktop Client
+
+
+
+Close the list by clicking Close
+
+Result
+
+6. 
+
+186 ELO Desktop Client
+
+
+
+Synchronization of the Microsoft OneNote items is complete.
+
+Please note
+
+Moving pages in Microsoft OneNote results in them being deleted and re-filed to ELO. The
+
+feed and other data are then lost.
+
+So, first move the page in ELO and then synchronize the Microsoft OneNote item.
+
+Conflicts 
+
+If you move items in Microsoft OneNote, conflicts may occur during synchronization with ELO.
+
+The items causing the conflict are shown in the dialog box. Check the relevant box to indicate
+
+which item you want to keep – the version in Microsoft OneNote or the version in ELO.
+
+187 ELO Desktop Client
+
+
+
+Additional functions are available for conflicting items. You can access the following functions via
+
+the Additional functions (three dots) button:
+
+Open the metadata of the selected entry: A dialog box opens in which you can view and edit
+
+the fields in the metadata form.
+
+Open in read-only mode: Open the selected document in an external program for viewing.
+
+Then, click Synchronize. Synchronization is then performed as described above.
+
+Reference 
+
+You can create a reference for entries (folders or documents) that you need at multiple positions in
+
+the repository.
+
+Unlike with moving, the entry remains at its original position. A reference is also created.
+
+If you want to delete a document that has been referenced, ELO will notify you of this reference.
+
+The following options are available for referencing entries:
+
+Reference function
+
+• 
+
+• 
+
+• 
+
+• 
+
+188 ELO Desktop Client
+
+
+
+Drag-and-drop
+
+'Reference' function 
+
+Method
+
+Select the entry you want to reference.
+
+On the toolbar, click Organize > Reference.
+
+Keyboard shortcut: CTRL + R
+
+The entry is copied to the clipboard.
+
+To select a target folder, click the corresponding folder in the tree structure.
+
+If you selected the wrong folder, you can correct this by clicking the right folder. The folder
+
+selection is changed.
+
+With the Insert function, you insert the reference in the target folder.
+
+Drag-and-drop 
+
+Method
+
+Click the entry you want to reference and drag it to the target folder holding down the mouse
+
+button.
+
+Keyboard shortcut: Hold down the ALT key and release the mouse button on the item.
+
+Press the ALT key to reference the entry.
+
+Copy 
+
+You can copy entries (folders or documents) that you need at multiple positions in the repository.
+
+Unlike with referencing, the two entries are not linked after copying. They can be edited separately
+
+from one another.
+
+Method
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+1. 
+
+2. 
+
+1. 
+
+189 ELO Desktop Client
+
+
+
+Select the entry you want to copy.
+
+On the toolbar, click Organize > Copy. The entry is copied to the clipboard.
+
+Keyboard shortcut: CTRL + C
+
+To select a target folder, click the corresponding folder in the tree structure.
+
+If you selected the wrong folder, you can correct this by clicking the right folder. The folder
+
+selection is changed.
+
+With the Insert function (keyboard shortcut: CTRL + V), you insert the copied entry in the
+
+target folder.
+
+Cut 
+
+You can cut entries (folders or documents) that you need at multiple positions in the repository.
+
+Unlike with copying, with the cut action, the entry is removed from the location where you cut it
+
+from.
+
+Method
+
+Select the entry you want to cut.
+
+On the toolbar, click Organize > Cut.
+
+Keyboard shortcut: CTRL + X
+
+To select a target folder, click the corresponding folder in the tree structure.
+
+If you selected the wrong folder, you can correct this by clicking the right folder. The folder
+
+selection is changed.
+
+With the Insert function (keyboard shortcut: CTRL + V), you insert the cut entry in the target
+
+folder.
+
+Insert 
+
+With the Insert function, you can insert a copied entry at the selected location in ELO.
+
+Method
+
+Mark the position in ELO where you want to insert the copy.
+
+On the toolbar, click Organize > Insert.
+
+Keyboard shortcut: CTRL + V
+
+2. 
+
+3. 
+
+4. 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+1. 
+
+2. 
+
+190 ELO Desktop Client
+
+
+
+The Insert copy of a document dialog box appears.
+
+Optional: Change the short name as needed.
+
+The selected folder where the copy is filed is shown in the Target folder field.
+
+Under Options, check the box if you want to keep the user in the "Filed by" and "Editor"
+
+fields.
+
+Under Permissions, use the option fields to determine whether the permissions should be
+
+replaced with those of the target folder or whether the previous permissions should remain in
+
+place.
+
+Click OK.
+
+Result
+
+The copy is inserted at the desired location.
+
+Information
+
+Determine how the ELO Desktop Client should behave when copying an entry into a folder
+
+with different permissions in the configuration.
+
+Delete 
+
+The Delete function (keyboard shortcut: DEL key) deletes the selected entry. A deletion marker is
+
+set in ELO and the entry is no longer displayed.
+
+3. 
+
+4. 
+
+5. 
+
+191 ELO Desktop Client
+
+
+
+In the View area of the configuration, you can set whether all deleted entries are shown in the tree
+
+until you log off. Documents with a deletion marker are indicated by a recycle bin icon and are
+
+grayed out in ELO. Refer to the Configuration section in the User menu [your name] chapter for
+
+more information.
+
+Restore 
+
+With this function, you can restore entries with a deletion marker.
+
+To make deleted entries visible, check the Show deleted entries until next logoff box in the
+
+configuration (View area). Entries with a deletion marker are indicated by a recycle bin icon and are
+
+grayed out in ELO. Clicking Restore restores the selected entry and all child entries. This option is
+
+only possible if the entry has not been deleted permanently. Refer to the Configuration section in
+
+the User menu [your name] chapter for more information.
+
+Remove lock 
+
+With the Remove lock function, you can unlock the selected entries.
+
+Information
+
+You can only remove your own locks, and not those of other users.
+
+Assign control 
+
+Available in: Desktop work area
+
+The Assign control function allows you to assign the selected control from a Microsoft Word form
+
+field to a field in the ELO metadata. The Assign field dialog box opens. The content control
+
+properties are then transferred to the field on filing.
+
+For more information on the Assign control function, refer to the Important actions in detail chapter.
+
+Overview of controls 
+
+Available in: Desktop work area
+
+The Overview of controls shows which metadata form is assigned to the document and which
+
+controls have been assigned to fields.
+
+192 ELO Desktop Client
+
+
+
+Select in overview: The active control in Microsoft Word is brought into focus in the overview.
+
+Assign field: Assign the active control in Microsoft Word to a field. The Assign field dialog box
+
+opens.
+
+Refresh: The controls in Microsoft Word are reloaded.
+
+You can view the overview either in list or table format. By clicking Filter, you can sort, group, and
+
+filter to narrow down the list. The search field next to the magnifying glass icon also allows you to
+
+narrow down the results with its search-as-you-type function.
+
+You can show the control assigned to each list entry by clicking the arrow button.
+
+You can change the existing assignment by clicking the chain icon. The Assign field dialog box
+
+opens.
+
+An error message is displayed in the following cases:
+
+No assignment available
+
+Field was assigned multiple times
+
+No corresponding field in the metadata form
+
+• 
+
+• 
+
+• 
+
+193 ELO Desktop Client
+
+
+
+'Document' group 
+
+The following functions are available in the Document group.
+
+Information
+
+Not every function in the Document group can be used in every work area. In this case, the
+
+relevant function is grayed out.
+
+Open in read-only mode 
+
+The Open in read-only mode function opens a selected document in an external program in read-
+
+only mode.
+
+Keyboard shortcut: CTRL + O
+
+Check out to OneDrive 
+
+Use this function to check out a Microsoft Office document in ELO to Microsoft OneDrive for editing.
+
+The document is stored in your OneDrive folder until you check it back into ELO.
+
+This function is only available if you have a Microsoft school or work account with Microsoft
+
+OneDrive for Business that has been activated for ELO by an administrator.
+
+Please note
+
+You can only use this function to edit documents with standard file formats such as DOCX.
+
+The document size is limited to 4 MB.
+
+For documents with older file formats like DOC, use the Check out and edit function.
+
+194 ELO Desktop Client
+
+
+
+Alternative
+
+Check out and edit: The Check out and edit function opens a selected document for editing in an
+
+external program.
+
+Method
+
+Select the document you want to edit.
+
+On the toolbar, click Document > Check out to OneDrive.
+
+Result
+
+The Microsoft Office document is opened for editing in a new browser tab.
+
+While you are editing the document, it has the status Checked out for other users.
+
+Changes to the document are automatically saved in Microsoft OneDrive.
+
+For explanations of the document synchronization status icons, see the Microsoft documentation 
+
+What do the OneDrive icons mean?
+
+Other options:
+
+Edit in the desktop app: You can open and edit the document in the desktop app.
+
+Edit collaboratively: You can invite other people to edit the document collaboratively. These
+
+people do not need an ELO account for this, but they must have a Microsoft account. For more
+
+information, refer to the Microsoft documentation Share OneDrive files and folders.
+
+Please note
+
+You cannot check the document back into ELO until all users who are editing the document
+
+have closed it.
+
+Outlook
+
+To save a new document version in ELO, close the document and select Document > Check in in
+
+the ELO Desktop Client toolbar.
+
+If you want to continue editing the document at some point without checking it in, you can always
+
+open it from the following folder: OneDrive - <your company name> > Apps > <name of target
+
+folder>.
+
+Please note
+
+You may not be able to check a document in if you are editing it in the Firefox browser and
+
+use the uBlock Origin ad blocker extension. In this case, disable the extension or switch it
+
+off for the relevant page.
+
+1. 
+
+2. 
+
+• 
+
+• 
+
+195 ELO Desktop Client
+
+https://support.microsoft.com/en-us/office/what-do-the-onedrive-icons-mean-11143026-8000-44f8-aaa9-67c985aa49b3
+https://support.microsoft.com/en-us/office/what-do-the-onedrive-icons-mean-11143026-8000-44f8-aaa9-67c985aa49b3
+https://support.microsoft.com/en-us/office/share-onedrive-files-and-folders-9fcc2f7d-de0c-4cec-93b0-a82024800c07
+https://support.microsoft.com/en-us/office/share-onedrive-files-and-folders-9fcc2f7d-de0c-4cec-93b0-a82024800c07
+
+
+Check out and edit 
+
+With the Check out and edit function (keyboard shortcut: ALT + O), you can open a document for
+
+editing in an external program. The document is transferred to the In use work area and cannot be
+
+edited by other users. In ELO, the checked out document is marked with a yellow arrow.
+
+In the chapter Important actions in detail, refer to the section Check out and edit document for
+
+more information.
+
+Edit document 
+
+With the Edit document function (keyboard shortcut: CTRL + E), you can edit the selected, checked
+
+out document. This function is required when you want to edit a checked out document but the
+
+associated editing program is not open. Save the changes as usual in your editing program.
+
+Check in 
+
+To transfer the changed document to ELO, select it in the list of documents checked out for editing,
+
+then click Document > Check in (keyboard shortcut: ALT+ I) on the toolbar.
+
+If you did not make any changes to the document after checking it out, you have two options:
+
+Cancel editing: The document lock is removed. The original version of the document remains
+
+in ELO.
+
+File as new version anyway: A new but unchanged version of the document will be filed.
+
+In the chapter Important actions in detail, refer to the section Check in document for more
+
+information.
+
+Discard document changes 
+
+The Discard document changes function discards all changes to the selected, checked out
+
+document. The original document remains unchanged and can once again be edited by other users.
+
+Document versions 
+
+You can also view an overview of all versions of the selected document in the Document versions
+
+dialog box. You can view, save, and delete old versions.
+
+• 
+
+• 
+
+196 ELO Desktop Client
+
+
+
+The buttons below the display name provide various options:
+
+Open in read-only mode (eye icon): The selected version is opened in an external default
+
+application in read-only mode.
+
+Save as (floppy disk icon): The selected version is saved to the file system. Select the
+
+desired path in the dialog box.
+
+Set as working version (pencil icon): This option sets the selected version as the new
+
+working version. The newly selected version is now shown in the Repository work area.
+
+Delete (X icon): The selected version is assigned a deletion marker.
+
+Restore (X icon with green arrow): The version with a deletion marker is restored.
+
+There are also buttons that allow you to manage the list of document versions.
+
+You can view the document versions in a table or list form. Select the view by clicking the
+
+corresponding button. By clicking Filter, you can sort, group, and filter to narrow down the results.
+
+The search field next to the magnifying glass icon also allows you to narrow down the results with
+
+its search-as-you-type function.
+
+197 ELO Desktop Client
+
+
+
+Load new version 
+
+The Load new version function files a document from your file system as a new version of the
+
+selected document in ELO.
+
+Alternative
+
+Drag-and-drop
+
+Method
+
+In ELO, select the document you want to upload a new version of.
+
+On the toolbar, click Document > Load new version.
+
+A window for selecting the file from the file system opens.
+
+• 
+
+1. 
+
+2. 
+
+198 ELO Desktop Client
+
+
+
+Select the file and click Open.
+
+The 'Version comment' dialog box appears.
+
+3. 
+
+199 ELO Desktop Client
+
+
+
+Information
+
+In the Dialog boxes area of the configuration, you can stop the dialog box from being
+
+shown.
+
+Using this option on version-controlled documents creates a new entry in the version history
+
+and makes this new version the current working version. For documents that are not version
+
+controlled, the previous version is overwritten.
+
+Click OK to close the dialog box.
+
+Result
+
+The version you filed is the new working version.
+
+Outlook
+
+Uploading an identical version with this function opens a dialog box asking what you want to do
+
+with the file.
+
+You can cancel uploading the new version or file it as a new version anyway.
+
+4. 
+
+200 ELO Desktop Client
+
+
+
+'Search' group 
+
+The following functions are available in the Search group.
+
+Information
+
+The Search group is only active in the Search work area.
+
+Set as default 
+
+Use the Set as default function to save your current search settings as the default. The default is
+
+restored when you reset the search.
+
+Add search favorite 
+
+The Add search favorite function saves the current search settings as a favorite. The search term,
+
+any filters, and the selected areas are saved.
+
+201 ELO Desktop Client
+
+
+
+Method
+
+Set the desired search options.
+
+Click Add search favorite.
+
+The Add favorite dialog box appears.
+
+Change the name for the search favorite if necessary.
+
+Click OK.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+202 ELO Desktop Client
+
+
+
+Result
+
+The search favorite is saved.
+
+The new search favorite appears in the toolbar in the Search group and can optionally be added to
+
+the favorites bar by clicking the star icon.
+
+Manage search favorites 
+
+With the Manage search favorites function, you can sort, rename, and delete your search favorites.
+
+203 ELO Desktop Client
+
+
+
+Move the search favorites up or down using the arrow icons.
+
+To rename a search favorite, click the pencil icon.
+
+To remove a search favorite, click the delete icon.
+
+Click OK to save your changes.
+
+204 ELO Desktop Client
+
+
+
+'Tasks' group (only ELO Desktop Client Plus) 
+
+Information
+
+You can only access the Tasks group with ELO Desktop Client Plus.
+
+The following functions are available in this group.
+
+Information
+
+The Tasks group is only active in the Tasks work area.
+
+Forward workflow 
+
+When you receive a workflow task, it will appear in your Tasks work area.
+
+With the Forward workflow function (keyboard shortcut: ENTER key), you forward the selected
+
+workflow to the next user. This ends your own workflow task and sends it to the next user.
+
+You will find more information in the section Process workflow in the chapter ELO Desktop Client
+
+Plus.
+
+Accept workflow 
+
+With the Accept workflow function, you accept a workflow node that was assigned to a group. The
+
+workflow is no longer displayed in the Tasks work areas of the other group members. This prevents
+
+the workflow from being processed by multiple users at once.
+
+Use the Return workflow function to undo this action.
+
+You will find more information in the section Process workflow in the chapter ELO Desktop Client
+
+Plus.
+
+205 ELO Desktop Client
+
+
+
+Return workflow 
+
+With the Return workflow function, you return a workflow to the group that was originally assigned
+
+the step.
+
+You will find more information in the section Process workflow in the chapter ELO Desktop Client
+
+Plus.
+
+Delegate workflow 
+
+With the Delegate workflow function, you delegate your workflow step to other users or groups.
+
+You will find more information in the section Process workflow in the chapter ELO Desktop Client
+
+Plus.
+
+Edit reminder 
+
+Use the Edit reminder function to edit an existing reminder after it has been created. You can view
+
+and edit the current settings.
+
+You will find more information in the section Process workflow in the chapter ELO Desktop Client
+
+Plus.
+
+Refresh 
+
+With the Refresh button (keyboard shortcut: F5 key), changes recently made by other users are
+
+immediately applied.
+
+This means that tasks can disappear from the task list in your Tasks work area if they have been
+
+accepted by other users in the meantime.
+
+New tasks are denoted with a green dot.
+
+206 ELO Desktop Client
+
+
+
+ELO Desktop Client Plus 
+
+This chapter is aimed at ELO Desktop Client Plus users. ELO Desktop Client Plus users require an
+
+appropriate license.
+
+This enhanced version contains all functions of the ELO Desktop Client. In addition to the default
+
+and lean views, a full-screen view is also available.
+
+The ELO Desktop Client Plus also includes the Tasks work area. The Tasks work area contains an
+
+overview of your workflows and reminders. The functions of the Tasks group on the toolbar are
+
+used for editing workflows and reminders. You can edit and manage existing workflows in this area.
+
+Full screen 
+
+You can open the ELO Desktop Client Plus in full-screen view by clicking the button at the right of
+
+the header.
+
+The full-screen view also provides you with a preview area for folders and documents integrated
+
+into the client. Otherwise, the work areas in the ELO Desktop Client Plus do not differ from those in
+
+the standard client.
+
+207 ELO Desktop Client
+
+
+
+The home screen of your ELO Desktop Client Plus interface connects the tile navigation with the My
+
+ELO work area.
+
+'Tasks' work area 
+
+In the Tasks work area, you will find a list of your tasks.
+
+You can open the Tasks work area from the work area toolbar or with the keyboard shortcut CTRL +
+
+4.
+
+To learn how to edit tasks, refer to the Edit workflow section.
+
+208 ELO Desktop Client
+
+
+
+List of tasks 
+
+In this list, you will find tasks that are assigned to you or a group you belong to. In addition to
+
+workflows, reminders and monitoring tasks are shown here. The icons on the right indicate the
+
+priority, type of document, and whether the workflow has been escalated.
+
+The following types of tasks are available; you can differentiate between them based on their icon.
+
+Workflows Workflow icon
+
+Reminders Calendar icon
+
+209 ELO Desktop Client
+
+
+
+Monitoring entries Camera icon
+
+The tasks are sorted according to their priority: A (high), B (medium), and C (low). Overdue tasks
+
+are denoted with a red icon with a white exclamation mark. New entries are shown with a green
+
+dot.
+
+The Maximum number of days in the future setting in the configuration enables you to specify how
+
+many days in advance tasks should be shown in the task list.
+
+If you need more information on the individual entries, switch to the table view (table icon).
+
+For a better overview, you can sort the tasks according to your requirements. Right-click the table
+
+header to do so.
+
+210 ELO Desktop Client
+
+
+
+Click an entry to view its contents in the viewer pane.
+
+If the workflows contain forms, open them by clicking the Form button. There, you can process and
+
+forward the workflow.
+
+Tasks disappear from the tasks area in the following ways:
+
+Workflows: Actively: You forward the workflow using the form or the function (Tasks group >
+
+Forward workflow), delegate it, or hand it off. Passively: A group workflow is accepted by
+
+another member of the group.
+
+Reminders and monitoring: You delete the entry (Organize > Delete).
+
+Start workflow 
+
+Using workflows, you can assign other users or user groups tasks.
+
+An integrated escalation management function allows you to track whether the set deadlines are
+
+met once a workflow is started.
+
+The Start workflow function gives you access to workflows with different levels of complexity
+
+designed for specific processes within your company.
+
+Method
+
+Select the document you want to start a workflow on.
+
+• 
+
+• 
+
+1. 
+
+211 ELO Desktop Client
+
+
+
+Information
+
+You can also start workflows on folders.
+
+On the toolbar, go to the New group and select the Start workflow function.
+
+The Start workflow dialog box appears.
+
+Templates: Select an appropriate workflow template here. You can search for the right
+
+template in the search field.
+
+Workflow name: The name of the template is automatically entered as the workflow name.
+
+You can change this name as needed.
+
+Select an appropriate template and confirm with OK.
+
+Result
+
+The workflow starts.
+
+2. 
+
+3. 
+
+212 ELO Desktop Client
+
+
+
+Outlook
+
+Once you have started a workflow, it will appear in My ELO under My recently started workflows.
+
+If one of your workflows was escalated, you will see the Escalated workflows area.
+
+Edit workflow 
+
+If you were selected as the editor in a workflow, the workflow appears in your Tasks work area.
+
+You can receive workflows as a user, as a group member, or as a substitute.
+
+You will recognize a workflow based on the workflow icon.
+
+A new workflow is marked with a green dot and bolded font.
+
+When you receive a workflow, you have the following options:
+
+Edit workflow with a form
+
+Forward workflow function
+
+Accept workflow function
+
+Return workflow function
+
+Delegate workflow function
+
+Edit workflow with a form 
+
+For workflows with forms, you can open the form by clicking the Form button. This button is only
+
+available in the full-screen view.
+
+Method
+
+Edit the fields of the form as indicated in the task.
+
+To forward the workflow after editing the form, click the corresponding button within the
+
+form.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+213 ELO Desktop Client
+
+
+
+Forward workflow function 
+
+When you receive a workflow task, it will appear in your Tasks work area.
+
+After you have completed your task, forward the workflow to the next editor.
+
+Alternatives
+
+Edit workflow with a form: If the workflow you receive contains a form, forward it using the form.
+
+Return workflow
+
+Delegate workflow
+
+Method
+
+Select the workflow that you would like to pass forward.
+
+In the favorites bar, click Tasks > Forward workflow.
+
+If you have received a workflow and this button is inactive, this is for one of the following reasons:
+
+1. You received the workflow as part of a group. In this case, you have to accept it first by
+
+clicking Accept workflow.
+
+2. The workflow contains a form. You will see the form in the viewer pane. In this case,
+
+forward the workflow by clicking the button on the form.
+
+1. 
+
+2. 
+
+• 
+
+• 
+
+214 ELO Desktop Client
+
+
+
+'Accept workflow' function 
+
+If you have received a workflow as part of a group, you have to accept it before you can process
+
+and forward it. This prevents the workflow from being processed by multiple users at once.
+
+Method
+
+Select the workflow that you want to accept.
+
+On the toolbar, click Tasks > Accept workflow.
+
+Keyboard shortcut: ENTER key
+
+Once the workflow is accepted, it is removed from the Tasks work area of the other group
+
+members. Use the Return workflow function to undo accepting the workflow.
+
+'Return workflow' function 
+
+You can return a workflow you received as a group member and accepted with the Accept workflow
+
+function.
+
+Alternative
+
+Delegate workflow
+
+Method
+
+Select the workflow you want to return.
+
+On the toolbar, click Tasks > Return workflow.
+
+The workflow now appears in the Tasks work area of all group members the workflow was sent to.
+
+'Delegate workflow' function 
+
+You can delegate your workflow step to other users or groups.
+
+Alternative
+
+Return workflow
+
+Method
+
+Select the workflow that you want to delegate.
+
+On the ribbon, click Task > Delegate workflow.
+
+1. 
+
+2. 
+
+1. 
+
+2. 
+
+1. 
+
+2. 
+
+215 ELO Desktop Client
+
+
+
+As recipient, you can select one user or group, or multiple users or groups.
+
+Delegate to following user/group: From the drop-down menu, select which user or group you want
+
+to delegate the workflow to.
+
+Notify after processing the node: If this box is checked, the workflow is assigned back to you after
+
+the delegated user has processed the workflow node.
+
+Reminder 
+
+You can use reminders to remind yourself of entries that you want to edit at a later time.
+
+You can create reminders for folders and for documents. You can create a reminder for multiple
+
+entries within a folder at the same time.
+
+Method
+
+Select the entry you want to create a reminder for.
+
+You can also create reminders for multiple entries at the same time. You can learn how to do
+
+this in the section How do I select multiple entries?
+
+On the toolbar, click New > Reminder.
+
+1. 
+
+2. 
+
+216 ELO Desktop Client
+
+
+
+Configure the settings for your reminder in the Reminder dialog box.
+
+Information
+
+If you selected multiple entries, only the dialog box for the topmost selected entry
+
+appears at first. As soon as you have edited the settings and clicked OK, a new dialog
+
+box opens for the next selected entry.
+
+Date: Select the date the task should be completed on. The date appears in the tasks
+
+overview as the Task date. Depending on your settings for how tasks are displayed, the
+
+reminder may also show up in the Tasks work area of the selected users a few days
+
+beforehand.
+
+Priority: The priority level is shown in the tasks overview when a reminder is received.
+
+3. 
+
+217 ELO Desktop Client
+
+
+
+Select user/group: Select the recipient(s) of the reminder from the drop-down menu.
+
+The selected recipients are shown under the drop-down menu. Click the X icon to remove the
+
+users.
+
+Click OK.
+
+Result
+
+The reminder appears in the Tasks work area of the selected users at the configured time. You will
+
+recognize it by the calendar icon.
+
+Outlook
+
+To remove the reminder from your Task view, select the notification, then, on the toolbar, click 
+
+Organize > Delete.
+
+Edit reminder 
+
+Reminders are shown in your Tasks work area. You will recognize them based on the calendar icon.
+
+Information
+
+The time at which the reminder appears in the Tasks work area depends on the setting
+
+under User menu > Configuration > View > Task list display options > Maximum number of
+
+days in the future.
+
+When you receive a reminder, you have the option to change it.
+
+4. 
+
+218 ELO Desktop Client
+
+
+
+Name: The name of the document is entered for you. You can enter another name, if required.
+
+Remind on: Date on which the document should appear as a task.
+
+Created on: Displays the creation date of the reminder.
+
+Viewed on: Displays the date on which the reminder was seen the last time by the user.
+
+From user: The creator of the reminder is displayed here.
+
+Priority: Choose from A, B, or C.
+
+Select user/group: Enter the recipient(s) of the reminder here.
+
+Below this field, you see which user and/or groups is/are currently selected.
+
+219 ELO Desktop Client
+
+
+
+Note: Enter additional information here.
+
+220 ELO Desktop Client
+
+
+	Table of contents
+	Basics
+	What is the ELO Desktop Client?
+	Target audience
+	Getting started
+	Structure of the documentation
+	Which chapter(s) should I read if I...
+	want to personalize my client?
+	want to create entries?
+	want to update entries?
+	want to create tasks?
+	want to edit tasks?
+	want to keep track of changes in ELO?
+	want to output information from ELO?
+	want to search for entries?
+	want to structure the repository area?
+	want to file e-mails?
+
+	Starting the ELO Desktop Client
+
+	Program interface
+	What is a work area?
+	'My ELO' work area
+	News
+	Most recently used
+	News toolbar
+
+	'Repository' work area
+	'Search' work area
+	Search field with search options
+	Dashboards
+	Results list
+	Input
+	Narrow down search
+	Search areas
+	Search filters
+
+
+	'Tasks' work area (only ELO Desktop Client Plus)
+	'Desktop' work area
+	Without ELO connection
+	With ELO connection
+
+	'In use' work area
+	Tile navigation
+	Groups
+	Edit via the context menu
+
+	Settings
+
+	Client header
+	Toolbars
+	Work area toolbar
+	Toolbar
+	Favorites bar
+
+	User menu [your name]
+	Profile
+	Context menu
+	'My ELO' button
+
+	Navigation and use
+	Navigating between work areas
+	How do I use a function?
+	How do I select multiple entries?
+	Drag-and-drop
+	Insert files/folders
+	Move or reference entry
+	Load new version
+
+	Keyboard shortcuts
+
+	Simple operation
+	Compatibility
+	Contrast settings
+	Keyboard shortcuts
+	General
+	Tile navigation
+	'Repository' work area
+	'Search' work area
+	'Tasks' work area (only ELO Desktop Client Plus)
+	'Desktop' work area
+	'In use' work area
+	'My ELO' work area
+	Configuration
+	Dialog boxes
+
+
+	Important components
+	Repository structure
+	Reference
+	Checked out document
+
+	Folders
+	Document
+	Viewer pane
+	Show entries
+	List view
+	Table view
+	Filter entries
+
+	Metadata
+	Feed
+	Create post
+	Poll
+	Mention
+	Reference
+	Hashtag
+	Subscribe to hashtag
+	Visibility
+	Search feed
+	Subscribe to feed
+	Automatically subscribe to feed
+	Show filter options
+	New comment
+	Settings
+
+	Status: Different statuses
+
+	Important actions in detail
+	Create new folder
+	Create new view
+	Insert files/folders
+	File a document from the file system to ELO
+	Alternative via drag-and-drop
+
+	File Microsoft OneNote items in ELO
+	File e-mails
+	Manual filing
+	Link folder
+	Dynamic extension
+	File e-mails from Microsoft Outlook folders via drag-and-drop
+
+	Manage e-mails
+	Combined search in ELO and Microsoft Outlook
+	Reply to and forward e-mails
+	Filing e-mails from Microsoft Outlook
+
+	Check out and edit document
+	Check in document
+	Narrowing down a search request
+	Assign control
+
+	User menu [your name]
+	Configuration
+	Configuration – top area
+	Configuration – General (1)
+	Folder for document templates
+	My ELO
+	Language
+
+	Configuration – General (2)
+	Accessibility
+	Keyboard shortcuts
+
+	Configuration – View (1)
+	Copy
+	Tree view
+	List of recently used entries
+	Search
+	Document size
+
+	Configuration – View (2)
+	Preview configuration for various file types
+	Task list display options (Desktop Client Plus only)
+
+	Configuration – Color scheme
+	Configuration – Views
+	Configuration – Dialog boxes (1)
+	Duplicate check
+	Drag-and-drop
+	Version comment
+
+	Configuration – Dialog boxes (2)
+	Filing
+	Messages
+	Multiple entries as an ELO link
+	Logon dialog box
+
+	Configuration – Metadata
+	General
+	Default settings for metadata forms
+	Assign a metadata form to a file type
+
+	Configuration – Check in
+	Document date
+	Automatic check-in
+
+	Configuration – E-mail
+	Filing e-mails
+	Attachments
+
+	Configuration – Microsoft OneNote
+	Metadata
+	Filing
+
+	Configuration – Administration (1)
+	Profile management
+	Checkout directories
+
+	Configuration – Administration (2)
+	Log file overview
+
+
+	Help
+	About
+	Enable roles
+	Log off
+	Close
+
+	Favorites bar
+	Manage favorites
+	Add functions
+	Remove functions
+
+
+	'New' group
+	Start workflow (only ELO Desktop Client Plus)
+	Reminder (only ELO Desktop Client Plus)
+	New folder
+	Document from template
+	Insert files/folders
+	File as a Word document
+	File as PDF
+	Save in ELO
+
+	'View' group
+	Preview
+	Folder preview
+
+	Refresh
+	Link
+	New view
+	Go to
+
+	'Output' group
+	Save as
+	Send
+	Send as ELO link
+	Print
+
+	'Organize' group
+	Metadata
+	Metadata forms
+	Fields
+	Icons
+	Keyword lists
+	Relations
+
+
+	Tabs
+	'Basic' tab
+	'Extra text' tab
+	'Options' tab
+
+	Permissions
+	Report for entry
+	Synchronize Microsoft OneNote item
+	Synchronize section
+	Conflicts
+
+	Reference
+	'Reference' function
+	Drag-and-drop
+
+	Copy
+	Cut
+	Insert
+	Delete
+	Restore
+	Remove lock
+	Assign control
+	Overview of controls
+
+	'Document' group
+	Open in read-only mode
+	Check out to OneDrive
+	Check out and edit
+	Edit document
+	Check in
+	Discard document changes
+	Document versions
+	Load new version
+
+	'Search' group
+	Set as default
+	Add search favorite
+	Manage search favorites
+
+	'Tasks' group (only ELO Desktop Client Plus)
+	Forward workflow
+	Accept workflow
+	Return workflow
+	Delegate workflow
+	Edit reminder
+	Refresh
+
+	ELO Desktop Client Plus
+	Full screen
+	'Tasks' work area
+	List of tasks
+
+	Start workflow
+	Edit workflow
+	Edit workflow with a form
+	Forward workflow function
+	'Accept workflow' function
+	'Return workflow' function
+	'Delegate workflow' function
+
+	Reminder
+	Edit reminder
+
+
+

@@ -1,0 +1,3836 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Business Solution ELO Meeting Premium | Business Solution ELO Meeting 1.00
+
+
+Business Solution ELO
+
+Meeting Premium
+
+Business Solution ELO Meeting 1.00
+
+
+
+3
+
+5
+
+12
+
+14
+
+14
+
+18
+
+25
+
+34
+
+35
+
+35
+
+39
+
+41
+
+50
+
+56
+
+61
+
+62
+
+67
+
+67
+
+71
+
+85
+
+Table of contents
+
+Introduction 
+
+Basics 
+
+Calendar 
+
+Meeting board
+
+Introduction 
+
+Create meeting board 
+
+Edit meeting board 
+
+Meeting board calendar 
+
+Meetings
+
+Introduction 
+
+Meeting app 
+
+Prepare meeting 
+
+Edit meeting 
+
+Meeting assistant 
+
+Conduct meeting 
+
+Follow up on a meeting 
+
+Items
+
+Introduction 
+
+Prepare item 
+
+Item detail page 
+
+2 Business Solution ELO Meeting Premium
+
+
+
+Introduction 
+
+Structure of the documentation 
+
+The goal of this documentation is to explain all functions of Business Solution ELO Meeting
+
+Premium.
+
+Basics 
+
+The Basics chapter explains the basics of the ELO Meeting Premium program interface.
+
+Possible actions 
+
+The remaining chapters address possible actions using ELO Meeting Premium.
+
+Target audience 
+
+This documentation is addressed to Business Solution ELO Meeting Premium users. Separate
+
+documentation is available for administrators on the ELO SupportWeb.
+
+The scope of functions presented in this documentation may differ greatly from those in your
+
+client.
+
+If you do not find functions described in this documentation in your client, you do not have
+
+permission to perform the action.
+
+Roles 
+
+The documentation structure is based on the roles that are required in connection with meetings:
+
+Role Meaning
+
+Board
+
+manager
+
+The only task board managers have is to create meeting boards. Board managers
+
+are not authorized to perform other functions.
+
+Board
+
+organizers
+
+Board organizers are authorized for all functions within their board. However, they
+
+cannot create meeting boards.
+
+Item
+
+submitters
+
+Item submitters have access to all functions relating to items, e.g. New item and 
+
+Create proposal. People who create and prepare items do not have to be members or
+
+guests of a meeting board.
+
+Members
+
+and guests
+
+Members are people who attend all meetings in this meeting board. Guests are
+
+additionally created for individual meetings. Members and guests are authorized to
+
+view the meeting and its contents. Depending on the setting, they may also be
+
+authorized to create items. Members and guests can participate in voting and be
+
+assigned tasks to work on.
+
+3 Business Solution ELO Meeting Premium
+
+
+
+Role Meaning
+
+Minute
+
+takers
+
+Only minute takers and organizers are authorized to write minutes. Minutes takers
+
+are authorized to view the meeting and its contents even if they are not a member
+
+or guest. However, they are only granted this permission once the meeting starts.
+
+4 Business Solution ELO Meeting Premium
+
+
+
+Basics 
+
+Basic principle 
+
+Business Solution ELO Meeting Premium provides optimal support in planning, carrying out, and
+
+following up on meetings.
+
+Departments can jointly prepare items for meetings. All relevant information and decisions are
+
+documented during the meeting, and minutes are created after the meeting.
+
+A meeting board provides a framework for all meetings, which means that general information,
+
+such as members or recurring items, only needs to be entered once.
+
+ELO Meeting Premium features an integrated app:
+
+The calendar function allows users to join meetings they are authorized to attend.
+
+The app maps the entire meeting process. The scope of functions differs depending on what
+
+your role is in a meeting. If you are the meeting organizer, you can plan meetings in the app,
+
+for example. Or if you are a member of a meeting board, you can view the agenda ahead of
+
+a meeting and take part in voting during meetings.
+
+General note 
+
+ELO Meeting works with the following clients:
+
+ELO Web Client
+
+ELO Java Client
+
+Information
+
+In this documentation, we use screenshots from the ELO Web Client.
+
+Requirements 
+
+Your administrator must have configured ELO Meeting Premium for you.
+
+Program interface 
+
+You will find ELO Meeting Premium functions in the following areas:
+
+• 
+
+• 
+
+• 
+
+• 
+
+5 Business Solution ELO Meeting Premium
+
+https://docs.elo.com/user/elo-web-client/en-us/elo-web-client/
+https://docs.elo.com/user/elo-web-client/en-us/elo-web-client/
+https://docs.elo.com/user/elo-java-client/en-us/elo-java-client/
+https://docs.elo.com/user/elo-java-client/en-us/elo-java-client/
+
+
+1 'Meeting calendar' tile
+
+The meeting calendar gives you access to all meetings that you are authorized to attend.
+
+2 'Meeting' group on the 'New' tab
+
+You can use the functions in this group to create meeting boards, meetings, items and item pools.
+
+Information
+
+You can only create meeting boards and meetings if you have the corresponding
+
+permissions.
+
+'Meeting' tab
+
+As soon as you select a meeting board, this tab appears. You can use this tab to create and edit
+
+meetings, for example, and to create and register items to be raised for discussion.
+
+Information
+
+In most cases, you will only have access to some functions.
+
+'Repository' work area 
+
+Information
+
+6 Business Solution ELO Meeting Premium
+
+
+
+If you are authorized for a meeting board that is in a folder that you do not have permission
+
+to access, you will not be able to navigate to it from the Repository work area. In this case,
+
+you have the following options:
+
+Meeting calendar: You can see all your meetings in the calendar.
+
+Link: You will receive a link to the meeting.
+
+QR code: During the meeting, you will see a QR code that you can scan.
+
+Search: You can search for meeting boards and meetings in the Search work area.
+
+The structure and appearance of the repository depend greatly on your specific configuration. The
+
+default settings are described here.
+
+You can create meeting boards anywhere in the repository, but not within another meeting board.
+
+The Elements of a meeting board chapter describes all elements in detail.
+
+• 
+
+• 
+
+• 
+
+• 
+
+7 Business Solution ELO Meeting Premium
+
+
+
+You will find the individual meetings within the meeting boards.
+
+The Elements of a meeting chapter describes all elements in detail.
+
+Meeting app 
+
+In the meeting app, you will find information about the meeting, such as the agenda with
+
+information about all items.
+
+To find out how to access a meeting, refer to the 'Repository' work area chapter.
+
+You can access the meeting app from the Meeting tab.
+
+8 Business Solution ELO Meeting Premium
+
+
+
+As a member of a meeting board, you use the meeting app to view agenda items and to take part
+
+in any votes.
+
+For more information, refer to the Meeting app chapter.
+
+If you have organizational rights, you can access the meeting assistant by clicking the Open
+
+assistant button.
+
+9 Business Solution ELO Meeting Premium
+
+
+
+You can prepare and conduct meetings in the meeting assistant.
+
+10 Business Solution ELO Meeting Premium
+
+
+
+For more information, refer to the Meeting assistant chapter.
+
+11 Business Solution ELO Meeting Premium
+
+
+
+Calendar 
+
+The calendar provides an overview of your meetings.
+
+There are two different calendars:
+
+Meeting calendar
+
+Meeting board calendar
+
+Meeting calendar 
+
+The general meeting calendar shows all meetings that you are authorized to attend. It is not
+
+restricted to a specific meeting board.
+
+You can access this calendar from your My ELO home screen > Meeting calendar tile.
+
+Meeting board calendar 
+
+A meeting board calendar shows you all the meetings in the meeting board.
+
+You can open this calendar in the following ways:
+
+Select a meeting board and then select the Meeting board tab.
+
+If you are in the app (Meeting tab), select the calendar icon.
+
+Functions 
+
+You have the following options in the calendar:
+
+• 
+
+• 
+
+• 
+
+• 
+
+12 Business Solution ELO Meeting Premium
+
+
+
+You can switch
+
+the calendar
+
+view using the
+
+drop-down
+
+menu.
+
+You can view
+
+important
+
+information
+
+about the
+
+meetings by
+
+moving the
+
+mouse over a
+
+meeting.
+
+Jump to a meeting
+
+Clicking on a
+
+meeting takes
+
+you to the
+
+meeting in the
+
+preview area.
+
+Double-clicking
+
+the meeting
+
+takes you to the
+
+meeting in the
+
+repository.
+
+13 Business Solution ELO Meeting Premium
+
+
+
+Meeting board
+
+Introduction 
+
+A meeting board is an area in which all meetings held by a committee or other body are created.
+
+When you create a meeting board, you enter information that is inherited by all meetings within
+
+this meeting board, such as members and recurring items.
+
+Information
+
+To avoid meeting boards being created unnecessarily, only a few people are authorized to
+
+create meeting boards.
+
+Permissions 
+
+Meeting boards do not inherit the permissions of the folder that they are created in. This means
+
+that people can be authorized for a meeting board but not have permission to access the folder
+
+that the meeting board is stored in. Therefore, if you are a member of a meeting board and you do
+
+not have access to the folder containing the meeting board, you will not be able to access the
+
+meeting board from the Repository work area.
+
+In this case, you have the following options:
+
+Meeting calendar: You can see all your meetings in the calendar.
+
+Search: You can access the meeting board using the search function.
+
+Link: You receive an e-mail with the link to the meeting board or meeting.
+
+There is also the option to display a QR code during a meeting. This takes participants to the
+
+respective meeting and not to the meeting board.
+
+The following list contains the permissions for a meeting board:
+
+Board manager
+
+Only board managers are authorized to create meeting boards.
+
+Creating meeting boards is the only task that board managers have unless they are granted
+
+other permissions.
+
+Organizer
+
+Organizers are selected by the board manager when they are creating a meeting board.
+
+It is possible to appoint multiple organizers for each meeting board.
+
+Meeting board organizers can select other organizers.
+
+There is only one function that is not available to organizers: New meeting board.
+
+Member
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+14 Business Solution ELO Meeting Premium
+
+
+
+Members are authorized to view a meeting board and access the meetings within the
+
+meeting board.
+
+Minute taker
+
+You can only select one minute taker for each meeting board.
+
+It is possible to change the minute taker for individual meetings.
+
+Minute takers are authorized to write minutes.
+
+If a minute taker is not a member of the meeting board, they are not granted access to the
+
+meeting board. They are granted access once the meeting has started.
+
+Elements of a meeting board 
+
+Each meeting board features a calendar (Meeting board tab), a form, contents, and a feed.
+
+'Meeting board' tab 
+
+You will find the meeting board calendar on the Meeting board tab. This calendar displays all
+
+meetings within the meeting board.
+
+For more information, refer to the Meeting board calendar chapter.
+
+• 
+
+• 
+
+• 
+
+• 
+
+15 Business Solution ELO Meeting Premium
+
+
+
+Contents 
+
+You will find the meeting board entries on the Contents tab and in the repository:
+
+Notification templates: All templates in this folder can be used for the entire meeting board
+
+or just for individual meetings within the meeting board. Refer to the Create notification
+
+template chapter to learn how to create notification templates. To find out how to use
+
+notification templates, refer to the Create meeting board chapter.
+
+Members: This folder contains all active and inactive members of the meeting board. They
+
+are automatically inherited by meetings within the meeting board but can be removed from
+
+individual meetings.
+
+Meetings: This folder contains all meetings in the meeting board. If the folder doesn't exist,
+
+no meetings have been created yet.
+
+Recurring items: Recurring items are automatically inherited by meetings in the meeting
+
+board.
+
+• 
+
+• 
+
+• 
+
+• 
+
+16 Business Solution ELO Meeting Premium
+
+
+
+Form 
+
+You will find the basic meeting board settings on the Form tab. It contains information such as the
+
+purpose of the meeting board in the Description field, or its members.
+
+Feed 
+
+Refer to the client documentation for information about the feed:
+
+Web Client
+
+Java Client
+
+• 
+
+• 
+
+17 Business Solution ELO Meeting Premium
+
+https://docs.elo.com/user/elo-web-client/en-us/elo-web-client/important-components.html#feed
+https://docs.elo.com/user/elo-web-client/en-us/elo-web-client/important-components.html#feed
+https://docs.elo.com/user/elo-java-client/en-us/elo-java-client/manual/important-components.html#feed
+https://docs.elo.com/user/elo-java-client/en-us/elo-java-client/manual/important-components.html#feed
+
+
+Create meeting board 
+
+Information
+
+This chapter is aimed at board managers. If you need a meeting board and do not have the
+
+necessary permissions, contact a board manager at your company.
+
+A meeting board provides the framework for all meetings. You need to create a meeting board in
+
+order to be able to create meetings.
+
+When you create a meeting board, you enter information that does not change during the meeting
+
+series, such as members and notifications. This information is inherited by all meetings within the
+
+meeting board and therefore only needs to be entered once.
+
+Once a meeting board has been created, the organizers can edit it.
+
+Requirements
+
+You are a board manager.
+
+You cannot create meeting boards with existing meeting boards, item pools, or items.
+
+Method
+
+In the Repository work area, select the folder you want to create the meeting board in.
+
+On the ribbon, go to the New tab and select Meeting > New meeting board.
+
+Complete the fields in the Create meeting board dialog box as required.
+
+'General' tab
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+3. 
+
+18 Business Solution ELO Meeting Premium
+
+
+
+This tab already contains some general information about the meeting board.
+
+Field Explanation
+
+Name This is the name of the meeting board. It can be edited.
+
+Code
+
+This code is placed before the name of all meetings in the meeting board. It
+
+consists of two to five characters and must not contain special characters or
+
+letters with accent marks. The code cannot be changed.
+
+Organizer
+
+Each meeting board can have multiple organizers. You can only select someone
+
+who has been granted permission to organize meeting boards. If you also want
+
+these people to be members, you need to add them on the Members tab.
+
+19 Business Solution ELO Meeting Premium
+
+
+
+Field Explanation
+
+Minute
+
+taker
+
+The user selected here is inherited by all meetings in the meeting board. It can
+
+be changed in the individual meetings. If you also want this person to be a
+
+member, you need to add them on the Members tab.
+
+'Members' tab
+
+On this tab, select the people who are expected to attend all meetings in the meeting board.
+
+Members do not require an ELO account. You can either import contacts from ELO Contact or
+
+type in their data.
+
+Additional members can be added later using the Add members function.
+
+Information
+
+Members cannot be deleted. This is to prevent any effects on meetings already held.
+
+When members step down or leave the company, the status can be set as Inactive.
+
+'Items' tab
+
+20 Business Solution ELO Meeting Premium
+
+
+
+On this tab, you can create items that are discussed at every meeting. They are
+
+automatically placed on the agenda of every meeting, but can be removed if required.
+
+Field Explanation
+
+Duration in
+
+min.
+
+The time you enter here is automatically stored for every meeting. However,
+
+you have the option to change the time allotted in the settings of a meeting.
+
+You can add recurring items later using the New recurring item function.
+
+Information
+
+Organizers can add information about items in the corresponding form.
+
+21 Business Solution ELO Meeting Premium
+
+
+
+'Notifications' tab
+
+On this tab, you can select messages that will be sent to the selected recipient group before
+
+or after each meeting.
+
+For example, if you want to remind members to submit their items on time, you could enter
+
+something like this:
+
+Message Recipient group Time delay Day
+
+End of registration deadline M - All members 3 d - day(s) --Before Registration deadline
+
+With this information, the recipients would get an e-mail reminder three days before the end
+
+of the registration deadline. For this to work, an administrator must have created the global
+
+template End of registration deadline.
+
+You can create your own notification templates specifically for the meeting board later.
+
+'Settings' tab
+
+22 Business Solution ELO Meeting Premium
+
+
+
+On this tab, you can make additional settings for the meeting board.
+
+Meeting settings:
+
+Field Explanation
+
+Meetings must be
+
+approved
+
+If you select this option, meetings always have to be approved using the 
+
+Approve meetings function. This enables you to set up tentative
+
+meetings. Once they have been approved, you can start planning them.
+
+Schedule items
+
+directly into the
+
+agenda
+
+If you select this option, when you create an item in a meeting, you can
+
+directly place the item at the end of the agenda. Otherwise, it is placed
+
+in the agenda pool and has to be moved to the agenda manually.
+
+23 Business Solution ELO Meeting Premium
+
+
+
+Field Explanation
+
+Default title
+If you enter a default title, all meetings within the meeting board are
+
+automatically given this name.
+
+Deadlines:
+
+Field Explanation
+
+Set deadlines This option enables users to set deadlines.
+
+Registration
+
+deadline
+
+The registration deadline specifies the deadline for submitting items to
+
+meetings. When you are creating a meeting, this deadline can be accepted
+
+or changed.
+
+Proposals:
+
+The proposals you select here are available for items that are created for the meeting board.
+
+Proposals must have been created by an administrator beforehand.
+
+Select OK.
+
+Result
+
+The meeting board is created in the selected folder. It can now be used by the committee or body it
+
+was created for.
+
+The meeting board contains the Notification templates, Members, and Recurring items folders.
+
+Outlook
+
+After you have created the meeting board, it can be edited and used by the organizers.
+
+You can make any changes to the meeting board in the form. For more information, refer to the Edit
+
+basic meeting board settings chapter.
+
+4. 
+
+24 Business Solution ELO Meeting Premium
+
+
+
+Edit meeting board 
+
+Information
+
+This chapter is aimed at meeting board organizers.
+
+You can make changes to the meeting board. Changes to the meeting board only affect meetings
+
+that did not exist the time of the change.
+
+You should therefore follow these steps before you create the first meeting in the meeting board:
+
+Task Explanation
+
+Check and/or edit the
+
+basic settings in the
+
+meeting board form
+
+Any missing or incorrect information should be added or corrected so
+
+that it is not inherited by the meetings.
+
+Check recurring items
+Check the Recurring items folder to make sure that it contains all the
+
+required items. Create additional recurring items if you need to.
+
+Edit recurring items
+When you create the meeting board, you will not be asked to enter all
+
+data about items. You can add this information in the form.
+
+Create notification
+
+templates
+
+If you want to use additional notification templates for all meetings in
+
+the meeting board, create them at the start. If you want to use
+
+additional notification templates for individual meetings only, you can
+
+create them later.
+
+You can make the following changes to the meeting board:
+
+Task Explanation
+
+Add members
+When new members join a committee or other body, you can create them
+
+afterwards.
+
+Set members
+
+as inactive
+
+Members cannot be deleted. This is to prevent any effects on meetings already
+
+held. If a member steps down from a committee or board, you can change their
+
+status to Inactive to ensure that they will not appear as attendees at future
+
+meetings.
+
+Create
+
+recurring
+
+items
+
+If you have topics that you want to raise at every meeting, you can create recurring
+
+items.
+
+Edit basic meeting board settings 
+
+You can edit some meeting board settings retroactively.
+
+Information
+
+25 Business Solution ELO Meeting Premium
+
+
+
+Changes to the meeting board only affect meetings that did not exist at the time of the
+
+change.
+
+Method
+
+Select the meeting board.
+
+Select the Form tab.
+
+Refer to the Create meeting board chapter for details of the settings that you can make.
+
+Information
+
+Fields that are grayed out cannot be edited.
+
+You cannot use the form to add members. In this case, you need to use the Add members
+
+function.
+
+You cannot delete members. However, you can change their status to I - Inactive. For more
+
+information, refer to the Set member as inactive chapter.
+
+If you want to send notifications but the corresponding template is not yet available, you first
+
+need to create a notification template.
+
+Select Save.
+
+Result
+
+The changes are applied to the meeting board. They do not affect existing meetings.
+
+1. 
+
+2. 
+
+3. 
+
+26 Business Solution ELO Meeting Premium
+
+
+
+When you create additional meetings for the meeting board, they have the new settings.
+
+Create notification template 
+
+You can create notification templates for a meeting board. These can be used for the entire meeting
+
+board or just for individual meetings, but not for other meeting boards.
+
+The notifications are sent by e-mail.
+
+Alternative
+
+You can also contact the participants of individual meetings in the meeting board using the Send
+
+message function. There are no templates for this.
+
+Method
+
+Select the meeting board.
+
+On the ribbon, select Meeting > Notifications > Create notification template.
+
+Complete the fields in the Create notification template dialog box as required.
+
+Field Explanation
+
+Name
+Notification templates are selected based on their name. You should therefore
+
+enter a name that indicates what the content is.
+
+Sender You need to enter the sender's e-mail address here.
+
+1. 
+
+2. 
+
+3. 
+
+27 Business Solution ELO Meeting Premium
+
+
+
+Field Explanation
+
+Recipient
+You cannot edit this field. You select the recipient group when you select the
+
+template for a meeting board or meeting.
+
+Message
+
+The title or form of address is already entered. You can type and format a
+
+message. You have the option to use clips to help you write text. They contain
+
+information about the respective meeting (e.g. location) and can be inserted into
+
+the text. To use clips, select the position in the text where you want to insert
+
+information and click Clips.
+
+Select OK.
+
+Result
+
+The notification template is created in the Notification templates folder of the meeting board. It is
+
+now available for use in the meeting board.
+
+Outlook
+
+You can use the notification template for the entire meeting board. Select the meeting board
+
+> Form tab > Notifications tab. Refer to the Create meeting board chapter for details of the
+
+settings.
+
+You can also use the notification template for individual meetings in the meeting board.
+
+Select the meeting > Form tab > Notifications tab.
+
+The notification will be sent by e-mail to the selected recipient group at the designated time.
+
+Add members 
+
+You can add members to a meeting board.
+
+Information
+
+If you only want to add guests to individual meetings, use the Edit list of participants
+
+function.
+
+Method
+
+Select the meeting board you want to add members to.
+
+On the ribbon, select Meeting > Board > Add members.
+
+4. 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+28 Business Solution ELO Meeting Premium
+
+
+
+Add members as required.
+
+Members do not require an ELO account. You can either import contacts from ELO Contact or
+
+type in their data.
+
+Information
+
+Members cannot be deleted. This is to prevent any effects on meetings already held.
+
+When members step down or leave the company, the status can be set as Inactive.
+
+Select OK.
+
+Result
+
+The members are added to the meeting board. The change does not affect existing meetings.
+
+When you create additional meetings for the meeting board, newly created members are added to
+
+the list of participants.
+
+3. 
+
+4. 
+
+29 Business Solution ELO Meeting Premium
+
+
+
+Set member as inactive 
+
+Members cannot be deleted. This is to prevent any effects on meetings already held. When
+
+members step down or leave the company, you can set their status as Inactive.
+
+Method
+
+Select the meeting board.
+
+Select the Members tab in the form.
+
+Select Go to for the departing member.
+
+Change the status to I - Inactive.
+
+Select Save.
+
+Result
+
+The member is now inactive.
+
+When you create additional meetings for the meeting board, the member no longer appears in the
+
+list of participants.
+
+Information
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+30 Business Solution ELO Meeting Premium
+
+
+
+If you have already created meetings with the inactive member, you can remove them from
+
+each meeting using the Edit list of participants function.
+
+Create recurring item 
+
+You can add recurring items to a meeting board.
+
+Method
+
+Select the meeting board.
+
+On the ribbon, select Meeting > Board > New recurring item.
+
+1. 
+
+2. 
+
+3. 
+
+31 Business Solution ELO Meeting Premium
+
+
+
+Complete the fields in the Add recurring item dialog box as required.
+
+Field Explanation
+
+Responsible The person responsible is granted advanced permissions and can edit the item.
+
+Speaker
+The speakers are granted advanced permissions and can edit the item. You can
+
+select multiple people.
+
+Select OK.
+
+Result
+
+The item is stored in the Recurring items folder.
+
+When you create additional meetings for the meeting board, the item appears on the agenda.
+
+Edit recurring items 
+
+When you create a meeting board, you can only enter the title, duration, and a description of a
+
+recurring item. If the same people are going to prepare and present the item in every meeting, you
+
+can store this information globally for the meeting board.
+
+Information
+
+You can also upload documents that are needed in every meeting to the folder of the
+
+recurring item. In this case, you can use either the standard functions or the item detail
+
+page (Recurring items folder > Select item > Meeting item tab).
+
+Method
+
+Select the meeting board.
+
+Select the form.
+
+4. 
+
+1. 
+
+2. 
+
+32 Business Solution ELO Meeting Premium
+
+
+
+Edit the fields.
+
+Field Explanation
+
+Responsible The person responsible is granted advanced permissions and can edit the item.
+
+Speaker
+The speakers are granted advanced permissions and can edit the item. You can
+
+select multiple people.
+
+Select Save.
+
+Result
+
+When you create additional meetings for the meeting board, the item appears on the agenda with
+
+the new information.
+
+3. 
+
+4. 
+
+33 Business Solution ELO Meeting Premium
+
+
+
+Meeting board calendar 
+
+Every meeting board has its own calendar. The calendar displays all meetings that you are
+
+authorized to attend within the meeting board.
+
+For more information, refer to the Calendar chapter.
+
+34 Business Solution ELO Meeting Premium
+
+
+
+Meetings
+
+Introduction 
+
+Each meeting is part of a meeting board. Without a meeting board, therefore, you cannot create
+
+meetings.
+
+You see the meetings that you are authorized to attend. The functions that are available to you in a
+
+meeting depend on your role in that meeting.
+
+Permissions 
+
+Since most meeting permissions are based on the permissions of a meeting board, they correspond
+
+to the meeting board permissions. For more information, refer to the Permissions chapter in the
+
+section on meeting boards.
+
+You can also add guests to individual meetings.
+
+Guest
+
+Guests are authorized to access individual meetings within the meeting board.
+
+Since guests do not have meeting board permissions, they cannot navigate to the meeting
+
+from the Repository work area.
+
+Elements of a meeting 
+
+Each meeting has a meeting app ('Meeting' tab), a form, contents, and a feed.
+
+Information
+
+If you have been given a direct link to the standalone app, you go straight to the meeting
+
+app and you will not see the other elements.
+
+• 
+
+• 
+
+35 Business Solution ELO Meeting Premium
+
+
+
+'Meeting' tab 
+
+You will find the meeting app in the Meeting tab. In the meeting app, you can see the scheduled
+
+agenda and select the individual items, for example. The meeting app is the main tool for
+
+conducting a meeting.
+
+For more information, refer to the Meeting app chapter.
+
+Organizers access the meeting assistant via the meeting app.
+
+36 Business Solution ELO Meeting Premium
+
+
+
+Contents 
+
+You will find the meeting board entries on the Contents tab and in the repository:
+
+Files: This folder is generated when a meeting file is created.
+
+Minutes: This folder is generated when minutes are created.
+
+Items: This folder automatically contains all recurring items. It also contains registered and 
+
+submitted items.
+
+Participants: This folder contains all members and guests who have been registered for the
+
+meeting.
+
+• 
+
+• 
+
+• 
+
+• 
+
+37 Business Solution ELO Meeting Premium
+
+
+
+Form 
+
+You will find the meeting settings on the Form tab. It contains information such as the purpose of
+
+the meeting board in the Description field, or the location and exact time.
+
+Feed 
+
+Refer to the client documentation for information about the feed:
+
+Web Client
+
+Java Client
+
+• 
+
+• 
+
+38 Business Solution ELO Meeting Premium
+
+https://docs.elo.com/user/elo-web-client/en-us/elo-web-client/important-components.html#feed
+https://docs.elo.com/user/elo-web-client/en-us/elo-web-client/important-components.html#feed
+https://docs.elo.com/user/elo-java-client/en-us/elo-java-client/manual/important-components.html#feed
+https://docs.elo.com/user/elo-java-client/en-us/elo-java-client/manual/important-components.html#feed
+
+
+Meeting app 
+
+The meeting app guides you through the meeting. The app provides regular participants with all the
+
+information they need for the actual meeting as well as details of the items.
+
+You will find the meeting app on the Meeting tab of a meeting. It can also be used as a standalone
+
+app. You will need the direct link or the QR code for this.
+
+The meeting app features the Agenda and Attendance list tabs.
+
+Agenda 
+
+The agenda contains all scheduled items and organizational items.
+
+If you have meetings that are held on multiple days, you can navigate back and forth using the
+
+date tabs.
+
+The agenda takes you to the detail pages of all scheduled items.
+
+Information for organizers
+
+39 Business Solution ELO Meeting Premium
+
+
+
+Organizers are notified if there are items on the agenda that have been withdrawn. To clean up the
+
+agenda, you need to open the meeting assistant, which you also use to plan the agenda.
+
+Attendance list 
+
+The attendance list contains all members and guests who are registered for the meeting.
+
+Information for organizers
+
+At the start of the meeting, you can check who is in attendance. The attendance status cannot be
+
+reversed once confirmed.
+
+40 Business Solution ELO Meeting Premium
+
+
+
+Prepare meeting 
+
+Information
+
+This chapter is aimed at meeting board organizers.
+
+To prepare for a meeting, some steps are necessary, while others are optional. The list below
+
+provides an overview of the process.
+
+Information
+
+Make sure that the meeting board settings are correct before you create the first meeting.
+
+For more information, refer to the Edit basic meeting board settings chapter.
+
+Task Explanation
+
+Create item pool
+
+An item can either be created in a meeting directly or in an item pool. An
+
+item pool first has to be created before you can start creating items in it.
+
+Not only organizers can create item pools. It is important that the item pool
+
+is in a folder that everyone who needs to create items has access to.
+
+Create meeting or 
+
+extraordinary
+
+meeting
+
+You have to create a meeting board before you can create a meeting.
+
+Approve meeting
+
+In the meeting board settings, you can define whether the meetings require
+
+approval or not. If they need to be approved, you can only start preparing
+
+the meeting once the approval has been issued.
+
+Prepare meeting
+Meetings are prepared in the meeting assistant. This is where you create the
+
+agenda.
+
+Optional: Create
+
+meeting file
+
+You can create a meeting file containing the information compiled so far for
+
+the meeting. You can send it to the meeting participants using the Send
+
+message function.
+
+Optional: Send
+
+message
+
+You can send messages to the participants of the meeting. You also have the
+
+option to attach documents, e.g. the meeting file.
+
+Create meeting 
+
+You can create meetings in a meeting board that you are an organizer of. The short names of all
+
+meetings are automatically given a consecutive number as well as a code that was stored when
+
+the meeting board was created.
+
+Method
+
+Select the meeting board.
+
+On the ribbon, select New > Meeting > New meeting.
+
+1. 
+
+2. 
+
+3. 
+
+41 Business Solution ELO Meeting Premium
+
+
+
+Complete the fields in the New meeting dialog box as required.
+
+'General' tab
+
+This tab already contains some general information about the meeting board.
+
+42 Business Solution ELO Meeting Premium
+
+
+
+Field Explanation
+
+Title
+If the meeting board has already been given a default name, this is already
+
+entered.
+
+Minute taker
+You can retain the person who was entered as the minute taker for the
+
+meeting board, or you can select someone else.
+
+Add day
+You can create multi-day meetings. You cannot create recurrences for multi-
+
+day meetings (see Recurrence tab).
+
+Registration
+
+deadline
+
+If a registration deadline was entered for the meeting board, it is selected
+
+here. However, you can also set a custom deadline or turn off the deadline.
+
+Once the registration deadline has passed, you can no longer register,
+
+submit, or withdraw items.
+
+Description
+If you create recurrences for these meetings, the description is used for all
+
+recurrences.
+
+'Participants' tab
+
+This tab contains the members of the meeting board. You also have the option to add guests.
+
+They will only be authorized for the meeting you are currently creating. If you create
+
+recurrences for the meeting, guests are only added to the first meeting.
+
+'Notifications' tab
+
+43 Business Solution ELO Meeting Premium
+
+
+
+This tab contains the notifications that have already been created for the meeting board. You
+
+can add notifications to the meeting. Messages will be sent to the selected recipient group
+
+before or after the meeting, depending on the settings.
+
+Information
+
+If you want to send a notification that is not yet available, you first need to create a 
+
+notification template.
+
+For example, if you want to remind members to submit their items on time, you could enter
+
+something like this:
+
+Message Recipient group Time delay Day
+
+End of registration deadline M - All members 3 d - day(s) --Before Registration deadline
+
+With this information, the recipients would get an e-mail reminder three days before the end
+
+of the registration deadline. For this to work, an administrator must have created the global
+
+template End of registration deadline.
+
+'Recurrence' tab
+
+44 Business Solution ELO Meeting Premium
+
+
+
+You can create a maximum of twelve recurrences of the meeting.
+
+Select OK.
+
+Result
+
+The meeting is created. If you have created recurrences, they will appear after a few seconds when
+
+you refresh your client (View > Refresh or F5).
+
+If there are meetings in your meeting board that need to be approved, the meeting will be in Draft
+
+status. At this point, they cannot be edited in the app.
+
+Meetings that do not need to be approved will be in Approved status. They can be edited directly.
+
+Outlook
+
+Once the date and time has been decided, you can approve it so that you can start preparing
+
+the meeting.
+
+If the meeting has already been approved, you can start to plan the agenda with the meeting
+
+assistant.
+
+Create extraordinary meeting 
+
+You can create extraordinary meetings in a meeting board that you are an organizer of.
+
+Extraordinary meetings have a different number range than regular meetings.
+
+Method
+
+Select the meeting board.
+
+4. 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+45 Business Solution ELO Meeting Premium
+
+
+
+On the ribbon, select New > Meeting > New extraordinary meeting.
+
+Complete the fields in the New extraordinary meeting dialog box as required.
+
+'General' tab
+
+This tab already contains some general information about the meeting board.
+
+Field Explanation
+
+Title
+If the meeting board has already been given a default name, this is already
+
+entered.
+
+Minute
+
+taker
+
+You can retain the person who was entered as the minute taker for the meeting
+
+board, or you can select someone else.
+
+3. 
+
+46 Business Solution ELO Meeting Premium
+
+
+
+Field Explanation
+
+Add day
+You can create multi-day meetings. You cannot create recurrences for multi-day
+
+meetings (see Recurrence tab).
+
+'Participants' tab
+
+This tab contains the members of the meeting board. You also have the option to add guests.
+
+They will only be authorized for the meeting you are currently creating.
+
+'Notifications' tab
+
+This tab contains the notifications that have already been created for the meeting board. You
+
+can add notifications to the meeting. Messages will be sent to the selected recipient group
+
+before or after the meeting, depending on the settings.
+
+For example, if you want to remind members to submit their items on time, you could enter
+
+something like this:
+
+Message Recipient group Time delay Day
+
+End of registration deadline M - All members 3 d - day(s) --Before Registration deadline
+
+With this information, the recipients would get an e-mail reminder three days before the end
+
+of the registration deadline. For this to work, an administrator must have created the global
+
+template End of registration deadline.
+
+Select OK.
+
+Result
+
+The meeting is created.
+
+Extraordinary meetings have the name code AO and a separate number range.
+
+If there are meetings in your meeting board that need to be approved, the meeting will be in Draft
+
+status. At this point, it cannot be edited in the meeting assistant.
+
+Meetings that do not need to be approved will be in Approved status. They can be edited directly.
+
+Outlook
+
+Once the date and time has been decided, you can approve it so that you can start preparing
+
+the meeting.
+
+If the meeting has already been approved, you can start to plan the agenda with the meeting
+
+assistant.
+
+Approve meetings 
+
+If your meeting board is subject to an approval process, you can approve the meeting dates.
+
+Method
+
+4. 
+
+• 
+
+• 
+
+1. 
+
+47 Business Solution ELO Meeting Premium
+
+
+
+Select the meeting board you want to approve meetings for.
+
+On the ribbon, select Meeting > Board > Approve meetings.
+
+In the Approve meetings dialog box, check Confirm next to all meetings you want to approve.
+
+If you cannot approve a meeting, it means that it has already been approved.
+
+Select OK.
+
+Result
+
+The meeting is now in Approved status.
+
+Outlook
+
+You can now start registering items for the meeting.
+
+You can prepare the meetings with the meeting assistant.
+
+Prepare meeting 
+
+You use the meeting assistant to prepare for meetings. In particular, you have the option to insert
+
+agenda items from the agenda pool and rearrange them as required.
+
+For more information, refer to the separate Meeting assistant chapter.
+
+Create meeting file 
+
+You can create a meeting file that you can share with the other meeting participants.
+
+A meeting file is a PDF with the following information:
+
+2. 
+
+3. 
+
+4. 
+
+• 
+
+• 
+
+48 Business Solution ELO Meeting Premium
+
+
+
+Information Details
+
+Meeting metadata Title, date, location, status, start, end, minute taker
+
+Agenda Title of all items
+
+Participant list with information on all
+
+members and guests
+Name, e-mail address, role
+
+Information on the items
+Title, duration, speaker, description, proposals
+
+(possibly with attachments)
+
+Method
+
+Select the meeting.
+
+On the ribbon, select Meeting > Meeting > Create meeting file.
+
+You also have the option to enter a version comment in the Create meeting file dialog box.
+
+The document name is generated automatically. You can edit it if necessary.
+
+Select OK.
+
+Result
+
+The meeting file is created in the meeting folder in the Files folder.
+
+Outlook
+
+You can send the meeting file to the meeting participants, e.g. using the Send message function.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+49 Business Solution ELO Meeting Premium
+
+
+
+Edit meeting 
+
+Information
+
+This chapter is aimed at meeting board organizers.
+
+If there are significant changes after you have created a meeting, you have the following options:
+
+Task Explanation
+
+Edit basic settings in the
+
+meeting form
+
+You can use the meeting form to edit some general settings and the
+
+notifications.
+
+Reschedule meeting
+You can reschedule the meeting to another time on the same day or
+
+to another day.
+
+Cancel meeting
+You can cancel the meeting. Items that are already on the agenda can
+
+be rescheduled to another meeting.
+
+Edit list of participants
+You can remove members and guests from the meeting or add
+
+guests.
+
+You also have the option to send a message to participants to notify them of any changes. For more
+
+information, refer to the Send message chapter.
+
+Edit basic meeting settings 
+
+You can edit some meeting settings retroactively.
+
+Method
+
+Select the meeting.
+
+Select the Form tab.
+
+1. 
+
+2. 
+
+50 Business Solution ELO Meeting Premium
+
+
+
+Refer to the Create meeting chapter for details of the settings that you can make.
+
+To change the time and date of a meeting, use the Reschedule meeting function.
+
+You cannot use the form to add or remove participants. Use the Edit list of participants
+
+function for this.
+
+Select Save.
+
+Result
+
+The changes are applied.
+
+Cancel meeting 
+
+You can cancel a meeting that has already been scheduled. If there are already items on the
+
+agenda for that meeting, they can be rescheduled to another meeting in the meeting board.
+
+Method
+
+Select the meeting.
+
+On the ribbon, select Meeting > Meeting > Cancel meeting.
+
+3. 
+
+1. 
+
+2. 
+
+51 Business Solution ELO Meeting Premium
+
+
+
+Complete the fields in the Cancel meeting dialog box as required.
+
+Field Explanation
+
+Reason for
+
+canceling
+
+A meeting cannot be canceled without a reason. The reason is documented in
+
+a feed post.
+
+Move items
+
+You can choose whether you want to move items to another meeting. If you
+
+don't move them, the items remain in the meeting being canceled and are
+
+not discussed.
+
+Select OK.
+
+Result
+
+3. 
+
+4. 
+
+52 Business Solution ELO Meeting Premium
+
+
+
+The meeting is now in Canceled status.
+
+If you have moved items, you will find them in the agenda pool of the selected meeting.
+
+Reschedule meeting 
+
+You can reschedule the meeting to another time.
+
+Method
+
+Select the meeting.
+
+On the ribbon, select Meeting > Meeting > Reschedule meeting.
+
+1. 
+
+2. 
+
+3. 
+
+53 Business Solution ELO Meeting Premium
+
+
+
+Change the date, time, or number of days.
+
+Enter the reason for rescheduling the meeting.
+
+Select OK.
+
+Result
+
+The meeting is rescheduled.
+
+Edit list of participants 
+
+You can remove members from individual meetings, create or remove guests.
+
+Alternative
+
+If a member is leaving the committee or body for an extended period of time, change their status
+
+to Inactive.
+
+Method
+
+Select the meeting.
+
+On the ribbon, select New > Meeting > Edit list of participants.
+
+4. 
+
+5. 
+
+1. 
+
+2. 
+
+54 Business Solution ELO Meeting Premium
+
+
+
+In the Edit list of participants dialog box, you can see the members and guests who are
+
+currently registered for the meeting.
+
+Action Explanation
+
+Remove
+If you remove a member, it is only removed from the meeting. It remains a
+
+member of the meeting board.
+
+Add
+
+guest
+
+With this function, you can add guests to the selected meeting, but not add
+
+members to the meeting board.
+
+Select OK.
+
+Result
+
+The corresponding participants are deleted from the Participants folder. Guests lose their
+
+permissions for the meeting, whereas members retain them.
+
+3. 
+
+55 Business Solution ELO Meeting Premium
+
+
+
+Meeting assistant 
+
+Information
+
+This chapter is aimed at meeting board organizers.
+
+You can prepare and conduct meetings in the meeting assistant.
+
+You can access the meeting assistant through the meeting app (Select meeting > Meeting tab > 
+
+Open assistant button).
+
+The meeting assistant consists of the following areas:
+
+Information
+
+Organize agenda
+
+Agenda pool
+
+When you open the meeting assistant, you also get access to agenda functions.
+
+Information 
+
+• 
+
+• 
+
+• 
+
+56 Business Solution ELO Meeting Premium
+
+
+
+You have the following options in this area:
+
+Time
+
+information
+
+The timeline function shows whether there is enough time remaining for other items
+
+or whether the allotted meeting time has run over.
+
+Show QR
+
+code
+
+The show QR function allows you to open the meeting as a standalone app. You can
+
+use the slider to zoom in and out of the QR code. When you close the meeting
+
+assistant, the QR code remains on the agenda and can be scanned by the
+
+participants.
+
+Start
+
+meeting
+
+You can start the meeting (Meeting actions > Start meeting). Once the meeting has
+
+started, you can start writing minutes on the item detail pages.
+
+End meeting You can end the meeting. After the meeting has ended, you can do the follow-up.
+
+Check
+
+attendance
+You can check attendance. The button takes you to the attendance list.
+
+Organize agenda 
+
+This area contains the following organizational items:
+
+Get-together
+
+Break
+
+Room change
+
+Interruption: This item can be inserted to document any unscheduled interruptions in the
+
+meeting. You also have the option to enter the reason why the meeting was interrupted in the
+
+form.
+
+You have the following options:
+
+• 
+
+• 
+
+• 
+
+• 
+
+57 Business Solution ELO Meeting Premium
+
+
+
+Create item
+
+block
+
+You can create item blocks. An item block is inserted directly into the agenda
+
+and you can add items to it.
+
+Add
+
+organizational
+
+item
+
+You can add organizational items to the agenda. You can insert each
+
+organizational item as many times as you like. You can either drag and drop the
+
+items or use the arrow buttons. Once an organizational item has been added to
+
+the agenda, you can edit its duration.
+
+Finalize agenda
+
+You can finalize the agenda (Agenda actions > Finalize agenda). Once the agenda
+
+is finalized, participants know that there are not going to be any more changes.
+
+You can use the Send message function to notify participants that the agenda is
+
+final.
+
+Check
+
+attendance
+You can check attendance. The button takes you to the attendance list.
+
+Agenda pool 
+
+The agenda pool contains all items that can be scheduled for the agenda.
+
+There are different ways to put items in the agenda pool:
+
+The item was registered directly when the meeting was created.
+
+The item was created in an item pool and was registered for the meeting from there. In this
+
+case, you cannot view the contents of the item yet. However, you can see the form and can
+
+schedule the item.
+
+The item was created in an item pool and was submitted to the meeting from there.
+
+You have the following options:
+
+Insert item
+You can insert items into the agenda. You can either drag and drop the items or use
+
+the arrow buttons.
+
+Open detail
+
+page
+
+You can view the full details of an item on the item detail page. To access the page,
+
+select the title of the item or click the three-dot menu > Open detail page.
+
+• 
+
+• 
+
+• 
+
+58 Business Solution ELO Meeting Premium
+
+
+
+Agenda 
+
+You can edit the agenda as long as the meeting assistant is open. When you select an item, you
+
+will see buttons that allow you to edit the item.
+
+You have the following options:
+
+Edit duration
+
+You can edit the allotted duration of the item. Click on the item and select the plus or
+
+minus button. Alternatively, you can click the three-dot menu and type in the
+
+duration in the input field.
+
+Remove
+
+item
+
+You can remove items from the agenda.
+
+Delete organizational items by clicking the three-dot menu > Delete. 
+
+You can move items to the agenda pool by dragging and dropping them or by clicking
+
+the three-dot menu > Move to agenda pool.
+
+Open detail
+
+page
+
+You can view the full details of an item on the item detail page. To access the page,
+
+select the title of the item, click the three-dot menu > Open detail page, or press the
+
+D key.
+
+Rearrange
+
+items
+
+You can rearrange the items on the agenda. The table below contains more
+
+information about this:
+
+You have the following options for moving an item in the agenda:
+
+Move
+
+You can move the item up or down in the following ways:
+
+- Drag-and-drop
+
+- Single and double arrow buttons
+
+- Three-dot menu: You will also find the corresponding keyboard shortcuts here
+
+Insert into
+
+item block
+
+You can insert items into item blocks. To insert an item into a item block, the item
+
+must be below the item block on the agenda. You have the following options:
+
+- Drag-and-drop
+
+- Right arrow curving down button (level down)
+
+Move to
+
+another day
+
+If you have meetings that are held on multiple days, you can move the item to
+
+another day. You can select the day using the three-dot menu.
+
+Information
+
+59 Business Solution ELO Meeting Premium
+
+
+
+If you want to move an item to another meeting, go to the item detail page > three-dot
+
+menu > Move item.
+
+Clean up agenda 
+
+If an item that has already been put on the agenda is withdrawn, you need to clean up the agenda.
+
+The item is removed from the agenda.
+
+60 Business Solution ELO Meeting Premium
+
+
+
+Conduct meeting 
+
+Information
+
+This chapter is aimed at meeting board organizers.
+
+Meeting level
+
+During a meeting, you can open the meeting app to perform the following tasks:
+
+Start the meeting and then check who is in attendance.
+
+When the meeting is finished, you end the meeting.
+
+Item level
+
+At the item level, you can perform the following tasks:
+
+You can document resolutions for the individual items.
+
+You can move items as required.
+
+You can conduct voting.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+61 Business Solution ELO Meeting Premium
+
+
+
+Follow up on a meeting 
+
+After a meeting has been conducted, there are still a few tasks you can perform:
+
+Task Explanation
+
+Create
+
+minutes
+
+As soon as the meeting has ended and all texts are final, you can create the
+
+minutes.
+
+Send message You can contact the participants after the meeting, e.g. to send them the minutes.
+
+Create minutes 
+
+You can create minutes and share them with the other meeting participants.
+
+Information
+
+Organizers and minute takers can create minutes.
+
+The minutes are a PDF with the following information:
+
+Information Details
+
+Meeting metadata Title, date, location
+
+Participant list with information
+
+on all members and guests
+Present/absent, name, e-mail address, role
+
+Minutes text
+
+On the detail page of each item, there is a field for the minutes
+
+text. The minute taker and organizer have access to this text
+
+field.
+
+Information on the items
+Title, duration, speaker, description, proposals (possibly with 
+
+attachments)
+
+Decisions
+
+Voting results Voting issue, result, x of y votes cast
+
+Notes relevant to the minutes Title of note, created by, content
+
+Method
+
+Select the meeting.
+
+On the ribbon, select Meeting > Meeting > Create minutes.
+
+1. 
+
+2. 
+
+62 Business Solution ELO Meeting Premium
+
+
+
+Complete the fields in the Create minutes dialog box as required.
+
+'General' tab
+
+Field Explanation
+
+Document name
+The document name is generated automatically. You can edit it if
+
+necessary.
+
+Create set of
+
+minutes
+
+A set of minutes contains all meeting items. You can create new versions
+
+until you mark the set of minutes as final.
+
+3. 
+
+63 Business Solution ELO Meeting Premium
+
+
+
+Field Explanation
+
+Final version
+
+As soon as you have created a final version of the set of minutes, you
+
+cannot create more sets of minutes. You can still create excerpts from the
+
+minutes.
+
+Create excerpt
+
+from minutes
+
+If items are only relevant for some of the participants, you can create an
+
+excerpt from the minutes for these items. You can select the items
+
+individually.
+
+Information
+
+You can create a set of minutes and an excerpt from the minutes at the same time.
+
+'Settings' tab
+
+Field Explanation
+
+Attach proposal PDF to
+
+minutes
+
+If you select this option, the proposal PDFs are attached to the
+
+minutes.
+
+Select OK.
+
+Result
+
+The minutes are created in the meeting file in the Minutes folder.
+
+Outlook
+
+You can send the minutes to the meeting participants, e.g. using the Send message function.
+
+Send message 
+
+You can send a message to the participants of the meeting.
+
+Method
+
+Select the meeting.
+
+On the ribbon, select Meeting > Notifications > Send message.
+
+4. 
+
+1. 
+
+2. 
+
+64 Business Solution ELO Meeting Premium
+
+
+
+Complete the fields in the Send message dialog box as required.
+
+Field Explanation
+
+Recipient
+
+list
+
+The recipient list automatically contains all meeting participants. You can
+
+remove individuals from the list.
+
+Attachments
+You can attach documents that are stored in the meeting folder to your
+
+message, e.g. the meeting file or the minutes.
+
+Message
+
+You can type and format a message. You have the option to use clips to help
+
+you write text. They contain information about the meeting (e.g. location) and
+
+can be inserted into the text. To use clips, select the position in the text where
+
+you want to insert information and click Clips.
+
+Select OK.
+
+3. 
+
+4. 
+
+65 Business Solution ELO Meeting Premium
+
+
+
+Result
+
+The participants receive an e-mail with the selected documents attached.
+
+66 Business Solution ELO Meeting Premium
+
+
+
+Items
+
+Introduction 
+
+With ELO Meeting Premium, departments can create and prepare items to be raised for discussion
+
+at committee and board meetings.
+
+Permissions 
+
+The permissions for an item depend on its current location and the assigned roles.
+
+Item
+
+location
+Permissions
+
+Item pool
+
+When an item is in an item pool, all people who have at least read access to the item
+
+pool can view the item. The permissions depend on which permissions have been set
+
+for the item pool. The roles described below always have full access to the item.
+
+Meeting
+When an item is in a meeting, all meeting participants can view the item, upload
+
+attachments or documents, and create tasks and notes.
+
+Roles Permissions
+
+Responsible
+
+Speaker
+
+Created by
+
+People assigned one of these roles are granted full access to the item. Only they and
+
+organizers can create votes on the item detail page.
+
+Minute
+
+taker
+
+People assigned this role are granted access to the minutes text field for all items
+
+once the meeting has started.
+
+Elements of an item 
+
+Each item has a form, a detail page ('Meeting item' tab), contents, and a feed.
+
+Information
+
+If you have been given a direct link to the standalone app, the agenda will take you straight
+
+to the detail pages of the item and you will not see the other elements.
+
+67 Business Solution ELO Meeting Premium
+
+
+
+'Meeting item' tab 
+
+You will find the item detail page on the Meeting item tab. This page contains all information that
+
+has been recorded for the item so far. Depending on your permissions, you also have the option to
+
+add information.
+
+For more information, refer to the Item detail page chapter.
+
+68 Business Solution ELO Meeting Premium
+
+
+
+Contents 
+
+You will find the item entries on the Contents tab and in the repository:
+
+Documents: Documents are stored in the item folder. You can upload documents on the item
+
+detail page.
+
+Votes: Votes are created on the item detail page.
+
+Tasks: Tasks are created on the item detail page.
+
+Proposal: A folder is created for proposals.You can also store PDFs and attachments here.
+
+Notes: Notes are created on the item detail page. Personal notes are not stored in this folder,
+
+but in the user's personal area.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+69 Business Solution ELO Meeting Premium
+
+
+
+Form 
+
+Feed 
+
+Refer to the client documentation for information about the feed:
+
+Web Client
+
+Java Client
+
+• 
+
+• 
+
+70 Business Solution ELO Meeting Premium
+
+https://docs.elo.com/user/elo-web-client/en-us/elo-web-client/important-components.html#feed
+https://docs.elo.com/user/elo-web-client/en-us/elo-web-client/important-components.html#feed
+https://docs.elo.com/user/elo-java-client/en-us/elo-java-client/manual/important-components.html#feed
+https://docs.elo.com/user/elo-java-client/en-us/elo-java-client/manual/important-components.html#feed
+
+
+Prepare item 
+
+You can create items to be discussed during a meeting. An item can either be created in a meeting
+
+directly or in an item pool.
+
+Information
+
+You can create items for a meeting board even if you are not a member. In this case, you
+
+need to create the item in a item pool. Someone with the appropriate permissions must
+
+move it to the meeting board for you. For example, if you prepare an item for your
+
+supervisor (member of the meeting board), enter this person in the Responsible field. This
+
+means that your supervisor is authorized for both the agenda item and the meeting board
+
+and can register and submit the agenda item.
+
+You then edit the item by adding documents or a proposal, for example.
+
+If the item is in a item pool, you still have to register it for a meeting and/or submit it. The
+
+difference is that only you can view the contents of a registered item. As soon as you submit your
+
+item, the contents can be viewed by other members and organizers. This allows you to announce
+
+an item of business and schedule it for the agenda.
+
+Create item pool 
+
+An item pool is a folder in which you can create and prepare items.
+
+Item pools inherit the permissions of the folder they were created in. You may have to first create a
+
+folder with the necessary permissions using the New folder function (Ribbon > New tab).
+
+Method
+
+Select the location in the repository where you want to create the item pool.
+
+On the ribbon, select New > Meeting > New item pool.
+
+1. 
+
+2. 
+
+71 Business Solution ELO Meeting Premium
+
+
+
+Complete the fields in the New item pool dialog box as required.
+
+Field Explanation
+
+Name The name should indicate what the item pool will be used for.
+
+Meeting board
+
+information
+
+If you select a meeting board here, the item pool will be linked to it. This
+
+link enables items to use the proposals that were defined for the meeting
+
+board.
+
+Select OK.
+
+Result
+
+The item pool is created at the selected location. Everyone with permissions can create items in it.
+
+Create item 
+
+You can create an item to prepare it for a meeting.
+
+An item can either be created in a meeting directly or in an item pool.
+
+Method
+
+Select the meeting or item pool in which you want to create the item pool.
+
+Select New > Meeting > New item.
+
+3. 
+
+4. 
+
+1. 
+
+2. 
+
+72 Business Solution ELO Meeting Premium
+
+
+
+In the New item dialog box, the radio button is already selected to indicate that the item is
+
+assigned to an item pool or a meeting. Information about the item pool or the meeting is
+
+already entered. However, you can change this setting.
+
+Complete the other fields as required.
+
+Field Explanation
+
+Responsible The person responsible is granted advanced permissions and can edit the item.
+
+Speaker
+The speakers are granted advanced permissions and can edit the item. You can
+
+select multiple people.
+
+Select OK.
+
+3. 
+
+4. 
+
+73 Business Solution ELO Meeting Premium
+
+
+
+Result
+
+The item is created in the meeting directly or in the item pool.
+
+Outlook
+
+You can now prepare the item on the item detail page and prepare a proposal, for example.
+
+If the item is in the item pool, you must register it for meeting in good time so that it can be
+
+scheduled accordingly. The item then has to be submitted. Alternatively, you can also
+
+directly submit the item.
+
+Prepare proposal 
+
+Depending on the meeting board settings, you may need to prepare a proposal before you are able
+
+to register the item for a meeting.
+
+Proceed as follows:
+
+Create the proposal.
+
+Have the proposal approved.
+
+Create a proposal PDF.
+
+Create proposal 
+
+You can create a proposal for your item.
+
+Method
+
+Select the item.
+
+On the ribbon, select Meeting > Proposals > Create proposal.
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+3. 
+
+1. 
+
+2. 
+
+74 Business Solution ELO Meeting Premium
+
+
+
+If multiple proposals are available for the meeting board you are creating the item for, select
+
+the type of proposal.
+
+75 Business Solution ELO Meeting Premium
+
+
+
+In the Create proposal dialog box, the proposal name is already entered. However, you can
+
+change this name.
+
+Enter a recommended resolution. You can also edit this field later using the form.
+
+Select OK.
+
+Result
+
+The Resolution proposal folder is created in the item folder.
+
+The form in this folder contains the data you entered.
+
+Depending on the proposal type, the folder can contain a Word document.
+
+Outlook
+
+You can edit the Word document with the standard functions.
+
+Once you have finished the proposal, you can submit it for approval.
+
+Initiate approval 
+
+After you have finished preparing the proposal, you still need to have it approved.
+
+3. 
+
+4. 
+
+• 
+
+• 
+
+76 Business Solution ELO Meeting Premium
+
+https://docs.elo.com/user/elo-web-client/en-us/elo-web-client/document-tab.html
+https://docs.elo.com/user/elo-web-client/en-us/elo-web-client/document-tab.html
+
+
+Method
+
+Select the Resolution proposal folder.
+
+On the ribbon, select Meeting > Proposals > Initiate approval.
+
+In the Approve proposal dialog box, enter a comment for the people you select to review the
+
+proposal.
+
+Under Check steps, select who should approve the proposal.
+
+Optional: Enter a deadline for approval.
+
+The Proposal tab is just for overview purposes and cannot be edited.
+
+Select OK.
+
+Result
+
+The reviewers are assigned a corresponding task.
+
+Outlook
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+77 Business Solution ELO Meeting Premium
+
+
+
+Once the approval has been granted, you will get a notification in your task area that your proposal
+
+has been approved. You can see the comment entered by the last reviewer in the Last comment
+
+box on the Form tab.
+
+If you leave the Create PDF document option checked, you can immediately create a PDF document
+
+of the proposal. Enter a name for the document and an optional version comment. Once you select 
+
+Confirm, the PDF document is created in the proposal folder.
+
+If the proposal has attachments, a second PDF is created from the attachments.
+
+If you did not create a PDF document, the task disappears from your task area. However, you can
+
+create a PDF at any time with the Create proposal PDF function.
+
+Approve proposal 
+
+If you need to approve a proposal, you will find the task in your task area.
+
+Method
+
+Select the Approve proposal task.1. 
+
+2. 
+
+78 Business Solution ELO Meeting Premium
+
+
+
+Select the Form tab. On this tab, you will see the message from the person who assigned you
+
+the approval task.
+
+You will find the recommended resolution on the Proposal tab of the form.
+
+On the Contents tab, you will find the additional documents that were created.
+
+As soon as you have finished reviewing the proposal, select Approve.
+
+Result
+
+The task disappears from your task area. The proposal is approved.
+
+The person who triggered the approval process gets confirmation that the proposal has been
+
+approved.
+
+Create proposal PDF 
+
+You can create a PDF of a proposal. This PDF is added to the meeting file and can be attached to the
+
+minutes.
+
+Method
+
+Select the proposal folder.
+
+3. 
+
+1. 
+
+2. 
+
+79 Business Solution ELO Meeting Premium
+
+
+
+On the ribbon, select Meeting > Proposals > Create proposal PDF.
+
+In the Create proposal PDF dialog box, the document name is already entered. However, you
+
+can change this name.
+
+You also have the option to enter a version comment.
+
+Select OK.
+
+Result
+
+A PDF is created in the proposal folder.
+
+The PDF consists of the following elements:
+
+Item metadata and recommended resolution from the form
+
+Contents of the Word document
+
+If the proposal has attachments, a second PDF is created from the attachments.
+
+Outlook
+
+You can repeat this step. Each time, a new version of the PDF is created, which becomes the
+
+new working version.
+
+The PDF document is added to the meeting file and can be included in the minutes.
+
+Register item 
+
+You can register an item in advance of a meeting while you continue to edit it. This allows you to
+
+schedule the item for agenda consideration. The contents cannot yet be viewed via the meeting.
+
+Information
+
+Be aware of the registration deadline. Once the registration deadline has passed, you can no
+
+longer register items for a meeting.
+
+Alternative
+
+3. 
+
+• 
+
+• 
+
+• 
+
+• 
+
+80 Business Solution ELO Meeting Premium
+
+
+
+Submit item: If the meeting participants are allowed to see the contents of the item, you can
+
+submit it directly.
+
+Method
+
+Select the item.
+
+On the ribbon, select Meeting > Item > Register item.
+
+In the Register item dialog box, the meeting board is already selected.
+
+Select the meeting you want to register an item for.
+
+You have the option to make changes to the item on the Item tab if you need to.
+
+Select OK.
+
+Result
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+81 Business Solution ELO Meeting Premium
+
+
+
+The item is now registered for a meeting. The item remains in the item pool. The form for
+
+scheduling the item is visible in the meeting.
+
+Outlook
+
+You can continue to edit the item on the item detail page.
+
+You can submit the item as soon as you want to share its contents with the meeting
+
+participants.
+
+You can also withdraw the item.
+
+Submit item 
+
+You can submit an item that is in a item pool to a meeting. You can continue to edit the item, but
+
+the other meeting participants can already see its contents.
+
+Information
+
+Be aware of the registration deadline. Once the registration deadline has passed, you can no
+
+longer submit items to a meeting.
+
+Alternative
+
+Register item: If you don't want the meeting participants to be able to see the contents of the item
+
+yet, you can register the item and submit it later.
+
+Method
+
+Select the item.
+
+On the ribbon, select Meeting > Item > Register item.
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+82 Business Solution ELO Meeting Premium
+
+
+
+In the Submit item dialog box, the meeting board is already selected.
+
+If the item is already registered, the meeting is also already selected. If not, select the
+
+meeting you want to submit your item to.
+
+You have the option to make changes to the item on the Item tab if you need to.
+
+Select OK.
+
+Result
+
+The item has now been submitted to the meeting. All its contents can be viewed by the meeting
+
+participants. A reference to the item remains in the item pool.
+
+Outlook
+
+You can continue to edit the item on the item detail page.
+
+You can also withdraw the item.
+
+3. 
+
+• 
+
+• 
+
+83 Business Solution ELO Meeting Premium
+
+
+
+Withdraw item 
+
+You can withdraw an item from a meeting. It makes no difference whether the item was created in
+
+the meeting directly or in the item pool.
+
+Method
+
+Select either the item reference in the item pool or the item in the meeting.
+
+On the ribbon, select Meeting > Item > Withdraw item.
+
+In the Withdraw item dialog box, the item pool that contains the item reference is already
+
+selected. You can change this if you need to.
+
+You must specify a reason for withdrawing the item.
+
+Select OK.
+
+Result
+
+The item is in the selected item pool. If this is not the original item pool, there is still a reference in
+
+the original item pool.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+84 Business Solution ELO Meeting Premium
+
+
+
+Item detail page 
+
+The item detail page is where you record all information about an item before and after the
+
+meeting.
+
+With the exception of proposals, you can enter all information on the item detail page.
+
+You can access the item detail page as follows:
+
+Via the item:
+
+Select the item.
+
+Select the Item tab.
+
+Via the meeting:
+
+Select the meeting.
+
+Select the Meeting tab.
+
+Select the item.
+
+Header 
+
+The header part of the page contains the following information about the item:
+
+Element Explanation
+
+Title
+
+Status
+While you are preparing an item, it can have the status Draft, Registered, or 
+
+Submitted. Refer to the Prepare item chapter to learn how to submit an item.
+
+Responsible
+
+Time
+
+(duration)
+
+Until an item has been submitted to an agenda, you will only see the scheduled
+
+duration here. Once it is on an agenda, you will see the actual time.
+
+Meeting This element is only displayed if the item has been assigned to a meeting.
+
+Description The item description that was entered in the form is displayed here.
+
+Speaker The person or persons presenting the item is displayed here.
+
+1. 
+
+2. 
+
+1. 
+
+2. 
+
+3. 
+
+85 Business Solution ELO Meeting Premium
+
+
+
+Element Explanation
+
+Proposal
+
+status
+If a resolution was passed, it is displayed here.
+
+You can click the button with the pencil icon to edit some information about the item. The data that
+
+you can change corresponds to the information you entered in the form. Always use this function if
+
+you want the changes to be immediately displayed on the item detail page.
+
+The menu with three dots takes you to the Go to function. This function enables you to go straight
+
+to the corresponding Items folder. This function only appears if you opened the item via a meeting.
+
+Information for organizers
+
+You can use the menu with three dots to move the item to another meeting.
+
+As soon as an item has been discussed, use the Pass resolution/Record decision button. This option
+
+depends on the proposal type.
+
+'Proposal' area 
+
+This area is displayed if a proposal was created for the item.
+
+The following elements are displayed:
+
+Element Explanation
+
+Status
+You see whether the proposal status is currently Draft, Approval initiated, or 
+
+Approved.
+
+Recommended
+
+resolution
+
+If a recommended resolution has been defined, the text is displayed here. You
+
+can change this text on the Form tab of the proposal folder.
+
+Files All contents of the proposal folder are displayed and can be opened from here.
+
+Upload attachment
+
+You can use the Upload attachments button to upload attachments to the
+
+item. Refer to the Upload files chapter for more information about
+
+attachments.
+
+86 Business Solution ELO Meeting Premium
+
+
+
+'Minutes text' area 
+
+Minute takers and organizers are authorized to write minutes. They can do so as soon as the
+
+organizer has started the meeting. For more information about starting a meeting, refer to the 
+
+Meeting assistant chapter.
+
+The minutes text for all items is recorded in the minutes.
+
+'Documents' area 
+
+In the Documents area, you can access all the documents that have already been uploaded for an
+
+item.
+
+Use the Upload documents button if you want to store additional documents.
+
+Refer to the Upload files chapter for more information about documents.
+
+'Tasks' area 
+
+In the Tasks area, you can see all tasks relating to an item.
+
+Create task
+
+Click the Create new task button to create a task.
+
+Field Explanation
+
+Assignee
+In this field, you can select from a list of the meeting participants with an ELO
+
+account. Alternatively, you can type in the name of people without an ELO account.
+
+Due date
+If you select this field, a calendar opens in which you can select a date. If you create
+
+an ELO task, it will escalate once the due date is exceeded.
+
+87 Business Solution ELO Meeting Premium
+
+
+
+Field Explanation
+
+Create ELO
+
+task
+
+If you have selected someone with an ELO account under Assignee, you can create
+
+an ELO task that will appear in that user's task area.
+
+Edit task
+
+If an ELO task was created, it will show up in the task area of the user whom the task has been
+
+assigned to. Once the ELO task has been edited, it is assigned the status Done.
+
+If an ELO task was not created, the task is assigned the status Done using the check box next to
+
+the task.
+
+A task can be closed oder deleted using the menu with three dots.
+
+'Voting' area 
+
+In the Voting area, you can see all votes relating to an item.
+
+You cannot cast a vote until the vote has been started.
+
+Create vote
+
+Click the Create new vote button to create a vote.
+
+Only organizers, speakers, and users responsible for an item can create votes.
+
+Field Explanation
+
+Template
+
+You have to select a template for additional fields to appear. With electronic voting, all
+
+members of the meeting board with an ELO account have the option to cast their vote
+
+themselves. If votes are cast by a show of hands, the person organizing the meeting
+
+enters the result.
+
+88 Business Solution ELO Meeting Premium
+
+
+
+Field Explanation
+
+Number of
+
+votes
+As soon as the specified number of votes is reached, no more votes can be cast.
+
+Hold vote
+
+An organizer must start the vote. As soon as the maximum number of votes is reached, no more
+
+votes can be cast.
+
+'Notes' area 
+
+The Notes area contains all public notes as well as your own private notes about an item.
+
+Create note
+
+Click the Create new note button to create a note.
+
+There are the following types of notes:
+
+Private Only you can see this note.
+
+Public All people who can see your item can see this note.
+
+Relevant for
+
+minutes
+
+You can mark a public note as relevant for the minutes. In this case, it is
+
+included in the minutes.
+
+You can edit all notes after they have been created. If you have marked a note as relevant for the
+
+minutes, you also have the option to undo this.
+
+Upload files 
+
+You can upload files that are required for discussing an item.
+
+In this context, there is a difference between documents and attachments. They are both files that
+
+are stored for an item. However, they are used differently.
+
+89 Business Solution ELO Meeting Premium
+
+
+
+Method
+
+You can upload files in the app. For more information, refer to the Documents and Attachments
+
+chapters.
+
+Alternatively, you can use the standard functions. However, make sure that you store the files in
+
+the correct place in each case as described in the subchapters.
+
+Insert file
+
+Document from template
+
+Drag-and-drop
+
+The following table illustrates the differences between attachments and documents.
+
+Document Attachment
+
+Filing location Item folder Proposal folder
+
+Appears in the meeting file No Yes
+
+Documents 
+
+Documents are stored in the item folder. There must not be any other child folders at intermediate
+
+levels.
+
+On the item detail page, you store documents by opening the Documents area where you will find
+
+the Upload documents button. Your explorer will open and you can select a document.
+
+Attachments 
+
+Attachments are created in the proposal folder. There must not be any other child folders at
+
+intermediate levels.
+
+On the item detail page, you store attachments by opening the proposals area where you will find
+
+the Upload attachments button.
+
+You can then create a PDF from all the attachments using the Create proposal PDF function.
+
+• 
+
+• 
+
+• 
+
+90 Business Solution ELO Meeting Premium
+
+https://docs.elo.com/user/elo-web-client/en-us/elo-web-client/important-actions-in-detail.html#file-document
+https://docs.elo.com/user/elo-web-client/en-us/elo-web-client/important-actions-in-detail.html#file-document
+https://docs.elo.com/user/elo-web-client/en-us/elo-web-client/new-tab.html#document-from-template
+https://docs.elo.com/user/elo-web-client/en-us/elo-web-client/new-tab.html#document-from-template
+https://docs.elo.com/user/elo-web-client/en-us/elo-web-client/navigation-and-operation.html#drag-and-drop
+https://docs.elo.com/user/elo-web-client/en-us/elo-web-client/navigation-and-operation.html#drag-and-drop
+
+	Table of contents
+	Introduction
+	Structure of the documentation
+	Basics
+	Possible actions
+
+	Target audience
+	Roles
+
+	Basics
+	Basic principle
+	General note
+	Requirements
+
+	Program interface
+	'Repository' work area
+	Meeting app
+
+	Calendar
+	Meeting calendar
+	Meeting board calendar
+	Functions
+
+
+	Meeting board
+	Introduction
+	Permissions
+	Elements of a meeting board
+	'Meeting board' tab
+	Contents
+	Form
+	Feed
+
+
+	Create meeting board
+	Edit meeting board
+	Edit basic meeting board settings
+	Create notification template
+	Add members
+	Set member as inactive
+	Create recurring item
+	Edit recurring items
+
+	Meeting board calendar
+
+	Meetings
+	Introduction
+	Permissions
+	Elements of a meeting
+	'Meeting' tab
+	Contents
+	Form
+	Feed
+
+
+	Meeting app
+	Agenda
+	Attendance list
+
+	Prepare meeting
+	Create meeting
+	Create extraordinary meeting
+	Approve meetings
+	Prepare meeting
+	Create meeting file
+
+	Edit meeting
+	Edit basic meeting settings
+	Cancel meeting
+	Reschedule meeting
+	Edit list of participants
+
+	Meeting assistant
+	Information
+	Organize agenda
+	Agenda pool
+	Agenda
+	Clean up agenda
+
+
+	Conduct meeting
+	Follow up on a meeting
+	Create minutes
+	Send message
+
+
+	Items
+	Introduction
+	Permissions
+	Elements of an item
+	'Meeting item' tab
+	Contents
+	Form
+	Feed
+
+
+	Prepare item
+	Create item pool
+	Create item
+	Prepare proposal
+	Create proposal
+	Initiate approval
+	Approve proposal
+	Create proposal PDF
+
+	Register item
+	Submit item
+	Withdraw item
+
+	Item detail page
+	Header
+	'Proposal' area
+	'Minutes text' area
+	'Documents' area
+	'Tasks' area
+	'Voting' area
+	'Notes' area
+	Upload files
+	Documents
+	Attachments
+
+
+
+

@@ -1,0 +1,4716 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO Images | Docker
+
+
+ELO Images
+
+Docker
+
+
+
+3
+
+3
+
+4
+
+5
+
+6
+
+14
+
+14
+
+16
+
+18
+
+18
+
+19
+
+20
+
+23
+
+24
+
+27
+
+28
+
+32
+
+33
+
+37
+
+38
+
+49
+
+50
+
+56
+
+57
+
+59
+
+60
+
+72
+
+75
+
+76
+
+Table of contents
+
+Getting started
+
+Prerequisites
+
+sidebarDepth: 3
+
+Deploy a repository
+
+Retrieve your CLI secret
+
+Core concepts
+
+Volumes and persistence
+
+Logging
+
+Docker Images
+
+Overview of images
+
+eck-services-internal/as
+
+Clustering
+
+eck-services-internal/tr2
+
+Clustering
+
+eck-services-internal/flows
+
+Clustering
+
+eck-services-internal/flows-worker
+
+Clustering
+
+eck-services-internal/ix
+
+Clustering
+
+eck-services-internal/ix-setup
+
+Clustering
+
+eck-services-internal/ix-import
+
+Clustering
+
+eck-services-internal/server
+
+Environment variables for ix configuration
+
+eck-services/search
+
+eck-services-internal/ui
+
+Clustering
+
+2 ELO Images
+
+
+
+Getting started
+
+Prerequisites
+
+It is recommended using docker-compose for running eck in docker.
+
+Docker 18.02+
+
+Docker compose 3.6+
+
+Running ELO docker images on Windows
+
+Windows Subsystem for Linux (WSL2) in combination with Docker Desktop is a good start for
+
+running ELO on Windows machines for testing and developing use.
+
+Get WSL2 on Windows 10
+
+Get Docker Desktop for Windows
+
+• 
+
+• 
+
+• 
+
+• 
+
+3 ELO Images
+
+https://docs.docker.com/
+https://docs.docker.com/
+https://docs.docker.com/compose/install/
+https://docs.docker.com/compose/install/
+https://docs.microsoft.com/en-us/windows/wsl/install-win10
+https://docs.microsoft.com/en-us/windows/wsl/install-win10
+https://www.docker.com/products/docker-desktop
+https://www.docker.com/products/docker-desktop
+
+
+sidebarDepth: 3
+
+4 ELO Images
+
+
+
+Deploy a repository
+
+Login to registry.elo.com
+
+$ docker login registry.elo.com -u <username> -p <cli-secret>
+
+5 ELO Images
+
+
+
+Retrieve your CLI secret
+
+Open https://registry.elo.com in a web browser and login using OIDC provider.
+
+The access token/ cli secret can be retrieved in the user profile.
+
+Copy the CLI secret from the user profile.
+
+6 ELO Images
+
+https://registry.elo.com
+https://registry.elo.com
+
+
+Virtual memory settings on host
+
+Elasticsearch uses a mmapfs directory for storing indices. By default many operating systems limit
+
+mmapcounts which will result in out of memory exceptions.
+
+Every host that run elasticsearch services require an increased limit of at least 262144.
+
+The current limit can be checked using the following command:
+
+You can increase the mmapcounts limit to 262144 with:
+
+Run Repository stack using docker-compose
+
+The following docker compose file demonstrates how to run ECK images on docker. 
+
+$ sudo sysctl vm.max_map_count
+
+$ sudo sysctl vm.max_map_count=262144
+
+version: "3.7"
+
+services:
+
+  server:
+
+    image: registry.elo.com/eck-services-internal/server:v23-1.3
+
+    container_name: server
+
+    ports:
+
+      - 9090:9090
+
+    links:
+
+      - ix-setup:ix-setup
+
+      - search:search
+
+      - tr2:tr2
+
+    environment:
+
+      IX_URL_BASE: http://server:9090/repository/ix
+
+      IX_URL_PRIVATE: http://server:9090/repository/ix
+
+      ELO_HOST: http://server:9090
+
+      IX_APP_PATH: repository
+
+      DATABASE_PASSWORD: CKZbP0SVMAPu
+
+      KEYSTORE_PASSWORD: NLcad64E3F7xL2dC
+
+      AUTH_TOMCAT_USERNAME: admin
+
+      AUTH_TOMCAT_PASSWORD: HpHZ6Orc5RWO
+
+      AUTH_SERVICE_PASSWORD: moxIZAaDQGjw
+
+    volumes:
+
+      - data-ix:/opt/elo/data/ix
+
+      - data-eloam:/opt/elo/data/eloam
+
+      - repository-system:/opt/elo/archive/elosys
+
+      - repository-basis:/opt/elo/archive/basis
+
+7 ELO Images
+
+
+
+      - certificates-ix:/opt/elo/config/certificates/ix/:ro
+
+      - plugins:/opt/elo/prog/webapps/ix-plugins/public
+
+      - logs:/opt/elo/logs
+
+  ix-setup:
+
+    image: registry.elo.com/eck-services-internal/ix-setup:v23-1.3
+
+    container_name: ix-initialize
+
+    environment:
+
+      ELO_TEXTREADER_URL: http://tr2:8100
+
+      IX_URL_BASE: http://server:9090/repository/ix
+
+      IX_URL_PRIVATE: http://server:9090/repository/ix
+
+      ELO_HOST: http://server:9090
+
+      AUTH_SERVICE_PASSWORD: moxIZAaDQGjw
+
+      AUTH_ADMIN_PASSWORD: QRLTS38FjesG
+
+      DATABASE_PASSWORD: CKZbP0SVMAPu
+
+      DATABASE_USERNAME: elodb
+
+      KEYSTORE_PASSWORD: NLcad64E3F7xL2dC
+
+      ELO_LIC: |-
+
+        createdate=2021-02-25
+
+        customer1=ELO Digital Office GmbH - NOT FOR RESALE
+
+        ...
+
+        hash1=...fb
+
+        ---
+
+        majjgodbh...
+
+    volumes:
+
+      - data-eloam:/opt/elo/data/eloam
+
+      - data-ix:/opt/elo/data/ix
+
+      - repository-system:/opt/elo/archive/elosys
+
+      - repository-basis:/opt/elo/archive/basis
+
+      - certificates-ix:/opt/elo/config/certificates/ix
+
+      - certificates-search:/opt/elo/config/certificates/search
+
+      - logs:/opt/elo/logs
+
+  ix-import:
+
+    image: registry.elo.com/eck-services-internal/ix-import:v23-1.3
+
+    container_name: ix-import
+
+    environment:
+
+      AUTH_SERVICE_PASSWORD: moxIZAaDQGjw
+
+      AUTH_ADMIN_PASSWORD: QRLTS38FjesG
+
+  as:
+
+    image: registry.elo.com/eck-services-internal/as:v23-1.2
+
+    container_name: as
+
+    environment:
+
+      AUTH_SERVICE_PASSWORD: moxIZAaDQGjw
+
+    ports:
+
+      - 9060:9090
+
+      - 8778:8778
+
+8 ELO Images
+
+
+
+      - 9779:9779
+
+    links:
+
+      - server:ix
+
+  search:
+
+    image: registry.elo.com/eck-services-internal/search:v23-1.0
+
+    container_name: search
+
+    ports:
+
+      - 9204:9204
+
+      - 9200:9200
+
+    environment:
+
+      bootstrap.memory_lock: "true" 
+
+      AUTH_SERVICE_USERNAME: ELO Service
+
+      AUTH_SERVICE_PASSWORD: moxIZAaDQGjw
+
+      AUTH_SERVICE_PASSWORD_BCRYPT: $$2a$$04$$Dj/qj0ceUNr8pAEj92SBoO9iA5qmJStYFlaPCnwv8/MsqtlLqXrIq
+
+      KEYSTORE_PASSWORD: NLcad64E3F7xL2dC
+
+    volumes:
+
+      - data-search:/opt/elo/data/index
+
+      - certificates-search:/opt/elo/config/certificates/search
+
+      - logs:/opt/elo/logs 
+
+  flows:
+
+    image: registry.elo.com/eck-services-internal/flows:v23-1.2
+
+    container_name: flows
+
+    environment:
+
+      AUTH_SERVICE_PASSWORD: moxIZAaDQGjw
+
+      AUTH_ADMIN_PASSWORD: QRLTS38FjesG
+
+    ports:
+
+      - 9010:9090
+
+    links:
+
+      - server:ix
+
+      - flows-worker:flows-worker
+
+    volumes:
+
+      - data-flows:/opt/elo/data/flows/
+
+      - logs:/opt/elo/logs
+
+  flows-worker:
+
+    image: registry.elo.com/eck-services-internal/flows-worker:v23-1.2
+
+    container_name: flows-worker
+
+    environment:
+
+      AUTH_SERVICE_PASSWORD: moxIZAaDQGjw
+
+      AUTH_KARAF_PASSWORD: karaf
+
+      FLOWS_WORKER_HOST: flows-worker
+
+    ports:
+
+      - 8101:8101
+
+      - 1099:1099
+
+      - 44444:44444
+
+      - 8181:8181
+
+      - 9999:9999
+
+9 ELO Images
+
+
+
+ELO_LIC: Make sure to supply a license.
+
+For ELO 23 images use an ELO 23 license.
+
+Make sure to use |- literal yaml style with strip chomping indicator to pass your 
+
+multiline license correctly by avoiding final line break and any trailing empty lines.
+
+From version 21.2 onwards you can set a private rsa key for ELO_LIC instead of a license key.
+
+ELO will download the rsa encrypted license from a license server and will decrypt it with
+
+the private key.
+
+      - 9000:9000
+
+    links:
+
+      - server:ix
+
+    volumes:
+
+      - logs:/opt/elo/logs
+
+  tr2:
+
+    image: registry.elo.com/eck-services-internal/tr2:v23-1.2
+
+    container_name: tr2
+
+    environment:
+
+      AUTH_TOMCAT_USERNAME: admin
+
+      AUTH_TOMCAT_PASSWORD: HpHZ6Orc5RWO
+
+    ports:
+
+      - 8100:8100
+
+  postgres:
+
+    image: registry.elo.com/eck-services-internal/postgresql:12.5.0
+
+    container_name: postgres
+
+    environment:
+
+      POSTGRES_USERNAME: elodb
+
+      POSTGRES_PASSWORD: CKZbP0SVMAPu
+
+    volumes:
+
+      - data-db:/bitnami/postgresql
+
+    stdin_open: true
+
+    tty: true
+
+volumes:
+
+  repository-system:
+
+  repository-basis:
+
+  data-eloam:
+
+  data-ix:
+
+  data-search:
+
+  data-db:
+
+  plugins:
+
+  certificates-ix:
+
+  certificates-search:
+
+  data-flows:
+
+  logs:
+
+10 ELO Images
+
+
+
+Additional services
+
+rest service
+
+You can add the block below services directly to your complete docker-compose file or run it as an
+
+addition to the other ELO services 
+
+The images are also available for ELO 20 (v20-0.3) and ELO 21.0 (v21-0.0 / v21-1.1 / v21-2.3
+
+/ v21-3.0 / v21-4.0)
+
+Upgrading former version to current version
+
+search
+
+From search version v21-2.x onwards Elasticsearch version 7.15.2 is used. Search versions 
+
+v20-0.x contains Elasticsearch version 5.6.3.
+
+Upgrading from former versions to search version v21-2.x and onwards:
+
+data directories of v20-0.x images are not compatible with v23-0.x images. re-index is
+
+required. There are two options if you want upgrade to search v23-0.x:
+
+Either you delete all files and directories in /opt/elo/data/index. Then all old indexed data
+
+will be lost.
+
+or
+
+Use a new volume for search v23-0. All old indexed data remains with the old volume.
+
+version: "3.7"
+
+services:
+
+  rest:
+
+    image: registry.elo.com/eck-services-internal/rest:v23-1.2
+
+    container_name: rest
+
+    environment:
+
+      AUTH_TOMCAT_USERNAME: admin
+
+      AUTH_TOMCAT_PASSWORD: HpHZ6Orc5RWO
+
+      REST_CORS_ORIGINS: "http://localhost:9020"
+
+    ports:
+
+      - 9020:9090
+
+    links:
+
+      - ix:ix
+
+rm -rf /opt/elo/data/index/*
+
+11 ELO Images
+
+
+
+Example: 
+
+After the new volume data-search-new is in use you have to trigger the indexer to create the
+
+data index for Elasticsearch major version 7. You can find the indexer under
+
+Login to Web Client or AdminConsole
+
+Native Linux
+
+When running Docker natively on Linux, you can access host services using the IP address of the 
+
+docker0 interface. From inside the container, this will be your default route.
+
+For example the address of docker0 can be found using:
+
+...
+
+  search:
+
+    image: registry.elo.com/eck-services-internal/search:v23-1.0
+
+    container_name: search
+
+    ports:
+
+      - 9204:9204
+
+      - 9200:9200
+
+    environment:
+
+      bootstrap.memory_lock: "true" 
+
+      AUTH_SERVICE_USERNAME: ELO Service
+
+      AUTH_SERVICE_PASSWORD: moxIZAaDQGjw
+
+      AUTH_SERVICE_PASSWORD_BCRYPT: $$2a$$04$$Dj/qj0ceUNr8pAEj92SBoO9iA5qmJStYFlaPCnwv8/MsqtlLqXrIq
+
+      KEYSTORE_PASSWORD: NLcad64E3F7xL2dC
+
+    volumes:
+
+      - data-search-new:/opt/elo/data/index
+
+      - certificates-search:/opt/elo/config/certificates/search
+
+      - logs:/opt/elo/logs
+
+...
+
+volumes:
+
+  ...
+
+  data-ix:
+
+  data-search-new:
+
+  data-db:
+
+  plugins:
+
+  certificates-ix:
+
+  certificates-search:
+
+  ...
+
+https://<external url>/<repository>/manager/esconfig/esConf.jsp?route=esConf
+
+12 ELO Images
+
+
+
+The default ip address of the docker0 interface and the default bridge on Linux-based system is 
+
+172.17.0.1.
+
+Therefore the WebClient and the AdminConsole can be accessed on Linux-based system:
+
+Windows and Mac
+
+On Windows and Mac the special DNS name host.docker.internal which will resolve to the internal
+
+IP address used by the host, can be used to connect to the WebClient and AdminConsole.
+
+Therefore the WebClient and the AdminConsole can be accessed on Windows-based and MacOS-
+
+based systems:
+
+ip address show dev docker0 | grep "inet\b" | awk '{print $2}' | cut -d/ -f1
+
+http://172.17.0.1:9090/${REPO_NAME}/plugin/de.elo.ix.plugin.proxy/web/
+
+http://172.17.0.1:9090/${REPO_NAME}/plugin/de.elo.ix.plugin.proxy/administration/
+
+http://host.docker.internal:9090/${REPO_NAME}/plugin/de.elo.ix.plugin.proxy/web/
+
+http://host.docker.internal:9090/${REPO_NAME}/plugin/de.elo.ix.plugin.proxy/administration/
+
+13 ELO Images
+
+
+
+Core concepts
+
+Volumes and persistence
+
+Required volumes
+
+Repository data
+
+The most important volumes are the ones that keep repository data. All documents within ELO are
+
+stored here.
+
+repository-system, repository-basis
+
+Services Data
+
+data-eloam, data-ix, data-search, data-db
+
+For tr2 data-ocr and data-tr are not required anymore
+
+Certificates
+
+certificates-ix, certificates-search
+
+Volumes for Docker Compose
+
+Logs
+
+Volume to store log files for Docker Compose deployment
+
+logs
+
+Permissions
+
+ELO Cloud on Kubernetes images don't run with ROOT access. Therefore if mounting host paths to
+
+the containers rights and ownerships must be changed on the docker-host.
+
+Service User in containers: 1001
+
+Please note that it's best practice to use arbitrary user ids within docker. This enforces
+
+security and prevents the users from accessing system ressources in case of a break out
+
+If the ix volume /opt/elo/data/ix should be mounted on hostpath /mnt/share/data-ix the hostpath
+
+must be chown to userid 1001. e.g. chown -R 1001:1001 /mnt/share/data-ix
+
+14 ELO Images
+
+
+
+# Start using docker-compose example for host mounted volumes
+
+version: "3.7"
+
+services:
+
+  ix:
+
+    # ...
+
+    volumes:
+
+      - /mnt/share/data-ix:/opt/elo/data/ix
+
+      - /mnt/share/data-eloam:/opt/elo/data/eloam
+
+      - /mnt/share/repository-system:/opt/elo/archive/elosys
+
+      - /mnt/share/repository-basis:/opt/elo/archive/basis
+
+      - /mnt/share/certificates-ix:/opt/elo/config/certificates/ix/:ro
+
+# creating volumes and changing permissions
+
+$ MNT_PATH=/mnt/share
+
+$ mkdir -p \
+
+  $MNT_PATH/data-ix \
+
+  $MNT_PATH/data-eloam \
+
+  $MNT_PATH/repository-system \
+
+  $MNT_PATH/repository-basis \
+
+  $MNT_PATH/certificates-ix
+
+$ chown -R 1001:1001 \
+
+  $MNT_PATH/data-ix \
+
+  $MNT_PATH/data-eloam \
+
+  $MNT_PATH/repository-system \
+
+  $MNT_PATH/repository-basis \
+
+  $MNT_PATH/certificates-ix
+
+15 ELO Images
+
+
+
+Logging
+
+Most ECK service containers that are based on Java applications feature three appender modes for
+
+logging.
+
+FILE This appender will forward logs to a local log file. (Default)
+
+LOKI This appender will forward logs to Loki (by Grafana Labs) instance.
+
+NONE This appender will only foward logs to stdout.
+
+Log appenders can be specified by the environemt variable LOG_APPENDER. As a default the file
+
+appender is used. Logs are always forwarded to stdout.
+
+FILE Log to local files
+
+By default services log to files that are located in /opt/elo/logs. It is recommended mounting this
+
+folder as a volume if logging to local files is used.
+
+Defining LOG_APPENDER: FILE is optional since its the default for all images.
+
+Applications feature additional configuration options for log rotation and retention. Refer to the
+
+image documentation of the service for more information.
+
+• 
+
+• 
+
+• 
+
+version: "3.3"
+
+services:
+
+  ix:
+
+    image: registry.elo.com/eck-services/ix:latest
+
+    environment:
+
+      LOG_APPENDER: FILE
+
+# Keep tomcat logs for the last {i} days
+
+TOMCAT_LOG_MAX_HISTORY_DAYS: 7 
+
+# Max. tomcat log file size
+
+TOMCAT_LOG_MAX_FILE_SIZE: 20MB
+
+# Define Index Server log level
+
+ENV IX_LOG_LEVEL: info
+
+# Keep Index Server logs for the last {i} days
+
+ENV IX_LOG_MAX_HISTORY_DAYS: 14
+
+# Max. Index Server log file size
+
+ENV IX_LOG_MAX_FILE_SIZE: 500MB
+
+16 ELO Images
+
+
+
+LOKI Log to Loki (by Grafana Labs)
+
+We consider Loki one of the best options for implementing a centralized logging stack. Loki
+
+features a nice user interface for browsing and retrieving logs build into Grafana. In addition Loki is
+
+easy to maintain and resource friendly.
+
+Most of our services allow forwarding logs directly to a Loki endpoint using dedicated Loki
+
+appenders.
+
+The following options can be used in order to customize Loki.
+
+If the service does not feature forwarding logs to LOKI mode NONE is used.
+
+Limitations:
+
+Loki appenders are only supported by Java applications.
+
+Tomcat access logs are forwarded to STDOUT only if Loki appender is set.
+
+NONE Log to console (stdout)
+
+If running services within Kubernetes a recommended way is setting up a centralized logging
+
+environment. This could either be Loki using the dedicated LOKI appender or centralized solutions
+
+for forwarding logs based on the containers stdout. (Like fluentd, ...)
+
+The appender mode NONE will be used in order to only forward logs to stdout.
+
+version: "3.3"
+
+services:
+
+  ix:
+
+    image: registry.elo.com/eck-services/ix:latest
+
+    environment:
+
+      LOKI_HTTP_URL: "http://loki:3100/loki/api/v1/push"
+
+      LOG_APPENDER: LOKI
+
+# Required. Loki endpoint to be used for sending batches
+
+LOKI_HTTP_URL: "http://loki:3100/loki/api/v1/push"
+
+# Max number of events to put into a single batch before sending it to Loki
+
+LOKI_BATCH_MAX_ITEMS: 1000 
+
+# Max number of bytes a single batch (as counted by Loki) can contain.
+
+LOKI_BATCH_MAX_BYTES: 4194304 
+
+# Max time in milliseconds to wait before sending a batch to Loki, even if that batch isn't full
+
+LOKI_BATCH_TIMEOUT: 60000 
+
+#Max number of bytes to keep in the send queue. When the queue is full, incoming log events are dropped
+
+LOKI_SEND_QUEUE_MAX_BYTES: 41943040
+
+• 
+
+• 
+
+17 ELO Images
+
+
+
+Docker Images
+
+Overview of images
+
+ELO cloud docker images are based on Debian Slim.
+
+Image
+Included
+
+components
+Description
+
+eck-services-
+
+internal/as
+
+ELO Automation
+
+Services
+
+This image includes ELO automation services.
+
+ELO AS provides a simple to use interface that allows
+
+building automated tasks in ELO.
+
+eck-services-
+
+internal/flows
+ELO Flows This image includes ELO flows manager and service.
+
+eck-services-
+
+internal/flows-
+
+worker
+
+ELO Flows Worker This image includes ELO flows worker. Based on karaf.
+
+eck-services-
+
+internal/ix
+ELO Index Server
+
+This image includes the ELO Index Server.
+
+It can be used as a frontend-service for all incoming
+
+connections, api calls and ELO web services.
+
+eck-services-
+
+internal/ix-setup
+
+ELO Cloud Index
+
+Server Setup
+
+This image contains the ELO setup routine for ELO
+
+Index Server.
+
+eck-services-
+
+internal/ix-import
+
+ELO Cloud Index
+
+Server Import
+
+This image contains the import routine for ELO Index
+
+Server. 
+
+Imports thesaurus and dropzone.
+
+eck-services-
+
+internal/search
+ELO iSearch
+
+This image includes the iSearch. It provides different
+
+search functionalities like the full text search.
+
+eck-services-
+
+internal/sever
+ELO Server
+
+IX and UI migrates into server. Use this image for
+
+21-3.x and onwards.
+
+eck-services-
+
+internal/tr2
+ELO Textreader2
+
+CV, OCR and OCR-setup mirgrates into TR2. Use this
+
+image for 21-4.x and onwards.
+
+eck-services-
+
+internal/ui
+
+ELO AdminConsole
+
+ELO Web Client
+
+ELO WF
+
+This image includes elo user interface components
+
+that interact with backend services.
+
+This includes ELO Web Client, ELO WF and the ELO
+
+Administration Console.
+
+18 ELO Images
+
+
+
+eck-services-internal/as
+
+This image includes ELO automation services. ELO AS provides a simple to use interface that
+
+allows building automated tasks in ELO. 
+
+# Start using docker-compose
+
+version: "3.7"
+
+services:
+
+  as:
+
+    image: registry.elo.com/eck-services-internal/as:v23-1.2
+
+    container_name: as
+
+    environment:
+
+      AUTH_SERVICE_PASSWORD: moxIZAaDQGjw
+
+    links:
+
+      - ix:ix
+
+# Start using docker run
+
+docker run --name as -d \
+
+  -e "AUTH_SERVICE_PASSWORD=moxIZAaDQGjw" \
+
+  registry.elo.com/eck-services-internal/as:v23-1.2
+
+19 ELO Images
+
+
+
+Clustering
+
+This component should not be clustered.
+
+Accessing AS service
+
+Environment variable for ix connection
+
+REPO_NAME
+
+Optional Name for the ELO Repository
+
+Defaults to: repository
+
+Example: repository
+
+ELO_DISPLAY_NAME
+
+Optional Additional option to name database and archive different. Doing this REPO_NAME is the
+
+database and ELO_DISPLAY_NAME is the displayed archive name.
+
+Defaults to: $REPO_NAME
+
+Only usable from version 21.4 and onwards
+
+IX_URL
+
+Optional URL of the Index Server api-endpoint the preview conversion service should connect to.
+
+Defaults to: http://ix:9090/{REPO_NAME}/ix
+
+Example: http://ix:9090/repository/ix
+
+REPO_LANGUAGE
+
+Language setting for the repository. This is used in order to set the default locale for the service
+
+user account.
+
+Defaults to: en
+
+Example: en
+
+my-service.company.cloud/repository/plugin/de.elo.ix.plugin.proxy/as/
+
+20 ELO Images
+
+
+
+Environment variables for as configuration
+
+AUTH_SERVICE_USERNAME
+
+Optional Name of the ELO service user account that the preview conversion service should
+
+authenticate with.
+
+Defaults to: ELO Service
+
+Example: ELO Service
+
+AUTH_SERVICE_PASSWORD
+
+Mandatory Password for the service user account that is used for authentication.
+
+Example: moxIZAaDQGjw
+
+AS_ROOT_GUID
+
+Optional The ELO AS configuration is stored in the ELO Repository.
+
+Defaults to: (F6C173D7-3F71-4559-91E5-4886139B12CF)
+
+Environment variables for tomcat configuration
+
+AUTH_TOMCAT_USERNAME
+
+Optional Name of the tomcat admin
+
+Example: admin
+
+If you don't set, no tomcat admin user exists
+
+AUTH_TOMCAT_PASSWORD
+
+Example: HpHZ6Orc5RWO
+
+If you don't set, no tomcat admin user exists
+
+Environment variables for log configuration
+
+AS_LOG_LEVEL
+
+Optional The ELO Automation Services loglevel for log outputs.
+
+Defaults to: info
+
+21 ELO Images
+
+
+
+AS_LOG_MAX_HISTORY_DAYS
+
+Defines the number of days the log is stored
+
+Defaults to: 14
+
+AS_LOG_MAX_FILE_SIZE
+
+Defines the maximal logfile size
+
+Defaults to: 500MB
+
+More infos to LOKI Logging can be found here
+
+Persistence
+
+/opt/elo/temp/as /opt/elo/logs
+
+Directory for temporary files.
+
+Supported versions
+
+registry.elo.com/eck-services-internal/as:v23-1.2 • 
+
+22 ELO Images
+
+file:///builds/documentation/ops/eck-images/.temp/core-concepts/logging
+
+
+eck-services-internal/tr2
+
+This images contains the Textreader 2 and OCR. It is used for analyzing documents.
+
+More information to the Textreader 2 itself can be found here. 
+
+# Start using docker-compose
+
+version: "3.7"
+
+services:
+
+  tr2:
+
+    image: registry.elo.com/eck-services-internal/tr2:v23-1.2
+
+    environment:
+
+      AUTH_ADMIN_PASSWORD: QRLTS38FjesG
+
+      AUTH_ADMIN_USER: admin
+
+23 ELO Images
+
+
+
+Clustering
+
+More than one instance of the Textreader 2 may be launched. But this requires a load-balancer and
+
+sticky sessions.
+
+Environment variables for TR2 configuration
+
+TR_INSTANCE_NAME
+
+Defines the instancename. This is used in temporary directories.
+
+Default: instance1
+
+TR_AUTH_KEYS
+
+Defines the auth keys to be used. If a * is specified, then no authentication will be made. Otherwise
+
+consult the Textreader 2 documentation for detailed information on how to configure this.
+
+TR_MAX_WORKERS
+
+Specifies the amount of workers available for processing incoming requests
+
+Default: 10
+
+TR_MIN_FREE_DISKSPACE_MB
+
+Specifies the amount of free diskspace which has to be kept free.
+
+Default: 100
+
+TR_MAX_FILE_PROCESSING_SECONDS
+
+Specifies the duration a file may take until its processing is cancelled
+
+Default: 600
+
+TR_WAIT_FOR_RESULT_SECONDS
+
+Specifies the time to wait until the initial request ist being returned, containing a handle to be able
+
+to poll for the results
+
+Default: 10
+
+TR_OCR_MIN_FILE_SIZE_KB
+
+Specifies the size threshold which has to be reached to process files. Smaller files may not contain
+
+useful information.
+
+24 ELO Images
+
+
+
+Default: 5
+
+TR_OCR_WORKER_COUNT
+
+Specifies the amount of ocr workers.
+
+Default: 3
+
+TR_OCR_PAGE_TIMEOUT_SECONDS
+
+Specifies the maximum time per for the ocr for processing a single page
+
+Default: 600
+
+TR_OCR_FILE_TIMEOUT_SECONDS
+
+Specifies the maximum time per for the ocr for processing an entire file
+
+Default: 600
+
+Environment variables for Authentication configuration
+
+The Textreader 2 has a status page (http://:port/tr/status), which may be accessed using the
+
+following credentials
+
+AUTH_ADMIN_USERNAME
+
+Optional Name of the admin user
+
+Default: admin
+
+AUTH_ADMIN_PASSWORD
+
+Example: HpHZ6Orc5RWO
+
+Default: elo
+
+Environment variables for log configuration
+
+TR_LOG_LEVEL
+
+Optional The ELO TR2 loglevel for log outputs.
+
+Defaults to: info
+
+TR_LOG_MAX_HISTORY_DAYS
+
+Defines the number of days the log is stored
+
+Defaults to: 14
+
+25 ELO Images
+
+
+
+TR_LOG_MAX_FILE_SIZE
+
+Defines the maximum logfile size
+
+Defaults to: 500MB
+
+TR_REPORT_LOG_LEVEL
+
+Optional The ELO TR2 loglevel for report log outputs.
+
+Defaults to: info
+
+TR_REPORT_LOG_MAX_HISTORY_DAYS
+
+Defines the number of days the report log is stored
+
+Defaults to: 14
+
+TR_REPORT_LOG_MAX_FILE_SIZE
+
+Defines the maximum report logfile size
+
+Defaults to: 500MB
+
+TR_OCR_LOG_LEVEL
+
+Optional The ELO TR2 loglevel for ocr log outputs.
+
+Defaults to: info
+
+TR_OCR_LOG_MAX_HISTORY_DAYS
+
+Defines the number of days the ocr log is stored
+
+Defaults to: 14
+
+TR_OCR_LOG_MAX_FILE_SIZE
+
+Defines the maximum ocr logfile size
+
+Defaults to: 500MB
+
+More infos to LOKI Logging can be found here
+
+Supported versions
+
+registry.elo.com/eck-services-internal/tr2:v23-1.2 • 
+
+26 ELO Images
+
+file:///builds/documentation/ops/eck-images/.temp/core-concepts/logging
+
+
+eck-services-internal/flows
+
+This image includes ELO flows manager and service.
+
+Only for ELO 21 image versions.
+
+# Start using docker-compose
+
+version: "3.7"
+
+services:
+
+  flows:
+
+    image: registry.elo.com/eck-services-internal/flows:v23-1.2
+
+    container_name: flows
+
+    environment:
+
+      AUTH_SERVICE_PASSWORD: moxIZAaDQGjw
+
+      AUTH_ADMIN_PASSWORD: QRLTS38FjesG
+
+    ports:
+
+      - 9010:9090
+
+    links:
+
+      - ix:ix
+
+      - flows-worker:flows-worker
+
+    volumes:
+
+      - data-flows:/opt/elo/data/flows/
+
+# Start using docker run
+
+docker run --name flows -d \
+
+  -e "AUTH_SERVICE_PASSWORD=moxIZAaDQGjw" \
+
+  -e "AUTH_ADMIN_PASSWORD=QRLTS38FjesG" \
+
+  -v data-ix:/opt/elo/data/flows \
+
+  registry.elo.com/eck-services-internal/flows:v23-1.2
+
+27 ELO Images
+
+
+
+Clustering
+
+This component should not be clustered
+
+Accessing flows manager
+
+Environment variables for ix connection
+
+REPO_NAME
+
+Optional Name for the ELO Repository
+
+Defaults to: repository
+
+Example: repository
+
+ELO_DISPLAY_NAME
+
+Optional Additional option to name database and archive different. Doing this REPO_NAME is the
+
+database and ELO_DISPLAY_NAME is the displayed archive name.
+
+Defaults to: $REPO_NAME
+
+Only usable from version 21.4 and onwards
+
+IX_URL
+
+Optional URL of the Index Server api-endpoint the preview conversion service should connect to.
+
+Defaults to: http://ix:9090/repository/ix
+
+Environment variables for flows configuration
+
+AUTH_ADMIN_USERNAME
+
+Optional Name of the admin user account that flows should authenticate with.
+
+Example: Administrator
+
+AUTH_ADMIN_PASSWORD
+
+Mandatory Password for the admin user account that is used for authentication.
+
+Example: QRLTS38FjesG
+
+my-service.company.cloud/repository/plugin/de.elo.ix.plugin.proxy/flows/
+
+28 ELO Images
+
+
+
+AUTH_SERVICE_USERNAME
+
+Optional Name of the ELO service user account that the preview conversion service should
+
+authenticate with.
+
+Example: ELO Service
+
+AUTH_SERVICE_PASSWORD
+
+Mandatory Password for the service user account that is used for authentication.
+
+Example: moxIZAaDQGjw
+
+Environment variables for tomcat configuration
+
+AUTH_TOMCAT_USERNAME
+
+Optional Name of the tomcat admin
+
+Example: admin
+
+If you don't set, no tomcat admin user exists
+
+AUTH_TOMCAT_PASSWORD
+
+Example: HpHZ6Orc5RWO
+
+If you don't set, no tomcat admin user exists
+
+Environment variables for flows configuration
+
+FLOWS_REPO
+
+Optional Var for the Flows Repository
+
+Defaults to: configservice
+
+Example: configservice
+
+FLOWS_MANAGER_URL
+
+Optional Flows manager URL
+
+Defaults to: http://flows:9090/flows*
+
+Example: http://flows:9090/flows
+
+29 ELO Images
+
+
+
+FLOWS_REGISTRY_URL
+
+Optional Flows registry URL
+
+Defaults to: http://flows:9090/registry/*
+
+Example: http://flows:9090/registry/
+
+The registry URL will be combined with the default path surfix /api/v1/service
+
+FLOWS_DIR
+
+Optional Flows core dir
+
+Defaults to: /opt/elo/data/flows/
+
+CONFIG_SERVICE_URL
+
+Optional Flows IX ConfigService URL
+
+Defaults to: http://ix:9090/repository/plugin/de.elo.ix.plugin.rest/de.elo.ix.config/configs
+
+If you plan to change the repository name, make sure to change it accordingly (replace repository
+
+within the URL).
+
+Environment variables for log configuration
+
+FLOWS_MANAGER_LOG_LEVEL
+
+Optional The ELO Flows Manager loglevel for log outputs.
+
+Defaults to: info
+
+FLOWS_MANAGER_LOG_MAX_HISTORY_DAYS
+
+Defines the number of days the log is stored
+
+Defaults to: 14
+
+FLOWS_MANAGER_LOG_MAX_FILE_SIZE
+
+Defines the maximal logfile size
+
+Defaults to: 500MB
+
+FLOWS_REGISTRY_LOG_LEVEL
+
+Optional The ELO Flows Registry loglevel for log outputs.
+
+30 ELO Images
+
+
+
+Defaults to: info
+
+FLOWS_REGISTRY_LOG_MAX_HISTORY_DAYS
+
+Defines the number of days the log is stored
+
+Defaults to: 14
+
+FLOWS_REGISTRY_LOG_MAX_FILE_SIZE
+
+Defines the maximal logfile size
+
+Defaults to: 500MB
+
+More infos to LOKI Logging can be found here
+
+Service ports
+
+Karaf is exposed on ports 8101, 1099, 44444, 8181, 9999.
+
+Persistence
+
+/opt/elo/data/flows
+
+Supported versions
+
+registry.elo.com/eck-services-internal/flows:v23-1.2 • 
+
+31 ELO Images
+
+file:///builds/documentation/ops/eck-images/.temp/core-concepts/logging
+
+
+eck-services-internal/flows-worker
+
+This image includes ELO flows worker. Based on Karaf.
+
+Only for ELO 21 image versions.
+
+# Start using docker-compose
+
+version: "3.7"
+
+services:
+
+  flows-worker:
+
+    image: registry.elo.com/eck-services-internal/flows-worker:v23-1.2
+
+    container_name: flows-worker
+
+    environment:
+
+      AUTH_SERVICE_PASSWORD: moxIZAaDQGjw
+
+    ports:
+
+      - 8101:8101
+
+      - 1099:1099
+
+      - 44444:44444
+
+      - 8181:8181
+
+      - 9999:9999
+
+      - 9000:9000
+
+    links:
+
+      - ix:ix
+
+    volumes:
+
+      - data-flows:/opt/elo/data/flows/
+
+# Start using docker run
+
+docker run --name flows-worker -d \
+
+  -e "AUTH_SERVICE_PASSWORD=moxIZAaDQGjw" \
+
+  -v data-ix:/opt/elo/data/flows \
+
+  registry.elo.com/eck-services-internal/flows-worker:v23-1.2
+
+32 ELO Images
+
+
+
+Clustering
+
+This component should not be clustered
+
+Environment variables for ix connection
+
+REPO_NAME
+
+Optional Name for the ELO Repository
+
+Defaults to: repository
+
+Example: repository
+
+ELO_DISPLAY_NAME
+
+Optional Additional option to name database and archive different. Doing this REPO_NAME is the
+
+database and ELO_DISPLAY_NAME is the displayed archive name.
+
+Defaults to: $REPO_NAME
+
+Only usable from version 21.4 and onwards
+
+IX_URL
+
+Optional URL of the Index Server api-endpoint the preview conversion service should connect to.
+
+Defaults to: http://ix:9090/{REPO_NAME}/ix
+
+Example: http://ix:9090/repository/ix
+
+Environment variables for flows worker configuration
+
+AUTH_SERVICE_USERNAME
+
+Optional Name of the ELO service user account that the preview conversion service should
+
+authenticate with.
+
+Defaults to: ELO Service
+
+Example: ELO Service
+
+AUTH_SERVICE_PASSWORD
+
+Mandatory Password for the service user account that is used for authentication.
+
+Example: moxIZAaDQGjw
+
+33 ELO Images
+
+
+
+Environment variables for karaf configuration
+
+AUTH_KARAF_USERNAME
+
+Optional Name of the karaf user account that the ssh should authenticate with.
+
+Defaults to: admin
+
+AUTH_KARAF_PASSWORD
+
+Optional Password for the karaf user account that is used for authentication.
+
+Example: poxIZBaDQ9jw
+
+if AUTH_KARAF_PASSWORD is not set, ssh for karaf is disabled
+
+Environment variables for tomcat configuration
+
+AUTH_TOMCAT_USERNAME
+
+Optional Name of the tomcat admin
+
+Example: admin
+
+If you don't set, no tomcat admin user exists
+
+AUTH_TOMCAT_PASSWORD
+
+Example: HpHZ6Orc5RWO
+
+If you don't set, no tomcat admin user exists
+
+Environment variables for flows worker configuration
+
+FLOWS_WORKER_HOST
+
+Optional Where to find the flows worker
+
+Defaults to: localhost
+
+Example: worker-flows
+
+FLOWS_WORKER_REST_PORT
+
+Optional REST port of the flows worker
+
+34 ELO Images
+
+
+
+Defaults to: 9000
+
+Example: 9000
+
+FLOWS_REGISTRY_URL
+
+Optional Flows registry URL
+
+Defaults to: http://flows:9090/registry/
+
+Example: http://flows:9090/registry/
+
+The registry URL will be combined with the default path surfix /api/v1/service
+
+Environment variables for log configuration
+
+KARAF_LOG_LEVEL
+
+Optional The ELO Flows Worker loglevel for log outputs.
+
+Defaults to: info
+
+KARAF_LOG_MAX_HISTORY_DAYS
+
+Defines the number of days the log is stored
+
+Defaults to: 14
+
+KARAF_LOG_MAX_FILE_SIZE
+
+Defines the maximal logfile size
+
+Defaults to: 500MB
+
+More infos to LOKI Logging can be found here
+
+Environment variables for flows bundle install
+
+FLOWS_BUNDLE_INSTALL_ENABLED
+
+Defines whether the flows worker should install components from the archive
+
+Defaults to: true
+
+35 ELO Images
+
+file:///builds/documentation/ops/eck-images/.temp/core-concepts/logging
+
+
+FLOWS_BUNDLE_INSTALL_DELAY_SECONDS
+
+Defines the delay in seconds after which the components are synchronised after the flows worker
+
+starts.
+
+Defaults to: 5
+
+FLOWS_BUNDLE_INSTALL_INTERVAL_SECONDS
+
+Defines the interval in seconds in which the synchronisation between installed components and
+
+components from the archive takes place.
+
+Defaults to: 300
+
+Service ports
+
+Karaf is exposed on ports 8101, 1099, 44444, 8181, 9999.
+
+Persistence
+
+/opt/elo/data/flows
+
+Supported versions
+
+registry.elo.com/eck-services-internal/flows-worker:v23-1.2• 
+
+36 ELO Images
+
+
+
+eck-services-internal/ix
+
+This image includes the ELO Index Server. It can be used as a frontend-service for all incoming
+
+connections, api calls and ELO web services. 
+
+# Start using docker-compose
+
+version: "3.7"
+
+services:
+
+  ix:
+
+    image: registry.elo.com/eck-services-internal/ix:v23-1.3
+
+    container_name: ix
+
+    ports:
+
+      - 9090:9090
+
+    links:
+
+      - postgres:postgres
+
+    environment:
+
+      DATABASE_PASSWORD: CKZbP0SVMAPu
+
+      KEYSTORE_PASSWORD: NLcad64E3F7xL2dC
+
+    volumes:
+
+      - data-ix:/opt/elo/data/ix
+
+      - data-eloam:/opt/elo/data/eloam
+
+      - repository-system:/opt/elo/archive/elosys
+
+      - repository-basis:/opt/elo/archive/basis
+
+      - plugins:/opt/elo/prog/webapps/ix-plugins/public
+
+      - certificates-ix:/opt/elo/config/certificates/ix/:ro
+
+# Start using docker run
+
+docker run --name ix -d \
+
+  -e "DATABASE_PASSWORD=xhsjdK923kLqw" \
+
+  -e "KEYSTORE_PASSWORD=NLcad64E3F7xL2dC" \
+
+  -v data-ix:/opt/elo/data/ix \
+
+  -v data-eloam:/opt/elo/data/eloam \
+
+  -v repository-system:/opt/elo/archive/elosys \
+
+  -v repository-basis:/opt/elo/archive/basis \
+
+  -v plugins:/opt/elo/prog/webapps/ix-plugins/public \
+
+  -v certificates-ix:/opt/elo/config/certificates/ix/:ro \
+
+  -p 9090:9090 \
+
+  registry.elo.com/eck-services-internal/ix:v23-1.3
+
+37 ELO Images
+
+
+
+Clustering
+
+Work in progress
+
+Environment variables for ix configuration
+
+IX_ID
+
+Optional Id of the Index Server instance. This allows directing operations to a specific index server
+
+instance.
+
+Example: base
+
+If running kubernetes, should be the name of the pod including its ordinal index.
+
+Defaults to: ELO-base
+
+Example: repository-ix-0
+
+ELO_DISPLAY_NAME
+
+Optional Additional option to name database and archive different. Doing this REPO_NAME is the
+
+database and ELO_DISPLAY_NAME is the displayed archive name.
+
+Defaults to: $REPO_NAME
+
+Only usable from version 21.4 and onwards
+
+IX_APP_PATH
+
+Path the Index Server can be accessed in this container. This setting changes the context path
+
+value of the web application.
+
+If using ROOT the Index Server can be accessed using ix:9090/ix. This can break some functions. If
+
+using archivename the resulting url will be ix:9090/archivename/ix.
+
+Defaults to: {REPO_NAME}
+
+example: archivename
+
+The ELO Cloud on Kubernetes Operator maps all archives for each tenant on the same url in
+
+order to reduce naming conflicts.
+
+If one tenant customer1 has two repositories hr and emails, Index Servers of the repositories
+
+can be accessed using the urls https://customer1.mycompany.local/hr and https://
+
+customer1.mycompany.local/emails.
+
+38 ELO Images
+
+
+
+ELO on premise installations usually use ix- as a prefix. e.g. ix-archivename. Thanks to the
+
+proxy that masks other ELO services, the IX is the only component to be publicly accessible.
+
+ELO_HOST
+
+Used by the initialization procedure.
+
+Defaults to: http://ix:9090
+
+Example: http://ix:9090
+
+REPO_NAME
+
+Optional Name for the ELO Repository
+
+Defaults to: repository
+
+Example: repository
+
+Only for ELO 20 image versions. For ELO 21 the default is Solutions
+
+IX_URL_PRIVATE
+
+Optional Private URL for ELO IX
+
+Defaults to: http://ix:9090/{REPO_NAME}/ix
+
+Only for ELO 20 image versions. For ELO 21 this feature is WIP
+
+REPO_LANGUAGE
+
+Language setting for the repository. This is used in order to set the default locale for the service
+
+user account.
+
+Defaults to: en
+
+Example: en
+
+IX_SCRIPTS_AND_EXTERNAL_PLUGINS_DISABLED
+
+Optional Disable the upload of scripts and external plugins
+
+Defaults to: false
+
+39 ELO Images
+
+
+
+Environment variables for tomcat configuration
+
+AUTH_TOMCAT_USERNAME
+
+Optional Name of the tomcat admin
+
+Example: admin
+
+If you don't set, no tomcat admin user exists
+
+AUTH_TOMCAT_PASSWORD
+
+Example: HpHZ6Orc5RWO
+
+If you don't set, no tomcat admin user exists
+
+Environment variables for Tomcat RemoteIpValve configuration
+
+RemoteIpValve is being used when running behind a Reverse Proxy. It allows the Tomcat to detect
+
+whether it runs behind a Reverse Proxy by inspecting the Request Header passed.
+
+More Details can be found here.
+
+ELO_TOMCAT_REMOTEIPVALVE_ENABLED
+
+Example: true
+
+Defaults to true
+
+Control whether the RemoteIpValve is enabled or not
+
+ELO_TOMCAT_REMOTE_IP_HEADER
+
+Example: x-forwarded-for
+
+Defaults to x-forwarded-for
+
+Name of the Http Header read by this valve that holds the list of traversed IP addresses starting
+
+from the requesting client
+
+ELO_TOMCAT_INTERNAL_PROXIES
+
+Example: 192\.168\.\d{1,3}\.\d{1,3}
+
+Defaults to 10\.\d{1,3}\.\d{1,3}\.\d{1,3}|192\.168\.\d{1,3}\.\d{1,3}| 169\.254\.\d{1,3}\.
+
+\d{1,3}|127\.\d{1,3}\.\d{1,3}\.\d{1,3}| 172\.1[6-9]{1}\.\d{1,3}\.\d{1,3}|172\.2[0-9]{1}\.
+
+\d{1,3}\.\d{1,3}| 172\.3[0-1]{1}\.\d{1,3}\.\d{1,3}| 0:0:0:0:0:0:0:1|::1
+
+40 ELO Images
+
+https://tomcat.apache.org/tomcat-9.0-doc/api/org/apache/catalina/valves/RemoteIpValve.html
+https://tomcat.apache.org/tomcat-9.0-doc/api/org/apache/catalina/valves/RemoteIpValve.html
+
+
+By default, 10/8, 192.168/16, 169.254/16, 127/8, 172.16/12, and ::1 are allowed.
+
+Regular expression that matches the IP addresses of internal proxies. If they appear in the
+
+remoteIpHeader value, they will be trusted and will not appear in the proxiesHeader value
+
+ELO_TOMCAT_PROXIES_HEADER
+
+Example: x-forwarded-by
+
+Defaults to x-forwarded-by
+
+Name of the http header created by this valve to hold the list of proxies that have been processed
+
+in the incoming remoteIpHeader
+
+ELO_TOMCAT_PROTOCOL_HEADER
+
+Example: x-forwarded-proto
+
+Defaults to x-forwarded-proto
+
+Name of the http header read by this valve that holds the flag that this request was forwarded from
+
+ELO_TOMCAT_PROTOCOL_HEADER_HTTPS_VALUE
+
+Example: https
+
+Defaults to https
+
+Value of the ELO_TOMCAT_PROTOCOL_HEADER to indicate that it is an Https request
+
+Environment variables for log configuration
+
+IX_LOG_LEVEL
+
+Optional The ELO IX loglevel for log outputs.
+
+Defaults to: info
+
+IX_LOG_MAX_HISTORY_DAYS
+
+Defines the number of days the log is stored
+
+Defaults to: 14
+
+IX_LOG_MAX_FILE_SIZE
+
+Defines the maximal logfile size
+
+Defaults to: 500MB
+
+41 ELO Images
+
+
+
+More infos to LOKI Logging can be found here
+
+Environment variables for file manager configuration
+
+IX_USE_FILE_MANAGER_CLOUD
+
+Optional Determines if cloud persistence for postbox files is required or not. In case of cloud
+
+deployment set to true.
+
+Defaults to: false
+
+Example: true
+
+IX_MAX_CONFIG_FILE_LENGTH_MB
+
+Optional Determines maximum config file length in mb
+
+Defaults to: 1
+
+Example: 100
+
+Only usable from version 21.4 and onwards
+
+Environment variables for database connection
+
+ELO Cloud on Kubernetes currently supports PostreSQL and Microsoft SQL-Server.
+
+DATABASE_TYPE
+
+Optional Type of the database used. Currently supported is Microsoft SQL Server MSSQL and
+
+PostgreSQL POSTGRESQL
+
+Defaults to: POSTGRESQL
+
+Example: POSTGRESQL
+
+Example: MSSQL
+
+DATABASE_PORT
+
+Port of the database server.
+
+By default postgres uses port 5432.
+
+Defaults to: 5432
+
+Example: 5432
+
+42 ELO Images
+
+file:///builds/documentation/ops/eck-images/.temp/core-concepts/logging
+
+
+DATABASE_HOST
+
+Host for database authentication.
+
+Defaults to: postgres
+
+Example: postgres
+
+DATABASE_USERNAME
+
+Username for database authentication.
+
+Defaults to: elodb
+
+Example: admin
+
+DATABASE_PASSWORD
+
+Mandatory Password the database user can authenticate with.
+
+Example: xhsjdK923kLqw
+
+Environment variables for proxy ELO components
+
+Optional The Index Server is proxying other ELO services in order to handle secure session without
+
+exposing session tokens. Therefore internal URIs must be given that external services should be
+
+proxied to.
+
+Proxy services are accessible using the proxy plugin.
+
+Example: http://elo.mycloud.com/repository/plugin/de.elo.ix.plugin.proxy/web/
+
+SERVICE_IX_PROXY_WEB
+
+Optional Proxy service for the ELO Web Client which will be available using the path /web/. An
+
+internal URI thats only accessible in docker can be given.
+
+Defaults to: http://ui:9090/web/
+
+Example: http://ui:9090/web/
+
+SERVICE_IX_PROXY_AC
+
+Optional Proxy service for the ELO Administration Console which will be available using the path /
+
+ac/. An internal URI thats only accessible in docker can be given.
+
+Defaults to: http://ui:9090/ac/
+
+Example: http://ui:9090/ac/
+
+43 ELO Images
+
+
+
+SERVICE_IX_PROXY_AS
+
+Optional Proxy service for the ELO Automation Service which will be available using the path /as/.
+
+An internal URI thats only accessible in docker can be given.
+
+Defaults to: http://as:9090/as/
+
+Example: http://as:9090/as/
+
+SERVICE_IX_PROXY_WF
+
+Optional Proxy service for the ELO WF which will be available using the path /wf/. An internal URI
+
+thats only accessible in docker can be given.
+
+Defaults to: http://ui:9090/wf/
+
+Example: http://ui:9090/wf/
+
+SERVICE_IX_PROXY_ANALYTICS
+
+Optional Proxy service for ELO Analytics which will be available using the path /analytics/. An
+
+internal URI thats only accessible in docker can be given.
+
+Defaults to: http://analytics:9300/analytics/
+
+Example: http://analytics:9300/analytics/
+
+SERVICE_IX_PROXY_RP
+
+Optional Proxy service for ELO RP which will be available using the path /rp/. An internal URI thats
+
+only accessible in docker can be given.
+
+Defaults to: http://rp:9090/rp/
+
+Example: http://rp:9090/rp/
+
+SERVICE_IX_PROXY_FLOWS_MANAGER
+
+Optional Proxy service for ELO flows which will be available using the path /flows/. An internal URI
+
+thats only accessible in docker can be given.
+
+Defaults to: http://flows:9090/flows/
+
+Example: http://flows:9090/flows/
+
+Only for ELO 21 image versions.
+
+44 ELO Images
+
+
+
+Environment variables for search cluster connection
+
+Mandatory ELO search clusters are protected by certificates. In order to authenticate a client, that
+
+client requires a valid certificate that was issued by a trusted authority.
+
+These settings are primarily used by kubernetes deployments that are manageged by the
+
+ELO Cloud on Kubernetes Operator.
+
+If running docker compose all values except KEYSTORE_PASSWORD are generated automatically
+
+in the initialization process and are persisted using docker volumes.
+
+KEYSTORE_PASSWORD
+
+Password that protects the Java keystore. This is set during startup.
+
+Example: egHjskI7shdg
+
+TLS_SEARCH_CA_CRT
+
+Optional Public tls certificate of that client authority that was used for creating certificates.
+
+This value is passed by the ELO Cloud on Kubernetes Operator.
+
+TLS_SEARCH_IX_CRT
+
+Optional Public tls certificate that is used to authenticate the Index Server in the search cluster.
+
+Certificate should contain the full certificate path including the issuing authority TLS_SEARCH_CA_CRT.
+
+This value is passed by the ELO Cloud on Kubernetes Operator.
+
+-----BEGIN CERTIFICATE-----
+
+MIICkDCCAhagAwIBAgIUC5XL1ai6wbUtbyFZnut5zQuDIhQwCgYIKoZIzj0EAwIw
+
+ezElMCMGA1UECgwcRUxPIERpZ2l0YWwgT2ZmaWNlIEdtYkggUm9vdDEoMCYGA1UE
+
+CwwfRUxPIERpZ2l0YWwgT2ZmaWNlIEdtYkggUm9vdCBDQTEoMCYGA...
+
+-----END CERTIFICATE-----
+
+45 ELO Images
+
+
+
+TLS_SEARCH_IX_KEY
+
+Optional Private key for the search cluster certificate TLS_SEARCH_IX_CRT that was issued by 
+
+TLS_SEARCH_CA_CRT.
+
+This value is passed by the ELO Cloud on Kubernetes Operator.
+
+ELASTIC_HOST
+
+Hostname of the search instance.
+
+Defaults to: search
+
+Example: search
+
+Environment variables for running on Docker
+
+ELO_MODE
+
+If running on Docker-Compose the mode "Compose" should be passed in order to sync with init
+
+containers. Cluster modes are used by the ELO Cloud on Kubernetes Operator.
+
+Defaults to: Compose
+
+Example: Compose
+
+Example: Cluster
+
+-----BEGIN CERTIFICATE-----
+
+MIICkDCCAhagAwIBAgIUC5XL1ai6wbUtbyFZnut5zQuDIhQwCgYIKoZIzj0EAwIw
+
+ezElMCMGA1UECgwcRUxPIERpZ2l0YWwgT2ZmaWNlIEdtYkggUm9vdDEoMCYGA1UE
+
+CwwfRUxPIERpZ2l0YWwgT2ZmaWNlIEdtYkggUm9vdCBDQTEoMCYGA...
+
+-----END CERTIFICATE-----
+
+-----BEGIN CERTIFICATE-----
+
+MIICHjCCAaSgAwIBAgIUFLPkhBANtqxpqvIGKGOI8ZBsp2cwCgYIKoZIzj0EAwIw
+
+ezElMCMGA1UECgwcRUxPIERpZ2l0YWwgT2ZmaWNlIEdtYkggUm9vdDEoMCYGA1UE
+
+CwwfRUxPIERpZ2l0YWwgT2ZmaWNlIEdtYkggUm9vdCBDQTEoMCYG1U...
+
+-----END CERTIFICATE-----
+
+-----BEGIN EC PRIVATE KEY-----
+
+MIGkAgEBBDCG3hwlEeH5N1f8XT5UvRNmbtfQkg+xwTFcTyKn963YcXQAMrkS8oUm
+
+O/UAgdO4xregBwYFK4EEACKhZANiAAQ3PqNp0gEO1Q82P4dwsssOOD...
+
+-----END EC PRIVATE KEY-----
+
+46 ELO Images
+
+
+
+Environment variable for running on Kubernetes
+
+POD_ID_OF_STATEFULSET (kubernetes)
+
+Name and ordinal index of the pod. Only required if running whithin kubernetes stateful sets. This
+
+allows ELO identifying which instance number the current pod is. Pods ids in stateful sets are added
+
+to the name. e.g repository-ix-0, repository-ix-1, etc.
+
+Service ports
+
+Apache tomcat is exposed on port 9090.
+
+Example: http://ix:9090/repository
+
+Example: http://ix:9090/repository/ix
+
+Example: http://ix:9090/repository/plugin/de.elo.ix.plugin.proxy/web/
+
+Persistence
+
+/opt/elo/data/eloam
+
+Data dir of the access manager.
+
+/opt/elo/data/ix
+
+Data dir of the index server.
+
+/opt/elo/archive/elosys
+
+Repository data for system files. This typically includes scripts in the administration area.
+
+/opt/elo/archive/basis
+
+Repository data for documents.
+
+/opt/elo/config/certificates/ix
+
+Certificates that are used for authenticating the search cluster.
+
+# pod names can be passed as environment variables as follows using a field reference.
+
+- name: POD_ID_OF_STATEFULSET
+
+  valueFrom:
+
+    fieldRef:
+
+      fieldPath: metadata.name
+
+47 ELO Images
+
+
+
+This volume is only used by docker compose. In this case the ix-setup container generates
+
+all certificates.
+
+The ELO Cloud on Kubernetes Operator generates certificates itself and passes them as
+
+secrets TLS_SEARCH_CA_CRT, TLS_SEARCH_IX_CRT, TLS_SEARCH_CA_KEY.
+
+/opt/elo/prog/webapps/ix-plugins/public
+
+Custom OSGI Plugins
+
+/opt/elo/logs
+
+Data dir for logs
+
+Supported versions
+
+registry.elo.com/eck-services-internal/ix:v23-1.3 • 
+
+48 ELO Images
+
+
+
+eck-services-internal/ix-setup
+
+This image contains the ELO setup routine for ELO Index Server. It can be used as initialization
+
+container for ELO Index Server container. ELO Cloud on Kubernetes currently supports PostreSQL
+
+and Microsoft SQL-Server. 
+
+# Start using docker-compose
+
+version: "3.7"
+
+services:
+
+  ix-setup:
+
+    image: registry.elo.com/eck-services-internal/ix-setup:v23-1.3
+
+    container_name: ix-initialize
+
+    environment:
+
+      AUTH_SERVICE_PASSWORD: moxIZAaDQGjw
+
+      AUTH_ADMIN_PASSWORD: QRLTS38FjesG
+
+      DATABASE_PASSWORD: xhsjdK923kLqw
+
+      KEYSTORE_PASSWORD: NLcad64E3F7xL2dC
+
+      ELO_LIC: |-
+
+        createdate=2021-07-02
+
+        customer1=ELO 20 Test
+
+        customer2=Not for resale
+
+        usercount1=60
+
+        ...
+
+49 ELO Images
+
+
+
+Clustering
+
+This component should not be clustered
+
+Environment variables for IX configuration
+
+AUTH_SERVICE_PASSWORD
+
+Mandatory Password for the service user account that is used for authentication.
+
+Example: elo
+
+AUTH_ADMIN_PASSWORD
+
+Mandatory Password for the Administrator account that is used for authentication.
+
+Example: elo
+
+ELO_LIC
+
+Mandatory License key that is used for this repository.
+
+Example:
+
+From version 21.2 onwards you can set a private rsa key for ELO_LIC instead of a license key.
+
+ELO will download the rsa encrypted license from a license server and will decrypt it with
+
+the private key.
+
+REPO_NAME
+
+Optional Name for the ELO Repository
+
+Defaults to: repository
+
+Example: repository
+
+REPO_LANGUAGE
+
+Optional Default language of the repository.
+
+Defaults to: en
+
+createdate=2021-07-02
+
+customer1=ELO 20 Test
+
+customer2=Not for resale
+
+usercount1=60
+
+50 ELO Images
+
+
+
+Example: en
+
+ELO_DISPLAY_NAME
+
+Optional Additional option to name database and archive different. Doing this REPO_NAME is the
+
+database and ELO_DISPLAY_NAME is the displayed archive name.
+
+Defaults to: $REPO_NAME
+
+Only usable from version 21.4 and onwards
+
+ELO_LICENSE_TYPE
+
+Optional Used to configure the kind of license being used.
+
+Valid values are as follows:
+
+Value Type
+
+0 Production (Default)
+
+1 Test
+
+2 Development
+
+Defaults to: 0 (Production)
+
+Only usable from version 21.4 and onwards
+
+AUTH_SERVICE_USERNAME
+
+Optional Name of the ELO service user account that is used by the Index Server internally for
+
+retrieving documents and establishing sessions.
+
+Defaults to: ELO Service
+
+Example: ELO Service
+
+AUTH_ADMIN_USERNAME
+
+Optional Name of the ELO administration user account.
+
+Defaults to: Administrator
+
+Example: Administrator
+
+ELO_AM_OVERRIDE_PW
+
+Optional Whether to overwrite the Administrator password on setup start if the user already exists.
+
+Useful for resetting the password.
+
+51 ELO Images
+
+
+
+Defaults to: false
+
+Example: false
+
+Valid values:
+
+Value Description
+
+true Overwrite the password on setup start
+
+false Do not overwrite the password
+
+IX_ID
+
+Optional Id of the Index Server instance. This allows directing operations to a specific index server
+
+instance.
+
+Defaults to: ELO-base
+
+Example: base
+
+Optional If running kubernetes, should be the name of the pod including its ordinal index.
+
+Example: repository-ix-0
+
+IX_URL_PRIVATE
+
+Optional Private URL for ELO IX
+
+Defaults to: http://ix:9090/{REPO_NAME}/ix
+
+ELO_HOST
+
+DEPLOY_CERTIFICATES
+
+Optional Boolean for certificates deployment
+
+Defaults to: true
+
+If this boolean is set to false the cloud setup will not create any certificates for search. In
+
+addition to this, the Administrator user, when freshly created, will have to change his initial
+
+password (AUTH_ADMIN_PASSWORD).
+
+Environment variables for file manager configuration
+
+IX_USE_FILE_MANAGER_CLOUD
+
+Optional Determines if cloud persistence for postbox files is required or not. In case of cloud
+
+deployment set to true.
+
+Defaults to: false
+
+52 ELO Images
+
+
+
+Example: true
+
+IX_MAX_CONFIG_FILE_LENGTH_MB
+
+Optional Determines maximum config file length in mb
+
+Defaults to: 1
+
+Example: 100
+
+Only usable from version 21.4 and onwards
+
+Environment variables for database connection
+
+DATABASE_PASSWORD
+
+Mandatory Password the database user can authenticate with.
+
+Example: xhsjdK923kLqw
+
+DATABASE_TYPE
+
+Mandatory Type of the database used. Currently supported is Microsoft SQL Server MSSQL and
+
+PostgreSQL POSTGRESQL
+
+Defaults to: POSTGRESQL
+
+Example: POSTGRESQL
+
+Example: MSSQL
+
+DATABASE_PORT
+
+Mandatory Port of the database server.
+
+By default postgres uses port 5432.
+
+Defaults to: 5432
+
+Example: 5432
+
+DATABASE_USERNAME
+
+Mandatory Username for database authentication.
+
+Defaults to: elodb
+
+Example: admin
+
+53 ELO Images
+
+
+
+DATABASE_MAX_RETRIES
+
+Optional Number of retries for database connection
+
+Defaults to: 150
+
+Environment variables for search configuration
+
+KEYSTORE_PASSWORD
+
+Mandatory Password that protects the Java keystore. This is set during startup.
+
+Example: egHjskI7shdg
+
+ELASTIC_HOST
+
+Optional
+
+Defaults to: search
+
+URL base
+
+IX_URL_BASE
+
+Optional URL base of the Index Server.
+
+IX_URL_PUBLIC
+
+Optional Public URL base of the Index Server. This is primarily used for generating external links.
+
+Persistence
+
+/opt/elo/data/eloam
+
+Data dir of the access manager.
+
+/opt/elo/data/ix
+
+Data dir of the index server.
+
+/opt/elo/archive/elosys
+
+Repository data for system files. This typically includes scripts in the edministration area.
+
+/opt/elo/archive/basis
+
+Repository data for documents.
+
+54 ELO Images
+
+
+
+/opt/elo/config/certificates/ix
+
+Certificates that are used for authenticating the search cluster.
+
+/opt/elo/config/certificates/search
+
+Certificates that are used for authenticating the search cluster.
+
+Supported versions
+
+registry.elo.com/eck-services-internal/ix-setup:v23-1.3• 
+
+55 ELO Images
+
+
+
+eck-services-internal/ix-import
+
+This image contains the import routine for ELO Index Server. The routine imports thesaurus and
+
+dropzone. 
+
+# Start using docker-compose
+
+version: "3.7"
+
+services:
+
+  ix-import:
+
+    image: registry.elo.com/eck-services-internal/ix-import:v23-1.3
+
+    container_name: ix-import
+
+    environment:
+
+      AUTH_SERVICE_PASSWORD: moxIZAaDQGjw
+
+      AUTH_ADMIN_PASSWORD: QRLTS38FjesG
+
+# Start using docker run
+
+docker run --name ix-import -d \
+
+  -e "AUTH_SERVICE_PASSWORD=moxIZAaDQGjw" \
+
+  -e "AUTH_ADMIN_PASSWORD=QRLTS38FjesG" \
+
+  registry.elo.com/eck-services-internal/ix-import:v23-1.3
+
+56 ELO Images
+
+
+
+Clustering
+
+This component should not be clustered
+
+Environment variables for ix connection
+
+REPO_NAME
+
+Optional Name for the ELO Repository
+
+Defaults to: repository
+
+Example: repository
+
+Only for ELO 20 image versions. For ELO 21 this feature is WIP
+
+ELO_DISPLAY_NAME
+
+Optional Additional option to name database and archive different. Doing this REPO_NAME is the
+
+database and ELO_DISPLAY_NAME is the displayed archive name.
+
+Defaults to: $REPO_NAME
+
+Only usable from version 21.4 and onwards
+
+IX_URL
+
+Optional URL of the Index Server api-endpoint the preview conversion service should connect to.
+
+Defaults to: http://ix:9090/{REPO_NAME}/ix
+
+Example: http://ix:9090/solutions/ix
+
+REPO_LANGUAGE
+
+Language setting for the repository. This is used in order to set the default locale for the service
+
+user account.
+
+Defaults to: en
+
+Example: en
+
+57 ELO Images
+
+
+
+Environment variables for ix-import configuration
+
+AUTH_SERVICE_USERNAME
+
+Optional Name of the ELO service user account that the preview conversion service should
+
+authenticate with.
+
+Defaults to: ELO Service
+
+AUTH_SERVICE_PASSWORD
+
+Mandatory Password for the service user account that is used for authentication.
+
+Example: moxIZAaDQGjw
+
+AUTH_ADMIN_USERNAME
+
+Optional Name of the ELO admin account that the preview conversion service should authenticate
+
+with.
+
+Defaults to: Administrator
+
+AUTH_ADMIN_PASSWORD
+
+Mandatory Password for the admin account that is used for authentication.
+
+Example: QRLTS38FjesG
+
+Supported versions
+
+registry.elo.com/eck-services-internal/ix-import:v23-1.3 • 
+
+58 ELO Images
+
+
+
+eck-services-internal/server
+
+This image includes the ELO Index Server, the Admin Console, the Web Client and the Web Froms
+
+Services. It can be used as a frontend-service for all incoming connections, api calls and ELO web
+
+services.
+
+This image serves as a replacement for eck-services-internal/ix and eck-services-internal/ui. 
+
+# Start using docker-compose
+
+version: "3.7"
+
+services:
+
+  ix:
+
+    image: registry.elo.com/eck-services-internal/server:v23-1.3
+
+    container_name: ix
+
+    ports:
+
+      - 9090:9090
+
+    links:
+
+      - postgres:postgres
+
+    environment:
+
+      DATABASE_PASSWORD: CKZbP0SVMAPu
+
+      KEYSTORE_PASSWORD: NLcad64E3F7xL2dC
+
+    volumes:
+
+      - data-ix:/opt/elo/data/ix
+
+      - data-eloam:/opt/elo/data/eloam
+
+      - repository-system:/opt/elo/archive/elosys
+
+      - repository-basis:/opt/elo/archive/basis
+
+      - plugins:/opt/elo/prog/webapps/ix-plugins/public
+
+      - certificates-ix:/opt/elo/config/certificates/ix/:ro
+
+# Start using docker run
+
+docker run --name server -d \****
+
+  -e "DATABASE_PASSWORD=xhsjdK923kLqw" \
+
+  -e "KEYSTORE_PASSWORD=NLcad64E3F7xL2dC" \
+
+  -v data-ix:/opt/elo/data/ix \
+
+  -v data-eloam:/opt/elo/data/eloam \
+
+  -v repository-system:/opt/elo/archive/elosys \
+
+  -v repository-basis:/opt/elo/archive/basis \
+
+  -v plugins:/opt/elo/prog/webapps/ix-plugins/public \
+
+  -v certificates-ix:/opt/elo/config/certificates/ix/:ro \
+
+  -p 9090:9090 \
+
+  registry.elo.com/eck-services-internal/server:v23-1.3
+
+59 ELO Images
+
+
+
+Environment variables for ix configuration
+
+IX_ID
+
+Optional Id of the Index Server instance. This allows directing operations to a specific index server
+
+instance.
+
+Example: base
+
+If running kubernetes, should be the name of the pod including its ordinal index.
+
+Defaults to: ELO-base
+
+Example: repository-ix-0
+
+ELO_DISPLAY_NAME
+
+Optional Additional option to name database and archive different. Doing this REPO_NAME is the
+
+database and ELO_DISPLAY_NAME is the displayed archive name.
+
+Defaults to: $REPO_NAME
+
+Only usable from version 21.4 and onwards
+
+IX_APP_PATH
+
+Path the Index Server can be accessed in this container. This setting changes the context path
+
+value of the web application.
+
+If using ROOT the Index Server can be accessed using ix:9090/ix. This can break some functions. If
+
+using archivename the resulting url will be ix:9090/archivename/ix.
+
+Defaults to: {REPO_NAME}
+
+example: archivename
+
+The ELO Cloud on Kubernetes Operator maps all archives for each tenant on the same url in
+
+order to reduce naming conflicts.
+
+If one tenant customer1 has two repositories hr and emails, Index Servers of the repositories
+
+can be accessed using the urls https://customer1.mycompany.local/hr and https://
+
+customer1.mycompany.local/emails.
+
+ELO on premise installations usually use ix- as a prefix. e.g. ix-archivename. Thanks to the
+
+proxy that masks other ELO services, the IX is the only component to be publicly accessible.
+
+60 ELO Images
+
+
+
+ELO_HOST
+
+Used by the initialization procedure.
+
+Defaults to: http://ix:9090
+
+Example: http://ix:9090
+
+REPO_NAME
+
+Optional Name for the ELO Repository
+
+Defaults to: repository
+
+Example: repository
+
+IX_URL_PRIVATE
+
+Optional Private URL for ELO IX
+
+Defaults to: http://ix:9090/{REPO_NAME}/ix
+
+WEB_URL
+
+Optional URL of the ELO Web Client other services should connect to. This param is used by the
+
+administration console.
+
+Defaults to: http://ui:9090/web/
+
+Example: http://ui:9090/web
+
+REPO_LANGUAGE
+
+Language setting for the repository. This is used in order to set the default locale for the service
+
+user account.
+
+Defaults to: en
+
+Example: en
+
+Environment variables for ui configuration
+
+AUTH_SERVICE_USERNAME
+
+Optional Name of the ELO service user account that the preview conversion service should
+
+authenticate with.
+
+Defaults to: ELO Service
+
+Example: ELO Service
+
+61 ELO Images
+
+
+
+AUTH_SERVICE_PASSWORD
+
+Optional Password for the service user account that is used for authentication.
+
+Example: moxIZAaDQGjw
+
+WF_PRODUCTION
+
+Optional Loads installed apps automatically every time the wf starts.
+
+Defaults to: true
+
+Environment variables for tomcat configuration
+
+AUTH_TOMCAT_USERNAME
+
+Optional Name of the tomcat admin
+
+Example: admin
+
+If you don't set, no tomcat admin user exists
+
+AUTH_TOMCAT_PASSWORD
+
+Example: HpHZ6Orc5RWO
+
+If you don't set, no tomcat admin user exists
+
+Environment variables for Tomcat RemoteIpValve configuration
+
+RemoteIpValve is being used when running behind a Reverse Proxy. It allows the Tomcat to detect
+
+whether it runs behind a Reverse Proxy by inspecting the Request Header passed.
+
+More Details can be found here.
+
+ELO_TOMCAT_REMOTEIPVALVE_ENABLED
+
+Example: true
+
+Defaults to true
+
+Control whether the RemoteIpValve is enabled or not
+
+ELO_TOMCAT_REMOTE_IP_HEADER
+
+Example: x-forwarded-for
+
+Defaults to x-forwarded-for
+
+62 ELO Images
+
+https://tomcat.apache.org/tomcat-9.0-doc/api/org/apache/catalina/valves/RemoteIpValve.html
+https://tomcat.apache.org/tomcat-9.0-doc/api/org/apache/catalina/valves/RemoteIpValve.html
+
+
+Name of the Http Header read by this valve that holds the list of traversed IP addresses starting
+
+from the requesting client
+
+ELO_TOMCAT_INTERNAL_PROXIES
+
+Example: 192\.168\.\d{1,3}\.\d{1,3}
+
+Defaults to 10\.\d{1,3}\.\d{1,3}\.\d{1,3}|192\.168\.\d{1,3}\.\d{1,3}| 169\.254\.\d{1,3}\.
+
+\d{1,3}|127\.\d{1,3}\.\d{1,3}\.\d{1,3}| 172\.1[6-9]{1}\.\d{1,3}\.\d{1,3}|172\.2[0-9]{1}\.
+
+\d{1,3}\.\d{1,3}| 172\.3[0-1]{1}\.\d{1,3}\.\d{1,3}| 0:0:0:0:0:0:0:1|::1
+
+By default, 10/8, 192.168/16, 169.254/16, 127/8, 172.16/12, and ::1 are allowed.
+
+Regular expression that matches the IP addresses of internal proxies. If they appear in the
+
+remoteIpHeader value, they will be trusted and will not appear in the proxiesHeader value
+
+ELO_TOMCAT_PROXIES_HEADER
+
+Example: x-forwarded-by
+
+Defaults to x-forwarded-by
+
+Name of the http header created by this valve to hold the list of proxies that have been processed
+
+in the incoming remoteIpHeader
+
+ELO_TOMCAT_PROTOCOL_HEADER
+
+Example: x-forwarded-proto
+
+Defaults to x-forwarded-proto
+
+Name of the http header read by this valve that holds the flag that this request was forwarded from
+
+ELO_TOMCAT_PROTOCOL_HEADER_HTTPS_VALUE
+
+Example: https
+
+Defaults to https
+
+Value of the ELO_TOMCAT_PROTOCOL_HEADER to indicate that it is an Https request
+
+Environment variables for log configuration
+
+IX_LOG_LEVEL
+
+Optional The ELO IX loglevel for log outputs.
+
+Defaults to: info
+
+63 ELO Images
+
+
+
+IX_LOG_MAX_HISTORY_DAYS
+
+Defines the number of days the log is stored
+
+Defaults to: 14
+
+IX_LOG_MAX_FILE_SIZE
+
+Defines the maximal logfile size
+
+Defaults to: 500MB
+
+More infos to LOKI Logging can be found here
+
+AC_LOG_LEVEL
+
+Optional The ELO Administration Console loglevel for log outputs.
+
+Defaults to: info
+
+AC_LOG_MAX_HISTORY_DAYS
+
+Defines the number of days the log is stored
+
+Defaults to: 14
+
+AC_LOG_MAX_FILE_SIZE
+
+Defines the maximal logfile size
+
+Defaults to: 500MB
+
+WEB_LOG_LEVEL
+
+Optional The ELO Web Client loglevel for log outputs.
+
+Defaults to: info
+
+WEB_LOG_MAX_HISTORY_DAYS
+
+Defines the number of days the log is stored
+
+Defaults to: 14
+
+WEB_LOG_MAX_FILE_SIZE
+
+Defines the maximal logfile size
+
+Defaults to: 500MB
+
+64 ELO Images
+
+file:///builds/documentation/ops/eck-images/.temp/core-concepts/logging
+
+
+WF_LOG_LEVEL
+
+Optional The ELO Web Forms loglevel for log outputs.
+
+Defaults to: info
+
+WF_LOG_MAX_HISTORY_DAYS
+
+Defines the number of days the log is stored
+
+Defaults to: 14
+
+WF_LOG_MAX_FILE_SIZE
+
+Defines the maximal logfile size
+
+Defaults to: 500MB
+
+More infos to LOKI Logging can be found here
+
+Environment variables for file manager configuration
+
+IX_USE_FILE_MANAGER_CLOUD
+
+Optional Determines if cloud persistence for postbox files is required or not. In case of cloud
+
+deployment set to true.
+
+Defaults to: false
+
+Example: true
+
+IX_MAX_CONFIG_FILE_LENGTH_MB
+
+Optional Determines maximum config file length in mb
+
+Defaults to: 1
+
+Example: 100
+
+Only usable from version 21.4 and onwards
+
+Environment variables for database connection
+
+ELO Cloud on Kubernetes currently supports PostreSQL and Microsoft SQL-Server.
+
+65 ELO Images
+
+file:///builds/documentation/ops/eck-images/.temp/core-concepts/logging
+
+
+DATABASE_TYPE
+
+Optional Type of the database used. Currently supported is Microsoft SQL Server MSSQL and
+
+PostgreSQL POSTGRESQL
+
+Defaults to: POSTGRESQL
+
+Example: POSTGRESQL
+
+Example: MSSQL
+
+DATABASE_PORT
+
+Port of the database server.
+
+By default postgres uses port 5432.
+
+Defaults to: 5432
+
+Example: 5432
+
+DATABASE_HOST
+
+Host for database authentication.
+
+Defaults to: postgres
+
+Example: postgres
+
+DATABASE_USERNAME
+
+Username for database authentication.
+
+Defaults to: elodb
+
+Example: admin
+
+DATABASE_PASSWORD
+
+Mandatory Password the database user can authenticate with.
+
+Example: xhsjdK923kLqw
+
+Environment variables for proxy ELO components
+
+Optional The Index Server is proxying other ELO services in order to handle secure session without
+
+exposing session tokens. Therefore internal URIs must be given that external services should be
+
+proxied to.
+
+Proxy services are accessible using the proxy plugin.
+
+Example: http://elo.mycloud.com/repository/plugin/de.elo.ix.plugin.proxy/web/
+
+66 ELO Images
+
+
+
+SERVICE_IX_PROXY_WEB
+
+Optional Proxy service for the ELO Web Client which will be available using the path /web/. An
+
+internal URI thats only accessible in docker can be given.
+
+Defaults to: http://server:9090/web/
+
+Example: http://server:9090/web/
+
+SERVICE_IX_PROXY_AC
+
+Optional Proxy service for the ELO Administration Console which will be available using the path /
+
+ac/. An internal URI thats only accessible in docker can be given.
+
+Defaults to: http://server:9090/ac/
+
+Example: http://server:9090/ac/
+
+SERVICE_IX_PROXY_AS
+
+Optional Proxy service for the ELO Automation Service which will be available using the path /as/.
+
+An internal URI thats only accessible in docker can be given.
+
+Defaults to: http://as:9090/as/
+
+Example: http://as:9090/as/
+
+SERVICE_IX_PROXY_WF
+
+Optional Proxy service for the ELO WF which will be available using the path /wf/. An internal URI
+
+thats only accessible in docker can be given.
+
+Defaults to: http://server:9090/wf/
+
+Example: http://server:9090/wf/
+
+SERVICE_IX_PROXY_ANALYTICS
+
+Optional Proxy service for ELO Analytics which will be available using the path /analytics/. An
+
+internal URI thats only accessible in docker can be given.
+
+Defaults to: http://analytics:9300/analytics/
+
+Example: http://analytics:9300/analytics/
+
+SERVICE_IX_PROXY_RP
+
+Optional Proxy service for ELO RP which will be available using the path /rp/. An internal URI thats
+
+only accessible in docker can be given.
+
+Defaults to: http://rp:9090/rp/
+
+67 ELO Images
+
+
+
+Example: http://rp:9090/rp/
+
+SERVICE_IX_PROXY_FLOWS_MANAGER
+
+Optional Proxy service for ELO flows which will be available using the path /flows/. An internal URI
+
+thats only accessible in docker can be given.
+
+Defaults to: http://flows:9090/flows/
+
+Example: http://flows:9090/flows/
+
+Only for ELO 21 image versions.
+
+Environment variables for search cluster connection
+
+Mandatory ELO search clusters are protected by certificates. In order to authenticate a client, that
+
+client requires a valid certificate that was issued by a trusted authority.
+
+These settings are primarily used by kubernetes deployments that are manageged by the
+
+ELO Cloud on Kubernetes Operator.
+
+If running docker compose all values except KEYSTORE_PASSWORD are generated automatically
+
+in the initialization process and are persisted using docker volumes.
+
+KEYSTORE_PASSWORD
+
+Password that protects the Java keystore. This is set during startup.
+
+Example: egHjskI7shdg
+
+TLS_SEARCH_CA_CRT
+
+Optional Public tls certificate of that client authority that was used for creating certificates.
+
+This value is passed by the ELO Cloud on Kubernetes Operator.
+
+TLS_SEARCH_IX_CRT
+
+Optional Public tls certificate that is used to authenticate the Index Server in the search cluster.
+
+Certificate should contain the full certificate path including the issuing authority TLS_SEARCH_CA_CRT.
+
+-----BEGIN CERTIFICATE-----
+
+MIICkDCCAhagAwIBAgIUC5XL1ai6wbUtbyFZnut5zQuDIhQwCgYIKoZIzj0EAwIw
+
+ezElMCMGA1UECgwcRUxPIERpZ2l0YWwgT2ZmaWNlIEdtYkggUm9vdDEoMCYGA1UE
+
+CwwfRUxPIERpZ2l0YWwgT2ZmaWNlIEdtYkggUm9vdCBDQTEoMCYGA...
+
+-----END CERTIFICATE-----
+
+68 ELO Images
+
+
+
+This value is passed by the ELO Cloud on Kubernetes Operator.
+
+TLS_SEARCH_IX_KEY
+
+Optional Private key for the search cluster certificate TLS_SEARCH_IX_CRT that was issued by 
+
+TLS_SEARCH_CA_CRT.
+
+This value is passed by the ELO Cloud on Kubernetes Operator.
+
+ELASTIC_HOST
+
+Hostname of the search instance.
+
+Defaults to: search
+
+Example: search
+
+Environment variables for running on Docker
+
+ELO_MODE
+
+If running on Docker-Compose the mode "Compose" should be passed in order to sync with init
+
+containers. Cluster modes are used by the ELO Cloud on Kubernetes Operator.
+
+Defaults to: Compose
+
+Example: Compose
+
+Example: Cluster
+
+-----BEGIN CERTIFICATE-----
+
+MIICkDCCAhagAwIBAgIUC5XL1ai6wbUtbyFZnut5zQuDIhQwCgYIKoZIzj0EAwIw
+
+ezElMCMGA1UECgwcRUxPIERpZ2l0YWwgT2ZmaWNlIEdtYkggUm9vdDEoMCYGA1UE
+
+CwwfRUxPIERpZ2l0YWwgT2ZmaWNlIEdtYkggUm9vdCBDQTEoMCYGA...
+
+-----END CERTIFICATE-----
+
+-----BEGIN CERTIFICATE-----
+
+MIICHjCCAaSgAwIBAgIUFLPkhBANtqxpqvIGKGOI8ZBsp2cwCgYIKoZIzj0EAwIw
+
+ezElMCMGA1UECgwcRUxPIERpZ2l0YWwgT2ZmaWNlIEdtYkggUm9vdDEoMCYGA1UE
+
+CwwfRUxPIERpZ2l0YWwgT2ZmaWNlIEdtYkggUm9vdCBDQTEoMCYG1U...
+
+-----END CERTIFICATE-----
+
+-----BEGIN EC PRIVATE KEY-----
+
+MIGkAgEBBDCG3hwlEeH5N1f8XT5UvRNmbtfQkg+xwTFcTyKn963YcXQAMrkS8oUm
+
+O/UAgdO4xregBwYFK4EEACKhZANiAAQ3PqNp0gEO1Q82P4dwsssOOD...
+
+-----END EC PRIVATE KEY-----
+
+69 ELO Images
+
+
+
+Environment variable for running on Kubernetes
+
+POD_ID_OF_STATEFULSET (kubernetes)
+
+Name and ordinal index of the pod. Only required if running whithin kubernetes stateful sets. This
+
+allows ELO identifying which instance number the current pod is. Pods ids in stateful sets are added
+
+to the name. e.g repository-ix-0, repository-ix-1, etc.
+
+Service ports
+
+Apache tomcat is exposed on port 9090.
+
+Example: http://ix:9090/repository
+
+Example: http://ix:9090/repository/ix
+
+ELO Web Client is mapped with application name /web. ELO WF is mapped with application name /
+
+wf. ELO Administration console is mapped with application name /administration.
+
+Example: http://ix:9090/repository/plugin/de.elo.ix.plugin.proxy/web/
+
+Persistence
+
+/opt/elo/data/eloam
+
+Data dir of the access manager.
+
+/opt/elo/data/ix
+
+Data dir of the index server.
+
+/opt/elo/archive/elosys
+
+Repository data for system files. This typically includes scripts in the administration area.
+
+/opt/elo/archive/basis
+
+Repository data for documents.
+
+/opt/elo/config/certificates/ix
+
+Certificates that are used for authenticating the search cluster.
+
+# pod names can be passed as environment variables as follows using a field reference.
+
+- name: POD_ID_OF_STATEFULSET
+
+  valueFrom:
+
+    fieldRef:
+
+      fieldPath: metadata.name
+
+70 ELO Images
+
+
+
+This volume is only used by docker compose. In this case the ix-setup container generates
+
+all certificates.
+
+The ELO Cloud on Kubernetes Operator generates certificates itself and passes them as
+
+secrets TLS_SEARCH_CA_CRT, TLS_SEARCH_IX_CRT, TLS_SEARCH_CA_KEY.
+
+/opt/elo/prog/webapps/ix-plugins/public
+
+Custom OSGI Plugins
+
+/opt/elo/logs
+
+Data dir for logs
+
+Supported versions
+
+registry.elo.com/eck-services-internal/server:v23-1.3 • 
+
+71 ELO Images
+
+
+
+eck-services/search
+
+This image includes the iSearch. 
+
+Requires ix container running and that ix-setup executed.
+
+Clustering
+
+This component should not be clustered
+
+# Start using docker-compose
+
+version: "3.7"
+
+services:
+
+  search:
+
+    image: registry.elo.com/eck-services/search:v23-1.0
+
+    container_name: search
+
+    ports:
+
+      - 9204:9204
+
+      - 9200:9200
+
+    environment:
+
+      bootstrap.memory_lock: "true" 
+
+      AUTH_SERVICE_USERNAME: ELO Service
+
+      AUTH_SERVICE_PASSWORD: moxIZAaDQGjw
+
+      AUTH_SERVICE_PASSWORD_BCRYPT: $$2a$$04$$Dj/qj0ceUNr8pAEj92SBoO9iA5qmJStYFlaPCnwv8/MsqtlLqXrIq
+
+      KEYSTORE_PASSWORD: NLcad64E3F7xL2dC
+
+    volumes:
+
+      - data-search:/opt/elo/data/index
+
+      - certificates-search:/opt/elo/config/certificates/search
+
+      - logs:/opt/elo/logs
+
+# Start using docker run
+
+docker run --name search -d \
+
+  --hostname search \
+
+  -e "KEYSTORE_PASSWORD=NLcad64E3F7xL2dC" \
+
+  -e "bootstrap.memory_lock=true" \
+
+  -e "AUTH_SERVICE_PASSWORD=moxIZAaDQGjw" \
+
+  -e "AUTH_SERVICE_PASSWORD_BCRYPT=$$2a$$04$$Dj/qj0ceUNr8pAEj92SBoO9iA5qmJStYFlaPCnwv8/MsqtlLqXrIq"
+
+  -v data-search:/opt/elo/data/index \
+
+  -v certificates-search:/opt/elo/config/certificates/search \
+
+  -p 9200:9200 \
+
+  -p 9204:9204 \
+
+  registry.elo.com/eck-services/search:v23-1.0
+
+72 ELO Images
+
+
+
+Environment variables for deployment
+
+ELO_MODE
+
+Optional Variable to define the deployment of the ELO components, possible values are Cluster or 
+
+Compose.
+
+Defaults to: Compose
+
+Environment variables for search configuration
+
+KEYSTORE_PASSWORD
+
+Mandatory Variable for the keystore.
+
+If this variable is not set the server setup generates a random key.
+
+AUTH_SERVICE_USERNAME
+
+Optional Name of the ELO service user account that is used by the Index Server internally for
+
+retrieving documents and establishing sessions.
+
+Defaults to: ELO Service
+
+Example: ELO Service
+
+AUTH_SERVICE_PASSWORD
+
+Mandatory Password for the service user account that is used for authentication.
+
+AUTH_SERVICE_PASSWORD_BCRYPT
+
+Optional Bcrypt hashed password. If not set, the AUTH_SERVICE_PASSWORD will be hashed
+
+automatically at startup.
+
+bootstrap.memory_lock
+
+Mandatory ELO-iSearch specific variable to lock the heap in memory.
+
+MAX_MEMORY
+
+Optional Minimum and maximum heap Memory (Java -Xms and -Xmx Parameters) in megabytes
+
+Defaults to: 1024
+
+THREAD_STACK_SIZE
+
+Optional limit for stack memory consumption in kilobytes
+
+73 ELO Images
+
+
+
+Defaults to: 1024
+
+Persistence
+
+/opt/elo/data/index
+
+This volume contains the search index and should be persisted. A fast and reliable storage is
+
+recommended.
+
+If you want to upgrade former search versions to v21-2 you have to be aware that the search
+
+index of former versions is not compatible with search versions v21-2 and onwards.
+
+Further information you can find here
+
+/opt/elo/config/certificates/search
+
+Certificates that are used for authenticating the search cluster.
+
+Supported versions
+
+registry.elo.com/eck-services/search:v23-1.0 • 
+
+74 ELO Images
+
+
+
+eck-services-internal/ui
+
+This image includes elo user interface components that interact with backend services. This
+
+includes ELO Web Client, ELO WF and the ELO Administration Console. 
+
+# Start using docker-compose
+
+version: "3.7"
+
+services:
+
+  ui:
+
+    image: registry.elo.com/eck-services-internal/ui:v23-1.2
+
+    container_name: ui
+
+    environment:
+
+      AUTH_SERVICE_PASSWORD: moxIZAaDQGjw
+
+    links:
+
+      - ix:ix
+
+# Start using docker run
+
+docker run --name ui -d \
+
+  -e "AUTH_SERVICE_PASSWORD=moxIZAaDQGjw" \
+
+  registry.elo.com/eck-services-internal/ui:v23-1.2
+
+75 ELO Images
+
+
+
+Clustering
+
+This component should not be clustered
+
+Accessing UI components
+
+UI components should not be accessed directly. The ELO Index Server therefore provides a reverse
+
+proxy that handles user sessions more efficient. This also allows sharing session tokens across
+
+components.
+
+Internal Proxy URLS should be configured properly in the Index Server configuration. Refer to IX
+
+image environment variables for more information.
+
+Environment variables for ix configuration
+
+REPO_NAME
+
+Optional Name for the ELO Repository
+
+Defaults to: repository
+
+Example: repository
+
+Only for ELO 20 image versions. For ELO 21 this feature is WIP
+
+ELO_DISPLAY_NAME
+
+Optional Additional option to name database and archive different. Doing this REPO_NAME is the
+
+database and ELO_DISPLAY_NAME is the displayed archive name.
+
+Defaults to: $REPO_NAME
+
+Only usable from version 21.4 and onwards
+
+IX_URL
+
+Optional URL of the Index Server api-endpoint all ui components should connect to.
+
+Defaults to: http://ix:9090/${REPO_NAME}/ix
+
+Example: http://ix:9090/solutions/ix
+
+my-service.company.cloud/repository/plugin/de.elo.ix.plugin.proxy/web/
+
+my-service.company.cloud/repository/plugin/de.elo.ix.plugin.proxy/wf/
+
+my-service.company.cloud/repository/plugin/de.elo.ix.plugin.proxy/administration/
+
+76 ELO Images
+
+file:///builds/documentation/ops/eck-images/.temp/export/cloud-ix
+file:///builds/documentation/ops/eck-images/.temp/export/cloud-ix
+
+
+AS_URL
+
+Optional URL of the ELO Automation Services instance ui components should connect to. The ELO
+
+Web Client is internally forwarding AS requests in order to avoid CSS-Requests.
+
+Defaults to: http://as:9090/as/
+
+Example: http://as:9090/as
+
+WEB_URL
+
+Optional URL of the ELO Web Client other services should connect to. This param is used by the
+
+administration console.
+
+Defaults to: http://ui:9090/web/
+
+Example: http://ui:9090/web
+
+AUTH_SERVICE_USERNAME
+
+Optional Name of the ELO service user account that the preview conversion service should
+
+authenticate with.
+
+Defaults to: ELO Service
+
+Example: ELO Service
+
+AUTH_SERVICE_PASSWORD
+
+Optional Password for the service user account that is used for authentication.
+
+Example: moxIZAaDQGjw
+
+WF_PRODUCTION
+
+Optional Loads installed apps automatically every time the wf starts.
+
+Defaults to: true
+
+AC_LOG_LEVEL
+
+Optional The ELO Administration Console loglevel for log outputs.
+
+Defaults to: info
+
+AC_LOG_MAX_HISTORY_DAYS
+
+Defines the number of days the log is stored
+
+Defaults to: 14
+
+77 ELO Images
+
+
+
+AC_LOG_MAX_FILE_SIZE
+
+Defines the maximal logfile size
+
+Defaults to: 500MB
+
+WEB_LOG_LEVEL
+
+Optional The ELO Web Client loglevel for log outputs.
+
+Defaults to: info
+
+WEB_LOG_MAX_HISTORY_DAYS
+
+Defines the number of days the log is stored
+
+Defaults to: 14
+
+WEB_LOG_MAX_FILE_SIZE
+
+Defines the maximal logfile size
+
+Defaults to: 500MB
+
+WF_LOG_LEVEL
+
+Optional The ELO Web Forms loglevel for log outputs.
+
+Defaults to: info
+
+WF_LOG_MAX_HISTORY_DAYS
+
+Defines the number of days the log is stored
+
+Defaults to: 14
+
+WF_LOG_MAX_FILE_SIZE
+
+Defines the maximal logfile size
+
+Defaults to: 500MB
+
+More infos to LOKI Logging can be found here
+
+Service ports
+
+Apache tomcat is exposed on port 9090.
+
+78 ELO Images
+
+file:///builds/documentation/ops/eck-images/.temp/core-concepts/logging
+
+
+ELO Web Client is mapped with application name /web. ELO WF is mapped with application name /
+
+wf. ELO Administration console is mapped with application name /administration.
+
+Environment variables for Tomcat RemoteIpValve configuration
+
+RemoteIpValve is being used when running behind a Reverse Proxy. It allows the Tomcat to detect
+
+whether it runs behind a Reverse Proxy by inspecting the Request Header passed.
+
+More Details can be found here.
+
+ELO_TOMCAT_REMOTEIPVALVE_ENABLED
+
+Example: true
+
+Defaults to false
+
+Control whether the RemoteIpValve is enabled or not
+
+ELO_TOMCAT_REMOTE_IP_HEADER
+
+Example: x-forwarded-for
+
+Defaults to x-forwarded-for
+
+Name of the Http Header read by this valve that holds the list of traversed IP addresses starting
+
+from the requesting client
+
+ELO_TOMCAT_INTERNAL_PROXIES
+
+Example: 192\.168\.\d{1,3}\.\d{1,3}
+
+Defaults to 10\.\d{1,3}\.\d{1,3}\.\d{1,3}|192\.168\.\d{1,3}\.\d{1,3}| 169\.254\.\d{1,3}\.
+
+\d{1,3}|127\.\d{1,3}\.\d{1,3}\.\d{1,3}| 172\.1[6-9]{1}\.\d{1,3}\.\d{1,3}|172\.2[0-9]{1}\.
+
+\d{1,3}\.\d{1,3}| 172\.3[0-1]{1}\.\d{1,3}\.\d{1,3}| 0:0:0:0:0:0:0:1|::1
+
+By default, 10/8, 192.168/16, 169.254/16, 127/8, 172.16/12, and ::1 are allowed.
+
+Regular expression that matches the IP addresses of internal proxies. If they appear in the
+
+remoteIpHeader value, they will be trusted and will not appear in the proxiesHeader value
+
+Supported versions
+
+registry.elo.com/eck-services-internal/ui:v23-1.2 • 
+
+79 ELO Images
+
+https://tomcat.apache.org/tomcat-9.0-doc/api/org/apache/catalina/valves/RemoteIpValve.html
+https://tomcat.apache.org/tomcat-9.0-doc/api/org/apache/catalina/valves/RemoteIpValve.html
+
+	Table of contents
+	Getting started
+	Prerequisites
+	Running ELO docker images on Windows
+
+	sidebarDepth: 3
+	Deploy a repository
+	Login to registry.elo.com
+
+	Retrieve your CLI secret
+	Virtual memory settings on host
+	Run Repository stack using docker-compose
+	Additional services
+	rest service
+
+	Upgrading former version to current version
+	search
+
+	Login to Web Client or AdminConsole
+	Native Linux
+	Windows and Mac
+
+
+
+	Core concepts
+	Volumes and persistence
+	Required volumes
+	Repository data
+	Services Data
+	Certificates
+
+	Volumes for Docker Compose
+	Logs
+
+	Permissions
+
+	Logging
+	FILE Log to local files
+	LOKI Log to Loki (by Grafana Labs)
+	NONE Log to console (stdout)
+
+
+	Docker Images
+	Overview of images
+	eck-services-internal/as
+	Clustering
+	Accessing AS service
+	Environment variable for ix connection
+	REPO_NAME
+	ELO_DISPLAY_NAME
+	IX_URL
+	REPO_LANGUAGE
+
+	Environment variables for as configuration
+	AUTH_SERVICE_USERNAME
+	AUTH_SERVICE_PASSWORD
+	AS_ROOT_GUID
+
+	Environment variables for tomcat configuration
+	AUTH_TOMCAT_USERNAME
+	AUTH_TOMCAT_PASSWORD
+
+	Environment variables for log configuration
+	AS_LOG_LEVEL
+	AS_LOG_MAX_HISTORY_DAYS
+	AS_LOG_MAX_FILE_SIZE
+
+	Persistence
+	Supported versions
+
+	eck-services-internal/tr2
+	Clustering
+	Environment variables for TR2 configuration
+	TR_INSTANCE_NAME
+	TR_AUTH_KEYS
+	TR_MAX_WORKERS
+	TR_MIN_FREE_DISKSPACE_MB
+	TR_MAX_FILE_PROCESSING_SECONDS
+	TR_WAIT_FOR_RESULT_SECONDS
+	TR_OCR_MIN_FILE_SIZE_KB
+	TR_OCR_WORKER_COUNT
+	TR_OCR_PAGE_TIMEOUT_SECONDS
+	TR_OCR_FILE_TIMEOUT_SECONDS
+
+	Environment variables for Authentication configuration
+	AUTH_ADMIN_USERNAME
+	AUTH_ADMIN_PASSWORD
+
+	Environment variables for log configuration
+	TR_LOG_LEVEL
+	TR_LOG_MAX_HISTORY_DAYS
+	TR_LOG_MAX_FILE_SIZE
+	TR_REPORT_LOG_LEVEL
+	TR_REPORT_LOG_MAX_HISTORY_DAYS
+	TR_REPORT_LOG_MAX_FILE_SIZE
+	TR_OCR_LOG_LEVEL
+	TR_OCR_LOG_MAX_HISTORY_DAYS
+	TR_OCR_LOG_MAX_FILE_SIZE
+
+	Supported versions
+
+	eck-services-internal/flows
+	Clustering
+	Accessing flows manager
+	Environment variables for ix connection
+	REPO_NAME
+	ELO_DISPLAY_NAME
+	IX_URL
+
+	Environment variables for flows configuration
+	AUTH_ADMIN_USERNAME
+	AUTH_ADMIN_PASSWORD
+	AUTH_SERVICE_USERNAME
+	AUTH_SERVICE_PASSWORD
+
+	Environment variables for tomcat configuration
+	AUTH_TOMCAT_USERNAME
+	AUTH_TOMCAT_PASSWORD
+
+	Environment variables for flows configuration
+	FLOWS_REPO
+	FLOWS_MANAGER_URL
+	FLOWS_REGISTRY_URL
+	FLOWS_DIR
+	CONFIG_SERVICE_URL
+
+	Environment variables for log configuration
+	FLOWS_MANAGER_LOG_LEVEL
+	FLOWS_MANAGER_LOG_MAX_HISTORY_DAYS
+	FLOWS_MANAGER_LOG_MAX_FILE_SIZE
+	FLOWS_REGISTRY_LOG_LEVEL
+	FLOWS_REGISTRY_LOG_MAX_HISTORY_DAYS
+	FLOWS_REGISTRY_LOG_MAX_FILE_SIZE
+
+	Service ports
+	Persistence
+	Supported versions
+
+	eck-services-internal/flows-worker
+	Clustering
+	Environment variables for ix connection
+	REPO_NAME
+	ELO_DISPLAY_NAME
+	IX_URL
+
+	Environment variables for flows worker configuration
+	AUTH_SERVICE_USERNAME
+	AUTH_SERVICE_PASSWORD
+
+	Environment variables for karaf configuration
+	AUTH_KARAF_USERNAME
+	AUTH_KARAF_PASSWORD
+
+	Environment variables for tomcat configuration
+	AUTH_TOMCAT_USERNAME
+	AUTH_TOMCAT_PASSWORD
+
+	Environment variables for flows worker configuration
+	FLOWS_WORKER_HOST
+	FLOWS_WORKER_REST_PORT
+	FLOWS_REGISTRY_URL
+
+	Environment variables for log configuration
+	KARAF_LOG_LEVEL
+	KARAF_LOG_MAX_HISTORY_DAYS
+	KARAF_LOG_MAX_FILE_SIZE
+
+	Environment variables for flows bundle install
+	FLOWS_BUNDLE_INSTALL_ENABLED
+	FLOWS_BUNDLE_INSTALL_DELAY_SECONDS
+	FLOWS_BUNDLE_INSTALL_INTERVAL_SECONDS
+
+	Service ports
+	Persistence
+	Supported versions
+
+	eck-services-internal/ix
+	Clustering
+	Environment variables for ix configuration
+	IX_ID
+	ELO_DISPLAY_NAME
+	IX_APP_PATH
+	ELO_HOST
+	REPO_NAME
+	IX_URL_PRIVATE
+	REPO_LANGUAGE
+	IX_SCRIPTS_AND_EXTERNAL_PLUGINS_DISABLED
+
+	Environment variables for tomcat configuration
+	AUTH_TOMCAT_USERNAME
+	AUTH_TOMCAT_PASSWORD
+
+	Environment variables for Tomcat RemoteIpValve configuration
+	ELO_TOMCAT_REMOTEIPVALVE_ENABLED
+	ELO_TOMCAT_REMOTE_IP_HEADER
+	ELO_TOMCAT_INTERNAL_PROXIES
+	ELO_TOMCAT_PROXIES_HEADER
+	ELO_TOMCAT_PROTOCOL_HEADER
+	ELO_TOMCAT_PROTOCOL_HEADER_HTTPS_VALUE
+
+	Environment variables for log configuration
+	IX_LOG_LEVEL
+	IX_LOG_MAX_HISTORY_DAYS
+	IX_LOG_MAX_FILE_SIZE
+
+	Environment variables for file manager configuration
+	IX_USE_FILE_MANAGER_CLOUD
+	IX_MAX_CONFIG_FILE_LENGTH_MB
+
+	Environment variables for database connection
+	DATABASE_TYPE
+	DATABASE_PORT
+	DATABASE_HOST
+	DATABASE_USERNAME
+	DATABASE_PASSWORD
+
+	Environment variables for proxy ELO components
+	SERVICE_IX_PROXY_WEB
+	SERVICE_IX_PROXY_AC
+	SERVICE_IX_PROXY_AS
+	SERVICE_IX_PROXY_WF
+	SERVICE_IX_PROXY_ANALYTICS
+	SERVICE_IX_PROXY_RP
+	SERVICE_IX_PROXY_FLOWS_MANAGER
+
+	Environment variables for search cluster connection
+	KEYSTORE_PASSWORD
+	TLS_SEARCH_CA_CRT
+	TLS_SEARCH_IX_CRT
+	TLS_SEARCH_IX_KEY
+	ELASTIC_HOST
+
+	Environment variables for running on Docker
+	ELO_MODE
+
+	Environment variable for running on Kubernetes
+	POD_ID_OF_STATEFULSET (kubernetes)
+
+	Service ports
+	Persistence
+	/opt/elo/data/eloam
+	/opt/elo/data/ix
+	/opt/elo/archive/elosys
+	/opt/elo/archive/basis
+	/opt/elo/config/certificates/ix
+	/opt/elo/prog/webapps/ix-plugins/public
+	/opt/elo/logs
+
+	Supported versions
+
+	eck-services-internal/ix-setup
+	Clustering
+	Environment variables for IX configuration
+	AUTH_SERVICE_PASSWORD
+	AUTH_ADMIN_PASSWORD
+	ELO_LIC
+	REPO_NAME
+	REPO_LANGUAGE
+	ELO_DISPLAY_NAME
+	ELO_LICENSE_TYPE
+	AUTH_SERVICE_USERNAME
+	AUTH_ADMIN_USERNAME
+	ELO_AM_OVERRIDE_PW
+	IX_ID
+	IX_URL_PRIVATE
+	ELO_HOST
+	DEPLOY_CERTIFICATES
+
+	Environment variables for file manager configuration
+	IX_USE_FILE_MANAGER_CLOUD
+	IX_MAX_CONFIG_FILE_LENGTH_MB
+
+	Environment variables for database connection
+	DATABASE_PASSWORD
+	DATABASE_TYPE
+	DATABASE_PORT
+	DATABASE_USERNAME
+	DATABASE_MAX_RETRIES
+
+	Environment variables for search configuration
+	KEYSTORE_PASSWORD
+	ELASTIC_HOST
+	URL base
+	IX_URL_BASE
+	IX_URL_PUBLIC
+
+	Persistence
+	/opt/elo/data/eloam
+	/opt/elo/data/ix
+	/opt/elo/archive/elosys
+	/opt/elo/archive/basis
+	/opt/elo/config/certificates/ix
+	/opt/elo/config/certificates/search
+
+	Supported versions
+
+	eck-services-internal/ix-import
+	Clustering
+	Environment variables for ix connection
+	REPO_NAME
+	ELO_DISPLAY_NAME
+	IX_URL
+	REPO_LANGUAGE
+
+	Environment variables for ix-import configuration
+	AUTH_SERVICE_USERNAME
+	AUTH_SERVICE_PASSWORD
+	AUTH_ADMIN_USERNAME
+	AUTH_ADMIN_PASSWORD
+
+	Supported versions
+
+	eck-services-internal/server
+	Environment variables for ix configuration
+	IX_ID
+	ELO_DISPLAY_NAME
+	IX_APP_PATH
+	ELO_HOST
+	REPO_NAME
+	IX_URL_PRIVATE
+	WEB_URL
+	REPO_LANGUAGE
+	Environment variables for ui configuration
+	AUTH_SERVICE_USERNAME
+	AUTH_SERVICE_PASSWORD
+	WF_PRODUCTION
+
+	Environment variables for tomcat configuration
+	AUTH_TOMCAT_USERNAME
+	AUTH_TOMCAT_PASSWORD
+
+	Environment variables for Tomcat RemoteIpValve configuration
+	ELO_TOMCAT_REMOTEIPVALVE_ENABLED
+	ELO_TOMCAT_REMOTE_IP_HEADER
+	ELO_TOMCAT_INTERNAL_PROXIES
+	ELO_TOMCAT_PROXIES_HEADER
+	ELO_TOMCAT_PROTOCOL_HEADER
+	ELO_TOMCAT_PROTOCOL_HEADER_HTTPS_VALUE
+
+	Environment variables for log configuration
+	IX_LOG_LEVEL
+	IX_LOG_MAX_HISTORY_DAYS
+	IX_LOG_MAX_FILE_SIZE
+	AC_LOG_LEVEL
+	AC_LOG_MAX_HISTORY_DAYS
+	AC_LOG_MAX_FILE_SIZE
+	WEB_LOG_LEVEL
+	WEB_LOG_MAX_HISTORY_DAYS
+	WEB_LOG_MAX_FILE_SIZE
+	WF_LOG_LEVEL
+	WF_LOG_MAX_HISTORY_DAYS
+	WF_LOG_MAX_FILE_SIZE
+
+	Environment variables for file manager configuration
+	IX_USE_FILE_MANAGER_CLOUD
+	IX_MAX_CONFIG_FILE_LENGTH_MB
+
+	Environment variables for database connection
+	DATABASE_TYPE
+	DATABASE_PORT
+	DATABASE_HOST
+	DATABASE_USERNAME
+	DATABASE_PASSWORD
+
+	Environment variables for proxy ELO components
+	SERVICE_IX_PROXY_WEB
+	SERVICE_IX_PROXY_AC
+	SERVICE_IX_PROXY_AS
+	SERVICE_IX_PROXY_WF
+	SERVICE_IX_PROXY_ANALYTICS
+	SERVICE_IX_PROXY_RP
+	SERVICE_IX_PROXY_FLOWS_MANAGER
+
+	Environment variables for search cluster connection
+	KEYSTORE_PASSWORD
+	TLS_SEARCH_CA_CRT
+	TLS_SEARCH_IX_CRT
+	TLS_SEARCH_IX_KEY
+	ELASTIC_HOST
+
+	Environment variables for running on Docker
+	ELO_MODE
+
+	Environment variable for running on Kubernetes
+	POD_ID_OF_STATEFULSET (kubernetes)
+
+	Service ports
+	Persistence
+	/opt/elo/data/eloam
+	/opt/elo/data/ix
+	/opt/elo/archive/elosys
+	/opt/elo/archive/basis
+	/opt/elo/config/certificates/ix
+	/opt/elo/prog/webapps/ix-plugins/public
+	/opt/elo/logs
+
+	Supported versions
+
+	eck-services/search
+	Clustering
+	Environment variables for deployment
+	ELO_MODE
+
+	Environment variables for search configuration
+	KEYSTORE_PASSWORD
+	AUTH_SERVICE_USERNAME
+	AUTH_SERVICE_PASSWORD
+	AUTH_SERVICE_PASSWORD_BCRYPT
+	bootstrap.memory_lock
+	MAX_MEMORY
+	THREAD_STACK_SIZE
+
+	Persistence
+	/opt/elo/data/index
+	/opt/elo/config/certificates/search
+
+	Supported versions
+
+	eck-services-internal/ui
+	Clustering
+	Accessing UI components
+	Environment variables for ix configuration
+	REPO_NAME
+	ELO_DISPLAY_NAME
+	IX_URL
+	AS_URL
+	WEB_URL
+	AUTH_SERVICE_USERNAME
+	AUTH_SERVICE_PASSWORD
+	WF_PRODUCTION
+	AC_LOG_LEVEL
+	AC_LOG_MAX_HISTORY_DAYS
+	AC_LOG_MAX_FILE_SIZE
+	WEB_LOG_LEVEL
+	WEB_LOG_MAX_HISTORY_DAYS
+	WEB_LOG_MAX_FILE_SIZE
+	WF_LOG_LEVEL
+	WF_LOG_MAX_HISTORY_DAYS
+	WF_LOG_MAX_FILE_SIZE
+
+	Service ports
+	Environment variables for Tomcat RemoteIpValve configuration
+	ELO_TOMCAT_REMOTEIPVALVE_ENABLED
+	ELO_TOMCAT_REMOTE_IP_HEADER
+	ELO_TOMCAT_INTERNAL_PROXIES
+
+	Supported versions
+
+
+

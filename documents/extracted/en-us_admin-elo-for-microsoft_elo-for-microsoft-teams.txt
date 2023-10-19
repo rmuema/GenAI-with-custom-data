@@ -1,0 +1,369 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO for Microsoft | ELO for Microsoft Teams
+
+
+ELO for Microsoft
+
+ELO for Microsoft Teams
+
+
+
+3
+
+3
+
+8
+
+10
+
+12
+
+Table of contents
+
+ELO for Microsoft Teams
+
+Register in Azure 
+
+Host the web app 
+
+ELO Integration Client 
+
+Client plug-in 
+
+2 ELO for Microsoft
+
+
+
+ELO for Microsoft Teams
+
+Register in Azure 
+
+Register your website as an application (on www.portal.azure.com).
+
+Select an app registration to register a new app.
+
+Select New registration.
+
+1. 
+
+2. 
+
+3. 
+
+3 ELO for Microsoft
+
+https://www.portal.azure.com/
+https://www.portal.azure.com/
+
+
+Enter a name for your application.
+
+Only allow your organization to access this application.
+
+Select the URI type Single-page application (SPA) and enter the URL/URI of your self-hosted
+
+website (see Hosting on the ELO Application Server).
+
+Click Register to complete the registration.
+
+4. 
+
+5. 
+
+6. 
+
+7. 
+
+4 ELO for Microsoft
+
+
+
+You know your application was registered if it has its own application ID.
+
+Now grant API permissions to your application via Microsoft Graph.8. 
+
+9. 
+
+5 ELO for Microsoft
+
+
+
+Under Delegated permissions, you now need to grant the app the following permissions:
+
+Channel.ReadBasic.All
+
+Team.ReadBasic.All
+
+TeamsTab.Create
+
+You can find the required permissions with the help of the search bar and enable them by
+
+setting the blue check mark.
+
+Make sure that Admin consent has been given for your application. Your application has four
+
+rights.
+
+• 
+
+• 
+
+• 
+
+6 ELO for Microsoft
+
+
+
+Now authenticate your application.
+
+Enable Access tokens as well as ID tokens and enter the address you already used to register
+
+your application in step 6 (see also Hosting on the ELO Application Server).
+
+Save your settings.
+
+1. 
+
+2. 
+
+7 ELO for Microsoft
+
+
+
+Host the web app 
+
+The web app is a purely static website you will find in the www folder. This means it can be hosted
+
+on any web server, such as the ELO application server, as a static website in Microsoft Azure, or
+
+using popular web hosting providers. It requires HTTPS encryption.
+
+Configuration 
+
+Before you upload the web app, you need to make some changes to the file www/authConfig.js in
+
+the www folder in the file system.
+
+This document is a JavaScript file. You can open it with the program Visual Studio Code, for
+
+example.
+
+Make the following changes to the authConfig.js file in the main folder:
+
+clientId: Enter your application ID (client) here (see the chapter Register in Azure, screenshot
+
+for step 7).
+
+tenantId: Enter your directory ID (tenant) here. This is located directly under Application ID
+
+(client) (see the chapter Register in Azure, screenshot for step 7).
+
+Hosting on the ELO Application Server 
+
+If you want to host the web app on the ELO Application Server (Tomcat), copy the folder www to 
+
+<elo-tomcat-dir>/webapps and rename it (e.g. to "teams").
+
+Test 
+
+Once the web app has been hosted and the Azure app has been registered correctly, you can test
+
+the app.
+
+1. 
+
+2. 
+
+const authConfig = {
+
+  cliendId: "<azure-client-id>",
+
+  tenantId: "<azure-tenant-id>",
+
+}
+
+8 ELO for Microsoft
+
+
+
+Go to the address where the browser is hosted. Now you can log on to the web app with your
+
+Microsoft account and integrate any website into Microsoft Teams.
+
+9 ELO for Microsoft
+
+
+
+ELO Integration Client 
+
+ELO for Microsoft Teams requires the ELO Integration Client. This is included in the ELO 20 and ELO
+
+21 standard packages. If you are using ELO 12, you need to activate a corresponding license for the
+
+ELO Integration Client.
+
+Install the ELO Integration Client and adjust the configuration as follows:
+
+The ELO Integration Client configuration is stored in the ELO repository under:
+
+//Administration//ELOapps//Configuration//elo.integration.Client
+
+If there is no configuration here, you need to create a corresponding file. You can make the
+
+following entries in an empty JSON file and save the JSON object in the ELO repository at the path
+
+named above.
+
+As described in the ELO Integration Client documentation, you can use the configuration in the JSON
+
+object to determine which functions will be available in the ELO Integration Client. More
+
+information about the range of possible functions in the ELO Integration Client is available on the
+
+ELO SupportWeb.
+
+Microsoft Teams uses the system parameter teams. You need to add a configuration for this
+
+parameter.
+
+Information
+
+You can find more detailed information about the ELO Integration Client in its main
+
+documentation.
+
+Example: 
+
+Once you have completed these steps, you can check if the ELO Integration Client is configured and
+
+working correctly by going to the following URL:
+
+{
+
+  "teams": {
+
+    "folderMask": "(E10E1000-E100-E100-E100-E10E10E10E31)",
+
+    "documentMask": "(E10E1000-E100-E100-E100-E10E10E10E30)",
+
+    "newDocVersFct": true,
+
+    "saveDocFct": true,
+
+    "gotoFct": true
+
+  }
+
+}
+
+10 ELO for Microsoft
+
+https://docs.elo.com/admin/integration-client/en-us/
+https://docs.elo.com/admin/integration-client/en-us/
+
+
+https://<server>/ix-<archive>/plugin/de.elo.ix.plugin.proxy/wf/apps/app/elo.integration.Client/?system=team
+
+11 ELO for Microsoft
+
+
+
+Client plug-in 
+
+To complete the installation and create a button in the ELO Java Client and ELO Web Client that
+
+allows you to share your documents and folders with Microsoft Teams straight from ELO, you need
+
+to store a plug-in (ELOinst file) in the Java Client and adjust the configuration accordingly.
+
+Install 
+
+Install the plug-in simply by dragging the file integration.teams_1.0.eloinst to the ELO Java Client.
+
+Drag the file custom_integration.teams_1.0.eloinst to the ELO Java Client as well.
+
+Configure 
+
+You will find the plug-in configuration file (integration.teams.config) in ELO under:
+
+Administration // Business Solutions Custom // integration.teams // Configuration //
+
+teamsUrl: Enter the URL where you installed the app (see Register in Azure; step 4, or 2.2 Tomcat:
+
+Host the web app on the ELO Application Server).
+
+By default, the following URL is used in Microsoft Teams:
+
+12 ELO for Microsoft
+
+
+
+If the internal ELOix URL doesn't work (e.g. due to plain HTTP) and the ELOix or the ELO Integration
+
+Client can be reached via (HTTPS) proxy, you can also overwrite this address as follows:
+
+Test 
+
+After you restart the client, the Integrate in Microsoft Teams button should appear in the menu.
+
+<ELOix-url>/plugin/de.elo.ix.plugin.proxy/wf/apps/app/elo.integration.Client/?useSSO=true&system=teams&GUID
+
+{
+
+      "teamsUrl": "...",
+
+      "eloUrl": "URL-that-will be used-in-microsoft-teams-with-{{guid}}"
+
+   }
+
+13 ELO for Microsoft
+
+
+	Table of contents
+	ELO for Microsoft Teams
+	Register in Azure
+	Host the web app
+	Configuration
+	Hosting on the ELO Application Server
+	Test
+
+	ELO Integration Client
+	Example:
+
+	Client plug-in
+	Install
+	Configure
+	Test
+
+
+

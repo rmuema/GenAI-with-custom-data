@@ -1,0 +1,638 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®) | ELO SAP® OLE call
+
+
+ELO Suite for SAP
+
+ArchiveLink® (SAP
+
+NetWeaver® & SAP S/
+
+4HANA®)
+
+ELO SAP® OLE call
+
+
+
+3
+
+3
+
+4
+
+11
+
+12
+
+14
+
+17
+
+Table of contents
+
+ELO SAP® OLE call
+
+Introduction 
+
+SAP customizing 
+
+ELO – Installation and implementation 
+
+Creating links from the ELO Intray 
+
+Information and tips 
+
+Attachments 
+
+2 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+ELO SAP® OLE call
+
+Introduction 
+
+This documentation describes options for configuring documents or their folders filed in ELO to be
+
+shown from within an SAP transaction (e.g. attachment list).
+
+The ELO Java Client provides a COM interface for direct communication with the SAP GUI. The
+
+following describes installation, configuration, and SAP customizing in order to be able to make an
+
+ELO Java Client call via the SAP system with OLE.
+
+This implementation has been released for the following ELO Java Client versions:
+
+10.09, 11.03, as well as all ELO 12 and ELO 20 versions
+
+ELO Business Solutions Common 1.04.000 and higher
+
+Basics 
+
+Displaying a document in the ELO Java Client requires the standard ArchiveLink tables TOA01, 
+
+TOA02, TOA03, or TOAHR to contain an entry for the document in the SAP system.
+
+In ELO, the SAPPATH field in the metadata form is used for saving for the linked document.
+
+SAPPATH schema: <Repository>/<Archive-Doc-Id>/<Container>
+
+This SAPPATH contains all information from the SAP system and the link tables:
+
+<Repository>: SAP content repository, e.g. E1
+
+<Archive-Doc-ID>: SAP doc ID, e.g. 2FC6BF4CB7D98B6BE1000000253D3A73
+
+<Container>: data or document depending on customizing
+
+To call the ELO Java Client, ELO Business Solutions Common package 1.04 or higher also has to be
+
+installed.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+3 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+SAP customizing 
+
+Application Maintenance 
+
+To call the ELO Java Client, you have to configure a custom application for ArchiveLink. Open
+
+Application Maintenance with transaction OAA4.
+
+Create a new application using the document icon here.
+
+The administrator is responsible for naming the application. We recommend naming the
+
+application ELOJCLIENT.
+
+After you create the application, it appears in the list of available applications.
+
+Select the new application to customize its settings. Double-click to open the Application
+
+Maintenance area.
+
+1. 
+
+2. 
+
+4 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+In the maintenance area, double-click and select the Display Stored Document entry.
+
+The script and command area will now open.
+
+3. 
+
+4. 
+
+5 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+At this point, this system requires a physical application name. The administrator is once
+
+again responsible for naming the application. In our example, the application was named
+
+after the ELO system.
+
+Enter the command in the line below. Select the object method M.
+
+Application name: ELO.ENTERPRISE
+
+Object methods: M
+
+Command: runScriptFunction eloComViewDocFromSap,@URL
+
+Please note
+
+The Release generated object after call check box must be enabled.
+
+Exit the Application Maintenance area by selecting the Back button.
+
+Save your settings by selecting the floppy disk icon on the toolbar or by pressing CTRL+S.
+
+The status of the Display Stored Document function is shown as Maintained.
+
+You can now exit the Application Maintenance area.
+
+Command – awaitLogin 
+
+Information
+
+The awaitLogin command is available in ELO Java Client versions 10.09, 11.03, and higher
+
+as well as all ELO 12 and ELO 20 versions.
+
+If a user double-clicks and selects a document in the attachment list before starting the ELO Java
+
+Client, the ELO Java Client logon dialog box is shown. Once the user has logged on to ELO, the
+
+default start screen is displayed in the ELO Java Client, and not the selected document. This is
+
+because ELO loses the information for opening the document when starting the logon process. After
+
+logging on, the user has to double-click the document in the attachment list again. To prevent this,
+
+you can add the command awaitLogin. Add this to the M object method in the Application
+
+Maintenance.
+
+5. 
+
+1. 
+
+2. 
+
+3. 
+
+6 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Please note
+
+If awaitLogin is added, the SAP frontend client SAP GUI waits for the user to log on to the
+
+ELO Java Client, blocking the SAP session.
+
+Creating protocols 
+
+The next step in customizing SAP is to create a custom protocol.
+
+Open transaction OAA3 – ArchiveLink: Communications Interface Administration.
+
+Click the document icon to create a new protocol for ELO.
+
+Protocol: ELOJC
+
+Version: 0046 (must match the OAC0 entry)
+
+Description: ELO Java Client
+
+In the Version field, enter the version of the SAP ArchiveLink communications protocol.
+
+If you do not know it, check the version in the transaction OAC0 and the respective content
+
+repository.
+
+Confirm your input by selecting the button with the green check mark and save your settings.
+
+1. 
+
+2. 
+
+3. 
+
+7 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Maintaining protocols 
+
+The new protocol now appears in the list of available protocols.
+
+To maintain the protocol, double-click the entry ELOJC.
+
+The application maintenance for the ELOJC protocol opens.
+
+Double-click the Display Stored Document function.
+
+The list of document types for the Display Stored Document function opens.
+
+1. 
+
+2. 
+
+8 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+To open the ELO Java Client for all document types, select the top entry with *. It currently
+
+has the status Not maintained explicitly (standard). Double-click to open the maintenance
+
+window for all document types.
+
+In the Communication Type field, enter OPEN.
+
+In the Application field, enter the new ELOJCLIENT application you created.
+
+Confirm your input by clicking the button with the green checkmark and save your settings.
+
+The document type * is now shown with the status Maintained explicitly.
+
+3. 
+
+4. 
+
+5. 
+
+6. 
+
+9 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Protocol – assigning a content repository 
+
+As the final step in customizing ArchiveLink, now assign the new protocol to the content repository
+
+linked to ELO.
+
+Switch to transaction OAC0 – Display Content Repository and double-click the relevant
+
+content repository to select it.
+
+Now, click the icon to switch to change mode for the transaction and enter the new protocol 
+
+ELOJC to the Protocol field.
+
+Save your input with the Save button or by pressing CTRL+S.
+
+1. 
+
+2. 
+
+3. 
+
+10 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+ELO – Installation and implementation 
+
+The basis for technical implementation of the scripts is the ELO Business Solutions Common 1.04
+
+package (or higher). If this has not been installed in your ELO system, install it now. This package
+
+provides the class framework, namespaces, and architectural concepts for services, actions, and
+
+function modules.
+
+To start installation, log on to the ELO Java Client as Administrator.
+
+You can install the individual packages from the ELO SupportWeb with a single click.
+
+Alternative: You can download the package containing the .eloinst files on the ELO
+
+SupportWeb.
+
+Then, install the erp.sap.comaccess package.
+
+You will now find the configuration and scripts for the SAP OLE call in the Business Solutions
+
+folder in the ELO repository.
+
+How the script works 
+
+The implemented ELO script searches for a document with data from SAP (content repository,
+
+document ID, and container) as an entry in the SAPPATH field via ELO Indexserver call. The search
+
+string follows this pattern: <contRep>/<docID>/data.
+
+If the script finds hits for this search string, the document is shown depending on the number of hits
+
+and filing location.
+
+If there is exactly one hit, the document is shown in the folder structure. If multiple hits are found
+
+or one document is "only" located in the chaos folder, the ELO Java Client search opens and the
+
+document(s) is (are) shown there.
+
+If there are no hits with …./data, the script performs a new search with the container …./data1. This
+
+method corresponds to the ArchiveLink protocol method for the get method call.
+
+If this search is unsuccessful, another search is run with …./*.
+
+Function test – script without SAP 
+
+To test the function of the script without direct SAP access, you can use the attached testView-
+
+woSap.vbs file.
+
+Assign this script the content repository and document ID for a document filed to your ELO that
+
+contains this information in the SAPPATH, and run the script.
+
+1. 
+
+2. 
+
+3. 
+
+11 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Creating links from the ELO Intray 
+
+With this function, you can file documents in the ELO Intray from within an SAP transaction and link
+
+them to the corresponding SAP business object.
+
+Information
+
+This function is available in ELO Java Client versions 10.07, 11.02, and higher as well as all
+
+ELO 12 and ELO 20 versions.
+
+To configure this, go to transaction OAA4 in your SAP system and select the ELOJCLIENT entry
+
+you created before (see chapter Application Maintenance).
+
+A menu opens.
+
+Select the item Archive from Frontend.
+
+1. 
+
+2. 
+
+3. 
+
+12 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Next, create the following entries Application Maintenance area. Note the correct object
+
+methods (M – S – G).
+
+Application name: ELO.ENTERPRISE
+
+Object methods Command
+
+M runScriptFunctionEx eloComCheckDti,@DTI
+
+G @DTI=getLastScriptResult
+
+M runScriptFunctionEx eloComGetStoreError,@UID
+
+G @ETX=getLastScriptResult
+
+G @EID=getLastScriptResult
+
+M runScriptFunctionEx eloComStoreDoc,@AID
+
+G @DID=getLastScriptResult
+
+M runScriptFunctionEx eloComGetStoreError,@UID
+
+G @ETX=getLastScriptResult
+
+G @EID=getLastScriptResult
+
+Please note
+
+The Release generated object after call check box must be enabled.
+
+Exit the Application Maintenance area by selecting Back.
+
+Save your settings by selecting the the floppy disk icon on the toolbar or by pressing
+
+CTRL+S.
+
+The status of the Archive from Frontend function is shown as Maintained.
+
+You can now exit the Application Maintenance area.
+
+The permitted file format from the ELO Intray depends on the file type selected in SAP as well as
+
+the linked document type. It can be maintained in transaction OAC2.
+
+Please note
+
+If a document with document type FAX or TIF is maintained, only the file extensions TIF and 
+
+TIFF are accepted for filing in ELO. For all other document types, the extension must match
+
+that of the selected document type.
+
+1. 
+
+2. 
+
+3. 
+
+13 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Information and tips 
+
+This chapter contains additional useful information. You will learn how to disable security
+
+information in the SAP GUI.
+
+Security information in the SAP GUI 
+
+When opening a document using the ELO Java Client from in SAP, a security prompt may appear in
+
+the SAP GUI, depending on how the local SAP GUI is configured.
+
+By selecting the button Allow, you enable the function to upload a document.
+
+Check the box next to Remember My Decision to prevent the message from appearing again.
+
+However, the security prompt is transaction-dependent in this case: If the user opens a document
+
+from within another transaction, the security prompt will appear again. The local system
+
+administrator can choose between two SAP GUI settings to disable the message.
+
+Open the Options menu item for your SAP logon menu by clicking the menu icon.
+
+1. 
+
+2. 
+
+1. 
+
+14 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+On the left side of the open dialog box, select Security > Security Settings. Now, you can
+
+choose one of the three status options.
+
+Information
+
+Status option Strict Deny blocks use of ELO functions.
+
+Security module – 'Disabled' status 
+
+If you set the status to Disabled, no security check is performed when calling the ELO Java Client.
+
+The security prompt is therefore also disabled and no longer shown to the user.
+
+Security module – 'Customized' status 
+
+Once you have set the status to Customized, you can adjust other settings by selecting the Open
+
+Security Configuration button.
+
+If you set Remember my Decision to disable the previous security prompt, the security
+
+configuration will already contain entries.
+
+2. 
+
+15 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+The elo.enterprise.1 entry stands for calling the ELO Java Client within a transaction in SAP. This
+
+entry is transaction-independent.
+
+Double-click it to see the entry details.
+
+To open/call the ELO Java Client for all transactions, enter an asterisk (*) in place of the
+
+values specified in the Transaction, Screen Na, and Screen Num table fields.
+
+Information
+
+The settings made here depend on the system and client. If needed, they can also be
+
+replaced with an asterisk (*).
+
+If these two settings have been made, the security prompt is no longer shown to the SAP GUI user.
+
+Deleting these entries restores the state on initial installation.
+
+1. 
+
+2. 
+
+16 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Attachments 
+
+You will find the OLE SAP OLE call zip file in the ELO SupportWeb under ELO Smart Link for SAP®
+
+ERP.
+
+17 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+https://supportweb.elo.com/en-us/integration/elo-for-sapr-erp/elo-suite-for-sap-archivelinkr/elo-smart-link-for-sapr-erp.html
+https://supportweb.elo.com/en-us/integration/elo-for-sapr-erp/elo-suite-for-sap-archivelinkr/elo-smart-link-for-sapr-erp.html
+https://supportweb.elo.com/en-us/integration/elo-for-sapr-erp/elo-suite-for-sap-archivelinkr/elo-smart-link-for-sapr-erp.html
+
+	Table of contents
+	ELO SAP® OLE call
+	Introduction
+	Basics
+
+	SAP customizing
+	Application Maintenance
+	Command – awaitLogin
+	Creating protocols
+	Maintaining protocols
+	Protocol – assigning a content repository
+
+	ELO – Installation and implementation
+	How the script works
+	Function test – script without SAP
+
+	Creating links from the ELO Intray
+	Information and tips
+	Security information in the SAP GUI
+	Security module – 'Disabled' status
+	Security module – 'Customized' status
+
+
+	Attachments
+
+

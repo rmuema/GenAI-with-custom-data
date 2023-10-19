@@ -1,0 +1,433 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO packages | Packages – Basics
+
+
+ELO packages
+
+Packages – Basics
+
+
+
+3
+
+3
+
+5
+
+6
+
+8
+
+8
+
+10
+
+12
+
+Table of contents
+
+Manage packages
+
+Package administration 
+
+Create package 
+
+Delete package 
+
+Manage levels
+
+Levels – General 
+
+Add a new level 
+
+Assign content to a new level 
+
+2 ELO packages
+
+
+
+Manage packages
+
+Package administration 
+
+Open the ELO Administration Console.
+
+Click 'Package administration'.
+
+The package administration screen opens.
+
+1. 
+
+2. 
+
+3 ELO packages
+
+
+
+The following items are available:
+
+1 Create package: You can create a new package with Create package.
+
+2 Package contents: Package contents opens an overview of the contents of the
+
+selected package.
+
+3 Export: By clicking Export, you create an export of the package as a GZIP file.
+
+4 Import: Click Import to import a package.
+
+5 Delete package: Click Delete package to delete the selected package.
+
+6 Package settings: In this area, you can see and edit the basic settings for a package.
+
+You will find the following items there: 
+
+Namespace:The namespace of a package. This cannot be changed. The
+
+namespace helps differentiate between multiple packages that may have the
+
+same name. 
+
+Name: Name of the package.
+
+Description: Description of the package.
+
+Maintainer: Package creator/administrator.
+
+Icon: Package icon. Can be replaced with a different icon in SVG format by
+
+clicking Upload.
+
+GUID: Shows the GUID in the ELO system.
+
+Last changed on: Shows the date the package was changed.
+
+7 Packages: Shows a list of all the packages available to date.
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+▪ 
+
+▪ 
+
+▪ 
+
+▪ 
+
+▪ 
+
+▪ 
+
+▪ 
+
+◦ 
+
+4 ELO packages
+
+
+
+Create package 
+
+In the Package administration area, click Create package.
+
+The Package dialog box appears.
+
+Under Namespace, enter a namespace that is unique as possible.
+
+Under Name, enter a name for the package.
+
+Option 1: If necessary, complete the Description and Maintainer fields.
+
+Option 2: Change the icon for the package if necessary.
+
+Click Apply to save the package.
+
+The package is created and is now available in the menu area of the ELO Administration
+
+Console and in the package administration area. You can now create aspects and fields.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5 ELO packages
+
+
+
+Delete package 
+
+Important
+
+Data may be lost.
+
+Packages can currently be deleted, even if the metadata forms they contain are still in use.
+
+Open the package administration area.
+
+Click the package you want to delete.
+
+The settings for the selected package open.
+
+Click Delete package (recycle bin icon).
+
+A prompt dialog box opens.
+
+Click OK to confirm.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+6 ELO packages
+
+
+
+The package is deleted.
+
+7 ELO packages
+
+
+
+Manage levels
+
+Levels – General 
+
+ELO Digital Office GmbH plans on delivering base packages for packages with metadata and forms
+
+gen. 2 in the future. The base package contains standardized package items. You can customize
+
+this base standard and expand it with additional levels. Specific inheritance strategies in the base
+
+packages allow ELO to install updates easily.
+
+Levels are a concept for configuring modifications, e.g. between test systems/production systems
+
+or for customer-specific topics. The respective levels are always created in a specified package.
+
+Example 
+
+A partner uses a custom level in an ELO solution package to make a series of modifications for a
+
+customer. If there is an update for the ELO solution, it can be installed without difficulty because
+
+the ELO export package only contains the base level and only replaces this when imported. The
+
+custom level remains untouched in the customer system along with all custom modifications.
+
+Level structure 
+
+Each package has a base level with standard ELO elements. You can also add more levels and
+
+customize them.
+
+8 ELO packages
+
+
+
+The respective levels are executed hierarchically. The levels are assigned integer values which
+
+determine their position in the hierarchy.
+
+Configuration 
+
+The highest associated level available is always used for a configuration.
+
+To allow you to overwrite the configurations as required, these must be split up into suitable
+
+objects. This applies especially to configurations in the Config service, e.g. the views of forms or
+
+the configurations of workspaces. 
+
+There are initially no plans to allow for the overwriting of individual configurations in data managed
+
+by the ELO Indexserver. Only additional complete objects can be added on higher levels here
+
+(metadata forms, aspects, font colors, users…). The inheritance function provides an option for
+
+modifying metadata forms.
+
+Example 
+
+In contract management, there is a setting for when a user should be notified of an upcoming
+
+automatic extension of a rental contract with a set duration (e.g. cell phone contract). The default
+
+setting (Level 100/Base) is 30 days. For a customer with slower business processes, the partner can
+
+set a value of 60 days in the level 500/Custom.
+
+When the system later creates the scheduled notifications, it sees the value 60 since it is in the
+
+higher level, and the customer-side user receives the notification 60 days before the extension of
+
+the contract.
+
+9 ELO packages
+
+
+
+Add a new level 
+
+Open a package in which you would like to adjust the levels.
+
+Click Add level.
+
+Enter the metadata for the new level.
+
+1. 
+
+2. 
+
+3. 
+
+1. 
+
+10 ELO packages
+
+
+
+In the Level drop-down menu, select a level.
+
+Enter a name for the new level in the Name field.
+
+Click Apply to confirm the change.
+
+Level metadata 
+
+Level:
+
+An integer value indicates the level. The values currently in use are 100, 500, 900 (see
+
+below). The higher the number, the higher the level, which effectively hides similar settings
+
+of the lower levels.
+
+Name:
+
+The name (DisplayName) shows the level in the package overview. Full Unicode is allowed
+
+except for pilcrows.
+
+Example 
+
+For the customer XYZ Inc. the overseeing partner creates a Custom level (level 500) in the 
+
+ELOinvoice package. They name it XYZ Inc..
+
+The following levels are currently planned: 
+
+Name Level Examples
+
+Base 100 ELO standard metadata forms; ELOinvoice solution
+
+Custom 500 Sample company
+
+Staging 900 Paths in the test system; paths in the production system
+
+2. 
+
+4. 
+
+1. 
+
+2. 
+
+11 ELO packages
+
+
+
+Assign content to a new level 
+
+Click in the level display to select the level you would like to edit.
+
+To add metadata forms, aspects, groups, keyword lists, workspace types, teamspace
+
+templates, font colors, flows, and translations, click the respective field in the level.
+
+Alternative: Select the desired menu item in the menu bar.
+
+The selected menu item opens automatically, and you can generate new contents (e.g. add
+
+metadata forms). You can find more information about what to do next in the corresponding
+
+documentation for the menu items.
+
+1. 
+
+2. 
+
+12 ELO packages
+
+
+	Table of contents
+	Manage packages
+	Package administration
+	Create package
+	Delete package
+
+	Manage levels
+	Levels – General
+	Example
+	Level structure
+	Configuration
+	Example
+
+
+
+	Add a new level
+	Level metadata
+	Example
+
+	The following levels are currently planned:
+
+	Assign content to a new level
+
+

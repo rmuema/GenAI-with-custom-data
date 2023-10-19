@@ -1,0 +1,854 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO for SAP Solutions | SAP® Cloud for Customer
+
+
+ELO for SAP Solutions
+
+SAP® Cloud for Customer
+
+
+
+3
+
+3
+
+4
+
+10
+
+Table of contents
+
+ELO Integration Service for SAP® Cloud for Customer
+
+Introduction 
+
+Configuration in ELO 
+
+Integration with SAP® Cloud for Customer 
+
+2 ELO for SAP Solutions
+
+
+
+ELO Integration Service for SAP® Cloud for
+
+Customer
+
+Introduction 
+
+This documentation describes how to set up the ELO Integration Service for SAP® Cloud for
+
+Customer. SAP® Cloud for Customer groups multiple functional levels. This integration works for
+
+SAP Sales Cloud as well as SAP Service Cloud.
+
+The integration service provides the technical platform for implementing the ELO Integration Client
+
+in an SAP® Cloud for Customer system (referred to here simply as C4C). Following installation, the
+
+ELO Integration Client is available as a mashup in correspondingly configured objects in the C4C
+
+client. When the ELO Integration Client is called within C4C, a configurable path is created
+
+(assuming one doesn't already exist) and displayed in ELO. This provides the user with the
+
+functions of the ELO Integration Client, which can also be customized if required.
+
+ELO basics 
+
+To use the ELO Integration Service for SAP® Cloud for Customer and the ELO Integration Client
+
+within C4C, the systems must meet the following requirements:
+
+ELOprofessional or ELOenterprise version 12 or higher
+
+The following modules are required: 
+
+ELOwf 
+
+ELOwf 20.05.000
+
+ELOwf 12.06.000
+
+ELO REST 
+
+ELO REST Service 20.02.000
+
+ELO REST API 12.04.000
+
+ELO Business Solutions Common version 1.07.000 or higher
+
+Correctly set SameSite flag (see ELO Integration Client documentation)
+
+Installed and configured ELOauth plug-in (optional when using single sign-on)
+
+In addition, your ELO license must include the ELO Integration Service for SAP® Cloud for Customer
+
+as well as user licenses for the ELO Integration Client.
+
+Mashup basics 
+
+A mashup is a website or application that integrates data or functionalities from two or more
+
+sources.
+
+In this case, C4C is the data source and the ELO Integration Client delivers the additional
+
+functionality. Data in C4C is transferred to the ELO Integration Client using a proprietary
+
+implementation.
+
+• 
+
+• 
+
+◦ 
+
+▪ 
+
+▪ 
+
+◦ 
+
+▪ 
+
+▪ 
+
+◦ 
+
+• 
+
+• 
+
+3 ELO for SAP Solutions
+
+https://docs.elo.com/admin/integration-client/en-us/installation-operation/known-issues.html#samesite-flag
+https://docs.elo.com/admin/integration-client/en-us/installation-operation/known-issues.html#samesite-flag
+
+
+Configuration in ELO 
+
+First, you need to install and configure the ELO Integration Service for SAP® Cloud for Customer in
+
+the ELO system.
+
+You will find the necessary installation packages on the ELO SupportWeb under Integration. The ELO
+
+installation package contains the following files:
+
+crm.c4c.integrationservice
+
+crm.c4c.integrationservice.custom
+
+The ELO Integration Client also requires a configuration file in ELOapps:
+
+elo.integration.Client
+
+'elo.integration.client' configuration file 
+
+The configuration file elo.integration.client in JSON format is required for the ELO Integration Client.
+
+You will find this configuration file under this path:
+
+//Administration// ELOapps//Configuration//elo.integration.Client
+
+If this file already exists, you will have to add the entry c4c.
+
+If it does not yet exist, create it with the following parameters. This is important for calling the
+
+URL.
+
+• 
+
+• 
+
+• 
+
+{
+
+  "c4c": {
+
+    "noForm": false,
+
+    "noFeed": false,
+
+    "noFulltext": false,
+
+    "noImagePreview": false,
+
+    "rFInit": "RF_crm_c4c_integrationservice_service_Init",
+
+    "newDocVersFct": true,
+
+    "saveDocFct": true,
+
+    "gotoFct": true,
+
+    "webClientURL": " http(s)://<ELOSERVER>:<PORT>/ix-<REPOSITORY>/plugin/de.elo.ix.plugin.proxy/web/"
+
+    "editInOfficeFct": true,
+
+    "removeEntryFct": true,
+
+    "startWorkflowFct": false,
+
+    "startWorkflowTemplates": null,
+
+    "externalLinkFct": true,
+
+    "folderMask": "<GUID of folder form>",
+
+    "documentMask": "<GUID of document form>",
+
+    "hasSearch": true,
+
+4 ELO for SAP Solutions
+
+
+
+For more information on this configuration file, refer to the ELO Integration Client manual.
+
+Be sure to check the following important parameters when creating or modifying the file:
+
+rFInit: Function that creates the folder path in ELO; provided with the 
+
+crm.c4c.integrationservice package.
+
+webClientURL: URL to open the ELO Web Client when the GoTo function is enabled. To prevent
+
+the user from having to log on multiple times, the proxy behind the ELO Indexserver must be
+
+configured. The ELO Web Client should be configured accordingly as a plug-in behind the
+
+ELOix proxy (recommended method).
+
+folderMask: Defines the metadata form that the ELO Integration Service uses to create new
+
+structures based on the C4C object.
+
+documentMask: Defines the metadata form that the ELO Integration Service uses when filing
+
+documents from the ELO Integration Client within C4C. You can use metadata forms that pass
+
+information onto the objects.
+
+ELO Integration Service for SAP® Cloud for Customer configuration 
+
+Once you have successfully installed the ELO packages, you will find the configuration app in
+
+the ELO Administration Console under:
+
+Solutions > SAP® Cloud for Customer > ELO Integration Service
+
+    "referenceEntryFct": true,
+
+    "refreshFct": true
+
+  }
+
+}
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+5 ELO for SAP Solutions
+
+https://docs.elo.com/admin/integration-client/
+https://docs.elo.com/admin/integration-client/
+
+
+The ELO for SAP® Cloud for Customer page opens.
+
+Click the ELO Integration Service tile.
+
+The ELO Integration Service configuration interface opens.
+
+Optional:
+
+You can make the following configurations in the interface:
+
+General settings
+
+Structure and metadata matching
+
+Assignment of user and group rights
+
+General settings 
+
+Under General settings, you can now create configurations for each C4C object. As soon as you add
+
+a new entry, corresponding lines are automatically created in the Structures and metadata
+
+matching area. Lines are also created in the Assignment of user and group rights area.
+
+2. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+6 ELO for SAP Solutions
+
+
+
+Port binding: In the Port binding column, enter the name of the object you are creating the
+
+configuration for. You can specify the name of the port binding object in the corresponding C4C
+
+mashup (See section URL mashup).
+
+Intermediate form: In the Intermediate form column, enter the metadata form for folders that may
+
+have to be created on storage so that the specified path can be generated.
+
+Folder form: The final metadata form is specified in the Folder form column, e,g. C4C Folder.
+
+Document form: This is where you specify which metadata form to use when filing from C4C. You
+
+can enter the same form as in the ELO Integration Client configuration file, or a separate one for
+
+each C4C object.
+
+Structure and metadata matching 
+
+As described in the section General settings, when you create an entry under General settings, a
+
+separate entry for the port binding is automatically created in the Structure and metadata matching
+
+area.
+
+Port binding: This entry is copied directly from the Port binding column under General settings and
+
+can also only be modified in this area.
+
+Repository path: The filing path in ELO is defined in the Repository path column. In this field, you
+
+can also enter C4C variables, e.g. using Handlebars syntax. You can find an example in the section 
+
+HTML mashup.
+
+ELO field matching: Choose between GRP for metadata field and MAP for map fields.
+
+ELO field: In MAP fields, it is possible to use iteration by attaching the value {i} to the technical
+
+name.
+
+7 ELO for SAP Solutions
+
+
+
+Please note
+
+If the metadata fields do not exist in the metadata form, the corresponding values will be
+
+lost and written as a warning in the log. This means they cannot be imported or matched.
+
+Value in Handlebars: The value entered here is stored in the corresponding ELO field in the ELO
+
+entry. To copy the value of the transfer parameter from the URL, it must be enclosed in triple curly
+
+brackets.
+
+If the values are iterated, you can use the {i} identifier to indicate the Handlebar.
+
+Please note
+
+If an iteration is defined but there is no {i} in the ELO field, all values will be concatenated
+
+in this field up to a maximum of 255 characters. Any values above this will be rejected.
+
+Key field: You can select one key field. The value of the key field is used to specify a property of the
+
+object that remains a unique identifier even when other data changes. For example, you can
+
+specify an ID that uniquely identifies an object. This ensures that an object is not created twice
+
+(with a new name) in the repository, for example. Instead, the corresponding folder is found and a
+
+new path is created according to the new name. The folder and its contents are moved to this new
+
+path. The documents that were stored under the old name remain in the folder with the new name.
+
+Assignment of user and group rights 
+
+This is where you assign user and group rights.
+
+Replace rights: ELO inherits the rights of the folder by default. If this option is enabled, the rights of
+
+the folder are discarded and only the set rights are assigned.
+
+Rights for users and groups: Enter the users or groups that you want to assign rights to here.
+
+RWDELP: Use the check boxes to set the different permissions types for users or groups.
+
+R = View
+
+W = Change metadata
+
+D = Delete
+
+E = Edit
+
+L = Edit list
+
+P = Set permissions
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+8 ELO for SAP Solutions
+
+
+
+For more information, refer to the documentation Concept for assigning rights and permissions.
+
+9 ELO for SAP Solutions
+
+https://docs.elo.com/admin/config/en-us/user-management/concept-recommendations/
+https://docs.elo.com/admin/config/en-us/user-management/concept-recommendations/
+
+
+Integration with SAP® Cloud for Customer 
+
+SAP® Cloud for Customer is an SAP CRM product that combines the two SAP customer experience
+
+solutions SAP Sales Cloud and SAP Service Cloud in one package. It runs on the SAP® HANA Cloud
+
+Platform and was developed with a mobile-first approach to meet the current needs of sales and
+
+service users.
+
+ELO Digital Office GmbH does not act in a consulting capacity on SAP® Cloud for Customer, which
+
+is why this documentation only addresses the integration of the ELO Integration Client.
+
+User roles/Views 
+
+You should first check whether you have the required permissions to integrate and configure
+
+mashups.
+
+Please note
+
+The views PDI_DEVELOPMENT and PDI_ADMINISTRATION must not be assigned, as you will
+
+otherwise not have access to the mashup integration functions.
+
+10 ELO for SAP Solutions
+
+
+
+After you log on again, the following entries should be available under Administration > General
+
+Settings:
+
+Mashup Web Services
+
+Mashup Authoring
+
+The following entries should be available under your user profile:
+
+Start Adaptation
+
+• 
+
+• 
+
+• 
+
+11 ELO for SAP Solutions
+
+
+
+Enable adaptation settings 
+
+Before you can integrate mashups, the function needs to be activated using an administrator
+
+account.
+
+You will find these settings under your user profile > Settings > Adaption Settings.
+
+Please note
+
+If these settings are switched off, you won't be able to adapt the C4C settings or connect the
+
+ELO Integration Client.
+
+Create the mashup application 
+
+To create a C4C mashup, navigate to the following menu entry:
+
+Administrator > General Settings > Mashup Authoring
+
+1. 
+
+12 ELO for SAP Solutions
+
+
+
+Select the function New.
+
+You can choose between two mashup types to connect the ELO Integration Client.
+
+URL Mashup: A mashup that sends data from the SAP cloud solution to the URL of an
+
+online service provider. The service provider uses the data to perform a search, for
+
+example. The results are displayed in a new browser window.
+
+HTML Mashup: A mashup that embeds an HTML or JavaScript browser page directly on
+
+a screen.
+
+URL and HTML mashup examples 
+
+2. 
+
+3. 
+
+◦ 
+
+◦ 
+
+13 ELO for SAP Solutions
+
+
+
+1 URL mashup: Only a URL is displayed. The ELO Integration Client opens in a separate window.
+
+2 HTML mashup: The ELO Integration Client is embedded in the application and opens directly in
+
+the view.
+
+Set up the mashup 
+
+This section explains how a mashup can be created, which configuration steps are required, and
+
+how it is subsequently linked to a C4C object.
+
+The implementation example here was done with a URL mashup as well as an HTML mashup.
+
+Information
+
+Both the URL mashup and the HTML mashup can be configured to enable single sign-on. To
+
+use single sign-on, the URL to the ELOauth plug-in has to be entered instead of the ELO
+
+Integration Client URL. See also the section Single sign-on via ELOauth plug-in.
+
+The following example illustrates implementation without single-sign on.
+
+14 ELO for SAP Solutions
+
+
+
+URL mashup 
+
+Select a port binding type.
+
+Information
+
+The port binding type specifies which object data can be accessed in C4C. Not every
+
+object provides a port binding.
+
+Click the icon in the Port Binding text field.
+
+The Port Binding menu opens.
+
+1. 
+
+2. 
+
+15 ELO for SAP Solutions
+
+
+
+Information
+
+The port binding options ensure that information from the C4C application is
+
+forwarded to the respective mashup. In turn, the mashup can work with data from the
+
+C4C application.
+
+In the example, a mashup is created for the metadata form Customer (Account).
+
+In this case, the import fields you see in the screenshot will be provided to the C4C
+
+application.
+
+Information
+
+If the field you require is not in the list, you are unable to import or export the data.
+
+Complete the mandatory fields in the General Information menu.
+
+Mashup Name: Specify a name for the mashup.
+
+URL:
+
+Extract parameters: Reads the parameters of the passed URL and displays them in the
+
+request parameter.
+
+Request parameter: This is where the port binding data is mapped to the URL
+
+parameters.
+
+3. 
+
+◦ 
+
+◦ 
+
+http(s)://<ELOSERVER>:<PORT>/ix-<REPOSITORY>/plugin/de.elo.ix.plugin.proxy/wf/apps/app/elo.integ
+
+◦ 
+
+◦ 
+
+16 ELO for SAP Solutions
+
+
+
+In this case, the parameters debug, system, and ObjType are fixed constants. C4C
+
+dynamically passes the parameter AccountName, which contains the respective
+
+customer name in the AccountName parameter binding.
+
+Click Activate.
+
+HTML mashup 
+
+You can also create an HTML mashup of the type URL. The settings and restrictions correspond to
+
+those described in the URL mashup section.
+
+Configuration based on the example 'Account' 
+
+Display the mashup 
+
+Now that the mashup is configured, it needs to be displayed on the screen.
+
+Navigate to the corresponding object that you want to integrate the mashup into.
+
+4. 
+
+17 ELO for SAP Solutions
+
+
+
+This is demonstrated in the following example for the object Customer (Account).
+
+Select a customer object.
+
+Click the icon for your profile.
+
+Select the entry Start Adaptation.
+
+You have the option to connect the ELO Integration Client with an existing tab or your own
+
+tab.
+
+1. 
+
+2. 
+
+3. 
+
+18 ELO for SAP Solutions
+
+
+
+If you want to use an existing tab, click the blue button next to the tab.
+
+Alternative:
+
+To create a new tab specifically for your mashup, select Add.
+
+4. 
+
+19 ELO for SAP Solutions
+
+
+
+You can rearrange the tab order with drag and drop.
+
+Next, you can enter a name for the new tab.
+
+20 ELO for SAP Solutions
+
+
+
+Navigate to the new tab and click the pen icon.
+
+The view on the right-hand side changes to the Form Pane page.
+
+Click twice on the arrow icon to the left of ELO Mashup ‒ Form Pane.
+
+The View page opens.
+
+5. 
+
+6. 
+
+21 ELO for SAP Solutions
+
+
+
+Click Add.
+
+You see all mashups that you can use for the object.
+
+Select the mashup you want.
+
+Click Apply to confirm.
+
+7. 
+
+8. 
+
+9. 
+
+22 ELO for SAP Solutions
+
+
+
+The mashup is now available.
+
+Please note
+
+If your mashup isn't in the list, it was either created with the wrong port binding or the
+
+corresponding port binding does not exist.
+
+The entry is only selected if the check box is selected.
+
+If you just select an entry, you will get an error message.
+
+Single sign-on via ELOauth plug-in 
+
+If you authenticate with your C4C via SAML authentication, you can also use it for authenticating
+
+with the ELO Integration Client.
+
+In this case, you have to install the ELOauth plug-in and configure it accordingly. You can download
+
+the ELOauth plug-in on the ELO SupportWeb. The installation process is described in ELOauth plug-
+
+in: configuration.
+
+Please note
+
+23 ELO for SAP Solutions
+
+https://docs.elo.com/admin/config/en-us/elo-indexserver/eloauth-plugin/configuration.html#saml
+https://docs.elo.com/admin/config/en-us/elo-indexserver/eloauth-plugin/configuration.html#saml
+https://docs.elo.com/admin/config/en-us/elo-indexserver/eloauth-plugin/configuration.html#saml
+
+
+Only the required ELO settings are shown here. SAML authentication must already be
+
+configured in C4C.
+
+The plug-in is configured using a JSON file named de.elo.ix.plugin.auth.json located in the ELO
+
+Indexserver configuration directory:
+
+Add the following entry to the ELOauth plug-in configuration file and store your required values.
+
+Replace the URL entry for the ELO Integration Client within the mashup with the ELOauth plug-in
+
+URL.
+
+Example structure:
+
+<id> stands for the ID/name of the configuration entry.
+
+<ELO-Inst>/config/ix-<repository>/<server name>
+
+http://<ELOSERVER>:<PORT>/ix-<REPOSITORY>/plugin/de.elo.ix.plugin.auth/login/?configId=<id>
+
+24 ELO for SAP Solutions
+
+
+	Table of contents
+	ELO Integration Service for SAP® Cloud for Customer
+	Introduction
+	ELO basics
+	Mashup basics
+
+	Configuration in ELO
+	'elo.integration.client' configuration file
+	ELO Integration Service for SAP® Cloud for Customer configuration
+	General settings
+	Structure and metadata matching
+	Assignment of user and group rights
+
+
+	Integration with SAP® Cloud for Customer
+	User roles/Views
+	Enable adaptation settings
+	Create the mashup application
+	URL and HTML mashup examples
+
+	Set up the mashup
+	URL mashup
+	HTML mashup
+	Configuration based on the example 'Account'
+
+	Display the mashup
+	Single sign-on via ELOauth plug-in
+
+
+

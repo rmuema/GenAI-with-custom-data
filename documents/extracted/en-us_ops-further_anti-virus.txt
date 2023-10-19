@@ -1,0 +1,234 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Additional information | Exceptions in antivirus software
+
+
+Additional information
+
+Exceptions in antivirus software
+
+
+
+3
+
+3
+
+5
+
+Table of contents
+
+Exceptions in antivirus software
+
+Directories and file formats 
+
+ELO modules 
+
+2 Additional information
+
+
+
+Exceptions in antivirus software
+
+Directories and file formats 
+
+This section contains information about directories and file formats that you require to define
+
+exceptions in your antivirus software.
+
+Directory types 
+
+You should define exceptions in the antivirus software for the following directory types:
+
+Repository directories 
+
+Incl. ELO iSearch directories
+
+Intray directories
+
+FT data directories
+
+OCR directories
+
+XML Importer transfer directories
+
+Temporary directories
+
+Installation directories
+
+The following sections give you some information on the affected directories.
+
+Server directories 
+
+The placeholder [ELO] in the following table stands for the directory in which you installed the
+
+ELOprofessional/ELOenterprise server (E:\ELOprofessional, for example). The paths are the
+
+suggested default directories. The paths may vary depending on the installation.
+
+Information
+
+Please ensure that the exceptions apply to child directories as well.
+
+Directory type Sample path Can be found in:
+
+Repository
+
+directory
+[ELO]\archive
+
+Repository database, elodmpath
+
+table
+
+iSearch directory [ELO]\data[ELO iSearch node name]
+Under [ELO]\config\elastic in the 
+
+elasticsearch.yaml file
+
+Intray directory
+[ELO]\data\eloam\postbox and [ELO]
+
+\data\eloam\checkout
+ELOam database, amoptions table
+
+XML Importer
+
+transfer directory
+
+[ELO]\data\im-[repository name]\import
+
+(can occur multiple times)
+config.xml for ELOim
+
+Temporary
+
+directory
+[ELO]\temp
+
+• 
+
+◦ 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+3 Additional information
+
+
+
+Directory type Sample path Can be found in:
+
+Installation
+
+directory
+[ELO]
+
+Client directories 
+
+The following table describes the default paths installed on the client computer. If you installed the
+
+clients to another directory, adjust the exception rules accordingly.
+
+Directory type Default path
+
+Installation directory (Java Client) %PROGRAMFILES%\ELO Java Client
+
+Intray directory (Java Client) %APPDATA%\ELO Digital Office
+
+OCR directory (Java Client) %PROGRAMFILES%\ELO Java Client\Ocr
+
+Exceptions for specific file formats 
+
+In addition, you should define an exception for the following file formats:
+
+File extension File type
+
+.es8 Metadata file
+
+.esw Metadata file
+
+Information
+
+Depending on the antivirus software used, different problems may arise. If problems with
+
+the antivirus software occur, please contact the antivirus software manufacturer.
+
+4 Additional information
+
+
+
+ELO modules 
+
+The following section provides more information about the exceptions for ELO modules.
+
+Exceptions for ELO XC 
+
+In the case of ELO XC, the installation directory, log directory, and the temporary directory must be
+
+excluded from scanning by the antivirus software.
+
+Exceptions for ELO Replication 
+
+The entire directory trees of the Broker Workdir and Branch Workdir folders must be excluded from
+
+scanning by the antivirus software.
+
+The temporary folder in the Windows account that is being used for the replication service must
+
+also be excluded from scanning by the antivirus software.
+
+5 Additional information
+
+
+	Table of contents
+	Exceptions in antivirus software
+	Directories and file formats
+	Directory types
+	Server directories
+	Client directories
+	Exceptions for specific file formats
+
+	ELO modules
+	Exceptions for ELO XC
+	Exceptions for ELO Replication
+
+
+

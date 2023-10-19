@@ -1,0 +1,765 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO mobile apps | ELO Connect (Android)
+
+
+ELO mobile apps
+
+ELO Connect (Android)
+
+
+
+3
+
+4
+
+19
+
+Table of contents
+
+Requirements and installation 
+
+Basics 
+
+Usage examples 
+
+2 ELO mobile apps
+
+
+
+Requirements and installation 
+
+The ELO Connect app enables you to gather files from different sources and easily transfer them to
+
+the ELO Java Client or ELOoffice. To transfer files, you can access your internal device memory,
+
+removable storage (e.g. SD cards), and cloud storage (e.g. Google Drive).
+
+You can even select the files you want to transfer while on the go. You do not have to be connected
+
+to the same network as the ELO Java Client or ELOoffice.
+
+Requirements 
+
+ELO Connect was developed for use on mobile devices with Android 4.0 or higher. You can transfer
+
+files with ELO Java Client version 11 and higher as well as ELOoffice 11. To install ELO Connect, you
+
+need the Google Play Store app and a Google account.
+
+Please note
+
+Establishing a connection between ELO Connect and your computer requires the port TCP/
+
+UDP 5876 to be enabled. In the Windows Management Console, go to the Windows Defender
+
+Firewall with Advanced Security dialog box and enable port TCP/UDP 5876 under Inbound
+
+Rules. Create a new rule.
+
+As ELO Connect only works on a fixed port, use in a multi-user environment, such as
+
+terminal servers, is not possible.
+
+Installation 
+
+You will find the ELO Connect app in the Google Play Store.
+
+Method
+
+Tap Install to begin installation.
+
+Result
+
+ELO Connect is installed on your device automatically.
+
+Start app 
+
+To start ELO Connect, tap the app icon on your device.
+
+3 ELO mobile apps
+
+
+
+Basics 
+
+This chapter introduces the ELO Connect program interface. You will get to know important menus
+
+and buttons and learn how to navigate ELO Connect.
+
+User interface 
+
+To start ELO Connect, tap the app icon on your device's start screen.
+
+4 ELO mobile apps
+
+
+
+5 ELO mobile apps
+
+
+
+The Outbox area opens.
+
+Information
+
+The Outbox area is set as the ELO Connect start screen.
+
+1 Menu (button with three dots): Opens the Menu bar.
+
+2 Refresh: Refreshes the Outbox.
+
+3 Add (plus icon): Opens the File overview.
+
+Menu bar 
+
+Open the Menu bar from the menu (button with three dots).
+
+6 ELO mobile apps
+
+
+
+The ELO Connect menu bar opens.
+
+The following menu items are available:
+
+Outbox: Here, you can gather files and transfer them to the ELO Java Client or ELOoffice.
+
+Connections: Under Connections, you can add or remove connections to transfer data between ELO
+
+Connect and the ELO Java Client or ELOoffice.
+
+Configuration: In the Configuration, you can adjust settings for filing and saving your files with ELO
+
+Connect. Different logging functions are also available in this area.
+
+Privacy Policy: You will find the ELO Connect Privacy Policy here.
+
+7 ELO mobile apps
+
+
+
+Company Information: This menu item contains Company Information and the contact information
+
+for ELO Digital Office GmbH.
+
+File overview 
+
+Navigate to the Outbox. Tap Add (plus icon) to open the File overview area.
+
+The File overview opens. You can select the files you want to transfer with ELO Connect here. Once
+
+you have made your selection, the files are gathered in the Outbox.
+
+1 Directory overview: Opens the overview of available directories. In the directory overview, you
+
+can choose directories of other apps, for example an additional file explorer. As standard, you can
+
+select files to transfer with ELO Connect from the following directories:
+
+Images
+
+Videos
+
+Audio
+
+Recent
+
+Downloads
+
+Cloud providers, e.g. Google Drive
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+8 ELO mobile apps
+
+
+
+9 ELO mobile apps
+
+
+
+2 File view: Changes the view of the available files. You can choose between a view with large
+
+icons and a list view with additional information, such as the date and file name.
+
+3 File arrangement: Arranges the displayed files by name or date modified.
+
+4 Additional display options: Provides additional information on the files. You can hide or show the
+
+file size as well as the internal storage.
+
+Connections 
+
+In this chapter, you will learn how to set up a connection for data transfer with ELO Connect and
+
+what general configuration options are available.
+
+Setting up a connection 
+
+Method
+
+In the open menu bar, tap Connections.1. 
+
+10 ELO mobile apps
+
+
+
+The Connections area opens.
+
+Tap Add (plus icon).2. 
+
+11 ELO mobile apps
+
+
+
+The input screen for recipient connection data opens.
+
+In the ELO user name field, enter the user name you want to use to log onto your ELO
+
+repository in the ELO Java Client or ELOoffice.
+
+In the Computer name or IP address field, enter the name of the computer you have installed
+
+the ELO Java Client or ELOoffice to.
+
+Alternative: In the Computer name or IP address field, enter the name of the computer you
+
+have installed the ELO Java Client or ELOoffice on.
+
+Please note
+
+To transfer files between ELO Connect and the ELO Java Client or ELOoffice, your
+
+mobile device must be connected to the same network as your computer.
+
+3. 
+
+4. 
+
+12 ELO mobile apps
+
+
+
+Confirm your connection data by tapping the gray check.
+
+Result
+
+A connection for transferring files between ELO Connect and the ELO Java Client or ELOoffice has
+
+now been created.
+
+Please note
+
+Establishing a connection between ELO Connect and your computer requires the port TCP/
+
+UDP 5876 to be enabled. In the Windows Management Console, go to the Windows Defender
+
+Firewall with Advanced Security dialog box and enable port TCP/UDP 5876 under Inbound
+
+Rules. Create a new rule.
+
+As ELO Connect only works on a fixed port, use in a multi-user environment, such as
+
+terminal servers, is not possible.
+
+When you have successfully established a connection between ELO Connect and the ELO Java
+
+Client or ELOoffice, the active connection appears in the connection overview. The connection
+
+information contains the ELO user name of the respective client, the computer name or its IP
+
+address, as well as a designation for the client to which files are transferred. In this example, you
+
+can see that there is an active connection between ELO Connect and ELOoffice.
+
+5. 
+
+13 ELO mobile apps
+
+
+
+You can now transfer files between the ELO Connect app and the ELO Java Client or ELOoffice.
+
+Delete connection 
+
+If you would like to remove an active connection in ELO connect, proceed as follows:
+
+Navigate to the Connections area.
+
+Select the connection you would like to delete from the Connections area.
+
+The menu bar in the Connections area offers two additional functions.
+
+Tap the Recycle bin if you would like to remove the active connection from the Connections.
+
+Tap the arrow icon if you want to clear your selection.
+
+Result
+
+The active connection is removed from the Connections area.
+
+Configuration 
+
+In the Configuration, you can adjust settings for filing and saving your files with ELO Connect.
+
+Different logging functions are also available in this area.
+
+Method
+
+Open the Configuration by tapping Configuration on the menu bar.
+
+1. 
+
+2. 
+
+3. 
+
+14 ELO mobile apps
+
+
+
+15 ELO mobile apps
+
+
+
+The Configuration dialog box appears.
+
+Filing 
+
+Filing location: Here, you can define where transferred files are stored in the ELO Java Client or
+
+ELOoffice.
+
+To Intray: The files are sent to the Intray of the connected repository.
+
+To current folder: Stores the files to the folder most recently selected in the repository in the
+
+ELO Java Client or ELOoffice.
+
+Confirm via dialog box: Shows a dialog box for each transfer allowing you to select a location
+
+to transfer the file to. Here, you can choose between the two filing options To Intray and To
+
+current folder. 
+
+Storage 
+
+Use external storage: Choose whether local files should be saved to an external storage medium,
+
+such as an SD card, or to the internal storage of the device. Use the slider to choose how you want
+
+to file your documents.
+
+Logging 
+
+Logging: Here, you will find all the settings for an optional log file.
+
+Enable/disable logging: Enables creation of a log file. Tap the slider icon to enable or disable
+
+this setting.
+
+View log file: With this option, users can view the log file. If one is available, open the log file
+
+with an editor of your choice.
+
+Notify support: Compose an e-mail to send to ELO Support. Available log files are attached to
+
+the e-mail.
+
+Delete log file: This option allows you to delete available log files. 
+
+Configuring ELOoffice for file transfer 
+
+Method
+
+Open ELOoffice on your computer.
+
+On the ELOoffice menu bar, click the ELO button.
+
+Open the Configuration area.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+1. 
+
+2. 
+
+16 ELO mobile apps
+
+
+
+By Additional modules, check the ELO Connect box.
+
+Restart ELOoffice.
+
+Please note
+
+To establish a connection between ELOoffice and ELO Connect, you need version
+
+11.00.016 of ELOoffice.
+
+A dialog box with a Windows Security Alert opens. This means the Windows Firewall is
+
+blocking communication between ELO Connect and your computer.
+
+Enable communication by checking the box next to Private networks, such as my home or
+
+work network.
+
+3. 
+
+4. 
+
+5. 
+
+6. 
+
+17 ELO mobile apps
+
+
+
+Click Allow access.
+
+Result
+
+You can now transfer files to ELOoffice with ELO Connect.
+
+18 ELO mobile apps
+
+
+
+Usage examples 
+
+This chapter introduces you to the functions of ELO Connect (Android) using practical examples.
+
+At the beginning of each section, you will find information on the following:
+
+Description of the example (objective)
+
+Notes regarding the installation or other important information (requirements)
+
+Description of the actions (step by step)
+
+Description of the results
+
+Gathering files in the ELO Connect Outbox 
+
+In the ELO Connect Outbox, you can gather files and select files to transfer to the ELO Java Client or
+
+ELOoffice.
+
+Information
+
+It is only possible to transfer files from the Outbox area.
+
+Requirements
+
+You need the file or document that you want to file to the Outbox. The file or document must
+
+be in a directory on your smartphone, on an SD card, etc.
+
+The file or document will be referred to as the file in the following.
+
+Method
+
+Navigate to the Outbox area.
+
+Tap Add (plus icon) to open the file overview.
+
+The File overview menu bar opens.
+
+On the file overview menu bar, open the Directory overview.
+
+Select a directory.
+
+Tap the file you want to add.
+
+Result
+
+The selected file is now in the ELO Connect Outbox.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+19 ELO mobile apps
+
+
+
+Multiple file selection 
+
+You can also select multiple files at once and add them to your ELO Connect Outbox.
+
+Requirements
+
+You need several files or documents that you are going to file. The files or documents must
+
+be in a directory on your smartphone, on an SD card, etc.
+
+The files or documents are referred to as files in the following.
+
+Method
+
+Select multiple files in a folder you previously selected.
+
+• 
+
+• 
+
+1. 
+
+20 ELO mobile apps
+
+
+
+The file selection menu bar opens.
+
+21 ELO mobile apps
+
+
+
+1 Arrow icon: Tap here to discard your file selection.
+
+2 Open: Clicking this button files the selected files in the Outbox.
+
+3 Select all: Selects all files in the current directory.
+
+Tap Open to file the selected files in the ELO Connect Outbox.
+
+Result
+
+The selected files are added. The app switches to the Outbox.
+
+Remove files from the Outbox 
+
+You can remove files from the Outbox area as follows:
+
+Requirements
+
+You need at least one file or document that you want to remove from the Outbox area.
+
+The file or document will be referred to as the file in the following.
+
+Method
+
+Navigate to the Outbox.
+
+Select a file. Multiple selection is possible.
+
+2. 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+22 ELO mobile apps
+
+
+
+Tap the Recycle bin.
+
+Result
+
+The selected file is removed from the Outbox area.
+
+Transferring files with ELOoffice or the ELO Java Client 
+
+You want to transfer files from your device to your ELOoffice or ELO Java Client repository.
+
+Requirements
+
+You need at least one file or document that you want to transfer to your ELOoffice or ELO Java
+
+Client repository. The file or document must be in the ELO Connect Outbox.
+
+The file or document will be referred to as the file in the following.
+
+Method
+
+Navigate to the Outbox area.
+
+Select the file you want to transfer to ELOoffice or the ELO Java Client.
+
+Information
+
+Multiple selection is possible. Files that have been selected are shown with a light
+
+blue background in the file icon.
+
+3. 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+23 ELO mobile apps
+
+
+
+Additional functions appear on the menu bar.
+
+1 Arrow icon: Tap here to discard your selection.
+
+2 Share icon: Opens the selected file in another app. The corresponding app is opened
+
+automatically depending on the file type.
+
+3 Send icon: Transfer the selected files to ELOoffice or the ELO Java Client.
+
+4 Recycle bin: Remove the selected file from the ELO Connect Outbox.
+
+The metadata in the file thumbnail contains the following information:
+
+File name and file type
+
+Date added to the Outbox
+
+File size 
+
+Open ELOoffice or the ELO Java Client on your computer.
+
+Tap Send.
+
+◦ 
+
+◦ 
+
+◦ 
+
+3. 
+
+4. 
+
+24 ELO mobile apps
+
+
+
+Result
+
+Once the transfer is complete, the selected file is shown in the Intray or the folder currently open in
+
+ELOoffice or the ELO Java Client.
+
+For successful file transfers, you will briefly see a message Upload successful in the ELO Connect 
+
+Outbox.
+
+Information
+
+If you have selected the To current folder option in the Filing area of the ELO Connect 
+
+configuration, the transferred file is assigned the Basic entry keywording form by default.
+
+25 ELO mobile apps
+
+
+	Table of contents
+	Requirements and installation
+	Requirements
+	Installation
+	Start app
+
+
+	Basics
+	User interface
+	Menu bar
+	File overview
+	Connections
+	Setting up a connection
+	Delete connection
+
+	Configuration
+	Filing
+	Storage
+	Logging
+
+	Configuring ELOoffice for file transfer
+
+	Usage examples
+	Gathering files in the ELO Connect Outbox
+	Multiple file selection
+	Remove files from the Outbox
+	Transferring files with ELOoffice or the ELO Java Client
+
+
+

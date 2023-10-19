@@ -1,0 +1,321 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO packages | Users and groups
+
+
+ELO packages
+
+Users and groups
+
+
+
+3
+
+3
+
+5
+
+6
+
+Table of contents
+
+Groups
+
+Overview 
+
+Create group 
+
+Configuration 
+
+2 ELO packages
+
+
+
+Groups
+
+Overview 
+
+Open the Groups area in the package you want to edit.
+
+The Groups area offers the following actions:
+
+1 Create group
+
+2 Perform search
+
+3 Define filter
+
+4 Copy group: All configurations are applied, with the exception of the Name and E-mail address
+
+fields.
+
+5 Perform configuration: Via the Basic settings, Group membership, and User rights tabs
+
+6Delete group
+
+Delete group 
+
+Please note
+
+When you delete a group, it is deleted permanently.
+
+3 ELO packages
+
+
+
+Do not delete any groups that have already been used in ELO. This can lead to inconsistencies. In
+
+this case, it is better to change the basic settings of the group instead of deleting the group:
+
+Disable Visible in user lists
+
+The group now only exists in the background in ELO. The rights assigned via the group are
+
+maintained and previous actions with this group, such as participation in workflows, are still visible
+
+in ELO.
+
+• 
+
+4 ELO packages
+
+
+
+Create group 
+
+To create a new group, proceed as follows:
+
+Select the package you want to edit.
+
+In this package, open the Groups area.
+
+Select New group.
+
+The Group area opens.
+
+Configure the new group. Navigate to the Basic settings, Group membership, and User rights
+
+tabs to do so.
+
+For more information, refer to the Configuration chapter.
+
+Once you are finished with configuration, select Save group to save it.
+
+You have created a new group.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+5 ELO packages
+
+
+
+Configuration 
+
+Define basic settings 
+
+In the Basic settings area, you define the Group information, Properties, and additional Information.
+
+Group information 
+
+Name: Mandatory field. This can be changed later.
+
+E-mail address: Displayed in the user profile in the client and can be used in workflows,
+
+forms, and scripts.
+
+Administrator: The name of the account used to create the new group is automatically
+
+entered. This can be changed later. Determines who can edit the master data of the group.
+
+Supervisor: Can be used in workflows, forms, and scripts. If this field is left blank, the content
+
+of the Name field is used.
+
+Use:
+
+Visible in user lists: If this option is enabled, the group will show up in dialog boxes in
+
+the ELO client. If the option is disabled, the group still exists in ELO, but users without
+
+administrator privileges are unable to select them in dialog boxes.
+
+Option group: Option groups are defined for the purpose of assigning specific 
+
+ProfileOpts. Only these groups show up in dialog boxes where settings are made for
+
+other ELO accounts.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+◦ 
+
+◦ 
+
+6 ELO packages
+
+
+
+You will find more information on option groups under Configuration and administration >
+
+User administration > Groups > Configuration > Option groups.
+
+Substitution allowed: You can control how rights are distributed via the substitution module.
+
+For groups that have the substitution right, rights can be transferred to substitutes.
+
+Functional role: If this option is enabled, members of this group are asked during logon
+
+whether they want to assume the functional role for the current session. This allows users to
+
+decide whether they want to use ELO in a specific role. 
+
+Properties 
+
+Property 1-5: Information can be evaluated using scripts.
+
+Organizational unit: You will find relevant information under Configuration and administration
+
+> User administration > Additional Configurations > Organizational units.
+
+• 
+
+• 
+
+• 
+
+• 
+
+7 ELO packages
+
+https://docs.elo.com/admin/config/en-us/user-management/groups/configuration-groups.html#option-groups
+https://docs.elo.com/admin/config/en-us/user-management/groups/configuration-groups.html#option-groups
+https://docs.elo.com/admin/config/en-us/user-management/groups/configuration-groups.html#option-groups
+https://docs.elo.com/admin/config/en-us/user-management/other-configurations/organizational-units.html
+https://docs.elo.com/admin/config/en-us/user-management/other-configurations/organizational-units.html
+https://docs.elo.com/admin/config/en-us/user-management/other-configurations/organizational-units.html
+
+
+Information 
+
+Last changed on: Is updated automatically.
+
+GUID: Each group is automatically assigned a GUID. The GUID can be used to address the
+
+group in other functions.
+
+Define group membership 
+
+In the Group membership area, you can assign members to the group and define the group
+
+membership in existing groups.
+
+• 
+
+• 
+
+8 ELO packages
+
+
+
+1 Members: Add existing users or groups as members
+
+2 Group membership: With the Copy group membership from field, you can inherit existing group
+
+memberships from other groups or users. Group memberships can also be added manually. The 
+
+Everyone group is entered by default.
+
+Information
+
+Groups can be incorporated into other groups. This allows you to implement complex
+
+combinations of rights settings and permissions concepts.
+
+Information
+
+If you type a space in an input field, the entire list of available users and groups will be
+
+displayed.
+
+Assign user rights 
+
+Under User rights, you assign the rights associated with the group membership.
+
+9 ELO packages
+
+
+
+1 Copy user rights from: Inherit the user rights from another group or user
+
+2 User rights: You will find more information under Configuration and administration > Rights in ELO
+
+> User rights.
+
+10 ELO packages
+
+https://docs.elo.com/admin/config/en-us/user-management/rights-in-elo/user-rights.html
+https://docs.elo.com/admin/config/en-us/user-management/rights-in-elo/user-rights.html
+https://docs.elo.com/admin/config/en-us/user-management/rights-in-elo/user-rights.html
+
+	Table of contents
+	Groups
+	Overview
+	Delete group
+
+	Create group
+	Configuration
+	Define basic settings
+	Group information
+	Properties
+	Information
+
+	Define group membership
+	Assign user rights
+
+
+

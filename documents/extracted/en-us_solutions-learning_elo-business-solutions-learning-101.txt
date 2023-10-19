@@ -1,0 +1,2260 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Business Solution ELO Learning | Business Solution ELO Learning 1.01
+
+
+Business Solution ELO
+
+Learning
+
+Business Solution ELO Learning 1.01
+
+
+
+3
+
+4
+
+10
+
+19
+
+22
+
+36
+
+41
+
+49
+
+53
+
+Table of contents
+
+Introduction 
+
+Basics 
+
+Getting started 
+
+Create course 
+
+Edit course 
+
+Sessions 
+
+Participants 
+
+Dashboard overview 
+
+Learning platform 
+
+2 Business Solution ELO Learning
+
+
+
+Introduction 
+
+Structure of the documentation 
+
+The goal of this documentation is to explain all functions of Business Solution ELO Learning.
+
+Basics 
+
+The Basics chapter explains the basics of the ELO Learning program interface.
+
+Getting started 
+
+The Getting started chapter essentially explains how ELO Learning works. This chapter is short and
+
+helps experienced ELO users get started quickly.
+
+Possible actions and other elements 
+
+The remaining chapters address possible actions and other elements of ELO Learning.
+
+Target audience 
+
+This documentation is addressed to Business Solution ELO Learning users who manage courses.
+
+Separate documentation is available for administrators on the ELO SupportWeb.
+
+The scope of functions presented in this documentation may differ greatly from those in your
+
+client.
+
+If you do not find functions described in this documentation in your client, you do not have
+
+permission to perform the action.
+
+3 Business Solution ELO Learning
+
+
+
+Basics 
+
+Basic principle 
+
+Business Solution ELO Learning assists you in managing and booking courses.
+
+ELO Learning consists of two components:
+
+Course administration: Courses are managed in the ELO client. You can create courses,
+
+sessions, and participants here and get an overview of available courses on the dashboard.
+
+Learning platform: Participants can enroll in and attend courses on the corresponding learning
+
+platform.
+
+If ELO Learning is used together with ELO Knowledge, individual courses can be linked to spaces in
+
+order to allow discussions among the participants.
+
+Different categories of courses are available:
+
+Online: This category includes:
+
+Virtual classrooms: These courses are attended via the optional integration with
+
+provider GoToWebinar.
+
+E-learning courses
+
+Videos
+
+Face-to-face: The course is carried out on site, and not on the learning platform.
+
+Course enrollment: Depending on the settings, courses can either be booked on the learning
+
+platform, or participants are enrolled by the course administrator.
+
+You can create individual courses or learning paths, which are made up individual related courses.
+
+Once participants have successfully completed courses, certificates can be created automatically.
+
+General note 
+
+ELO Learning works with the following clients:
+
+ELO Web Client
+
+ELO Java Client
+
+ELO Desktop Client
+
+Information
+
+In this documentation, we use screenshots from the ELO Web Client.
+
+• 
+
+• 
+
+• 
+
+◦ 
+
+◦ 
+
+◦ 
+
+• 
+
+• 
+
+• 
+
+• 
+
+4 Business Solution ELO Learning
+
+https://docs.elo.com/solutions/knowledge/en-us/elo-business-solutions-knowledge/
+https://docs.elo.com/solutions/knowledge/en-us/elo-business-solutions-knowledge/
+https://docs-nightly.elo.dev/user/elo-web-client/en-us/elo-web-client/
+https://docs-nightly.elo.dev/user/elo-web-client/en-us/elo-web-client/
+https://docs-nightly.elo.dev/user/elo-java-client/en-us/elo-java-client/
+https://docs-nightly.elo.dev/user/elo-java-client/en-us/elo-java-client/
+https://docs-nightly.elo.dev/user/elo-desktop-client/en-us/elo-desktop-client/
+https://docs-nightly.elo.dev/user/elo-desktop-client/en-us/elo-desktop-client/
+
+
+Requirements 
+
+Your administrator must have configured ELO Learning for you.
+
+Program interface 
+
+Fig.: Business Solution ELO Learning program interface
+
+You will find ELO Learning functions in the following areas:
+
+1 'Learning' group on the 'New' ribbon tab
+
+You can create new courses via the Learning group. Once you have created a course and you select
+
+it, the Course tab appears. You can edit the course using the functions on the Course tab.
+
+2 'Courses & participants', 'Courses and seminars', and 'New course' tiles in the tile navigation
+
+The Courses & participants and New course tiles are only available if you can create courses.
+
+The Courses and seminars tile is available to all users who can attend courses. This tile takes you
+
+to the learning platform.
+
+Fig.: 'Course' tab
+
+3 'Course' tab
+
+5 Business Solution ELO Learning
+
+
+
+The Course tab appears if you have created a course and selected it in the repository in the 
+
+Courses folder or on the dashboard.
+
+This tab contains functions for editing the selected course.
+
+Fig.: 'Enrollment' tab
+
+4 'Enrollment' tab
+
+The Enrollment tab appears if you select a course participant in the repository in the Enrollments
+
+folder or on the dashboard.
+
+This tab contains functions relevant for course participants.
+
+Repository 
+
+The structure and appearance of the repository depend greatly on your specific configuration. The
+
+default state is described here.
+
+Courses 
+
+Courses are the foundation for all other functions in the course management area. A folder is
+
+created for each course.
+
+Fig.: Course folder
+
+Courses are stored under //Course management//Courses.
+
+Courses can have the following statuses:
+
+D – Draft: The course has been created and is now being edited.
+
+T – Preview: The course is still being edited, but has been announced on the learning
+
+platform.
+
+P – Released: The course has been released on the learning platform and can be booked.
+
+• 
+
+• 
+
+• 
+
+6 Business Solution ELO Learning
+
+
+
+Sessions 
+
+Sessions are created within courses. Face-to-face training and virtual classrooms require sessions.
+
+You cannot create sessions for the other course types.
+
+Participants 
+
+For courses without sessions, participants are created within the courses, and for courses with
+
+sessions, they are created within the sessions.
+
+Course form 
+
+Fig.: 'Course' form
+
+Each created course contains a form, which you can later edit.
+
+The form contains the tabs Overview, Course data, Contents, Requirements, and Settings.
+
+With the exception of the Overview tab, the fields of all tabs can be edited. The Overview tab uses
+
+information from the fields on the other tabs.
+
+7 Business Solution ELO Learning
+
+
+
+Course materials 
+
+On creation, each course folder contains the Course materials folder. In this folder, you can create
+
+course materials that the learning platform then offers participants for download.
+
+Session form 
+
+Fig.: 'Session' form
+
+Each created session contains a form, which you can later edit.
+
+Besides the form, the session folder contains the participants enrolled in this session.
+
+8 Business Solution ELO Learning
+
+
+
+Participant form 
+
+Fig.: 'Enrollment' form
+
+Each created participant contains a form.
+
+The form contains the tabs Participant and Course data.
+
+Several fields on the Participant tab can be edited, but this is generally unnecessary. The status of a
+
+participant can be changed via the drop-down menu. However, normally the status is updated
+
+automatically when you or participants trigger actions, for example closing an e-learning session.
+
+The fields on the Course data tab give you an overview of the course and cannot be edited.
+
+9 Business Solution ELO Learning
+
+
+
+Getting started 
+
+In this section, we will present ELO Learning based on two examples. These examples perform the
+
+most important functions of ELO Learning, from creating a course to releasing it on the learning
+
+platform.
+
+This is a short guide. Follow the links for a more detailed description of the individual steps.
+
+Learning path assigned to participants 
+
+All new employees in your company are onboarded via a learning path. This learning path contains
+
+an e-learning course and a video.
+
+The learning path is assigned by the course administrator and cannot be booked by employees
+
+themselves.
+
+You need: A finished e-learning course and a video
+
+1 Create courses
+
+Fig.: 'Create a course' dialog box
+
+Create a new Learning path type course: New tab > Learning > New course. In this example,
+
+leave Release date blank.
+
+Create two courses with the types E-learning and Video.
+
+1. 
+
+2. 
+
+10 Business Solution ELO Learning
+
+
+
+These courses have to be edited before you can release them on the learning platform. You will find
+
+the courses in the repository in the //Course management//Courses folder.
+
+Information
+
+The order of further steps shown is only one of many possibilities.
+
+2 Create course contents
+
+Fig.: E-learning in the course folder
+
+Create the e-learning right in the specific course.
+
+Fig.: Video in the 'Video' folder
+
+The Video folder is automatically created for Video type courses. Create the video in the 
+
+Video folder. You can file videos with identical contents but different formats to this folder.
+
+3 Add course photos
+
+Configure course photos for the learning platform. In this example, you need course photos for the
+
+learning path as well as for the individual courses.
+
+4 Add course information
+
+Enter additional information related to the courses via the form. This information has the following
+
+functions:
+
+On the Settings and Course data tabs, you can configure where the course will become
+
+visible on the learning platform and when in the Status and Release date fields.
+
+The information about the course is shown on the learning platform.
+
+Edit the forms for the courses:
+
+1. 
+
+1. 
+
+• 
+
+• 
+
+11 Business Solution ELO Learning
+
+
+
+Fig.: 'Visibility' on the 'Settings' tab
+
+As you do not want the courses to be visible outside of the learning path, do not check the 
+
+Course can be found in the course catalog and Course is shown under "My courses" boxes.
+
+Enter additional information related to the individual courses for the learning platform. You
+
+can control their release via the learning path.
+
+1. 
+
+2. 
+
+12 Business Solution ELO Learning
+
+
+
+Fig.: Course dependency on the 'Requirements' tab
+
+Participants should watch the video before starting the e-learning course. In the e-learning
+
+form, select the video on the Requirements tab under Required courses.
+
+Edit the learning path form:
+
+Fig.: 'Visibility' on the 'Settings' tab
+
+As you don't want the participants to be able to enroll in the learning path themselves, under 
+
+Settings, check the Course is shown under "My courses" box. Do not check the Course can be
+
+found in the course catalog box.
+
+1. 
+
+1. 
+
+13 Business Solution ELO Learning
+
+
+
+Fig.: 'Included courses' on the 'Contents' tab
+
+On the Contents tab, go to Included courses and select the video and the e-learning.
+
+Fig.: 'Released' status on the 'Course data' tab
+
+On the Course data tab, select the status P – Released.
+
+As only enrolled participants can see the learning path on the My courses tab of the learning
+
+platform and no participants have been enrolled yet, the learning path is not yet visible on the
+
+learning platform.
+
+1. 
+
+1. 
+
+14 Business Solution ELO Learning
+
+
+
+5 Enroll participants
+
+Enroll the new employees in the course: Course tab > Enroll participants.
+
+The learning path now appears on the learning platform on the My courses tab for the selected
+
+employees.
+
+6 Send message to participant
+
+To notify new employees of the learning path, you can write them a message.
+
+Course with multiple sessions for enrolling via the learning platform 
+
+You want to create a virtual classroom with multiple sessions. Before release, the course should be
+
+available as a preview on the learning platform. Users enroll themselves in their preferred session.
+
+Course materials are available for download.
+
+For course participants to be able to discuss the course contents outside of the virtual classroom,
+
+link the course with an ELO Knowledge space.
+
+You need: A GoToWebinar account, ELO Knowledge
+
+1 Create course
+
+Create a new Virtual classroom type course: New tab > Learning > New course. In the Release date
+
+field, select a date to release the course. Once the selected date has been reached, the course is
+
+automatically released on the learning platform.
+
+The course now has to be edited before you can be release it on the learning platform. You will find
+
+the courses in the repository in the //Course management//Courses folder.
+
+Information
+
+The order of further steps shown is only one of many possibilities.
+
+2 Add course photos
+
+Configure course photos for the learning platform.
+
+3 Add course information
+
+Enter additional information related to the course via the form. This information has the following
+
+functions:
+
+On the Settings tab, you can configure where a course is visible on the learning platform.
+
+The information about the course is shown on the learning platform.
+
+Edit the course form:
+
+• 
+
+• 
+
+15 Business Solution ELO Learning
+
+
+
+Fig.: 'Visibility' on the 'Settings' tab
+
+As you want participants to be able to enroll in the course themselves, check the Course can
+
+be found in the course catalog box. Also check the Course is shown under "My courses" box
+
+to give enrolled participants quick access to the course on the My courses tab.
+
+Fig.: 'Preview' status on the 'Course data' tab
+
+For the course to appear on the learning platform as a preview, on the Course data tab, set
+
+the status to T – Preview. The course appears on the learning platform as soon as you save
+
+your changes, but cannot be booked yet.
+
+Fig.: Configured space on the 'Course data' tab
+
+1. 
+
+1. 
+
+1. 
+
+16 Business Solution ELO Learning
+
+
+
+On the Course data tab, select a space for the participants under Knowledge management.
+
+Enter additional information related to the course for the learning platform.
+
+4 Create course material
+
+Fig.: Filed course material
+
+The Course materials folder is created automatically for all courses. File your course materials to
+
+this folder.
+
+Information
+
+As soon as you enter instructors for the course, they are given access to the course and can
+
+create course materials and course contents.
+
+5 Create sessions
+
+Select the course and create sessions: Course tab > Add sessions.
+
+Fig.: Session
+
+6 Add session information
+
+2. 
+
+17 Business Solution ELO Learning
+
+
+
+Fig.: Session instructor
+
+As all sessions are carried out by different instructors, enter an instructor separately for each
+
+session in the form.
+
+7 Release
+
+Once the date selected under Release date has been reached, participants can enroll via the
+
+learning platform.
+
+8 Close session
+
+For participants to get their certificates, close the session once it has taken place: Course tab >
+
+Close session.
+
+18 Business Solution ELO Learning
+
+
+
+Create course 
+
+Information
+
+Courses are the foundation for all other functions in the course management area. Once you have
+
+created courses, you can create sessions and participants. You can create courses from any
+
+position in your client.
+
+Information
+
+If the option Use simple ribbon is enabled in the configuration for the ELO Web Client, the
+
+ribbon will not be shown on your My ELO home screen. In this case, first navigate to the 
+
+Repository work area.
+
+Method
+
+On the New tab, click Learning > New course.
+
+Fig.: 'Select course template' dialog box
+
+In the Select course template dialog box, select the template for your course.
+
+By selecting a course template, appropriate metadata is generated automatically when you
+
+create a course.
+
+1. 
+
+2. 
+
+19 Business Solution ELO Learning
+
+
+
+Fig.: 'Create a course' dialog box
+
+In the Create a course dialog box, complete the fields as required.
+
+Fields with a pencil icon contain keyword lists. When you enter a value in the respective field,
+
+matching list entries appear.
+
+Field Meaning
+
+Course
+
+number
+
+The course number is generated automatically as soon as you have created
+
+the course. If you enter an internal number in the field, no automatic number is
+
+generated. This field can be read-only meaning it is only possible for numbers
+
+to be generated automatically.
+
+Status
+Leave the status as Draft if you do not want to release or announce the course
+
+on the learning platform yet.
+
+Instructor
+If you enter an instructor for the course, they are given access to the course
+
+and can create course materials and course contents.
+
+Certificate
+
+template
+
+Configure a template for the certificate that participants receive after
+
+completing the course.
+
+Click OK.
+
+Result
+
+3. 
+
+4. 
+
+20 Business Solution ELO Learning
+
+
+
+Fig.: Course folder
+
+A folder is created for the course. A Course materials child folder is automatically created for every
+
+course. In this folder, you can file course materials that the learning platform then offers
+
+participants for download.
+
+Outlook
+
+The course can now be edited.
+
+You can perform all actions described in the chapter Edit course.
+
+If you have set the course status to Preview or Released, you must also set the display type on the 
+
+Settings tab of the course form.
+
+21 Business Solution ELO Learning
+
+
+
+Edit course 
+
+Once you have created a course, you need to edit the release settings.
+
+All courses can be released on the learning platform, regardless of whether the course will take
+
+place on the learning platform. This allows participants to enroll in all course types via the learning
+
+platform, provided you have released the course there.
+
+This chapter addresses the following topics:
+
+Add course information
+
+Create learning path
+
+Add course photos
+
+Create course material
+
+Insert e-learning
+
+Insert video file
+
+Embed YouTube or Vimeo video
+
+Add course information 
+
+Information
+
+Once you have created a course, you can enter additional information in the course form. Some of
+
+this information is shown on the learning platform as the course description.
+
+Information
+
+For a course to be able to appear on the learning platform, the Settings tab has to be edited.
+
+Method
+
+Select the course whose form you want to edit.
+
+Fig.: 'Form' button
+
+Optional: If the content of the course is shown, click Form.
+
+Change or complete the fields on the Course data, Contents, Requirements, and Settings tabs
+
+as required.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+22 Business Solution ELO Learning
+
+
+
+'Course data' tab
+
+Status: You can change the status of the course via the drop-down menu.
+
+Status Use
+
+D – Draft
+Do not change this status as long as you do not want the course to be visible on
+
+the learning platform.
+
+T –
+
+Preview
+
+Use this status if a course is still being edited, but you want to announce it on the
+
+learning platform. Courses with this status cannot be booked or completed yet. You
+
+can use the Course description field to configure an announcement text.
+
+P –
+
+Released
+
+Use this status so that a course can be booked and/or completed on the learning
+
+platform.
+
+Information
+
+For the course to be visible on the learning platform, you also have to edit the visibility in
+
+the Settings.
+
+Field Meaning
+
+Instructor
+
+In the course form, enter an instructor if this person is carrying out all sessions.
+
+Otherwise, configure the instructor in the individual sessions. If you enter an
+
+instructor for the course, they are given access to the course and can create course
+
+materials and course contents.
+
+Certificate
+
+template
+
+If you configure a certificate template here, participants receive a certificate after
+
+completing the course. With e-learning courses, the certificates are created
+
+automatically once the course is completed. For courses with sessions, the
+
+certificates are automatically created when the session has been closed with the 
+
+Close session function.
+
+Release
+
+date
+
+If you enter a release date here, the status of the course automatically changes to P –
+
+Released on this date.
+
+Space
+
+If you use ELO Knowledge in addition to ELO Learning, you can link a course to a
+
+space here. This allows participants to discuss technical topics outside of the course.
+
+On the learning platform, the link Discussion on the topic is created and links to the
+
+associated space.
+
+23 Business Solution ELO Learning
+
+
+
+Fig.: Link to ELO Knowledge on the learning platform
+
+'Contents' tab
+
+Field Meaning
+
+Summary The text appears on the learning platform on the start page for the course.
+
+'Requirements' tab
+
+Fig.: Locked course on the learning platform
+
+Field Meaning
+
+Required
+
+courses
+
+If you select courses here, participants can only begin the course if they have already
+
+completed the required courses. Until then, the button to enroll in the course is
+
+locked.
+
+'Settings' tab
+
+Visibility: With these options, you can control where the courses are shown on the learning
+
+platform.
+
+24 Business Solution ELO Learning
+
+
+
+Option Meaning
+
+Course can
+
+be found in
+
+the course
+
+catalog
+
+The course is released on the learning platform on the Course catalog tab. With this
+
+option, participants can book courses themselves via the course catalog. By
+
+checking this box, you can also determine whether a course that is part of a
+
+learning path also appears as a separate course in the course catalog.
+
+Course is
+
+shown under
+
+"My courses"
+
+The course appears for enrolled users on the My courses tab on the learning
+
+platform. With this option, participants can be assigned courses they are unable to
+
+book themselves via the course catalog. Once a course administrator has enrolled
+
+participants using the Enroll participants function, the course is visible to the
+
+participants. Visibility on the My courses tab is also a quick way to access enrolled
+
+or started courses and to get an overview of completed courses.
+
+Information
+
+If you check the Course can be found in the course catalog box in the form for a learning
+
+path, it is shown under Learning paths, and not in the course catalog.
+
+If you check the Course can be found in the course catalog box in the form for a video, it is
+
+shown under Media library, and not in the course catalog.
+
+Please note
+
+With Visibility, you can control the general visibility of a course on the learning platform.
+
+You also have to change the status of the course on the Course data tab for it to appear on
+
+the learning platform.
+
+Option Meaning
+
+Learning
+
+contents
+
+The Go straight to learning contents option allows users to open e-learning courses
+
+and videos right from the course preview. The course overview page does not have
+
+to be opened.
+
+Enrollment
+
+As soon as you check the Show confirmation dialog box on enrollment box, a text
+
+field appears. When a participant enrolls in a course, a dialog box appears with the
+
+text entered to this field. When going straight to the learning contents, this dialog
+
+box does not appear.
+
+Confirm your changes with Save.
+
+Result
+
+The changes to the form are applied.
+
+If you have set the course status to Preview or Released and enabled a visibility option, it can be
+
+accessed on the learning platform.
+
+1. 
+
+25 Business Solution ELO Learning
+
+
+
+Create learning path 
+
+Information
+
+You can combine multiple courses to form a learning path. A learning path can consist of all course
+
+types and contain different course types.
+
+Requirement
+
+You need all the courses you want to be part of the learning path.
+
+Method
+
+On the New tab, click Learning > New course.
+
+Create a course with the Learning path course template.
+
+Select the learning path.
+
+Optional: If the content of the learning path is shown, click Form.
+
+Learning paths are generally edited in the same way as described under Add course
+
+information.
+
+Click the Contents tab.
+
+Under Included courses, select the courses you want to be part of the learning path.
+
+The order in which you enter the courses does not have any effect on the order the courses
+
+have to be completed.
+
+To define a specific order, you have to edit the courses: For the included courses, enter the
+
+courses on the Requirements tab under Required courses. The learning path assumes the
+
+information from the individual courses.
+
+On the Settings tab, set the visibility of the learning path under Visibility.
+
+Information
+
+If you check the Course can be found in the course catalog box, it is shown on the
+
+learning platform under Learning paths, and not in the course catalog.
+
+You can set whether a course is only shown as part of the learning path, or as a separate
+
+course in the course catalog as well.
+
+Only as part of the learning path: In the learning path, check the Course can be found in
+
+the course catalog box. Do not check this box for the course.
+
+As part of the learning path and as a course in the course catalog: In the learning path,
+
+check the Course can be found in the course catalog box. Also check this box for the
+
+course.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+6. 
+
+◦ 
+
+◦ 
+
+7. 
+
+26 Business Solution ELO Learning
+
+
+
+Confirm your changes with Save.
+
+Result
+
+The learning path is released on the learning platform and can be completed by participants.
+
+Add course photos 
+
+Information
+
+You can add photos for the learning platform to the course. You can configure two different pictures
+
+as the cover photo and the preview image. If you only configure a cover photo, this picture will also
+
+be used as the preview image.
+
+Method
+
+Select the course you want to add course photos to.
+
+On the Course tab, click Add course photos.
+
+Fig.: 'Cover photo' dialog box
+
+On the Cover photo tab, select a cover photo.
+
+Optional: On the Preview image tab, select an image for the course preview.
+
+1. 
+
+2. 
+
+3. 
+
+27 Business Solution ELO Learning
+
+
+
+The following methods are available:
+
+Select a file button
+
+Take a picture button if a webcam is connected
+
+Drag-and-drop onto the gray rectangle (only in the ELO Web Client)
+
+Click OK.
+
+Result
+
+The images are filed and shown on the learning platform as soon as the course has been released.
+
+Create course material 
+
+Information
+
+You can create course materials along with a course. The course materials are provided to
+
+participants on the learning platform for download.
+
+When you create a course, it automatically contains the Course materials child folder. You can use
+
+this folder or create additional folders to structure your course materials. Each course material
+
+folder is shown on the learning platform as a tab.
+
+Method: Create folder
+
+Select the course folder you want to add a new folder to for course materials.
+
+On the New tab, click New folder.
+
+Fig.: 'New folder' dialog box
+
+◦ 
+
+◦ 
+
+◦ 
+
+4. 
+
+1. 
+
+2. 
+
+28 Business Solution ELO Learning
+
+
+
+In the New folder dialog box, select the Course materials metadata form. Only folders
+
+created with the Course materials metadata form are shown on the learning platform.
+
+Enter a short name. The tab on the learning platform is named based on the short name.
+
+Information
+
+You can change the short name later on. If you want to use the original Course
+
+materials folder with a different name, change the short name as follows:
+
+Select the Course materials folder.
+
+Press F4 or click Organize > Metadata.
+
+Change the short name.
+
+Course number and name: These two fields are completed automatically when the course is
+
+created.
+
+Click OK.
+
+Result: Create folder
+
+The folder for course materials is created in the course folder.
+
+Fig.: Course materials on the learning platform
+
+Outlook: Create folder
+
+Course materials for the participants can be filed to the folder. A folder for course materials is only
+
+shown on the learning platform if it contains files.
+
+Method: File course materials
+
+Select the Course materials folder.
+
+On the New tab, click Insert > Insert file.
+
+Select the course materials from your file system.
+
+You have the following options:
+
+Select file: Click the button next to the Select file... field and select the file.
+
+Drop file here: Drag the file to the selected field and drop it there.
+
+3. 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+1. 
+
+2. 
+
+3. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+29 Business Solution ELO Learning
+
+
+
+Drag-and-drop: Drag the file to your client while the Course materials folder is
+
+selected.
+
+Fig.: 'Insert file' dialog box
+
+The Course materials metadata form is selected automatically.
+
+Course number and name: These two fields are completed automatically during filing.
+
+Click OK.
+
+Result: File course materials
+
+The course materials are filed to the selected folder.
+
+Outlook: File course materials
+
+Once the course is released, the participants can download the course materials from the learning
+
+platform.
+
+Insert e-learning 
+
+Information
+
+For a web-based training or video to be able to be shown on your learning platform, you will have
+
+to insert it in your course.
+
+Requirement
+
+4. 
+
+30 Business Solution ELO Learning
+
+
+
+An e-learning course was created using the New course function.
+
+You have a web-based training that was created or purchased via an authoring tool.
+
+Method
+
+Select the course you want to upload a web-based training for. The file is created directly in
+
+the course folder and not in the Course materials folder. This folder is only intended for
+
+making additional files available to participants for download.
+
+On the New tab, click Insert > Insert file.
+
+Fig.: 'Insert file' dialog box
+
+In the Insert file dialog box, insert the web-based training.
+
+Alternative: Drag the file and drop it on the course folder.
+
+Select the Web-based training metadata form. This metadata form contains the Course tab.
+
+The fields on this tab are blank and do not have to be completed. The fields are automatically
+
+completed with metadata from the course on filing.
+
+Click OK.
+
+Result
+
+The web-based training is filed to the course.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+31 Business Solution ELO Learning
+
+
+
+Outlook
+
+As soon as you release the course, it can be completed on the platform.
+
+Information
+
+You can edit a course even if it is already active. Simply upload a new version of the course
+
+in the same way. Make sure that no participants are working on the course at this time, i.e
+
+have the status started. Otherwise, the progress of course participants will be lost.
+
+Insert video file 
+
+Information
+
+You can embed video files in a course.
+
+Requirement
+
+A video course was created using the New course function.
+
+You have a video file.
+
+Method
+
+Select the course you want to upload a video for.
+
+Select the Video folder in the course folder.
+
+On the New tab, click Insert > Insert file.
+
+1. 
+
+2. 
+
+3. 
+
+32 Business Solution ELO Learning
+
+
+
+Fig.: 'Insert file' dialog box
+
+In the Insert file dialog box, insert the video.
+
+Alternative: Drag the file and drop it on the Video folder.
+
+Select the Course video metadata form. This metadata form contains the Course tab. The
+
+fields on this tab are blank and do not have to be completed. The fields are automatically
+
+completed with metadata from the course on filing.
+
+Click OK.
+
+Result
+
+The video is filed to the course.
+
+Outlook
+
+As soon as you release the course, the video can be watched on the learning platform.
+
+If you additionally enable the option Course can be found in the course catalog, the course will
+
+appear under the Media library tab on the learning platform.
+
+For more information, refer to the chapter Add course information.
+
+Embed YouTube or Vimeo video 
+
+Information
+
+4. 
+
+5. 
+
+6. 
+
+33 Business Solution ELO Learning
+
+
+
+You can embed YouTube or Vimeo videos in a course.
+
+Requirement
+
+A video course was created using the New course function..
+
+Method
+
+Select the course you want to upload a video for.
+
+Select the Video folder in the course folder.
+
+Create an entry in this folder. This is the easiest way to do so:
+
+On the New tab, click New folder.
+
+Fig.: 'New folder' dialog box
+
+Click on the field Video type.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+34 Business Solution ELO Learning
+
+
+
+Fig.: 'Keyword list' dialog box
+
+Select the corresponding video platform in the keyword list.
+
+Click OK.
+
+In the New folder dialog box, copy the URL of the video into the Video URL field.
+
+Click OK.
+
+Result
+
+The video is stored in the course.
+
+Outlook
+
+As soon as you release the course, the video can be watched on the learning platform.
+
+If you additionally enable the option Course can be found in the course catalog, the course will
+
+appear under the Media library tab on the learning platform.
+
+For more information, refer to the chapter Add course information.
+
+5. 
+
+6. 
+
+7. 
+
+8. 
+
+35 Business Solution ELO Learning
+
+
+
+Sessions 
+
+Participants can either complete courses themselves or courses can be accompanied by instructors.
+
+If the participants complete the course themselves, only create the course with the relevant
+
+materials. If the participants are accompanied by an instructor, you will have to create sessions for
+
+the course.
+
+This chapter addresses the following topics:
+
+Create session
+
+Edit session
+
+Close session
+
+Create session 
+
+Information
+
+For virtual classrooms and face-to-face training, create sessions within the course, which
+
+participants can enroll in.
+
+Method
+
+Select the course you want to add sessions to.
+
+On the Course tab, click Add sessions.
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+36 Business Solution ELO Learning
+
+
+
+Fig.: 'New sessions' dialog box
+
+In the New sessions dialog box, complete the fields as required.
+
+Field Meaning
+
+Session
+
+description
+
+If you create sessions for a virtual classroom and use GoToWebinar, the
+
+session description is shown for all sessions in GoToWebinar.
+
+Max. number
+
+of participants
+
+If you restrict the number of participants for a session, only this number of
+
+participants can enroll via the learning platform. Using the Course > Enroll
+
+participants function, however, you can enroll more participants than
+
+indicated. When enrolling in an session, users can see how many places
+
+there are in total and how many are still available.
+
+Add session
+
+Clicking this button creates a duplicate of the bottom session in the list. If
+
+you have already entered information for the session, this information will
+
+be applied. You then only have to change the date if the other information is
+
+identical.
+
+Click OK.
+
+Result
+
+3. 
+
+4. 
+
+37 Business Solution ELO Learning
+
+
+
+The sessions are created within the course. The new sessions are shown in the course as soon as
+
+you refresh the client (View > Refresh or F5).
+
+Outlook
+
+Once you have created a session, you can enter additional information in the form. Select the
+
+session and click the Form tab.
+
+You can enter a different instructor and location for each session. If all sessions will be carried out
+
+by the same instructor, you only have to enter them once in the course form.
+
+The participants are created within a session. They can either enroll themselves on the learning
+
+platform, or they are enrolled via Enroll participants.
+
+If you have created a session for GoToWebinar, the instructor has to receive an invitation in
+
+GoToWebinar via the + Panelists button.
+
+Edit session 
+
+Information
+
+When creating a session, only certain information has to be entered right away. You can add more
+
+or change this information later.
+
+Method
+
+Select the session you want to add information for.
+
+Fig.: 'Form' button
+
+Optional: If the content of the session is shown, click Form.
+
+Change or complete the fields as required.
+
+Field Meaning
+
+Instructor
+
+Enter an instructor if the individual sessions will be carried out by different
+
+instructors. If all sessions will be carried out by the same instructor, enter them in
+
+the course form. If you enter an instructor, they are given access to the course
+
+and can create course materials and course contents.
+
+Confirm your changes with Save.
+
+Result
+
+The changes to the form are applied.
+
+1. 
+
+2. 
+
+3. 
+
+38 Business Solution ELO Learning
+
+
+
+Close session 
+
+Information
+
+Once a session has been carried out, you can automatically create certificates for the participants.
+
+Close the session. You can choose which participants receive a certificate.
+
+Method
+
+Select the session you want to close.
+
+On the Course tab, click Close session.
+
+Fig.: 'Close session' dialog box
+
+In the Close session dialog box, check the box next to all participants you want to confirm
+
+participated in the session.
+
+Click OK.
+
+Result
+
+A certificate is issued for the selected participants. The certificate is filed to the Certificates folder
+
+as a PDF document.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+39 Business Solution ELO Learning
+
+
+
+Outlook
+
+If participants have not received a certificate and have to take the course again, you have to
+
+unenroll them from the course using the Cancel enrollment function. Participants can only enroll or
+
+be enrolled in another session once they have been unenrolled from the course.
+
+40 Business Solution ELO Learning
+
+
+
+Participants 
+
+On the learning platform, participants can enroll in a course or session. Alternatively, you can also
+
+enroll participants in courses.
+
+If users are enrolled in courses, they are created within the course in the Enrollments folder. The 
+
+Enrollments folder may be located right in the course folder or, if the course has sessions, in the
+
+folder for the respective session.
+
+Upon successful completion of a course, certificates can be issued automatically for participants.
+
+This chapter addresses the following topics:
+
+Enroll participants
+
+Cancel enrollment
+
+Send message
+
+Create certificate
+
+Enroll participants 
+
+Information
+
+Participants can either enroll themselves in courses or sessions on the learning platform, or you
+
+can enroll them. This section describes how to enroll participants.
+
+Method
+
+Select the course or session you want to enroll participants in.
+
+On the Course tab, click Enroll participants.
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+41 Business Solution ELO Learning
+
+
+
+Fig.: 'New participants' dialog box
+
+In the New participants dialog box, click Add participant.3. 
+
+42 Business Solution ELO Learning
+
+
+
+Fig.: Select participants
+
+In the dialog box that opens, select the participants. You can select groups or individual
+
+users.
+
+If you would like to add a number of participants to a group, but not all of them, we
+
+recommend taking the following approach: Select the group and confirm your selection. The
+
+participants in the group are shown in the New participants dialog box. You can remove
+
+specific participants by clicking the X icon.
+
+Click OK.
+
+Result
+
+The participants are created within the course folder or session folder. The newly enrolled
+
+participants are shown in the course as soon as you refresh the client (View > Refresh or F5).
+
+Outlook
+
+If a participant is enrolled, they can participate in the course and receive a certificate once they
+
+have completed it. The certificate is created automatically when the participant has completed an
+
+e-learning or video, or when you close the session using the Close session function.
+
+If a participant would like to unenroll from a course, they can do so themselves on the learning
+
+platform. Alternatively, you can unenroll participants using the Cancel enrollment function, for
+
+example if a participant does not show up to a face-to-face training.
+
+4. 
+
+5. 
+
+43 Business Solution ELO Learning
+
+
+
+Cancel enrollment 
+
+Information
+
+If a participant would like to unenroll from a course, they can do so themselves on the learning
+
+platform. Alternatively, you can unenroll participants, for example if a participant does not show up
+
+to a face-to-face training.
+
+Method
+
+Select the session you want to unenroll participants from.
+
+On the Course tab, click Cancel enrollment.
+
+Fig.: 'Cancel enrollment' dialog box
+
+1. 
+
+2. 
+
+3. 
+
+44 Business Solution ELO Learning
+
+
+
+In the Cancel enrollment dialog box, check the box next to all participants you want to
+
+remove from the session.
+
+Click OK.
+
+Result
+
+The participants are unenrolled from the session. The changes are shown in the course as soon as
+
+you refresh the client (View > Refresh or F5).
+
+Send message 
+
+Information
+
+You can send enrolled course participants a message requesting information or containing
+
+information. If an e-mail has been entered for the participant, the message will automatically be
+
+sent to this address.
+
+Method
+
+Select the participant you want to send a message to.
+
+On the Enrollment tab, click Send message.
+
+4. 
+
+1. 
+
+2. 
+
+45 Business Solution ELO Learning
+
+
+
+Fig.: 'Create a message' dialog box
+
+The Create a message dialog box already contains the sender, recipient (if e-mail address
+
+was provided), and a subject.
+
+Enter text. You can format this text as needed.
+
+Fig.: 'Clips' button
+
+3. 
+
+46 Business Solution ELO Learning
+
+
+
+Field Meaning
+
+Clips
+
+Clips are text blocks that help you create your text. They contain information on the
+
+course and participant and can be inserted into the text. To use them, select the
+
+position in the text where you want to insert information and click Clips.
+
+Fig.: Configured clips
+
+Click OK.
+
+Result
+
+The e-mail is sent to the participants.
+
+Create certificate 
+
+Information
+
+Certificates can be created in different ways.
+
+If a participant completes an e-learning course or video, a certificate is created automatically.
+
+For courses with sessions, certificates are created when the session has been closed with the
+
+Close session function.
+
+Certificates can also be created separately.
+
+Method
+
+Select the participant you want to create a certificate for.
+
+On the Enrollment tab, click Create certificate.
+
+Result
+
+4. 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+47 Business Solution ELO Learning
+
+
+
+The certificate is filed to the participant's folder within the course as well as the Certificates folder.
+
+48 Business Solution ELO Learning
+
+
+
+Dashboard overview 
+
+The dashboard offers different views of available courses and participants.
+
+You can reach the dashboard by clicking the Courses and participants tile in the My ELO area.
+
+The dashboard remembers your settings. When you close then open the dashboard again, it
+
+remembers and displays your most recent view.
+
+Course view 
+
+When you open the dashboard, you will see the course view. This view gives you an overview of
+
+the available courses.
+
+Fig.: Course view in the dashboard
+
+The dashboard is divided into the following areas:
+
+1 Database: In the dashboard header, use the drop-down menu (arrow icon) to select a database. A
+
+dashboard database is a list of courses that is loaded for evaluation.
+
+Information
+
+If there is only one database, this database is selected permanently and no drop-down
+
+menu is available.
+
+2 Search: You can search for text values and number values. All data that you can select as column
+
+values in the course view serves as the basis.
+
+3 Course types: The dashboard header contains a button for each course type. If a button is active,
+
+all courses of the corresponding type are shown in the dashboard viewer pane.
+
+49 Business Solution ELO Learning
+
+
+
+4 Viewer pane: In the dashboard viewer pane, you will see a list of courses. This list changes
+
+depending on the filter criteria applied.
+
+Customize the view using the drop-down menus.
+
+Fig.: Customize view
+
+The drop-down menus in the column headings contain the following functions:
+
+Sort ascending
+
+Sort descending
+
+Remove sorting
+
+Alternative: You can sort the column by clicking the column heading. Clicking once sorts in
+
+ascending order. Clicking a second time sorts the items in descending order. Clicking a third time
+
+clears sorting.
+
+Hide column: The column can be shown again via the menu.
+
+Group: The content of a column is joined into groups. The number of entries in each group is
+
+shown in brackets. Click the plus icon before the group to expand it and view all contained
+
+entries. The minus icon minimizes it again. Clicking the plus icon in the header expands all
+
+groups.
+
+Information
+
+You can combine multiple groups. You can specify a hierarchy with the order in which you
+
+select the columns.
+
+Ungroup: This option appears if you have grouped items.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+50 Business Solution ELO Learning
+
+
+
+Fig.: Menu
+
+Menu: By clicking the button with the three lines, you can show hidden columns. Clicking the Reset
+
+grouping button resets all groups. You can create a CSV file for analysis using the Export all data as
+
+CSV and Export visible data as CSV buttons. This file appears at the bottom left of your window.
+
+Fig.: CSV file
+
+Participant view 
+
+Clicking a course brings you to the dashboard participant view.
+
+51 Business Solution ELO Learning
+
+
+
+Fig.: Participant view in the dashboard
+
+1 Courses/Participants: Clicking an entry opens the entry in the viewer pane. In the overview of
+
+participants, participants are listed multiple times if they have been added to different courses.
+
+2 Viewer pane: Clicking an entry shows a preview of the entry. Double-clicking an entry brings you
+
+to the Repository work area. The values in the Participant status column contain drop-down menus,
+
+which allow you to change the participant status.
+
+52 Business Solution ELO Learning
+
+
+
+Learning platform 
+
+On the learning platform, you release courses that you have already created.
+
+You can reach the learning platform either via the URL or the Courses and seminars tile in My ELO.
+
+Participants can enroll in released courses via the learning platform.
+
+Participants can also complete e-learning and video courses right on the learning platform and view
+
+their certificates.
+
+Fig.: Learning platform start screen
+
+The learning platform consists of the following areas:
+
+Start
+
+Course catalog
+
+Learning paths
+
+Media library
+
+My courses
+
+Certificates
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+53 Business Solution ELO Learning
+
+
+
+'Course catalog' tab 
+
+Fig.: 'Course catalog' tab
+
+The created courses are on the Course catalog tab. This does not apply to Learning path and Video
+
+type courses, which are found on the Learning path/Media library tab respectively.
+
+Users can search for specific courses using the sidebar.
+
+Clicking a course takes the user to the selected course with a detailed description, as well as an
+
+option to select a session or begin the course.
+
+54 Business Solution ELO Learning
+
+
+	Table of contents
+	Introduction
+	Structure of the documentation
+	Basics
+	Getting started
+	Possible actions and other elements
+
+	Target audience
+
+	Basics
+	Basic principle
+	General note
+	Requirements
+	Program interface
+	Repository
+	Courses
+	Sessions
+	Participants
+	Course form
+	Course materials
+	Session form
+	Participant form
+
+
+	Getting started
+	Learning path assigned to participants
+	Course with multiple sessions for enrolling via the learning platform
+
+	Create course
+	Edit course
+	Add course information
+	Create learning path
+	Add course photos
+	Create course material
+	Insert e-learning
+	Insert video file
+	Embed YouTube or Vimeo video
+
+	Sessions
+	Create session
+	Edit session
+	Close session
+
+	Participants
+	Enroll participants
+	Cancel enrollment
+	Send message
+	Create certificate
+
+	Dashboard overview
+	Course view
+	Participant view
+
+	Learning platform
+	'Course catalog' tab
+
+
+

@@ -1,0 +1,891 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Client administration | ELO WebDAV
+
+
+Client administration
+
+ELO WebDAV
+
+
+
+3
+
+3
+
+5
+
+14
+
+15
+
+17
+
+18
+
+19
+
+Table of contents
+
+WebDAV
+
+ELO WebDAV server address 
+
+Using ELO WebDAV in Windows 
+
+Using WebDAV on Linux 
+
+Using WebDAV on MAC OS X 
+
+Using WebDAV on Android 
+
+Using WebDAV on iOS 
+
+Overview: WebDAV clients 
+
+2 Client administration
+
+
+
+WebDAV
+
+ELO WebDAV server address 
+
+Information
+
+ELO WebDAV is already integrated into the ELO Indexserver. You can access the ELO WebDAV
+
+directory from the browser. To do this, enter the ELO WebDAV address according to the
+
+following convention:
+
+Connecting using a fully qualified domain name 
+
+If you want to connect to a WebDAV server using a fully qualified domain name (FQDN), you must
+
+add the server to the corresponding Local intranet zone:
+
+Open the Internet Options in the Control Panel.
+
+Navigate to the Security tab.
+
+Click Sites.
+
+Fig.: Edit 'Local intranet' zone
+
+The Local intranet dialog box opens.
+
+The Automatically detect intranet network setting must be enabled.
+
+Click Advanced.
+
+http://<server name>:<port>/ix-<repository name>/ixwebdav
+
+3 Client administration
+
+
+
+Fig.: Add fully qualified URL
+
+An additional Local intranet dialog box opens.
+
+Enter the server's fully qualified URL.
+
+The following examples make the difference between a normal URL and a fully qualified URL
+
+clearer:
+
+Normal URL: http://srvtdev02:9090/ix-elo80/ixwebdav
+
+Fully qualified URL: http://srvtdev02.elo.local:9090/ix-elo80/ixwebdav
+
+Click Add.
+
+Close the dialog box.
+
+Close the other dialog boxes with OK.
+
+• 
+
+• 
+
+4 Client administration
+
+
+
+Using ELO WebDAV in Windows 
+
+Windows uses NTLM authentication. This means that passwords are only transferred to the server
+
+in encrypted form.
+
+General note on using ELO WebDAV in Windows 
+
+This section contains notes on using ELO WebDAV in Windows.
+
+WebDAV Redirector 
+
+In Windows Server 2016 and higher, you must install the WebDAV Redirector component server
+
+side.
+
+You can find more information below under Using WebDAV Redirector.
+
+WebClient 
+
+The Windows service WebClient must be running on the client computers. Ideally, the service
+
+should be set to start automatically.
+
+You can set the startup type with the following PowerShell command:
+
+You can start the service with the following PowerShell command:
+
+Data transfer rate 
+
+With the default settings, a maximum of 47 MB can be transferred using WebDAV.
+
+To enable a greater transmission rate, adjust the FileSizeLimitInBytes key in the registry.
+
+You can find the key under:
+
+Here you can enter values up to 4 GB (4294967295 bytes).
+
+Next, restart the ELO Web Client service for the changes to take effect.
+
+1. 
+
+Set-Service WebClient -StartupType Automatic
+
+2. 
+
+Start-Service WebClient
+
+HKEY\_LOCAL\_MACHINE\SYSTEM\CurrentControlSet\Services\WebClient\Parameters
+
+5 Client administration
+
+
+
+Path length 
+
+The maximum path length in Windows is 260 characters.
+
+Connecting Windows Explorer as a network drive (Windows Vista and
+
+newer) 
+
+To connect ELO WebDAV as a network drive in Windows (Vista or higher), first open Windows
+
+Explorer and right-click Computer or Network.
+
+Select Map network drive from the context menu.
+
+Fig.: Connecting to a network drive in Windows
+
+Select a free drive letter and enter the address of your ELO WebDAV under Folder.
+
+Click Finish.
+
+6 Client administration
+
+
+
+Fig.: Logon without Active Directory
+
+If the user logged into Windows is in Active Directory and exists as a user in ELO, NTLM
+
+authentication is applied automatically and no logon information needs to be entered. Otherwise,
+
+the Windows Security dialog box asks for your user name and password. Authenticate using your
+
+ELO user data.
+
+Please note
+
+In this case, the basic authentication procedure is used, and the password is sent to the
+
+server in plain text. You can secure the data transfer using SSL.
+
+In the registry, change the value of the BasicAuthLevel key to "2" (decimal) accordingly. You
+
+can find the key under:
+
+Please note
+
+Copying documents clears the metadata.
+
+This is because the Explorer sends the PUT command with the target path and content to
+
+ELOix, making it impossible to determine the SORD of the content since there is no SORD
+
+ID.
+
+HKEY\_LOCAL\_MACHINE\SYSTEM\CurrentControlSet\Services\WebClient\Parameters
+
+7 Client administration
+
+
+
+Slow connection to the WebDAV drive 
+
+If the connection to the WebDAV drive and Windows Vista is slow, check the following:
+
+Open the Internet Options in the Control Panel.
+
+Navigate to the Connections tab.
+
+Click LAN settings.
+
+Fig.: Editing the option for local network settings
+
+The Local Area Network (LAN) Settings dialog box opens.
+
+Clear the Automatically detect settings option.
+
+Click OK to confirm.
+
+Click OK to close the Internet Options.
+
+In Windows XP 
+
+Open My Computer and click Tools > Map network drive.
+
+Select the preferred drive letter and click the link to Sign up for online storage or connect to a
+
+network server.
+
+The Windows wizard to add network resources starts. Click Next to continue.
+
+Select Choose a different network resource and click Next.
+
+Enter the ELO WebDAV address and click Next.
+
+8 Client administration
+
+
+
+Enter a name for the network address.
+
+Click Finish.
+
+Using WebDAV Redirector 
+
+Windows Server 2016 and higher 
+
+In Windows Server 2016 and higher, you must install the WebDAV Redirector component server
+
+side.
+
+Install as follows:
+
+Use the following PowerShell command:
+
+Check the status of the installation with the following PowerShell command:
+
+Fig.: Successfully installed
+
+If WebDAV Redirector was successfully installed, the value Installed is output in the table.
+
+WebDAV Redirector for versions older than Windows Server 2016 
+
+The following link provides information on using WebDAV via WebDAV Redirector (in Windows 7,
+
+Windows 8, Windows Server 2008, or Windows Server 2012):
+
+http://www.iis.net/learn/publish/using-webdav/using-the-webdav-redirector
+
+Information
+
+Desktop Experience must be installed starting with version 2008.
+
+If you get the error message "System error 67 has occurred. The network name cannot
+
+be found" when adding the ELO WebDAV as a network drive, please check whether the
+
+Windows WebClient service is running and whether Desktop Experience is installed.
+
+1. 
+
+Install-WindowsFeature WebDAV-Redirector –Restart
+
+2. 
+
+Get-WindowsFeature WebDAV-Redirector | Format-Table –Autosize
+
+• 
+
+• 
+
+9 Client administration
+
+http://www.iis.net/learn/publish/using-webdav/using-the-webdav-redirector
+http://www.iis.net/learn/publish/using-webdav/using-the-webdav-redirector
+
+
+With the command line 
+
+To map ELO WebDAV to a network drive, use the following command in the Windows command
+
+line:
+
+Use the /persistent parameter to define whether the network drive should remain available after a
+
+restart. If you set the value no here, the connection will not be reestablished.
+
+With NetDrive 
+
+Fig.: Access via NetDrive
+
+Click New Site and enter a name for the connection.
+
+Enter the ELO WebDAV address under Site IP or URL.
+
+Open the drop-down menu for Server Type and select the entry WebDav.
+
+Enter the server port into the Port field.
+
+Select the drive letter you want to use.
+
+net use Z: \\<host name>:<port>/ix-<repository name>/ixwebdav/persistent:yes
+
+10 Client administration
+
+
+
+Enter your ELO logon credentials under Account and Password.
+
+To activate SSL encryption, click Advanced and select Use HTTPS.
+
+To use SSL encryption, change the port from 8080 to 443.
+
+Click Save to save the connection.
+
+Click Connect to establish the connection.
+
+With BitKinex 
+
+Fig.: Access via BitKinex
+
+Unlike Windows Explorer and NetDrive, BitKinex does not support WebDAV connections as network
+
+drives. Instead, it uses its own interface. However, BitKinex does support a wide range of features
+
+including the ability to lock folders and files and move and copy files on the server without having
+
+to download the files first.
+
+To connect BitKinex to ELO WebDAV, click Connect or Quick Connect under the File menu option.
+
+Enter the ELO WebDAV Internet address and the ELO user data.
+
+Now click Connect.
+
+11 Client administration
+
+
+
+Using WebDAV with Microsoft Office applications 
+
+Fig.: WebDAV connection via Microsoft Word
+
+Microsoft Office uses its own WebDAV client. This means you can open an ELO repository in Office
+
+applications like Microsoft Word, Microsoft Excel, and Microsoft PowerPoint without connecting ELO
+
+WebDAV to a network drive first.
+
+In the Open dialog box, enter the Internet address as file name and confirm your input by pressing
+
+the Enter key.
+
+Please note
+
+Do not click OK.
+
+General note on using ELO WebDAV with Microsoft Office applications 
+
+With the default settings, some Microsoft Office programs only open documents from a hyperlink in
+
+read-only mode. In the registry, change the value of the OpenDocumentsReadWriteWhileBrowsing key
+
+to "1" (DWORD) accordingly.
+
+You can find the key under:
+
+The following website provides instructions: http://www.webdavsystem.com/server/documentation/
+
+ms_office_read_only.
+
+HKEY\_CURRENT\_USER\Software\Microsoft\Office\<version>\Common\Internet
+
+12 Client administration
+
+http://www.webdavsystem.com/server/documentation/ms_office_read_only
+http://www.webdavsystem.com/server/documentation/ms_office_read_only
+http://www.webdavsystem.com/server/documentation/ms_office_read_only
+
+
+If a logon dialog box is shown every time you open Office documents, the following settings have
+
+to be changed.
+
+Enable the option Automatic logon with current user name and password (found under: 
+
+Internet Options > Security > Local Intranet > Custom Level > User authentication > Logon)
+
+The ELOix server must be in the intranet zone. This requires two entries:
+
+One with FQN: (e.g.: http://srvtdev.elo.local)
+
+One without FQN: (e.g.: http://srvtdev.elo.local)
+
+In the Windows registry, create the entry (REG_MULTI_SZ) with the name 
+
+AuthForwardServerList under:
+
+As the value, use the host name of the IX server.
+
+This requires two entries:
+
+One with FQN: (e.g.: http://srvtdev.elo.local)
+
+One without FQN: (e.g.: http://srvtdev.elo.local)
+
+Embedding ELO objects in Microsoft Office applications 
+
+Fig.: Inserting a WebDAV object in a Microsoft Office application
+
+ELO WebDAV also allows you to embed files stored in ELO as objects.
+
+• 
+
+• 
+
+◦ 
+
+◦ 
+
+• 
+
+HKEY\_LOCAL\_MACHINE\SYSTEM\CurrentControlSet\Services\WebClient\Parameters
+
+• 
+
+• 
+
+◦ 
+
+◦ 
+
+13 Client administration
+
+
+
+Using WebDAV on Linux 
+
+NTLM authentication is not used on Linux. Instead, Linux uses basic authentication. For this reason,
+
+we recommend that you secure the data transfer through SSL.
+
+Davfs2 (command line) 
+
+Use the following command:
+
+Replace the placeholders with your own values.
+
+Gnome/Nautilus 
+
+Fig.: Configuration in Nautilus
+
+In Nautilus, click Locations > Connect to server, or click File >Connect with a server.
+
+KDE/Dolphin 
+
+Open the ELO WebDAV address with Dolphin or Konqueror.
+
+sudo mount.davfs –o userid=<LINUX-USER> http://<server name>:<port>/ix-<repository name>/ixwebdav/mnt/
+
+14 Client administration
+
+
+
+Using WebDAV on MAC OS X 
+
+NTLM authentication is not used on Mac OS X. Instead, Linux uses basic authentication. For this
+
+reason, we recommend that you secure the data transfer through SSL.
+
+Command line 
+
+Use the following command:
+
+Finder 
+
+In the Finder, click Go to > Connect to server.
+
+Enter the Internet address of ELO WebDAV into Server address.
+
+Click Connect.
+
+Information
+
+While working with the Finder, many temporary files will be generated, uploaded to ELO,
+
+and deleted again afterwards. Additionally, the files are also created in the ELO root folder.
+
+For this reason, the user who is logged on must have write permissions to the root folder.
+
+Cyberduck 
+
+Unlike the Finder, the free Cyberduck tool does not generate temporary files.
+
+After installing Cyberduck, start Cyberduck from your dock or program folder. Click New connection.
+
+mount -t webdav http://<server name>:<port>/ix-<repository name>/ixwebdav/<mount point >
+
+15 Client administration
+
+
+
+Fig.: Configuration in Cyberduck
+
+16 Client administration
+
+
+
+Using WebDAV on Android 
+
+WebDAV File Manager 
+
+To connect to ELO WebDAV, you first need to configure a new server (Add Server menu item).
+
+Name: Name of the connection (such as "ELO")
+
+URL: Internet address of ELO WebDAV
+
+Please note
+
+A port number cannot be entered here.
+
+User name: ELO user name
+
+Password: Password for the ELO account
+
+Select the Optionally specify a port number setting and enter the port.
+
+Click Registration.
+
+WebDAV Nav Lite 
+
+Click the plus sign to add a new WebDAV server.
+
+Name: Name of the connection (such as "ELO")
+
+Server URL: Internet address of ELO WebDAV
+
+User name: ELO user name
+
+Password: Password for the ELO account
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+17 Client administration
+
+
+
+Using WebDAV on iOS 
+
+WebDAV Navigator 
+
+Click the plus sign to add a new WebDAV server.
+
+Name: Name of the connection (such as "ELO")
+
+Server address: Internet address of ELO WebDAV
+
+User name: ELO user name
+
+Password: Password for the ELO account
+
+Over-the-air 
+
+Click Add Server.
+
+Display name: Name of the connection (such as "ELO")
+
+URL: Internet address of ELO WebDAV
+
+User ID: ELO user name
+
+Password: Password for the ELO account
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+18 Client administration
+
+
+
+Overview: WebDAV clients 
+
+ELO WebDAV has been tested with the following WebDAV clients:
+
+Client
+Operating
+
+systems
+
+Connected
+
+as drive
+LOCK PROPPATCH
+
+MOVE/
+
+COPY
+Free Comments
+
+Windows
+
+Explorer
+Windows Yes No No N/A
+
+BitKinex Windows No Yes No Yes Yes
+
+WebDrive
+Windows,
+
+Mac
+Yes Yes No No No
+
+Generates
+
+temp files
+
+NetDrive Windows Yes No No No
+
+Yes, for non-
+
+commercial
+
+use
+
+Cyberduck
+Windows,
+
+Mac
+No No Yes No Yes
+
+Cross FTP Pro
+Windows,
+
+Mac, Linux
+No Yes No Yes No
+
+CarotDAV Windows No Yes Yes Yes
+
+TotalCommander
+
+WebDAV plug-in
+
+Windows,
+
+Android
+No No No
+
+Free for
+
+Android
+
+Transmit Mac
+Drive and
+
+own UI
+No No Yes No
+
+Generates
+
+temp files
+
+Finder Mac Yes No No No N/A
+
+Saves temp
+
+files in root
+
+folder and
+
+current folder
+
+Cadaver Linux No Yes Yes Yes Yes
+Command
+
+line
+
+Dolphin Linux No No No Yes Yes
+
+Nautilus Linux No No No No Yes
+
+davfs2 Linux Yes No No No Yes
+Generates
+
+temp files
+
+Microsoft Office
+Windows,
+
+Mac
+No No No No No
+
+WebDAV File
+
+Manager
+Android No No No Yes Yes
+
+WebDAV Nav Lite Android No No No Yes Yes
+
+FolderSync Lite Android No No No Yes Yes
+
+WebDAV
+
+Navigator
+iOS No No No Yes Yes
+
+19 Client administration
+
+
+
+Client
+Operating
+
+systems
+
+Connected
+
+as drive
+LOCK PROPPATCH
+
+MOVE/
+
+COPY
+Free Comments
+
+OverTheAir iOS No No No Yes
+
+Not for
+
+editing. Only
+
+to read and
+
+upload files.
+
+20 Client administration
+
+
+	Table of contents
+	WebDAV
+	ELO WebDAV server address
+	Connecting using a fully qualified domain name
+
+	Using ELO WebDAV in Windows
+	General note on using ELO WebDAV in Windows
+	WebDAV Redirector
+	WebClient
+	Data transfer rate
+	Path length
+
+	Connecting Windows Explorer as a network drive (Windows Vista and newer)
+	Slow connection to the WebDAV drive
+
+	In Windows XP
+	Using WebDAV Redirector
+	Windows Server 2016 and higher
+	WebDAV Redirector for versions older than Windows Server 2016
+
+	With the command line
+	With NetDrive
+	With BitKinex
+	Using WebDAV with Microsoft Office applications
+	General note on using ELO WebDAV with Microsoft Office applications
+	Embedding ELO objects in Microsoft Office applications
+
+
+	Using WebDAV on Linux
+	Davfs2 (command line)
+	Gnome/Nautilus
+	KDE/Dolphin
+
+	Using WebDAV on MAC OS X
+	Command line
+	Finder
+	Cyberduck
+
+	Using WebDAV on Android
+	WebDAV File Manager
+	WebDAV Nav Lite
+
+	Using WebDAV on iOS
+	WebDAV Navigator
+	Over-the-air
+
+	Overview: WebDAV clients
+
+

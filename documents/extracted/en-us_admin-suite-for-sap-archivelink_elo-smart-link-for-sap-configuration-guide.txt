@@ -1,0 +1,1781 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®) | ELO Smart Link for SAP® ERP configuration guide
+
+
+ELO Suite for SAP
+
+ArchiveLink® (SAP
+
+NetWeaver® & SAP S/
+
+4HANA®)
+
+ELO Smart Link for SAP® ERP
+
+configuration guide
+
+
+
+3
+
+3
+
+4
+
+40
+
+Table of contents
+
+ELO Smart Link for SAP® ERP configuration guide
+
+Introduction 
+
+ELO Smart Link configuration 
+
+SAP ArchiveLink® configuration 
+
+2 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+ELO Smart Link for SAP® ERP configuration
+
+guide
+
+Introduction 
+
+This documentation describes how to configure the ELO Smart Link for SAP® ERP interface, referred
+
+to as ELO Smart Link in the following. This interface also includes the previous functions of ELO
+
+Archive Link for SAP. In detail, ELO Smart Link contains the following functions:
+
+Filing documents in SAP to ELO
+
+Barcode upload
+
+Configuration interface
+
+Basic functions for ELO Connectivity Pack for SAP® ERP
+
+This configuration guide is intended for the following ELOprofessional and ELOenterprise versions:
+
+ELOprofessional and ELOenterprise version 10.02.000 and higher
+
+Basics 
+
+You must have already installed an ELO server (ELOprofessional or ELOenterprise) and an ELO
+
+Smart Link component. Refer to the ELO Smart Link installation guide.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+3 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+ELO Smart Link configuration 
+
+Logon via the web interface 
+
+Open a browser and call the ELO Smart Link URL. Use the name created in the configuration
+
+files during installation.
+
+To configure the interface, we recommend using the current version of one of the following
+
+browsers:
+
+Firefox
+
+Google Chrome
+
+In our example, the URL is as follows:
+
+1. 
+
+• 
+
+• 
+
+http://localhost:9060/sl-CCDEMO11/
+
+4 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+User right 
+
+Only users with the corresponding permissions in the ELO user manager can log on to the ELO
+
+Smart Link web interface. This requires the SAP administrator user right in the ELO Administration
+
+Console.
+
+ELO Smart Link configuration start screen 
+
+After you successfully log on to the web interface, the ELO Smart Link start screen opens. The web
+
+interface is divided into different configuration areas.
+
+5 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+1 Main toolbar: This contains several functions of the ELO Smart Link interface, specifically for
+
+importing and exporting configuration files as well as the certificate manager. You also see the
+
+account you are logged on with. Selecting the Log off button logs you out of ELO Smart Link.
+
+2 Status bar: This bar is located on the left. It provides information on the status of the ELO Smart
+
+Link interface, the ELO Smart Link instance name, and the version currently in use.
+
+3 Configuration area: You will find more details on configured content repositories here.
+
+Create new configuration 
+
+Instances 
+
+Information
+
+Note that the ELO Smart Link web interface only shows instances if they are configured for
+
+the same repository. Otherwise, log on separately for each ELO Smart Link instance to
+
+perform configuration.
+
+The ELO Smart Link instances are created by the installation wizard. The _ALL instance refers to the
+
+default instance. This is always supplied.
+
+If a content repository is assigned to the _ALL instance, you can choose what instance the content
+
+repository should run on in the SAP configuration (transaction OAC0) (via the URL (server/port/path).
+
+As the _ALL name indicates, all ELO Smart Link instances visible in the web interface are possible.
+
+The instance name ELOCCDEMO11-SL2 used in this example was defined in the <entry
+
+key="instancename"> parameter of the config.xml file during installation.
+
+Selecting the gear icon opens the configuration for the instance.
+
+Information
+
+Changes to these values must be confirmed by restarting the Windows service for the
+
+instance.
+
+1. 
+
+6 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+In the Instance scheduler, you can maintain two parameters.
+
+The first parameter specifies the interval for processing the queue in seconds. This
+
+serves as a timer for processing individual jobs, such as index downloads, barcode
+
+uploads, and data transfers.
+
+The second parameter Queue defines the working directory of ELO Smart Link for SAP
+
+and is created in the Administration folder of the ELO repository on installation (Smart
+
+Link Base). Here, individual processes are stored and logged in the form of a queue.
+
+2. 
+
+◦ 
+
+◦ 
+
+7 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Besides index download and barcode upload, the queue entries of the Function module
+
+mapping from ELO Connectivity Pack for SAP® ERP – Datatransfer are also filed here in
+
+JSON format (depending on the configuration – queue). Depending on the status (ToDo, 
+
+Error, and Finished), it may be necessary for a system administrator to check this area.
+
+The parameter to be configured indicates the number of days after which completed
+
+entries (in the Finished folder) are marked for deletion. The maximum value is 99 days.
+
+The value 0 days disables the function to mark objects for deletion for the _ALL
+
+instance. If an instance is defined (example <ELOCCDEMO11-SL2>), the value 0
+
+inherits the settings of the ALL instance. The value -1 disables the function. Note that
+
+one entry is written per process, meaning space is used in the ELO repository. We
+
+recommend configuring this parameter to ensure logging does not take up too much
+
+space. The ELO administrator can delete log data sets marked for deletion
+
+permanently.
+
+Click Disable to disable these functions. Please note here as well that in the _ALL
+
+instance, this function sets the value to 0 for all instances without an explicit
+
+configuration, thus disabling the function. For explicit instances, the value is set to -1,
+
+disabling processing for the selected instance.
+
+The Apply global configuration function applies the settings from your _ALL instance.
+
+The Reset function allows you to delete all configured value and configure the instance
+
+anew.
+
+Confirm the configuration with the Apply button.
+
+In the footer of the web interface, you will see a note regarding changes to the configuration.
+
+Confirm the changes with the Save changes button.
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+3. 
+
+4. 
+
+8 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+If the connection is successful, you will see a corresponding pop-up message.
+
+SAP systems 
+
+In the next configuration step, you add the SAP system.
+
+Use the Add SAP system button for this in the status bar on the left of the web interface.
+
+The Add SAP system dialog box opens.
+
+Select the ELO Smart Link instance you want to link to the SAP system.
+
+1. 
+
+2. 
+
+9 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Then, complete the additional mandatory fields according to the example. Use the _ALL
+
+instance if you want the SAP system to apply to all instances. Other possible parameters are
+
+described within this documentation.
+
+3. 
+
+10 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Parameter Description Example value
+
+Selected
+
+instance
+
+Select the instance you want to configure the SAP
+
+system on.
+_ALL
+
+SAP system ID
+The name of the SAP system. This is a unique value and
+
+consists of at least 3 characters.
+TB1
+
+Client SAP client to be connected to. 900
+
+SAP user name
+SAP system user for establishing a connection with the
+
+SAP system (system or service user)
+CPIC-ELO
+
+SAP user
+
+password
+
+Password of the configured user for establishing a
+
+connection to the SAP system
+Password
+
+Language
+
+Always enter a language so that data can be transferred
+
+in the localized language, for example in case of an
+
+index download. The language code must be entered
+
+according to ISO-639-1 (example: DE, EN, FR).
+
+EN
+
+SAP application
+
+server/host
+
+name
+
+IP address or FQDN of the SAP system for RFC
+
+communication
+
+SAPCCDEMO or 
+
+10.49.110.187
+
+SAP instance
+
+number/system
+
+no.
+
+SAP instance number for RFC communication with the
+
+application server
+00
+
+Confirm the configuration by selecting the Apply button.
+
+Upload the changes/the new SAP system by selecting the Save changes button.
+
+The system will provide feedback.
+
+Check whether the SAP system has been added to your desired ELO Smart Link instance and
+
+perform a connection test using Test SAP connection.
+
+4. 
+
+5. 
+
+6. 
+
+11 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+If the connection is successful, you will see a corresponding pop-up message.
+
+If the connection test is successful, you can begin configuring the content repositories.
+
+SAP systems when using an SAProuter string 
+
+The SAP system landscape may only be available through an SAProuter string. A route string
+
+describes a connection between two hosts through one or more SAProuter instances. Each of these
+
+SAProuter instances checks whether the connection between the predecessor and the successor is
+
+permitted based on the route permission table and in this case it establishes the connection.
+
+SAP systems when using a message server 
+
+To load-balance SAP systems, customer installations may have a message server.
+
+1. 
+
+12 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+To connect ELO Smart Link to a message server, enable the option Logon via message server.
+
+If this function is enabled, establishing a connection between ELO Smart Link and the SAP
+
+message server requires additional configurations.
+
+Parameter Description
+Example
+
+value
+
+Logon group Logon group of the SAP system PUBLIC
+
+SAP system ID SAP system ID of the message server group JK1
+
+Message server Message server host name or IP address 10.49.110.187
+
+Name or port of the
+
+service
+
+The name or port used by the message server
+
+service
+
+sapmsJK1 or 
+
+3601
+
+Secure login via SNC 
+
+You can learn how to set up secure communication for RFC using SNC in the Secure login via SNC
+
+chapter.
+
+Content repository 
+
+The connection between ELO and an SAP system is established via a content repository. To the SAP
+
+system, ELO acts as a content server where documents can be filed.
+
+2. 
+
+13 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Create a new content repository with one of the following functions.
+
+Please note
+
+The name of the content repository can no longer be changed. In this case, you have to
+
+create a new content repository and delete the incorrect one.
+
+Also note that the name of the content repository you want to connect must be identical to
+
+the name of the content repository in SAP (transaction OAC0).
+
+From the point of view of the SAP system, a document can be uniquely identified based on a
+
+key in the content repository as well as the SAP ArchiveLink document ID. It is therefore
+
+important that you avoid using identical content repositories in different SAP systems.
+
+1. 
+
+14 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+In the first input field, enter the name of the content repository. Use the entry configured in
+
+SAP (transaction OAC0). The content repository name always consists of two characters.
+
+Note the capitalization rules, e.g. E1 or EL.
+
+The second input field is for describing the content repository. Enter a descriptive text
+
+corresponding to your configuration here. This can match the descriptive text from the SAP
+
+content repository (e.g. ELO document management).
+
+In the third field, enter the metadata form to be assigned to an object when filed to ELO. The 
+
+SAPDATA metadata form can be configured/created as a default value in ELO.
+
+Click an instance to select it. It will then be highlighted in dark gray.
+
+In the next step, select the functions required for this content repository by enabling them.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+◦ 
+
+15 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+The Index download function determines possible metadata for a document from SAP
+
+and provides it in ELO for the filed document in the corresponding metadata form.
+
+Information
+
+These functions require a valid license key for the ELO Connectivity Pack for SAP® ERP
+
+product. You should also note that this requires additional installations and configurations.
+
+You will find more information on ELO Connectivity Pack for SAP® ERP on the ELO
+
+SupportWeb under Integrations > ELO for SAP® ERP > ELO Suite for SAP ArchiveLink®.
+
+The Barcode upload function links scanned paper document and SAP objects via a barcode.
+
+You can find more information on this in the Barcode upload section.
+
+Information
+
+The Barcode upload function is part of ELO Smart Link and is therefore included with the
+
+respective license.
+
+If you need and use index download in the project, enable the function and configure the RFC
+
+function from SAP here. The ELO default RFC function is: /ELO/KEY_EXPORT. For more information,
+
+refer to the ELO Connectivity Pack for SAP® ERP – Indexdownload documentation.
+
+Finally, select the SAP system where the content repository is configured. When using index
+
+download or barcode upload, you must select an SAP system.
+
+Please note
+
+Only one SAP system, configured in the previously selected instance (defined instance or
+
+"_ALL"), can be allocated.
+
+Confirm your configuration with OK and save the settings in the footer of the next dialog box.
+
+• 
+
+1. 
+
+1. 
+
+16 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+In the ELO Smart Link web interface, you now see your content repository with the
+
+parameters you configured.
+
+The content repository has now been created and can be used.
+
+Click the content repository to open it and configure additional settings.2. 
+
+17 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Properties 
+
+In the Properties configuration area, you will find all general information, some of which you
+
+provided when creating the content repository.
+
+Disabling a content repository
+
+You also have the option to disable and re-enable the content repository. After disabling the content
+
+repository, it can no longer be reached by the SAP system and no more documents can be filed.
+
+Enabling signatures
+
+The signature must match the SAP system configuration. If you do not want to use a signature,
+
+enable the No signature function in the content repository configuration. For more information on
+
+configuring SAP, refer to SAP ArchiveLink® configuration.
+
+Index download 
+
+In the Index download area, you can enable/disable index downloads and make changes to the
+
+applicable SAP RFC function. The SAP system performing the index download in this content
+
+repository is configured in the Properties area.
+
+18 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Barcode upload 
+
+If the Barcode upload function is enabled, you can configure additional settings in the following
+
+area. The SAP system performing the index download in this content repository is configured in the 
+
+Properties area.
+
+Enable/disable barcode upload
+
+To enable/disable barcode upload for this content repository, click Enable or Disable.
+
+Enable/disable extension derivation
+
+With barcode uploads, a document class is reported to the SAP system. By default, this is the
+
+document class FAX, which is entered into the TOA tables in SAP when using the function. By
+
+enabling the Derive document class from extension function, the actual extension is transferred to
+
+SAP as the document class in capital letters.
+
+File extension from metadata field
+
+Alternatively, you can use the Metadata field for document class function to create your own field
+
+and pass on the document class to this field for each document.
+
+This process is as follows:
+
+If a value is entered to Field for document class and this field also has a value in the
+
+document to be processed, this value is applied for uploading the document via barcode
+
+upload.
+
+If no value is configured for Field for document class but a document class is entered to the 
+
+Derive document class from extension field, this entry is used.
+
+If neither of these parameters is configured, the default value FAX is applied.
+
+ELOix function for barcode search
+
+You can enter an ELO Indexserver function into the ELO Indexserver function for barcode search
+
+configuration parameter in order to find documents with barcode entries to be transferred. This can
+
+be necessary, for example, to define a more performant database query if there are issues
+
+performing normal searches on specific database systems. It is also possible to perform upstream
+
+• 
+
+• 
+
+• 
+
+19 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+actions in the configured script, such as creating a correct SAPPATH. In most cases, it is not
+
+necessary to use an additional function.
+
+The specified scripts must be located in the ELO Indexserver Scripting Base administration folder in
+
+the corresponding directory for the ELO Smart Link for SAP® ERP instance (in our example, the 
+
+_ALL directory). An example of a script could look like this:
+
+/**
+
+* Import Indexserver API classes
+
+*/
+
+importPackage(Packages.de.elo.ix.client);
+
+/**
+
+* This function collects barcode documents for the ELO Archive Link
+
+* @param {de.elo.ix.client.IXServerEventsContext} ec Execution context, members:
+
+*           ec.user UserInfo object, readonly.
+
+*           ec.ci ClientInfo object, readonly.
+
+*           ec.url String IndexServer URL, readonly.
+
+* @param {Object} args Argument array sent by the client application.
+
+* @returns {Object} Array of Object IDs
+
+**/
+
+function RF_findBarcodeDocs(ec, args) {
+
+  var db = new Packages.de.elo.ix.jscript.DBConnection(),
+
+      ret = [], repositoryName, maskName, bcReposLine;
+
+  if (log.isDebugEnabled()) {
+
+    log.debug("RF_findBarcodeDocs(" + ec + ", args=" + args);
+
+  }
+
+  repositoryName = args[0];
+
+  if (log.isDebugEnabled()) {
+
+    log.debug("reposName=" + repositoryName);
+
+  }
+
+  maskName = args[1];
+
+  if (log.isDebugEnabled()) {
+
+    log.debug("maskName=" + maskName);
+
+  }
+
+  bcReposLine = args[2];
+
+  if (log.isDebugEnabled()) {
+
+    log.debug("bcReposLine=" + bcReposLine);
+
+  }
+
+  //  The keywording form is currently ignored.
+
+  //  This is how to obtain the ID of the keyording form,
+
+20 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Metadata 
+
+In the following configuration area, you can define and set parameters related to the metadata.
+
+Please note that the following knowledge is required to configure these parameters.
+
+  //  if it has to be included in the statement:
+
+  //
+
+  //    var maskId = parseInt(maskName);
+
+  //    log.info("maskId=" + maskId);
+
+  //    if (isNaN(maskId)) {
+
+  //      var mask = ix.checkoutDocMask(ec.ci, maskName, DocMaskC.mbAll, LockC.NO);
+
+  //      maskId = mask.id;
+
+  //      log.info("maskId=" + maskId);
+
+  //    }
+
+  ret = db.query("select distinct k1.parentid from objkeys k1, objkeys k2 " +
+
+                         "where k1.parentid=k2.parentid and " +
+
+                         "k1.okeydata like '?%' and " +
+
+                         "k1.okeyname like 'SAPBARC' and " +
+
+                         "k2.okeydata like '" + repositoryName +"/%' and " +
+
+                         "k2.okeyname like 'SAPPATH'");
+
+  if (log.isDebugEnabled()) {
+
+    log.debug("#rows=" + ret.length);
+
+  }
+
+  if (log.isDebugEnabled()) {
+
+    log.debug(")RF_findBarcodeDocs");
+
+  }
+
+  return ret;
+
+}
+
+21 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+The SAP system transfers both the actual document and the corresponding header data to ELO
+
+Smart Link during filing.
+
+A document also always transfers a linked path, which is configured in a field on the metadata
+
+form. In the SAP context, this path is named SAP repository path and is structured as follows:
+
+Component metadata
+
+You have three options for configuring the Component metadata field:
+
+If the component ID is entered, e.g. data, the fields are saved in the specified component.
+
+If * is entered as the component ID, the fields are saved in all components.
+
+If the component ID is blank, the fields of the document (document header) are set.
+
+Ignore metadata fields
+
+In the Metadata fields are deleted if the entry exists input field, you can define a range of fields that
+
+are left blank if values already exist. The fields are listed separated by commas.
+
+Example: INVOICE_DATE, INVOICE_AMOUNT etc.…
+
+Overwrite field values
+
+This setting in the configuration prevents field values from being overwritten. If you enable this
+
+function, field values can be overwritten. Use the input field below it: Prior to update, metadata
+
+fields are deleted. The fields are listed separated by commas.
+
+Example: INVOICE, INVOICE_STATE etc.…
+
+Setting initial values
+
+In this configuration parameter, initial values can be written to a field during document filing
+
+(component/data) or from the header file (document). You may want to do this to start a workflow
+
+via an ELOas script, for example. For more information, refer to Advanced > Document header
+
+name.
+
+If you enable one of the two functions When creating a component, no initial values are set or 
+
+When creating a document, no initial values are set, two additional fields are shown in the
+
+configuration interface.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+22 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+The field Init metadata field specifies the field you want to complete automatically. For
+
+example, the WF_STATE field.
+
+The Init metadata value field specifies the fixed value you want to enter into the defined field.
+
+For example, the value Start.
+
+Advanced 
+
+You will find more configuration options under Advanced.
+
+ELO document path
+
+With the ELO document path, you can file archived documents to your own document path
+
+(physical storage location).
+
+Example:
+
+• 
+
+23 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Log on to the ELO Administration Console and create your own document path.
+
+Next, enter the name of the document path into the ELO document path input field in the 
+
+Advanced menu of the ELO Smart Link configuration. For example, the value sapdocuments. If
+
+this value is left blank, the default path is used.
+
+Permission (ACL)
+
+The configured permissions are applied globally to all filed SAP documents from this content
+
+repository. To configure multiple permissions, create separate entries for the corresponding groups
+
+or IDs. Use the access right codes used by ELO as the abbreviations for the rights. If using the ID,
+
+make sure to enter the # character before the group or user ID.
+
+R (Read), W (Write), D (Delete), E (Edit), and P (Permission).
+
+Information
+
+Starting with ELO 12, you can use the new right Permission (P). If you use ELO 11 or an older
+
+version, you cannot use the Permission (P) right. Otherwise, all entries with the Permission
+
+(P) right will become invalid! Whenever possible, avoid performing configuration at the user
+
+level.
+
+ELO replication sets
+
+Another configuration option is available for ELO replication sets. You have the option to assign the
+
+stored documents from this content repository to one or more ELO replication sets.
+
+Option 2: [#]Replication ID
+
+Use the replication set name or replication set ID as a configuration parameter in the Content
+
+repository – Advanced area of ELO Smart Link for SAP. If you leave the parameter field empty, no
+
+replication set will be used. To configure multiple replication sets, use the ENTER key, commas, or
+
+the TAB key after inputting an entry.
+
+1. 
+
+2. 
+
+24 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Key to encrypt and decrypt components
+
+If you want to store documents using ELO Smart Link, you can encrypt them before filing to the
+
+repository. The AES algorithm of the Java SE platform is used for this. By default, the ELO Smart
+
+Link interface generates 128-bit keys. If the Unlimited Strength Jurisdiction Policy Files modules
+
+from Java Cryptography Extension (JCE) are installed, 256-bit keys are generated.
+
+Information
+
+If performing a migration for files that were previously 128-bit encrypted, this encryption
+
+must be maintained, as the system automatically enters the key. Do not switch to a higher
+
+encryption type.
+
+The encrypted documents are saved with the extension .eloaes. The file streams contain a simple
+
+header specifying the size and extension of the original document. The encryption process and
+
+header layout can be requested from ELO.
+
+ELO Smart Link can also generate a key. These keys are only generated with the AES algorithm. To
+
+do so, proceed as follows:
+
+In the Key to encrypt and decrypt components field, enter generate.
+
+Apply the configuration settings by clicking the Apply button at the top right and save your
+
+changes.
+
+Open the Advanced content repository configuration again and check whether a key has been
+
+entered into the Key to encrypt and decrypt components input field.
+
+Warning
+
+If the encryption code is lost, you will no longer be able to decrypt encrypted documents.
+
+Keep this key in a secure location.
+
+Encryption algorithm
+
+If encryption is used, complete the Encryption algorithm input field. This parameter must be
+
+configured together with Key to encrypt and decrypt components. The values AES and AES/ECB/
+
+NoPadding have been tested by quality assurance.
+
+1. 
+
+2. 
+
+3. 
+
+25 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+To ensure compatibility with older installations running Java 7, you have to select AES/ECB/
+
+NoPadding for the key to work.
+
+If you'd like to use encryption, we recommend setting the value AES/ECB/NoPadding. If you leave
+
+this configuration parameter blank, encryption is not performed.
+
+Please note
+
+If using encryption, documents can only be displayed directly via SAP with direct access via
+
+ELO Smart Link. SAP has to be set to the internal SAP document viewer. No other ELO client
+
+can decrypt the documents. Other functions, such as going straight to the ELO Java Client or
+
+ELO Web Client, cannot be used either, for example.
+
+ELOix function for finding documents to be deleted
+
+The ELOix function for finding documents to be deleted configuration parameter should only be
+
+used in case of issues or as needed. In the past, performance issues arose when deleting
+
+documents for some database systems/ELO versions. In this case, this option can be used. Enter a
+
+registered ELOix function configured in ELO in the Indexserver Scripting Base. This ELO Indexserver
+
+function should contain optimized searches at the database level.
+
+Example: When searching for documents with an Oracle database using the normal approach,
+
+timeout errors could occur.
+
+The following sample script was developed for this specific case:
+
+/**
+
+* Example script to replace the SQL statement in componentDelete.
+
+ *
+
+ * Copy this script file into the archive folder
+
+ * \Administration\ELO Indexserver Scripting Base\_ALL
+
+*/
+
+/**
+
+* Statement to be used to find the ELO archive entries of a SAP document.
+
+* The placeholders {0} and {1} are replaced by the SAPPATH when the statement is executed.
+
+*/
+
+var stmt_findSordForDeleteDocument =
+
+      "select objid from objekte o, objkeys objk0"
+
+                        + " where"
+
+                        + " o.objid=objk0.parentid"
+
+                        + " and (objk0.okeyname like N'SAPPATH')"
+
+    // ORACLE: use okeyudata
+
+26 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+End points with write permissions
+
+In this configuration parameter, you can specify host names or IP addresses with write, edit, and/or
+
+delete permissions.
+
+Example:
+
+                        + " and ((objk0.okeydata like N'{0}')"
+
+                        + "   or  (objk0.okeydata  like N'{1}/%'))"
+
+    // ORACLE : + " and (rownum<=10001)"
+
+                  + " and (o.objstatus=0)"
+
+                        + " and (o.objid>1)"
+
+                  ;
+
+/**
+
+* Import Indexserver API classes
+
+*/
+
+importPackage(Packages.de.elo.ix.client);
+
+/**
+
+* Registered function called from ELO Smart Link
+
+* @param ec Execution Context
+
+* @param args Array of arguments
+
+* @returns Table of results
+
+*/
+
+function RF_findSordForDeleteDocument(ec, args) {
+
+      if (log.isDebugEnabled()) log.debug("RF_findSordForDeleteDocument(" + ec + ", args=" + args);
+
+      //var repositoryName = args[0];
+
+      //var maskName = args[1];
+
+      var sappath = args[2];
+
+      var db = new Packages.de.elo.ix.jscript.DBConnection();
+
+      var ret = db.query(stmt_findSordForDeleteDocument, [sappath, sappath]);
+
+      if (log.isDebugEnabled()) log.debug(")RF_findSordForDeleteDocument");
+
+      return ret;
+
+}
+
+27 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Only SAP systems with the IP addresses 10.49.110.187 and 10.49.50.39 may create, change, or
+
+delete documents.
+
+Document protection
+
+Document protection determines whether the content server requires signed access. Normally, the
+
+degree of protection of a document is set by SAP for each document on creation and saving. If it is
+
+not set, the value specified here is used (r = read, u = update, c = create, d = delete). The default
+
+value means that only signed access is permitted (maximum security).
+
+ELO Web Client URL
+
+If you enter the URL for the ELO Web Client here, all Get access (document calls) are forwarded to
+
+the URL of the ELO Web Client. The configured URL must contain the path to the repository.
+
+Example:
+
+Entering the ELO Web Client URL allows you to go from the SAP attachment list to the ELO Web
+
+Client when opening a document from the attachment list. However, this requires additional
+
+configurations in SAP, which are described in the chapter ELO Web Client configuration.
+
+Document header name
+
+The parameter maintained here indicates the name of the document header, which is generated
+
+together with the document filed via SAP. If this field is left empty, the default value Document is
+
+used. Note the following explanations.
+
+http://192.168.0.1:9090/ix-DEMO/plugin/de.elo.ix.plugin.proxy/web/#/archive/
+
+28 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+In SAP ArchiveLink®, two files are always stored for each document filed. The following graphic
+
+explains the default storage process in SAP. In ELO, this is a document and header file, and in SAP it
+
+is a component/data and a document.
+
+Compatibility mode
+
+Please note
+
+Only use this mode if you are familiar with the consequences and functions.
+
+If compatibility mode has been enabled, objects can be requested via the ELO ID instead of the
+
+SAPPATH generated by SAP. Furthermore, there are no separate repository entries for separating
+
+documents and component properties. The writeBarcodeFile function is also performed differently
+
+than the standard. In compatibility mode, write access is also disabled. As a result, you cannot
+
+create any components, for example.
+
+Compression mode
+
+If this parameter was enabled, documents to be filed from the SAP system are compressed before
+
+they are transferred to ELO. The standard ZIP compression algorithm of the Java platform is used,
+
+and the files are transferred to ELO zipped.
+
+Use Indexserver as fallback if document content type is missing
+
+By default, no content type is transferred in the header when requesting a document from ELO from
+
+the SAP system, unless a content type is explicitly set in field SAPCONT. This can cause issues with
+
+the SAP system, as the SAP system may set an incorrect extension for the document (e.g. the SAP
+
+system sets .mdb as the extension).
+
+If you enable this menu item, a fallback value will be set based on the file type on the Indexserver
+
+and transferred to the SAP system. Please note that this could cause a certification test for ELO
+
+Smart Link for SAP® ERP (SAP ArchiveLink) on your SAP system to fail. Another option is to
+
+maintain the SAPCONT field in ELO with the corresponding content type (or mime type).
+
+Certificate configuration 
+
+If the Signature parameter is enabled in the ELO Smart Link Properties menu (see Properties >
+
+Enabling signatures), ELO Smart Link for SAP only accepts signed requests from an SAP system.
+
+However, the connected SAP system can sign and send its requests with a (public key) certificate.
+
+For ELO Smart Link to verify the request, the certificate must be sent from SAP to ELO Smart Link,
+
+where it has to be accepted and approved. This ensures only authorized systems have access. For
+
+more information on sending a certificate, refer to the section Security settings.
+
+We recommend managing certificates sent by SAP systems using the certificate manager. If this is
+
+not possible, you can configure the system to accept sent certificates via the following parameters.
+
+Accept next transferred certificate
+
+29 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+If this parameter is enabled, ELO Smart Link will automatically accept the next certificate sent by
+
+an SAP system. The parameter is then disabled again. If using this function, the certificate should
+
+be sent from the corresponding SAP system to ELO Smart Link in a timely manner.
+
+Accept all certificates
+
+If this parameter is enabled, ELO Smart Link will automatically accept all incoming certificates.
+
+Information
+
+Only use this mode for test purposes.
+
+Other 
+
+Under Other, you can delete an existing content repository.
+
+Apply the changes by selecting the Save changes button in the footer.
+
+Certificate manager 
+
+To work with the certificate manager, you should first set up corresponding content repositories and
+
+configure them in the connected SAP systems. For more information, refer to the chapter SAP
+
+ArchiveLink® configuration.
+
+You will find the certificate manager on the toolbar of the ELO Smart Link web interface.
+
+1. 
+
+30 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+The certificate manager is split up into two different areas: Unverified certificates and Verified
+
+certificates.
+
+If a certificate is sent by an SAP system as described under Security settings, you will find it in the 
+
+Unverified certificates area. You now have the option to accept the certificate (Approve) or discard
+
+it.
+
+Once you have accepted the unverified certificate, you will find it under Verified certificates.
+
+31 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+If additional content repositories have been created for the same SAP system, you can copy the
+
+existing and accepted certificate to another content repository. Under Verified certificates, you can
+
+use the Transfer certificate to another content repository function.
+
+Copy content repository 
+
+When creating a new content repository, you can copy configurations you have already made for an
+
+existing content repository.
+
+To do this, you need to enable the option Copy from content repository.
+
+If the option is enabled, you can enter the name and description of the new content
+
+repository and select the content repository whose configuration parameters you want to
+
+copy.
+
+Migrating existing configurations 
+
+With ELO Smart Link, you can import an old ELO Archive Link for SAP configuration or migrate
+
+configurations from a test system to a live ELO Smart Link system. On the toolbar, you will find the 
+
+Import and Export entries, which can be used for the following purposes.
+
+1. 
+
+2. 
+
+32 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Exporting a configuration file 
+
+The Export function allows you to save the current configuration in a directory on your local file
+
+system.
+
+Generated in JSON format, the file contains the complete configuration of ELO Smart Link and can
+
+therefore also act as a backup.
+
+Importing a configuration file 
+
+Please note
+
+The Overwrite settings function is enabled by default. The existing configuration is deleted
+
+on import.
+
+Switch to the ELO Smart Link installation where you want to upload the configuration using
+
+the Import function.
+
+On the toolbar, click Import and select the file you exported to your directory.
+
+The selected file is shown and you can disable the function to overwrite existing entries.
+
+1. 
+
+2. 
+
+3. 
+
+33 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+When importing instances, the instance to be imported may not yet be entirely known to the
+
+system. If this is the case, the instance is shown and you can choose which of the existing
+
+instances you want to perform the import function on. If you select the default instance _ALL
+
+here, you also have to choose which configuration is applied: the configuration for the _ALL
+
+instance available on the server or the configuration of the instance that will be imported.
+
+Next, the SAP systems to be imported are shown. Add the name of the SAP system, as well
+
+as the password associated with the SAP user name. It is not possible to import an entry
+
+without the name of the SAP system from an old ELO Archive Link for SAP configuration.
+
+4. 
+
+34 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Please note
+
+In the ELO ArchiveLink for SAP configuration, it was possible to enter incomplete
+
+configurations. This did not have an effect on functionality. During import, these
+
+configuration fragments are now allocated logically, but do not result in a complete
+
+configuration. The incomplete SAP system has to be removed following import. You will
+
+have to first remove the link in the corresponding content repository and then delete the
+
+SAP system.
+
+Allocation of SAP systems in a content repository is necessary for ELO Connectivity Pack for
+
+SAP® ERP functions, such as the index download and barcode upload scenarios.
+
+The system indicates the missing parameters and marks the fields with a red border.
+
+In addition, all configuration items in all three areas are displayed on three tabs:
+
+35 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Information on the SAP system• 
+
+36 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+All information on the content repositories• 
+
+37 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+All information on the instance configuration
+
+Please note
+
+If the Overwrite settings function was disabled, the selected configuration is updated by
+
+existing functions.
+
+Migrating ELO Archive Link for SAP configurations 
+
+ELO Smart Link for SAP is backwards compatible with ELO Archive Link. This means you can
+
+migrate valid configuration files from ELO Archive Link for SAP.
+
+Copy the configuration file from the old ELO Archive Link for SAP server to the new server or
+
+your local client where you have access to the new ELO Smart Link.
+
+Use the Import function on the toolbar as described in Importing a configuration file.
+
+Clicking Apply/update enters all listed entries into the ELO Smart Link configuration.
+
+Next, apply the configuration with Save changes in the footer.
+
+• 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+38 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Please note
+
+It is not possible to import message server configurations from ELO Archive Link to ELO
+
+Smart Link for SAP using this import function. Message server configurations have to be
+
+updated manually.
+
+39 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+SAP ArchiveLink® configuration 
+
+Besides configuring ELO Smart Link, you need to set up a corresponding content repository on your
+
+SAP system. In this guide, we will create and configure the content repository E1 as an example.
+
+Log on to your SAP system and start the transaction OAC0.
+
+You can see some SAP content repositories in the overview. These are used by SAP for
+
+different purposes and shouldn't be deleted.
+
+Switch to edit mode in the transaction (  icon) and click the  icon to create a new
+
+content repository.
+
+We use the following data in this example: There are two different view modes you can
+
+switch between in the toolbar (simple and full administration).
+
+Parameter Description Example value
+
+Content rep.
+For SAP ArchiveLink, the entry
+
+must have two characters.
+E1
+
+Document area
+Selection list of document areas –
+
+Mandatory – ArchiveLink
+ArchiveLink
+
+Storage type Storage type in SAP HTTP content server
+
+Protocol
+SAP client/server communication
+
+(SAPHTTP by default)
+
+ELOJC
+
+The ELOJC protocol was created by the
+
+Competence Center SAP. You will find
+
+more information in the ELO SAP®
+
+OLE call documentation.
+
+Version no.
+Must be identical to the log
+
+version
+0046
+
+HTTP server Address of the ELO Indexserver 10.49.110.198
+
+Port number
+Port used for creating the ELO
+
+ArchiveLink for SAP
+9060
+
+HTTP script
+http script of the ELO Smart Link
+
+instance (plus ContentServer)
+sl-CCDEMO11_2/ContentServer
+
+1. 
+
+2. 
+
+40 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Parameter Description Example value
+
+Exchange
+
+directory
+
+Path of the SAP application server
+
+(cache memory). Transfers the
+
+global directory suggested by
+
+system from physical base path
+
+E:\usr\sap\ELO\SYS\global\
+
+Output device
+
+(Full
+
+administration)
+
+ArchiveLink – Printer name for 
+
+Print and file function
+ARCH
+
+Information
+
+The output device ARCH may need to be configured by an SAP administrator. (Device type: 
+
+ARCHLINK, device class: Enable Archiver and Sequential order processing).
+
+Once you have made all settings and the ELO Smart Link service is running, you can test the
+
+connection to ELO Smart Link in the content repository transaction.
+
+If the test was successful, this is displayed in the SAP status line.
+
+For more details, click the information icon (Status Information).
+
+Security settings 
+
+The next step is to check and configure the security settings. This setting also equates to the value
+
+defined in the section Enabling signatures.
+
+1. 
+
+2. 
+
+41 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+If the No signature check box is selected in SAP, you must disable the Signature enabled
+
+parameter in the ELO Smart Link configuration.
+
+If the check box is not selected in SAP, you must enable the Signature enabled parameter in
+
+the ELO Smart Link configuration.
+
+Now, you can send the certificate from SAP to ELO Smart Link. Click Send certificate
+
+(envelope icon).
+
+SAP now sends a certificate with public key to ELO Smart Link.
+
+The configuration of the SAP ArchiveLink® interface is now completed.
+
+As described in the section Certificate manager, accept the transmitted certificate.
+
+The content repository can now communicate with ELO Smart Link.
+
+Information
+
+Several SAP ArchiveLink® customizings, such as document types and links, still have to be
+
+configured for filing documents from SAP.
+
+1. 
+
+2. 
+
+3. 
+
+42 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+ELO Web Client configuration 
+
+If the URL to the ELO Web Client is entered into the configuration of a content repository in ELO
+
+Smart Link (see the section Advanced > ELO Web Client URL), several configurations have to be
+
+made in SAP to call the ELO Web Client. For example, a protocol (transaction OAA3) must be
+
+maintained in the content repository configuration in SAP (transaction OAC0), which has
+
+communication type http configured for the Display Stored Document function.
+
+You can either use an existing protocol or create a new one. You will find more information in the 
+
+ELO SAP® OLE call documentation.
+
+43 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+The display settings under Windows viewer settings and under WEBGUI viewer settings should also
+
+be set to Call Internet Browser in transaction OAG1.
+
+44 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+	Table of contents
+	ELO Smart Link for SAP® ERP configuration guide
+	Introduction
+	Basics
+
+	ELO Smart Link configuration
+	Logon via the web interface
+	User right
+	ELO Smart Link configuration start screen
+	Create new configuration
+	Instances
+	SAP systems
+	SAP systems when using an SAProuter string
+	SAP systems when using a message server
+
+	Secure login via SNC
+	Content repository
+	Properties
+	Index download
+	Barcode upload
+	Metadata
+	Advanced
+	Certificate configuration
+	Other
+
+	Certificate manager
+
+	Copy content repository
+	Migrating existing configurations
+	Exporting a configuration file
+	Importing a configuration file
+	Migrating ELO Archive Link for SAP configurations
+
+
+	SAP ArchiveLink® configuration
+	Security settings
+	ELO Web Client configuration
+
+
+

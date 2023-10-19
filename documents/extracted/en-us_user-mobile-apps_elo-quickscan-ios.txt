@@ -1,0 +1,580 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO mobile apps | ELO QuickScan (iOS)
+
+
+ELO mobile apps
+
+ELO QuickScan (iOS)
+
+
+
+3
+
+Table of contents
+
+Setup and operation 
+
+2 ELO mobile apps
+
+
+
+Setup and operation 
+
+You can use the ELO QuickScan app (iOS edition), known here simply as ELO QuickScan, to take
+
+pictures (scans) of documents. You then transfer these pictures to the ELO repository as a PDF file.
+
+Information
+
+ELO QuickScan is optimized for use with iPhone, but can also be used with iPads. All of the
+
+following information applies for use with Apple iPhone.
+
+The following chapter describes how to set up and use the app.
+
+Installing the app 
+
+The ELO QuickScan app is installed like any other iOS app.
+
+To install the ELO QuickScan app, you need the App Store app and an Apple ID.
+
+Requirement 
+
+The ELO QuickScan app requires iOS 10.3 or higher. It is compatible with iPhone, iPad, and iPod
+
+Touch.
+
+Installation via the App Store 
+
+You will find the ELO QuickScan app in the App Store.
+
+Method
+
+Tap LOAD.
+
+The installation dialog box opens.
+
+Tap Install to begin installation.
+
+Result
+
+The app is installed on your device automatically.
+
+You can now start ELO QuickScan.
+
+Settings in ELOoffice 
+
+For ELO QuickScan to establish a connection to the ELO repository, the following settings have to
+
+be made in the ELOoffice Configuration dialog box.
+
+Information
+
+1. 
+
+2. 
+
+3 ELO mobile apps
+
+
+
+Normally, the required settings are made automatically when installing or updating the app.
+
+Enable ELO QuickScan 
+
+First, check whether ELO QuickScan is enabled. Open the Configuration dialog box in ELOoffice (ELO
+
+menu > Configuration > General). The options ELO QuickScan and Transfer is active must be
+
+selected.
+
+Storage path 
+
+A path to the computer must be entered to Storage path. The scans are stored to the folder entered
+
+here before being transferred to the ELO repository.
+
+The ELO Intray path is selected as the storage path by default.
+
+Tap Browse (button with the three dots) to open the Browse For Folder dialog box. You can select an
+
+alternate storage path here.
+
+Apply to 
+
+In the Apply to area, select whether you want to file the scan to the Intray work area or the 
+
+Repository work area.
+
+Information
+
+If the option Repository is selected, the File QuickScan documents dialog box appears for
+
+every uploaded scan. Select the filing location for each scan in the File QuickScan
+
+documents dialog box. The scan is then filed with the Basic Entry keywording form.
+
+4 ELO mobile apps
+
+
+
+Firewall settings 
+
+Important
+
+Confirm the Windows Security Alert with Allow access. Otherwise, ELO QuickScan cannot
+
+communicate with your computer. In case of an issue, check whether your firewall software
+
+or the antivirus program is blocking ELO QuickScan. If any connection problems occur, check
+
+whether ports UDP: 5555 and TCP: 5556 are open.
+
+Program interface 
+
+This section briefly introduces the individual areas of ELO QuickScan.
+
+You will find the ELO QuickScan app menu at the bottom of the start screen.
+
+App menu 
+
+5 ELO mobile apps
+
+
+
+Camera 
+
+6 ELO mobile apps
+
+
+
+7 ELO mobile apps
+
+
+
+You create the scans that you can then upload to the ELO repository in the Camera area. Refer to
+
+the chapter Creating scans for more information.
+
+Scans 
+
+All available scans are in the Scans area. Here, you can edit or delete scans, or send them to the
+
+target device. Refer to the chapter Uploading scans for more information.
+
+In the Configuration area, you can adjust settings for the module. For detailed information, refer to
+
+the Configuration chapter.
+
+Configuration 
+
+The following explains which settings you can make within the ELO QuickScan app.
+
+To configure ELO QuickScan, tap the gear icon on the start screen.
+
+8 ELO mobile apps
+
+
+
+9 ELO mobile apps
+
+
+
+The Configuration dialog box appears. There are four categories in the Configuration area that will
+
+be explained briefly.
+
+Recipient 
+
+In the Recipient category, you can specify the target device for your scanned files. To open the 
+
+Recipient menu, tap No recipient selected.
+
+In the Recipient submenu, you see all available devices to which you can upload files.
+
+The blue check mark indicates which device is currently selected as the target device.
+
+Please note
+
+To select a target device for uploading, this device must be on the same network as the
+
+Apple device you want to upload data from. ELOoffice must also be open on the target
+
+device. Check whether ELO QuickScan is activated in ELOoffice (see Settings in ELOoffice
+
+section).
+
+Adding recipients
+
+In ELO QuickScan, you can also add recipients manually.
+
+Method
+
+Tap the plus icon in the header.1. 
+
+10 ELO mobile apps
+
+
+
+The Add recipient dialog box opens.
+
+Enter the name of the target device as well as the associated IP address. You can specify the
+
+host or computer name in place of the IP address.
+
+Confirm your entries with the Add button.
+
+Result
+
+The connection data for the target device appears in the Recipient submenu.
+
+Image quality 
+
+With this setting, you can determine the scan image quality. This allows you to control the file size
+
+of the individual scans. You can choose between Low, Medium, and High.
+
+2. 
+
+3. 
+
+11 ELO mobile apps
+
+
+
+Information
+
+The image quality for scans in ELO QuickScan is set to High by default.
+
+Log 
+
+ELO QuickScan can output a log file when transferring scanned documents to the target device.
+
+Enable logging using the slider next to Enable logging.
+
+Creating scans 
+
+This section describes how to create scans.
+
+Method
+
+1. 
+
+12 ELO mobile apps
+
+
+
+In the app menu, tap the camera icon.
+
+13 ELO mobile apps
+
+
+
+14 ELO mobile apps
+
+
+
+Camera
+
+The Camera area appears. The following control elements are available:
+
+(1) Flash: Press Flash to turn the flash on your device on or off.
+
+(2) Capture area: Everything inside the capture area will be included in the scan and marked
+
+in green. The selected section can be corrected later on in edit mode.
+
+(3) Trigger: Press Trigger to create a scan.
+
+Select the desired section of the screen.
+
+Press the trigger.
+
+Result
+
+The camera captures the image. This may take a few moments. Hold the device as stable as
+
+possible.
+
+Information
+
+If you capture multiple scans one after another, ELO QuickScan combines all scans into a
+
+single file numbered serially.
+
+2. 
+
+3. 
+
+15 ELO mobile apps
+
+
+
+Preview mode for single-page scans 
+
+16 ELO mobile apps
+
+
+
+17 ELO mobile apps
+
+
+
+As soon as the image has been captured successfully, the app switches to preview mode. In
+
+preview mode, you can edit the section or upload it straight to the target device.
+
+Information
+
+Preview mode offers additional functions for scans already captured in ELO QuickScan. Refer
+
+to the chapter Preview mode for captured scans for more information.
+
+Edit mode for a single-page scan 
+
+Tap the slider icon to open edit mode.
+
+Edit mode opens.
+
+(1) Crop: ELO QuickScan crops the image.
+
+(2) Filter: Here, you can apply different filters to the scanned document. Besides the original, you
+
+can choose between black/white, grid, and contrast.
+
+(3) Camera: With this function, you can replace the existing scan with a new one.
+
+To save your settings, tap the check mark icon.
+
+The scan is saved. ELO QuickScan switches to edit mode.
+
+Edit mode for a multi-page scan 
+
+Preview mode offers an additional function for scans with multiple pages.
+
+18 ELO mobile apps
+
+
+
+The Recycle bin function allows you to delete individual pages. See the Delete scans chapter for
+
+more information on this option.
+
+Uploading scans 
+
+This section describes how to upload scans from ELO QuickScan to the ELO repository. In this
+
+example, we use ELOoffice as the recipient on the target device.
+
+Information
+
+Scans can be uploaded to the target device directly after scanning or at a later point in time.
+
+The following steps show how to upload scans that have already been captured in ELO
+
+QuickScan.
+
+Method
+
+In the app menu, tap Select.
+
+Tap the scan you want to send to the target device.
+
+Information
+
+Multiple selection is possible.
+
+1. 
+
+2. 
+
+19 ELO mobile apps
+
+
+
+The selected scan is marked with a blue check mark.
+
+Tap Upload (square icon with arrow).3. 
+
+20 ELO mobile apps
+
+
+
+A selection dialog box opens.
+
+In the selection dialog box, tap ELOoffice.
+
+Result
+
+A PDF file is created from the scan and uploaded to the ELO repository.
+
+Preview mode for captured scans 
+
+Preview mode offers additional functions for scans already captured in ELO QuickScan.
+
+Information
+
+Preview mode for captured scans opens when you tap the scan in the app menu. You do not
+
+have to mark scans with the Select button. However, multiple selection is not possible.
+
+(1) Edit mode: Tap the slider icon to open edit mode. Refer to the chapter Edit mode for more
+
+information.
+
+4. 
+
+21 ELO mobile apps
+
+
+
+(2) Add scan: Use this function to add scans to the existing scan. Additional scans are captured
+
+page by page.
+
+(3) PDF preview: Creates a PDF preview of the scan.
+
+(4) Upload scan: Tap the Upload button (square icon with arrow) to upload the scan to the ELO
+
+repository on the target device.
+
+Uploading to the ELO for Mobile Devices app 
+
+Tapping the PDF preview icon opens another upload button (square icon with a circle) to import and
+
+file the scan.
+
+If you have installed the ELO for Mobile Devices app on your device, an ELO button appears. Tap
+
+this button to send the scan to ELO for Mobile Devices and file it in the ELO repository.
+
+Information
+
+To file in this way, the ELO for Mobile Devices app must be installed on your mobile device.
+
+22 ELO mobile apps
+
+
+
+On the target device 
+
+On successful upload, a File received notification appears on the target device.
+
+The QuickScan dialog box then opens. Here, you will see the progress of the upload to the target
+
+device.
+
+Information
+
+If the Repository option is selected in the ELOoffice configuration, the File QuickScan
+
+documents dialog box appears for every uploaded scan. Select the filing location for each
+
+scan in the File QuickScan documents dialog box.
+
+Deleting scans 
+
+This section describes how to delete scans from ELO QuickScan.
+
+Method
+
+In the app menu, tap Select.1. 
+
+2. 
+
+23 ELO mobile apps
+
+
+
+Tap the scan you want to delete.
+
+Information
+
+Multiple selection is possible.
+
+The selected scan is marked with a check mark.
+
+Tap the button with the recycle bin icon.
+
+A selection dialog box opens.
+
+Confirm with Delete document.
+
+Result
+
+The selected scan is deleted from ELO QuickScan.
+
+3. 
+
+4. 
+
+24 ELO mobile apps
+
+
+	Table of contents
+	Setup and operation
+	Installing the app
+	Requirement
+	Installation via the App Store
+
+	Settings in ELOoffice
+	Enable ELO QuickScan
+	Storage path
+	Apply to
+	Firewall settings
+
+	Program interface
+	App menu
+	Camera
+	Scans
+
+	Configuration
+	Recipient
+	Adding recipients
+	Image quality
+	Log
+
+	Creating scans
+	Preview mode for single-page scans
+	Edit mode for a single-page scan
+	Edit mode for a multi-page scan
+
+	Uploading scans
+	Preview mode for captured scans
+	Uploading to the ELO for Mobile Devices app
+	On the target device
+
+	Deleting scans
+
+
+

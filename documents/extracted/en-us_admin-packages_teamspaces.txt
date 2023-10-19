@@ -1,0 +1,436 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO packages | ELO Teamspaces
+
+
+ELO packages
+
+ELO Teamspaces
+
+
+
+3
+
+3
+
+5
+
+Table of contents
+
+Teamspaces
+
+Create teamspace template 
+
+Configure teamspace template 
+
+2 ELO packages
+
+
+
+Teamspaces
+
+Create teamspace template 
+
+In the ELO Administration Console, select the package where you would like to create the
+
+teamspace template.
+
+Select Teamspace templates.
+
+In the Teamspace templates dialog box, select the New teamspace template button.
+
+The Configuration area for the new teamspace template opens.
+
+1. 
+
+2. 
+
+3. 
+
+3 ELO packages
+
+
+
+Information
+
+If you select an existing teamspace template, you can also configure it in the 
+
+Teamspace template dialog box.
+
+Once you are finished with configuration, select Save template to save it.
+
+A new teamspace template was created.
+
+4 ELO packages
+
+
+
+Configure teamspace template 
+
+After creating a teamspace template, you can configure them.
+
+The Teamspace template dialog box offers the following actions:
+
+Enter basic data for the teamspace template
+
+Define document spaces
+
+Create workspaces
+
+Add widgets
+
+Define roles
+
+Delete teamspace template
+
+Enter basic data for the teamspace template 
+
+Basic data for the teamspace template is entered in the Overview area.
+
+Enter a translation variable into the Translation variable field.
+
+Enter the display text of the translation variable into the Name field.
+
+Select Save (floppy disk icon).
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+3. 
+
+5 ELO packages
+
+
+
+Alternative: Select an existing translation variable with the List button (list icon).
+
+The content of the Name field will be saved as the display text of the translation variable.
+
+Here, the currently selected display language applies.
+
+Select the symbol to display in the tile in your client for the Teamspace function with this
+
+template.
+
+Select Save template.
+
+The teamspace template is saved.
+
+Define document spaces 
+
+You can create document spaces in your teamspace template.
+
+Select New document space.
+
+The New document space dialog box appears.
+
+4. 
+
+5. 
+
+1. 
+
+6 ELO packages
+
+
+
+Enter a name for the document space.
+
+Select a symbol.
+
+Select Save template.
+
+The teamspace template is saved. You created a new document space.
+
+Create workspaces 
+
+You can create new workspace instances in your teamspace template based on existing workspace
+
+types.
+
+Select New workspace.
+
+2. 
+
+3. 
+
+4. 
+
+1. 
+
+7 ELO packages
+
+
+
+The New workspace dialog box appears.
+
+Select a workspace type in the Type field via the drop-down menu in the New workspace
+
+dialog box.
+
+Enter a name for the workspace.
+
+Select Save template.
+
+The teamspace template is saved. You have added a new workspace to the teamspace.
+
+Add widgets 
+
+You can integrate widgets in your teamspace. First, you must create a widget.
+
+A widget is an ELO app. Refer to the ELO apps API documentation and their guides to learn how to
+
+create them. You can find them in the SupportWeb.
+
+A special requirement when creating a widget for teamspaces is that during creation, you must
+
+enter the following in the app's manifest (manifest.json):
+
+This entry is a list of widget types that this ELO app is available for.
+
+Information
+
+The type elo.widget.type.Teamspace is currently the only available type. It stands for the
+
+home screen of a teamspace.
+
+2. 
+
+3. 
+
+4. 
+
+"widgets": [
+
+{"type": "elo.widget.type.Teamspace"}
+
+],
+
+8 ELO packages
+
+https://supportweb.elo.com/en-us/elo-ecm-suite-21/modules/elo-web-forms-services.html
+https://supportweb.elo.com/en-us/elo-ecm-suite-21/modules/elo-web-forms-services.html
+
+
+Click the New widget button to integrate the widget.
+
+Define roles 
+
+In a teamspace, users have different roles with different associated rights and permissions. You can
+
+define roles in this area.
+
+A teamspace contains four pre-defined roles with defined rights and permissions:
+
+Administrator: The creator of a teamspace is automatically assigned the role of 
+
+Administrator. Other team members can also be assigned the role of Administrator.
+
+Administrators have all the rights to the teamspace and all permissions to the contents in the
+
+teamspace.
+
+Moderator: Users with this role have the right to edit the teamspace but not delete it. Like
+
+administrators, they have all the permissions to the contents of the teamspace.
+
+Member: Users with this role have the permissions to view, edit, and delete contents in the
+
+teamspace.
+
+Guest: Users with this role have permission to view the contents in the teamspace.
+
+Information
+
+The Administrator role cannot be edited or deleted.
+
+Overview of functions 
+
+New role: Add a role to the teamspace template. See the following section for additional
+
+information on this.
+
+Roles: Selecting one of the existing roles lets you see the role's settings and edit them if you
+
+have the rights and permissions (main administrator).
+
+Default for new team members: Select which role is set as standard for new members.
+
+New role 
+
+Select New role.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+9 ELO packages
+
+
+
+The Role dialog box opens.
+
+10 ELO packages
+
+
+
+Enter a technical name in the Identifier field.
+
+Enter a translation variable into the Translation variable field.
+
+Enter the display text of the translation variable into the Name field.
+
+Select Save (floppy disk icon).
+
+Alternative: Select an existing translation variable with the List button (list icon).
+
+Select which rights and permissions a user with this role should receive.
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+6. 
+
+11 ELO packages
+
+
+
+You can grant the following special teamspace rights:
+
+Edit roles: Users with this right can edit the roles in the teamspace.
+
+Edit teamspace: Users with this right can use the Edit teamspace function to make
+
+changes to a teamspace. They can also change the roles assigned to members in the
+
+teamspace and add new members.
+
+Delete teamspace: Users with this right can use the Edit teamspace function to delete
+
+a teamspace.
+
+You can grant the following default permissions for contents in a teamspace:
+
+View (R): Users have read access to the entry. They cannot modify the entry.
+
+Change metadata (W): Users can edit the metadata of the entry.
+
+Delete (D): Users can delete the entry.
+
+Edit (E) (documents only): Users can edit the selected entry. This means that they can
+
+change the working version and upload a new version.
+
+Edit list (L) (folders only): Users can change the contents of the folder. For example,
+
+you can create documents in this folder or move or remove documents from the folder.
+
+Set permissions (P): Users can change the permissions for the selected folder.
+
+The current teamspace rights and permissions only take effect if the user has the
+
+corresponding user rights.
+
+Click Save template.
+
+The teamspace template is saved. The role can now be used for new teamspaces. Existing
+
+teamspaces with this teamspace template do not take on the role.
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+7. 
+
+12 ELO packages
+
+
+	Table of contents
+	Teamspaces
+	Create teamspace template
+	Configure teamspace template
+	Enter basic data for the teamspace template
+	Define document spaces
+	Create workspaces
+	Add widgets
+	Define roles
+	Overview of functions
+	New role
+
+
+
+

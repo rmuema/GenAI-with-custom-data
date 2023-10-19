@@ -1,0 +1,1256 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Business Solution ELO HR Personnel File | Business Solution ELO HR Personnel File 1.04
+
+
+Business Solution ELO HR
+
+Personnel File
+
+Business Solution ELO HR Personnel File
+
+1.04
+
+
+
+3
+
+4
+
+10
+
+19
+
+26
+
+33
+
+39
+
+Table of contents
+
+Introduction
+
+Basics
+
+Onboarding and offboarding
+
+Create documents for employees
+
+Create an organizational chart
+
+Overviews
+
+Self-service
+
+2 Business Solution ELO HR Personnel File
+
+
+
+Introduction
+
+Structure of the documentation
+
+The goal of this documentation is to explain all functions of Business Solution ELO HR Personnel
+
+File.
+
+Basics
+
+The Basics chapter explains the ELO HR Personnel File program interface.
+
+Possible actions
+
+The remaining chapters address possible actions using the ELO HR Personnel File.
+
+Target audience
+
+This documentation is addressed to Business Solution ELO HR Personnel File users. Separate
+
+documentation is available for administrators on the ELO SupportWeb.
+
+The scope of functions presented in this documentation may differ greatly from those in your
+
+client.
+
+If you do not find functions described in this documentation in your client, you do not have
+
+permission to perform the action.
+
+The majority of functions can only be performed by employees of the HR department. The
+
+functions described in the Self-service chapter are available to employees of other departments.
+
+3 Business Solution ELO HR Personnel File
+
+
+
+Basics
+
+Basic principle
+
+ELO HR Personnel File enables you to create electronic personnel files and standardizes documents,
+
+regardless of formats.
+
+It maps the onboarding and offboarding processes within your company. A personnel file where you
+
+can store all documents in digital form can be created for each employee. ELO HR Personnel File
+
+also assists you in creating employee badges and documents.
+
+The dashboard helps you keep an overview of the employees in your company as well as of
+
+important dates, such as the end of the probationary period.
+
+Organizational charts enable you to map your company structure.
+
+General note
+
+ELO HR Personnel File works with the following clients:
+
+ELO Web Client
+
+ELO Java Client
+
+ELO Desktop Client
+
+Information
+
+In this documentation, we use screenshots from the ELO Web Client.
+
+Refer to the specific ELO client documentation for more details on how they work in general.
+
+Requirements
+
+Your administrator must have configured ELO HR Personnel File for you.
+
+• 
+
+• 
+
+• 
+
+4 Business Solution ELO HR Personnel File
+
+https://docs.elo.com/user/elo-web-client/de-de/elo-web-client/
+https://docs.elo.com/user/elo-web-client/de-de/elo-web-client/
+https://docs.elo.com/user/elo-java-client/de-de/elo-java-client/
+https://docs.elo.com/user/elo-java-client/de-de/elo-java-client/
+https://docs.elo.com/user/elo-desktop-client/de-de/elo-desktop-client/
+https://docs.elo.com/user/elo-desktop-client/de-de/elo-desktop-client/
+
+
+Program interface
+
+Fig.: Business Solution ELO HR Personnel File program interface
+
+You will find ELO HR Personnel File functions in the following areas:
+
+1 Employees, Organizational chart, and New employee tiles in the tile navigation
+
+The screenshot shows all ELO HR Personnel File tiles in a group. However, this view can vary
+
+depending on your individual configuration.
+
+2 HR group on the New tab
+
+Use the functions of this group to create new personnel files and organizations.
+
+Fig.: 'HR' tab
+
+3 'HR' tab
+
+As soon as you select a personnel file, the HR tab appears.
+
+This tab is where you can start onboarding and offboarding processes and create documents for
+
+employees.
+
+5 Business Solution ELO HR Personnel File
+
+
+
+Fig.: 'Update document' function
+
+4 Update document function on the Document tab in the HR group
+
+Fig.: 'Self-service' tab
+
+5 Change HR data and Access personnel file functions in the Self-service group on the New tab.
+
+These functions allow employees to make changes to their own personnel file or to submit a
+
+request to view their own personnel files. Supervisors can also request to view the personnel files
+
+of their employees.
+
+Repository
+
+The structure and appearance of the repository depend greatly on your specific configuration. The
+
+default state is described here.
+
+Personnel files are filed to // Human resources // Personnel files.
+
+6 Business Solution ELO HR Personnel File
+
+
+
+Fig.: Dynamic folders in the repository
+
+Dynamic folders sort the personnel files based on specific criteria, such as deadlines or status.
+
+7 Business Solution ELO HR Personnel File
+
+
+
+Fig.: Personnel file structure in the repository
+
+Each personnel file in the repository has a pre-defined folder structure.
+
+Fig.: 'Cover sheet' tab in the personnel file
+
+The Personnel file form consists of the tabs Cover sheet, Personal, HR, Department, and 
+
+Employment.
+
+Fig.: Organizational structure in the repository
+
+8 Business Solution ELO HR Personnel File
+
+
+
+You can create organizations, divisions, departments, and teams and classify the personnel file
+
+accordingly.
+
+9 Business Solution ELO HR Personnel File
+
+
+
+Onboarding and offboarding
+
+When employees join or leave your company, you can map the processes using the following
+
+functions:
+
+New employee
+
+Start onboarding
+
+Start offboarding
+
+The New employee function creates a personnel file. The Start onboarding function is used to
+
+complete the personnel file master data. At the end of this process, the employee file has the
+
+status E – Employed.
+
+If an employee leaves your company, you can initiate this process in ELO using the Start
+
+offboarding function. At the end of the process, the employee is assigned the status C – Contract
+
+terminated.
+
+Create new employee
+
+Information
+
+A new employee is joining your company. You want to create a new personnel file for her.
+
+Method
+
+On the New tab, click HR > New employee.
+
+• 
+
+• 
+
+• 
+
+1. 
+
+10 Business Solution ELO HR Personnel File
+
+
+
+Fig.: 'New employee' dialog box
+
+Optional: If multiple file types have been created, you first have to choose a file type. By selecting
+
+a file type, relevant information is automatically entered into the personnel file.
+
+Complete the fields in the New employee dialog box as required.
+
+Mandatory fields are marked with a red asterisk.
+
+Fields with a pencil icon contain keyword lists. When you enter a value in the respective field,
+
+matching list entries appear.
+
+Personnel number: You can enter a number based on your system. If you leave this field blank, a
+
+number is automatically generated when a file is stored in the repository.
+
+1. 
+
+11 Business Solution ELO HR Personnel File
+
+
+
+Information
+
+To give employees access to the functions in the Self-service group on the New tab, you
+
+have to complete the ELO user name field. This means the employee already has to exist as
+
+an ELO user. An ELO user name cannot be entered into more than one personnel file.
+
+Result
+
+Fig.: Personnel file in the repository
+
+The personnel file is created. It contains child folders where you can file documents for the
+
+employee. The status of the personnel file is O – Onboarding.
+
+Outlook
+
+After the personnel file has been created, it has to go through the onboarding process.
+
+With the Add picture function, you can add a picture to the candidate file.
+
+Start onboarding
+
+Information
+
+To complete the personnel file for your new employee that you just created with the status O –
+
+Onboarding, it will have go to through the onboarding process in the next step.
+
+Method
+
+Select the personnel file you want to start onboarding for.
+
+On the HR tab, click Start onboarding.
+
+1. 
+
+2. 
+
+12 Business Solution ELO HR Personnel File
+
+
+
+Fig.: 'Start onboarding' dialog box
+
+Complete the fields in the Start onboarding dialog box as required.
+
+Mandatory fields are marked with a red asterisk.
+
+Fields with a pencil icon contain keyword lists. When you enter a value in the respective field,
+
+matching list entries appear.
+
+1. 
+
+13 Business Solution ELO HR Personnel File
+
+
+
+Information
+
+Filling out the mandatory field Supervisor gives the supervisor access rights to the personnel
+
+file.
+
+Result
+
+The supervisor or a substitute receives the master data sheet for completion.
+
+Complete master data
+
+Information
+
+As supervisor or substitute for the supervisor, you have received a workflow to complete the
+
+master data for your new employee in your Tasks work area.
+
+Information
+
+If the supervisor does not use ELO, the workflow is forwarded to a substitute. A substitute
+
+for the supervisor is an ELO user with the right to complete the master data.
+
+Method
+
+Select the workflow that you want to process.
+
+Optional: Click Accept workflow.
+
+You can complete the master data in the form.
+
+1. 
+
+14 Business Solution ELO HR Personnel File
+
+
+
+Fig.: 'Complete master data' form
+
+Complete the fields as required.
+
+Mandatory fields are marked with a red asterisk.
+
+Fields with a pencil icon contain keyword lists. When you enter a value in the respective field,
+
+matching list entries appear.
+
+Click OK.
+
+Result
+
+The workflow is forwarded to the HR department.
+
+1. 
+
+1. 
+
+15 Business Solution ELO HR Personnel File
+
+
+
+Check master data
+
+Information
+
+As an employee in the HR department, you have received a workflow in your Tasks work area to
+
+complete and check the master data for a new personnel file.
+
+Method
+
+Select the workflow that you want to process.
+
+Optional: Click Accept workflow.
+
+Fig.: 'Check master data' form
+
+Check the master data in the form and confirm the entries with Approve.
+
+Result
+
+Onboarding is complete. The information entered here will be applied to the personnel file. The
+
+status of the personnel file changes to E – Employed.
+
+1. 
+
+1. 
+
+16 Business Solution ELO HR Personnel File
+
+
+
+Start offboarding
+
+Information
+
+One of your employees is leaving the company. The offboarding process should be reflected in ELO.
+
+Method
+
+Select the personnel file you want to start offboarding for.
+
+On the HR tab, click Start offboarding.
+
+Fig.: 'Start offboarding' dialog box
+
+Complete the fields in the Start offboarding dialog box as required.
+
+1. 
+
+2. 
+
+1. 
+
+17 Business Solution ELO HR Personnel File
+
+
+
+Deletion period active: Click Yes to be able to enter a deletion period. If you have entered a
+
+deletion period, the HR manager receives a notification once this period has been reached.
+
+Mandatory fields are marked with a red asterisk.
+
+Result
+
+Fig.: Personnel file after offboarding
+
+Offboarding is complete. The status of the personnel file changes to C – Contract terminated. The
+
+personnel file is shown in a gray font.
+
+18 Business Solution ELO HR Personnel File
+
+
+
+Create documents for employees
+
+Using ELO HR Personnel File, you can automatically create documents for your employees that are
+
+then stored in their personnel file.
+
+This chapter addresses the following functions:
+
+Add picture
+
+Create badge
+
+Create document
+
+Update document
+
+Add picture
+
+Information
+
+You want to add a picture of your new employee to her personnel file.
+
+Method
+
+Select the personnel file you want add a picture to.
+
+On the HR tab, click Add picture.
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+19 Business Solution ELO HR Personnel File
+
+
+
+Fig.: 'Add picture' dialog box
+
+In the Add picture dialog box, you have the following options:
+
+Take a picture: Using a connected webcam, you can take a picture of the employee on site.
+
+1. 
+
+• 
+
+• 
+
+20 Business Solution ELO HR Personnel File
+
+
+
+Select a file: Select a picture from your Windows file system. 
+
+Fig.: 'Add picture' dialog box
+
+Click OK.
+
+Result
+
+The picture is added to the personnel file.
+
+1. 
+
+21 Business Solution ELO HR Personnel File
+
+
+
+Fig.: Picture in personnel file
+
+The picture is added to the Overview tab of the personnel file.
+
+Outlook
+
+If you then create a badge, the image is placed on the badge.
+
+Create badge
+
+Information
+
+You want to create a badge for your new employee.
+
+Method
+
+Click the personnel file you want to create a badge for.
+
+On the HR tab, click Create badge.
+
+Result
+
+1. 
+
+2. 
+
+22 Business Solution ELO HR Personnel File
+
+
+
+Fig.: Badge
+
+A badge with an employee picture, the employee's name and title in the company, as well as the
+
+company logo is created in the personnel file.
+
+Outlook
+
+You can print the badge using a badge printer with Windows printer drivers.
+
+Create document
+
+Information
+
+You want to automatically create contract documents with your new employee's data. Use
+
+document templates for this. Document templates contain placeholders that are automatically
+
+replaced with the information from the personnel file.
+
+Requirement
+
+At least one document template must be available.
+
+Method
+
+Select the personnel file you want create a document for.
+
+On the HR tab, click Create document.
+
+1. 
+
+2. 
+
+23 Business Solution ELO HR Personnel File
+
+
+
+Fig.: 'Document templates' dialog box
+
+In the Document templates dialog box, select a document template and confirm with OK.
+
+Fig.: 'Create new document' dialog box
+
+In the Create new document dialog box, you can change the name of the document.
+
+Result
+
+1. 
+
+1. 
+
+24 Business Solution ELO HR Personnel File
+
+
+
+The document is created in the selected personnel file and opened right away.
+
+Outlook
+
+You can edit the document and print it for use.
+
+If your employee's master data changes, you can apply changes using the Update document
+
+function.
+
+The Update document function has no effect on subsequent changes to the document. It only
+
+updates the information automatically transferred from the form.
+
+Update document
+
+Information
+
+If data in the personnel file changes (e.g. new address) after a document has been generated using
+
+the Create document function, for example, you can update the document. As a result, you do not
+
+have to create a new document or make manual changes to an existing one.
+
+The Update document function has no effect on subsequent changes to the document. It only
+
+updates the information automatically transferred from the form.
+
+Method
+
+Select the document you want to update.
+
+On the HR tab, click Update document.
+
+Result
+
+Old information and blank spaces in the document are replaced with new information from the
+
+personnel file.
+
+1. 
+
+2. 
+
+25 Business Solution ELO HR Personnel File
+
+
+
+Create an organizational chart
+
+You can use ELO HR Personnel File to create organizational charts.
+
+You can access organizational charts from the Organizational chart tile and via the organization on
+
+the Organizational chart tab in the repository.
+
+To create an organizational chart, use the following functions:
+
+New organization
+
+Expand organization
+
+Create new organization
+
+Information
+
+Organizations provide the foundation for creating organizational charts. An organization has to be
+
+created before departments, divisions, and teams can be created.
+
+Requirement
+
+The organization cannot be created within an existing organization.
+
+Method
+
+Select the folder where you want to create the organization.
+
+On the New tab, click HR > New organization.
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+26 Business Solution ELO HR Personnel File
+
+
+
+Fig.: 'New organization' dialog box
+
+Complete the fields in the New organization dialog box as required.
+
+Mandatory fields are marked with a red asterisk.
+
+Fields with a pencil icon contain keyword lists. When you enter a value in the respective field,
+
+matching list entries appear.
+
+Active: If you select this option, the organization can be viewed as an organizational chart. If you
+
+do not want the organizational chart to be active right away, uncheck this option. You can set it
+
+later on via the organization form.
+
+1. 
+
+27 Business Solution ELO HR Personnel File
+
+
+
+Collapse child elements: If you select this option, the child elements in the organizational chart are
+
+displayed collapsed but can be expanded. If you do not select the option, the child elements are
+
+shown expanded. This setting only applies to direct child elements.
+
+Fig.: Horizontal and vertical display
+
+When you create child elements, you can show them horizontally or vertically.
+
+Arrange child elements vertically: If you select this option, the child elements in the organizational
+
+chart are arranged vertically. If you do not select the option, the child elements are arranged
+
+horizontally. This setting only applies to direct child elements.
+
+Result
+
+28 Business Solution ELO HR Personnel File
+
+
+
+Fig.: Entry in the repository
+
+The new organization is created.
+
+Outlook
+
+You can now structure the organization using the Expand organization function.
+
+You can view the organizational chart by clicking the Organizational chart tile in your My ELO area.
+
+Expand organization
+
+Information
+
+You can expand an organization with additional elements.
+
+Method
+
+Select the organization you want to expand.
+
+On the New tab, click HR > Expand organization.
+
+1. 
+
+2. 
+
+29 Business Solution ELO HR Personnel File
+
+
+
+Fig.: 'Expand organization' dialog box
+
+In the Expand organization dialog box, select the folder you want to create.
+
+Fig.: 'New organization' dialog box
+
+Complete the fields in the New organization dialog box as required.
+
+Mandatory fields are marked with a red asterisk.
+
+Fields with a pencil icon contain keyword lists. When you enter a value in the respective field,
+
+matching list entries appear.
+
+Active: If you select this option, the element can be viewed as an organizational chart. If you do not
+
+want the element to be active right away, uncheck this option. You can set it later on via the
+
+element form.
+
+1. 
+
+1. 
+
+30 Business Solution ELO HR Personnel File
+
+
+
+Collapse child elements: If you select this option, the child elements in the organizational chart are
+
+displayed collapsed but can be expanded. If you do not select the option, the child elements are
+
+shown expanded. This setting only applies to direct child elements.
+
+Fig.: Horizontal and vertical display
+
+When you create child elements, you can show them horizontally or vertically.
+
+Arrange child elements vertically: If you select this option, the child elements in the organizational
+
+chart are displayed arranged vertically. If you do not select the option, the child elements are
+
+shown arranged horizontally. This setting only applies to direct child elements.
+
+Result
+
+31 Business Solution ELO HR Personnel File
+
+
+
+Fig.: Area in the repository
+
+A new folder is created within the organization.
+
+Outlook
+
+You can add and organize the folders. You can assign personnel files to the folders as well.
+
+You can view the organizational chart by clicking the Organizational chart tile in your My ELO area.
+
+32 Business Solution ELO HR Personnel File
+
+
+
+Overviews
+
+The dashboard and organizational chart help give you an overview of the HR situation and structure
+
+of your company.
+
+Dashboard
+
+The dashboard provides an overview of all personnel files and their statuses.
+
+You can reach the dashboard by clicking the Employees tile in the My ELO area.
+
+The dashboard remembers your settings. When you close then open the dashboard again, it
+
+remembers and displays your most recent view.
+
+Fig.: Dashboard in the table view
+
+The dashboard is divided into the following areas:
+
+1 Database: In the dashboard header, use the drop-down menu (arrow icon) to select a database. A
+
+dashboard database is a list of personnel files that is loaded for evaluation.
+
+Information
+
+If there is only one database, this database is selected permanently and there is no drop-
+
+down menu available.
+
+2 Table/Calendar: You can choose between two dashboard views.
+
+3 Search: In addition to text values, you can also search for deadlines. All data that you can select
+
+as column values in the table view serves as the basis.
+
+33 Business Solution ELO HR Personnel File
+
+
+
+4 Status: The dashboard header contains a button for each status. If a button is active, all personnel
+
+files with the corresponding status are shown in the dashboard viewer pane.
+
+5 Viewer pane: In the dashboard viewer pane, you will see a list of personnel files. This list changes
+
+depending on the filter criteria applied.
+
+Table
+
+Fig.: Table view
+
+Clicking an entry shows a preview of the entry. Double-clicking an entry brings you to the
+
+repository.
+
+Customize the table view using the drop-down menus.
+
+Fig.: Customizing the table view
+
+The drop-down menus in the column headings contain the following functions:
+
+Sort ascending
+
+Sort descending
+
+Remove sorting: This option appears if you have sorted the column. Click Remove sorting to
+
+clear the sorting option.
+
+• 
+
+• 
+
+• 
+
+34 Business Solution ELO HR Personnel File
+
+
+
+Alternative: You can sort the column by clicking the column heading. Clicking once sorts in
+
+ascending order. Clicking a second time sorts in descending order. Clicking a third time clears
+
+sorting.
+
+Hide column
+
+Group: The content of a column is joined into groups. The number of personnel files in each
+
+group is shown in brackets. Click the plus icon before the group to expand it and view all
+
+contained personnel files. The minus icon minimizes it again. Clicking the plus icon in the
+
+header expands all groups.
+
+Information
+
+You can combine multiple groups. You can specify a hierarchy with the order in which you
+
+select the columns.
+
+Ungroup: This option appears if you have grouped items.
+
+Fig.: Overview of all columns
+
+Menu: You can show hidden columns.
+
+• 
+
+• 
+
+• 
+
+35 Business Solution ELO HR Personnel File
+
+
+
+Calendar
+
+Fig.: 'Year', 'Month', and 'Day' buttons
+
+The calendar offers three options: Year, Month, and Day.
+
+Data from the personnel file is shown in all views.
+
+Fig.: Annual view
+
+Year: The annual view shows the number of deadlines each month. For more detailed information
+
+on a month, click the month.
+
+Fig.: Month view
+
+Month: The month view shows the number of deadlines each day. For more detailed information on
+
+a day, click the day.
+
+To preview a personnel file, click the deadline.
+
+Fig.: Day view
+
+36 Business Solution ELO HR Personnel File
+
+
+
+Day: The day view lists the deadlines for the selected day. It works in the same way as the table
+
+view.
+
+Organizational chart
+
+Organizational charts give you an overview of the structure of an organization.
+
+You can reach the organizational chart by clicking the Organizational chart tile in the My ELO area.
+
+Fig.: Selecting an organization
+
+Choose the organization you want to show in an organizational chart.
+
+Information
+
+If only one organization is created, you will be forwarded straight to the respective
+
+organizational chart.
+
+Fig.: Organizational chart
+
+37 Business Solution ELO HR Personnel File
+
+
+
+If the child elements are collapsed, click the plus icon to expand them.
+
+You can collapse the child elements by clicking the minus icon.
+
+Fig.: Minus icon
+
+Information
+
+The minus icon appears as soon as you mouse over the element whose child elements you
+
+want to collapse.
+
+38 Business Solution ELO HR Personnel File
+
+
+
+Self-service
+
+ELO HR Personnel File offers functions that allow employees to initiate HR processes.
+
+Change HR data
+
+Information
+
+As a company employee, you can change your own HR data, for example after moving.
+
+Method
+
+On the New tab, click Self-service > Change HR data.1. 
+
+39 Business Solution ELO HR Personnel File
+
+
+
+Fig.: 'Change master data' dialog box
+
+In the Change master data dialog box, select the data you want to change.1. 
+
+40 Business Solution ELO HR Personnel File
+
+
+
+Fig.: 'Change HR data' dialog box
+
+In the Change HR data dialog box, enter your changes.
+
+Mandatory fields are marked with a red asterisk.
+
+1. 
+
+41 Business Solution ELO HR Personnel File
+
+
+
+Fig.: 'Change HR data' dialog box
+
+If a personnel file has not yet been created for you in ELO, a dialog box appears instead of the
+
+change request so you can notify the HR department.
+
+Result
+
+The HR department receives the change request for confirmation.
+
+Once the date in the Change active from field has been reached, the changes are applied to the
+
+personnel file.
+
+Access personnel file
+
+Information
+
+On request, you can access your own personnel file or the file of an employee if you are their
+
+supervisor.
+
+Method
+
+On the New tab, click Self-service > Access personnel file.1. 
+
+42 Business Solution ELO HR Personnel File
+
+
+
+Fig.: 'Request to access a personnel file' dialog box
+
+Optional: If you want to request access to a personnel file as a supervisor, select which personnel
+
+file you want to view in the Request access to personnel file dialog box.
+
+43 Business Solution ELO HR Personnel File
+
+
+
+Fig.: 'Access personnel file' dialog box
+
+Enter the reason for your request in the Access personnel file dialog box.1. 
+
+44 Business Solution ELO HR Personnel File
+
+
+
+Fig.: 'Access personnel file' dialog box
+
+If a personnel file has not yet been created for you in ELO, a dialog box appears instead of the
+
+request to access the personnel file so you can notify the HR department.
+
+Result
+
+The HR department receives your request to access the personnel file.
+
+Once the HR department has approved your request, your personnel file will appear in your Tasks
+
+work area.
+
+45 Business Solution ELO HR Personnel File
+
+
+	Table of contents
+	Introduction
+	Structure of the documentation
+	Basics
+	Possible actions
+
+	Target audience
+
+	Basics
+	Basic principle
+	General note
+	Requirements
+	Program interface
+	Repository
+
+	Onboarding and offboarding
+	Create new employee
+	Start onboarding
+	Complete master data
+	Check master data
+	Start offboarding
+
+	Create documents for employees
+	Add picture
+	Create badge
+	Create document
+	Update document
+
+	Create an organizational chart
+	Create new organization
+	Expand organization
+
+	Overviews
+	Dashboard
+	Table
+	Calendar
+
+	Organizational chart
+
+	Self-service
+	Change HR data
+	Access personnel file
+
+
+

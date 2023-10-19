@@ -1,0 +1,1148 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO system requirements | Overview
+
+
+ELO system requirements
+
+Overview
+
+
+
+3
+
+3
+
+6
+
+11
+
+15
+
+Table of contents
+
+ELO system requirements
+
+Basics 
+
+ELO server 
+
+ELO clients 
+
+ELO modules 
+
+2 ELO system requirements
+
+
+
+ELO system requirements
+
+Basics 
+
+The following provides you with basic information about the ELO environment.
+
+Difference between ELOprofessional and ELOenterprise 
+
+In terms of operating systems, ELOprofessional only supports Microsoft Windows. By
+
+contrast, ELOenterprise is platform-independent.
+
+Unlike ELOenterprise, ELOprofessional is not multi-tenant capable.
+
+ELOprofessional systems are only cluster-ready to a certain extent. They only allow for hot
+
+standby operation of individual components. ELOenterprise systems, however, are fully
+
+cluster-ready.
+
+With ELOprofessional, server processes may only be distributed within the same host, i.e. on
+
+a server system. By contrast, with ELOenterprise processes can be distributed across
+
+multiple hosts (VMs or physical servers).
+
+With ELOprofessional, the ELO server components (e.g. ELOas) can be distributed across
+
+multiple Tomcat servers as long as they are located on one server system (VM or physical
+
+server). In contrast, with ELOenterprise, Tomcat servers can be installed on multiple server
+
+systems (VMs or physical servers).
+
+Area  
+
+ELOenterprise ELOprofessional
+
+Operating system Platform-independent Windows
+
+Architecture
+SOA-compliant modular client/
+
+server architecture
+
+SOA-compliant modular client/
+
+server architecture
+
+Maximum number of
+
+repositories
+Unlimited 20 per repository server
+
+Maximum number of users Unlimited 1000
+
+Maximum number of
+
+documents
+2 billion per repository 100 million
+
+Maximum levels per
+
+repository
+254 254
+
+Database
+PostgreSQL/Microsoft SQL/Oracle/
+
+IBM DB2
+
+PostgreSQL/Microsoft SQL/Oracle/
+
+IBM DB2
+
+Multi-tenant capable ✔ -
+
+Portal integration ✔ ✔
+
+Status log for central
+
+monitoring systems
+✔ ✔
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+3 ELO system requirements
+
+
+
+Area  
+
+ELOenterprise ELOprofessional
+
+Distributable server
+
+processes
+✔ Single host
+
+Cluster capacity ✔ Hot standby
+
+Java support 
+
+Please note
+
+ELOprofessional and ELOenterprise should always be installed on a 64-bit operating system.
+
+Overview of Java support on different operating systems
+
+Windows macOS Linux
+
+64-bit installation Yes Yes
+
+32-bit installation (or AFM) Installation allowed Installation not allowed
+
+Running the client Only 64-bit Only 64-bit
+
+Database support 
+
+ELO product
+
+Microsoft
+
+SQL Server
+
+2017
+
+Microsoft
+
+SQL Server
+
+2019
+
+Microsoft
+
+SQL Server
+
+2022
+
+Oracle
+
+19c
+
+Oracle
+
+21c
+
+IBM
+
+DB2
+
+11.5
+
+PostgreSQL
+
+11.19 and
+
+higher
+
+ELOprofessional
+
+Server Windows
+✔ ✔ ✔ ✔ ✔ ✔ ✔
+
+ELOenterprise
+
+Server Windows
+✔ ✔ ✔ ✔ ✔ ✔ ✔
+
+ELOenterprise
+
+Server Linux
+✔ ✔ ✔ ✔ ✔ ✔ ✔
+
+ELO BLP* - - - - - - -
+
+ELO DocXtractor II
+
+5.x**
+✔ ✔ ✔ ✔ - -
+
+* MS Express is also supported if only Oracle is available.
+
+** Refer to the document ELO DocXtractor II 5.x hardware and software requirements in the ELO
+
+SupportWeb for a detailed list of supported database driver versions. Please note this file is only
+
+available in German.
+
+Please note
+
+4 ELO system requirements
+
+
+
+Microsoft SQL Server 2016 is no longer supported. This is because of security issues due to
+
+insecure encryption functions.
+
+5 ELO system requirements
+
+
+
+ELO server 
+
+The following provides you with more information about the system requirements for the ELO
+
+Server Setup and the ELO Server.
+
+ELO Server Setup 
+
+Running the ELO Server Setup requires a current browser. ELO supports the following browsers:
+
+Mozilla Firefox – The most current officially available version
+
+Google Chrome – The most current officially available version
+
+Microsoft Edge – The most current officially available version
+
+ELOprofessional Server 
+
+Windows 
+
+Operating system 
+
+Microsoft Windows Server 2019
+
+Microsoft Windows Server 2022
+
+Please note
+
+ELO BLP 5.2 requires Windows Server 2019 upgraded to version 1903 or higher. Otherwise,
+
+communication with TLS 1.3 will not work.
+
+Databases 
+
+Microsoft SQL Server 2017
+
+Microsoft SQL Server 2019
+
+Microsoft SQL Server 2022
+
+Oracle 19c
+
+Oracle 21c
+
+IBM DB2 11.5
+
+PostgreSQL 11.19 and higher
+
+Please note
+
+You need to make some adjustments in the Oracle system. MAX_STRING_SIZE=EXTENDED must
+
+be set and the objdesc column of the Objects table needs to be wider. Max. 4k characters
+
+are supported.
+
+For more information, refer to the guide ELO server - Installation and operation >
+
+Preparations > Oracle SQL Server > ELO Business Solutions on an Oracle database.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+6 ELO system requirements
+
+https://docs.elo.com/ops/onprem/en-us/installation/preparations/oracle-sql-server.html#ELODOC-24FC2ADFD1F04A4084CABE88F861E580
+https://docs.elo.com/ops/onprem/en-us/installation/preparations/oracle-sql-server.html#ELODOC-24FC2ADFD1F04A4084CABE88F861E580
+https://docs.elo.com/ops/onprem/en-us/installation/preparations/oracle-sql-server.html#ELODOC-24FC2ADFD1F04A4084CABE88F861E580
+
+
+Please note
+
+Please note When using an Oracle database, please ensure that it uses the correct character
+
+set.
+
+For more information, refer to the guide ELO server - Installation and operation >
+
+Preparations > Oracle SQL Server.
+
+Information
+
+After installation, the Elasticsearch program library used for ELO iSearch requires sufficient
+
+memory to re-index the documents for the full text search. An Elasticsearch index for one
+
+million data sets (documents) in ELO requires approximately 10 GB of disk space. If you
+
+have a 10 GB index, you will required an additional 30 GB of storage space for reindexing to
+
+create the index and for the Optimizer. You can use these figures as a guideline if you need
+
+to calculate storage requirements for installations with more documents.
+
+Java and ELO Application Server 
+
+The following components are supplied by the ELO Server Setup:
+
+Java: OpenJDK 17.0.7 (64-bit)
+
+ELO Application Server: a modified Apache Tomcat 10.0.24 (64-bit).
+
+ELOenterprise Server 
+
+Windows 
+
+Operating system 
+
+Microsoft Windows Server 2019
+
+Microsoft Windows Server 2022
+
+Please note
+
+ELO BLP 5.2 requires Windows Server 2019 upgraded to version 1903 or higher. Otherwise,
+
+communication with TLS 1.3 will not work.
+
+Databases 
+
+Microsoft SQL Server 2017
+
+Microsoft SQL Server 2019
+
+Microsoft SQL Server 2022
+
+Oracle 19c
+
+Oracle 21c
+
+IBM DB2 11.5
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+7 ELO system requirements
+
+https://docs.elo.com/ops/onprem/en-us/installation/preparations/oracle-sql-server.html#ELODOC-111EC173C4EC4856B74D8EE0AE1D9EE4
+https://docs.elo.com/ops/onprem/en-us/installation/preparations/oracle-sql-server.html#ELODOC-111EC173C4EC4856B74D8EE0AE1D9EE4
+https://docs.elo.com/ops/onprem/en-us/installation/preparations/oracle-sql-server.html#ELODOC-111EC173C4EC4856B74D8EE0AE1D9EE4
+
+
+PostgreSQL 11.19 and higher
+
+Please note
+
+You need to make some adjustments in the Oracle system. MAX_STRING_SIZE=EXTENDED must
+
+be set and the objdesc column of the Objects table needs to be wider. Max. 4k characters
+
+are supported.
+
+For more information, refer to the guide ELO server - Installation and operation >
+
+Preparations > Oracle SQL Server > ELO Business Solutions on an Oracle database.
+
+Please note
+
+Please note When using an Oracle database, please ensure that it uses the correct character
+
+set.
+
+For more information, refer to the guide ELO server - Installation and operation >
+
+Preparations > Oracle SQL Server.
+
+Information
+
+After installation, the Elasticsearch program library used for ELO iSearch requires sufficient
+
+memory to re-index the documents for the full text search. An Elasticsearch index for one
+
+million data sets (documents) in ELO requires approximately 10 GB of disk space. If you
+
+have a 10 GB index, you will required an additional 30 GB of storage space for reindexing to
+
+create the index and for the Optimizer. You can use these figures as a guideline if you need
+
+to calculate storage requirements for installations with more documents.
+
+Java and ELO Application Server 
+
+The following components are supplied by the ELO Server Setup:
+
+Java: OpenJDK 17.0.7 (64-bit)
+
+ELO Application Server: a modified Apache Tomcat 10.0.24 (64-bit).
+
+Linux 
+
+Please use a current Linux Suse Enterprise distribution.
+
+Operating system 
+
+The background service "systemd" in the Linux system is enabled.
+
+Red Hat Linux 8 and higher
+
+SUSE Linux Enterprise Server 12 (SLES) and higher
+
+Ubuntu 20.04 and higher
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+8 ELO system requirements
+
+https://docs.elo.com/ops/onprem/en-us/installation/preparations/oracle-sql-server.html#ELODOC-24FC2ADFD1F04A4084CABE88F861E580
+https://docs.elo.com/ops/onprem/en-us/installation/preparations/oracle-sql-server.html#ELODOC-24FC2ADFD1F04A4084CABE88F861E580
+https://docs.elo.com/ops/onprem/en-us/installation/preparations/oracle-sql-server.html#ELODOC-24FC2ADFD1F04A4084CABE88F861E580
+https://docs.elo.com/ops/onprem/en-us/installation/preparations/oracle-sql-server.html#ELODOC-111EC173C4EC4856B74D8EE0AE1D9EE4
+https://docs.elo.com/ops/onprem/en-us/installation/preparations/oracle-sql-server.html#ELODOC-111EC173C4EC4856B74D8EE0AE1D9EE4
+https://docs.elo.com/ops/onprem/en-us/installation/preparations/oracle-sql-server.html#ELODOC-111EC173C4EC4856B74D8EE0AE1D9EE4
+
+
+Databases 
+
+Microsoft SQL Server 2017 and higher (on separate Windows Server)
+
+Oracle 19c
+
+Oracle 21c
+
+IBM DB2 11.5 for Linux, Unix, and Windows
+
+PostgreSQL 11.19 and higher
+
+Please note
+
+You need to make some adjustments in the Oracle system. MAX_STRING_SIZE=EXTENDED must
+
+be set and the objdesc column of the Objects table needs to be wider. Max. 4k characters
+
+are supported.
+
+For more information, refer to the guide ELO server - Installation and operation >
+
+Preparations > Oracle SQL Server > ELO Business Solutions on an Oracle database.
+
+Please note
+
+Please note When using an Oracle database, please ensure that it uses the correct character
+
+set.
+
+For more information, refer to the guide ELO server - Installation and operation >
+
+Preparations > Oracle SQL Server.
+
+Information
+
+After installation, the Elasticsearch used for ELO iSearch requires sufficient memory to re-
+
+index the documents for the full text search. An Elasticsearch index for one million data sets
+
+(documents) in ELO requires approximately 10 GB of disk space. If you have a 10 GB index,
+
+you will required an additional 30 GB of storage space for reindexing to create the index and
+
+for the Optimizer. You can use these figures as a guideline if you need to calculate storage
+
+requirements for installations with more documents.
+
+Java and ELO Application Server 
+
+The following components are supplied by the ELO Server Setup:
+
+Java: OpenJDK 17.0.7 (64-bit)
+
+ELO Application Server: a modified Apache Tomcat 10.0.24 (64-bit).
+
+ELO Administration Console 
+
+Important
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+9 ELO system requirements
+
+https://docs.elo.com/ops/onprem/en-us/installation/preparations/oracle-sql-server.html#ELODOC-24FC2ADFD1F04A4084CABE88F861E580
+https://docs.elo.com/ops/onprem/en-us/installation/preparations/oracle-sql-server.html#ELODOC-24FC2ADFD1F04A4084CABE88F861E580
+https://docs.elo.com/ops/onprem/en-us/installation/preparations/oracle-sql-server.html#ELODOC-24FC2ADFD1F04A4084CABE88F861E580
+https://docs.elo.com/ops/onprem/en-us/installation/preparations/oracle-sql-server.html#ELODOC-111EC173C4EC4856B74D8EE0AE1D9EE4
+https://docs.elo.com/ops/onprem/en-us/installation/preparations/oracle-sql-server.html#ELODOC-111EC173C4EC4856B74D8EE0AE1D9EE4
+https://docs.elo.com/ops/onprem/en-us/installation/preparations/oracle-sql-server.html#ELODOC-111EC173C4EC4856B74D8EE0AE1D9EE4
+
+
+The version of the ELO Administration Console must be compatible with the corresponding
+
+ELO Indexserver. Please also read the notes in the server setup.
+
+Software 
+
+ELO Indexserver version 23.000 and higher
+
+ELO Application Server or an ELOenterprise installation
+
+Web browser 
+
+Current versions of Mozilla Firefox or Google Chrome
+
+• 
+
+• 
+
+• 
+
+10 ELO system requirements
+
+
+
+ELO clients 
+
+The following provides you with more information about the system requirements for the ELO
+
+clients.
+
+ELO Java Client 
+
+Hardware 
+
+The hardware recommended for the configuration of the operating system in use is also
+
+required to run ELO.
+
+Scanner 
+
+TWAIN-compatible scanner systems
+
+Network scanner
+
+Software 
+
+Operating system 
+
+Microsoft Windows 10
+
+Microsoft Windows 11
+
+macOS Big Sur 11.6
+
+macOS Monterey 12.5
+
+macOS Ventura 13.2
+
+Linux (tested with openSUSE 13.2)
+
+Microsoft Office 
+
+Versions supported:
+
+Microsoft Office 2016 Professional
+
+Microsoft Office 2016 Home and Business (with certain known restrictions, for example the
+
+viewer)
+
+Microsoft Office 2019 (Microsoft Word, Microsoft Excel, Microsoft PowerPoint, Microsoft
+
+Windows Explorer), full versions of the Microsoft Office applications
+
+Microsoft Office 365 – Microsoft Office 365 ProPlus, full version
+
+Information
+
+The online versions included in Office 365 are not supported.
+
+Information
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+11 ELO system requirements
+
+
+
+A preview is a simplified display that may deviate from how the document is displayed in
+
+the application. If there are major differences, or no preview is offered, use the application
+
+to show the document type.
+
+Java 
+
+Windows:
+
+OpenJDK 17 64-bit
+
+macOS:
+
+JRE 12 64-bit (included)
+
+Linux:
+
+Current Oracle JDK version 17 64-bit
+
+Or:
+
+Current version of OpenJDK 17 64-bit and OpenJFX
+
+ELO Web Client 
+
+Software – browser 
+
+The desktop versions of:
+
+Mozilla Firefox – The most current officially available version
+
+Apple Safari – The most current officially available version
+
+Google Chrome – The most current officially available version
+
+Microsoft Edge – The most current officially available version
+
+Information
+
+A preview is a simplified display that may deviate from how the document is displayed in
+
+the application. If there are major differences, or no preview is offered, use the application
+
+to show the document type.
+
+ELO Desktop Client 
+
+Software - Operating system 
+
+Windows 10 or higher
+
+Software - Microsoft Office 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+12 ELO system requirements
+
+
+
+Microsoft Office 2016 (Microsoft Word, Microsoft Excel, Microsoft PowerPoint, Microsoft
+
+Windows Explorer), full versions of the Microsoft Office applications
+
+Microsoft Office 2019 (Microsoft Word, Microsoft Excel, Microsoft PowerPoint, Microsoft
+
+Windows Explorer), full versions of the Microsoft Office applications
+
+Microsoft Office 365 – Microsoft Office 365 ProPlus, full version
+
+Microsoft OneNote 2016 or higher
+
+Information
+
+The online versions included in Microsoft Office 365 are not supported.
+
+Microsoft .NET Core (included in setup)
+
+ELO Desktop Client Plus 
+
+No additional requirements, see ELO Desktop Client.
+
+Information
+
+A preview is a simplified display that may deviate from how the document is displayed in
+
+the application. If there are major differences, or no preview is offered, use the application
+
+to show the document type.
+
+ELO Integration Client 
+
+The ELO Integration Client is an ELO app and therefore has the same minimum requirements as
+
+ELOwf. This means that the client can only be integrated into systems with web viewers that have
+
+the same scope of functions as the browser versions listed here.
+
+Current Microsoft Edge
+
+Current Google Chrome
+
+ELO for Mobile Devices 
+
+ELO for Mobile Devices 
+
+Operating system 
+
+Android 7 and higher
+
+iOS 12.0 or higher
+
+ELO QuickScan (for ELOoffice; for ELOprofessional / ELOenterprise) 
+
+iOS 10 or higher
+
+ELO Connect 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+13 ELO system requirements
+
+
+
+Android 4
+
+ELO WebDAV 
+
+Please note
+
+ELO WebDAV cannot be used via a terminal server environment.
+
+14 ELO system requirements
+
+
+
+ELO modules 
+
+The following provides you with more information about the system requirements for additional
+
+ELO modules.
+
+The modules for ELO are designed for ELOprofessional and ELOenterprise. If there are any
+
+limitations on a module's use, they will be specifically mentioned with the module.
+
+ELO Flows 
+
+See: ELOprofessional and ELOenterprise Server.
+
+ELO XC 
+
+Operating system 
+
+Microsoft Windows Server 2016
+
+Microsoft Windows Server 2019
+
+Microsoft Windows Server 2022
+
+Supported Exchange servers 
+
+Microsoft Exchange Server 2016
+
+Microsoft Exchange Server 2019
+
+Microsoft Exchange Online (Microsoft 365)
+
+Required for integration with Microsoft 365 
+
+Windows Management Framework 5.1
+
+Microsoft PowerShell 5 (possibly Microsoft PowerShell 7 as well)
+
+Supported browsers for ELO XC Manager 
+
+Current version of Google Chrome
+
+Current version of Mozilla Firefox
+
+Current version of Microsoft Edge
+
+Other requirements 
+
+Windows Management Framework 5.1
+
+Exchange Online PowerShell V3 module
+
+ELO COLD 
+
+Hardware 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+15 ELO system requirements
+
+
+
+The hardware recommended for the configuration of the operating system in use is also
+
+required to run ELO.
+
+Software 
+
+Installed ELO Windows Client (plus DLL)
+
+TIFF Printer
+
+XML Importer (only for ELO COLD ENTERPRISE)
+
+ELO Barcode 
+
+ELO Java Client
+
+ELO Replication 
+
+See: ELOprofessional and ELOenterprise Server.
+
+Information
+
+ELO Replication is installed as a WAR module on the Tomcat and is not restricted to specific
+
+databases.
+
+ELO XML Importer 
+
+See: ELOprofessional and ELOenterprise Server.
+
+ELO Signature 
+
+Requirements same as for ELO Java Client
+
+ELO BLP 
+
+See: The ELO BLP documentation for the respective release on the ELO SupportWeb.
+
+ELO for Microsoft 365 
+
+The Check out to OneDrive function can only be used with the OAuth authentication method, as
+
+Microsoft OneDrive requires an OAuth2 token. The SAML method cannot be used for the Check out
+
+to OneDrive function.
+
+ELO for Microsoft SharePoint (ELOsp) 
+
+Microsoft SharePoint 2016 or higher
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+16 ELO system requirements
+
+
+	Table of contents
+	ELO system requirements
+	Basics
+	Difference between ELOprofessional and ELOenterprise
+	Java support
+	Database support
+
+	ELO server
+	ELO Server Setup
+	ELOprofessional Server
+	Windows
+	Operating system
+	Databases
+	Java and ELO Application Server
+
+
+	ELOenterprise Server
+	Windows
+	Operating system
+	Databases
+	Java and ELO Application Server
+
+	Linux
+	Operating system
+	Databases
+	Java and ELO Application Server
+
+
+	ELO Administration Console
+	Software
+	Web browser
+
+
+	ELO clients
+	ELO Java Client
+	Hardware
+	Scanner
+
+	Software
+	Operating system
+	Microsoft Office
+	Java
+
+
+	ELO Web Client
+	Software – browser
+
+	ELO Desktop Client
+	Software - Operating system
+	Software - Microsoft Office
+
+	ELO Desktop Client Plus
+	ELO Integration Client
+	ELO for Mobile Devices
+	ELO for Mobile Devices
+	Operating system
+
+
+	ELO QuickScan (for ELOoffice; for ELOprofessional / ELOenterprise)
+	ELO Connect
+	ELO WebDAV
+
+	ELO modules
+	ELO Flows
+	ELO XC
+	Operating system
+	Supported Exchange servers
+	Required for integration with Microsoft 365
+
+	Supported browsers for ELO XC Manager
+	Other requirements
+
+	ELO COLD
+	Hardware
+	Software
+
+	ELO Barcode
+	ELO Replication
+	ELO XML Importer
+	ELO Signature
+	ELO BLP
+	ELO for Microsoft 365
+	ELO for Microsoft SharePoint (ELOsp)
+
+
+

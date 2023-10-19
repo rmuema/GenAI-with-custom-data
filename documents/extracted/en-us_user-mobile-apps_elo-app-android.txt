@@ -1,0 +1,4278 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO mobile apps | ELO app (Android)
+
+
+ELO mobile apps
+
+ELO app (Android)
+
+
+
+3
+
+27
+
+42
+
+45
+
+54
+
+58
+
+61
+
+75
+
+83
+
+Table of contents
+
+Basics 
+
+Basic functions 
+
+Clipboard 
+
+Tasks 
+
+Search 
+
+Offline 
+
+Data sets 
+
+Feed 
+
+My ELO 
+
+2 ELO mobile apps
+
+
+
+Basics 
+
+With the ELO app, you can access your company's ELO repository using a mobile device. The app
+
+offers quick access to your documents and all associated details. You can capture and file
+
+documents while out of the office and search for information in ELO.
+
+The ELO app does not replace the desktop version of ELO, but is designed to complement it. To get
+
+the most out of the ELO app, you should already be familiar with the basic functions of ELO
+
+software as well as your device.
+
+The ELO app is optimized for use on tablets in landscape mode. This manual explains how to use
+
+the app with a tablet. It may look different on your device.
+
+Installation and getting started 
+
+Requirements 
+
+The following requirements apply for the installation and use of the ELO app:
+
+Android 7 or higher installed on the mobile device
+
+ELO Web Client 11.00.000 or higher installed on the ELO server and configured for use on the
+
+Internet. For more information, refer to the ELO Web Client Internet Access developer
+
+documentation.
+
+Active Internet connection for unrestricted functionality. 
+
+Please note
+
+HTTPS is essential for secure communication, as sensitive data is sent over the network.
+
+Without SSL/TLS encryption, third parties could intercept this data.
+
+Install app 
+
+You will find the ELO app in the Google Play Store.
+
+Method
+
+Tap Install to begin installation.
+
+Result
+
+The app is installed on your device automatically.
+
+Start app 
+
+Method
+
+To start the ELO app, tap the app icon on your device's start screen.
+
+• 
+
+• 
+
+• 
+
+3 ELO mobile apps
+
+
+
+Result
+
+The ELO app starts.
+
+Create account 
+
+When starting the app the first time, you will be asked whether you want to create a demo account
+
+or log on with an existing account.
+
+You can use the demo account to familiarize yourself with the app. The demo account has
+
+restricted functions without write rights. To create a demo account at a later point in time, tap the 
+
+CREATE DEMO ACCOUNT button in the action bar of the Configuration dialog box.
+
+To access your company repository, you need to set up your ELO user account in the ELO app. Tap 
+
+Log on with existing account. You can find more information in the section Add account.
+
+Language 
+
+The ELO app automatically uses your device's language settings. If the ELO app does not support
+
+your language, it uses English as the default.
+
+User interface 
+
+This documentation describes the user interface in landscape mode on a tablet. It may look
+
+different on your device.
+
+The user interface may differ depending on the work area and the function being used.
+
+Layout 
+
+The user interface is divided into two main areas: the list view and the viewer pane.
+
+4 ELO mobile apps
+
+
+
+1 Menu (button with three dots): Opens the tile navigation.
+
+2 Menu bar: Depending on the context, it shows the active account, the selected document, or a
+
+search field.
+
+3 Action bar: In this area, you can call various functions.
+
+4 Viewer pane navigation bar: Shows different tabs such as Content, Feed, or Search settings
+
+depending on the entry selected and function performed. The current tab is highlighted in blue.
+
+5 Viewer pane: Shows a preview of the selected entry and detailed information.
+
+6 List view: Shows the documents and folders available at the selected level.
+
+7 List view navigation bar: The tabs show the levels of the Repository work area. The current level
+
+is highlighted in blue.
+
+Tile navigation 
+
+The ELO app has different work areas. The tile navigation contains an overview of the work areas.
+
+From here, you can switch to other work areas and open the Configuration dialog box.
+
+Information
+
+5 ELO mobile apps
+
+
+
+Administrators can restrict which work areas users are able to see via the ELO
+
+Administration Console.
+
+You can access the tile navigation from the menu (button with three dots) or by swiping your finger
+
+from the left towards the right edge of your screen.
+
+6 ELO mobile apps
+
+
+
+The tile navigation contains the following work areas:
+
+My ELO: Shows news from subscribed feeds as well as information on tasks and workflows.
+
+Repository: Contains all folders and documents that you can access.
+
+Clipboard: The Clipboard work area is a temporary list of documents and folders.
+
+Tasks: This work area contains your tasks and workflows.
+
+Search: Enables you to look for specific entries in ELO.
+
+Offline: You can download entries to your Offline area to make them available on your device.
+
+Data sets: Data sets are saved temporarily here. Depending on your settings, they are
+
+uploaded to the Repository work area as soon as your device is connected to the Internet.
+
+Information
+
+Administrators can add new work areas with embedded web pages to the tile area via 
+
+ELOwf > App Manager > Add Client Info.
+
+Tile navigation context menu 
+
+From the tile navigation context menu (button with three dots), you can go straight to the
+
+configuration or the ELO in-program help.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+7 ELO mobile apps
+
+
+
+8 ELO mobile apps
+
+
+
+The tile navigation context menu contains the following items:
+
+Background processes: Here, you will find an overview of running background processes.
+
+Background processes are started when forms are loaded or data is copied, for example.
+
+Configuration: In the Configuration dialog box, you can adjust the settings for the ELO app.
+
+About: Here, you will find information about the ELO app, such as the version number.
+
+Help: Tap the Help button to open the ELO in-program help in an external browser.
+
+Company Information: This button opens the Company Information.
+
+Privacy Policy: You will find the Privacy Policy here.
+
+Navigation 
+
+When you first start the app, you will be in the Repository work area.
+
+Change folder 
+
+Method
+
+To switch to another folder, tap the folder you want to open in the list view.
+
+A new tab appears in the list view navigation bar with the folder you opened. The tab of the
+
+current folder is marked in blue.
+
+You can now access the entries in this folder.
+
+To switch between the folders, tap a tab in the list view navigation bar.
+
+Alternative: Swipe left or right to switch between the folders.
+
+Scroll 
+
+If it is not possible to display all entries at once, you can scroll up and down in the list view, viewer
+
+pane, menus, and dialog boxes. Swipe up or down on the screen to scroll.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+9 ELO mobile apps
+
+
+
+Go to 
+
+The GO TO function takes you straight to the location of a document or folder in the Repository
+
+work area.
+
+You will find the GO TO button in the context menu for all work areas except for Data sets.
+
+Show details 
+
+You can display detailed information on folders and documents in the viewer pane.
+
+To view detailed information about folders or documents, tap the information icon next to the entry
+
+in the list view.
+
+Alternative: To show the detailed information for documents, tap the entry in the list view.
+
+The detailed information is then displayed in the viewer pane, along with any margin notes and
+
+attachments.
+
+Tabs in the viewer pane 
+
+Depending on the selected work area, the viewer pane navigation bar will contain different tabs:
+
+Content: In this tab, you will see a preview of PDFs, scans, and image documents. You will
+
+also see the metadata for the selected folder or document as well as margin notes and
+
+options.
+
+Feed: The feed documents changes made to entries. You can create and comment on posts.
+
+You can also open the entry's metadata.
+
+Search settings (only in the Search work area): You can customize your search here.
+
+• 
+
+• 
+
+• 
+
+• 
+
+10 ELO mobile apps
+
+
+
+Saved values (only in the Data sets work area): Shows information on a data set. 
+
+Switch between tabs in the viewer pane 
+
+You can switch between the different tabs. The current tab is underlined in blue.
+
+Method
+
+Tap the tab you want to open in the viewer pane navigation bar.
+
+Alternative: Swipe left or right to switch between the tabs.
+
+Result
+
+The selected tab is underlined in blue in the navigation bar of the viewer pane.
+
+Show/hide additional detail areas 
+
+On some tabs of the viewer pane, the detail areas are hidden for optimized display. Initially, you
+
+only see the names of the available detail areas (e.g. Form and Options). You will recognize detail
+
+areas you can hide or show based on the up or down arrow icon. To show or hide details, tap the
+
+detail area.
+
+Show e-mails 
+
+In the Message detail area in the viewer pane, you will see a text preview of filed e-mails.
+
+If an e-mail filed to the repository contains attachments, you will find them in the Attachments
+
+detail area.
+
+Method
+
+To open an attachment, tap the eye icon to the right of the attachment.
+
+Information
+
+An application for opening the attached files must be installed on your Android device.
+
+Result
+
+The attachment is opened in an external application.
+
+Use the Android Back button to return to the ELO app.
+
+Context menu 
+
+You can call up additional functions for individual documents or folders via the context menu.
+
+Various functions are available depending on the type of entry and work area.
+
+Information
+
+11 ELO mobile apps
+
+
+
+Administrators can restrict which functions users are able to see via the ELO Administration
+
+Console.
+
+Open context menu 
+
+Method
+
+Tap the context menu (button with three dots) next to an entry in the list view.
+
+Alternative: Long tap the desired entry and until the context menu appears.
+
+The selected entry is highlighted in blue. The context menu appears in the menu bar.
+
+Tap the function you want to use.
+
+Result
+
+The function is performed.
+
+1. 
+
+2. 
+
+12 ELO mobile apps
+
+
+
+Call additional functions 
+
+Buttons from the main action bar may be moved to a drop-down menu depending on the width and
+
+orientation of the screen used. You can open them from the menu (button with three dots).
+
+Method
+
+Open the context menu for an entry (button with three dots).
+
+In the context menu, tap the menu (button with three dots).
+
+A drop-down menu appears.
+
+Tap the desired function.
+
+Information
+
+Some Android devices have a menu key. In this case, the menu (button with three dots) is
+
+not displayed, but replaced by the menu key on your device.
+
+1. 
+
+2. 
+
+3. 
+
+13 ELO mobile apps
+
+
+
+Multiple selection 
+
+In the list view, you can select multiple entries at once.
+
+Method
+
+Open the context menu for an entry (button with three dots).
+
+In the list view, tap the entries you want to select.
+
+Result
+
+The selected entries are marked in blue.
+
+In the menu bar, you will see how many entries you have selected and what functions are available
+
+for selection.
+
+Refresh 
+
+Tap the REFRESH button to refresh the list view in the selected work area.
+
+You will find the REFRESH function in the context menu.
+
+Configuration 
+
+In the Configuration dialog box, you can change the general settings for all accounts as well as
+
+individual settings for each individual account. You can open the configuration from the context
+
+menu for the tile navigation.
+
+1. 
+
+2. 
+
+14 ELO mobile apps
+
+
+
+15 ELO mobile apps
+
+
+
+General: Configuration for all accounts 
+
+When you open the configuration, you will see the area General: Configuration for all accounts. This
+
+is where you define settings that apply for all accounts.
+
+You can make the following settings:
+
+Log file: If this option is enabled, a log file is created on the device's external storage.
+
+View log file: To open an existing log file, tap View log file.
+
+Notify support: To send an e-mail to ELO support in an external application, tap Notify
+
+support. If a log file is available, it will be attached.
+
+Delete log file: Tap Delete log file to delete an existing log file. 
+
+Individual account settings 
+
+In addition to the general settings, which apply to all accounts, you can also apply settings for an
+
+individual account.
+
+Method
+
+Tap the account you want to make the settings for.
+
+Result
+
+The submenu for the selected account appears. The selected account is highlighted in blue. You can
+
+perform the following settings:
+
+Local storage 
+
+Use external storage: Choose whether local files should be saved to an external storage medium,
+
+such as an SD card, or to the internal storage of the device. Externally saved files are available to
+
+other programs and users.
+
+Please note
+
+All local data is deleted when changing the storage location. This includes entries in the 
+
+Offline and Clipboard work areas and data sets that have not yet been transferred to the
+
+repository.
+
+• 
+
+• 
+
+• 
+
+• 
+
+16 ELO mobile apps
+
+
+
+Storage location for local data: If the Use external storage option is enabled, you can select a
+
+storage location (e.g. an SD card) for the local data.
+
+Delete local data: Tap Delete local data to remove all data stored on the device or the external
+
+storage.
+
+Cache 
+
+Delete cache directory: Tap Delete cache directory to delete all cache files of the active account.
+
+Network 
+
+Automatic data set filing: Decide when data sets are automatically filed to ELO. Tap to open the
+
+following options:
+
+With any connection: The data sets are transferred as long as the device is connected to the
+
+Internet.
+
+Only over Wi-Fi: The data sets are only transferred if a Wi-Fi connection is established.
+
+No automatic filing: The data sets are not filed automatically.
+
+Metadata 
+
+Before you can enter metadata for new folders or documents in the ELO app, your administrator
+
+has to create a form and link it to the metadata form.
+
+Information
+
+If a form has not been assigned to the metadata form, the ELO app loads a default form with
+
+the fields Short name, Document date, and Extra text. If a metadata form contains
+
+mandatory fields, your administrator will have to create a form and link it to the metadata
+
+form so it can be selected in the ELO app.
+
+Enter metadata on filing: If you create a new folder or add a file, you can enter metadata for the
+
+entries directly. There are different options for entering metadata for new folders and documents.
+
+Tap to open the following options:
+
+Always use the form: If this option is enabled, you will always see a metadata dialog box
+
+when filing documents. The form assigned to the metadata form is used to enter the
+
+metadata. If a form has not been assigned, the system uses the default form with the Short
+
+text, Document date, and Extra text fields.
+
+Only for metadata forms with form: If this option is enabled, the metadata form will only
+
+appear if the selected metadata form is linked to a form. If a form has not been assigned, the
+
+new entry is automatically filed with the default form. The default form contains the Short
+
+text, Document date, and Extra text fields.
+
+Do not enter metadata: If this option is enabled, no metadata dialog box opens. The new
+
+entry is automatically filed with the default form. The default form contains the Short text, 
+
+Document date, and Extra text fields.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+17 ELO mobile apps
+
+
+
+Enter metadata on serial filing: There are different options for entering metadata when filing
+
+multiple documents. Tap to open the following options:
+
+Always use the form: If this option is enabled, you will always see a metadata dialog box
+
+when filing documents. The form assigned to the metadata form is used to enter the
+
+metadata. If a form has not been assigned, the system uses the default form with the Short
+
+text, Document date, and Extra text fields.
+
+Only for metadata forms with form: If this option is enabled, the metadata form will only
+
+appear if the selected metadata form is linked to a form. If a form has not been assigned, the
+
+new entry is automatically filed with the default form. The default form contains the Short
+
+text, Document date, and Extra text fields.
+
+Do not enter metadata: If this option is enabled, no metadata dialog box opens. The new
+
+entry is automatically filed with the default form. The default form contains the Short text, 
+
+Document date, and Extra text fields.
+
+Task settings 
+
+Sort order of the tasks lists: Choose how your tasks should be sorted. Tap to open the following
+
+options:
+
+Date/Priority/Name
+
+Name/Priority/Date
+
+Priority/Date/Name
+
+Show group tasks: Choose whether group tasks should be displayed.
+
+Show substitution tasks: Choose whether substitution tasks should be displayed.
+
+Show escalations: Choose whether to display escalations for tasks.
+
+Search settings 
+
+Specify which fields to include during a search. The following fields are available:
+
+Short name
+
+Extra text
+
+Fields
+
+Full text
+
+Add account 
+
+To access your company repository, you must connect the ELO app to the repository. You need to
+
+set up an account first.
+
+Please note
+
+An account is only connected to one repository at a time. In order to access different
+
+repositories, you have to create multiple accounts.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+18 ELO mobile apps
+
+
+
+The following options are available for setting up an account:
+
+If you want to create an account for yourself, use the ADD ACCOUNT function.
+
+If you want to create an account for another user as the administrator, use: 
+
+either an eloprofile file
+
+or Mobile device management.
+
+'ADD ACCOUNT' function 
+
+If you want to create an account for yourself, use the ADD ACCOUNT function.
+
+Method
+
+Open the configuration via the Tile navigation > Context menu.
+
+The Configuration dialog box opens.
+
+Tap ADD ACCOUNT to create a new account.
+
+The Add account dialog box appears.
+
+Enter a name for the repository in the Profile name field. You can choose any name you like.
+
+Enter the ELO Web Client URL for the repository you want to connect to the Web Client URL
+
+field. You must use the following pattern:
+
+http(s)://<server
+
+name>:<port name>/ix-<repository name>/plugin/de.elo.ix.plugin.proxy/web
+
+• 
+
+• 
+
+◦ 
+
+◦ 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+19 ELO mobile apps
+
+
+
+Enter your ELO user name to the Username field.
+
+Enter your password to the Password field.
+
+Tap SAVE.
+
+Result
+
+The new account is now connected to the ELO repository. You can tell that the account is active by
+
+the orange person icon. If you want to use another account, you have to activate it first.
+
+Alternative
+
+You can also create an account with an .eloprofile file. This file contains the account data in JSON
+
+format:
+
+Send the eloprofile file to your mobile device, e.g. as an e-mail attachment. Select the ELO app to
+
+open the profile file. The account is created automatically. To use the account, you have to activate
+
+it. You can tell that the account is active by the orange person icon.
+
+Mobile device management 
+
+If you want to create an account for another user as the administrator, you can use a mobile device
+
+management system.
+
+To transfer user profiles to a mobile device, information, such as the server URL, has to be entered
+
+in the mobile device management system via a JSON editor. The JSON template for entering
+
+repository values is loaded right from the app. All you have to do is replace the variables with the
+
+relevant data.
+
+Please note
+
+This data is saved on the device unprotected. This means you should not enter any
+
+passwords or other sensitive data here.
+
+Taking Microsoft Intune as an example:
+
+6. 
+
+7. 
+
+{
+
+  "name": "<repository name>",
+
+  "server": "http(s)://<server name>:<port name>/ix-<repository name>/plugin/de.elo.ix.plugin.proxy/web"
+
+  "user": "<user>",
+
+  "password": "<user password>"
+
+}
+
+20 ELO mobile apps
+
+
+
+If the template is not loaded automatically, you can enter it manually in the editor.
+
+<?xml version="1.0" encoding="utf-8"?>
+
+<restrictions android="http://schemas.android.com/apk/res/android">
+
+    <restriction
+
+        key="account_configuration_list"
+
+        title="@string/restriction_account_configuration_list"
+
+        restrictionType="bundle_array">
+
+        <restriction
+
+            key="account_configuration"
+
+            title="@string/restriction_account_configuration"
+
+            restrictionType="bundle">
+
+            <restriction
+
+                key="account_name"
+
+                title="@string/accountdetails_profile"
+
+                restrictionType="string"/>
+
+            <restriction
+
+                key="account_server"
+
+                title="@string/accountdetails_serverurl"
+
+                restrictionType="string"/>
+
+            <restriction
+
+                key="account_user"
+
+                title="@string/accountdetails_username"
+
+xmlns:
+
+android:
+
+android:
+
+android:
+
+android:
+
+android:
+
+android:
+
+android:
+
+android:
+
+android:
+
+android:
+
+android:
+
+android:
+
+android:
+
+android:
+
+21 ELO mobile apps
+
+
+
+Edit account 
+
+If settings on the ELO server or your user data change, you may be required to edit the account.
+
+Please note
+
+Making changes to an account deletes all local data on the mobile device. This includes
+
+entries in the Offline area, the Clipboard, forms, and form data sets that have not been
+
+transferred to the repository.
+
+Information
+
+You cannot change your password in the ELO app. You can change your password in the ELO
+
+Java Client or the ELO Web Client.
+
+Method
+
+Open the configuration via the Tile navigation > Context menu (button with three dots).
+
+                restrictionType="string"/>
+
+            <restriction
+
+                key="account_password"
+
+                title="@string/accountdetails_userpwd"
+
+                restrictionType="string"/>
+
+            <restriction
+
+                key="account_delete"
+
+                title="@string/accountdetails_account_delete"
+
+                description="@string/accountdetails_account_delete_desc"
+
+                restrictionType="bool"
+
+                defaultValue="false"/>
+
+            <restriction
+
+                key="account_keep_user_password"
+
+                title="@string/accountdetails_keep_user_password"
+
+                description="@string/accountdetails_keep_user_password_desc"
+
+                restrictionType="bool"
+
+                defaultValue="false"/>
+
+        </restriction>
+
+    </restriction>
+
+</restrictions>
+
+android:
+
+android:
+
+android:
+
+android:
+
+android:
+
+android:
+
+android:
+
+android:
+
+android:
+
+android:
+
+android:
+
+android:
+
+android:
+
+android:
+
+1. 
+
+22 ELO mobile apps
+
+
+
+The Configuration dialog box opens.
+
+Tap the context menu (button with three dots) for the account you want to edit.
+
+The context menu opens.
+
+Tap EDIT in the context menu.
+
+The Add account dialog box appears. The fields show the data for the selected account.
+
+Make the desired changes.
+
+Tap SAVE.
+
+Result
+
+The changes are applied in the ELO app. If the logon information is correct, you can access the
+
+repository again.
+
+Switch account 
+
+You can create multiple accounts in the ELO app. You can tell that the account is active by the
+
+orange person icon. If you want to use another account, you have to activate it first.
+
+Method
+
+Open the configuration via the Tile navigation > Context menu.
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+1. 
+
+23 ELO mobile apps
+
+
+
+The Configuration dialog box opens.
+
+Tap the context menu (button with three dots) for the account you want to activate.
+
+The selected account is highlighted in blue.
+
+Tap SET ACCOUNT TO ACTIVE.
+
+Result
+
+The selected account is assigned the icon for the active account (orange person icon). The account
+
+is now active.
+
+Delete account 
+
+You can also delete accounts that you no longer need.
+
+Method
+
+Open the configuration via the Tile navigation > Context menu.
+
+2. 
+
+3. 
+
+1. 
+
+24 ELO mobile apps
+
+
+
+The Configuration dialog box opens.
+
+Tap the context menu (button with three dots) for the account you want to delete.
+
+The context menu opens.
+
+Tap DELETE ACCOUNT in the context menu.
+
+The Delete account dialog box appears.
+
+To delete the account, tap YES.
+
+Result
+
+You have deleted the account.
+
+Reconnect account 
+
+To reconnect the active account to the repository, use the RECONNECT ACCOUNT function. This
+
+function establishes a new connection to the repository and reloads all caches and data set forms.
+
+Method
+
+Open the configuration via the Tile navigation > Context menu.
+
+2. 
+
+3. 
+
+4. 
+
+1. 
+
+25 ELO mobile apps
+
+
+
+The Configuration dialog box opens.
+
+Tap the context menu (button with three dots) for the account you want to reconnect.
+
+The context menu opens.
+
+Tap RECONNECT ACCOUNT in the context menu.
+
+Result
+
+This reloads the connection.
+
+2. 
+
+3. 
+
+26 ELO mobile apps
+
+
+
+Basic functions 
+
+This chapter explains the basic functions of the ELO app. These include:
+
+Create new folder
+
+Add file
+
+Load new version
+
+Open document in read-only mode
+
+Edit document
+
+Show form
+
+Send entry
+
+Create margin note
+
+Delete entry
+
+For more information on the functions in the Clipboard, Tasks, Search, Offline, Data sets, Feed, and 
+
+My ELO areas, refer to the separate chapters.
+
+Create new folder 
+
+You can create new child folders in existing folders. You always create a folder in the repository that
+
+is connected to the active account.
+
+Information
+
+You can only add new folders in the Repository work area.
+
+Method
+
+Open the context menu of the folder you want to add a child folder to.
+
+In the context menu (button with three dots), tap New folder.
+
+The New folder dialog box appears.
+
+Tap the Short name field to enter a name for the new folder.
+
+Optional: The Folder metadata form is selected by default. Tap SELECT METADATA FORM to
+
+change the metadata form.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+3. 
+
+27 ELO mobile apps
+
+
+
+Information
+
+If a metadata form contains mandatory fields, your administrator will have to create a
+
+form and link it to the metadata form so it can be selected in the ELO app.
+
+Information
+
+You cannot create new metadata forms in the ELO app.
+
+Tap OK to create the new folder.
+
+Result
+
+The New folder dialog box closes. You have created a new folder.
+
+Optional: In the configuration, you can specify whether you want a metadata dialog box to appear
+
+when filing. You can find more information in the section Configuration.
+
+Add file 
+
+You can transfer a file from your device to ELO.
+
+To transfer a file to ELO, you can choose between two options:
+
+With the ELO app
+
+From an external app
+
+Requirements
+
+You need an external application to add files. The application, such as a file manager or a gallery
+
+app, must support file sharing.
+
+Add file with the ELO app 
+
+Method
+
+Open the context menu for the folder you want to add a file to.
+
+In the context menu (button with three dots), tap Add file.
+
+4. 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+28 ELO mobile apps
+
+
+
+The Add file dialog box appears.
+
+Tap the document icon at the top right.
+
+The Select file dialog box appears.
+
+Select one of the following options:
+
+From file system: Opens the Select file: Detected file systems dialog box. Navigate
+
+through the folder structure on your device to select a file.
+
+With another app: Opens an external app you can use to upload files.
+
+Take a photo: Opens the camera app on your device to take a picture, which can be
+
+uploaded.
+
+The short name of the file is displayed in the Add file dialog box.
+
+Optional: Tap the Short name field to change the short name.
+
+Tap SELECT METADATA FORM to change the metadata form.
+
+The Select form dialog box opens.
+
+Information
+
+3. 
+
+4. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+5. 
+
+29 ELO mobile apps
+
+
+
+If a metadata form contains mandatory fields, your administrator will have to create a
+
+form and link it to the metadata form so it can be selected in the ELO app.
+
+Tap the desired metadata form in the list.
+
+The metadata form is applied. The Select metadata form dialog box closes.
+
+Information
+
+You cannot create new metadata forms in the ELO app.
+
+Tap OK to transfer the file to ELO.
+
+Result
+
+The Add file dialog box closes. This takes you to the filing location of the new file in ELO.
+
+Optional: In the configuration, you can specify whether you want a metadata dialog box to appear
+
+when filing. You can find more information in the section Configuration.
+
+Add file with external app 
+
+You can also transfer files to ELO from external apps.
+
+Method
+
+To transfer a file from an external app to ELO, use the Share function in the respective app.
+
+A dialog box for transferring files appears.
+
+Select the option Add file.
+
+6. 
+
+7. 
+
+1. 
+
+2. 
+
+30 ELO mobile apps
+
+
+
+The Add file dialog box appears. The file name is entered into the Short name field.
+
+Optional: Tap the Short name field to change the short name.
+
+To set the filing location for the file, tap SELECT TARGET FOLDER.
+
+The Select target folder: dialog box appears.
+
+Navigate to the folder you want to upload the file to.
+
+The HISTORY tab contains the target folders you have previously selected.
+
+Confirm your selection with OK.
+
+Your selection is applied. The Select target folder: dialog box closes.
+
+To set a metadata form for the file, tap SELECT METADATA FORM.
+
+The Select form dialog box opens.
+
+Information
+
+3. 
+
+4. 
+
+5. 
+
+6. 
+
+31 ELO mobile apps
+
+
+
+If a metadata form contains mandatory fields, your administrator will have to create a
+
+form and link it to the metadata form so it can be selected in the ELO app.
+
+Tap the desired metadata form in the list.
+
+The metadata form is applied. The Select metadata form dialog box closes.
+
+Information
+
+You cannot create new metadata forms in the ELO app.
+
+Tap OK to add the file.
+
+Result
+
+The Add file dialog box closes. The file has been added. You return to the external application.
+
+Optional: In the configuration, you can specify whether you want a metadata dialog box to appear
+
+when filing. You can find more information in the section Configuration.
+
+Load new version 
+
+You can load a new version of your documents to document changes to files.
+
+To load a new version, you can choose between two options:
+
+With the ELO app
+
+With an external app
+
+Load new version with the ELO app 
+
+Method
+
+Open the context menu for the document you want to load a new version of.
+
+In the context menu (button with three dots), tap Load new version.
+
+7. 
+
+8. 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+32 ELO mobile apps
+
+
+
+The Load new version dialog box appears.
+
+Tap the document icon in the top right corner.
+
+The Select file dialog box appears.
+
+Select one of the following options to load a new version:
+
+From file system: Opens the Select file: Detected file systems dialog box. Navigate
+
+through the folder structure on your device to select a file.
+
+With another app: Opens an external app you can use to upload files.
+
+Take a photo: Opens the camera app on your device to take a picture, which can be
+
+uploaded.
+
+The new file is shown in the Load new version dialog box.
+
+3. 
+
+4. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+5. 
+
+33 ELO mobile apps
+
+
+
+You can make the following changes:
+
+Version: Change the version number in the Version field.
+
+Comment: Enter additional information on the version in the Comment field.
+
+Non-deletable version: Select this option to prevent the version from being deleted
+
+from ELO.
+
+Adjust document date: Enable this option to update the document date.
+
+Tap OK in the top right corner to load the new version.
+
+Result
+
+You have filed the new version of the document. The Load new version dialog box closes.
+
+Load new version with an external app 
+
+You can also transfer files to ELO from external apps.
+
+Method
+
+To transfer a file from an external app to ELO, use the Share function in the respective app.
+
+A dialog box for transferring files appears.
+
+Tap the Load new version option.
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+6. 
+
+1. 
+
+2. 
+
+34 ELO mobile apps
+
+
+
+The Load new version dialog box appears.
+
+To select the document you want to file a new version of in ELO, tap SELECT TARGET
+
+DOCUMENT.
+
+The Select document: dialog box appears.
+
+In the folder structure, navigate to the document you want to load a new version of.
+
+The HISTORY tab contains the target folders and documents you have previously selected.
+
+Confirm your selection with OK.
+
+The Select document: dialog box closes. The selected file appears in the Load new version
+
+dialog box.
+
+You can make the following changes:
+
+Version: Change the version number in the Version field.
+
+Comment: Enter additional information on the version in the Comment field.
+
+Non-deletable version: Select this option to prevent the version from being deleted
+
+from ELO.
+
+Adjust document date: Enable this option to update the document date.
+
+Tap OK in the top right corner to load the new version.
+
+Result
+
+You have filed the new version of the document. The Load new version dialog box closes.
+
+Open document in read-only mode 
+
+You can open filed documents in read-only mode.
+
+Information
+
+This function is not available in the Data sets work area.
+
+Requirements
+
+You must have an external application installed on your device that can open the selected file type.
+
+Method
+
+Open the context menu of the document that you want to open in read-only mode.
+
+Tap OPEN IN READ-ONLY MODE in the context menu.
+
+Result
+
+The document opens in an external application. If multiple suitable applications are installed on
+
+your device, a dialog box appears. Select an application.
+
+3. 
+
+4. 
+
+5. 
+
+6. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+7. 
+
+1. 
+
+2. 
+
+35 ELO mobile apps
+
+
+
+Use the Android Back button to return to the ELO app.
+
+Edit document 
+
+With the Edit document function, you can make changes to a document using a third-party
+
+application (e.g. text processing app).
+
+Information
+
+Not all third-party applications support this function.
+
+Method
+
+Open the context menu of the document that you want to edit.
+
+In the context menu (button with three dots), tap Edit document.
+
+The document opens in an external app. If several apps are available, choose the app you
+
+want to use to edit the document.
+
+Once the document is open in an external app, it is checked out of ELO and locked for other
+
+users.
+
+Make the desired changes to the document.
+
+To finish editing, save your changes in the external app.
+
+Close the external app to return to the ELO app.
+
+Result
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+36 ELO mobile apps
+
+
+
+The document is automatically checked back into ELO once you have saved your changes in the
+
+external app and closed it. The document is unlocked for other users. A new version of the
+
+document is filed.
+
+Show form 
+
+To view or edit the metadata for an entry, use the Show form function.
+
+Requirements
+
+Your administrator must have linked a form to the metadata form and defined it as a preview form.
+
+For more information, refer to the ELO Java Client Workflow manual.
+
+Information
+
+If a preview form has not been assigned to the metadata form, the ELO app loads a default
+
+form with the fields Short name, Document date, and Extra text.
+
+Method
+
+Select an entry and open the detailed view.1. 
+
+37 ELO mobile apps
+
+
+
+Tap the form icon on the CONTENT tab.
+
+Alternative: You can also access the Show form function from the context menu (button with
+
+three dots).
+
+The Show form dialog box appears. The dialog box displays the corresponding form.
+
+Optional: Tap the input fields to edit the metadata. To save your changes, tap Save.
+
+To close the Show form dialog box, tap Back (arrow icon at top left).
+
+Result
+
+The dialog box closes.
+
+2. 
+
+3. 
+
+38 ELO mobile apps
+
+
+
+Send entry 
+
+You can send entries by e-mail.
+
+Method
+
+Open the context menu for the entry you want to send.
+
+In the context menu (button with three dots), tap Send.
+
+The Send dialog box appears.
+
+Choose from the following options:
+
+Send as ELO link: This function enables you to send another user a direct link to an
+
+entry in the repository.
+
+Send document: This function allows you to send a document as an e-mail attachment
+
+to someone without access to the repository.
+
+Optional: A dialog box appears if multiple suitable applications are installed on your device.
+
+Select an application.
+
+The external application starts.
+
+Send the entry as an attachment in the way you normally do in this application.
+
+Result
+
+You have sent an ELO link or a document as an e-mail attachment. The external application closes.
+
+Create margin note 
+
+You can place margin notes on a document or folder. You can create three types of margin notes:
+
+General margin note (yellow): Visible to every user.
+
+Personal margin note (green): Only visible to the creator of the margin note.
+
+Permanent margin note (red): This margin note can be viewed by every user and cannot be
+
+deleted.
+
+Information
+
+This function is only available in the Repository work area.
+
+Method
+
+Select an entry and open the context menu.
+
+In the context menu (button with three dots), tap Create margin note.
+
+1. 
+
+2. 
+
+3. 
+
+◦ 
+
+◦ 
+
+4. 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+2. 
+
+39 ELO mobile apps
+
+
+
+The Create margin note dialog box appears. General margin note is set as the type by
+
+default.
+
+Optional: Tap Personal margin note or Permanent margin note to change the type.
+
+Enter your text for the margin note to the Contents field.
+
+Tap OK to save the margin note.
+
+Result
+
+The Create margin note dialog box closes. The margin note you created is in the Margin notes
+
+detail area of the viewer pane.
+
+Optional: To edit or delete a general or personal margin note, tap the pen icon in the Margin notes
+
+detail area. The Edit margin notes dialog box appears. In this dialog box, you can change the
+
+contents and type of margin note, or delete the margin note.
+
+Delete entry 
+
+You can also delete folders and documents that you no longer need.
+
+3. 
+
+4. 
+
+40 ELO mobile apps
+
+
+
+Important
+
+The entries are not deleted permanently, just marked as deleted. This mark signals the
+
+administrator to remove the documents from ELO permanently.
+
+Method
+
+Open the context menu of the entry that you want to delete.
+
+In the context menu (button with three dots), tap Delete.
+
+The Delete entry dialog box appears.
+
+Tap YES to confirm.
+
+Result
+
+You have deleted the entry.
+
+1. 
+
+2. 
+
+3. 
+
+41 ELO mobile apps
+
+
+
+Clipboard 
+
+You can copy frequently used folders and documents to the Clipboard work area. This enables you
+
+to put together a favorites list for quick access to your most important data. A reference to the
+
+selected entry is created on the Clipboard. The filing location in ELO does not change.
+
+Copy to clipboard 
+
+You can place frequently used folders and documents on the Clipboard. This enables you to access
+
+your entries faster. Use the clipboard icon to do so.
+
+You will find the clipboard icon in front of the short name of the entry in the list view.
+
+The gray clipboard icon means the entry has not been placed on the Clipboard.
+
+Alternative: You can also access the Copy to Clipboard function from the context menu (button with
+
+three dots).
+
+42 ELO mobile apps
+
+
+
+Information
+
+This function is only available in the Repository and Search work areas.
+
+Method
+
+To copy an entry to the Clipboard, tap the clipboard icon.
+
+Result
+
+The clipboard icon is blue. This means the entry has been placed on the Clipboard.
+
+Remove from Clipboard 
+
+You can remove entries that you no longer use frequently from the Clipboard.
+
+Please note
+
+If you remove an entry from the Clipboard, this only deletes the reference to the entry from
+
+the Clipboard work area. The entry remains in the Repository work area. To delete an entry
+
+from the Repository work area, use the Delete function.
+
+Use the clipboard icon to remove entries from the Clipboard. You will find the clipboard icon in front
+
+of the short name of the entry in the list view.
+
+The blue clipboard icon means the entry has been placed on the Clipboard.
+
+43 ELO mobile apps
+
+
+
+Alternative: You can also access the Remove from Clipboard function from the context menu
+
+(button with three dots).
+
+Method
+
+To remove an entry from the Clipboard, tap the blue clipboard icon.
+
+Result
+
+You have removed the entry from the Clipboard. The clipboard icon is gray.
+
+44 ELO mobile apps
+
+
+
+Tasks 
+
+The Tasks work area contains an overview of your workflows and reminders. This is where you
+
+process your tasks.
+
+View 
+
+New tasks are shown in a bold font and marked with a green dot. Tasks with passed deadlines are
+
+displayed with an exclamation mark.
+
+Configuration 
+
+In the Configuration dialog box, you can specify which types of tasks to display and which criteria
+
+to sort the task list by. You can find more information in the section Configuration.
+
+Start workflow 
+
+Using workflows, you can assign other users or user groups tasks.
+
+The following options are available for starting workflows:
+
+Start ad hoc workflow function
+
+Start workflow function
+
+Ad hoc workflows are simple, predefined workflows available in ELO. The workflows available to
+
+you when you run the Start workflow function were defined by your company.
+
+You can learn how to start an ad hoc workflow in the chapter Start ad hoc workflow.
+
+• 
+
+• 
+
+45 ELO mobile apps
+
+
+
+'Start workflow' function 
+
+You can start new workflows. Use workflow templates for this.
+
+Information
+
+This function is only available in the Repository and Clipboard work areas.a
+
+Requirements
+
+The workflow templates have already been created in ELO. You cannot create workflows templates
+
+in the ELO app.
+
+Method
+
+Select the desired entry and open the context menu.
+
+Tap START WORKFLOW in the context menu.
+
+The Start workflow dialog box appears.
+
+Tap SELECT TEMPLATE.
+
+The Select template dialog box appears.
+
+Tap the corresponding entry in the list to select a template.
+
+The workflow name is entered to the Template and Workflow name fields.
+
+Optional: Change the workflow name. Tap the Workflow name field and enter a new name.
+
+Tap OK to start the workflow.
+
+Result
+
+The Start workflow dialog box closes. The workflow starts.
+
+Start ad hoc workflow 
+
+This function starts a new ad hoc workflow. Ad hoc workflows are simple, predefined workflows
+
+available in ELO. You can use an ad hoc workflow to route an item to users for approval or to notify
+
+users.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+46 ELO mobile apps
+
+
+
+Method
+
+Select the desired entry and open the context menu.
+
+In the context menu (button with three dots), tap Start ad hoc workflow.
+
+The Start ad hoc workflow dialog box opens.
+
+In the Name field, enter a name for the workflow.
+
+Select the type of ad hoc workflow you want to create. You can choose from the following
+
+types:
+
+Serial approval: The workflow is forwarded to the participants one after the other. The
+
+participants must decide whether or not they approve the workflow step. Depending on
+
+the result, the corresponding notification is sent to the selected recipient.
+
+Parallel approval: The workflow is distributed in parallel. All recipients receive the
+
+workflow at the same time. Each participant must grant approval.
+
+Serial notification: The workflow is forwarded to the individual participants one after
+
+the other. The participants must confirm receipt of the workflow in turn. As long as the
+
+user does not confirm the workflow, the workflow is not forwarded to the next
+
+participants.
+
+Parallel notification: The workflow is sent to all participants at once. Participants have
+
+to confirm that they have received the workflow. Once completed, the corresponding
+
+notification is sent to the selected recipient.
+
+Switch to the USER tab.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+5. 
+
+47 ELO mobile apps
+
+
+
+In the Job instruction field, enter the individual job instruction for the user. The user sees the
+
+job instruction in the workflow step column of the Tasks work area as soon as they have
+
+accepted the workflow.
+
+The For user/group field is completed with an asterisk symbol by default. This means the job
+
+instruction is assigned to all users. To change the job instruction for individual users, tap the
+
+pencil icon next to the respective entry.
+
+Add the workflow recipients using the ADD USER button.
+
+You will see the selected users in the Recipient list.
+
+For serial workflows, you can change the order in which the workflows are sent to the users.
+
+Tap the user in the list and move them to a new position in the list, keeping your finger
+
+pressed down.
+
+Change to the FINISH tab.
+
+In the Recipient field, you can see which user will be notified when the ad hoc workflow is
+
+completed. To change the recipient, tap SELECT USER.
+
+Enter a text for the completion message in the Success message field.
+
+Enter a text for the cancellation message in the Cancellation message field. This only applies
+
+to Approval type ad hoc workflows.
+
+In the End script field, you can select a script that is executed after the ad hoc workflow is
+
+completed.
+
+Requirement: Your administrator has provided an end script. You will find more information in
+
+the ELO Java Client Workflow documentation.
+
+Tap OK to start the ad hoc workflow.
+
+6. 
+
+7. 
+
+8. 
+
+9. 
+
+48 ELO mobile apps
+
+https://docs.elo.com/admin/config/en-us/workflow/advanced/using-scripts.html
+https://docs.elo.com/admin/config/en-us/workflow/advanced/using-scripts.html
+
+
+Forward workflow 
+
+To transfer a workflow to the next user, select the Forward workflow function.
+
+Method
+
+In the Tasks work area, select the workflow you want to forward and open the context menu.
+
+In the context menu (button with three dots), tap Forward workflow.
+
+Alternative: In the viewer pane, tap Forward workflow to the right of the short name.
+
+The Forward workflow dialog box appears.
+
+Tap the user that you want to forward the workflow to.
+
+The successor is highlighted.
+
+Optional: Tap the Comment input field to add a note to the workflow.
+
+Tap OK.
+
+Result
+
+You have forwarded the workflow to the selected user. The Forward workflow dialog box closes.
+
+Delegate workflow 
+
+To assign a workflow to another user, use the Delegate workflow function.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+49 ELO mobile apps
+
+
+
+Method
+
+Select the desired entry in the Tasks work area and open the context menu.
+
+Tap Delegate workflow in the context menu.
+
+The Delegate workflow dialog box appears.
+
+Tap SELECT USER.
+
+The Select user or group dialog box appears.
+
+Tap an entry in the list to select a recipient.
+
+You can make the following changes:
+
+Notify after processing: This option is enabled by default. This means that you get the
+
+workflow back after it has been processed to check its status. Tap to uncheck the box if
+
+you do not want to be notified.
+
+Information: To add a note to the workflow, tap the input field.
+
+Tap OK.
+
+Result
+
+You have delegated the workflow to the selected recipient. The Delegate workflow dialog box
+
+closes.
+
+Accept workflow 
+
+Workflows sent to a group appear in the Tasks work area of all group members. To process this type
+
+of workflow, use the Accept workflow function. Now, only you can process the workflow, and the
+
+other group members no longer see the workflow in their tasks. This prevents multiple users from
+
+being able to process the same workflow at the same time.
+
+Method
+
+In the Tasks work area, select the workflow and open the context menu.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+◦ 
+
+◦ 
+
+5. 
+
+1. 
+
+50 ELO mobile apps
+
+
+
+In the context menu (button with three dots), tap Accept workflow.
+
+Alternative: In the viewer pane, tap Accept workflow to the right of the short name.
+
+Result
+
+The workflow is assigned to you. Other users of the group do not have access to it.
+
+Edit workflow form 
+
+You can fill out workflow forms, save the data entered to them, and forward them.
+
+If a workflow is based on a form, the Workflow form button is shown both in the viewer pane and
+
+the context menu of the respective workflow.
+
+Requirements
+
+The workflow forms must have been created in a desktop version of ELO. You cannot create
+
+workflows forms in the ELO app.
+
+Method
+
+In the Tasks work area, select the workflow and open the context menu.
+
+Tap the Workflow form button to open the form.
+
+Alternative: Tap the Workflow form button in the viewer pane of the selected workflow.
+
+2. 
+
+1. 
+
+2. 
+
+51 ELO mobile apps
+
+
+
+The Workflow form dialog box appears. The form is displayed.
+
+Complete the form. You can edit different fields depending on the form.
+
+Optional: Tap Save to save your entries. Tap Print to print the form.
+
+Depending on the workflow structure, forms are usually forwarded to the next user/node after
+
+being processed. To forward a workflow form, tap the corresponding button under Next
+
+processing step.
+
+Result
+
+The form is forwarded to the next user of the workflow with the information you entered. The 
+
+Workflow form dialog box closes.
+
+Postpone workflow 
+
+Use the Postpone workflow function to suspend processing of a workflow. You can specify a date
+
+until which a workflow will be hidden in the Tasks work area. Once the date has been reached, the
+
+workflow appears in the list again.
+
+Method
+
+Select the desired entry in the Tasks work area and open the context menu.
+
+In the context menu (button with three dots), tap Postpone workflow.
+
+3. 
+
+4. 
+
+1. 
+
+2. 
+
+52 ELO mobile apps
+
+
+
+The Postpone workflow dialog box appears.
+
+To specify how long you want to postpone the workflow for, tap SET DATE.
+
+Select a date in the calendar.
+
+Tap OK.
+
+Result
+
+You have postponed the workflow. The workflow is hidden from your task list until the selected
+
+date.
+
+Delete workflow 
+
+You can delete workflows that you no longer need.
+
+Method
+
+Select the desired entry in the Tasks work area and open the context menu.
+
+In the context menu (button with three dots), tap Delete.
+
+The Delete workflow permanently dialog box opens.
+
+Tap YES to confirm.
+
+Result
+
+You have deleted the workflow. The Delete workflow permanently dialog box closes.
+
+3. 
+
+4. 
+
+5. 
+
+1. 
+
+2. 
+
+3. 
+
+53 ELO mobile apps
+
+
+
+Search 
+
+You can use the Search function on the menu bar to search ELO. The search results are displayed in
+
+the Search work area. From here, you can start a new search, create search favorites, and edit
+
+previous searches.
+
+In the Configuration dialog box, you can specify which fields to include during the search. You can
+
+find more information in the section Configuration.
+
+Start new search 
+
+You can start a search in any work area using the SEARCH button on the action bar. Tap the SEARCH
+
+button on the action bar.
+
+Alternative: You can tap the magnifying glass icon in the Search work area to start a new search.
+
+Method
+
+Tap SEARCH on the action bar.
+
+A search field and a list of search suggestions open on the menu bar. The on-screen keyboard
+
+opens.
+
+Enter a search term.
+
+Tap a suggestion from the list.
+
+Alternative: Tap the Enter button on the on-screen keyboard to look for a specific character or
+
+a character string.
+
+Result
+
+The search starts. You are directed to the results list in the Search work area.
+
+1. 
+
+2. 
+
+3. 
+
+54 ELO mobile apps
+
+
+
+Optional: To change your search settings and add search filters, tap the filter icon to the top right of
+
+the results list. You can find more information in the section Edit search and add filters.
+
+Edit search and add filters 
+
+You can edit a search that you have already used by changing the search term and adding or
+
+deleting filters.
+
+Method
+
+To change the settings for a search you have already performed, tap the info icon next to the
+
+corresponding search in the list view of the Search work area.
+
+Alternative: In the list view, tap the corresponding search to open the results list.
+
+The search settings appear in the viewer pane.
+
+You can make the following settings:
+
+Search input: To change the search term, tap the input field.
+
+Fields searched: Select which fields to include in the search. You can choose the fields 
+
+Short name, Full text, Fields, and Extra text.
+
+At least one field has to be selected.
+
+1. 
+
+2. 
+
+◦ 
+
+◦ 
+
+55 ELO mobile apps
+
+
+
+Information
+
+The REFRESH SEARCH button is active once you have made a change. Tap the button
+
+to start the search again.
+
+Add search filter
+
+To apply search filters, tap ADD SEARCH FILTER.
+
+The Select filter dialog box appears. You can select the following filters:
+
+Date: Only entries with the selected document date are shown.
+
+Form: Only entries filed with the selected form are shown.
+
+Entry type: Only the selected entry type is shown.
+
+Filed by: Only entries filed by the selected user are shown.
+
+Editor: Only entries for which the selected user is entered as the editor are shown.
+
+Filing date: Only entries filed on the selected date are shown.
+
+In the Select filter dialog box, tap the desired filter.
+
+The filter appears in the viewer pane with an input field. By default, the input field contains a
+
+placeholder symbol.
+
+Tap the input field and delete the placeholder symbol.
+
+A drop-down menu appears.
+
+In the drop-down menu, tap the desired filter setting.
+
+The selection appears in the filter input field.
+
+Information
+
+To remove a filter, tap the X icon next to the filter.
+
+3. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+4. 
+
+5. 
+
+6. 
+
+7. 
+
+56 ELO mobile apps
+
+
+
+To start the search with the new settings, tap REFRESH SEARCH.
+
+Result
+
+The search is refreshed. The list of results appears.
+
+Create favorite 
+
+All searches are saved in the Search work area. These are deleted when you close the ELO app. To
+
+save a search permanently, you need to save it as a favorite. Favorites are not deleted when you
+
+close the app.
+
+Information
+
+Search favorites that you create in the ELO app are also available in other clients. However,
+
+search favorites created in other clients are not available in the ELO app.
+
+Method
+
+Open the context menu of the respective search.
+
+In the context menu, tap SAVE AS FAVORITE.
+
+The Enter a name for the search favorite dialog box appears.
+
+Name the search favorite.
+
+Tap OK to confirm.
+
+Result
+
+The favorite is now saved to the Search work area. The star icon represents favorites.
+
+Optional: To delete a favorite, use the DELETE FAVORITE function in the context menu.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+57 ELO mobile apps
+
+
+
+Offline 
+
+You can file folders and documents you would like to access even without an Internet connection in
+
+the Offline work area. The entries are filed as a copy to the internal or external storage of your
+
+device. The filing location in ELO does not change.
+
+In the Configuration dialog box, you can specify whether to store entries from the Offline work area
+
+to the internal storage of your device or to an external storage medium such as an SD card.
+
+Make entries available offline 
+
+You can transfer any document or folder from the Repository work area to the Offline work area
+
+access to your data even without an Internet connection. The documents and folders are filed as a
+
+copy to the internal storage of your device or to an external storage device (such as an SD card).
+
+Information
+
+Other applications also have access to entries filed offline.
+
+Please note
+
+Depending on the size of the entry you are transferring, large data volumes may need to be
+
+processed. We only recommend transferring large data volumes to the Offline work area
+
+when your device is connected to the Internet and a power source. Please make sure that
+
+you have sufficient storage space.
+
+Information
+
+Margin notes are not stored offline for technical reasons.
+
+Method
+
+Select the desired entry and open the context menu.
+
+Tap MAKE AVAILABLE OFFLINE in the context menu.
+
+This starts a background process that makes the selected entry available offline. This may
+
+take several minutes depending on the data volume.
+
+Result
+
+Once the background process is complete, you will find the entry in the Offline work area. You can
+
+now access the entry without an Internet connection.
+
+Information
+
+1. 
+
+2. 
+
+58 ELO mobile apps
+
+
+
+Tap Background processes in the tile navigation context menu to see the status of the
+
+background process. The Active processes area appears.
+
+Refresh entry in the Offline area 
+
+In the Offline work area, you see the status of the entries the last time they were synchronized.
+
+Changes to the original entries are not automatically transferred to the Offline work area. To ensure
+
+that your offline entries are up to date, you need to refresh the entries.
+
+Method
+
+To refresh the data of an entry, tap REFRESH in the entry's context menu.
+
+Result
+
+A background process starts. The data of the selected entry is compared with the data on the
+
+server and refreshed.
+
+Remove entries from the Offline area 
+
+If you want to delete offline entries from your device, you need to remove them from the Offline
+
+work area.
+
+Information
+
+Entries filed to the Offline work area are deleted from your device/external storage medium.
+
+The original entries remain in ELO.
+
+Method
+
+Select the desired entry and open the context menu.
+
+Tap REMOVE in the context menu.
+
+The Remove dialog box appears.
+
+Tap YES to confirm.
+
+Result
+
+The selected entry is removed in a background process.
+
+1. 
+
+2. 
+
+3. 
+
+59 ELO mobile apps
+
+
+
+Information
+
+Tap Background processes in the tile navigation context menu to see the status of the
+
+background process. The Active processes area appears.
+
+60 ELO mobile apps
+
+
+
+Data sets 
+
+Data sets enable you to enter data in a form and save it to ELO. You can also save data in forms
+
+without an Internet connection. You can transfer the data sets as soon as your device is connected
+
+to ELO.
+
+Settings for transferring data sets 
+
+In the Configuration dialog box, you can decide when to automatically file data sets to ELO.
+
+Method
+
+Open the configuration via the Tile navigation > Context menu.
+
+The Configuration dialog box opens.
+
+Tap the account you want to make the settings for.
+
+The configuration options for the selected account appear. The selected account is
+
+highlighted in blue.
+
+In the Network area, tap Automatic data set filing.
+
+The Automatic data set filing dialog box opens. Specify when data sets are automatically
+
+filed to ELO. You have the following options:
+
+With any connection: The data sets are transferred as long as the device is connected
+
+to the Internet.
+
+Only over Wi-Fi: The data sets are only transferred if a Wi-Fi connection is established.
+
+No automatic filing: The data sets are not filed automatically.
+
+Tap the desired settings.
+
+Result
+
+1. 
+
+2. 
+
+3. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+4. 
+
+61 ELO mobile apps
+
+
+
+The Automatic data set filing dialog box closes. Your changes have been applied.
+
+Requirements 
+
+To work with data sets, you need a metadata form with the corresponding settings and a specific
+
+form.
+
+Metadata form 
+
+When submitting data with the ELO app, all data is saved to a metadata form. Create a separate
+
+metadata form for each form you want to enter data with. To do so, use the ELO Administration
+
+Console.
+
+The layout of the metadata form depends on the data you want to submit. Use the metadata form
+
+to define:
+
+The fields for submitting data
+
+The filing path for the data sets (filing definition) you created
+
+Whether you can add one or multiple files to the data set (form type)
+
+Fields 
+
+Add a field and the associated group for each data field that you want to include in the form. These
+
+fields are linked to the form. The user enters data to the fields via the form in the app.
+
+Filing definition 
+
+Create a filing definition so that the data sets can be uploaded to ELO. The data sets cannot be filed
+
+to the repository without a filing definition.
+
+Form type 
+
+The form type specifies whether the data set is created as a document or as a folder. You can select
+
+the following settings:
+
+Usage > Folders: If this option is enabled, data sets are created as folders. You can attach multiple
+
+files to a data set. However, you do not have to attach a file. Attachments are filed with the Basic
+
+entry metadata form.
+
+Usage > Documents: If this option is enabled, data sets are created as documents. You must attach
+
+a file. You cannot attach more than one file.
+
+If both options are selected, the conditions for the Usage – Documents option will apply.
+
+Form 
+
+You need a specific form to create a data set. You create this form using the ELO form designer in
+
+the ELO Administration Console or in the ELO Java Client.
+
+• 
+
+• 
+
+• 
+
+62 ELO mobile apps
+
+https://docs.elo.com/admin/config/en-us/metadata-forms-and-fields/
+https://docs.elo.com/admin/config/en-us/metadata-forms-and-fields/
+https://docs.elo.com/admin/config/en-us/metadata-forms-and-fields/
+
+
+Information
+
+For detailed information on forms, refer to the ELO Java Client Workflow manual.
+
+Please note
+
+Data set forms are intended for offline use. This means you cannot use functions that
+
+require a connection to the ELO Indexserver, such as ELOas rules or dynamic keyword lists.
+
+Please note
+
+A data set form must be created as a separate template. Data set forms must not be
+
+divided into tab groups.
+
+A data set form must meet the following criteria:
+
+Form name: The name of the form must follow this pattern: offline_<NAME>. Replace <NAME> as
+
+required.
+
+Template: The form requires a template. The name of the template must follow this pattern: 
+
+main_<NAME>. Replace <NAME> as required.
+
+The names of the form and the template do not need to match.
+
+Connecting metadata forms 
+
+You need to link the template to a suitable metadata form (see above).
+
+Method
+
+Open the template in the ELO form designer.
+
+Open the Metadata form drop-down menu under Global form settings.
+
+Select the metadata form you require.
+
+1. 
+
+2. 
+
+3. 
+
+63 ELO mobile apps
+
+https://docs.elo.com/admin/config/en-us/workflow/
+https://docs.elo.com/admin/config/en-us/workflow/
+
+
+Information
+
+If the metadata form does not show up in the list, it is possible that the ELOwf module
+
+did not transfer the data to the client. Restart the module and the client. Afterwards,
+
+click Refresh in the form designer.
+
+Tap Apply to apply your changes.
+
+Alternative: The changes are also applied when you save the template.
+
+Result
+
+The name and the ID of the selected metadata form are grayed out in the Metadata form field.
+
+Linking fields 
+
+To ensure that the data is applied to the metadata of the data set, you need to link each field form
+
+to a metadata field.
+
+Link to a field as follows:
+
+Open the template in the ELO form designer.
+
+Click the line of the form that you want to link to a field.
+
+Open the Variable name drop-down menu under Properties of the selected cell.
+
+Select a field.
+
+4. 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+64 ELO mobile apps
+
+
+
+The name of the variable that establishes the connection to the field is located in the 
+
+Variable name field.
+
+Save the form once you have created and connected all form fields.
+
+Result
+
+You can now use the form to create data sets.
+
+Create data set 
+
+To submit data to a form and add files, use the CREATE DATA SET function.
+
+Requirements
+
+You must have created a data set form in the ELO Java Client or the ELO Administration Console.
+
+Forms are automatically uploaded to and updated on your mobile device. Every three days, the
+
+system checks whether new forms exist or whether changes have been made to existing forms. If
+
+you reconnect or change your user account, forms are automatically downloaded and updated.
+
+Method
+
+Tap CREATE DATA SET on the action bar.
+
+The Select form dialog box appears.
+
+Tap the form that you want to fill out.
+
+The Edit dialog box appears along with the selected form.
+
+5. 
+
+1. 
+
+2. 
+
+65 ELO mobile apps
+
+
+
+In this dialog box, you fill out the form, add files, save the data, and finalize the data set.
+
+Fill out form 
+
+Tap the fields to fill out the form. The type of entry you need to make depends on the field
+
+type.
+
+Add file
+
+The number of files you can or need to add to a data set depends on the metadata form.
+
+Create the metadata form in the ELO Administration Console.
+
+You can select the following metadata form options in the ELO Administration Console:
+
+Usage > Folders: If this option is enabled, data sets are created as folders. You can
+
+attach multiple files to a data set. However, you do not have to attach a file.
+
+Attachments are filed with the Basic entry metadata form.
+
+Usage > Documents: If this option is enabled, data sets are created as documents. You
+
+must attach a file. You cannot attach more than one file.
+
+If both options are selected, the conditions for the Usage > Documents option will apply.
+
+To add a file, tap the document icon on the action bar.
+
+The Select file dialog box appears.
+
+Select one of the following options to add a file:
+
+From file system: Opens the Select file: Detected file systems dialog box. Navigate
+
+through the folder structure on your device to select a file.
+
+With another app: Opens an external app you can use to upload files.
+
+Take a photo: Opens the camera app on your device to take a picture, which can be
+
+added to the data set.
+
+Select a file.
+
+3. 
+
+◦ 
+
+◦ 
+
+4. 
+
+5. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+6. 
+
+66 ELO mobile apps
+
+
+
+The new file is displayed in the Edit dialog box on the FILES tab.
+
+Remove added file
+
+Optional: If the data set form was linked to a folder form, you can remove any attached files.
+
+Long tap the file you want to remove until the context menu opens. Tap the X icon in the
+
+context menu. The file is removed.
+
+Change added file
+
+Optional: If the data set form was linked to a document form, you cannot remove attached
+
+files. These data sets always require a file attachment. You can select another file to replace
+
+an existing attachment. Long tap the file you want to change until the context menu opens.
+
+Tap the document icon in the context menu and select a new file.
+
+Save 
+
+Optional: If you have not finished completing a data set or do not want to upload it to the 
+
+Repository work area yet, you can save it. Tap SAVE. The data set is saved in the Data sets
+
+work area. The data set has the status Incomplete and is not yet loaded to the Repository
+
+work area.
+
+Information
+
+Once you have completed a data set for transfer to the Repository work area, you can
+
+no longer edit it.
+
+Finish
+
+To complete a data set for transfer to the Repository work area, tap FINISH.
+
+Result
+
+Depending on the setting, the data set is automatically transferred to the Repository work area or
+
+stored in the Data sets work area with the status Ready for transfer.
+
+You can find more information in the sections Automatically transfer data set and Manually transfer
+
+data set.
+
+Edit data set 
+
+You can edit data sets that you have saved but not yet completed.
+
+Method
+
+Open the context menu for the data set.
+
+7. 
+
+1. 
+
+67 ELO mobile apps
+
+
+
+Tap EDIT in the context menu.
+
+The Edit dialog box appears.
+
+Make the desired changes.
+
+Tap SAVE to save the data set or FINISH to load the data set to the Repository work area.
+
+Result
+
+You have edited the data set.
+
+Automatically transfer data set 
+
+You need to complete a data set before you can transfer it to the Repository work area. If your
+
+device is not connected to the Internet, the data set is saved in the Data sets work area. Completed
+
+data sets are loaded to the Repository work area as soon as your device is connected to the
+
+Internet.
+
+2. 
+
+3. 
+
+4. 
+
+68 ELO mobile apps
+
+
+
+Information
+
+Once you have completed a data set for transfer to the Repository work area, you can no
+
+longer edit it.
+
+Requirements
+
+In the Configuration dialog box, the Automatic data set filing with any connection or Automatic data
+
+set filing only over Wi-Fi option must be enabled. You can find more information in the section 
+
+Settings for transferring data sets.
+
+Method
+
+To complete a data set for transfer to the Repository work area, tap FINISH in the Edit dialog box.
+
+Result
+
+The Edit dialog box closes.
+
+If your device is connected to the Internet, the data set is transferred to the Repository work area
+
+immediately. If your device is not connected to the Internet, the data set is saved in the Data sets
+
+work area. There, it is assigned the status Ready for transfer.
+
+69 ELO mobile apps
+
+
+
+Completed data sets are transferred to the Repository work area as soon as your device is
+
+connected to the Internet. The filing process generally starts automatically.
+
+Once a data set is transferred to the Repository work area, it no longer appears in the Data sets
+
+work area. The data set can now be found at the specified location in the Repository work area. In
+
+the Form detail area in the viewer pane, you will see all information saved on the data set.
+
+70 ELO mobile apps
+
+
+
+Manually transfer data set 
+
+If automatic transfer of data sets is not enabled, you can manually start a transfer to the 
+
+Repository work area. You need to complete a data set before you can transfer it to the Repository
+
+work area. The data set is saved in the Data sets work area.
+
+Information
+
+Once you have completed a data set for transfer to the Repository work area, you can no
+
+longer edit it.
+
+Requirements
+
+Your device must be connected to the Internet.
+
+Method
+
+To complete a data set for transfer to the Repository work area, tap FINISH in the Edit dialog
+
+box.
+
+The Edit dialog box closes.
+
+The data set is saved in the Data sets work area. There, it is assigned the status Ready for
+
+transfer.
+
+1. 
+
+71 ELO mobile apps
+
+
+
+Open the context menu for the data set.
+
+Tap TRANSFER in the context menu.
+
+Result
+
+The data set is loaded to the Repository work area.
+
+Once a data set is transferred to the Repository work area, it no longer appears in the Data sets
+
+work area. The data set can now be found at the specified location in the Repository work area. In
+
+the Form detail area in the viewer pane, you will see all information saved on the data set.
+
+2. 
+
+3. 
+
+72 ELO mobile apps
+
+
+
+Delete data set 
+
+You can delete data sets that you do not want to transfer to the Repository work area.
+
+Method
+
+Open the context menu for the data set.
+
+Tap DELETE in the context menu.
+
+Result
+
+1. 
+
+2. 
+
+73 ELO mobile apps
+
+
+
+You have deleted the data set.
+
+74 ELO mobile apps
+
+
+
+Feed 
+
+ELO offers several functions that support collaboration within your company. The ELO feed is a
+
+chat-based tool that provides a great way to exchange information on an entry.
+
+Posts related to an entry are shown on the FEED tab. In the feed, you can comment on posts,
+
+mention colleagues, link posts, and categorize topics using hashtags.
+
+The feed is used to share information on an entry (document or folder) and record changes to the
+
+entry. New feed posts are denoted with a green dot.
+
+The following message types are shown in the feed:
+
+Posts (written by a user)
+
+Comments (on a post)
+
+Events (e.g. when a new version of a document is filed or changes are made to the
+
+working version)
+
+Create post 
+
+To exchange information on an entry, you can create a feed post.
+
+Method
+
+Tap the Create a post input field on the FEED tab.
+
+• 
+
+• 
+
+• 
+
+1. 
+
+75 ELO mobile apps
+
+
+
+The input field opens. The on-screen keyboard appears.
+
+Enter your text.
+
+Tap the icons below the input field to add to your post. You have the following options:
+
+Mention: Use the @ icon to address your feed post directly to another user or group.
+
+The users mentioned can see the feed post in their My ELO work area.
+
+Reference: Use the document icon with an arrow to link your feed post with an entry in
+
+ELO. Tapping the reference automatically takes the user to the filing location of the
+
+linked entry.
+
+Hashtag: Tap the # symbol to add hashtags to a post. Users can subscribe to hashtags.
+
+You can also filter the My ELO work area by hashtags.
+
+Visibility: Use the eye icon to restrict who can read your post. You can apply this
+
+restriction for future feed posts. Tap the Remember selected visibility radio button. Your
+
+visibility settings will be set as the default for new feed posts. 
+
+To upload your post, tap the Create button.
+
+Result
+
+Your post appears in the feed.
+
+Edit post 
+
+You can change your own posts later on.
+
+Method
+
+2. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+3. 
+
+76 ELO mobile apps
+
+
+
+Tap Edit (pencil icon).
+
+Editing mode is enabled.
+
+Make the desired changes.
+
+To save your changes, tap Save.
+
+Result
+
+Your changes are applied.
+
+Comment on post 
+
+You can enter a comment on any post.
+
+Information
+
+The visibility settings of the post you are commenting on apply. You cannot change the
+
+visibility settings of a comment.
+
+Method
+
+Tap Comment below the post.
+
+The input field opens. The on-screen keyboard appears.
+
+Enter a comment.
+
+Tap the icons below the input field to add to your comment. You have the following options:
+
+1. 
+
+2. 
+
+3. 
+
+1. 
+
+2. 
+
+◦ 
+
+77 ELO mobile apps
+
+
+
+Mention: Use the @ icon to address your feed post directly to another user or group.
+
+The users mentioned can see the feed post in their My ELO work area.
+
+Reference: Use the document icon with an arrow to link your feed post with an entry in
+
+ELO. Tapping the reference automatically takes the user to the filing location of the
+
+linked entry.
+
+Hashtag: Tap the # symbol to add hashtags to a post. Users can subscribe to hashtags.
+
+You can also filter the My ELO work area by hashtags.
+
+Tap Create to post your comment.
+
+Result
+
+Your comment shows up in the feed under the corresponding post.
+
+Search feed 
+
+Tap the Search feed button (magnifying glass icon) to search within the selected feed. When the
+
+search is completed, you will only see posts containing the search term in the feed.
+
+Method
+
+Tap the magnifying glass icon.
+
+The search input field opens.
+
+Enter the search term to the input field.
+
+Tap the magnifying glass icon to start the search.
+
+Result
+
+When the search is completed, you will only see posts containing the search term in the feed. The
+
+matches are highlighted in yellow.
+
+Optional: To return to the normal feed after a search, tap the X icon in the search field.
+
+Add filter 
+
+You can search the feed for specific terms as well as filter it by specific criteria.
+
+Method
+
+◦ 
+
+◦ 
+
+3. 
+
+1. 
+
+2. 
+
+3. 
+
+78 ELO mobile apps
+
+
+
+Tap the filter icon.
+
+The filters appear below the input field.
+
+You can select the following filters:
+
+Post author: Only posts created by the selected user are shown.
+
+Post type: Only posts of the selected type are shown.
+
+Hashtag: Only posts containing the selected hashtag are shown.
+
+Additional filters: Depending on the settings, additional filters are available, e.g.
+
+filter by posts you are mentioned in.
+
+Information
+
+In the default settings, all filters are applied in is mode. You can also set the filters to 
+
+is not mode. To change this mode, tap is/is not next to the filter category.
+
+Tap the filter you want to apply. You can select multiple filters.
+
+Result
+
+The selected filter is highlighted and marked with a check mark. The result of the applied filter
+
+appears in the feed.
+
+Optional: To clear all filters, tap Reset filters (arrow icon).
+
+1. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+2. 
+
+79 ELO mobile apps
+
+
+
+Subscribe to feed 
+
+To be notified of any updates in a feed, you can subscribe to the feed.
+
+Method
+
+To subscribe to a feed, tap the Subscribe button in the feed.
+
+Result
+
+You have subscribed to the feed. The Subscribe button is marked with a check.
+
+All subscribed feeds are listed in the My ELO work area. Once a new post is added to a subscribed
+
+feed, you see the new post in your My ELO work area.
+
+Information
+
+You can automatically subscribe to feeds. This applies to specific events that are triggered
+
+by a user. You can enable the automatic feed subscription options in My ELO > Settings >
+
+My ELO settings.
+
+Subscribe to a hashtag 
+
+To be notified of new posts related to a specific topic, you can subscribe to hashtags.
+
+Method
+
+To subscribe to a hashtag, tap it in a post.
+
+You will see an overview of posts with this hashtag.
+
+Tap Subscribe (antenna icon) in the upper bar.
+
+Result
+
+1. 
+
+2. 
+
+80 ELO mobile apps
+
+
+
+You have subscribed to the hashtag. All posts that are marked with the corresponding hashtag
+
+appear in the My ELO work area.
+
+Create a poll 
+
+You can create user polls on the FEED tab.
+
+Method
+
+Tap the Create poll button.
+
+The Create poll area opens.
+
+Create the poll. You have the following options:
+
+Ask a question: Enter a question to the input field.
+
+Add answer option: Enter answer options to the input fields. Insert a new input field
+
+with the Add new answer button. Tap the X icon to delete an answer option.
+
+Poll duration: You can select how long you want the poll to remain open in the drop-
+
+down menu.
+
+Additional options: This is where you specify whether participants can select more than
+
+one answer, see the user names in the result, and add their own answers.
+
+Tap the icons below the input field to add to your poll. You have the following options:
+
+Mention: Use the @ icon to address your poll directly to another user or group. The
+
+users mentioned can see the poll in their My ELO work area.
+
+Reference: Use the document icon with an arrow to link your poll to an entry in ELO.
+
+Tapping the reference automatically takes the user to the filing location of the linked
+
+entry.
+
+Hashtag: Tap the # symbol to add hashtags to your poll. Users can subscribe to
+
+hashtags. You can also filter the My ELO work area by hashtags.
+
+Visibility: Use the eye icon to restrict who can read your poll. You can apply this
+
+restriction for future polls. Tap the Remember selected visibility radio button. Your
+
+visibility settings will be set as the default for new polls.
+
+Tap Create to start the poll.
+
+Result
+
+The poll shows up in the feed.
+
+1. 
+
+2. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+3. 
+
+81 ELO mobile apps
+
+
+
+Information
+
+Once a user has taken a poll, it can no longer be modified.
+
+82 ELO mobile apps
+
+
+
+My ELO 
+
+Feed posts for different entries are listed in the My ELO work area. For example, you will see posts
+
+from subscribed feeds or posts you were mentioned in. You will also find an overview of your
+
+workflows and current hashtags in My ELO.
+
+Settings 
+
+In the Settings area, you can configure the My ELO work area. You will also find an overview of
+
+hashtags you have subscribed to and polls you have started.
+
+Tap the Settings button (gearwheel icon) in My ELO to open the Settings area.
+
+In the Settings area, you have the following options:
+
+My ELO settings 
+
+Automatically subscribe to the feed: Specify when you want to automatically subscribe to a feed.
+
+Number of seconds to display the "Undo" button: If you delete a feed post from My ELO, the Undo
+
+button appears. This button enables you to undo the delete action. You specify how many seconds
+
+the Undo button will be displayed for after removing a post.
+
+Remove all posts from My ELO: If you no longer want to see feed posts in My ELO, you can hide
+
+them. The Remove all posts from My ELO button hides all feed posts in your My ELO work area.
+
+Posts you have marked as important are not removed.
+
+Information
+
+83 ELO mobile apps
+
+
+
+The Remove all posts from My ELO function only hides posts in your My ELO work area. The
+
+post is not deleted. It stays in the feed for the corresponding entry.
+
+My subscribed hashtags 
+
+Search for hashtag: You can search for hashtags in ELO. Enter the hashtag you are looking for to the
+
+input field or select a hashtag from the drop-down menu. Tap a hashtag to view an overview of
+
+feed posts with the selected hashtag.
+
+Subscribed hashtags: Here is a list of all the hashtags you have subscribed to. Tap a hashtag to
+
+view an overview of feed posts with the subscribed hashtag. Tap the antenna icon with the check
+
+mark to delete the subscription.
+
+My polls 
+
+Here is a list of polls you have started. Tap a poll in the list to go to the poll.
+
+Feed 
+
+In the My ELO feed, you will find an overview of all feed posts relevant to you. You will see posts
+
+from subscribed feeds and posts you were mentioned in. Posts older than one month do not show
+
+up. New feed posts are denoted with a green dot.
+
+84 ELO mobile apps
+
+
+
+Mark post as important 
+
+Posts older than one month are removed from the My ELO work area. To show posts in My ELO
+
+permanently, you can mark them as important.
+
+To show a post permanently in My ELO tap the Mark as important button.
+
+You can recognize posts that are marked as important by the red flag icon. The post remains in the 
+
+My ELO area even if it is more than a month old.
+
+Remove marker 
+
+To delete the marker, tap the red flag icon. As soon as the post is more than a month old, it will no
+
+longer be displayed in the My ELO work area.
+
+Subscribe to feed 
+
+In the My ELO work area, posts from feeds you are not subscribed to, but were mentioned in, are
+
+also shown. You can subscribe to these feeds in My ELO.
+
+Method
+
+85 ELO mobile apps
+
+
+
+Tap the Subscribe button.
+
+Result
+
+You have subscribed to the feed. The check mark indicates this.
+
+All subscribed feeds are listed in the My ELO work area. Once a new post is added to a subscribed
+
+feed, you see the new post in your My ELO work area.
+
+Hide post 
+
+If you no longer want to see a post, you can hide it in the My ELO work area.
+
+Information
+
+The Remove all posts from My ELO function only hides posts in your My ELO work area. The
+
+post is not deleted. It stays in the feed for the corresponding entry.
+
+Method
+
+Tap the Remove from My ELO button (x icon) to hide a post in your My ELO work area.
+
+Result
+
+86 ELO mobile apps
+
+
+
+The post is removed from My ELO. To show the post again, tap Undo.
+
+Information
+
+The Undo function is only displayed for 5 seconds by default. You can change the length of
+
+time it is displayed in Settings > My ELO settings.
+
+Search feed 
+
+Tap the Search feed button (magnifying glass icon) to search within the displayed feed. When the
+
+search is completed, you will only see posts containing the search term in the feed.
+
+Method
+
+Tap the magnifying glass icon.
+
+The search input field opens.
+
+Enter the search term to the input field.
+
+Tap the magnifying glass icon to start the search.
+
+Result
+
+When the search is completed, you will only see posts containing the search term in the feed. The
+
+matches are highlighted in yellow.
+
+Optional: To return to the normal feed after a search, tap the X icon in the search field.
+
+Filters 
+
+You can search the feed for specific terms as well as filter it by specific criteria.
+
+1. 
+
+2. 
+
+3. 
+
+87 ELO mobile apps
+
+
+
+You can select the following filters:
+
+New since: Filter the feed by the date the post was created. You can choose between: Today, 
+
+Yesterday, One week, and One month.
+
+Form: Filter the feed by the metadata form of the entry.
+
+Post author: Filter the feed by the users who created posts.
+
+Post type: Filter the feed by the type of post. There are two post types: Automatically created
+
+posts (e.g. Document version created) and posts created by users (User posts).
+
+Hashtag: Filter the feed by hashtags.
+
+Additional filters: Filter the feed by posts directly related to you, such as posts you were
+
+mentioned in.
+
+Information
+
+In the default settings, all filters are applied in is mode. You can also set the filters to is not
+
+mode. To change this mode, tap is/is not next to the filter category.
+
+Apply filters 
+
+Method
+
+To apply a filter, tap the filter in the list. You can select multiple filters in all areas except New since.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+88 ELO mobile apps
+
+
+
+Result
+
+The selected filter is highlighted and marked with a dot or check mark. You will now only see the
+
+filtered posts.
+
+Optional: To clear all filters, tap Reset filters (arrow icon).
+
+Hashtags 
+
+You will find an overview of hashtags currently in use in your company repository in My ELO.
+
+Tap a hashtag to view an overview of feed posts with the selected hashtag.
+
+89 ELO mobile apps
+
+
+
+Workflows 
+
+In the My ELO work area, you will see which workflows you recently started and who is currently
+
+processing the task. You will also find an overview of escalated workflows you are involved in.
+
+Tap a workflow to go to the selected workflow in the Tasks work area.
+
+Edit user profile 
+
+Feed posts are marked with the name and profile picture of the author. You can edit your profile.
+
+Method
+
+1. 
+
+90 ELO mobile apps
+
+
+
+To open your profile, in My ELO, tap Settings (gear icon) > My profile (gray person icon at the
+
+top right).
+
+Alternative: In the feed, tap your profile picture or user name to open your user profile.
+
+The User profile dialog box opens.
+
+Tap Edit data to edit your profile.
+
+Editing mode is enabled.
+
+Make the desired changes.
+
+Tap Save to apply your changes.
+
+Result
+
+Your changes are applied. You are now back in the profile overview.
+
+View user profile 
+
+For more information on a user, you can view their profile.
+
+Method
+
+2. 
+
+3. 
+
+4. 
+
+91 ELO mobile apps
+
+
+
+In the feed, tap the image or the user's name to see their profile.
+
+Result
+
+The user profile opens.
+
+Optional: To close the user profile, tap Back (arrow icon) on the menu bar.
+
+92 ELO mobile apps
+
+
+	Table of contents
+	Basics
+	Installation and getting started
+	Requirements
+	Install app
+	Start app
+	Create account
+	Language
+
+	User interface
+	Layout
+
+	Tile navigation
+	Tile navigation context menu
+
+	Navigation
+	Change folder
+	Scroll
+	Go to
+
+	Show details
+	Tabs in the viewer pane
+	Switch between tabs in the viewer pane
+	Show/hide additional detail areas
+	Show e-mails
+
+	Context menu
+	Open context menu
+	Call additional functions
+	Multiple selection
+
+	Refresh
+	Configuration
+	General: Configuration for all accounts
+	Individual account settings
+	Local storage
+	Cache
+	Network
+	Metadata
+	Task settings
+	Search settings
+
+	Add account
+	'ADD ACCOUNT' function
+	Mobile device management
+
+	Edit account
+	Switch account
+	Delete account
+	Reconnect account
+
+	Basic functions
+	Create new folder
+	Add file
+	Add file with the ELO app
+	Add file with external app
+
+	Load new version
+	Load new version with the ELO app
+	Load new version with an external app
+
+	Open document in read-only mode
+	Edit document
+	Show form
+	Send entry
+	Create margin note
+	Delete entry
+
+	Clipboard
+	Copy to clipboard
+	Remove from Clipboard
+
+	Tasks
+	View
+	Configuration
+	Start workflow
+	'Start workflow' function
+
+	Start ad hoc workflow
+	Forward workflow
+	Delegate workflow
+	Accept workflow
+	Edit workflow form
+	Postpone workflow
+	Delete workflow
+
+	Search
+	Start new search
+	Edit search and add filters
+	Create favorite
+
+	Offline
+	Make entries available offline
+	Refresh entry in the Offline area
+	Remove entries from the Offline area
+
+	Data sets
+	Settings for transferring data sets
+	Requirements
+	Metadata form
+	Fields
+	Filing definition
+	Form type
+	Form
+	Connecting metadata forms
+	Linking fields
+
+	Create data set
+	Edit data set
+	Automatically transfer data set
+	Manually transfer data set
+	Delete data set
+
+	Feed
+	Create post
+	Edit post
+	Comment on post
+	Search feed
+	Add filter
+	Subscribe to feed
+	Subscribe to a hashtag
+	Create a poll
+
+	My ELO
+	Settings
+	My ELO settings
+	My subscribed hashtags
+	My polls
+
+	Feed
+	Mark post as important
+	Remove marker
+
+	Subscribe to feed
+	Hide post
+	Search feed
+	Filters
+	Apply filters
+
+	Hashtags
+	Workflows
+	Edit user profile
+	View user profile
+
+
+

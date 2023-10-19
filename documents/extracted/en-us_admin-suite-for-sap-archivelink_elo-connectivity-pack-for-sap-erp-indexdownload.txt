@@ -1,0 +1,1765 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®) | ELO Connectivity Pack for SAP® ERP – Indexdownload
+
+
+ELO Suite for SAP
+
+ArchiveLink® (SAP
+
+NetWeaver® & SAP S/
+
+4HANA®)
+
+ELO Connectivity Pack for SAP® ERP –
+
+Indexdownload
+
+
+
+3
+
+3
+
+5
+
+7
+
+19
+
+29
+
+31
+
+48
+
+Table of contents
+
+ELO Connectivity Pack for SAP® ERP ‒ Indexdownload
+
+Getting started 
+
+Installation 
+
+Functionality 
+
+ELO configuration 
+
+Process 
+
+Additional functions 
+
+Required permissions 
+
+2 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+ELO Connectivity Pack for SAP® ERP ‒
+
+Indexdownload
+
+Getting started 
+
+This document describes how to install and configure ELO Connectivity Pack – Indexdownload.
+
+Security and licensing requirements 
+
+Depending on the configuration, you can use ELO Connectivity Pack – Indexdownload to store
+
+sensitive data in ELO. A secure permissions concept is therefore crucial. Export and use of SAP data
+
+in external systems, especially by users without an SAP account, can affect the SAP license of the
+
+connected system. If in doubt, consult SAP and/or the responsible IT systems specialist. ELO is not
+
+liable for any license violations.
+
+Basics 
+
+Using ELO Connectivity Pack – Indexdownload requires customization of SAP ArchiveLink on the
+
+SAP system connected to ELO. Document types, document classes, a content repository, and link
+
+entries have to be created for this purpose. An ELO ArchiveLink interface or ELO Smart Link
+
+interface with configured content repositories is also required.
+
+ELO Connectivity Pack – Indexdownload must be configured in ELO Smart Link or ELO ArchiveLink
+
+and the transport has to be imported into the corresponding SAP system. The configured SAP user
+
+must have permission to run this function module (see the section SAP function module).
+
+To use the entire ELO Connectivity Pack for SAP® ERP, your computer must also meet the following
+
+system requirements and release statuses of ELO and the SAP system:
+
+ELOprofessional/ELOenterprise version 10.02.000 and higher
+
+ELO Business Solutions Common 1.05.002 and higher
+
+The following SAP versions or higher: 
+
+SAP_BASIS 702 SAPKB70213
+
+SAP_BASIS 730 SAPKB73009
+
+SAP_BASIS 731 SAPKB73106
+
+The following requirements have to be met to use the ELO Integration Client within the SAP
+
+system:
+
+ELOprofessional or ELOenterprise version 12 and higher
+
+Depending on the version, the following modules are required: 
+
+ELO 20: 
+
+ELOwf 20.05.000
+
+ELO REST Service 20.02.000
+
+ELO 12: 
+
+• 
+
+• 
+
+• 
+
+◦ 
+
+◦ 
+
+◦ 
+
+• 
+
+• 
+
+◦ 
+
+▪ 
+
+▪ 
+
+◦ 
+
+▪ 
+
+3 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+ELOwf 12.06.000
+
+ELO REST API 12.04.000
+
+ELO Business Solutions Common version 1.07.000 or higher
+
+The ELO license must also include the ELO Integration Client.
+
+▪ 
+
+• 
+
+4 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Installation 
+
+A license for ELO Connectivity Pack for SAP ERP includes two functions: Indexdownload and 
+
+Datatransfer. ELO Connectivity Pack – Indexdownload contains two packages.
+
+An SAP transport that has to be imported to the SAP target system.
+
+An ELO Business Solutions package customized for SAP.
+
+You will find the installation files on the ELO SupportWeb under:
+
+Integration > SAP® ERP > ELO Suite for SAP ArchiveLink® > ELO Connectivity Pack for SAP® ERP
+
+> Downloads
+
+SAP components 
+
+Inform your customer or the SAP partner about the SAP transport to be installed and provide it to
+
+them.
+
+The current SAP transport is available on the ELO SupportWeb.
+
+Information
+
+Inform your customers or SAP partner of the following:
+
+The standard SAP transport routes must be used.
+
+All developments and functions within the transport in ELO were developed in a
+
+separate SAP namespace, called /ELO/.
+
+You may have to enable the Ignore Invalid Component Version option when importing the
+
+SAP transport.
+
+It is also possible that you will encounter warnings when importing the transport due to
+
+different release statuses (return code 8), which can be ignored.
+
+Once an SAP transport has successfully been transported to the SAP systems, you can provide your
+
+customer/the SAP partner with the technical description for the /ELO/BO_FIELDS transaction.
+
+You will find it in the section '/ELO/BO_FIELDS' transaction.
+
+Common package 
+
+First, install Business Solution Common 1.05.002 package or higher if it has not already been
+
+installed on your ELO system. This package provides the class framework, namespaces, and
+
+architectural concepts for services, actions, and function modules.
+
+To start installation, log on to the ELO Java Client as Administrator. You can install the
+
+individual packages from the ELO SupportWeb with a single click.
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+5 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+https://supportweb.elo.com/en-us/integration/elo-for-sapr-erp/elo-suite-for-sap-archivelinkr/elo-connectivity-pack-for-sapr-erp.html
+https://supportweb.elo.com/en-us/integration/elo-for-sapr-erp/elo-suite-for-sap-archivelinkr/elo-connectivity-pack-for-sapr-erp.html
+
+
+Alternative: You can download the package containing the .eloinst files on the ELO
+
+SupportWeb. At this point, ELO Connectivity Pack – Indexdownload only requires the following
+
+two files:
+
+00_sol.common_1.xx.xxx.eloinst
+
+Custom_sol.common_1.xx.xxx.eloinst
+
+Next, install the current ELO Connectivity Pack for SAP® ERP – Indexdownload package. You
+
+will now find the configuration for ELO Connectivity Pack – Indexdownload in the Business
+
+Solutions Custom folder in ELO.
+
+You can now proceed with the chapter ELO configuration.
+
+erp.sap.indexdownload_1.XX.XXX.eloinst
+
+custom_erp.sap.indexdownload_1.XX.XXX.eloinst
+
+Installation information 
+
+When installing ELO Connectivity Pack – Indexdownload, the web app installation may not finish
+
+completely. You can tell that this is the case if there is no interface when you open the
+
+configuration. To fix this, switch to the ELO Application Server and open the ELOwf status report. You
+
+will see the App Manager entry in the menu bar on the right.
+
+In the ELO App Manager, the App status indicates whether the web app installation for
+
+Indexdownload was successful. If this is the case, the entry Installed is shown at the location. If it
+
+is set to Archived, you will have to enable/install, and refresh the web app.
+
+◦ 
+
+◦ 
+
+2. 
+
+3. 
+
+◦ 
+
+◦ 
+
+6 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Functionality 
+
+ELO Connectivity Pack – Indexdownload is based on an SAP function module that can call data for
+
+SAP business objects from the SAP system generically. ELO Connectivity Pack – Indexdownload
+
+uses new metadata forms and fields created in ELO with SAP attribute names. For more information
+
+on the SAP attribute names, refer to the section '/ELO/BO_FIELDS' transaction.
+
+This data can vary depending on the business object and possibly the release versions. Table data
+
+(e.g. on order items) is also offered. When used in a field, it is listed separated by pilcrow
+
+characters (¶).
+
+Metadata forms in ELO 
+
+ELO Connectivity Pack – Indexdownload contains three new metadata forms specifically for an SAP
+
+business object: an SAP folder form, the new SAPDATA form, and a template form that ELO
+
+Business Partners can use as a basis for customizing metadata forms. By default, these metadata
+
+forms are defined for the Everyone permissions group. The ELO Business Partner has to make any
+
+necessary changes based on the existing permissions concept.
+
+SAP-PurchaseOrder – business object BUS2012 
+
+The SAP-PurchaseOrder metadata form was defined to index documents for the PO (BU2012)
+
+business object. This form has three tabs with the following fields:
+
+7 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+8 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+SAP-BillingDocument – business object VBRK 
+
+The SAP-BillingDocument metadata form was defined to index documents for the billing document
+
+(VBRK) business object. This form has four tabs with the following fields:
+
+9 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+10 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+SAP-Vendor (supplier) – business object LFA1 
+
+The SAP-Vendor metadata form was defined to index documents for the vendor (LFA1) business
+
+object. This form has three tabs with the following fields:
+
+11 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+12 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+SAP-Templatemask metadata form 
+
+The template metadata form SAP-Templatemask was created to add metadata to SAP business
+
+objects. ELO Business Partners can use this form as a basis for their customizations. This template
+
+form contains the mandatory fields required to download an index, divided into three tabs:
+
+13 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+To retrieve data from the SAP function module, all you have to do is create fields for the SAP
+
+attribute names and assign them to the metadata form. You can use the SAP transaction ELO
+
+Connectivity Pack – Indexdownload report contained in the SAP transport for this.
+
+'SAPDATA' SAP form 
+
+General SAP document metadata form for all SAP objects with the required basic information. This
+
+form is mandatory when filing documents from SAP and should only be changed if necessary.
+
+Please note
+
+Do not delete any fields in the metadata form SAPDATA.
+
+14 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+15 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+SAP metadata form 'SAP-Folder' 
+
+The SAP-Folder metadata form is used for the bottom folder of the new structure. This folder only
+
+contains documents.
+
+16 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+'/ELO/BO_FIELDS' transaction 
+
+This transaction enables you to show all SAP attribute fields for SAP business objects.
+
+After importing transports on your SAP system, start the transaction via the transaction code /
+
+n/ELO/BO_FIELDS.
+
+To search business objects, you can use the F4 help or enter the object type. In this example,
+
+we will use the object type KNA1 (Customer).
+
+1. 
+
+2. 
+
+17 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Once you have selected a business object and run the function, all possible attributes for this
+
+SAP business object are shown.
+
+Now, enter the technical name of the desired field as a field in your metadata form.3. 
+
+18 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+ELO configuration 
+
+Once you have implemented the erp.sap.indexdownload package, go to Configuration > 
+
+indexdownload.config. The ELO Connectivity Pack – Indexdownload configuration interface opens in
+
+ELO.
+
+Please note
+
+Only edit the configuration in the Business Solutions Custom path to ensure the system can
+
+be updated in the future. When a module is updated, the configuration in the Business
+
+Solutions folder can be overwritten.
+
+The configuration interface contains two areas: one for general settings and the Structure and rights
+
+area. In addition, you can enable additional configuration settings by selecting the Expert mode
+
+option.
+
+Information
+
+When installing the solution with ELO 10, you may not be able to open the configuration
+
+interface. For more information, refer to the Installation information.
+
+19 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Configuration – General 
+
+Move enabled: Enable/disable document sorting from the chaos folder based on specified criteria.
+
+URL (ELO Smart Link Content Server): URL to the ELO Smart Link or ELO ArchiveLink interface
+
+(server URL):
+
+Form name: Default metadata form for Indexdownload. The same metadata form as the one in the
+
+ELO Smart Link or ELO ArchiveLink configuration must be entered here.
+
+Metadata field to check whether the index has already been downloaded: Check for downloading
+
+the index again (button).
+
+Restrict to user group: Here, you can enable the button to download an index (see chapter the 
+
+Additional functions) for a specific user group. If the field is left blank, all ELO users can use the
+
+button.
+
+Clear all fields before re-downloading that are not required to link the document to SAP: This means
+
+that the index fields (besides the ArchiveLink system fields) are cleared before the index is
+
+20 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+downloaded for a document again. If this function is disabled, the metadata are continuously added
+
+to the fields.
+
+View in expert mode 
+
+SAP document link fields: List of all default SAP ArchiveLink fields that are not cleared when the
+
+option above is selected.
+
+Configuration – Structure and rights 
+
+In the following area, you can create different scenarios, e.g. for setting up a structure or assigning
+
+permissions.
+
+21 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Move actions 
+
+Metadata fields for determining the name 
+
+In the first part of the Structure and rights configuration interface, you can configure the fields that
+
+are used to determine names.
+
+Metadata fields: The short name of the document is generated based on these entries. The fields
+
+entered here are checked. If the first field is blank, the second field is checked, etc. By default, the 
+
+SAP_DESCR field contains a field from the SAP table TOAAT (description).
+
+Template for determining the new path 
+
+In the second area, you can create a new document path using Handlebar syntax. You can use the
+
+fields configured in SAPDATA for this. It is also possible to move the documents to the SAP path at
+
+this point and, after successfully changing the metadata form and downloading a new index, create
+
+a structure with your own scripts. See also the chapter Process.
+
+22 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Path (Handlebars support): Path for building the folder structure based on field values of the form 
+
+SAPDATA.
+
+Mandatory fields (in the path; also used for the search): If you have defined mandatory fields in the
+
+path, enter them here. ELO creates the folder structure based on these fields.
+
+Form change (document) 
+
+The next step is to change the metadata form. At this point, you can specify which metadata fields
+
+and values to assign to the desired metadata form.
+
+Metadata field and value assignment to form: Each metadata field in the default form SAPDATA can
+
+be used to change forms in order to assign documents not only new forms but also new fields.
+
+Recommendation: Set a metadata form for an SAP business object or document type.
+
+When you change the form, the index is downloaded again, as the new form may contain or use
+
+other fields.
+
+Folder form 
+
+Form name: The form assigned to the bottom folder of the new structure can be defined here. This
+
+folder only contains documents. By default, ELO uses the SAP-Folder form.
+
+If the Expert mode field under the menu is selected, two additional menu items appear.
+
+23 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+ 
+
+Update short name: If this option is enabled, the Path (Handlebars support) setting is interpreted
+
+differently. The last entry is no longer used to set the path, but instead defines the short name of
+
+the item to be filed.
+
+Example with template path:
+
+The OBJECT_ID has the value 450001000.
+
+Previously, the document was filed to the SAP¶Orders¶450001000 structure. By enabling the
+
+option, the document is now filed to the SAP¶Orders structure and is assigned the value 450001000
+
+as its short name. If you want to keep the previous structure when enabling this option, you will
+
+have to add an element to the template path. The example would then look like this:
+
+The result: The document would be filed to SAP¶Orders¶450001000 as before, but also assigned the
+
+short name 450001000.
+
+It is also possible to initiate this via an event type linkage in the SAP system.
+
+Update repository path: This function can be used to configure whether the short name is checked
+
+and modified on document storage and the subsequent index download, and whether it is modified
+
+and moved if there is new metadata. It is also possible to initiate this via an event type linkage in
+
+the SAP system.
+
+Apply metadata from document: Defines the fields from the first document of the respective folder
+
+which are then applied to the SAP-Folder form defined above.
+
+Information
+
+SAP¶Orders¶{{{sord.objKeys.OBJECT_ID}}}
+
+SAP¶Orders¶{{{sord.objKeys.OBJECT_ID}}}¶{{{sord.objKeys.OBJECT_ID}}}
+
+24 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+The AR_OBJECT (document type) field is required for future developments. This field is left
+
+blank in the current configuration.
+
+Information
+
+If you make any adjustments to the configuration or script, you need to restart the ELO
+
+Indexserver and ELO Automation Services Tomcat services.
+
+Assignment of user and group rights 
+
+In this area, you can assign user and group rights to a document or its structure based on specific
+
+values.
+
+ 
+
+Document: If the box is checked, the rights are set for the document.
+
+Structure: If this box is checked, the rights are assigned to the folder structure in which the
+
+document is stored. The structure used here only affects the structure that is explained in the
+
+chapter Assignment of template structures.
+
+Replace rights: ELO takes on the rights of the parent element by default. If this option is enabled,
+
+the rights of the parent element are discarded and only the set rights are assigned. Please note
+
+that this function only works if a folder structure does not yet exist (see section Assignment of
+
+template structures).
+
+Metadata field: The technical name of the metadata field to be checked is entered here.
+
+Value: The value that is compared with the value from the specified metadata field. The rights are
+
+set if there is a match.
+
+RegEx: If this box is checked, the entry in the Value field must be a regular expression. The
+
+convention for the regular expression is without slashes.
+
+Example: BUS201[0,2] would result in matches with the values BUS2010 and BUS2012.
+
+25 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+User or group name: Enter the desired users or groups that you want to assign rights to here.
+
+RWDELP: Use the check boxes to set the different permissions types for users or groups.
+
+R = View
+
+W = Change metadata
+
+D = Delete
+
+E = Edit
+
+L = Edit list
+
+P = Set permissions (from ELO 12)
+
+For more information, refer to the documentation Concept for assigning rights and permissions.
+
+Assignment of template structures 
+
+Besides creating a simple structure based on metadata, this is where you automatically create a
+
+folder structure based on a configured template when filing a document. The required template can
+
+be created in the configuration area for the Indexdownload function at the following path:
+
+Administration // Business Solutions Custom // erp.sap.indexdownload // Configuration //
+
+FolderTemplates
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+26 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+https://docs.elo.com/admin/config/en-us/user-management/concept-recommendations/
+https://docs.elo.com/admin/config/en-us/user-management/concept-recommendations/
+
+
+If a document is stored for an object for the first time, a template structure is created based on the
+
+configuration.
+
+Information
+
+It is also possible to create the name of a folder in the folder template using Handlebars
+
+syntax. Example text for an SAP object:
+
+Rules and matches 
+
+Metadata field: Enter the technical name of the metadata field to be checked here.
+
+Value: Enter the value here that is compared with and must match the value in the specified
+
+metadata field to create the template structure. If the values match, the structure configured under 
+
+Path to template is created.
+
+RegEx: If you want to use a regular expression in the Value field, you must check this box. The
+
+convention for the regular expression is without slashes. Example: BUS201[0,2] would result in
+
+matches with the values BUS2010 and BUS2012.
+
+Path to template: Enter the path to the template structure here. For example, if you created a
+
+template structure PurchaseOrder, this would mean that when you file a corresponding document,
+
+the structure is created at the following path provided all the conditions are met:
+
+Administration // Business Solutions Custom // erp.sap.indexdownload // Configuration //
+
+FolderTemplates // PurchaseOrder
+
+At this point, you can use a separator to define a deeper folder structure. However, the separator
+
+used must be leading, e. g. if you enter /Vendor/Orders, the slash is recognized as a separator.
+
+Handlebars syntax is also allowed, which enables you to control templates flexibly.
+
+If you use Handlebars syntax to create the structure, you can only use metadata from the fields of
+
+the initial template, in most cases SAPDATA. If more information is required at this point than is
+
+available in the default system, the form SAPDATA and the index download need to be customized.
+
+Example
+
+27 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+The system checks the field SAP-OBJECT for the contents BUS2010 and BUS2012. If this condition is
+
+met, the corresponding template structure is created from the following path:
+
+In this case it is the structure below /BUS2010 or /BUS2012, as defined by the rule.
+
+Assignment of documents in the template structure 
+
+There is another function that allows you to store documents (e.g. by document type) in child
+
+directories based on rules. You can create these directories using the template structure. If a
+
+specified child directory does not exist within the template structure, it is created.
+
+Metadata field: The technical name of the metadata field to be checked is entered here.
+
+Value: Enter the value to be compared in the specified metadata field here. If there is a match, the
+
+template structure of the defined subpath is created, see below.
+
+RegEx: If you want to use a regular expression in the Value field, you must check this box. The
+
+convention for the regular expression is without slashes. Example: BUS201[0,2] would result in
+
+matches with the values BUS2010 and BUS2012.
+
+Subpath: The subpath defined here is based on the path of the template structure. Again, the first
+
+character to be defined is the separator. You can specify any depth, and also use Handlebars
+
+syntax. If the path does not exist, the structure is created.
+
+/{{{sord.objKeys.SAP\_OBJECT}}}
+
+28 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Process 
+
+After filing a document from SAP, initially only the standard information such as SAPPATH (SAP
+
+Archivepath) or SAPCRDATA (SAP Creation Date) is stored. Here are two possible scenarios of how
+
+you can automate the index download:
+
+With the configuration setting in ELO Smart Link. You will find details in the configuration
+
+documentation of ELO Smart Link for SAP® ERP.
+
+With event linkage from the SAP system. This function is also used, for example, in the ELO
+
+Integration Client environment to obtain metadata from the SAP system and build structures
+
+in ELO, which the ELO Integration Client requires. For more information, refer to the ELO
+
+Toolbox for SAP® ERP documentation. 
+
+If the index download function is enabled in the configuration settings of ELO Smart Link, there is a
+
+system delay until the index is download. The download interval can be set in the ELO Smart Link
+
+configuration.
+
+The function module in SAP is now contacted and an initial index download is performed based on
+
+the standard information. As the SAP function module can identify the referenced document in SAP
+
+based on SAPPATH, it returns all available index values to ELO. Based on the metadata fields that
+
+have the same attribute names in SAP, ELO can now complete the required metadata fields (e.g. 
+
+SAP_OBJECT or OBJECT_ID).
+
+If the function Move enabled is selected, the data is transferred to the ELO structure via an ELOas
+
+script based on the metadata fields in the form SAPDATA. In addition, the template structure is
+
+created if the configuration is stored. The defined permissions in the configuration are also set. The
+
+next step is to change the metadata form, if configured.
+
+Information
+
+• 
+
+• 
+
+29 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+file:///builds/documentation/admin/integrations/suite-sap-al/.temp/elo-toolbox-for-sap
+file:///builds/documentation/admin/integrations/suite-sap-al/.temp/elo-toolbox-for-sap
+
+
+The structure is based on the data from the first index download. If additional or different
+
+fields are required to create the structure, these can be added in the base form (SAPDATA).
+
+After the new form has been selected, a second index download is performed and the available
+
+metadata fields of the new form are completed. The index download also uses the same SAP
+
+attribute names here.
+
+Information
+
+If you only want to change the metadata form, you can modify the corresponding script so
+
+that a dummy path (SAP) is used instead of the chaos folder, for example.
+
+30 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Additional functions 
+
+'Indexdownload' button 
+
+You will find the Indexdownload button on the new SAP tab. Click this button to download the index
+
+of the selected documents again. Depending on the configuration, the current metadata values are
+
+either deleted or retained. The values are separated with a semicolon.
+
+The function checks whether the selected documents have a reference to the SAP system and
+
+whether they have already been indexed. If either of the two cases applies, these documents are
+
+listed:
+
+You now have the option to abort the process or continue. Another dialog box appears, which either
+
+confirms the process was successful or lists all documents for which the index download was not
+
+completed.
+
+Please note
+
+31 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+The index download requires a certain amount of time for indexing. During this time, do not
+
+lock any documents that you are performing the index download on. In addition, when using
+
+a manual index download, you should limit the number of documents, otherwise the process
+
+may take a long time and can cause the Indexserver process to abort. We recommend
+
+selecting no more than 500 entries.
+
+ELO Connectivity Pack ‒ Indexdownload extensions 
+
+If you would like to add more fields or implement an existing development to exchange data, you
+
+can create an extension for ELO Connectivity Pack – Indexdownload. ELO only recommends this
+
+option if you have extensive knowledge of SAP-ABAP programming.
+
+Create class 
+
+Create a new class (e.g. ZCL_EXT_KEY_EXPORT) in the transaction SE24.
+
+Enter the description and confirm with Save.
+
+1. 
+
+2. 
+
+32 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Enter the desired/required package.
+
+Select the desired transport order or create a new one.
+
+On the Interfaces tab, you can now enter the /ELO/IF_EXTEND_KEY_EXPORT interface.
+
+Next, you have to implement the two methods on the Methods tab.
+
+The /ELO/IF_EXTEND_KEY_EXPORT~GET_KEYS method is called following standard processing
+
+when downloading an index. Here, you can add fields and values or replace the entire
+
+content. The IV_TOA import parameter is assigned the entry from the link table (e.g.
+
+content repository, document ID, SAP object, object ID, etc.). The CT_KEYTAB changing
+
+parameter contains the completed value pair tables.
+
+3. 
+
+4. 
+
+5. 
+
+6. 
+
+33 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+This figure shows an implementation example that deletes all default values and calls an
+
+implemented function module.
+
+In addition, the name and descriptions of possible fields for the implementation should be
+
+maintained in the /ELO/IF_EXTEND_KEY_EXPORT~GET_POSSIBLE_FIELDS method.
+
+34 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+The figure shows an implementation for the case that the called function module from the
+
+previous example only returns one field named DATEDOCUMENT for the BKPF business
+
+object.
+
+Implementation example 
+
+An implementation example that can be used is available in the /ELO/CL_KE_EXT_BKPF class. This
+
+implementation outputs the fields Document type, Document date, and Posting date for the BKPF
+
+(accounting document) business object.
+
+Maintaining extensions 
+
+The /ELO/EXT_KE transaction is available to maintain developed extensions. This transaction starts
+
+the maintenance dialog box for the /ELO/KE_EXT table.
+
+In the transaction, you can maintain the class created for a business object. You also have the
+
+option to create an asterisk entry (*). This is then used for all business objects without a specific
+
+entry.
+
+35 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+The figure shows a corresponding entry.
+
+Using the ELO Integration Client within the SAP system 
+
+With the ELO Integration Client, ELO and documents filed in ELO can now be used within SAP
+
+transactions. This requires the products ELO Connectivity Pack for SAP® ERP and ELO Toolbox for
+
+SAP ERP®. The requirements listed in the chapter Basics also have to be met.
+
+The ELO Integration Client is part of the ELO installation packages as well as SAP transports
+
+described in the chapter Installation. Configuration of the ELO Integration Client within ELO is
+
+described in the documentation for the ELO Toolbox for SAP® ERP.
+
+Indexdownload transfer (see also ELO Toolbox for SAP® ERP) 
+
+To use the ELO Integration Client in an SAP transaction, ELO requires a defined path to the
+
+corresponding SAP document. Creating this path requires an RFC destination within the SAP
+
+system. The path defined in ELO Connectivity Pack – Indexdownload is used to create the path. For
+
+more details on creating a path, refer to the chapter ELO configuration.
+
+Create a new RFC destination via SAP transaction SM59.1. 
+
+36 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+'Technical Settings' tab
+
+Name Value
+
+RFC destination "Basic entry"
+
+Connection type http connection to ext. server
+
+Description 1 "Basic entry"
+
+Target machine ELO servers
+
+Service no. Port number of the ELO REST Service on the ELO server
+
+"Logon & Security" tab
+
+37 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Name Value
+
+User ELO user
+
+Password Password of the relevant user
+
+Configuring the Indexdownload destination 
+
+The transfer is realized via the ELO REST module.
+
+1. 
+
+38 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+To establish a connection, the entry to the ELO REST module has to be configured as the
+
+destination name and path prefix via SAP transaction /ELO/KE_DESTINATIONS.
+
+Column Explanation
+
+Object type
+Specification of the desired SAP business object, such as BUS2012 for
+
+orders. Alternative: * as a wildcard
+
+Destination
+
+name
+Name of the ELO destination
+
+Path prefix Path to the ELO REST Service module via the ELOix proxy plug-in
+
+The path also points to the delivered RF within ELO REST:
+
+/ix-SAPDEMO/plugin/de.elo.ix.plugin.proxy/rest/api/misc/functions/
+
+RF_erp_sap_indexdownload_service_CreatePath
+
+From version 1.0.9 
+
+The table was extended by the column role to get to different Integration Clients belonging to ELO
+
+systems, depending on the user role.
+
+Column Explanation
+
+Object type
+Specification of the desired SAP business object, such as BUS2012 for orders.
+
+Alternative: * as a wildcard
+
+Role Role of the user
+
+Destination name Name of the ELO destination
+
+Path prefix Path to the ELO REST Service module via the ELOix proxy plug-in
+
+Remote Function
+
+Name
+Access to new REST-API via Indexserver
+
+From ELO 21, the Rest-API interface can be that was integrated into the Indexserver can be called
+
+via the Remote Function Name column with the following function:
+
+If an entry exists in this field, the field Path prefix is ignored. The Indexserver must also be entered
+
+under the destination name.
+
+RF_erp_sap_indexdownload_service_CreatePath
+
+39 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Please note
+
+The roles used must be valid and added in the user base accordingly. If the role of the user
+
+is not valid, a search is performed for the role *.
+
+Example for determining the valid entry 
+
+The following example explains how the most precise match is compared to the roughest match to
+
+use the corresponding destination:
+
+First, a search is performed for the biggest object type and object role match. Our example
+
+only refers to system 4 if the object type is BUS2012 and the role ZICELO_4 was added in the
+
+user's master record.
+
+If no results are found, a check is performed to determine whether an entry with the
+
+available object type and role exists. Therefore, all users who do not have the role ZICELO_4
+
+for the object type BUS2012 are forwarded to system 3.
+
+If there is no match here either, a search is performed for a result for the object type * and
+
+the suitable role, and therefore, the user is forwarded to system 2 if the user has the role 
+
+ZICELO_2, independently of the object type.
+
+A default entry should be created so that a destination can be referred to if there is no match,
+
+in this example system 1.
+
+Event-based structure 
+
+For the ELO Integration Client to have a starting point to display the structure within an SAP object,
+
+it requires a structure built based on SAP business object information. See also the documentation
+
+for ELO Toolbox for SAP® ERP.
+
+This structure can also be used so that it builds on SAP events. Creating the same structures (e.g. a
+
+purchase file) in ELO when creating an order in the SAP system, for example, does not require the
+
+ELO Integration Client in this case.
+
+Information
+
+You can start background jobs with an event. An event is a signal to the background control
+
+that a certain status has been reached in the system. The background control then starts all
+
+jobs waiting for this event. For example, you can start an external program in the
+
+background with this event.
+
+Even if you don't want to use the ELO Integration Client, the event-based structure also requires the
+
+configurations from the section Using the ELO Integration Client within the SAP system.
+
+The events to be used also have to be implemented/triggered (thrown) within an SAP system. If
+
+such an event occurs, a process is started via the receiver function module /ELO/
+
+SEND_KEYS_FROM_BO. The configuration of the Indexdownload function is used. If a structure was
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+40 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+defined within the indexdownload.config file or the folder template is used for the corresponding
+
+SAP business object (see section Assignment of template structures), the defined structures are
+
+created in ELO.
+
+Implementation example for event-controlled structure creation 
+
+In the following example implementation, we use the event Order created to create a defined order
+
+file from the folder template.
+
+In the first step, you have to identify the event you want to use within the SAP system.
+
+Call the desired SAP business object using SAP transaction SWO1 and then open the Events
+
+menu item.
+
+For SAP business object BUS2012, there is the event PurchaseOrder.created, which triggers a
+
+new order on creation.
+
+In the next step, an event type linkage has to be created for this event.
+
+Go to SAP transaction SWETYPV and create a new event type linkage.
+
+Please note
+
+Event type linkages may already be enabled on a customer system. Only make changes
+
+after consulting with the SAP partner.
+
+1. 
+
+2. 
+
+41 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Create a new entry with the information from the following table and save it.
+
+Name Value
+
+Object category BOR object type
+
+Object type BUS2012
+
+Event CREATED
+
+Receiver type CREATE STRUCTURE (description)
+
+Receiver call Function module
+
+Receiver function module /ELO/SEND_KEYS_FROM_BO
+
+Event delivery Using tRFC (default)
+
+Linkage enabled X
+
+Enable event queue -
+
+Behavior in event an error is returned System default
+
+Receiver status No errors
+
+Information
+
+1. 
+
+42 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+The receiver function module named here is part of the installation package for ELO
+
+Connectivity Pack for SAP® ERP – Indexdownload and is located in the respective SAP
+
+transports.
+
+If the event type linkage is enabled and the configurations have been made for the business object 
+
+Purchase order BUS2012 in ELO, the structure is automatically created in ELO when an order is
+
+created in the SAP system (in our example, as a folder template).
+
+Information
+
+It is possible that an event required for an SAP business object may not exist. In this case,
+
+you can create a Z business object to define the desired event. However, you should only do
+
+this if you have extensive knowledge of SAP.
+
+Automatic metadata update 
+
+The event type linkage can also be used to update metadata for a document already stored in ELO,
+
+for example if you want to update the metadata after changing an order. A new index download is
+
+performed for all documents of the corresponding SAP business object.
+
+This event type linkage can also be used to download metadata after successfully linking a barcode
+
+via the barcode upload function.
+
+Developed for this purpose, the function module /ELO/TRIGGER_DOWNLOAD is part of the
+
+installation packages and the corresponding SAP transport.
+
+Implementation example for updating metadata 
+
+As in the example for creating a structure (see section Implementation example for event-
+
+controlled structure creation), a relevant event has to be identified to update the metadata.
+
+As described, you can use the SAP transaction SWO1 for the corresponding object.1. 
+
+43 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+In the next step, you create the event type linkage for the identified event.
+
+Go to SAP transaction SWETYPV and create a new event type linkage. This example uses the
+
+event PurchaseOrder.changed.
+
+Please note
+
+Event type linkages may already be enabled on a customer system. Only make changes
+
+after consulting with the SAP partner.
+
+Create a new entry with the following information and save it.
+
+Name Value
+
+Object category BOR object type
+
+Object type BUS2012
+
+Event CHANGED
+
+Receiver type TRIGGER INDEXDOWNLOAD (description)
+
+Receiver call Function module
+
+2. 
+
+1. 
+
+44 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Name Value
+
+Receiver function module /ELO/TRIGGER_DOWNLOAD
+
+Event delivery Using tRFC (default)
+
+Linkage enabled X
+
+Enable event queue -
+
+Behavior in event an error is returned System default
+
+Receiver status No errors
+
+If the event type linkage is enabled and the configurations have been made for the business
+
+object Purchase order BUS2012 in ELO, the index download function is carried out again when
+
+an order is changed in the SAP system.
+
+Please note
+
+If the function Field values will be overwritten is disabled for the respective content
+
+repository in the Metadata area of the ELO Smart Link for SAP ERP® configuration,
+
+performing an index download again adds the metadata to the fields separated by a pilcrow
+
+character ¶.
+
+Only enable this setting if you want the newly downloaded metadata to be maintained. In
+
+this case, the changes are documented in the change history.
+
+Additional configuration parameters from the ELO Smart Link for SAP® ERP documentation
+
+can also be used.
+
+Implementation example based on Barcode Upload 
+
+You can also use the function module /ELO/TRIGGER_DOWNLOAD to respond to linking of a barcode
+
+in the SAP system. A destination does not have to be configured for this function.
+
+45 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+In the first step, you have to configure the SAP system to create/throw an event upon successful
+
+barcode linking.
+
+Switch to SAP transaction OAG1 and disable the entry Create event BARCODE.ASSIGNED in
+
+the bottom area.
+
+If a new link entry is now created via the known standard barcode upload scenarios (see also the 
+
+ELO Smart Link for SAP® ERP documentation), the event BARCODE.ASSIGNED is thrown/executed
+
+and can then be implemented as an event type linkage for the receiver function module /ELO/
+
+TRIGGER_DOWNLOAD.
+
+Example
+
+Name Value
+
+Object category BOR object type
+
+Object type BARCODE
+
+Event ASSIGNED
+
+1. 
+
+46 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Name Value
+
+Receiver type TRIGGER INDEXDOWNLOAD BARCODE (description)
+
+Receiver call Function module
+
+Receiver function module /ELO/TRIGGER_DOWNLOAD
+
+Event delivery Using tRFC (default)
+
+Linkage enabled X
+
+Enable event queue -
+
+Behavior in event an error is returned System default
+
+Receiver status No errors
+
+47 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Required permissions 
+
+The SAP service user entered in the configuration of ELO Smart Link or ELO ArchiveLink for SAP (e.g.
+
+CPIC_ELO) requires different authorizations to execute and read the index data in your SAP system.
+
+The authorizations listed here are derived from the supplied templates for purchase order
+
+BUS2012, billing document VBRK, and vendor LFA1. If fields or SAP objects are added to the index
+
+download, other authorizations are required for the SAP service user. You can use the SAP
+
+transaction stauthtrace to analyze this.
+
+Permissions for 'purchase order BUS2012' 
+
+The following table lists the permissions for purchase order BUS2012.
+
+Object Field # (1) Value # (1) Field # (2) Value # (2)
+
+S_RFC RFC_TYPE FUGR RFC_NAME SYST
+
+S_RFC RFC_TYPE FUGR RFC_NAME RFC1
+
+S_RFC RFC_TYPE FUGR RFC_NAME SDIFRUNTIME
+
+S_RFC RFC_TYPE FUGR RFC_NAME /ELO/CONNECT_EXPORT
+
+F_LFA1_GEN ACTVT 3
+
+CPE_SETTIN ACTVT 3
+
+M_BEST_EKO ACTVT 3 EKORG *
+
+M_BEST_EKO ACTVT 8 EKORG *
+
+M_BEST_EKO ACTVT 9 EKORG *
+
+M_BEST_EKG ACTVT 3 EKGRP *
+
+M_BEST_EKG ACTVT 8 EKGRP *
+
+M_BEST_EKG ACTVT 9 EKGRP *
+
+M_BEST_BSA ACTVT 3 BSART *
+
+M_BEST_BSA ACTVT 8 BSART *
+
+M_BEST_BSA ACTVT 9 BSART *
+
+M_BEST_WRK ACTVT 3 WERKS *
+
+Information
+
+The permissions can be set even more restrictively at this point, e.g. by configuring
+
+restrictions on EKORG or BSART.
+
+Permissions billing document VBRK 
+
+The following table lists the permissions for billing document VBRK.
+
+48 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+
+Object
+Field #
+
+(1)
+
+Value #
+
+(1)
+
+Field #
+
+(2)
+Value # (2)
+
+Field #
+
+(3)
+
+Value #
+
+(3)
+
+S_RFC RFC_TYPE FUGR RFC_NAME SYST ACTVT 16
+
+S_RFC RFC_TYPE FUGR RFC_NAME
+/ELO/
+
+CONNECT_EXPORT
+ACTVT 16
+
+S_RFC RFC_TYPE FUGR RFC_NAME SYSU ACTVT 16
+
+S_RFC RFC_TYPE FUGR RFC_NAME
+/ELO/
+
+CONNECT_EXPORT
+ACTVT 16
+
+S_TABU_DIS DICBERCLS FC01 ACTVT 3
+
+F_KNA1_GEN ACTVT 3
+
+Permissions for 'vendor LFA1' 
+
+The following table lists the permissions for vendor LFA1.
+
+Object
+Field #
+
+(1)
+
+Value #
+
+(1)
+
+Field #
+
+(2)
+Value # (2)
+
+Field #
+
+(3)
+
+Value #
+
+(3)
+
+S_RFC RFC_TYPE FUGR RFC_NAME SYST ACTVT 16
+
+S_RFC RFC_TYPE FUGR RFC_NAME
+/ELO/
+
+CONNECT_EXPORT
+ACTVT 16
+
+S_RFC RFC_TYPE FUGR RFC_NAME SYSU ACTVT 16
+
+S_RFC RFC_TYPE FUGR RFC_NAME
+/ELO/
+
+CONNECT_EXPORT
+ACTVT 16
+
+F_LFA1_GEN ACTVT 3
+
+F_LFA1_APP ACTVT 3 APPKZ *
+
+F_LFA1_GRP ACTVT 1 KTOKK *
+
+49 ELO Suite for SAP ArchiveLink® (SAP NetWeaver® & SAP S/4HANA®)
+
+
+	Table of contents
+	ELO Connectivity Pack for SAP® ERP ‒ Indexdownload
+	Getting started
+	Security and licensing requirements
+	Basics
+
+	Installation
+	SAP components
+	Common package
+	Installation information
+
+	Functionality
+	Metadata forms in ELO
+	SAP-PurchaseOrder – business object BUS2012
+	SAP-BillingDocument – business object VBRK
+	SAP-Vendor (supplier) – business object LFA1
+	SAP-Templatemask metadata form
+	'SAPDATA' SAP form
+	SAP metadata form 'SAP-Folder'
+
+	'/ELO/BO_FIELDS' transaction
+
+	ELO configuration
+	Configuration – General
+	View in expert mode
+
+	Configuration – Structure and rights
+	Move actions
+	Metadata fields for determining the name
+	Template for determining the new path
+	Form change (document)
+	Folder form
+
+	Assignment of user and group rights
+	Assignment of template structures
+	Rules and matches
+
+	Assignment of documents in the template structure
+
+
+	Process
+	Additional functions
+	'Indexdownload' button
+	ELO Connectivity Pack ‒ Indexdownload extensions
+	Create class
+	Implementation example
+	Maintaining extensions
+
+	Using the ELO Integration Client within the SAP system
+	Indexdownload transfer (see also ELO Toolbox for SAP® ERP)
+	Configuring the Indexdownload destination
+	From version 1.0.9
+	Example for determining the valid entry
+
+
+	Event-based structure
+	Implementation example for event-controlled structure creation
+
+	Automatic metadata update
+	Implementation example for updating metadata
+	Implementation example based on Barcode Upload
+
+
+	Required permissions
+	Permissions for 'purchase order BUS2012'
+	Permissions billing document VBRK
+	Permissions for 'vendor LFA1'
+
+
+

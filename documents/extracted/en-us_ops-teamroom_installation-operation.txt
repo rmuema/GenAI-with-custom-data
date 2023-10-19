@@ -1,0 +1,2556 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO Teamroom | Installation and operation
+
+
+ELO Teamroom
+
+Installation and operation
+
+
+
+3
+
+3
+
+4
+
+4
+
+6
+
+9
+
+11
+
+14
+
+18
+
+20
+
+22
+
+26
+
+26
+
+27
+
+29
+
+34
+
+34
+
+35
+
+37
+
+38
+
+45
+
+45
+
+46
+
+47
+
+54
+
+56
+
+Table of contents
+
+How it works and architecture
+
+Overview 
+
+Installation
+
+Introduction and requirements
+
+Install application in the main repository 
+
+Install ELO Teamroom server 
+
+Install scripts on the ELO Teamroom server 
+
+Configuration on the ELO Teamroom server 
+
+Edit config file in the main repository 
+
+Install scripts in the main repository 
+
+Configuration in the main repository 
+
+Users and groups
+
+Introduction 
+
+Groups 
+
+User registration 
+
+Advanced configuration
+
+Introduction 
+
+'Teamroom' folder 
+
+Configuration file of the ELO Teamroom application 
+
+Teamroom configuration 
+
+Operation
+
+Introduction 
+
+License management 
+
+Teamroom life cycle 
+
+Events 
+
+Conditions and limitations 
+
+2 ELO Teamroom
+
+
+
+How it works and architecture
+
+Overview 
+
+There are situations where participants need to be able to view and edit documents in an ELO
+
+repository, without giving them direct access to the ELO repository. This could be different
+
+companies, such as associations in the construction sector, but it can also be relevant within the
+
+company if different departments have their own repositories. The ELO Teamroom service was
+
+developed for these applications.
+
+If a user wants to share contents for a project in a folder, the user can create a teamroom. This new
+
+folder is marked in the main repository as a Teamroom folder and a teamroom with the same name
+
+is created on the ELO Teamroom server. The folder contents are then synchronized as follows.
+
+Essentially, the ELO Teamroom server is a normal ELO installation. However, it can be located in
+
+the cloud, DMZ, or on the local network as needed.
+
+Please note
+
+The ELO Teamroom server requires a separate license. The license for the main repository
+
+cannot be duplicated. Request an ELO Teamroom server license before installation.
+
+3 ELO Teamroom
+
+
+
+Installation
+
+Introduction and requirements
+
+This documentation describes a scenario for the complete installation of all components of an
+
+environment with ELO Teamroom on Microsoft Windows. Some steps may differ from the
+
+installation described here depending on your system.
+
+Please note
+
+Some ELO Teamroom components use the same packages as with ELO 20. For this reason,
+
+this documentation sometimes refers to downloads for ELO 20.
+
+Requirements 
+
+The following requirements must be met before the installation:
+
+This documentation assumes that an ELO system has already been installed. This is referred
+
+to here as the main repository. 
+
+For more information on installing an ELO server, refer to the ELO server
+
+documentation.
+
+An installed ELO Java Client. 
+
+You can find more information on the installation in the ELO Java Client administration
+
+documentation.
+
+You need a second host system with an installed database server. 
+
+For more information on installing the database for an ELO system, refer to the ELO
+
+server documentation.
+
+You need an ELO server license that allows installation of the ELO Teamroom servlet in your
+
+main repository.
+
+You require an additional ELO server license for an ELO Teamroom server.
+
+Information
+
+You need to request ELO Teamroom licenses from the ELO order center. You should receive
+
+two license files, one license file without any specific name, and one license file with the
+
+suffix "Teamroom".
+
+Every user that should have access to an ELO Teamroom needs to have a valid e-mail
+
+address. In the case of internal users, the e-mail address must be stored in the ELO user
+
+account.
+
+Download the newest ELO 21 Server Setup version.
+
+• 
+
+◦ 
+
+• 
+
+◦ 
+
+• 
+
+◦ 
+
+• 
+
+• 
+
+• 
+
+• 
+
+◦ 
+
+4 ELO Teamroom
+
+https://docs.elo.com/admin/clients/en-us/java-client/administration/installation.html
+https://docs.elo.com/admin/clients/en-us/java-client/administration/installation.html
+https://docs.elo.com/ops/onprem/en-us/installation/
+https://docs.elo.com/ops/onprem/en-us/installation/
+https://docs.elo.com/ops/onprem/en-us/installation/
+
+
+You will find the download on the ELO SupportWeb under ELO ECM Suite 21 > ELO
+
+Master & Server Setup.
+
+Download the ELO Teamroom application (Teamroom.war) for ELO 20.
+
+Information
+
+Always use the latest version of the package. The version number schema of the
+
+packages is as follows:
+
+<Package>_<x>.<yy>.<zzz>
+
+Package = In this case common or teamroom
+
+x = Main release number
+
+yy = Minor release number
+
+zzz = Build number
+
+Example: common_1.14.001
+
+You will find the download on the ELO SupportWeb under ELO ECM Suite 20 > Modules > ELO
+
+Teamroom > ELO Teamroom 20yy.zzz.
+
+Download the latest version of the ELO Teamroom packages for ELO 20.
+
+You will find the download on the ELO SupportWeb under ELO ECM Suite 20 > Modules > ELO
+
+Teamroom > ELO Teamroom Pakete 1.yy.zzz
+
+Download the latest version of Business Solution ELO Common.
+
+You will find the download on the ELO SupportWeb under Business Solutions > Common >
+
+Downloads ELO Common > Common 1.yy.zzz (You need to scroll further down the page)
+
+Please note
+
+You need to download the ZIP package. Do not install the package from the website.
+
+• 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+5 ELO Teamroom
+
+https://supportweb.elo.com/en-us/elo-ecm-suite-21/elo-master-and-server-setup.html
+https://supportweb.elo.com/en-us/elo-ecm-suite-21/elo-master-and-server-setup.html
+https://supportweb.elo.com/en-us/elo-ecm-suite-21/elo-master-and-server-setup.html
+https://supportweb.elo.com/en-us/elo-ecm-suite-20/modules/elo-teamroom.html
+https://supportweb.elo.com/en-us/elo-ecm-suite-20/modules/elo-teamroom.html
+https://supportweb.elo.com/en-us/elo-ecm-suite-20/modules/elo-teamroom.html
+https://supportweb.elo.com/en-us/elo-ecm-suite-20/modules/elo-teamroom.html
+https://supportweb.elo.com/en-us/elo-ecm-suite-20/modules/elo-teamroom.html
+https://supportweb.elo.com/en-us/elo-ecm-suite-20/modules/elo-teamroom.html
+https://supportweb.elo.com/en-us/business-solutions/common.html
+https://supportweb.elo.com/en-us/business-solutions/common.html
+https://supportweb.elo.com/en-us/business-solutions/common.html
+
+
+Install application in the main repository 
+
+The following steps describe the installation of the ELO Teamroom application (Teamroom.war) in
+
+the main repository. The application establishes the connection to the ELO Teamroom server and
+
+synchronizes the two systems.
+
+Copy the file Teamroom.war from the package ELOTeamroomService20.yy.zzz.zip.
+
+Open the following path in the ELO installation directory (referred to as <ELO):
+
+<ELO>\prog\serversetup2\repository
+
+Optional: If there is already a WAR file for ELO Teamroom, delete it. The file naming
+
+schema is as follows:
+
+trm-20.00.<version number>.<build number>.war
+
+Example: trm-20.00.007.000.war
+
+Paste the copied file.
+
+Rename the file so that it corresponds to the following schema:
+
+trm-20.00.<version number>.<build number>.war
+
+Example: trm-20.00.008.000.war
+
+Navigate up one level in the directory:
+
+<ELO>\prog\serversetup2\
+
+Run the Setup.bat file.
+
+The ELO Server Setup will start automatically.
+
+Click Advanced configuration.
+
+The Start tab appears.
+
+1. 
+
+2. 
+
+◦ 
+
+▪ 
+
+▪ 
+
+3. 
+
+4. 
+
+◦ 
+
+◦ 
+
+5. 
+
+◦ 
+
+6. 
+
+7. 
+
+6 ELO Teamroom
+
+
+
+Click Open license.
+
+Select a license file that allows the use of ELO Teamroom in the main repository.
+
+Information
+
+At this point, you need the license file without the suffix "Teamroom".
+
+Click Applications.
+
+The Applications tab opens.
+
+In the Type drop-down menu, select the entry ELO Teamroom Service.
+
+In the drop-down menu ELO Server Engine, select the third ELO Application Server.
+
+Information
+
+8. 
+
+9. 
+
+1. 
+
+1. 
+
+2. 
+
+7 ELO Teamroom
+
+
+
+You could also select a different ELO Application Server. The third ELO Application Server
+
+was selected here to improve load balancing.
+
+Click Add.
+
+Click Next.
+
+This takes you to the Confirm tab. The ELO Server Setup checks whether the settings are valid.
+
+Review the settings shown here and make sure they are correct before proceeding.
+
+Click Install.
+
+The installation process starts.
+
+When the process is completed, click Quit.
+
+The license has been renewed and the ELO Teamroom application has been installed.
+
+Please note
+
+If you are using a self-signed certificate and the root certificate is different from that of the
+
+ELO Teamroom server, you must load the root certificate of the ELO Teamroom server into
+
+the truststore of the main repository.
+
+To do so, run the ELO Server Setup again. Select the menu item Import trusted certificate
+
+and import the root certificate of the ELO Teamroom server.
+
+1. 
+
+2. 
+
+1. 
+
+2. 
+
+1. 
+
+8 ELO Teamroom
+
+
+
+Install ELO Teamroom server 
+
+The following steps describe the installation of an additional ELO server that will be used as the
+
+ELO Teamroom server. It provides the functionalities for using ELO Teamroom.
+
+Please note
+
+The ELO Teamroom server should be installed on a separate host.
+
+If ELO Teamroom is also going to be used by people outside your company network, the ELO
+
+Tearoom server must be accessible in a browser.
+
+Make sure that the ELO Teamroom server is adequately protected. One measure you could
+
+take is to place the server in a DMZ.
+
+For the sake of simplicity, we have not described how to implement such measures in this
+
+documentation. You may therefore need to change the path specifications accordingly.
+
+Run the ELO Server Setup.
+
+Click Advanced configuration.
+
+The Start tab appears.
+
+Click Open License.
+
+Select a license file that has the suffix "Teamroom".
+
+Optional: If you are using SSL, enter the appropriate certificates and certificate chain and
+
+enable SSL for each ELO Application Server.
+
+Please note
+
+If you are using a self-signed certificate and the root certificate is different from that of the
+
+main repository, you must load the root certificate of the ELO Teamroom server into the
+
+truststore of the ELO Teamroom server.
+
+After you have installed the server, you need to run the ELO Server Setup again. Select the
+
+menu item Import trusted certificate and import the root certificate of the main repository.
+
+Continue with the settings in the ELO Server Setup until you get to the Applications tab.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+1. 
+
+9 ELO Teamroom
+
+
+
+Install at least the following applications:
+
+ELO Indexserver
+
+ELO Forms Services (ELOwf)
+
+ELO Automation Services (ELOas)
+
+Please note
+
+The ELO Teamroom application is not required on this server.
+
+Click Next.
+
+This takes you to the Confirm tab. The ELO Server Setup checks whether the settings are
+
+valid.
+
+Review the settings shown here and make sure they are correct before proceeding.
+
+Click Install.
+
+The installation process starts.
+
+When the process is completed, click Quit.
+
+The ELO Teamroom server was installed.
+
+1. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+2. 
+
+3. 
+
+4. 
+
+1. 
+
+10 ELO Teamroom
+
+
+
+Install scripts on the ELO Teamroom server 
+
+In the next step, the ELO Teamroom server requires several scripts. These are provided as
+
+.ELOINST packages that can be installed.
+
+To start with, ELO Teamroom requires functions of the ELO Common package (common1-yy.zzz.zip).
+
+You also need scripts specifically designed for ELO Teamroom from the ELO Teamroom packages
+
+ZIP file (teamroom1.yy.zzz.zip).
+
+Installation of the packages 
+
+Extract the ZIP file.
+
+Open the installation folder.
+
+Open the ELO Java Client.
+
+Connect to the ELO Indexserver of the ELO Teamroom server and log on as administrator.
+
+Drag the 00sol.common1.yy.zzz.eloinst file to the ELO Java Client.
+
+The Installation dialog box appears.
+
+Click Allow installation.
+
+The installation starts.
+
+Please note
+
+The installation process mainly takes place in the background. Once the installation is
+
+completed, you will see a corresponding message. Wait until the installation has
+
+finished before you start any other installations. In the status bar of the ELO Java
+
+Client, you can see whether the process is still running.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+6. 
+
+11 ELO Teamroom
+
+
+
+The ELOas configuration dialog box opens. The ELOas URL field is red. An error message
+
+appears.
+
+Enter the URL to ELOas on the ELO Teamroom server.
+
+Click Test.
+
+The ELOas URL field should now be green. The error message will disappear.
+
+Click OK.
+
+The installation continues.
+
+When the installation process is completed, the Package Installer dialog box appears.
+
+Click OK.
+
+The installation is completed.
+
+Repeat steps 5, 6, and 10 with the following files:
+
+customsol.common1.yy.zzz.eloinst
+
+7. 
+
+8. 
+
+9. 
+
+10. 
+
+1. 
+
+• 
+
+• 
+
+12 ELO Teamroom
+
+
+
+50elo.teamroom1.yy.zzz.eloinst
+
+52elo.teamroom.Remote1.yy.zzz.eloinst
+
+customelo.teamroom.Remote1.yy.zzz.eloinst
+
+customelo.teamroom1.yy.zzz.eloinst
+
+Once the installations are completed, close the ELO Java Client.
+
+Restart and test 
+
+To complete the installation process, you need to restart the ELO server services and the ELO client.
+
+Restart the ELO Teamroom server services.
+
+Open the ELO Java Client.
+
+The packages for ELO Common and ELO Teamroom should now be fully installed. After
+
+restarting, you will recognize them by the package icons.
+
+• 
+
+• 
+
+• 
+
+1. 
+
+1. 
+
+2. 
+
+13 ELO Teamroom
+
+
+
+Configuration on the ELO Teamroom server 
+
+Once the basic installation is completed, you need to configure a few things on the ELO Teamroom
+
+server.
+
+Teamroom configuration 
+
+Log on to the ELO Administration Console of the ELO Teamroom server as administrator.
+
+Go to the Solutions tab.
+
+Click Teamroom.
+
+The ELO Business Solutions page opens.
+
+Information
+
+Make sure that you only make changes in the folder "Business Solutions Custom".
+
+Click Remote configuration.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+14 ELO Teamroom
+
+
+
+The Remote Teamroom page opens.
+
+Information
+
+All fields containing the keyword "translate" can be addressed with a translation file
+
+(PROPERTIES file). The translation file is not created automatically. If required, you
+
+need to create it manually.
+
+Enter a token in the API Token field.
+
+Please note
+
+The token is required to ensure secure communication between the two servers.
+
+You should make sure that the token is sufficiently complex and not easy to guess.
+
+Do not use a token that appears in this documentation.
+
+Store the token in a secure location. You will need it later on.
+
+Enter the URL to the ELOwf of the ELO Teamroom server in the App Manager URL field. This
+
+URL is used for sending invitation links to a teamroom, for example.
+
+Please note
+
+The URL must end in wf/.
+
+If this URL needs to be externally accessible and you are using a proxy server, enter
+
+the proxy URL.
+
+5. 
+
+6. 
+
+7. 
+
+8. 
+
+15 ELO Teamroom
+
+
+
+Under E-mail, enter a valid e-mail address in the From field. The e-mail address is used for
+
+sending invitation links to a teamroom, for example.
+
+Information
+
+The content of the e-mail is defined using a template. You can customize this
+
+template. Refer to the section Customize the e-mail template for more information.
+
+Click Save.
+
+E-mail server configuration 
+
+In order for ELO to be able to send e-mails, the settings in the Mail Server are of ELO Common must
+
+be configured accordingly.
+
+Open the Basic settings menu item under Solutions in the ELO Administration Console.
+
+Click Mail Server.
+
+9. 
+
+1. 
+
+2. 
+
+16 ELO Teamroom
+
+
+
+Enter the settings of the e-mail server you are using.
+
+Click Save.
+
+3. 
+
+4. 
+
+17 ELO Teamroom
+
+
+
+Edit config file in the main repository 
+
+To enable communication between the main repository and the ELO Teamroom server, you need to
+
+make some settings in the config file of the ELO Teamroom application in the main repository.
+
+Stop the main repository servers.
+
+Open the following directory:
+
+*<ELO>\config\trm-<name des="" repositorys="">\<server name></name>
+
+Open the config.xml file in an editor with administrator rights.
+
+Enter the following settings:
+
+r.user: Service account of the ELO Teamroom server.
+
+api.token: API token that you used in the ELO Teamroom server configuration.
+
+r.ixurl: ELO Indexserver URL of the ELO Teamroom server.
+
+r.pwd: Encrypted password of the ELO Teamroom server service account.
+
+1. 
+
+2. 
+
+◦ 
+
+3. 
+
+4. 
+
+• 
+
+• 
+
+• 
+
+• 
+
+18 ELO Teamroom
+
+
+
+Information
+
+You can use version 21.00.009 of the ELO Teamroom application in an ELO 20 system.
+
+In this case, add the following entry to the file:
+
+Restart the main repository servers.
+
+<entry key="newdelete">true</entry>
+
+1. 
+
+19 ELO Teamroom
+
+
+
+Install scripts in the main repository 
+
+Several scripts also need to be installed in the main repository.
+
+Start the ELO Java Client
+
+Connect to the ELO Indexserver of the main repository and log on as administrator.
+
+If ELO Common is not already installed, install the following files as described in section 
+
+Install scripts on the ELO Teamroom server:
+
+00sol.common1.yy.zzz.eloinst
+
+Enter the ELOas URL of the main repository in the ELOas configuration dialog
+
+box.
+
+custom_sol.common_1.yy.zzz.eloinst
+
+Now install the following files according to the same principle:
+
+50elo.teamroom1.yy.zzz.eloinst
+
+51elo.teamroom.Local1.yy.zzz.eloinst
+
+customelo.teamroom.Local1.yy.zzz.eloinst
+
+customelo.teamroom1.yy.zzz.eloinst
+
+Close the ELO Java Client.
+
+Restart and test 
+
+To complete the installation process, you need to restart the ELO server services and the ELO client.
+
+Restart the main repository services.
+
+Open the ELO Java Client.
+
+1. 
+
+2. 
+
+3. 
+
+◦ 
+
+▪ 
+
+◦ 
+
+4. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+5. 
+
+1. 
+
+2. 
+
+20 ELO Teamroom
+
+
+
+The packages for ELO Common and ELO Teamroom should now be fully installed. After restarting,
+
+you will recognize them by the package icons.
+
+21 ELO Teamroom
+
+
+
+Configuration in the main repository 
+
+After installing the script packages, you need to perform the following configuration steps.
+
+Create reference 
+
+A necessary folder reference is not created automatically under Administration//Teamroom. Create
+
+this reference manually.
+
+Open the Teamroom folder in the ELO Java Client.
+
+Delete the rooms folder.
+
+Open the path Administration//Business Solutions Custom//elo.teamroom.Local//Teamroom.
+
+Create a reference to the rooms folder under Administration//Teamroom.
+
+The reference was created.
+
+Modify metadata form assignment 
+
+Depending on your system settings (language and metadata forms used), you need to modify the
+
+assignments of the metadata forms for ELO Teamroom.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+22 ELO Teamroom
+
+
+
+Open the path Administration//Teamroom//template in the ELO Java Client.
+
+Change the short names of the child folders so that they match the metadata forms of the
+
+respective system.
+
+MAP_D * -><Default form for documents>
+
+Example: MAP_D * ->Basic entry
+
+MAP_D E-Mail -><Default form for e-mails>
+
+Example: MAP_D E-Mail ->E-mail
+
+MAP_O * -><Default form for folders>
+
+Example: MAP_O * ->Folder
+
+Configuration of connection data 
+
+To establish a connection to the ELO Teamroom server, perform the following configuration steps:
+
+1. 
+
+2. 
+
+• 
+
+◦ 
+
+• 
+
+◦ 
+
+• 
+
+◦ 
+
+1. 
+
+23 ELO Teamroom
+
+
+
+Log on to the ELO Administration Console of the main repository as the administrator.
+
+Go to Solutions > Teamroom.
+
+Information
+
+Make sure that you only make changes in the folder "Business Solutions Custom".
+
+Click Local configuration.
+
+The Local Teamroom page opens.
+
+Edit the following fields:
+
+Teamroom Service URL: Enter the URL to the ELO Teamroom application on the main
+
+repository.
+
+The URL schema is as follows:
+
+http(s)://<server>:<port>/trm-<name of repository>/
+
+Please note
+
+The URL must end in a slash (/).
+
+API Token: Enter the token that you used for the ELO Teamroom server.
+
+Click Save.
+
+Restart the server services of the main repository.
+
+2. 
+
+3. 
+
+1. 
+
+• 
+
+◦ 
+
+• 
+
+1. 
+
+2. 
+
+24 ELO Teamroom
+
+
+
+User assignment 
+
+Finally, you need to assign some groups at least the Administrator user to provide basic ELO
+
+Teamroom functionalities.
+
+Log on to the ELO Administration Console of the main repository as the administrator.
+
+Navigate to System settings > User manager.
+
+Add the user Administrator to the following groups:
+
+sol.teamroom.roles.Administrator
+
+sol.teamroom.roles.Approver
+
+sol.teamroom.roles.Creator
+
+Teamroom Creators
+
+Teamroom Users
+
+Assign additional users to the respective groups as required.
+
+Click Save.
+
+You have now completed the basic installation of ELO Teamroom.
+
+1. 
+
+2. 
+
+3. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+◦ 
+
+4. 
+
+5. 
+
+25 ELO Teamroom
+
+
+
+Users and groups
+
+Introduction 
+
+ELO Teamroom requires some groups and users in order to work.
+
+The following groups must exist:
+
+Teamroom Creators
+
+Teamroom Users
+
+ELO Users
+
+Teamroom Members
+
+Additional groups are also created per teamroom.
+
+Several things have to be considered when registering users as well.
+
+Refer to the following sections for more information.
+
+• 
+
+• 
+
+• 
+
+• 
+
+26 ELO Teamroom
+
+
+
+Groups 
+
+The following provides more information on the groups in an ELO Teamroom environment.
+
+Teamroom Creators 
+
+The Teamroom Creators group is only created in the main repository.
+
+Add all ELO users who should be allowed to create new teamrooms to the Teamroom Creators
+
+group.
+
+As deleting and closing a teamroom is performed by a technical user, you also have to add the ELO
+
+Service user to the Teamroom Creators group. Normally, the ELO Service user is automatically
+
+added during the installation.
+
+Teamroom Users 
+
+The Teamroom Users group is only created in the main repository.
+
+Add all ELO users from the main repository with permission to work in the Teamroom repository to
+
+the Teamroom Users group. They are automatically synchronized to the Teamroom repository.
+
+Please note
+
+All teamroom users must have a valid e-mail address.
+
+In the case of internal users (= users created directly in the main repository), you must
+
+store the e-mail address in the respective ELO user account.
+
+You will find the corresponding field in the ELO Administration Console > User manager >
+
+[Users] > E-mail.
+
+The ELO Service user must also be a member of the Teamroom Users group. Normally, the ELO
+
+Service user is automatically added during the installation.
+
+ELO Users 
+
+The ELO Users group is only created on the ELO Teamroom server.
+
+All members of the Teamroom Users group from the main repository are automatically transferred
+
+to the ELO Users group.
+
+The group is created automatically at startup if it does not exist. Change the permissions if
+
+required.
+
+Teamroom Members 
+
+The Teamroom Members group is only created on the ELO Teamroom server.
+
+27 ELO Teamroom
+
+
+
+Each external user is automatically added to the Teamroom Members group. External users only
+
+exist in the repository on the ELO Teamroom server and are not transferred to the main repository.
+
+The group is created automatically at startup if it does not exist. Change the permissions if
+
+required.
+
+Groups per teamroom 
+
+The following additional groups are created for each teamroom on the ELO Teamroom server:
+
+TR_<name of teamroom>_Admin: For the administrators of the respective teamroom.
+
+TR_<name of teamroom>_Guest: For external participants in a teamroom.
+
+TR_<name of teamroom>_Member: For internal members of a teamroom.
+
+• 
+
+• 
+
+• 
+
+28 ELO Teamroom
+
+
+
+User registration 
+
+Please note
+
+Teamroom users need at least the Moderator role and the Start workflows right in order to
+
+able to invite external users to join a teamroom.
+
+It is a good idea to assign the Start workflows right through groups. For example, the 
+
+Teamroom Members and ELO Users groups.
+
+When a new user is registered, the system calls the sol.teamroom.ix.functions.RegisterUser
+
+function. This function creates a new user if the user name does not yet exist in the system. A
+
+random password is generated and a registration e-mail is sent to the user.
+
+Information
+
+User registration is also necessary for ELO users from the main repository, as the ELO
+
+Teamroom service is not able to read passwords of existing users and transfer them to the
+
+Teamroom repository.
+
+By default, the e-mail is sent via the workflow sol.teamroom.SendRegistration.
+
+New users need to be registered on the ELO Teamroom server. You will find the corresponding
+
+configuration options in the ELO Administration Console > Solutions > Teamroom > Remote
+
+configuration > User registration.
+
+The following configuration options are available:
+
+Workflow name: The workflow to start after the user is created (default: 
+
+sol.teamroom.SendRegistration).
+
+Workflow title: Name of the workflow that appears in the workflow overview, for example.
+
+You can use Handlebars syntax here.
+
+Default setting:
+
+• 
+
+• 
+
+◦ 
+
+29 ELO Teamroom
+
+
+
+Allows you to edit and/or translate the name using a translation file (properties file).
+
+App Manager URL: The registration e-mail sent to the user also includes a link to the
+
+teamroom. The URL defined here is used to generate the link.
+
+Defining a URL is important, as the URL has to be able to be reached externally and the URL
+
+may differ from the internal server URL (for example when using a proxy).
+
+Registration app: The URL path that processes registration confirmation. The workflow
+
+confirmation function is used as standard and then forwarded to the ELO Teamroom Client.
+
+This can be changed if needed.
+
+The workflow confirmation function is used as standard and then forwarded to the ELO
+
+Teamroom Client. This can be changed if needed. For example, you could forward it to a
+
+confirmation page you developed separately.
+
+You can make the following additional settings in the Workflows area:
+
+Filing path: To prepare delivery of the registration e-mail, a container object is generated in
+
+the chaos folder and the registration workflow is started on this object.
+
+The template for the container object is located in Administration//Business Solutions//
+
+elo.teamroom.Remote//Configuration//Registration template.
+
+After sending, these container objects are moved to the filing path defined here.
+
+Transfer rights: If the Transfer rights option is enabled, the rights for the target folder will be
+
+applied when the container objects are moved.
+
+From: The sender address of the registration e-mail.
+
+  {{{translate "sol.teamroom.workflow.sendRegistration"}}}
+
+◦ 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+30 ELO Teamroom
+
+
+
+To: The field where the e-mail address of the recipient is located on the container object.
+
+Subject: The subject of the registration e-mail. You can use Handlebars syntax here.
+
+Default setting:
+
+Allows you to edit and/or translate the name using a translation file (properties file).
+
+Content: The filing path where the template for the e-mail is located.
+
+By default, the template is supplied with only following content:
+
+This refers to the extra text generated by the workflow in the container object before the e-
+
+mail is sent.
+
+Fields for e-mail template: The fields to be used when preparing the e-mail content via the 
+
+sol.common.ix.function.RenderTemplate function.
+
+The named fields can contain text with Handlebars syntax that is processed with the
+
+function.
+
+Customizing the e-mail template 
+
+In the default sol.teamroom.SendRegistration workflow, first the contents of the e-mail are
+
+prepared and then the e-mail is sent via ELO Common function sol.common.ix.functions.Notify.
+
+You will find the content of the e-mail in the ELO Teamroom server repository in the extra text of
+
+the template for the container object at the following path:
+
+Administration // Business Solutions // elo.teamroom.Remote // Configuration // Registration
+
+template
+
+• 
+
+◦ 
+
+{{translate "sol.teamroom.mailsubject"}}
+
+◦ 
+
+• 
+
+{{{sord.desc}}}
+
+• 
+
+31 ELO Teamroom
+
+
+
+Default content:
+
+32 ELO Teamroom
+
+
+
+If a registration e-mail is created for a specific user, the system copies this template, including the
+
+extra text. Just before the e-mail is delivered, the extra text of the specific container is processed.
+
+<h4>Invitation to register for ELO Teamroom</h4>
+
+<div>
+
+  Your login name for the teamroom is: <br />
+
+  <b>{{{sord.objKeys.ELOTR_ACCOUNT_USERNAME}}}</b>
+
+</div>
+
+<div>
+
+  <div>&nbsp;</div>
+
+  To activate your account, click this URL:<br />
+
+  <b><a href="{{{sord.mapKeys.ELO_WF_URL}}}">Teamroom registration</a></b>
+
+</div>
+
+<div>&nbsp;</div>
+
+<div>
+
+  <small
+
+    >If your e-mail program does not allow direct browser calls, copy<br />
+
+    the following URL and paste it into your browser:<br />
+
+    {{{sord.mapKeys.ELO_WF_URL}}}</small
+
+  >
+
+</div>
+
+33 ELO Teamroom
+
+
+
+Advanced configuration
+
+Introduction 
+
+The following sections provide information on additional configuration options for ELO Teamroom:
+
+'Teamroom' folder
+
+Configuration file of the ELO Teamroom application
+
+Teamroom configuration
+
+• 
+
+• 
+
+• 
+
+34 ELO Teamroom
+
+
+
+'Teamroom' folder 
+
+The Teamroom service uses the child folders under the path Administration//Teamroom for
+
+teamroom administration and configuration. Normally, you don't have to work in this folder, as the
+
+configuration application from the elo.teamroom solution package configures this folder.
+
+Folder structure in the main repository 
+
+Here is some information about the content of the Teamroom folder in the main repository:
+
+rooms: The ELO Teamroom service manages the list of available teamrooms in the rooms
+
+folder.
+
+template: The mapping for metadata forms between the main repository and the Teamroom
+
+repository is configured in the template folder.
+
+Folder structure in the ELO Teamroom server repository 
+
+Here is some information about the content of the Teamroom folder in the ELO Teamroom server
+
+repository:
+
+templates: In the templates folder, you can store documents and folders as templates for the
+
+ELO Teamroom Client.
+
+• 
+
+• 
+
+• 
+
+• 
+
+35 ELO Teamroom
+
+
+
+upload: The upload folder contains templates that provides only the form definition, and no
+
+file content. These templates are intended for pictures or PDFs, that is, files that are normally
+
+edited after creation.
+
+36 ELO Teamroom
+
+
+
+Configuration file of the ELO Teamroom application 
+
+You will find the config.xml configuration file of the ELO Teamroom application (abbreviation: trm)
+
+under the following path on the server of the main repository:
+
+<ELO>\config\trm-<name of repository>\<Server>\
+
+Here is an overview of the file with notes on where to customize during installation:
+
+The "l." entries contain information on the main repository ("local") and are completed by the ELO
+
+Server Setup. You need the ELO Indexserver URL as well as an account with access rights to the
+
+documents to be synchronized.
+
+The l.root entry specifies the path to the teamroom configuration.
+
+The r entries belong to the ELO Teamroom server repository ("remote"). You also need to specify
+
+the ELO Indexserver URL and a service account here. The service account must also have the right
+
+to create users and groups.
+
+Please note
+
+Do not make any changes to r.root.
+
+The entry api.token secures access to the registered function calls. It is a kind of password that the
+
+ELO Teamroom service uses to authenticate with the ELO Indexserver script.
+
+To change the token, you need to modify it in the config.xml configuration file and in the ELO
+
+Administration Console configuration interface for both repositories.
+
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+
+<properties>
+
+<entry key="l.ixurl">http://{Main repository server}:
+
+                     {Port}/ix-{Main repository name}/ix</entry>
+
+<entry key="l.user">{Main repository service user}</entry>
+
+<entry key="l.pwd">{Service user password}</entry>
+
+<entry key="l.root">ARCPATH:/Administration/Teamroom</entry>
+
+<entry key="r.ixurl">http://{ELO Teamroom server}:{Port}/ix-Teamroom/ix</entry>
+
+<entry key="r.user">{ELO Teamroom repository service user}</entry>
+
+<entry key="r.pwd">{Service user password}</entry>
+
+<entry key="r.root">ARCPATH:/Teamroom</entry>
+
+<entry key="
+
+37 ELO Teamroom
+
+
+
+Teamroom configuration 
+
+You can configure the settings required for running a teamroom in the ELO Administration Console
+
+of the main repository.
+
+You will find the configuration of the individual teamrooms under Solutions > Teamrooms.
+
+You will find the configuration of the individual teamrooms under Solutions > Teamrooms.
+
+In the drop-down menu at the top, you can choose between different teamrooms in the system.
+
+There are info boxes describing the respective setting in more detail for each of the individual
+
+configuration settings.
+
+38 ELO Teamroom
+
+
+
+Information
+
+The refresh interval is set to 10 min. by default. The configuration still shows "2M" as an
+
+example value.
+
+Change the value as needed.
+
+On saving, the configuration settings are entered into the extra text of the teamroom
+
+(Administration // Teamroom//rooms).
+
+Please note
+
+The extra text can be changed directly. However, ELO does not recommend this procedure.
+
+Ideally, you should use the configuration interface in the ELO Administration Console.
+
+To make it easier to do analyses, here is a list of the individual configuration settings are listed
+
+below:
+
+root: GUID of the start folder in the main repository. The start folder can be located at any
+
+position, but it must be available for users on the Teamroom server.
+
+Example: root=(0E9A8D2E-B982-67CE-5FDA-C33B1F90F767)
+
+Please note
+
+This entry is created by the ELO Teamroom service and must not be changed manually.
+
+interval: Synchronization refresh rate. We recommend as short an interval as possible. With
+
+larger databases, this can cause an excessive load on the server. Select a suitable value
+
+somewhere in between.
+
+The interval can be entered in seconds (30S – every 30 seconds), minutes (10M – every 10
+
+minutes), or hours (1H – every hour). You can also enter absolute times if you want to
+
+synchronize the teamroom once a day at a specific time: 2330A – every night at 11:30 p.m.
+
+(values range from 0100 to 2459).
+
+Example: interval=2M
+
+Information
+
+• 
+
+• 
+
+• 
+
+• 
+
+39 ELO Teamroom
+
+
+
+The default interval is set to 10 minutes. This interval will be used unless you set a
+
+different value.
+
+whitelist: A list of file extensions permitted for synchronization to the main repository. The
+
+ELO Teamroom Client only files documents with these endings. The extensions are indicated
+
+without a period, separated by a comma.
+
+Example: whitelist=pdf,tif,tiff
+
+direction : Synchronization type. If this parameter is missing or is set to both, normal bi-
+
+directional synchronization is performed.
+
+If import is set, only data from the ELO Teamroom server repository is imported to the local
+
+main repository.
+
+If export is set, only data from the main repository is exported to the ELO Teamroom server
+
+repository.
+
+Example: direction=import
+
+allow_local: Enter the number of a sord.info value here. This value indicates that the
+
+document may be synchronized from the local main repository to the ELO Teamroom server
+
+repository.
+
+Once this value is set, not all documents are automatically exported by default. Instead, only
+
+selected documents are synchronized.
+
+Example: allow_local=1
+
+Please note
+
+The allow_* and lock_* settings are mutually exclusive. This means you can only ever
+
+configure either settings with allow_* or settings with lock_*.
+
+allow_remote: Enter the number of a sord.info value here. This value indicates that the
+
+document may be synchronized from the ELO Teamroom server repository to the main
+
+repository.
+
+Example: allow_remote=2
+
+lock_local: Enter the number of a sord.info value that triggers an export lock from the local
+
+main repository here. Documents with this info value are not exported when changes are
+
+made in the main repository.
+
+Example: lock_local=3
+
+lock_remote: Enter the number of a sord.info value here. This value triggers an export lock
+
+from the ELO Teamroom server repository. Documents with this info value are not exported
+
+when changes are made in the ELO Teamroom server repository.
+
+• 
+
+◦ 
+
+• 
+
+◦ 
+
+• 
+
+• 
+
+• 
+
+◦ 
+
+• 
+
+◦ 
+
+• 
+
+40 ELO Teamroom
+
+
+
+By configuring this option and setting an info value, not every interim version is transferred
+
+to the main repository when edited in the Teamroom. The marker is then reset once the final
+
+version is complete. This version is then synchronized.
+
+Example: lock_remote=4
+
+oricon: If a folder is registered as a teamroom, you can automatically change the folder icon
+
+to another (teamroom) icon. The service saves the ID of the original icon in this field. This
+
+information is used to be able to configure the original icon when the teamroom is deleted.
+
+Example: oricon=3
+
+Metadata form configuration 
+
+In the simplest case, only documents without any metadata are managed in the teamroom. In this
+
+case, the default mapping that covers all documents with the Basic Entry metadata form and all
+
+folders with the Folder metadata form suffices. In practice, however, you will likely need additional
+
+metadata in the Teamroom.
+
+Creating metadata forms in the teamroom 
+
+If you want the metadata form in the teamroom to be identical to the metadata form in the main
+
+repository, the easiest option is to export a document/folder with this form from the main
+
+repository and import it into the Teamroom repository. During import, any metadata forms that do
+
+not yet exist are created automatically. If you want to make changes to the metadata form later on,
+
+you will have to do so in both the teamroom and the main repository. Automatic synchronization is
+
+not available in ELO Teamroom.
+
+You may not want to see the entire metadata from the main repository, for example, if multiple
+
+fields are confidential. In this case, create the metadata form in the teamroom with just some of
+
+the metadata fields. The fields have the same group names, which simplifies configuration
+
+significantly.
+
+◦ 
+
+• 
+
+• 
+
+41 ELO Teamroom
+
+
+
+You have to enter the metadata form definition globally in the ELO Administration Console of the
+
+main repository under Solutions > Teamroom > Form templates.
+
+Information
+
+Alternatively, you can also change the metadata form configuration in the individual
+
+teamrooms under Solutions > Teamroom > Teamrooms > Edit form templates button.
+
+Add new metadata form: Click the Add new metadata form button (plus icon) to add
+
+metadata forms to the default ones. You need to map the names of metadata form in the
+
+main repository to the ones in the Teamroom repository.
+
+Add mapping: Click the Add mapping button to map fields from the main repository to fields
+
+in the Teamroom repository. To do so, use the group names of the respective fields.
+
+When creating a new teamroom, the global configuration is automatically copied to the teamroom
+
+configuration folder and can then be customized there.
+
+From a technical standpoint, the form templates are saved in folders and extra texts. In practice,
+
+this is irrelevant thanks to the configuration application.
+
+Technical background 
+
+To simplify troubleshooting, the following explains the logic behind this.
+
+You can either store the metadata form definitions for all teamrooms under // Administration //
+
+Teamroom // template, or separately for each teamroom at Administration // Teamroom // rooms //
+
+<Teamroom Name>.
+
+• 
+
+• 
+
+42 ELO Teamroom
+
+
+
+To map metadata forms, a child folder with a formatted name is created in the Teamroom folder.
+
+The following applies:
+
+Document forms: MAP_D [form in main repository]->[form in Teamroom repository]
+
+Folder forms: MAP_O [form in main repository]->[form in Teamroom repository]
+
+Please note
+
+The name of the metadata form in the Teamroom repository must not be a wildcard.
+
+When synchronizing a document, the server first checks whether there is a 1:1 mapping with the
+
+metadata form name. If this is not the case, next it checks whether a wildcard mapping is
+
+available. If this mapping also does not exist, the document is excluded from synchronization.
+
+Examples 
+
+In this example, the documents with the E-mail metadata form will be synchronized. In the main
+
+repository, this form is called Email and in the Teamroom repository it is E-mail. These different
+
+spellings do not prevent synchronization. The mapping must look like this:
+
+MAP_D EMail->E-mail
+
+You can also set the configuration to map all (other) folders from the main repository to the Folders
+
+metadata form in the Teamroom repository:
+
+MAP_0*->Folders
+
+• 
+
+• 
+
+43 ELO Teamroom
+
+
+
+If you do not configure it like this, you will have to list all metadata forms whose documents/folders
+
+you want to synchronize. You can also use this method to exclude specific confidential information
+
+that have an own metadata form from being synchronized.
+
+To synchronize the field contents, you will have to define what fields you want to transfer in the
+
+extra text of the metadata form.
+
+In the simplest case, all fields are copied with the same group name. Use the following
+
+configuration:
+
+*=*
+
+If the metadata forms differ, the group names may also differ. In this case, you will have to
+
+explicitly list the mapping. List all fields whose content you want to transfer in the following way:
+
+<field in the main repository>=<field in the Teamroom repository>
+
+During synchronization, the system first looks for an explicit mapping. If none is found, the system
+
+checks for a wildcard mapping. If no wildcard mapping exists, the field is not synchronized.
+
+44 ELO Teamroom
+
+
+
+Operation
+
+Introduction 
+
+You will find information on operating ELO Teamroom in the following sections:
+
+License management
+
+Teamroom life cycle
+
+Events
+
+Conditions and limitations
+
+• 
+
+• 
+
+• 
+
+• 
+
+45 ELO Teamroom
+
+
+
+License management 
+
+External teamroom users are licensed differently from internal ELO users. Internal ELO users are
+
+covered by the main repository's license. On the main repository end, users become teamroom
+
+participants by adding them to the Teamroom Users group. As teamroom participants directly or
+
+indirectly perform a number of write operations, they are automatically "write users". This means
+
+there are no read-only teamroom users.
+
+The license for the Teamroom repository contains information about the number of permitted
+
+external users. This number is checked and logged by the ELO Teamroom service. Provided the
+
+system is licensed correctly, the number of active users is logged in the status.
+
+If the number of licensed users is only exceeded slightly, a warning appears on the status page, but
+
+the system continues running normally.
+
+In case of a major license violation, synchronization is stopped. Teamroom users can continue
+
+working normally, but no more data is transferred to or from the main repository.
+
+Locked users or users without interactive logon are not counted if the last time they logged on was
+
+more than 14 days in the past. Former teamroom users should therefore be locked in the ELO
+
+Administration Console for security and licensing reasons.
+
+46 ELO Teamroom
+
+
+
+Teamroom life cycle 
+
+All ELO users in the sol.teamroom.roles.Creator group can request teamrooms. This is done using
+
+the New teamroom button on the ribbon (ELO 12: Teamroom -> New teamroom, ELO 20 and higher:
+
+New -> Self-service -> New teamroom) or by clicking the New teamroom tile. The ELO user needs
+
+the right Start workflows to be able to do this.
+
+The system uses the ELO Business Solutions template concept. The templates for new teamrooms
+
+are located under Administration//Business Solutions Custom//elo.teamroom.Local//Configuration//
+
+Teamroom types.
+
+Create new teamroom 
+
+If there are multiple templates, clicking New teamroom opens a dialog box to select a type.
+
+47 ELO Teamroom
+
+
+
+If there is only one template, the sol.teamroom.teamroom.create workflow starts immediately and
+
+the dialog box for the first user node opens.
+
+In the dialog box, enter a name and optionally a description for the teamroom. Clicking OK initiates
+
+the (optional) approval process for the teamroom.
+
+48 ELO Teamroom
+
+
+
+Approval process 
+
+You can configure the approval process for the teamroom in the configuration interface of the ELO
+
+Administration Console under Dynamic user roles.
+
+The decision of who the teamroom is sent to for approval is made based on the APPROVAL role.
+
+The mechanism is the same as with Business Solution ELO Invoice. By default, the user group 
+
+sol.teamroom.roles.Approver is configured here. In the simplest case, all you have to do is add
+
+users to this role.
+
+You can also leave the APPROVAL role empty; the approval process is then skipped.
+
+The approving user has the option to approve or reject the teamroom, or to return the workflow
+
+back to the previous user.
+
+After approval has been granted, the ELO Teamroom service creates the teamroom folder and
+
+synchronization begins.
+
+49 ELO Teamroom
+
+
+
+A technical folder for the configuration data of the new teamroom is created under Administration//
+
+Teamroom//rooms and the data folder is created under Teamroom. The service creates a new
+
+Teamroom repository using the default configuration from the main repository. After this, the
+
+teamroom is available.
+
+Before the teamroom folder in the main repository is filled with data for synchronization, you can
+
+customize the configuration. This includes:
+
+Configuring mapping of metadata forms for synchronization.
+
+Assigning permissions to other users in the main repository to the Teamroom folder. This
+
+folder inherits permissions of the selected folder where the reference to the Teamroom folder
+
+is created.
+
+In the Teamroom repository, you can configure templates for creating and filing entries for
+
+the new teamroom if you want to deviate from the default.
+
+Initial documents and entries can be moved to or created in the Teamroom folder and users invited
+
+to the teamroom via the ELO Teamroom Client.
+
+ELO Teamroom Client 
+
+The teamroom can be accessed in the Teamroom repository via the ELO Teamroom Client. This is
+
+delivered via ELOwf and called from the URL:
+
+The ELO Teamroom Client contains all entries from the main repository according to the
+
+configuration (e.g. form mapping).
+
+Permissions 
+
+The permissions are not applied, as the users in the Teamroom repository are different from those
+
+in the main repository. Instead, each teamroom is based on three groups created dynamically:
+
+Moderator
+
+Member
+
+Guest
+
+These groups are created for each teamroom. All entries in the teamroom have the following
+
+permissions:
+
+Moderator: R,W,E,D,L,P
+
+Member: R,W,E,L
+
+Guest: R
+
+The creator of the teamroom is automatically added to the Moderator group. As moderator, they
+
+can add existing users to their teamroom in the ELO Teamroom Client or invite external users. In
+
+both cases, they assign a role (moderator, member, guest) for the new users in this teamroom.
+
+• 
+
+• 
+
+• 
+
+<server>/ix-<repository>/plugin/de.elo.ix.plugin.proxy/wf/apps/app/elo.teamroom.Client/
+
+• 
+
+• 
+
+• 
+
+50 ELO Teamroom
+
+
+
+Existing users are all users existing in the Teamroom repository. Either they are automatically
+
+created from the Teamroom Users group in the main repository (and are now in the ELO Users
+
+group in the Teamroom repository) or these are external users that have already been invited to
+
+other teamrooms.
+
+To create an external user that does not yet exist, you have to enter a role, e-mail address, and
+
+user name. The user is then created, added to the group corresponding to their role in the
+
+teamroom, then the sol.teamroom.SendRegistration workflow is started. The user receives an e-
+
+mail notification at the specified address requesting to set a password. Users created externally are
+
+also added to the Teamroom Members group.
+
+While a teamroom is running, exclusive groups determine who can edit what entries. Changes are
+
+synchronized back to the main repository via the ELO Teamroom Service according to the
+
+configuration. Changes to the entries in the main repository are also synchronized to the Teamroom
+
+repository.
+
+Close teamroom 
+
+Ending a teamroom is currently equivalent to stopping synchronization. Members with the 
+
+sol.teamroom.roles.Creator and sol.teamroom.roles.Administrator roles can perform this on the
+
+teamroom entry by clicking Close teamroom.
+
+51 ELO Teamroom
+
+
+
+The user can set the closing time in a dialog box.
+
+The process of closing is performed by a technical user (ELO Service). The ELO Teamroom service
+
+marks the corresponding teamroom and synchronizes it for the last time after a specified time
+
+period. After that, the synchronization is complete. The period is used to notify any active users
+
+that the teamroom has been closed and to allow them to save their data.
+
+The data for a closed teamroom still exists in both repositories, but it is no longer synchronized.
+
+You can no longer view this data using the ELO Teamroom Client. Existing entries may still appear
+
+in the user's My ELO work area.
+
+Delete teamroom 
+
+With the Delete teamroom button, users with the role sol.teamroom.roles.Administrator can
+
+remove a teamroom that has already been closed from the Teamroom repository. This deletes all
+
+52 ELO Teamroom
+
+
+
+data from the Teamroom repository but it remains in the main repository. The process of deletion is
+
+performed by a technical user (ELO Service).
+
+53 ELO Teamroom
+
+
+
+Events 
+
+The system offers various mechanisms for configuring events in terms of the life cycle of a
+
+teamroom.
+
+Main repository 
+
+In the configuration interface of the ELO Administration Console, various post-processing processes
+
+can be configured for different events.
+
+Both workflows and registered ELO Indexserver functions can be started once the events occur.
+
+However, if a teamroom has been deleted, only registered functions can be started, as the
+
+teamroom folder (which a workflow would be started on) no longer exists.
+
+You can also configure a default workflow in the metadata form in the respective teamroom
+
+template. This workflow is run on creation AFTER starting the "normal" create event.
+
+The solution comes with a default template with the workflow sol.teamroom.teamroom.created.
+
+54 ELO Teamroom
+
+
+
+By default, this workflow creates a feed post and sets the target permissions, which you can
+
+configure in the configuration interface.
+
+Teamroom repository 
+
+In the Teamroom repository, you can configure the events as in the main repository.
+
+55 ELO Teamroom
+
+
+
+Conditions and limitations 
+
+As the documents and folders are linked based on their GUID, it is not yet possible to show a
+
+document in different Teamrooms. This means you cannot create part of a teamroom as a separate
+
+additional teamroom.
+
+Only main references can be synchronized. Additional references and links are ignored.
+
+As synchronization is the process of comparing the two repositories, make sure that the Teamroom
+
+is large enough to accommodate the synchronization interval. Synchronizing large Teamrooms at
+
+short intervals can cause an excessively high load on the server.
+
+The following metadata fields are synchronized:
+
+All mapped fields
+
+Short name
+
+Extra text
+
+Markers
+
+Version number
+
+Type
+
+Document date
+
+Document status
+
+Full text marker
+
+Sort order
+
+The permissions (which are always taken from the parent directory of the target page) and owner
+
+are not synchronized.
+
+All other metadata forms are undefined in terms of synchronization. This means that the status can
+
+change from version to version depending on changes from live operation.
+
+For new document versions, the document file, the version number, and the version comments are
+
+taken over.
+
+If there are multiple changes to the metadata or document files between syncs, only the current
+
+status is synchronized. Not all interim states are created on the other end.
+
+If an object has undergone multiple complex changes (i.e. metadata changed, moved, deleted, new
+
+version) and this is detected upon synchronization, not all changes may be transferred in one
+
+single sync. In some cases, you may have to run a second sync.
+
+On the Teamroom repository side, documents or folders must not be moved from one teamroom to
+
+another, as this teamroom may be located on an entirely different server. On the main repository
+
+side, this is permitted – in this case, the entry is deleted from the teamroom.
+
+As fields are mapped via the group name, no metadata forms are permitted that use the same
+
+group name multiple times.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+56 ELO Teamroom
+
+
+
+To register users, the ELOwf service user for the Teamroom repository requires the Change
+
+password right.
+
+As soon as a feed entry has an ACL, nothing is transferred because the permissions on the other
+
+side cannot be emulated. The user names of feed entries are inserted in plain text in the
+
+synchronized repository. The service is entered as the user.
+
+The order of the feed items is not guaranteed to be the same on both sides of the main and
+
+Teamroom repositories.
+
+The date of a synchronized feed item is the date at the time of synchronization and not the date
+
+the feed item was originally created.
+
+57 ELO Teamroom
+
+
+	Table of contents
+	How it works and architecture
+	Overview
+
+	Installation
+	Introduction and requirements
+	Requirements
+
+	Install application in the main repository
+	Install ELO Teamroom server
+	Install scripts on the ELO Teamroom server
+	Installation of the packages
+	Restart and test
+
+	Configuration on the ELO Teamroom server
+	Teamroom configuration
+	E-mail server configuration
+
+	Edit config file in the main repository
+	Install scripts in the main repository
+	Restart and test
+
+	Configuration in the main repository
+	Create reference
+	Modify metadata form assignment
+	Configuration of connection data
+	User assignment
+
+
+	Users and groups
+	Introduction
+	Groups
+	Teamroom Creators
+	Teamroom Users
+	ELO Users
+	Teamroom Members
+	Groups per teamroom
+
+	User registration
+	Customizing the e-mail template
+
+
+	Advanced configuration
+	Introduction
+	'Teamroom' folder
+	Folder structure in the main repository
+	Folder structure in the ELO Teamroom server repository
+
+	Configuration file of the ELO Teamroom application
+	Teamroom configuration
+	Metadata form configuration
+	Creating metadata forms in the teamroom
+	Technical background
+	Examples
+
+
+
+
+	Operation
+	Introduction
+	License management
+	Teamroom life cycle
+	Create new teamroom
+	Approval process
+	ELO Teamroom Client
+	Permissions
+	Close teamroom
+	Delete teamroom
+
+	Events
+	Main repository
+	Teamroom repository
+
+	Conditions and limitations
+
+

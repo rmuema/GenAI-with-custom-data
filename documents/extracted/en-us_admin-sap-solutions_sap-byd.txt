@@ -1,0 +1,823 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ELO for SAP Solutions | SAP® Business ByDesign®
+
+
+ELO for SAP Solutions
+
+SAP® Business ByDesign®
+
+
+
+3
+
+3
+
+4
+
+9
+
+Table of contents
+
+ELO Integration Service for SAP® Business ByDesign®
+
+Introduction 
+
+Configuration in ELO 
+
+Integration with SAP® Business ByDesign® 
+
+2 ELO for SAP Solutions
+
+
+
+ELO Integration Service for SAP® Business
+
+ByDesign®
+
+Introduction 
+
+This documentation describes how to set up the ELO Integration Service for SAP Business
+
+ByDesign®.
+
+The integration service provides the technical platform for implementing the ELO Integration Client
+
+in an SAP® Business ByDesign® system (referred to here simply as ByD). Following installation,
+
+the ELO Integration Client is available as a mashup in correspondingly configured objects in ByD.
+
+When the ELO Integration Client is called within ByD, a configurable path is created (assuming one
+
+doesn't already exist) and displayed in ELO. This provides the user with the functions of the ELO
+
+Integration Client, which can also be customized if required.
+
+ELO basics
+
+To use the ELO Integration Service for SAP® Business ByDesign® and the ELO Integration Client
+
+within ByD, the systems must meet the following requirements:
+
+ELOprofessional or ELOenterprise version 12 and higher
+
+The following modules are required: 
+
+ELOwf 
+
+ELOwf 20.05.000
+
+ELOwf 12.06.000
+
+ELO REST 
+
+ELO REST Service 20.02.000
+
+ELO REST API 12.04.000
+
+ELO Business Solutions Common version 1.13.000 or higher
+
+Correctly set SameSite flag (see ELO Integration Client documentation)
+
+Installed and configured ELOauth plug-in (optional when using single sign-on)
+
+In addition, your ELO license must include the ELO Integration Service for SAP® Business
+
+ByDesign® as well as user licenses for the ELO Integration Client.
+
+Mashup basics
+
+A mashup is a website or application that integrates data or functionalities from two or more
+
+sources.
+
+In this case, ByD is the data source and the ELO Integration Client delivers the additional
+
+functionality. Data in ByD is transferred to the ELO Integration Client using a proprietary
+
+implementation.
+
+• 
+
+• 
+
+◦ 
+
+▪ 
+
+▪ 
+
+◦ 
+
+▪ 
+
+▪ 
+
+◦ 
+
+• 
+
+• 
+
+3 ELO for SAP Solutions
+
+https://docs.elo.com/admin/integration-client/en-us/installation-operation/known-issues.html#samesite-flag
+https://docs.elo.com/admin/integration-client/en-us/installation-operation/known-issues.html#samesite-flag
+
+
+Configuration in ELO 
+
+First, you need to install and configure the ELO Integration Service for SAP® Business ByDesign®
+
+in the ELO system.
+
+You will find the necessary installation packages on the ELO SupportWeb under Integration. The ELO
+
+installation package contains the following files:
+
+erp.byd.integrationservice
+
+erp.byd.integrationservice.custom
+
+The ELO Integration Client also requires a configuration file in ELOapps:
+
+elo.integration.Client
+
+'elo.integration.client' configuration file 
+
+The configuration file elo.integration.client in JSON format is required for the ELO Integration Client.
+
+You will find this configuration file under this path:
+
+//Administration// ELOapps//Configuration//elo.integration.Client
+
+If this file already exists, you will have to add the entry byd.
+
+If it does not yet exist, create it with the following parameters. This is important for calling the
+
+URL.
+
+• 
+
+• 
+
+• 
+
+{
+
+  "byd": {
+
+    "noForm": false,
+
+    "noFeed": false,
+
+    "noFulltext": false,
+
+    "noImagePreview": false,
+
+    "rFInit": "RF_erp_byd_integrationservice_service_Init",
+
+    "newDocVersFct": true,
+
+    "saveDocFct": true,
+
+    "gotoFct": true,
+
+    "webClientURL": " http(s)://<ELOSERVER>:<PORT>/ix-<REPOSITORY>/plugin/de.elo.ix.plugin.proxy/web/"
+
+    "editInOfficeFct": true,
+
+    "removeEntryFct": true,
+
+    "startWorkflowFct": false,
+
+    "startWorkflowTemplates": null,
+
+    "externalLinkFct": true,
+
+    "folderMask": "<GUID of folder form>",
+
+    "documentMask": "<GUID of document form>",
+
+    "hasSearch": true,
+
+4 ELO for SAP Solutions
+
+
+
+For more information on this configuration file, refer to the ELO Integration Client manual.
+
+Be sure to check the following important parameters when creating or modifying the file:
+
+rFInit: Function that creates the folder path in ELO; provided with the 
+
+erp.byd.integrationservice package.
+
+webClientURL: URL to open the ELO Web Client when the GoTo function is enabled. To prevent
+
+the user from having to log on multiple times, the proxy behind the ELO Indexserver must be
+
+configured. The ELO Web Client should be configured accordingly as a plug-in behind the
+
+ELOix proxy (recommended method).
+
+folderMask: Defines the metadata form that the ELO Integration Service uses to create new
+
+structures based on the SAP® ByD object.
+
+documentMask: Defines the metadata form that the ELO Integration Service uses when filing
+
+documents from the ELO Integration Client within ByD. You can use metadata forms that pass
+
+information onto the objects.
+
+ELO Integration Service for SAP® Business ByDesign® configuration 
+
+Once you have successfully installed the ELO packages, open the configuration app in the
+
+ELO Administration Console under:
+
+Solutions > SAP® Business ByDesign® > ELO Integration Service
+
+    "referenceEntryFct": true,
+
+    "refreshFct": true
+
+  }
+
+}
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+5 ELO for SAP Solutions
+
+https://docs.elo.com/admin/integration-client/
+https://docs.elo.com/admin/integration-client/
+
+
+The ELO for SAP® Business ByDesign® page opens.
+
+Click the ELO Integration Service tile.
+
+The ELO Integration Service configuration interface opens.
+
+Optional:
+
+You can make the following configurations in the interface:
+
+General settings
+
+Structure and metadata matching
+
+Assignment of user and group rights
+
+General settings 
+
+Under General settings, you can now create configurations for each ByD object. As soon as you add
+
+a new entry, corresponding lines are automatically created in the Structures and metadata
+
+matching area. Lines are also created in the Assignment of user and group rights area.
+
+Port binding: In the Port binding column, enter the name of the object you are creating the
+
+configuration for. You can specify the name of the port binding object in the corresponding SAP®
+
+Business ByDesign® mashup (See section URL mashup).
+
+2. 
+
+◦ 
+
+◦ 
+
+◦ 
+
+6 ELO for SAP Solutions
+
+
+
+Intermediate form: In the Intermediate form column, enter the metadata form for folders that may
+
+have to be created on storage so that the specified path can be generated.
+
+Folder form: The final metadata form is specified in the Folder form column, e,g. ByD Account.
+
+Document form: This is where you specify which metadata form to use when filing from SAP®
+
+Business ByDesign®. You can enter the same form as in the ELO Integration Client configuration
+
+file, or a separate one for each SAP® Business ByDesign® object.
+
+Structure and metadata matching 
+
+As described in the section General settings, when you create an entry under General settings, a
+
+separate entry for the port binding is automatically created in the Structure and metadata matching
+
+area.
+
+Port binding: This entry is copied directly from the Port binding column under General settings and
+
+can also only be modified in this area.
+
+Repository path: The filing path in ELO is defined in the Repository path column. In this field, you
+
+can also enter ByD variables, e.g. using Handlebars syntax.
+
+ELO field matching: Choose between GRP for metadata field and MAP for map fields.
+
+ELO field: In MAP fields, it is possible to use iteration by attaching the value {i} to the technical
+
+name.
+
+Please note
+
+If the metadata fields do not exist in the metadata form, the corresponding values will be
+
+lost and written as a warning in the log. This means they cannot be imported or matched.
+
+Value in Handlebars: The value entered here is stored in the corresponding ELO field in the ELO
+
+entry. To copy the value of the transfer parameter from the URL, it must be enclosed in triple curly
+
+brackets.
+
+If the values are iterated, you can use the {i} identifier to indicate the Handlebar.
+
+7 ELO for SAP Solutions
+
+
+
+Please note
+
+If an iteration is defined but there is no {i} in the ELO field, all values will be concatenated
+
+in this field up to a maximum of 255 characters. Any values above this will be rejected.
+
+Key field: You can select one key field. The value of the key field is used to specify a property of the
+
+object that remains a unique identifier even when other data changes. For example, you can
+
+specify an ID that uniquely identifies an object. This ensures that an object is not created twice
+
+(with a new name) in the repository, for example. Instead, the corresponding folder is found and a
+
+new path is created according to the new name. The folder and its contents are moved to this new
+
+path. The documents that were stored under the old name remain in the folder with the new name.
+
+Assignment of user and group rights 
+
+This is where you assign user and group rights.
+
+Replace rights: ELO inherits the rights of the folder by default. If this option is enabled, the rights of
+
+the folder are discarded and only the set rights are assigned.
+
+Rights for users and groups: Enter the users or groups that you want to assign rights to here.
+
+RWDELP: Use the check boxes to set the different permissions types for users or groups.
+
+R = View
+
+W = Change metadata
+
+D = Delete
+
+E = Edit
+
+L = Edit list
+
+P = Set permissions
+
+For more information, refer to the documentation Concept for assigning rights and permissions.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+8 ELO for SAP Solutions
+
+https://docs.elo.com/admin/config/en-us/user-management/concept-recommendations/
+https://docs.elo.com/admin/config/en-us/user-management/concept-recommendations/
+
+
+Integration with SAP® Business ByDesign®
+
+SAP® Business ByDesign® is a cloud-based SaaS ERP solution designed for SMEs.
+
+ELO Digital Office GmbH does not act in a consulting capacity on SAP® Business ByDesign®, which
+
+is why this documentation only addresses the integration of the ELO Integration Client.
+
+User roles/Views 
+
+You should first check whether you have the required permissions to integrate and configure
+
+mashups.
+
+The following entries should be available under Application and User Management > Business
+
+Flexibility:
+
+Mashup Web Services
+
+Mashup Authoring
+
+The following entries should be available under your user profile:
+
+Key user settings > Start Adaptation Mode
+
+Create the mashup application 
+
+To create a ByD mashup, navigate to the following menu entry:
+
+Application and User Management > Business Flexibility > Mashup Authoring
+
+• 
+
+• 
+
+• 
+
+1. 
+
+9 ELO for SAP Solutions
+
+
+
+Select the function New.
+
+You can choose between two mashup types to connect the ELO Integration Client.
+
+URL Mashup: A mashup that sends data from the SAP cloud solution to the URL of an
+
+online service provider. The service provider uses the data to perform a search, for
+
+example. The results are displayed in a new browser window.
+
+HTML Mashup: A mashup that embeds an HTML or JavaScript browser page directly on
+
+a screen.
+
+URL and HTML mashup examples 
+
+URL mashup: Only a URL is displayed. The ELO Integration Client opens in a separate window.
+
+2. 
+
+3. 
+
+◦ 
+
+◦ 
+
+10 ELO for SAP Solutions
+
+
+
+HTML mashup: The ELO Integration Client is embedded in the application and opens directly in the
+
+view.
+
+Set up the mashup 
+
+This section explains how a mashup can be created, which configuration steps are required, and
+
+how it is subsequently linked to an SAP® Business ByDesign® object.
+
+The implementation example here was done with a URL mashup.
+
+Information
+
+Both the URL mashup and the HTML mashup can be configured to enable single sign-on.
+
+To use single sign-on, the URL to the ELOauth plug-in has to be entered instead of the ELO
+
+Integration Client URL. See also the section Single sign-on.
+
+The following example illustrates implementation without single-sign on.
+
+URL mashup 
+
+Select a port binding type.1. 
+
+11 ELO for SAP Solutions
+
+
+
+Information
+
+The port binding type specifies which object data can be accessed in ByD. Not every
+
+object provides a port binding.
+
+Click the icon in the Port Binding text field.
+
+The Port Binding menu opens.
+
+Information
+
+The port binding options ensure that information from the ByD application is
+
+forwarded to the respective mashup. In turn, the mashup can work with data from the
+
+ByD application.
+
+Select a port binding.
+
+In the example, a mashup is created for the metadata form Customer (Account).
+
+2. 
+
+3. 
+
+12 ELO for SAP Solutions
+
+
+
+In this case, the import fields you see in the screenshot will be provided to the ByD
+
+application.
+
+Information
+
+If the field you require is not in the list, you are unable to import or export the data.
+
+Complete the mandatory fields in the General Information menu.
+
+Mashup Name: Specify a name for the mashup.
+
+URL:
+
+Extract parameters: Reads the parameters of the passed URL and displays them in the
+
+request parameter.
+
+Request parameter: This is where the port binding data is mapped to the URL
+
+parameters.
+
+In this case, the parameters debug, system, and ObjType are fixed constants. ByD
+
+dynamically passes the parameter AccountName, which contains the respective
+
+customer name in the AccountName parameter binding.
+
+Please note
+
+You may need to add the request parameters manually as a line.
+
+Save the mashup.
+
+Activate the mashup.
+
+4. 
+
+◦ 
+
+◦ 
+
+http(s)://<ELOSERVER>:<PORT>/ix-<REPOSITORY>/plugin/de.elo.ix.plugin.proxy/wf/apps/app/elo.integ
+
+◦ 
+
+◦ 
+
+5. 
+
+6. 
+
+13 ELO for SAP Solutions
+
+
+
+To learn how to display the mashup, go to the section Display the mashup.
+
+Configuration based on the example 'Account' 
+
+Display the mashup 
+
+Now that the mashup is configured, it needs to be displayed on the screen.
+
+Navigate to the corresponding object that you want to integrate the mashup into.
+
+This is demonstrated in the following example for the object Customer (Account).
+
+Select a customer object.
+
+The Corporate Account Overview opens.
+
+1. 
+
+14 ELO for SAP Solutions
+
+
+
+Click the icon for your profile.
+
+Select the entry Key user settings > Start Adaptation Mode.
+
+2. 
+
+3. 
+
+15 ELO for SAP Solutions
+
+
+
+Create a tab for connecting the ELO Integration Client by clicking the plus icon and selecting 
+
+Mashup.
+
+In this example, a new tab is created.
+
+The Available Mashups for this Screen window opens.
+
+4. 
+
+16 ELO for SAP Solutions
+
+
+
+Maximize the window and select the mashup you want from the table.
+
+The following steps differ according to the type of mashup.
+
+URL mashup 
+
+In the case of a URL mashup, set Link in Account Section under Appearance and select the
+
+check box next to ELO Integration Client (URL).
+
+Publish the changes.
+
+5. 
+
+1. 
+
+2. 
+
+17 ELO for SAP Solutions
+
+
+
+Return to the corporate account overview.
+
+You will find your URL mashup under Customer.
+
+HTML mashup 
+
+In the case of an HTML mashup, set Add as Facet under Appearance and select the check box
+
+next to ELO Integration Client.
+
+Optional:
+
+You can also enable the option Full Width as well as specify the height of the mashup.
+
+Publish the changes.
+
+Return to the corporate account overview.
+
+3. 
+
+1. 
+
+2. 
+
+3. 
+
+18 ELO for SAP Solutions
+
+
+
+After you click the View All button in the top right corner of the corporate account overview,
+
+your HTML mashup will be displayed on the tab bar.
+
+The mashup is now available.
+
+Single sign-on via ELOauth plug-in 
+
+If you authenticate with your ByD via SAML authentication, you can also use it for authenticating
+
+with the ELO Integration Client.
+
+In this case, you have to install the ELOauth plug-in and configure it accordingly. You can download
+
+the ELOauth plug-in on the ELO SupportWeb. The installation process is described in ELOauth plug-
+
+in: configuration.
+
+Please note
+
+Only the required ELO settings are shown here. SAML authentication must already be
+
+configured in ByD.
+
+The plug-in is configured using a JSON file named de.elo.ix.plugin.auth.json located in the ELO
+
+Indexserver configuration directory:
+
+Add the following entry to the ELOauth plug-in configuration file and store your required values.
+
+<ELO-Inst>/config/ix-<repository>/<server name>
+
+19 ELO for SAP Solutions
+
+https://docs.elo.com/admin/config/en-us/elo-indexserver/eloauth-plugin/configuration.html#saml
+https://docs.elo.com/admin/config/en-us/elo-indexserver/eloauth-plugin/configuration.html#saml
+https://docs.elo.com/admin/config/en-us/elo-indexserver/eloauth-plugin/configuration.html#saml
+
+
+Replace the URL entry for the ELO Integration Client within the mashup with the ELOauth plug-in
+
+URL.
+
+Example structure:
+
+<id> stands for the ID/name of the configuration entry.
+
+https://<ELOSERVER>:<PORT>/ix-<REPOSITORY>/plugin/de.elo.ix.plugin.auth/login/?configId=<id
+
+20 ELO for SAP Solutions
+
+
+	Table of contents
+	ELO Integration Service for SAP® Business ByDesign®
+	Introduction
+	ELO basics
+	Mashup basics
+
+	Configuration in ELO
+	'elo.integration.client' configuration file
+	ELO Integration Service for SAP® Business ByDesign® configuration
+	General settings
+	Structure and metadata matching
+	Assignment of user and group rights
+
+
+	Integration with SAP® Business ByDesign®
+	User roles/Views
+	Create the mashup application
+	URL and HTML mashup examples
+
+	Set up the mashup
+	URL mashup
+	Configuration based on the example 'Account'
+
+	Display the mashup
+	URL mashup
+	HTML mashup
+
+	Single sign-on via ELOauth plug-in
+
+
+

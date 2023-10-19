@@ -1,0 +1,1368 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Business Solution ELO Invoice | Business Solution ELO Invoice 1.08
+
+
+Business Solution ELO
+
+Invoice
+
+Business Solution ELO Invoice 1.08
+
+
+
+3
+
+4
+
+9
+
+13
+
+26
+
+28
+
+30
+
+Table of contents
+
+Introduction
+
+Basics
+
+File invoice and add documents
+
+Invoice circulation
+
+Templates
+
+Export invoice
+
+Monitor invoices with the dashboard
+
+2 Business Solution ELO Invoice
+
+
+
+Introduction
+
+Contents of the manual
+
+The goal of this user guide is to explain all functions of Business Solution ELO Invoice.
+
+Basics
+
+The Basics chapter explains the basics of ELO Invoice as well as where to find the ELO Invoice
+
+functions.
+
+Possible actions
+
+The remaining chapters address possible actions using ELO Invoice.
+
+Target audience
+
+This manual is addressed to Business Solution ELO Invoice users. Separate documentation is
+
+available for administrators on the ELO SupportWeb.
+
+The scope of functions presented in this manual may differ greatly from those in your client.
+
+If you do not find functions described in this manual in your client, you do not have permission to
+
+perform the action.
+
+3 Business Solution ELO Invoice
+
+
+
+Basics
+
+Basic principle
+
+Business Solution ELO Invoice maps the process for circulating invoices within a company:
+
+Invoice receipt
+
+Invoice circulation
+
+Export to an accounting system
+
+Invoices are forwarded to the necessary processing steps by means of workflows. The workflow
+
+can also be forwarded to clearing.
+
+A dashboard gives you an overview of all invoices, helping you to plan.
+
+General note
+
+ELO Invoice works with the following clients:
+
+ELO Java Client
+
+ELO Web Client (not all functions available)
+
+ELO Desktop Client (not all functions available)
+
+Information
+
+In this manual, we use screenshots from the ELO Java Client.
+
+Requirements
+
+Your administrator must have configured ELO Invoice for you.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+4 Business Solution ELO Invoice
+
+https://docs.elo.com/user/elo-java-client/en-us/elo-java-client/
+https://docs.elo.com/user/elo-java-client/en-us/elo-java-client/
+https://docs.elo.com/user/elo-web-client/en-us/elo-web-client/
+https://docs.elo.com/user/elo-web-client/en-us/elo-web-client/
+https://docs.elo.com/user/elo-desktop-client/en-us/elo-desktop-client/
+https://docs.elo.com/user/elo-desktop-client/en-us/elo-desktop-client/
+
+
+Program interface
+
+Fig.: Business Solution ELO Invoice program interface
+
+You will find ELO Invoice functions in the following areas:
+
+1 Invoices tile in the tile navigation
+
+This tile takes you to the invoice monitoring dashboard.
+
+Fig.: 'Invoice' group
+
+2 'Invoice' group
+
+You can reach the Invoice group on the File tab in the Intray work area.
+
+You can file invoices to ELO from within the Intray using these functions.
+
+Information
+
+5 Business Solution ELO Invoice
+
+
+
+You may only have access to the File invoice button, depending on your settings.
+
+Fig.:'Search for documents related to a vendor' function
+
+3 Search for documents related to a vendor function
+
+You can reach this function in the Search work area on the Search tab in the Invoice group.
+
+With this function, you can search for documents related to a specific vendor based on the vendor
+
+number.
+
+Fig.: 'Export invoices' function
+
+4 'Export invoices' function
+
+You will find this function on the Output tab in the Export/Import group.
+
+With this function, you can create an export data set for an accounting system.
+
+Fig.: 'Invoice templates' group
+
+5 'Invoice templates' group
+
+6 Business Solution ELO Invoice
+
+
+
+The Invoice templates group is available on the Organize tab.
+
+Templates help you fill out forms for new invoices.
+
+Repository
+
+The structure and appearance of the repository depend greatly on your specific configuration. The
+
+default state is described here.
+
+Incoming invoices are automatically filed to // Invoice // Entry.
+
+Invoice circulation
+
+Invoices are circulated based on an ELO workflow. Invoices in circulation are shown in a blue font.
+
+Following the invoice circulation process, the invoice is filed to // Invoice // Archive.
+
+Invoices
+
+Fig.: Invoice form
+
+There is a form for each invoice. This form contains the relevant information from the invoice as
+
+well as its current status.
+
+While the invoice is circulated, the form is edited or confirmed by the users involved in the process.
+
+The status changes automatically.
+
+7 Business Solution ELO Invoice
+
+
+
+An invoice can have the following statuses:
+
+1 – Capture
+
+2 – Formal check
+
+3 – Department check
+
+4 – Post to accounts
+
+5 – Export
+
+6 – Exported
+
+7 – Booked
+
+8 – Clarification needed
+
+9 – Rejected
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+8 Business Solution ELO Invoice
+
+
+
+File invoice and add documents
+
+This chapter explains what options you have for filing an invoice and adding documents later on.
+
+File invoice
+
+Information
+
+You can file one invoice or multiple invoices simultaneously to ELO from your Intray. Filing invoices
+
+initiates a workflow that circulates the invoice to the correct departments in the company.
+
+The following functions are available:
+
+File invoice
+
+File invoice with attachments
+
+Invoices are either filed to a separate, automatically created folder or as a document.
+
+If both functions are available, the invoice is filed to a separate folder.
+
+Information
+
+How invoices are filed depends on administrative settings.
+
+Process: File invoice
+
+In the Intray, select the invoice or invoices you want to file.
+
+To select multiple invoices, press and hold the CTRL or SHIFT keys while selecting invoices with the
+
+mouse.
+
+On the File tab, click Invoice > File invoice.
+
+Process: File invoice with attachments
+
+In the Intray, select the invoice with attachments you want to file.
+
+To select an invoice and its attachments, press and hold the CTRL or SHIFT keys while selecting the
+
+documents with the mouse. The document you select first gives the folder its name and should be
+
+the invoice.
+
+Information
+
+This function does not allow you to file multiple invoices separately at the same time. All
+
+selected documents are filed to the same folder.
+
+On the File tab, click Invoice > File invoice with attachments.
+
+• 
+
+• 
+
+1. 
+
+1. 
+
+1. 
+
+1. 
+
+9 Business Solution ELO Invoice
+
+
+
+Fig.: 'File invoice with attachments' dialog box
+
+If necessary, enter a new name and confirm with OK.
+
+Result
+
+Fig.: Folder in the repository
+
+The invoice or invoices are filed to the appropriate folder, by default // Invoice // Entry. They have
+
+the status 2 – Formal check.
+
+Invoices in circulation are shown in a blue font.
+
+Invoice circulation begins automatically and does not have to be initiated.
+
+Outlook
+
+You can track the workflow steps an invoice you have filed goes through based on feed entries.
+
+1. 
+
+10 Business Solution ELO Invoice
+
+
+
+The following chapter explains how to add documents to invoices later on.
+
+Add documents to invoice
+
+Information
+
+You can add documents to invoices later on. The approach depends on whether the invoice has
+
+been filed as a document or in a separate folder.
+
+Folder: File to invoice function
+
+Document: Add pages function
+
+Process: File to invoice
+
+Select the documents or documents in the Intray that you would like to file.
+
+To select multiple documents, press and hold the CTRL or SHIFT keys while selecting invoices with
+
+the mouse.
+
+On the File tab, click Invoice > File to invoice.
+
+Fig. 'File to invoice' dialog box
+
+In the File to invoice dialog box, select the invoice.
+
+A search function is available that allows you to filter the invoices based on their invoice number or
+
+vendor number.
+
+Result: File to invoice
+
+The document is filed to the folder of the selected invoice.
+
+• 
+
+• 
+
+1. 
+
+1. 
+
+1. 
+
+11 Business Solution ELO Invoice
+
+
+
+Process: Add pages
+
+Select the documents or documents in the Intray that you would like to file.
+
+On the File tab, click Filing > Add pages.
+
+Select the invoice you want to add pages to.
+
+Click Attach to back to add the pages.
+
+Result: Add pages
+
+The pages are added to the invoice.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+12 Business Solution ELO Invoice
+
+
+
+Invoice circulation
+
+After an invoice has been filed, the circulation process is started automatically.
+
+The invoices goes through all the necessary steps until it is ultimately transferred to an accounting
+
+system.
+
+The invoice is therefore reviewed by all relevant departments. If there is a problem, it can be
+
+forwarded to clearing.
+
+Formal check
+
+Information
+
+If you have received an invoice for a formal check, it will appear in your Tasks work area.
+
+The number of fields completed in the form depends on whether contents from the invoice were
+
+read automatically. So, the fields either have to be completed or checked and corrected.
+
+Method
+
+In the Tasks work area, select the workflow for the invoice you want to perform a formal
+
+check for.
+
+Optional: Click Accept workflow to process the form.
+
+On the Form tab, you will find the form, precompleted to a certain extent with the information from
+
+the invoice.
+
+On the Document/folder tab, you will find the associated invoice for comparison.
+
+Check or complete the individual fields with the information from the invoice.
+
+We recommend working with two windows and, if possible, on two screens. The following functions
+
+are available on the View tab under Windows in the ELO Java Client:
+
+Open a new window
+
+Show side by side
+
+Show stacked
+
+You can also use the Open in read-only mode function on the Document tab.
+
+Optional: If a template already exists for invoices from a specific company, you can complete the
+
+form using the Load template function on the Invoice tab.
+
+1. 
+
+1. 
+
+• 
+
+• 
+
+• 
+
+13 Business Solution ELO Invoice
+
+
+
+Fig.: Form tabs
+
+The form consists of the following tabs:
+
+Invoice data
+
+Tax law
+
+Item data
+
+Footer data
+
+Request
+
+Mandatory fields are marked with a red asterisk.
+
+Fields with a pencil icon contain keyword lists. When you enter a value in the respective field,
+
+matching list entries appear.
+
+'Invoice data' tab
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+14 Business Solution ELO Invoice
+
+
+
+Fig.: 'Invoice data' tab
+
+This tab contains the main information on the invoice.
+
+The gray Status and Document type fields should not be edited manually.
+
+You can compare the other fields and correct them based on the invoice.
+
+'Tax law' tab
+
+15 Business Solution ELO Invoice
+
+
+
+'Tax law' tab
+
+The Tax law tab contains an evaluation of automatic checks based on tax law.
+
+If you check the compliant  box, the option with the same name on the Invoice data tab is also
+
+selected.
+
+'Item data' tab
+
+Fig.: 'Item data' tab
+
+16 Business Solution ELO Invoice
+
+
+
+The Item data tab contains a list of the items as well as information on the individual items.
+
+Click New lines to add items.
+
+You can split or merge items:
+
+To split an item, enter the ratio in the corresponding field, e.g. 2:3.
+
+To merge items, check the corresponding check boxes. Click Merge.
+
+'Footer data' tab
+
+Fig.: 'Footer data' tab
+
+The Footer data tab contains a list and calculation of invoice amounts.
+
+Click New lines to add items.
+
+If you have added lines, you can automatically calculate the VAT using the Calculate taxes option.
+
+'Request' tab
+
+• 
+
+• 
+
+17 Business Solution ELO Invoice
+
+
+
+Fig.: 'Request' tab
+
+If there are any unclear points related to the invoice, use the Request tab.
+
+Click Request information to forward the workflow. This appears as soon as you have entered a
+
+user or group in the Request information field.
+
+If you submit a request, the workflow is not sent to the next editor yet.
+
+The user you selected receives your request. Once the user has responded to your request in the
+
+ELO feed and forwarded the workflow, you will receive the same workflow step again for
+
+processing.
+
+Click For approval to pass the workflow forward.
+
+Alternative: Click To the clearing center to forward the invoice to clearing.
+
+Result
+
+The workflow is forwarded for department approval.
+
+1. 
+
+18 Business Solution ELO Invoice
+
+
+
+Fig.: Feed post
+
+An automatic feed post indicates changes to the form.
+
+Invoice approval for individual items/invoice approval
+
+Information
+
+If you have received an invoice to approve individual items or approve the invoice in its entirety, it
+
+will appear in your Tasks work area.
+
+Method
+
+In the Tasks work area, select the workflow you are supposed to approve.
+
+Optional: Click Accept workflow to process the form.
+
+On the Form tab, you will find the form, precompleted with the information from the invoice.
+
+On the Document/folder tab, you will find the associated invoice for comparison.
+
+Check the individual invoice items.
+
+We recommend working with two windows and, if possible, on two screens. The following functions
+
+are available on the View tab under Windows in the ELO Java Client:
+
+Open a new window
+
+Show side by side
+
+Show stacked
+
+You can also use the Open in read-only mode function on the Document tab.
+
+Fig.: Form tabs
+
+1. 
+
+1. 
+
+• 
+
+• 
+
+• 
+
+19 Business Solution ELO Invoice
+
+
+
+The form consists of the following tabs:
+
+Invoice data
+
+Approval
+
+Fields with a pencil icon contain keyword lists. When you enter a value in the respective field,
+
+matching list entries appear.
+
+'Invoice data' tab
+
+Fig.: 'Invoice data' tab
+
+On the Invoice data tab, you will find the invoice information relevant to you.
+
+The grayed out fields cannot be edited.
+
+Click New lines to add items.
+
+You can split or merge items:
+
+To split an item, enter the ratio in the corresponding field, e.g. 2:3.
+
+To merge items, check the corresponding check boxes. Click Merge.
+
+'Approval' tab
+
+• 
+
+• 
+
+• 
+
+• 
+
+20 Business Solution ELO Invoice
+
+
+
+Fig.: 'Approval' tab
+
+On the Approval tab, you can enter an additional check step as needed.
+
+The sol.management group is a mandatory check step for invoice approval by default.
+
+If there are any unclear points related to the invoice, click Request information in the Request area.
+
+This appears as soon as you have entered a user or group in the Request information field.
+
+If you submit a request, the workflow is not sent to the next editor yet.
+
+The user you selected receives your request. Once the user has responded to your request in the
+
+ELO feed and forwarded the workflow, you will receive the same workflow step again for
+
+processing.
+
+Click Approve.
+
+Alternative: Click Reject.
+
+Result
+
+The workflow is forwarded.
+
+Enter booking data
+
+Information
+
+If you have received an invoice for pre-assignment to an account, it will appear in your Tasks work
+
+area.
+
+1. 
+
+21 Business Solution ELO Invoice
+
+
+
+Method
+
+In the Tasks work area, select the workflow with the invoice you are supposed to pre-assign.
+
+Click Accept workflow to process the form.
+
+On the Form tab, you will find the form, completed with the information from the invoice.
+
+On the Document/folder tab, you will find the associated invoice for comparison.
+
+Perform a final review.
+
+We recommend working with two windows and, if possible, on two screens. The following functions
+
+are available on the View tab under Windows in the ELO Java Client:
+
+Open a new window
+
+Show side by side
+
+Show stacked
+
+You can also use the Open in read-only mode function on the Document tab.
+
+The form consists of the following tabs:
+
+Fig.: Form tabs
+
+Invoice data
+
+Tax law
+
+Item data
+
+Footer data
+
+Request
+
+'Request' tab
+
+If there are any unclear points related to the invoice, click Request information on the Request tab.
+
+If you submit a request, the workflow is not sent to the next editor yet.
+
+The user you selected receives your request. Once the user has responded to your request in the
+
+ELO feed and forwarded the workflow, you will receive the same workflow step again for
+
+processing.
+
+1. 
+
+2. 
+
+1. 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+22 Business Solution ELO Invoice
+
+
+
+Fig.: 'Invoice data' tab
+
+Click Forward to ERP.
+
+Alternative: Click To the clearing center to forward the invoice to clearing.
+
+Result
+
+The invoice has the status 5 – Export and is therefore ready for export.
+
+Outlook
+
+You have the following options for export:
+
+The invoice is automatically captured by an ERP system. Once this is complete, the status
+
+changes to 7 – Booked.
+
+Perform a manual export via the Output tab > Export/Import > Export invoices.
+
+1. 
+
+• 
+
+• 
+
+23 Business Solution ELO Invoice
+
+
+
+Request
+
+Information
+
+If you receive a request regarding an invoice, you will see it in your feed. The request will also
+
+appear in your Tasks work area.
+
+Method
+
+In the Tasks work area, select the workflow with the request.
+
+Optional: Click Accept workflow to process the form.
+
+On the Form tab, you will find the form, completed with the information from the invoice as well as
+
+the request.
+
+On the Document/folder tab, you will find the associated invoice for comparison.
+
+Enter your answer to the comment field below the question in the feed.
+
+Click Back to approval.
+
+Result
+
+The workflow is sent back to the user who sent you the request.
+
+Clarification needed
+
+Information
+
+The invoice can be forwarded to clearing for further checks during different steps. If you have
+
+received an invoice for clarification, it will appear in your Tasks work area. Refer to the invoice feed
+
+for the reason why the invoice requires clarification.
+
+Method
+
+In the Tasks work area, select the workflow with the invoice requiring clarification.
+
+Optional: Click Accept workflow to process the form.
+
+On the Form tab, you will find the form, completed with the information from the invoice.
+
+On the Document/folder tab, you will find the associated invoice for comparison.
+
+Perform a review.
+
+We recommend working with two windows and, if possible, on two screens. The following functions
+
+are available on the View tab under Windows in the ELO Java Client:
+
+Open a new window
+
+Show side by side
+
+Show stacked
+
+1. 
+
+1. 
+
+2. 
+
+1. 
+
+1. 
+
+• 
+
+• 
+
+• 
+
+24 Business Solution ELO Invoice
+
+
+
+You can also use the Open in read-only mode function on the Document tab.
+
+Fig.: Form tabs
+
+The form consists of the following tabs:
+
+Invoice data
+
+Tax law
+
+Item data
+
+Footer data
+
+Check steps
+
+On the Check steps tab, you can enter an additional check step as needed.
+
+Fig.: Buttons
+
+Click Reject.
+
+Alternative: Click Back to approval, Back to manual entry, or use the Check steps tab and the 
+
+Request information button to return the invoice back into circulation. This button appears as soon
+
+as you have entered a user or group in the Request information field.
+
+Result
+
+The invoice is rejected or the corresponding step in the workflow is initiated.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+1. 
+
+25 Business Solution ELO Invoice
+
+
+
+Templates
+
+Templates help you quickly fill out forms for new invoices.
+
+You can create templates based on filed invoices and use them for new invoices.
+
+Create a template
+
+Information
+
+You can create a template with information from an invoice form. With the Load template function,
+
+you can automatically complete the form for another invoice with the specified information.
+
+Method
+
+Select the invoice you would like to use to create a template.
+
+On the Organize tab, click Invoice templates > Create template.
+
+Fig.: 'Create template' dialog box
+
+In the Create template dialog box, enter a descriptive name for the template and confirm
+
+with OK.
+
+Result
+
+The template is created.
+
+Information
+
+1. 
+
+2. 
+
+1. 
+
+26 Business Solution ELO Invoice
+
+
+
+Only users with administrator rights can edit existing templates.
+
+Outlook
+
+The template is available via the Load template function.
+
+The Delete template function allows you to delete templates you no longer need.
+
+Import example
+
+Information
+
+To automatically complete the form of an invoice with the information from a template.
+
+Method
+
+Select the invoice you would like to automatically complete.
+
+On the Organize tab, click Invoice templates > Load template.
+
+Fig.: 'Load template' dialog box
+
+Select a template in the Load template dialog box.
+
+Click Add to add the selected template to your favorites.
+
+Click OK.
+
+Result
+
+The form for the selected invoice is automatically completed with the information from the
+
+template.
+
+1. 
+
+2. 
+
+1. 
+
+1. 
+
+27 Business Solution ELO Invoice
+
+
+
+Export invoice
+
+Information
+
+Once an invoice has been checked for the final time, it is assigned the status 5 – Export and is
+
+therefore ready for export. Invoices are exported either automatically or with the Export invoices
+
+function.
+
+The Export invoices function creates an export data set that you can select for your accounting
+
+system.
+
+Method
+
+Select the invoice or invoices you want to export.
+
+On the Output tab, click Export/Import > Export invoices.
+
+If you want to select additional invoices, you can close the dialog box. The selected invoice
+
+remains selected.
+
+Fig.: 'Export invoices' dialog box
+
+In the Export invoices dialog box, select the accounting system you want to create an export
+
+data set for.
+
+1. 
+
+2. 
+
+1. 
+
+2. 
+
+28 Business Solution ELO Invoice
+
+
+
+Check the invoice or invoices you want to export and confirm with OK.
+
+Result
+
+The invoices are exported to the selected accounting system. Their status changes to 6 – Exported.
+
+29 Business Solution ELO Invoice
+
+
+
+Monitor invoices with the dashboard
+
+The dashboard provides an overview of all invoice documents and their statuses.
+
+You can reach the dashboard by clicking the Invoices tile in the My ELO area.
+
+The settings are saved on the dashboard. When you open the dashboard again, it remembers and
+
+displays your most recent view.
+
+Fig.: Dashboard
+
+The dashboard is divided into the following areas:
+
+1 Database: In the dashboard header, use the drop-down menu (arrow icon) to select a database. A
+
+dashboard database is a list of invoices that is loaded for evaluation.
+
+Information
+
+If there is only one database, this database is selected permanently and no drop-down
+
+menu is available.
+
+2 All invoices/critical: With these buttons, you can choose whether to show all invoices or only
+
+invoices with an upcoming discount deadline or processing deadline that has been reached or
+
+exceeded.
+
+3 Status: The dashboard header contains a button for each invoice status. If a button is active, all
+
+invoices with the corresponding status are shown in the dashboard viewer pane.
+
+4 Net amount due in $:
+
+30 Business Solution ELO Invoice
+
+
+
+You can choose between the following settings:
+
+Day view: The day view shows the amount due for the current day and the following seven
+
+days.
+
+Week view: The week view shows the amount due for the current week and the follows six
+
+weeks.
+
+Month view: The month view shows the amount due for the current month and the following
+
+four months.
+
+5 Viewer pane: In the dashboard viewer pane, you will see a list of invoices. This list changes
+
+depending on the filter criteria applied. Critical invoices are marked with a red dot. Clicking an
+
+entry shows a preview of the entry. Double-clicking an entry brings you to the Repository work
+
+area.
+
+Filter and customize the table view using the drop-down menus.
+
+Fig.: Customizing the table view
+
+The drop-down menus in the column headings contain the following functions:
+
+Sort ascending
+
+Sort descending
+
+Remove sorting: This option appears if you have sorted the column. Click Remove sorting to
+
+clear the sorting option.
+
+Alternative: You can sort the column by clicking the column heading. Clicking once sorts in
+
+ascending order. Clicking a second time sorts in descending order. Clicking a third time clears
+
+sorting.
+
+Hide column
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+31 Business Solution ELO Invoice
+
+
+
+Group: The content of a column is joined into groups. The number of invoices in each group is
+
+shown in brackets. Click the plus icon before the group to expand it and view all contained
+
+invoices. The minus icon minimizes it again. Clicking the plus icon in the header expands all
+
+groups.
+
+Information
+
+You can combine multiple groups. You can specify a hierarchy with the order in which you
+
+select the columns.
+
+Ungroup: This option appears if you have grouped items. Click Ungroup to discard the group.
+
+Agg: Number (only for number fields and when another column is grouped): The number of
+
+invoices in the group is shown.
+
+Agg: Total (only for number fields and when another column is grouped): The total of the
+
+group is shown.
+
+Agg: Minimum (only for number fields and when another column is grouped): The lowest
+
+value of the group is shown.
+
+Agg: Maximum (only for number fields and when another column is grouped): The highest
+
+value of the group is shown.
+
+Agg: Average (only for number fields and when another column is grouped): The average of
+
+the group is shown.
+
+Fig.: Menu
+
+Menu: By clicking the button with the three lines, you can show hidden columns. Clicking the 
+
+Search settings button allows you to choose fields to be considered during the search. Clicking the 
+
+Reset grouping button resets all groups. Clicking Reset all settings to return to the table's default
+
+settings.
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+• 
+
+32 Business Solution ELO Invoice
+
+
+	Table of contents
+	Introduction
+	Contents of the manual
+	Basics
+	Possible actions
+
+	Target audience
+
+	Basics
+	Basic principle
+	General note
+	Requirements
+	Program interface
+	Repository
+	Invoice circulation
+	Invoices
+
+
+	File invoice and add documents
+	File invoice
+	Add documents to invoice
+
+	Invoice circulation
+	Formal check
+	Invoice approval for individual items/invoice approval
+	Enter booking data
+	Request
+	Clarification needed
+
+	Templates
+	Create a template
+	Import example
+
+	Export invoice
+	Monitor invoices with the dashboard
+
+

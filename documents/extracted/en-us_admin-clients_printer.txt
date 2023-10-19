@@ -1,0 +1,384 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Client administration | ELO printers
+
+
+Client administration
+
+ELO printers
+
+
+
+3
+
+3
+
+4
+
+5
+
+6
+
+7
+
+9
+
+9
+
+10
+
+11
+
+12
+
+13
+
+Table of contents
+
+ELO PDF Printer GS
+
+Basic requirements 
+
+Installation 
+
+Checks after installation
+
+Use 
+
+Known issues 
+
+ELO TIFF Printer
+
+Basic requirements
+
+Installation 
+
+Checks after installation
+
+Use 
+
+Known issues 
+
+2 Client administration
+
+
+
+ELO PDF Printer GS
+
+Basic requirements 
+
+Installing the ELO printers requires Windows 7 or higher. With the ELO PDF Printer GS, the ELO PS
+
+Converter is also installed automatically if your computer is connected to the Internet. Otherwise,
+
+you will have to download the converter from the following address before installing the ELO PDF
+
+Printer GS: http://gs.elo.com/PSconv/ELOPSConverter12.msi.
+
+Refer to the ReadMe.txt file in the printer installation directory for the latest version:
+
+The printer calls up the ELO PS Converter after the print process. This tool generates the PDF file
+
+from the PostScript file created by the printer.
+
+3 Client administration
+
+http://gs.elo.com/PSconv/ELO_PS_Converter12.msi
+http://gs.elo.com/PSconv/ELO_PS_Converter12.msi
+http://gs.elo.com/PSconv/ELO_PS_Converter12.msi
+
+
+Installation 
+
+To install an ELO printer, run the setup.exe file in the version folder of the ELO PDF Printer.
+
+The ELO printer is then available on Microsoft Windows like a normal printer.
+
+4 Client administration
+
+
+
+Checks after installation
+
+A log file is created if the registry entry HKCU\Software\ELO Digital\PdfPrinter\Debug (string) is set
+
+to 1.
+
+The registry entry under HKLM creates the log file for all users. Keep in mind that the 32-bit branch
+
+of the registry is used for HKLM on 64-bit systems (HKLM\Software\Wow6432Node\ELO
+
+Digital\PdfPrinter\Debug).
+
+The log file is located at %APPDATA%\Elo\ELOPdfPrint.log.
+
+The converter log file is <Program Data Dir>\ELO Digital Office\EloPsConverter.log. The directory
+
+must already exist.
+
+For more information, refer to the ReadMe.txt file.
+
+5 Client administration
+
+
+
+Use 
+
+If an ELO printer is installed, the PDF conversion function is available in the ELO Java Client on the 
+
+Document tab.
+
+6 Client administration
+
+
+
+Known issues 
+
+Problems when printing certain document types 
+
+To print a document, the corresponding application has to be installed.
+
+You can check this as follows:
+
+Open the context menu of a file in Windows Explorer.
+
+Check whether the Print command is listed there.
+
+ELO printer no longer works after update 
+
+During updates, old printer drivers are not removed correctly, so you will have to uninstall the ELO
+
+printer and remove all driver files.
+
+The driver file is located in the directory
+
+C:\Windows\System32\spool\drivers\x64\3
+
+and is called
+
+EloPdfPrinter*.*
+
+The EloPdfMon.dll and EloPdfMonUi.dll files are located in the directory
+
+C:\Windows\System32
+
+Error changing the default printer 
+
+Information
+
+This is due to a problem in the conversion process, which occurred especially with older
+
+Word versions.
+
+The programs run as background processes and recall the default printer on startup. If the default
+
+printer changes, you won't notice.
+
+Close all other programs in Windows Task Manager and conversion should work.
+
+Information
+
+If the default printer cannot be changed, an entry is written to the log in the ELO Java Client.
+
+No collection from the temp directory 
+
+1. 
+
+2. 
+
+• 
+
+7 Client administration
+
+
+
+If no expressions are retrieved from the temp directory in the ELO Java Client, the registry entry 
+
+PrintGrpFile must be set to 1.
+
+This can also be changed in the printer settings.
+
+8 Client administration
+
+
+
+ELO TIFF Printer
+
+Basic requirements
+
+Installing the ELO printers requires Windows 7 or higher.
+
+9 Client administration
+
+
+
+Installation 
+
+To install an ELO printer, run the setup.exe file in the version folder of the ELO TIFF Printer.
+
+The ELO printer is then available on Microsoft Windows like a normal printer.
+
+10 Client administration
+
+
+
+Checks after installation
+
+Debug mode can be set in the printer properties, but alternatively via the registry entry. The
+
+relevant key is: Computer\HKEY_CURRENT_USER\Software\ELO Digital\Tiffprinter.
+
+Set the Debug registry entry to 1 to improve troubleshooting.
+
+11 Client administration
+
+
+
+Use 
+
+If an ELO printer is installed, the TIFF conversion function is available in the ELO Java Client on the 
+
+Document tab.
+
+12 Client administration
+
+
+
+Known issues 
+
+Problems when printing certain document types 
+
+To print a document, the corresponding application has to be installed.
+
+You can check this as follows:
+
+Open the context menu of a file in Windows Explorer.
+
+Check whether the Print command is listed there.
+
+Workaround 
+
+If the Print command is not listed, you can do the following.
+
+Open a document.
+
+Print the document using the function in the application.
+
+ELO printer no longer works after update 
+
+During updates, old printer drivers are not removed correctly, so you will have to uninstall the ELO
+
+printer and remove all driver files.
+
+The driver file is located in the directory
+
+C:\Windows\System32\spool\drivers\x64\3
+
+and is called
+
+*EloPdfPrinter*.*
+
+The EloPdfMon.dll and EloPdfMonUi.dll files are located in the directory
+
+C:\Windows\System32
+
+Error changing the default printer 
+
+Information
+
+This is due to a problem in the conversion process, which occurred especially with older
+
+Word versions.
+
+The programs run as background processes and recall the default printer on startup. If the default
+
+printer changes, you won't notice.
+
+Close all other programs in Windows Task Manager and conversion should work.
+
+Information
+
+1. 
+
+2. 
+
+1. 
+
+2. 
+
+• 
+
+13 Client administration
+
+
+
+If the default printer cannot be changed, an entry is written to the log in the ELO Java Client.
+
+No collection from the temp directory 
+
+If no expressions are retrieved from the temp directory in the ELO Java Client, the registry entry 
+
+PrintGrpFile must be set to 1.
+
+This can also be changed in the printer settings.
+
+14 Client administration
+
+
+	Table of contents
+	ELO PDF Printer GS
+	Basic requirements
+	Installation
+	Checks after installation
+	Use
+	Known issues
+	Problems when printing certain document types
+	ELO printer no longer works after update
+	Error changing the default printer
+	No collection from the temp directory
+
+
+	ELO TIFF Printer
+	Basic requirements
+	Installation
+	Checks after installation
+	Use
+	Known issues
+	Problems when printing certain document types
+	Workaround
+
+	ELO printer no longer works after update
+	Error changing the default printer
+	No collection from the temp directory
+
+
+
