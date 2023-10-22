@@ -1,5 +1,5 @@
-## GenAI-with-custom-data
-Repository for source code for implementing Gen AI to work with custom data
+## GenAI-with-private-data
+Repository for source code for implementing Gen AI to work with private data
 
 Full write up can be found at the following blog posts:
 
