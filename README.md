@@ -10,3 +10,7 @@ https://medium.com/@raphamuema/creating-a-dataset-from-raw-files-part-ii-5e9d10f
 3. Using private data with meta-llama/Llama-2–7b-chat-hf model \
 https://medium.com/@raphamuema/gen-ai-with-custom-data-part-iii-549e3871bcc7
 
+
+
+Let's connect: \
+https://www.linkedin.com/in/raphael-muema-548153a9/
